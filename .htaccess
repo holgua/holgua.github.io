@@ -1,0 +1,31 @@
+# Tell the browser which charset we'll use
+AddDefaultCharset UTF-8
+
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+AddType image/x-icon .ico
+AddType application/json .json
+
+# Set expires headers for known types
+ExpiresByType text/css "access plus 365 days"
+ExpiresByType text/javascript "access plus 365 days"
+ExpiresByType application/javascript "access plus 365 days"
+ExpiresByType application/x-shockwave-flash "access plus 365 days"
+ExpiresByType image/gif "access plus 365 days"
+ExpiresByType image/png "access plus 365 days"
+ExpiresByType image/jpeg "access plus 365 days"
+ExpiresByType image/ico "access plus 365 days"
+ExpiresByType image/x-icon "access plus 365 days"
+ExpiresByType image/x-icon "access plus 365 days"
+
+# Set Vary Header for css/js to improve proxy caching
+<FilesMatch "\.(css|js)$">
+  Header set Vary "Accept-Encoding"
+</FilesMatch>
+
+# Disable directory browsing
+Options +Indexes
+
+# Set default pages
+DirectoryIndex index.html index.htm index.json
