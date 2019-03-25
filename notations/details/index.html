@@ -14,7 +14,7 @@
 
   <header>
   <hgroup>
-    <h1><a href="/">Notations</a> &#187; <a href=""></a></h1>
+    <h1><a href=".">Notations</a> &#187; <a href=""></a></h1>
   </hgroup>
 
   <nav>
@@ -239,15 +239,15 @@ class Notation {
   }
 
   get pinUri() {
-    return './?pin=' + this.id;
+    return '../?pin=' + this.id;
   }
 
   get unpinUri() {
-    return './?unpin=' + this.id;
+    return '../?unpin=' + this.id;
   }
 
   get removeUri() {
-    return './?remove=' + this.id;
+    return '../?remove=' + this.id;
   }
 
   get googleUri() {
