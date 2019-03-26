@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://sun.christa-mayrhofer.at/sitemap.xml
