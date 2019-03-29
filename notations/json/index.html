@@ -184,22 +184,37 @@ class Notation {
     return 'https://www.google.com/finance?q=' + this.id;
   }
 
-  get finvizUri() {
-    return "https://finviz.com/quote.ashx?t=" + this.symbol;
+  getFinvizUri(timeSpan) {
+    let p = "m";
+    if (timeSpan.id === "5M") {
+      p = "d";
+    } else if (timeSpan.id === "2Y") {
+      p = "w";
+    }
+
+    return "https://finviz.com/quote.ashx?t=" + this.symbol + "&ty=c&ta=0&p=" + p;
   }
 
   get aktienPortalUri() {
     return "https://aktien-portal.at/Aktien/" + this.fallbackSymbol + "/prime/teccharts/" + this.symbol + "/";
   }
 
-  get stockchartsUri() {
+  getStockChartsUri(timeSpan) {
     const cfg = "p49015818842"; // "p34461991577";
-    return "https://stockcharts.com/h-sc/ui?p=D&yr=1&mn=0&dy=0&id=" + cfg + "&s=" + this.symbol;
+    
+    let ts = "&yr=9&mn=0&dy=0";
+    if (timeSpan.id === "5M") {
+      ts = "&yr=0&mn=5&dy=0";
+    } else if (timeSpan.id === "2Y") {
+      ts = "&yr=2&mn=0&dy=0";
+    }
+
+    return "https://stockcharts.com/h-sc/ui?p=D" + ts + "&id=" + cfg + "&s=" + this.symbol;
   }
 
   get outlinkUri() {
     let uri = this.finvizUri;
-    if(this.fallbackSymbol != "") {
+    if (this.fallbackSymbol != "") {
       uri = this.aktienPortalUri;
     }
     return uri;
@@ -207,10 +222,10 @@ class Notation {
 
   get analyzeUri() {
     let uri = this.stockchartsUri;
-    if(this.fallbackSymbol != "") {
+    if (this.fallbackSymbol != "") {
       uri = this.aktienPortalUri;
     }
-    return uri;    
+    return uri;
   }
 
   getImgUriOld(timeSpan) {
