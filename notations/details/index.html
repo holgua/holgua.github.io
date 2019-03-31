@@ -44,32 +44,32 @@
 <div id="flex">
   
   <section class="timespan">
-  <a href="#" target="_blank">
+  <a href="#" target="_blank" rel="noreferrer">
     <h1>&nbsp;</h1>
     <span>&nbsp;</span>
     <img src="/img/spacer.gif" alt=""/>
   </a>
-  <div></div>
+  <div>&nbsp;</div>
 </section>
 
   
   <section class="timespan">
-  <a href="#" target="_blank">
+  <a href="#" target="_blank" rel="noreferrer">
     <h1>&nbsp;</h1>
     <span>&nbsp;</span>
     <img src="/img/spacer.gif" alt=""/>
   </a>
-  <div></div>
+  <div>&nbsp;</div>
 </section>
 
   
   <section class="timespan">
-  <a href="#" target="_blank">
+  <a href="#" target="_blank" rel="noreferrer">
     <h1>&nbsp;</h1>
     <span>&nbsp;</span>
     <img src="/img/spacer.gif" alt=""/>
   </a>
-  <div></div>
+  <div>&nbsp;</div>
 </section>
 
   
@@ -265,7 +265,7 @@ class Notation {
       p = "w";
     }
 
-    return "https://finviz.com/quote.ashx?t=" + this.symbol + "&ty=c&ta=0&p=" + p;
+    return "https://finviz.com/quote.ashx?t=" + this.symbol + "&ty=l&ta=0&p=" + p;
   }
 
   get aktienPortalUri() {
@@ -285,8 +285,8 @@ class Notation {
     return "https://stockcharts.com/h-sc/ui?p=D" + ts + "&id=" + cfg + "&s=" + this.symbol;
   }
 
-  get outlinkUri() {
-    let uri = this.finvizUri;
+  getOutlinkUri(timeSpan) {
+    let uri = this.getFinvizUri(timeSpan);
     if (this.fallbackSymbol != "") {
       uri = this.aktienPortalUri;
     }
@@ -594,7 +594,7 @@ function deleteNotation(id) {
       var timeSpan = ts[i];
       var section = $("section:eq(" + i + ")");
 
-      section.find("a").eq(0).attr("href", notation.outlinkUri);
+      section.find("a").attr("href", notation.getOutlinkUri(timeSpan));
 
       if (notation.fallbackSymbol != "") {
         section.find("div").append('<a href="' + notation.aktienPortalUri + '" target="_blank" rel="noreferrer">&#8594; aktienportal</a>');

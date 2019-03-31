@@ -1229,7 +1229,7 @@ class Notation {
       p = "w";
     }
 
-    return "https://finviz.com/quote.ashx?t=" + this.symbol + "&ty=c&ta=0&p=" + p;
+    return "https://finviz.com/quote.ashx?t=" + this.symbol + "&ty=l&ta=0&p=" + p;
   }
 
   get aktienPortalUri() {
@@ -1249,8 +1249,8 @@ class Notation {
     return "https://stockcharts.com/h-sc/ui?p=D" + ts + "&id=" + cfg + "&s=" + this.symbol;
   }
 
-  get outlinkUri() {
-    let uri = this.finvizUri;
+  getOutlinkUri(timeSpan) {
+    let uri = this.getFinvizUri(timeSpan);
     if (this.fallbackSymbol != "") {
       uri = this.aktienPortalUri;
     }
