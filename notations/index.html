@@ -1346,15 +1346,7 @@ class Notation {
 ////////////////////////////////////
 
 var defaults = {
-  /*
-  "INDEXVIE:ATX": { name: "IDX ATX" },
-  "INDEXDB:DAX": { name: "IDX DAX" },
-  "INDEXDJX:.DJI": { name: "IDX Dow Jones" },
-  "INDEXNASDAQ:.IXIC": { name: "IDX Nasdaq" },
-  "INDEXNIKKEI:NI225": { name: "IDX Nikkei" },
-  "INDEXHANGSENG:HSI": { name: "IDX Hang Seng" },
-  */
-
+  //NASDAQ
   "NASDAQ:AAPL": { name: "Apple" },
   "NASDAQ:GOOGL": { name: "Google" },
   "NASDAQ:MSFT": { name: "Microsoft" },
@@ -1392,7 +1384,10 @@ var defaults = {
   "NASD:FOXF": { name: "Fox" },
   "NASD:NDAQ": { name: "Nasdaq" },
   "NASD:SONO": { name: "Sonos" },
+  "NASD:CSCO": { name: "Cisco" },
+  "NASD:SPLK": { name: "Splunk" },
 
+  //NYSE
   "NYSE:BRK-B": { name: "Berkshire" },
   "NYSE:GE": { name: "GE" },
   "NYSE:GM": { name: "GM" },
@@ -1441,7 +1436,10 @@ var defaults = {
   "NYSE:CAT": { name: "Caterpillar" },
   "NYSE:DE": { name: "John Deere" },
   "NYSE:DT": { name: "Dynatrace", pinned: true },
+  "NYSE:NEWR": { name: "New Relic" },
+  "NYSE:ESTC": { name: "Elastic" },
 
+  //ATX
   "ATX:ANDR:96": { name: "Andritz" },
   "ATX:VOE:19": { name: "Voest" },
   "ATX:FACC:239": { name: "FACC" },
@@ -1460,28 +1458,25 @@ var defaults = {
   //ETFs
   "NYSE:GDX": { name: "ETF Gold Miners" },
   "NYSEARCA:JNUG": { name: "ETF Gold Miners 3x" },
-
   "NYSE:VT": { name: "ETF World" },
   "NYSEARCA:WDIV": { name: "ETF World Divi" },
-  //"AMEX:IDHD": { name: "ETF World Divi" },
   "NYSE:REET": { name: "ETF World Real Estate" },
-
   "NYSE:SDY": { name: "ETF US Divi" },
   "NYSE:VTI": { name: "ETF US Large Cap" },
-//  "NYSE:ITOT": { name: "ETF US Large Cap" },
-//  "NYSE:SCHX": { name: "ETF US Large Cap" },
-//  "NYSEARCA:NOBL": { name: "ETF US Large Cap" },
-//  "NYSEARCA:SPY": { name: "ETF US Large Cap" },
   "NYSE:VIG": { name: "ETF US Large Cap Divi" },
-//  "NYSEARCA:DVY": { name: "ETF US Large Cap Divi" },
-//  "NYSEARCA:HDV": { name: "ETF US Large Cap Divi" },
-//  "NYSEARCA:SDY": { name: "ETF US Large Cap Divi" },
-//  "NYSE:VYM": { name: "ETF US Large Cap Divi" },
   "BATS:REGL": { name: "ETF US Mid Cap Divi" },
   "NYSE:SCHH": { name: "ETF US Real Estate" },
-
   "NYSE:EELV": { name: "ETF Emerging Large Cap" },
-//  "NYSE:EEMO": { name: "ETF Emerging Large Cap" },
+  //  "AMEX:IDHD": { name: "ETF World Divi" },
+  //  "NYSE:ITOT": { name: "ETF US Large Cap" },
+  //  "NYSE:SCHX": { name: "ETF US Large Cap" },
+  //  "NYSEARCA:NOBL": { name: "ETF US Large Cap" },
+  //  "NYSEARCA:SPY": { name: "ETF US Large Cap" },
+  //  "NYSEARCA:DVY": { name: "ETF US Large Cap Divi" },
+  //  "NYSEARCA:HDV": { name: "ETF US Large Cap Divi" },
+  //  "NYSEARCA:SDY": { name: "ETF US Large Cap Divi" },
+  //  "NYSE:VYM": { name: "ETF US Large Cap Divi" },
+  //  "NYSE:EEMO": { name: "ETF Emerging Large Cap" },
 
 };
 var metadata = getObject("metadata", defaults);
