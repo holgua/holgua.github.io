@@ -163,18 +163,38 @@ function deleteCookie(name) {
 	setCookie(name,"",-1);
 }
 
+function setLocalStorage(name, value) {
+	localStorage.setItem(name, value);
+}
+
+function getLocalStorage(name) {
+	return localStorage.getItem(name);
+}
+
+function deleteLocalStorage(name) {
+	localStorage.removeItem(name);
+}
+
 function getObject(name, fallback) {
-	var object = JSON.parse(getCookie(name));
+	//var object = JSON.parse(getCookie(name));
+	//if(object == null) object = fallback;
+	//return object;
+
+	let object = JSON.parse(getLocalStorage(name));
 	if(object == null) object = fallback;
 	return object;
 }
 
 function setObject(name, object) {
-	setCookie(name, JSON.stringify(object), 365);
+	//setCookie(name, JSON.stringify(object), 365);
+
+	setLocalStorage(name, JSON.stringify(object));
 }
 
 function deleteObject(name) {
-		deleteCookie(name);
+		//deleteCookie(name);
+		
+		deleteLocalStorage(name);
 }
 
 //////////////////////////////////////////
@@ -492,17 +512,29 @@ var defaults = {
   "ATX:STR:208": { name: "Strabag" },
 
   //ETFs
+  "NYSE:XLE": { name: "ETF Energy" },
+  "NYSE:NLR": { name: "ETF Nuclear" },
+  "NYSE:SLX": { name: "ETF Steel" },
+  "NYSE:USO": { name: "ETF Oil" },
+  "NYSE:KOL": { name: "ETF Coal" },
+  "NYSE:FCG": { name: "ETF Gas" },
+  "NYSE:SLV": { name: "ETF Silver" },
+  "NYSE:GLD": { name: "ETF Gold" },
+  "NYSE:PHO": { name: "ETF Water" },
+  "NYSE:WOOD": { name: "ETF Timber" },
+  "NYSE:STZ": { name: "ETF Alcohol" },
+
   "NYSE:GDX": { name: "ETF Gold Miners" },
   "NYSEARCA:JNUG": { name: "ETF Gold Miners 3x" },
-  "NYSE:VT": { name: "ETF World" },
-  "NYSEARCA:WDIV": { name: "ETF World Divi" },
-  "NYSE:REET": { name: "ETF World Real Estate" },
-  "NYSE:SDY": { name: "ETF US Divi" },
-  "NYSE:VTI": { name: "ETF US Large Cap" },
-  "NYSE:VIG": { name: "ETF US Large Cap Divi" },
-  "BATS:REGL": { name: "ETF US Mid Cap Divi" },
-  "NYSE:SCHH": { name: "ETF US Real Estate" },
-  "NYSE:EELV": { name: "ETF Emerging Large Cap" },
+
+  "NYSE:VNQI": { name: "ETF REIT Non-US" },
+  "NYSE:SCHH": { name: "ETF REIT US" },
+  "NYSE:RWO": { name: "ETF REIT World" },
+
+  "NYSE:VT": { name: "ETF Broad World" },
+  "NYSEARCA:WDIV": { name: "ETF Broad World Divi" },
+  "NYSE:SDY": { name: "ETF Broad US Divi" },
+
   //  "AMEX:IDHD": { name: "ETF World Divi" },
   //  "NYSE:ITOT": { name: "ETF US Large Cap" },
   //  "NYSE:SCHX": { name: "ETF US Large Cap" },
