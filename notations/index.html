@@ -2138,25 +2138,31 @@ function deleteLocalStorage(name) {
 }
 
 function getObject(name, fallback) {
-	//var object = JSON.parse(getCookie(name));
-	//if(object == null) object = fallback;
-	//return object;
-
 	let object = JSON.parse(getLocalStorage(name));
 	if(object == null) object = fallback;
 	return object;
 }
 
 function setObject(name, object) {
-	//setCookie(name, JSON.stringify(object), 365);
-
 	setLocalStorage(name, JSON.stringify(object));
 }
 
 function deleteObject(name) {
-		//deleteCookie(name);
-		
 		deleteLocalStorage(name);
+}
+
+function slugify(s) {
+	var t = s.toLowerCase().trim().replace(/  +/g, ' ').split(' ');
+
+	for(i=0; i<t.length; i++) {
+		t[i] = t[i].replace(/\W/g,'');
+	}
+	
+	t = t.filter(function(item, index){
+		return t.indexOf(item) >= index;
+	});
+
+	return t.sort().join(' ');
 }
 
 //////////////////////////////////////////
@@ -2179,9 +2185,10 @@ var timeSpans = [
 ];
 class Notation {
 
-  constructor(id, name, pinned) {
+  constructor(id, name, tags, pinned) {
     this.id = id;
     this.name = name;
+    this._tags = slugify(tags);
     this.pinned = pinned;
   }
 
@@ -2192,6 +2199,17 @@ class Notation {
       tmp = name + ", " + tmp;
     }
     return tmp;
+  }
+
+  get tags() {
+    return this._tags;
+  }
+
+  /**
+   * @param {String} tags
+   */
+  set tags(tags) {
+    this._tags = slugify(tags);
   }
 
   getDesc(callback) {
@@ -2414,8 +2432,7 @@ var defaults = {
   "NYSE:DIS": { name: "Disney" },
   "NYSE:PEP": { name: "Pepsi" },
   "NYSE:TWTR": { name: "Twitter" },
-  "NYSE:BP": { name: "BP" },
-  "NYSE:F": { name: "Ford", pinned: true },
+  "NYSE:F": { name: "Ford", tags: "Automotive", pinned: true },
   "NYSE:RACE": { name: "Ferrari" },
   "NYSE:SPOT": { name: "Spotify" },
   "NYSE:CBS": { name: "CBS" },
@@ -2441,13 +2458,13 @@ var defaults = {
   "NYSE:NKE": { name: "Nike" },
   "NYSE:NOW": { name: "ServiceNow" },
   "NYSE:SWK": { name: "Black + Decker" },
-  "NYSE:XOM": { name: "Exxon" },
-  "NYSE:RDS-A": { name: "Shell" },
-  "NYSE:BP": { name: "BP" },
+  "NYSE:XOM": { name: "Exxon", tags: "Oil"  },
+  "NYSE:RDS-A": { name: "Shell", tags: "Oil"  },
+  "NYSE:BP": { name: "BP", tags: "Oil"  },
   "NYSE:JW-A": { name: "Wiley" },
   "NYSE:NYT": { name: "New York Times" },
   "NYSE:HOG": { name: "Harley-Davidson" },
-  "NYSE:GOLD": { name: "Barrick Gold" },
+  "NYSE:GOLD": { name: "Barrick Gold", tags: "Gold"  },
   "NYSE:MMM": { name: "3M" },
   "NYSE:SNE": { name: "Sony" },
   "NYSE:WWE": { name: "World Wrestling" },
@@ -2462,7 +2479,7 @@ var defaults = {
   "ATX:VOE:19": { name: "Voest" },
   "ATX:FACC:239": { name: "FACC" },
   "ATX:LNZ:51": { name: "Lenzing" },
-  "ATX:OMV:16": { name: "OMV" },
+  "ATX:OMV:16": { name: "OMV", tags: "Oil"  },
   "ATX:POS:67": { name: "Porr" },
   "ATX:WIE:4": { name: "Wienerberger" },
   "ATX:VER:21": { name: "Verbund" },
@@ -2478,27 +2495,27 @@ var defaults = {
   "NYSE:SPXL": { name: "ETF SP500 3x" },
   "NYSE:SPXS": { name: "ETF SP500 -3x" },
 
-  "NYSE:XLE": { name: "ETF Energy" },
+  "NYSE:XLE": { name: "ETF Energy", tags: "Oil" },
   "NYSE:ICLN": { name: "ETF Energy Clean" },
   "NYSE:TAN": { name: "ETF Energy Solar" },
   "NYSE:FAN": { name: "ETF Energy Wind" },
   "NYSE:NLR": { name: "ETF Energy Nuclear" },
 
   "NYSE:SLX": { name: "ETF Basic Steel" },
-  "NYSE:USO": { name: "ETF Basic Oil" },
+  "NYSE:USO": { name: "ETF Basic Oil", tags: "Oil" },
   "NYSE:KOL": { name: "ETF Basic Coal" },
   "NYSE:FCG": { name: "ETF Basic Gas" },
   "NYSE:CPER": { name: "ETF Basic Copper" },
   "NYSE:SLV": { name: "ETF Basic Silver" },
-  "NYSE:GLD": { name: "ETF Basic Gold" },
+  "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
   "NYSE:LIT": { name: "ETF Basic Lithium" },
   "NYSE:PALL": { name: "ETF Basic Palladium" },
   "NYSE:PPLT": { name: "ETF Basic Platinum" },
   "NYSE:PHO": { name: "ETF Basic Water" },
 
-  "NYSE:GDX": { name: "ETF Gold Miners" },
-  "NYSE:JNUG": { name: "ETF Gold Miners 3x" },
-  "NYSE:JDST": { name: "ETF Gold Miners -3x" },
+  "NYSE:GDX": { name: "ETF Gold Miners", tags: "Gold" },
+  "NYSE:JNUG": { name: "ETF Gold Miners 3x", tags: "Gold" },
+  "NYSE:JDST": { name: "ETF Gold Miners -3x", tags: "Gold" },
 
   "NYSE:WOOD": { name: "ETF Timber" },
   "NYSE:STZ": { name: "ETF Alcohol" },
@@ -2514,7 +2531,6 @@ var defaults = {
   "NYSE:ACWI": { name: "ETF MSCI ACWI" },
   "NYSE:ACWX": { name: "ETF MSCI ACWI ex-US" },
 
-  "NYSE:VT": { name: "ETF Geo Global" },
   "NYSE:SDY": { name: "ETF Geo US" },
   "NYSE:AFK": { name: "ETF Geo Africa" },
   "NYSE:VGK": { name: "ETF Geo Europe" },
@@ -2535,11 +2551,13 @@ function findNotations(query) {
       var md = metadata[property];
       var id = property;
       var name = (md && md.name) ? md.name : id;
+      var tags = (md && md.tags) ? md.tags : "";
       var pinned = (md && md.pinned) ? true : false;
 
-      var matches = !query || query === null || id.toLowerCase().indexOf(query.toLowerCase()) != -1 || name.toLowerCase().indexOf(query.toLowerCase()) != -1;
+      var info = id + " " + name + " " + tags;
+      var matches = !query || query === null || info.toLowerCase().indexOf(query.toLowerCase()) != -1;
       if (matches) {
-        notations.push(new Notation(id, name, pinned));
+        notations.push(new Notation(id, name, tags, pinned));
       }
     }
   }
@@ -2551,12 +2569,13 @@ function getNotation(id) {
   if (id) {
     var md = metadata[id];
     var name = (md && md.name) ? md.name : id;
+    var tags = (md && md.tags) ? md.tags : "";
     var pinned = (md && md.pinned) ? true : false;
     if (!md) {
       metadata[id] = { name: name, pinned: pinned };
       setObject("metadata", metadata);
     }
-    notation = new Notation(id, name, pinned);
+    notation = new Notation(id, name, tags, pinned);
   }
   return notation;
 }
@@ -2566,7 +2585,7 @@ function setNotation(idOrNotation) {
     if (typeof idOrNotation === 'string') {
       metadata[idOrNotation] = {};
     } else {
-      metadata[idOrNotation.id] = { name: idOrNotation.name, pinned: idOrNotation.pinned };
+      metadata[idOrNotation.id] = { name: idOrNotation.name, pinned: idOrNotation.pinned, tags: idOrNotation.tags };
     }
     setObject("metadata", metadata);
   }
@@ -2641,7 +2660,7 @@ function deleteNotation(id) {
       section.find("a").attr("href", notation.uri);
       section.find("a").attr("target", "_blank");
       section.find("h1").html(notation.name);
-      section.find("span").text(notation.exchange + ":" + notation.symbol);
+      section.find("span").text(notation.exchange + ":" + notation.symbol + " " + notation.tags);
       section.find("img").attr("src", notation.getImgUri(ts)).attr("alt", notation.name);
       section.show();
     }
