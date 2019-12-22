@@ -2540,8 +2540,8 @@ var defaults = {
   "NYSE:EZA": { name: "ETF Geo South Africa" },
   "NYSE:EWL": { name: "ETF Geo Switzerland" },
   "NYSE:EWJ": { name: "ETF Geo Japan" }
-
 };
+
 var metadata = getObject("metadata", defaults);
 
 function findNotations(query) {
@@ -2562,6 +2562,14 @@ function findNotations(query) {
     }
   }
   return notations;
+}
+
+function findAndSortNotations(query) {
+  return findNotations(query).sort(function(a, b) {
+    var ha = a.pinned;
+    var hb = b.pinned;
+    return ha && !hb ? -1 : (hb && !ha ? 1 : (a.name.toLowerCase().trim() > b.name.toLowerCase().trim() ? 1 : -1));
+  });
 }
 
 function getNotation(id) {
@@ -2639,12 +2647,7 @@ function deleteNotation(id) {
   //Prepare filtering functionality for insta-filter.
   function filter(query) {
     //Load notations.
-    var notations = findNotations(query).sort(function(a, b) {
-      var ha = a.pinned;
-      var hb = b.pinned;
-      return ha && !hb ? -1 : (hb && !ha ? 1 : (a.name.toLowerCase().trim() > b.name.toLowerCase().trim() ? 1 : -1));
-    });
-
+    var notations = findAndSortNotations(query);
     console.log("Found " + notations.length + " notations matching query '" + query + "'.");
 
     //Show them.
