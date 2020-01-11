@@ -2212,6 +2212,65 @@ class Notation {
     this._tags = slugify(tags);
   }
 
+  get purchaseInfo() {
+    let info = getObject(this.id);
+    if(!info) {
+      info = {
+        amount: 4000,
+        interest: 0.25,
+        sellAt: 123.4,
+      }
+    }
+
+    return this.calcPurchaseInfo(info.amount, info.interest, info.sellAt);
+  }
+
+  /**
+   * @param {any} investment float, in currency of your choice, defaults to 4000
+   * @param {any} interest float, percentage 0.0 - 1.0, defaults to 0.25
+   * @param {any} sellAt float, in currency of your choice, defaults to 123.4
+   */
+  setPurchaseInfo(investment, interest, sellAt) {
+    const result = this.calcPurchaseInfo(investment, interest, sellAt);
+
+    setObject(notation.id, {
+      amount: investment,
+      interest: interest,
+      sellAt: sellAt
+    });
+
+    return result;
+  }
+
+  /**
+   * 
+   * @param int investment in currency of your choice, defaults to 4000
+   * @param int interest percentage 0.0 - 1.0, defaults to 0.25
+   * @param float sellAt in currency of your choice, defaults to 123.4
+   */
+  calcPurchaseInfo(investment, interest, sellAt) {
+    const charges = 20.0;
+    const kest = 0.275;
+    const isDefault = interest == 0.25 && sellAt == 123.4
+    const requiredPerf = interest / (1 - kest);
+    const buyAtEstimate = sellAt * (1.0 / (1.0 + requiredPerf));
+    const countEstimate = Math.ceil(investment / buyAtEstimate);
+    const buyAt = (sellAt - charges / countEstimate) * (1.0 / (1.0 + requiredPerf));
+    const units = Math.ceil(investment / buyAt);
+    const investmentActual = parseInt(units) * buyAt;
+    const interestAbs = investmentActual * interest;
+
+    return {
+      amount: investmentActual,
+      interest: interest,
+      interestAbs: interestAbs,
+      units: units,
+      buyAt: buyAt,
+      sellAt: sellAt,
+      default: isDefault
+    };
+  }
+
   getDesc(callback) {
     var uri = "data/" + this.id.replace(":", "_").toLowerCase() + ".json";
 
@@ -2475,20 +2534,20 @@ var defaults = {
   "NYSE:ESTC": { name: "Elastic" },
 
   //ATX
-  "ATX:ANDR:96": { name: "Andritz" },
-  "ATX:VOE:19": { name: "Voest" },
-  "ATX:FACC:239": { name: "FACC" },
-  "ATX:LNZ:51": { name: "Lenzing" },
-  "ATX:OMV:16": { name: "OMV", tags: "Oil"  },
-  "ATX:POS:67": { name: "Porr" },
-  "ATX:WIE:4": { name: "Wienerberger" },
-  "ATX:VER:21": { name: "Verbund" },
-  "ATX:AGR:39": { name: "Agrana" },
-  "ATX:FLU:12": { name: "Flughafen Wien" },
-  "ATX:KTCG:211": { name: "Kapsch" },
-  "ATX:ROS:52": { name: "Rosenbauer" },
-  "ATX:SEM:18": { name: "Semperit" },
-  "ATX:STR:208": { name: "Strabag" },
+  // "ATX:ANDR:96": { name: "Andritz" },
+  // "ATX:VOE:19": { name: "Voest" },
+  // "ATX:FACC:239": { name: "FACC" },
+  // "ATX:LNZ:51": { name: "Lenzing" },
+  // "ATX:OMV:16": { name: "OMV", tags: "Oil"  },
+  // "ATX:POS:67": { name: "Porr" },
+  // "ATX:WIE:4": { name: "Wienerberger" },
+  // "ATX:VER:21": { name: "Verbund" },
+  // "ATX:AGR:39": { name: "Agrana" },
+  // "ATX:FLU:12": { name: "Flughafen Wien" },
+  // "ATX:KTCG:211": { name: "Kapsch" },
+  // "ATX:ROS:52": { name: "Rosenbauer" },
+  // "ATX:SEM:18": { name: "Semperit" },
+  // "ATX:STR:208": { name: "Strabag" },
 
   //ETFs
   "NYSE:SPY": { name: "ETF SP500" },
@@ -2653,8 +2712,14 @@ function deleteNotation(id) {
     //Show them.
     $("section").hide();
     for(var i=0; i<notations.length; i++) {
-      var notation = notations[i];
-      var section = $("section:eq(" + i + ")");
+      const notation = notations[i];
+      const purchaseInfo = notation.purchaseInfo;
+
+      const purchaseLabel = purchaseInfo.default ? "" : " buy at " + purchaseInfo.buyAt.toFixed(2) + " • ";
+      const idLabel = notation.exchange + ":" + notation.symbol;
+      const tagsLabel = notation.tags ? " " + notation.tags : "";
+
+      const section = $("section:eq(" + i + ")");
       if(notation.pinned) {
         section.addClass("highlighted");
       } else {
@@ -2663,7 +2728,7 @@ function deleteNotation(id) {
       section.find("a").attr("href", notation.uri);
       section.find("a").attr("target", "_blank");
       section.find("h1").html(notation.name);
-      section.find("span").text(notation.exchange + ":" + notation.symbol + " " + notation.tags);
+      section.find("span").text(purchaseLabel + idLabel + tagsLabel);
       section.find("img").attr("src", notation.getImgUri(ts)).attr("alt", notation.name);
       section.show();
     }
