@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">@font-face{font-family:'Dosis';font-style:normal;font-weight:300;src:local("Dosis Light"),local("Dosis-Light"),url(./font/dosis-light.woff2) format("woff2"),url(../font/dosis-light.woff2) format("woff2")}*{box-sizing:border-box;float:inherit;clear:inherit;font-family:"Dosis", sans-serif;font-size:1rem;font-weight:300;text-transform:lowercase;line-height:inherit;padding:0;margin:0;border:none;outline:none;color:#036;background-color:transparent;transition:all 0.0625s ease}body{background-color:#f3f3f3}img{text-indent:-9999px;width:100%}a{text-decoration:none;color:#036}a:hover{text-decoration:underline}a:hover img{-webkit-filter:hue-rotate(-10deg) contrast(110%)}input{border:1px solid #ddd;background-color:white}ul{float:left;clear:none;list-style:none}ul li a{padding:0 1rem}ul li .selected{color:#09f}ul li form{display:block;width:22rem;padding-right:1rem;padding-bottom:1rem}@media (max-width: 850px){ul li form{padding-left:1rem}}ul li form input[type=text]{width:100%;line-height:2rem;margin-top:1rem;padding:0 3%}@media (max-width: 690px){ul li:nth-child(2){clear:left}}header{float:left;clear:both;width:100%;line-height:4rem;background-color:#f3f3f3;border-bottom:1px solid #ddd}header hgroup{clear:none;padding-left:1rem}header hgroup *{float:none}header nav{float:right;clear:none}@media (max-width: 770px){header nav{float:left;clear:both}}footer{float:left;clear:both;width:100%;line-height:4rem;background-color:#f3f3f3;border-top:1px solid #ddd}.calc{float:left;clear:none;width:100%;background-color:white;padding:1rem 1rem 0 1rem}.calc *{float:none;clear:none}.calc input{text-align:center;width:4rem;border:1px solid #ddd;border-radius:2px}.calc input:read-only{background-color:#f3f3f3}#flex{float:left;clear:both;width:100%;background-color:white;display:flex;flex-wrap:wrap;justify-content:space-between;padding-bottom:2rem}#flex:after{content:"";flex:auto}section{flex-grow:0;flex-shrink:0;flex-basis:20%;overflow:hidden;padding:1rem 1rem 0 1rem}section h1{display:inline;line-height:1.5rem;letter-spacing:.0625rem}section span{display:inline;font-size:.66rem}section img{margin-top:.25rem}.notation{flex-basis:calc(100% / 5)}@media (max-width: 1750px){.notation{flex-basis:calc(100% / 4)}}@media (max-width: 1500px){.notation{flex-basis:calc(100% / 3)}}@media (max-width: 1250px){.notation{flex-basis:calc(100% / 3)}}@media (max-width: 1000px){.notation{flex-basis:calc(100% / 2)}}@media (max-width: 750px){.notation{flex-basis:calc(100% / 2)}}@media (max-width: 500px){.notation{flex-basis:calc(100% / 1)}}@media (max-width: 250px){.notation{flex-basis:calc(100% / 1)}}.highlighted h1:before{content:'* '}.timespan{flex-basis:calc(100% / 3)}@media (max-width: 1750px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1500px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1250px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1000px){.timespan{flex-basis:calc(100% / 2)}}@media (max-width: 750px){.timespan{flex-basis:calc(100% / 2)}}@media (max-width: 500px){.timespan{flex-basis:calc(100% / 1)}}@media (max-width: 250px){.timespan{flex-basis:calc(100% / 1)}}.timespan div{text-align:center;padding-top:1rem}.timespan div a{padding:0 1rem}
+    <style type="text/css">@font-face{font-family:'Dosis';font-style:normal;font-weight:300;src:local("Dosis Light"),local("Dosis-Light"),url(./font/dosis-light.woff2) format("woff2"),url(../font/dosis-light.woff2) format("woff2")}*{box-sizing:border-box;float:inherit;clear:inherit;font-family:"Dosis", sans-serif;font-size:1rem;font-weight:300;text-transform:lowercase;line-height:inherit;padding:0;margin:0;border:none;outline:none;color:#036;background-color:transparent;transition:all 0.0625s ease}body{background-color:#f3f3f3}img{text-indent:-9999px;width:100%}a{text-decoration:none;color:#036}a:hover{text-decoration:underline}a:hover img{-webkit-filter:hue-rotate(-10deg) contrast(110%)}input{border:1px solid #ddd;background-color:white}ul{float:left;clear:none;list-style:none}ul li a{padding:0 1rem}ul li .selected{color:#09f}ul li form{display:block;width:22rem;padding-right:1rem;padding-bottom:1rem}@media (max-width: 850px){ul li form{padding-left:1rem}}ul li form input[type=text]{width:100%;line-height:2rem;margin-top:1rem;padding:0 3%}@media (max-width: 690px){ul li:nth-child(2){clear:left}}header{float:left;clear:both;width:100%;line-height:4rem;background-color:#f3f3f3;border-bottom:1px solid #ddd}header hgroup{clear:none;padding-left:1rem}header hgroup *{float:none}header nav{float:right;clear:none}@media (max-width: 770px){header nav{float:left;clear:both}}footer{float:left;clear:both;width:100%;line-height:4rem;background-color:#f3f3f3;border-top:1px solid #ddd}.calc{float:left;clear:none;width:100%;background-color:white;padding:1rem 1rem 0 1rem}.calc *{float:none;clear:none}.calc input{text-align:center;width:4rem;border:1px solid #ddd;border-radius:2px}.calc input:read-only{background-color:#f3f3f3}#flex{float:left;clear:both;width:100%;background-color:white;display:flex;flex-wrap:wrap;justify-content:space-between;padding-bottom:2rem}#flex:after{content:"";flex:auto}section{flex-grow:0;flex-shrink:0;flex-basis:20%;overflow:hidden;padding:1rem 1rem 0 1rem}section h1{display:inline;line-height:1.5rem;letter-spacing:.0625rem}section span{display:inline;font-size:.66rem}section img{margin-top:.25rem}.notation{flex-basis:calc(100% / 5)}@media (max-width: 1750px){.notation{flex-basis:calc(100% / 4)}}@media (max-width: 1500px){.notation{flex-basis:calc(100% / 3)}}@media (max-width: 1250px){.notation{flex-basis:calc(100% / 3)}}@media (max-width: 1000px){.notation{flex-basis:calc(100% / 2)}}@media (max-width: 750px){.notation{flex-basis:calc(100% / 2)}}@media (max-width: 500px){.notation{flex-basis:calc(100% / 1)}}@media (max-width: 250px){.notation{flex-basis:calc(100% / 1)}}.notation .buy-at{background-color:#ffff37}.highlighted h1:before{content:'* '}.timespan{flex-basis:calc(100% / 3)}@media (max-width: 1750px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1500px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1250px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1000px){.timespan{flex-basis:calc(100% / 2)}}@media (max-width: 750px){.timespan{flex-basis:calc(100% / 2)}}@media (max-width: 500px){.timespan{flex-basis:calc(100% / 1)}}@media (max-width: 250px){.timespan{flex-basis:calc(100% / 1)}}.timespan div{text-align:center;padding-top:1rem}.timespan div a{padding:0 1rem}
 </style>
   </head>
 <body>
@@ -2511,7 +2511,7 @@ var defaults = {
   "NYSE:SHOP": { name: "Shopify" },
   "NYSE:CAJ": { name: "Canon" },
   "NYSE:MSI": { name: "Motorola" },
-  "NYSE:AG": { name: "First Majestic Silver" },
+  "NYSE:AG": { name: "First Majestic Silver", tags: "Silver" },
   "NYSE:LIN": { name: "Linde" },
   "NYSE:MANU": { name: "Manchester United" },
   "NYSE:NKE": { name: "Nike" },
@@ -2565,13 +2565,13 @@ var defaults = {
   "NYSE:KOL": { name: "ETF Basic Coal" },
   "NYSE:FCG": { name: "ETF Basic Gas" },
   "NYSE:CPER": { name: "ETF Basic Copper" },
-  "NYSE:SLV": { name: "ETF Basic Silver" },
-  "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
+  "NYSE:SLV": { name: "ETF Basic Silver", tags: "Silver" },
   "NYSE:LIT": { name: "ETF Basic Lithium" },
   "NYSE:PALL": { name: "ETF Basic Palladium" },
   "NYSE:PPLT": { name: "ETF Basic Platinum" },
   "NYSE:PHO": { name: "ETF Basic Water" },
 
+  "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
   "NYSE:GDX": { name: "ETF Gold Miners", tags: "Gold" },
   "NYSE:JNUG": { name: "ETF Gold Miners 3x", tags: "Gold" },
   "NYSE:JDST": { name: "ETF Gold Miners -3x", tags: "Gold" },
@@ -2715,7 +2715,7 @@ function deleteNotation(id) {
       const notation = notations[i];
       const purchaseInfo = notation.purchaseInfo;
 
-      const purchaseLabel = purchaseInfo.default ? "" : " buy at " + purchaseInfo.buyAt.toFixed(2) + " • ";
+      const purchaseLabel = purchaseInfo.default ? "" : '• buy at <span class="buy-at">' + purchaseInfo.buyAt.toFixed(2) + '</span> • ';
       const idLabel = notation.exchange + ":" + notation.symbol;
       const tagsLabel = notation.tags ? " " + notation.tags : "";
 
@@ -2728,7 +2728,7 @@ function deleteNotation(id) {
       section.find("a").attr("href", notation.uri);
       section.find("a").attr("target", "_blank");
       section.find("h1").html(notation.name);
-      section.find("span").text(purchaseLabel + idLabel + tagsLabel);
+      section.find("span").html(purchaseLabel + idLabel + tagsLabel);
       section.find("img").attr("src", notation.getImgUri(ts)).attr("alt", notation.name);
       section.show();
     }
