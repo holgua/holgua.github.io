@@ -357,7 +357,7 @@ class Notation {
   }
 
   get googleUri() {
-    return 'https://www.google.com/finance?q=' + this.id;
+    return 'https://www.google.com/search?q=' + this.id;
   }
 
   getFinvizUri(timeSpan) {
@@ -747,6 +747,7 @@ function deleteNotation(id) {
         section.find("div").append('<a href="' + notation.aktienPortalUri + '" target="_blank" rel="noreferrer">&#8594; aktienportal</a>');
       } else {
         section.find("div").append('<a href="' + notation.getStockChartsUri(timeSpan) + '" target="_blank" rel="noreferrer">&#8594; stockcharts</a>');
+        section.find("div").append('<a href="' + notation.googleUri + '" target="_blank" rel="noreferrer">&#8594; google</a>');
         section.find("div").append('<a href="' + notation.getFinvizUri(timeSpan) + '" target="_blank" rel="noreferrer">&#8594; finviz</a>');
       }
 
