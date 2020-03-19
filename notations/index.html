@@ -2297,7 +2297,15 @@ class Notation {
   }
 
   get uri() {
-    return './details/?id=' + this.id;
+    //return './details/?id=' + this.id;
+    let uri = './details/?id=' + this.id;
+    if (this.name && this.name != this.id) {
+      uri += "&name=" + encodeURIComponent(this.name);
+    }
+    if(this.tags) {
+      uri += "&tags=" + encodeURIComponent(this.tags);
+    }
+    return uri;
   }
 
   get pinUri() {
