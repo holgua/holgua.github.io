@@ -24,9 +24,9 @@
 <div class="details">
   is at
   <input id="price" type="text" value="" readonly />
-  with <span title="simple moving average over the last 253 trading days, which equals a whole year">average</span> at
+  with <span title="daily simple moving average over the last 253 trading days, which equals a whole trading year">average</span> at
   <input id="avgSimpleYearly" type="text" value="" readonly />
-  and <span title="percentage distance of the current price to the SMA253">potential</span> of
+  and <span title="the potential change of the current price, if it would return to the SMA253. if this value is positive, the current price is below the average.">potential</span> of
   <input id="potential" type="text" value="" readonly />
   %.
 </div>
@@ -795,6 +795,9 @@ function deleteNotation(id) {
         $("#price").val(details.price.toFixed(2));
         $("#avgSimpleYearly").val(details.avgSimpleYearly.toFixed(2));
         $("#potential").val((details.avgSimpleYearlyPotential * 100.0).toFixed(2));
+        if(details.avgSimpleYearlyPotential < 0) {
+          $("#potential").css("color", "#c70a15");
+        }
       }
     });
 
