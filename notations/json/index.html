@@ -179,7 +179,7 @@ class Notation {
 
   get purchaseInfo() {
     let info = getObject(this.id);
-    if(!info) {
+    if (!info) {
       info = {
         amount: 4000,
         interest: 0.25,
@@ -267,7 +267,7 @@ class Notation {
     if (this.name && this.name != this.id) {
       uri += "&name=" + encodeURIComponent(this.name);
     }
-    if(this.tags) {
+    if (this.tags) {
       uri += "&tags=" + encodeURIComponent(this.tags);
     }
     return uri;
@@ -306,7 +306,7 @@ class Notation {
 
   getStockChartsUri(timeSpan) {
     const cfg = "p28951652856"; //<-SMA, EMA-> "p29326190716";
-    
+
     let ts = "&yr=9&mn=0&dy=0";
     if (timeSpan.id === "5M") {
       ts = "&yr=0&mn=5&dy=0";
@@ -407,6 +407,47 @@ class Notation {
     }
     return imgUri;
   }
+
+  getPriceDetails(callback) {
+    const baseUri = "https://www.alphavantage.co/query?apikey=779EPKOSLK0VZ74B&symbol=" + this.symbol;
+
+    //get basic quote information
+    const pQuote = new Promise(function (resolve, reject) {
+      const uri = baseUri + "&function=GLOBAL_QUOTE";
+
+      $.ajax(uri, { type: 'GET' }).done(function (response) {
+        const globalQuote = response["Global Quote"];
+        const quote = {
+          "price": parseFloat(globalQuote["05. price"]),
+          "open": parseFloat(globalQuote["02. open"]),
+          "high": parseFloat(globalQuote["03. high"]),
+          "low": parseFloat(globalQuote["04. low"]),
+        };
+        resolve(quote);
+      }).fail(function (e) { reject(e); });
+    });
+
+    //get simple moving average
+    const pSma = new Promise(function (resolve, reject) {
+      const uri = baseUri + "&function=SMA&interval=daily&time_period=253&series_type=open";
+
+      $.ajax(uri, { type: 'GET' }).done(function (data) {
+        console.log(data);
+
+        const intervals = data["Technical Analysis: SMA"];
+        const latestKey = Object.keys(intervals)[0];
+        const latestValue = intervals[latestKey];
+        const sma = parseFloat(latestValue["SMA"]);
+        resolve({ "avgSimpleYearly": sma });
+      }).fail(function (e) { reject(e); });
+    });
+
+    Promise.all([pQuote, pSma]).then(function (values) {
+      const merge = Object.assign({}, ...values);
+      merge.avgSimpleYearlyPotential = (merge.avgSimpleYearly / merge.price - 1);
+      callback(null, merge);
+    });
+  }
 }
 
 ////////////////////////////////////
@@ -490,13 +531,13 @@ var defaults = {
   "NYSE:NKE": { name: "Nike" },
   "NYSE:NOW": { name: "ServiceNow" },
   "NYSE:SWK": { name: "Black + Decker" },
-  "NYSE:XOM": { name: "Exxon", tags: "Oil"  },
-  "NYSE:RDS-A": { name: "Shell", tags: "Oil"  },
-  "NYSE:BP": { name: "BP", tags: "Oil"  },
+  "NYSE:XOM": { name: "Exxon", tags: "Oil" },
+  "NYSE:RDS-A": { name: "Shell", tags: "Oil" },
+  "NYSE:BP": { name: "BP", tags: "Oil" },
   "NYSE:JW-A": { name: "Wiley" },
   "NYSE:NYT": { name: "New York Times" },
   "NYSE:HOG": { name: "Harley-Davidson" },
-  "NYSE:GOLD": { name: "Barrick Gold", tags: "Gold"  },
+  "NYSE:GOLD": { name: "Barrick Gold", tags: "Gold" },
   "NYSE:MMM": { name: "3M" },
   "NYSE:SNE": { name: "Sony" },
   "NYSE:WWE": { name: "World Wrestling" },
@@ -597,7 +638,7 @@ function findNotations(query) {
 }
 
 function findAndSortNotations(query) {
-  return findNotations(query).sort(function(a, b) {
+  return findNotations(query).sort(function (a, b) {
     var ha = a.pinned;
     var hb = b.pinned;
     return ha && !hb ? -1 : (hb && !ha ? 1 : (a.name.toLowerCase().trim() > b.name.toLowerCase().trim() ? 1 : -1));

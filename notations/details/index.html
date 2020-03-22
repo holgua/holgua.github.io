@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">@font-face{font-family:'Dosis';font-style:normal;font-weight:300;src:local("Dosis Light"),local("Dosis-Light"),url(./font/dosis-light.woff2) format("woff2"),url(../font/dosis-light.woff2) format("woff2")}*{box-sizing:border-box;float:inherit;clear:inherit;font-family:"Dosis", sans-serif;font-size:1rem;font-weight:300;text-transform:lowercase;line-height:inherit;padding:0;margin:0;border:none;outline:none;color:#036;background-color:transparent;transition:all 0.0625s ease}body{background-color:#f3f3f3}img{text-indent:-9999px;width:100%}a{text-decoration:none;color:#036}a:hover{text-decoration:underline}a:hover img{-webkit-filter:hue-rotate(-10deg) contrast(110%)}input{border:1px solid #ddd;background-color:white}ul{float:left;clear:none;list-style:none}ul li a{padding:0 1rem}ul li .selected{color:#09f}ul li form{display:block;width:22rem;padding-right:1rem;padding-bottom:1rem}@media (max-width: 850px){ul li form{padding-left:1rem}}ul li form input[type=text]{width:100%;line-height:2rem;margin-top:1rem;padding:0 3%}@media (max-width: 690px){ul li:nth-child(2){clear:left}}header{float:left;clear:both;width:100%;line-height:4rem;background-color:#f3f3f3;border-bottom:1px solid #ddd}header hgroup{clear:none;padding-left:1rem}header hgroup *{float:none}header nav{float:right;clear:none}@media (max-width: 770px){header nav{float:left;clear:both}}footer{float:left;clear:both;width:100%;line-height:4rem;background-color:#f3f3f3;border-top:1px solid #ddd}.calc{float:left;clear:none;width:100%;background-color:white;padding:1rem 1rem 0 1rem}.calc *{float:none;clear:none}.calc input{text-align:center;width:4rem;border:1px solid #ddd;border-radius:2px}.calc input:read-only{background-color:#f3f3f3}#flex{float:left;clear:both;width:100%;background-color:white;display:flex;flex-wrap:wrap;justify-content:space-between;padding-bottom:2rem}#flex:after{content:"";flex:auto}section{flex-grow:0;flex-shrink:0;flex-basis:20%;overflow:hidden;padding:1rem 1rem 0 1rem}section h1{display:inline;line-height:1.5rem;letter-spacing:.0625rem}section span{display:inline;font-size:.66rem}section img{margin-top:.25rem}.notation{flex-basis:calc(100% / 5)}@media (max-width: 1750px){.notation{flex-basis:calc(100% / 4)}}@media (max-width: 1500px){.notation{flex-basis:calc(100% / 3)}}@media (max-width: 1250px){.notation{flex-basis:calc(100% / 3)}}@media (max-width: 1000px){.notation{flex-basis:calc(100% / 2)}}@media (max-width: 750px){.notation{flex-basis:calc(100% / 2)}}@media (max-width: 500px){.notation{flex-basis:calc(100% / 1)}}@media (max-width: 250px){.notation{flex-basis:calc(100% / 1)}}.notation .buy-at{background-color:#ffff37}.highlighted h1:before{content:'* '}.timespan{flex-basis:calc(100% / 3)}@media (max-width: 1750px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1500px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1250px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1000px){.timespan{flex-basis:calc(100% / 2)}}@media (max-width: 750px){.timespan{flex-basis:calc(100% / 2)}}@media (max-width: 500px){.timespan{flex-basis:calc(100% / 1)}}@media (max-width: 250px){.timespan{flex-basis:calc(100% / 1)}}.timespan div{text-align:center;padding-top:1rem}.timespan div a{padding:0 1rem}
+    <style type="text/css">@font-face{font-family:'Dosis';font-style:normal;font-weight:300;src:local("Dosis Light"),local("Dosis-Light"),url(./font/dosis-light.woff2) format("woff2"),url(../font/dosis-light.woff2) format("woff2")}*{box-sizing:border-box;float:inherit;clear:inherit;font-family:"Dosis", sans-serif;font-size:1rem;font-weight:300;text-transform:lowercase;line-height:inherit;padding:0;margin:0;border:none;outline:none;color:#036;background-color:transparent;transition:all 0.0625s ease}body{background-color:#f3f3f3}img{text-indent:-9999px;width:100%}a{text-decoration:none;color:#036}a:hover{text-decoration:underline}a:hover img{-webkit-filter:hue-rotate(-10deg) contrast(110%)}input{border:1px solid #ddd;background-color:white}ul{float:left;clear:none;list-style:none}ul li a{padding:0 1rem}ul li .selected{color:#09f}ul li form{display:block;width:22rem;padding-right:1rem;padding-bottom:1rem}@media (max-width: 850px){ul li form{padding-left:1rem}}ul li form input[type=text]{width:100%;line-height:2rem;margin-top:1rem;padding:0 3%}@media (max-width: 690px){ul li:nth-child(2){clear:left}}header{float:left;clear:both;width:100%;line-height:4rem;background-color:#f3f3f3;border-bottom:1px solid #ddd}header hgroup{clear:none;padding-left:1rem}header hgroup *{float:none}header nav{float:right;clear:none}@media (max-width: 770px){header nav{float:left;clear:both}}footer{float:left;clear:both;width:100%;line-height:4rem;background-color:#f3f3f3;border-top:1px solid #ddd}.details{float:left;clear:none;width:100%;background-color:white;padding:1rem 1rem 0 1rem}.details *{float:none;clear:none}.details input{text-align:center;width:4rem;border:1px solid #ddd;border-radius:2px}.details input:read-only{background-color:#f3f3f3}.details span{cursor:help;text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#ddd}.calc{float:left;clear:none;width:100%;background-color:white;padding:1rem 1rem 0 1rem}.calc *{float:none;clear:none}.calc input{text-align:center;width:4rem;border:1px solid #ddd;border-radius:2px}.calc input:read-only{background-color:#f3f3f3}#flex{float:left;clear:both;width:100%;background-color:white;display:flex;flex-wrap:wrap;justify-content:space-between;padding-bottom:2rem}#flex:after{content:"";flex:auto}section{flex-grow:0;flex-shrink:0;flex-basis:20%;overflow:hidden;padding:1rem 1rem 0 1rem}section h1{display:inline;line-height:1.5rem;letter-spacing:.0625rem}section span{display:inline;font-size:.66rem}section img{margin-top:.25rem}.notation{flex-basis:calc(100% / 5)}@media (max-width: 1750px){.notation{flex-basis:calc(100% / 4)}}@media (max-width: 1500px){.notation{flex-basis:calc(100% / 3)}}@media (max-width: 1250px){.notation{flex-basis:calc(100% / 3)}}@media (max-width: 1000px){.notation{flex-basis:calc(100% / 2)}}@media (max-width: 750px){.notation{flex-basis:calc(100% / 2)}}@media (max-width: 500px){.notation{flex-basis:calc(100% / 1)}}@media (max-width: 250px){.notation{flex-basis:calc(100% / 1)}}.notation .buy-at{background-color:#ffff37}.highlighted h1:before{content:'* '}.timespan{flex-basis:calc(100% / 3)}@media (max-width: 1750px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1500px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1250px){.timespan{flex-basis:calc(100% / 3)}}@media (max-width: 1000px){.timespan{flex-basis:calc(100% / 2)}}@media (max-width: 750px){.timespan{flex-basis:calc(100% / 2)}}@media (max-width: 500px){.timespan{flex-basis:calc(100% / 1)}}@media (max-width: 250px){.timespan{flex-basis:calc(100% / 1)}}.timespan div{text-align:center;padding-top:1rem}.timespan div a{padding:0 1rem}
 </style>
   </head>
 <body>
@@ -20,6 +20,16 @@
     </ul>
   </nav>
 </header>
+
+<div class="details">
+  is at
+  <input id="price" type="text" value="" readonly />
+  with <span title="simple moving average over the last 253 trading days, which equals a whole year">average</span> at
+  <input id="avgSimpleYearly" type="text" value="" readonly />
+  and <span title="percentage distance of the current price to the SMA253">potential</span> of
+  <input id="potential" type="text" value="" readonly />
+  %.
+</div>
 
 <div class="calc">
   <form>
@@ -250,7 +260,7 @@ class Notation {
 
   get purchaseInfo() {
     let info = getObject(this.id);
-    if(!info) {
+    if (!info) {
       info = {
         amount: 4000,
         interest: 0.25,
@@ -338,7 +348,7 @@ class Notation {
     if (this.name && this.name != this.id) {
       uri += "&name=" + encodeURIComponent(this.name);
     }
-    if(this.tags) {
+    if (this.tags) {
       uri += "&tags=" + encodeURIComponent(this.tags);
     }
     return uri;
@@ -377,7 +387,7 @@ class Notation {
 
   getStockChartsUri(timeSpan) {
     const cfg = "p28951652856"; //<-SMA, EMA-> "p29326190716";
-    
+
     let ts = "&yr=9&mn=0&dy=0";
     if (timeSpan.id === "5M") {
       ts = "&yr=0&mn=5&dy=0";
@@ -478,6 +488,47 @@ class Notation {
     }
     return imgUri;
   }
+
+  getPriceDetails(callback) {
+    const baseUri = "https://www.alphavantage.co/query?apikey=779EPKOSLK0VZ74B&symbol=" + this.symbol;
+
+    //get basic quote information
+    const pQuote = new Promise(function (resolve, reject) {
+      const uri = baseUri + "&function=GLOBAL_QUOTE";
+
+      $.ajax(uri, { type: 'GET' }).done(function (response) {
+        const globalQuote = response["Global Quote"];
+        const quote = {
+          "price": parseFloat(globalQuote["05. price"]),
+          "open": parseFloat(globalQuote["02. open"]),
+          "high": parseFloat(globalQuote["03. high"]),
+          "low": parseFloat(globalQuote["04. low"]),
+        };
+        resolve(quote);
+      }).fail(function (e) { reject(e); });
+    });
+
+    //get simple moving average
+    const pSma = new Promise(function (resolve, reject) {
+      const uri = baseUri + "&function=SMA&interval=daily&time_period=253&series_type=open";
+
+      $.ajax(uri, { type: 'GET' }).done(function (data) {
+        console.log(data);
+
+        const intervals = data["Technical Analysis: SMA"];
+        const latestKey = Object.keys(intervals)[0];
+        const latestValue = intervals[latestKey];
+        const sma = parseFloat(latestValue["SMA"]);
+        resolve({ "avgSimpleYearly": sma });
+      }).fail(function (e) { reject(e); });
+    });
+
+    Promise.all([pQuote, pSma]).then(function (values) {
+      const merge = Object.assign({}, ...values);
+      merge.avgSimpleYearlyPotential = (merge.avgSimpleYearly / merge.price - 1);
+      callback(null, merge);
+    });
+  }
 }
 
 ////////////////////////////////////
@@ -561,13 +612,13 @@ var defaults = {
   "NYSE:NKE": { name: "Nike" },
   "NYSE:NOW": { name: "ServiceNow" },
   "NYSE:SWK": { name: "Black + Decker" },
-  "NYSE:XOM": { name: "Exxon", tags: "Oil"  },
-  "NYSE:RDS-A": { name: "Shell", tags: "Oil"  },
-  "NYSE:BP": { name: "BP", tags: "Oil"  },
+  "NYSE:XOM": { name: "Exxon", tags: "Oil" },
+  "NYSE:RDS-A": { name: "Shell", tags: "Oil" },
+  "NYSE:BP": { name: "BP", tags: "Oil" },
   "NYSE:JW-A": { name: "Wiley" },
   "NYSE:NYT": { name: "New York Times" },
   "NYSE:HOG": { name: "Harley-Davidson" },
-  "NYSE:GOLD": { name: "Barrick Gold", tags: "Gold"  },
+  "NYSE:GOLD": { name: "Barrick Gold", tags: "Gold" },
   "NYSE:MMM": { name: "3M" },
   "NYSE:SNE": { name: "Sony" },
   "NYSE:WWE": { name: "World Wrestling" },
@@ -668,7 +719,7 @@ function findNotations(query) {
 }
 
 function findAndSortNotations(query) {
-  return findNotations(query).sort(function(a, b) {
+  return findNotations(query).sort(function (a, b) {
     var ha = a.pinned;
     var hb = b.pinned;
     return ha && !hb ? -1 : (hb && !ha ? 1 : (a.name.toLowerCase().trim() > b.name.toLowerCase().trim() ? 1 : -1));
@@ -736,6 +787,18 @@ function deleteNotation(id) {
     $("header nav ul").append('<li><a href="' + notation.removeUri + '">Remove</a></li>');
     document.title = notation.id.toLowerCase();
 
+    //Show price details
+    notation.getPriceDetails(function(error, details) {
+      if(error) {
+        $(".details").html(error);
+      } else {
+        $("#price").val(details.price.toFixed(2));
+        $("#avgSimpleYearly").val(details.avgSimpleYearly.toFixed(2));
+        $("#potential").val((details.avgSimpleYearlyPotential * 100.0).toFixed(2));
+      }
+    });
+
+    //Show charts
     var ts = timeSpans;
     for (var i = 0; i < ts.length; i++) {
       var timeSpan = ts[i];
