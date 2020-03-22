@@ -779,6 +779,7 @@ function deleteNotation(id) {
     //Configure header
     $("header h1 a:last-child").text(notation.name);
     //$("header nav ul").append('<li><a href="' + notation.analyzeUri + '" target="_blank">Analyze</a></li>');
+    $("header nav ul").append('<li><a href="https://stockcharts.com/c-sc/sc?p=D&yr=15&mn=0&dy=0&i=p08179091158&r=1584882737236&s=' + notation.symbol + '" target="_blank" rel="noopener noreferrer">chart 15y</a></li>');
     if (notation.pinned) {
       $("header nav ul").append('<li><a href="' + notation.unpinUri + '">Unpin</a></li>');
     } else {
