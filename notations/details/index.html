@@ -197,6 +197,32 @@ function deleteObject(name) {
 		deleteLocalStorage(name);
 }
 
+function setObjectExpiring(name, object, expiresInMs) {
+	let expiryDate = new Date();
+	expiryDate.setTime(expiryDate.getTime() + expiresInMs);
+	expiryDate = expiryDate.toISOString();
+
+	const container = {
+		object: object,
+		expiryDate: expiryDate
+	};
+	console.log(JSON.stringify(container));
+
+	setObject(name, container);
+}
+
+function getObjectExpiring(name, fallback) {
+	const container = getObject(name, fallback);
+
+	let object = fallback;
+	if(container && container.expiryDate && new Date(container.expiryDate) >= new Date()) {
+		if(container.object != null) {
+			object = container.object;
+		}
+	}
+	return object;
+}
+
 function slugify(s) {
 	var t = s.toLowerCase().trim().replace(/  +/g, ' ').split(' ');
 
@@ -494,33 +520,55 @@ class Notation {
 
     //get basic quote information
     const pQuote = new Promise(function (resolve, reject) {
-      const uri = baseUri + "&function=GLOBAL_QUOTE";
+      const cacheKey = "priceDetails-quote-2";
+      const cached = getObjectExpiring(cacheKey, null);
+      if (cached) {
+        console.log("CACHE HIT: " + JSON.stringify(cached));
+        resolve(cached);
+      } else {
+        const uri = baseUri + "&function=GLOBAL_QUOTE";
+        $.ajax(uri, { type: 'GET' }).done(function (response) {
+          const globalQuote = response["Global Quote"];
+          const quote = {
+            "price": parseFloat(globalQuote["05. price"]),
+            "open": parseFloat(globalQuote["02. open"]),
+            "high": parseFloat(globalQuote["03. high"]),
+            "low": parseFloat(globalQuote["04. low"]),
+          };
 
-      $.ajax(uri, { type: 'GET' }).done(function (response) {
-        const globalQuote = response["Global Quote"];
-        const quote = {
-          "price": parseFloat(globalQuote["05. price"]),
-          "open": parseFloat(globalQuote["02. open"]),
-          "high": parseFloat(globalQuote["03. high"]),
-          "low": parseFloat(globalQuote["04. low"]),
-        };
-        resolve(quote);
-      }).fail(function (e) { reject(e); });
+          //expire cache in 1h
+          setObjectExpiring(cacheKey, quote, 60 * 60 * 1000);
+          console.log("CACHE MISS: " + JSON.stringify(quote));
+          
+          resolve(quote);
+        }).fail(function (e) { reject(e); });
+      }
     });
 
     //get simple moving average
     const pSma = new Promise(function (resolve, reject) {
-      const uri = baseUri + "&function=SMA&interval=daily&time_period=253&series_type=open";
+      const cacheKey = "priceDetails-avgSimpleYearly-3";
+      const cached = getObjectExpiring(cacheKey, null);
+      if (cached) {
+        console.log("CACHE HIT: " + JSON.stringify(cached));
+        resolve(cached);
+      } else {
+        const uri = baseUri + "&function=SMA&interval=daily&time_period=253&series_type=open";
+        $.ajax(uri, { type: 'GET' }).done(function (data) {
+          console.log(data);
+          const intervals = data["Technical Analysis: SMA"];
+          const latestKey = Object.keys(intervals)[0];
+          const latestValue = intervals[latestKey];
+          const sma = parseFloat(latestValue["SMA"]);
+          const smaAsObject = { "avgSimpleYearly": sma };
 
-      $.ajax(uri, { type: 'GET' }).done(function (data) {
-        console.log(data);
+          //expire cache in 24h
+          setObjectExpiring(cacheKey, smaAsObject, 24 * 60 * 60 * 1000);
+          console.log("CACHE MISS: " + JSON.stringify(sma));
 
-        const intervals = data["Technical Analysis: SMA"];
-        const latestKey = Object.keys(intervals)[0];
-        const latestValue = intervals[latestKey];
-        const sma = parseFloat(latestValue["SMA"]);
-        resolve({ "avgSimpleYearly": sma });
-      }).fail(function (e) { reject(e); });
+          resolve(smaAsObject);
+        }).fail(function (e) { reject(e); });
+      }
     });
 
     Promise.all([pQuote, pSma]).then(function (values) {
@@ -793,6 +841,7 @@ function deleteNotation(id) {
       if(error) {
         $(".details").html(error);
       } else {
+        console.log("details: " + JSON.stringify(details));
         $("#price").val(details.price.toFixed(2));
         $("#avgSimpleYearly").val(details.avgSimpleYearly.toFixed(2));
         $("#potential").val((details.avgSimpleYearlyPotential * 100.0).toFixed(2));
