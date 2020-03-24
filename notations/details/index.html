@@ -516,11 +516,12 @@ class Notation {
   }
 
   getPriceDetails(callback) {
-    const baseUri = "https://www.alphavantage.co/query?apikey=779EPKOSLK0VZ74B&symbol=" + this.symbol;
+    const symbol = this.symbol;
+    const baseUri = "https://www.alphavantage.co/query?apikey=779EPKOSLK0VZ74B&symbol=" + symbol;
 
     //get basic quote information
     const pQuote = new Promise(function (resolve, reject) {
-      const cacheKey = "priceDetails-quote-2";
+      const cacheKey = "priceDetails-quote-" + symbol;
       const cached = getObjectExpiring(cacheKey, null);
       if (cached) {
         console.log("CACHE HIT: " + JSON.stringify(cached));
@@ -547,7 +548,7 @@ class Notation {
 
     //get simple moving average
     const pSma = new Promise(function (resolve, reject) {
-      const cacheKey = "priceDetails-avgSimpleYearly-3";
+      const cacheKey = "priceDetails-avgSimpleYearly-" + symbol;
       const cached = getObjectExpiring(cacheKey, null);
       if (cached) {
         console.log("CACHE HIT: " + JSON.stringify(cached));
