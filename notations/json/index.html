@@ -459,7 +459,7 @@ class Notation {
           //expire cache in 1h
           setObjectExpiring(cacheKey, quote, 60 * 60 * 1000);
           console.log("CACHE MISS: " + JSON.stringify(quote));
-          
+
           resolve(quote);
         }).fail(function (e) { reject(e); });
       }
@@ -667,17 +667,32 @@ var defaults = {
 var metadata = getObject("metadata", defaults);
 
 function findNotations(query) {
-  var notations = [];
-  for (var property in metadata) {
+  const notations = [];
+  for (const property in metadata) {
     if (metadata.hasOwnProperty(property)) {
-      var md = metadata[property];
-      var id = property;
-      var name = (md && md.name) ? md.name : id;
-      var tags = (md && md.tags) ? md.tags : "";
-      var pinned = (md && md.pinned) ? true : false;
+      const md = metadata[property];
+      const id = property;
+      const name = (md && md.name) ? md.name : id;
+      const tags = (md && md.tags) ? md.tags : "";
+      const pinned = (md && md.pinned) ? true : false;
 
-      var info = id + " " + name + " " + tags;
-      var matches = !query || query === null || info.toLowerCase().indexOf(query.toLowerCase()) != -1;
+      //var matches = !query || query === null || info.toLowerCase().indexOf(query.toLowerCase()) != -1;
+      let matches = !query || query === null;
+      if (!matches) {
+        const info = (id + " " + name + " " + tags).toLowerCase();
+        const tokens = query.toLowerCase().split(" ");
+        const tokensLength = tokens.length;
+        
+        matches = true;
+        for (let i = 0; i < tokensLength; i++) {
+          const token = tokens[i];
+          if (info.indexOf(token) == -1) {
+            //console.log(JSON.stringify(info) + " | " + JSON.stringify(tokens) + " | " + JSON.stringify(token));
+            matches = false;
+            break;
+          }
+        }
+      }
       if (matches) {
         notations.push(new Notation(id, name, tags, pinned));
       }
