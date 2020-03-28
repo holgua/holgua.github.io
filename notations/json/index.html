@@ -103,9 +103,15 @@ function deleteLocalStorage(name) {
 }
 
 function getObject(name, fallback) {
-	let object = JSON.parse(getLocalStorage(name));
-	if(object == null) object = fallback;
-	return object;
+	try {
+		let object = JSON.parse(getLocalStorage(name));
+		if(object == null) object = fallback;
+		return object;
+	} catch(e) {
+		console.log("Returning fallback, because unable to parse retrieved JSON object: " + getLocalStorage(name));
+		console.log(e);
+		return fallback;
+	}
 }
 
 function setObject(name, object) {
