@@ -542,14 +542,14 @@ class Notation {
       const cacheKey = "priceDetails-quote-" + symbol;
       const cached = getObjectExpiring(cacheKey, null);
       if (cached) {
-        console.log("CACHE HIT: " + JSON.stringify(cached));
+        //console.log("CACHE HIT: " + JSON.stringify(cached));
         resolve(cached);
       } else {
         const uri = baseUri + "&function=GLOBAL_QUOTE";
         $.ajax(uri, { type: 'GET' }).done(function (response) {
           //console.log(JSON.stringify(response));
           if (response.Note && response.Note.indexOf("call frequency") != -1) {
-            console.log("CALL_FREQUENCY_TOO_HIGH");
+            //console.log("CALL_FREQUENCY_TOO_HIGH");
             reject("CALL_FREQUENCY_TOO_HIGH");
           } else {
             const globalQuote = response["Global Quote"];
@@ -575,14 +575,14 @@ class Notation {
       const cacheKey = "priceDetails-avgSimpleYearly-" + symbol;
       const cached = getObjectExpiring(cacheKey, null);
       if (cached) {
-        console.log("CACHE HIT: " + JSON.stringify(cached));
+        //console.log("CACHE HIT: " + JSON.stringify(cached));
         resolve(cached);
       } else {
         const uri = baseUri + "&function=SMA&interval=daily&time_period=253&series_type=open";
         $.ajax(uri, { type: 'GET' }).done(function (response) {
           //console.log(JSON.stringify(response));
           if (response.Note && response.Note.indexOf("call frequency") != -1) {
-            console.log("CALL_FREQUENCY_TOO_HIGH");
+            //console.log("CALL_FREQUENCY_TOO_HIGH");
             reject("CALL_FREQUENCY_TOO_HIGH");
           } else {
             const intervals = response["Technical Analysis: SMA"];
