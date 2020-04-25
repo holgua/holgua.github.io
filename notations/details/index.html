@@ -560,8 +560,8 @@ class Notation {
               "low": parseFloat(globalQuote["04. low"]),
             };
 
-            //expire cache in 1h
-            setObjectExpiring(cacheKey, quote, 60 * 60 * 1000);
+            //expire cache in 2h
+            setObjectExpiring(cacheKey, quote, 2 * 60 * 60 * 1000);
             //console.log("CACHE MISS: " + JSON.stringify(quote));
 
             resolve(quote);
@@ -591,7 +591,7 @@ class Notation {
             const sma = parseFloat(latestValue["SMA"]);
             const smaAsObject = { "avgSimpleYearly": sma };
 
-            //expire cache in 24h
+            //expire cache in 48h
             setObjectExpiring(cacheKey, smaAsObject, 2 * 24 * 60 * 60 * 1000);
             //console.log("CACHE MISS: " + JSON.stringify(sma));
 

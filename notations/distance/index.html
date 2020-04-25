@@ -481,8 +481,8 @@ class Notation {
               "low": parseFloat(globalQuote["04. low"]),
             };
 
-            //expire cache in 1h
-            setObjectExpiring(cacheKey, quote, 60 * 60 * 1000);
+            //expire cache in 2h
+            setObjectExpiring(cacheKey, quote, 2 * 60 * 60 * 1000);
             //console.log("CACHE MISS: " + JSON.stringify(quote));
 
             resolve(quote);
@@ -512,7 +512,7 @@ class Notation {
             const sma = parseFloat(latestValue["SMA"]);
             const smaAsObject = { "avgSimpleYearly": sma };
 
-            //expire cache in 24h
+            //expire cache in 48h
             setObjectExpiring(cacheKey, smaAsObject, 2 * 24 * 60 * 60 * 1000);
             //console.log("CACHE MISS: " + JSON.stringify(sma));
 
@@ -795,7 +795,8 @@ function deleteNotation(id) {
         const row = content[i];
 
         let tr = '<tr>';
-        tr += '<td style="text-align:left; padding-right:20px">' + row.id + '</td>';
+        //tr += '<td style="text-align:left; padding-right:20px">' + row.id + '</td>';
+        tr += '<td style="text-align:left; padding-right:20px"><a href="./details/?id=' + row.id + '">' + row.id + '</a></td>';
         tr += '<td style="text-align:left; padding-right:20px">' + row.name + '</td>';
         tr += '<td style="text-align:left; padding-right:20px">' + row.tags + '</td>';
         tr += '<td style="text-align:right; padding-left:20px">$&nbsp;' + row.price.toFixed(2) + '</td>';
