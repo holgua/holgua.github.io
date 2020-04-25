@@ -55,7 +55,7 @@
   <a href="#" target="_blank" rel="noreferrer">
     <h1>&nbsp;</h1>
     <span>&nbsp;</span>
-    <img src="/img/spacer.gif" alt=""/>
+    <img src="./../img/spacer.gif" alt=""/>
   </a>
   <div>&nbsp;</div>
 </section>
@@ -65,7 +65,7 @@
   <a href="#" target="_blank" rel="noreferrer">
     <h1>&nbsp;</h1>
     <span>&nbsp;</span>
-    <img src="/img/spacer.gif" alt=""/>
+    <img src="./../img/spacer.gif" alt=""/>
   </a>
   <div>&nbsp;</div>
 </section>
@@ -75,7 +75,7 @@
   <a href="#" target="_blank" rel="noreferrer">
     <h1>&nbsp;</h1>
     <span>&nbsp;</span>
-    <img src="/img/spacer.gif" alt=""/>
+    <img src="./../img/spacer.gif" alt=""/>
   </a>
   <div>&nbsp;</div>
 </section>
@@ -889,7 +889,7 @@ function deleteNotation(id) {
       notation.getPriceDetails(function(error, details) {
         if(error) {
           const s = getRandomInt(30, 60);
-          console.log("Retrying to get price details in " + s +"s...");
+          console.log("Failed to retrive price details. Retrying in " + s +"s...");
           setTimeout(updatePriceDetails, s * 1000);
         } else {
           $("#price").val(details.price.toFixed(2));
