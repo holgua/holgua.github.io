@@ -461,6 +461,7 @@ class Notation {
       } else {
         const uri = baseUri + "&function=GLOBAL_QUOTE";
         $.ajax(uri, { type: 'GET' }).done(function (response) {
+          console.log(response);
           const globalQuote = response["Global Quote"];
           const quote = {
             "price": parseFloat(globalQuote["05. price"]),
@@ -487,9 +488,9 @@ class Notation {
         resolve(cached);
       } else {
         const uri = baseUri + "&function=SMA&interval=daily&time_period=253&series_type=open";
-        $.ajax(uri, { type: 'GET' }).done(function (data) {
-          console.log(data);
-          const intervals = data["Technical Analysis: SMA"];
+        $.ajax(uri, { type: 'GET' }).done(function (response) {
+          console.log(response);
+          const intervals = response["Technical Analysis: SMA"];
           const latestKey = Object.keys(intervals)[0];
           const latestValue = intervals[latestKey];
           const sma = parseFloat(latestValue["SMA"]);
@@ -771,7 +772,7 @@ function deleteNotation(id) {
       }
       config[n.id] = cfg;
     }
-
+    
     $("pre").append(JSON.stringify(config, null, 2));
   </script>
 </body>

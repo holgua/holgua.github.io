@@ -541,6 +541,7 @@ class Notation {
       } else {
         const uri = baseUri + "&function=GLOBAL_QUOTE";
         $.ajax(uri, { type: 'GET' }).done(function (response) {
+          console.log(response);
           const globalQuote = response["Global Quote"];
           const quote = {
             "price": parseFloat(globalQuote["05. price"]),
@@ -567,9 +568,9 @@ class Notation {
         resolve(cached);
       } else {
         const uri = baseUri + "&function=SMA&interval=daily&time_period=253&series_type=open";
-        $.ajax(uri, { type: 'GET' }).done(function (data) {
-          console.log(data);
-          const intervals = data["Technical Analysis: SMA"];
+        $.ajax(uri, { type: 'GET' }).done(function (response) {
+          console.log(response);
+          const intervals = response["Technical Analysis: SMA"];
           const latestKey = Object.keys(intervals)[0];
           const latestValue = intervals[latestKey];
           const sma = parseFloat(latestValue["SMA"]);
@@ -865,20 +866,24 @@ function deleteNotation(id) {
     $("header nav ul").append('<li><a href="' + notation.removeUri + '">Remove</a></li>');
     document.title = notation.id.toLowerCase();
 
-    //Show price details
-    notation.getPriceDetails(function(error, details) {
-      if(error) {
-        $(".details").html(error);
-      } else {
-        console.log("details: " + JSON.stringify(details));
-        $("#price").val(details.price.toFixed(2));
-        $("#avgSimpleYearly").val(details.avgSimpleYearly.toFixed(2));
-        $("#potential").val((details.avgSimpleYearlyPotential * 100.0).toFixed(2));
-        if(details.avgSimpleYearlyPotential < 0) {
-          $("#potential").css("color", "#c70a15");
+    function updatePriceDetails() {
+      //Show distance from mean
+      notation.getPriceDetails(function(error, details) {
+        if(error) {
+          $(".details").html(error);
+          setTimeout(updatePriceDetails, 30 * 1000);
+        } else {
+          console.log("details: " + JSON.stringify(details));
+          $("#price").val(details.price.toFixed(2));
+          $("#avgSimpleYearly").val(details.avgSimpleYearly.toFixed(2));
+          $("#potential").val((details.avgSimpleYearlyPotential * 100.0).toFixed(2));
+          if(details.avgSimpleYearlyPotential < 0) {
+            $("#potential").css("color", "#c70a15");
+          }
         }
-      }
-    });
+      });
+    }
+    updatePriceDetails();
 
     //Show charts
     var ts = timeSpans;
