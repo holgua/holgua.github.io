@@ -132,43 +132,43 @@ class Timespan {
 //////////////////////////////////////////
 
 function getUriParams() {
-  var query = location.search.substr(1);
-  var data = query.split("&");
-  var result = {};
-  for (var i = 0; i < data.length; i++) {
-      var item = data[i].split("=");
-      result[item[0]] = decodeURIComponent(item[1]);
-  }
-  return result;
+	var query = location.search.substr(1);
+	var data = query.split("&");
+	var result = {};
+	for (var i = 0; i < data.length; i++) {
+		var item = data[i].split("=");
+		result[item[0]] = decodeURIComponent(item[1]);
+	}
+	return result;
 }
 
 function getUriParam(name) {
-  return getUriParams()[name];
+	return getUriParams()[name];
 }
 
 function setCookie(name, value, days) {
 	if (days) {
 		var date = new Date();
-		date.setTime(date.getTime()+(days*24*60*60*1000));
-		var expires = "; expires="+date.toGMTString();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		var expires = "; expires=" + date.toGMTString();
 	}
 	else var expires = "";
-	document.cookie = name+"="+value+expires+"; path=/";
+	document.cookie = name + "=" + value + expires + "; path=/";
 }
 
 function getCookie(name) {
 	var nameEQ = name + "=";
 	var ca = document.cookie.split(';');
-	for(var i=0; i < ca.length; i++) {
+	for (var i = 0; i < ca.length; i++) {
 		var c = ca[i];
-		while (c.charAt(0)==' ') c = c.substring(1,c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
 	}
 	return null;
 }
 
 function deleteCookie(name) {
-	setCookie(name,"",-1);
+	setCookie(name, "", -1);
 }
 
 function setLocalStorage(name, value) {
@@ -186,9 +186,9 @@ function deleteLocalStorage(name) {
 function getObject(name, fallback) {
 	try {
 		let object = JSON.parse(getLocalStorage(name));
-		if(object == null) object = fallback;
+		if (object == null) object = fallback;
 		return object;
-	} catch(e) {
+	} catch (e) {
 		console.log("Returning fallback, because unable to parse retrieved JSON object: " + getLocalStorage(name));
 		console.log(e);
 		return fallback;
@@ -200,7 +200,7 @@ function setObject(name, object) {
 }
 
 function deleteObject(name) {
-		deleteLocalStorage(name);
+	deleteLocalStorage(name);
 }
 
 function setObjectExpiring(name, object, expiresInMs) {
@@ -221,8 +221,8 @@ function getObjectExpiring(name, fallback) {
 	const container = getObject(name, fallback);
 
 	let object = fallback;
-	if(container && container.expiryDate && new Date(container.expiryDate) >= new Date()) {
-		if(container.object != null) {
+	if (container && container.expiryDate && new Date(container.expiryDate) >= new Date()) {
+		if (container.object != null) {
 			object = container.object;
 		}
 	}
@@ -232,15 +232,21 @@ function getObjectExpiring(name, fallback) {
 function slugify(s) {
 	var t = s.toLowerCase().trim().replace(/  +/g, ' ').split(' ');
 
-	for(i=0; i<t.length; i++) {
-		t[i] = t[i].replace(/\W/g,'');
+	for (i = 0; i < t.length; i++) {
+		t[i] = t[i].replace(/\W/g, '');
 	}
-	
-	t = t.filter(function(item, index){
+
+	t = t.filter(function (item, index) {
 		return t.indexOf(item) >= index;
 	});
 
 	return t.sort().join(' ');
+}
+
+function getRandomInt(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 //////////////////////////////////////////
@@ -417,7 +423,7 @@ class Notation {
     return "https://aktien-portal.at/Aktien/" + this.fallbackSymbol + "/prime/teccharts/" + this.symbol + "/";
   }
 
-  getStockChartsUri(timeSpan, imgOnly=false) {
+  getStockChartsUri(timeSpan, imgOnly = false) {
     const cfg = "p28951652856";
 
     let ts = "&yr=9&mn=0&dy=0";
@@ -428,7 +434,7 @@ class Notation {
     }
 
     let uri = null;
-    if(imgOnly) {
+    if (imgOnly) {
       uri = "https://stockcharts.com/c-sc/sc?p=D&" + ts + "&i=" + cfg + "&s=" + this.symbol;
     } else {
       uri = "https://stockcharts.com/h-sc/ui?p=D" + ts + "&id=" + cfg + "&s=" + this.symbol;
@@ -541,20 +547,25 @@ class Notation {
       } else {
         const uri = baseUri + "&function=GLOBAL_QUOTE";
         $.ajax(uri, { type: 'GET' }).done(function (response) {
-          console.log(response);
-          const globalQuote = response["Global Quote"];
-          const quote = {
-            "price": parseFloat(globalQuote["05. price"]),
-            "open": parseFloat(globalQuote["02. open"]),
-            "high": parseFloat(globalQuote["03. high"]),
-            "low": parseFloat(globalQuote["04. low"]),
-          };
+          //console.log(JSON.stringify(response));
+          if (response.Note && response.Note.indexOf("call frequency") != -1) {
+            console.log("CALL_FREQUENCY_TOO_HIGH");
+            reject("CALL_FREQUENCY_TOO_HIGH");
+          } else {
+            const globalQuote = response["Global Quote"];
+            const quote = {
+              "price": parseFloat(globalQuote["05. price"]),
+              "open": parseFloat(globalQuote["02. open"]),
+              "high": parseFloat(globalQuote["03. high"]),
+              "low": parseFloat(globalQuote["04. low"]),
+            };
 
-          //expire cache in 1h
-          setObjectExpiring(cacheKey, quote, 60 * 60 * 1000);
-          console.log("CACHE MISS: " + JSON.stringify(quote));
+            //expire cache in 1h
+            setObjectExpiring(cacheKey, quote, 60 * 60 * 1000);
+            //console.log("CACHE MISS: " + JSON.stringify(quote));
 
-          resolve(quote);
+            resolve(quote);
+          }
         }).fail(function (e) { reject(e); });
       }
     });
@@ -569,18 +580,23 @@ class Notation {
       } else {
         const uri = baseUri + "&function=SMA&interval=daily&time_period=253&series_type=open";
         $.ajax(uri, { type: 'GET' }).done(function (response) {
-          console.log(response);
-          const intervals = response["Technical Analysis: SMA"];
-          const latestKey = Object.keys(intervals)[0];
-          const latestValue = intervals[latestKey];
-          const sma = parseFloat(latestValue["SMA"]);
-          const smaAsObject = { "avgSimpleYearly": sma };
+          //console.log(JSON.stringify(response));
+          if (response.Note && response.Note.indexOf("call frequency") != -1) {
+            console.log("CALL_FREQUENCY_TOO_HIGH");
+            reject("CALL_FREQUENCY_TOO_HIGH");
+          } else {
+            const intervals = response["Technical Analysis: SMA"];
+            const latestKey = Object.keys(intervals)[0];
+            const latestValue = intervals[latestKey];
+            const sma = parseFloat(latestValue["SMA"]);
+            const smaAsObject = { "avgSimpleYearly": sma };
 
-          //expire cache in 24h
-          setObjectExpiring(cacheKey, smaAsObject, 2 * 24 * 60 * 60 * 1000);
-          console.log("CACHE MISS: " + JSON.stringify(sma));
+            //expire cache in 24h
+            setObjectExpiring(cacheKey, smaAsObject, 2 * 24 * 60 * 60 * 1000);
+            //console.log("CACHE MISS: " + JSON.stringify(sma));
 
-          resolve(smaAsObject);
+            resolve(smaAsObject);
+          }
         }).fail(function (e) { reject(e); });
       }
     });
@@ -589,6 +605,8 @@ class Notation {
       const merge = Object.assign({}, ...values);
       merge.avgSimpleYearlyPotential = (merge.avgSimpleYearly / merge.price - 1);
       callback(null, merge);
+    }).catch(function (error) {
+      callback(error, null);
     });
   }
 }
@@ -777,7 +795,7 @@ function findNotations(query) {
       let matches = !query || query === null;
       if (!matches) {
         const info = (id + " " + name + " " + tags).toLowerCase();
-        
+
         matches = true;
         for (let i = 0; i < tokensLength; i++) {
           const token = tokens[i];
@@ -870,10 +888,10 @@ function deleteNotation(id) {
       //Show distance from mean
       notation.getPriceDetails(function(error, details) {
         if(error) {
-          $(".details").html(error);
-          setTimeout(updatePriceDetails, 30 * 1000);
+          const s = getRandomInt(30, 60);
+          console.log("Retrying to get price details in " + s +"s...");
+          setTimeout(updatePriceDetails, s * 1000);
         } else {
-          console.log("details: " + JSON.stringify(details));
           $("#price").val(details.price.toFixed(2));
           $("#avgSimpleYearly").val(details.avgSimpleYearly.toFixed(2));
           $("#potential").val((details.avgSimpleYearlyPotential * 100.0).toFixed(2));
