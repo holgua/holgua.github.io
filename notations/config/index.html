@@ -480,8 +480,8 @@ class Notation {
               "low": parseFloat(globalQuote["04. low"]),
             };
 
-            //expire cache in 2h
-            setObjectExpiring(cacheKey, quote, 2 * 60 * 60 * 1000);
+            //expire cache in 4h
+            setObjectExpiring(cacheKey, quote, 4 * 60 * 60 * 1000);
             //console.log("CACHE MISS: " + JSON.stringify(quote));
 
             resolve(quote);
@@ -511,8 +511,8 @@ class Notation {
             const sma = parseFloat(latestValue["SMA"]);
             const smaAsObject = { "avgSimpleYearly": sma };
 
-            //expire cache in 48h
-            setObjectExpiring(cacheKey, smaAsObject, 2 * 24 * 60 * 60 * 1000);
+            //expire cache in 5d
+            setObjectExpiring(cacheKey, smaAsObject, 5 * 24 * 60 * 60 * 1000);
             //console.log("CACHE MISS: " + JSON.stringify(sma));
 
             resolve(smaAsObject);
@@ -618,10 +618,9 @@ var defaults = {
   "NYSE:JW-A": { name: "Wiley" },
   "NYSE:NYT": { name: "New York Times" },
   "NYSE:HOG": { name: "Harley-Davidson" },
-  "NYSE:GOLD": { name: "Barrick Gold", tags: "Gold" },
   "NYSE:MMM": { name: "3M" },
   "NYSE:SNE": { name: "Sony" },
-  "NYSE:WWE": { name: "World Wrestling" },
+  //"NYSE:WWE": { name: "World Wrestling" },
   "NYSE:CAT": { name: "Caterpillar" },
   "NYSE:DE": { name: "John Deere" },
   "NYSE:DT": { name: "Dynatrace" },
@@ -666,11 +665,6 @@ var defaults = {
   "NYSE:PPLT": { name: "ETF Basic Platinum" },
   "NYSE:PHO": { name: "ETF Basic Water" },
 
-  "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
-  "NYSE:GDX": { name: "ETF Gold Miners", tags: "Gold" },
-  "NYSE:JNUG": { name: "ETF Gold Miners 3x", tags: "Gold" },
-  "NYSE:JDST": { name: "ETF Gold Miners -3x", tags: "Gold" },
-
   "NYSE:WOOD": { name: "ETF Timber" },
   "NYSE:STZ": { name: "ETF Alcohol" },
   "NYSE:KBE": { name: "ETF Banks" },
@@ -693,7 +687,40 @@ var defaults = {
   "NYSE:EWZ": { name: "ETF Geo Brazil" },
   "NYSE:EZA": { name: "ETF Geo South Africa" },
   "NYSE:EWL": { name: "ETF Geo Switzerland" },
-  "NYSE:EWJ": { name: "ETF Geo Japan" }
+  "NYSE:EWJ": { name: "ETF Geo Japan" },
+
+  //GOLD
+  "NASD:$GOLD": { name: "_ Gold Price", tags: "Gold"},
+  "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
+
+  "NYSE:GDX": { name: "ETF Gold Miners", tags: "Gold Miners" },
+  "NYSE:JNUG": { name: "ETF Gold Miners 3x", tags: "Gold Miners" },
+  "NYSE:JDST": { name: "ETF Gold Miners -3x", tags: "Gold Miners" },
+
+  "AMEX:EQX": { name: "Equinox Gold", tags: "Gold Miner"},
+  "CVE:KNTNF": { name: "K92 Mining", tags: "Gold Miner"},
+  "NYSE:AEM": { name: "Agnico Eagle", tags: "Gold Miner"},
+  "NYSE:AGI": { name: "Alamos", tags: "Gold Miner"},
+  "NYSE:AU": { name: "Anglogold Ashanti", tags: "Gold Miner"},
+  "NYSE:EGO": { name: "Eldorado", tags: "Gold Miner"},
+  "NYSE:FNV": { name: "Franco Nevada", tags: "Gold Miner"},
+  "NYSE:GFI": { name: "Gold Fields", tags: "Gold Miner"},
+  "NYSE:GOLD": { name: "Barrick", tags: "Gold Miner"},
+  "NYSE:KGC": { name: "Kinross", tags: "Gold Miner"},
+  "NYSE:KL": { name: "Kirkland", tags: "Gold Miner"},
+  "NYSE:NEM": { name: "Newmont", tags: "Gold Miner"},
+  "NYSE:RGLD": { name: "Royal Gold", tags: "Gold Miner"},
+  "OTC:NESRF": { name: "Northern Star", tags: "Gold Miner"},
+  "OTC:PMNXF": { name: "Perseus Mining", tags: "Gold Miner"},
+  "TSE:AOT.TO": { name: "Ascot Resources", tags: "Gold Miner"},
+  "TSE:BTO.TO": { name: "B2Gold", tags: "Gold Miner"},
+  "TSE:KOR.TO": { name: "Corvus Gold", tags: "Gold Miner"},
+  "TSE:PG.TO": { name: "Premier Gold", tags: "Gold Miner"},
+  "TSE:ROXG.TO": { name: "Roxgold", tags: "Gold Miner"},
+  "TSE:TGZ.TO": { name: "Teranga", tags: "Gold Miner"},
+  "TSXV:FSX.V": { name: "Fosterville South", tags: "Gold Miner"},
+
+  "NYSE:RIO": { name: "Rio Tinto", tags: "Coal Copper Diamond Iron Gold Miner"}
 };
 
 var metadata = getObject("metadata", defaults);
