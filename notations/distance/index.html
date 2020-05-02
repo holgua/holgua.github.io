@@ -712,7 +712,7 @@ var defaults = {
   "NYSE:EWJ": { name: "ETF Geo Japan" },
 
   //GOLD + GOLD MINERS
-  "NASD:$GOLD": { name: "_ Gold Price", tags: "Gold"},
+  "NASD:$GOLD": { name: ". Gold Price", tags: "Gold"},
   "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
 
   "NYSE:GDX": { name: "ETF Gold Miners", tags: "Gold Miners" },
@@ -745,7 +745,7 @@ var defaults = {
   "NYSE:RIO": { name: "Rio Tinto", tags: "Coal Copper Diamond Iron Gold Miner"},
 
   //SILVER + SILVER MINERS
-  "NASD:$SILVER": { name: "_ Silver Price", tags: "Silver"},
+  "NASD:$SILVER": { name: ". Silver Price", tags: "Silver"},
   "NYSE:SLV": { name: "ETF Basic Silver", tags: "Silver" },
 
   "NYSE:SLVP": { name: "ETF Silver Miners", tags: "Silver Miners" },
@@ -842,7 +842,7 @@ function deleteNotation(id) {
       const table = $('table');
 
       let tr0 = '<tr>';
-      tr0 +=  '<th style="text-align:left; padding-right:20px">id</th>';
+      tr0 +=  '<th style="text-align:left; padding-right:20px">symbol</th>';
       tr0 +=  '<th style="text-align:left; padding-right:20px">name</th>';
       tr0 +=  '<th style="text-align:left; padding-right:20px">tags</th>';
       tr0 +=  '<th style="text-align:right; padding-left:20px">price</th>';
@@ -855,7 +855,7 @@ function deleteNotation(id) {
         const row = content[i];
 
         let tr = '<tr>';
-        tr += '<td style="text-align:left; padding-right:20px"><a target="_blank" href="../details/?id=' + row.id + '">' + row.id + '</a></td>';
+        tr += '<td style="text-align:left; padding-right:20px"><a target="_blank" href="../details/?id=' + row.id + '">' + row.symbol + '</a></td>';
         tr += '<td style="text-align:left; padding-right:20px"><a target="_blank" href="../details/?id=' + row.id + '">' + row.name + '</a></td>';
         tr += '<td style="text-align:left; padding-right:20px">' + row.tags + '</td>';
         tr += '<td style="text-align:right; padding-left:20px">' + row.price.toFixed(2) + '&nbsp;$</td>';

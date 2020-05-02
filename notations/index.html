@@ -2724,7 +2724,7 @@ var defaults = {
   "NYSE:EWJ": { name: "ETF Geo Japan" },
 
   //GOLD + GOLD MINERS
-  "NASD:$GOLD": { name: "_ Gold Price", tags: "Gold"},
+  "NASD:$GOLD": { name: ". Gold Price", tags: "Gold"},
   "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
 
   "NYSE:GDX": { name: "ETF Gold Miners", tags: "Gold Miners" },
@@ -2757,7 +2757,7 @@ var defaults = {
   "NYSE:RIO": { name: "Rio Tinto", tags: "Coal Copper Diamond Iron Gold Miner"},
 
   //SILVER + SILVER MINERS
-  "NASD:$SILVER": { name: "_ Silver Price", tags: "Silver"},
+  "NASD:$SILVER": { name: ". Silver Price", tags: "Silver"},
   "NYSE:SLV": { name: "ETF Basic Silver", tags: "Silver" },
 
   "NYSE:SLVP": { name: "ETF Silver Miners", tags: "Silver Miners" },
@@ -2900,7 +2900,7 @@ function deleteNotation(id) {
       const purchaseInfo = notation.purchaseInfo;
 
       const purchaseLabel = purchaseInfo.default ? "" : '• buy at <span class="buy-at">' + purchaseInfo.buyAt.toFixed(2) + '</span> • ';
-      const idLabel = notation.exchange + ":" + notation.symbol;
+      const idLabel = notation.symbol; //notation.exchange + ":" + notation.symbol;
       const tagsLabel = notation.tags ? " " + notation.tags : "";
 
       const section = $("section:eq(" + i + ")");
