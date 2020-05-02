@@ -323,7 +323,6 @@ class Notation {
   }
 
   get uri() {
-    //return './details/?id=' + this.id;
     let uri = './details/?id=' + this.id;
     if (this.name && this.name != this.id) {
       uri += "&name=" + encodeURIComponent(this.name);
@@ -866,9 +865,10 @@ function deleteNotation(id) {
       }
     }
 
-    function updateRow(id, name, tags, price, sma, dist) {
+    function updateRow(id, symbol, name, tags, price, sma, dist) {
       const row = {
         id: id,
+        symbol: symbol,
         name: name,
         tags: tags,
         price: price,
@@ -902,7 +902,7 @@ function deleteNotation(id) {
               const price = details.price;
               const sma = details.avgSimpleYearly;
               const dist = (details.avgSimpleYearlyPotential * 100.0);
-              updateRow(notation.id, notation.name, notation.tags, price, sma, dist);
+              updateRow(notation.id, notation.symbol, notation.name, notation.tags, price, sma, dist);
             } else if(error == "CALL_FREQUENCY_TOO_HIGH") {
               //console.log("Unable to retrieve price info. Adding " + notation.id + " to retry array...");
               retry.push(notation);

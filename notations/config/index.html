@@ -301,7 +301,6 @@ class Notation {
   }
 
   get uri() {
-    //return './details/?id=' + this.id;
     let uri = './details/?id=' + this.id;
     if (this.name && this.name != this.id) {
       uri += "&name=" + encodeURIComponent(this.name);
