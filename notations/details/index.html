@@ -835,7 +835,8 @@ var defaults = {
 
 };
 
-var metadata = getObject("metadata", defaults);
+const metadataKey = createKey("root", "toc");
+var metadata = getObject(metadataKey, defaults);
 
 function findNotations(query) {
   const tokens = query ? query.toLowerCase().split(" ") : [];
@@ -904,13 +905,13 @@ function setNotation(idOrNotation) {
     } else {
       metadata[idOrNotation.id] = { name: idOrNotation.name, pinned: idOrNotation.pinned, tags: idOrNotation.tags };
     }
-    setObject(createKey("root", "toc"), metadata);
+    setObject(metadataKey, metadata);
   }
 }
 
 function deleteNotation(id) {
   delete metadata[id];
-  setObject(createKey("root", "toc"), metadata);
+  setObject(createKey(metadataKey, metadata);
 }
 
 
