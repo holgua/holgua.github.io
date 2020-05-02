@@ -2359,7 +2359,7 @@ class Notation {
   }
 
   get googleUri() {
-    return 'https://www.google.com/search?q=' + this.id;
+    return 'https://www.google.com/search?q=' + this.symbol + '%20stock';
   }
 
   getFinvizUri(timeSpan) {
@@ -2571,95 +2571,96 @@ class Notation {
 
 var defaults = {
   //NASD
-  "NASD:AAPL": { name: "Apple" },
-  "NASD:GOOGL": { name: "Google" },
-  "NASD:MSFT": { name: "Microsoft" },
-  "NASD:FB": { name: "Facebook" },
-  "NASD:AMZN": { name: "Amazon" },
-  "NASD:INTC": { name: "Intel" },
+  "NASD:AAPL": { name: "Apple", tags: "technology" },
+  "NASD:GOOGL": { name: "Google", tags: "technology" },
+  "NASD:MSFT": { name: "Microsoft", tags: "technology" },
+  "NASD:FB": { name: "Facebook", tags: "technology" },
+  "NASD:AMZN": { name: "Amazon", tags: "technology" },
+  "NASD:INTC": { name: "Intel", tags: "technology" },
+  "NASD:ADBE": { name: "Adobe", tags: "technology" },
+  "NASD:PYPL": { name: "PayPal", tags: "technology" },
+  "NASD:NFLX": { name: "Netflix", tags: "technology" },
+  "NASD:EBAY": { name: "Ebay", tags: "technology" },
+  "NASD:NVDA": { name: "Nvidia", tags: "technology" },
+  "NASD:AVID": { name: "Avid", tags: "technology" },
+  "NASD:TEAM": { name: "Atlassian", tags: "technology" },
+  "NASD:DBX": { name: "Dropbox", tags: "technology" },
+  "NASD:TXN": { name: "Texas Instruments", tags: "technology" },
+  "NASD:ADSK": { name: "Autodesk", tags: "technology" },
+  "NASD:CSCO": { name: "Cisco", tags: "technology" },
+  "NASD:SPLK": { name: "Splunk", tags: "technology" },
+
+  "NASD:ATVI": { name: "Blizzard", tags: "technology gaming" },
+  "NASD:TTWO": { name: "Take Two", tags: "technology gaming" },
+  "NASD:EA": { name: "EA", tags: "technology gaming" },
+
+  "NASD:TSLA": { name: "Tesla", tags: "automotive" },
+  "NASD:GT": { name: "Goodyear", tags: "automotive" },
+  "NASD:FOXF": { name: "Fox", tags: "automotive" },
+
   "NASD:SBUX": { name: "Starbucks" },
-  "NASD:ADBE": { name: "Adobe" },
-  "NASD:PYPL": { name: "PayPal" },
-  "NASD:NFLX": { name: "Netflix" },
-  "NASD:TSLA": { name: "Tesla" },
-  "NASD:EBAY": { name: "Ebay" },
-  "NASD:ATVI": { name: "Blizzard" },
-  "NASD:EA": { name: "EA" },
-  "NASD:NVDA": { name: "Nvidia" },
-  "NASD:TTWO": { name: "Take Two" },
-  "NASD:AVID": { name: "Avid" },
   "NASD:AMCX": { name: "AMC" },
   "NASD:DISCA": { name: "Discovery" },
   "NASD:ERIC": { name: "Ericsson" },
-  "NASD:TEAM": { name: "Atlassian" },
   "NASD:GRMN": { name: "Garmin" },
   "NASD:LOGI": { name: "Logitech" },
   "NASD:CRSP": { name: "Crispr" },
   "NASD:IRBT": { name: "iRobot" },
-  "NASD:DBX": { name: "Dropbox" },
-  "NASD:GT": { name: "Goodyear" },
-  "NASD:TXN": { name: "Texas Instruments" },
   "NASD:SBUX": { name: "Starbucks" },
-  "NASD:ADSK": { name: "Autodesk" },
   "NASD:HAS": { name: "Hasbro" },
   "NASD:MAT": { name: "Mattel" },
   "NASD:TRIP": { name: "TripAdvisor" },
   "NASD:GPRO": { name: "GoPro" },
-  "NASD:FOXF": { name: "Fox" },
-  "NASD:NDAQ": { name: "NASD" },
+  "NASD:NDAQ": { name: "Nasdaq" },
   "NASD:SONO": { name: "Sonos" },
-  "NASD:CSCO": { name: "Cisco" },
-  "NASD:SPLK": { name: "Splunk" },
 
   //NYSE
+  "NYSE:DIS": { name: "Disney", tags: "technology" },
+  "NYSE:TWTR": { name: "Twitter", tags: "technology" },
+  "NYSE:SPOT": { name: "Spotify", tags: "technology" },
+  "NYSE:SAP": { name: "SAP", tags: "technology" },
+  "NYSE:SHOP": { name: "Shopify", tags: "technology" },
+  "NYSE:NOW": { name: "ServiceNow", tags: "technology" },
+  "NYSE:JW-A": { name: "Wiley", tags: "technology" },
+  "NYSE:DT": { name: "Dynatrace", tags: "technology" },
+  "NYSE:NEWR": { name: "New Relic", tags: "technology" },
+  "NYSE:ESTC": { name: "Elastic", tags: "technology" },
+
+  "NYSE:F": { name: "Ford", tags: "Automotive" },
+  "NYSE:RACE": { name: "Ferrari", tags: "automotive" },
+  "NYSE:GM": { name: "GM", tags: "automotive" },
+  "NYSE:FCAU": { name: "Fiat", tags: "automotive" },
+  "NYSE:HMC": { name: "Honda", tags: "automotive" },
+  "NYSE:TM": { name: "Toyota", tags: "automotive" },
+  "NYSE:HOG": { name: "Harley-Davidson", tags: "automotive" },
+
   "NYSE:BRK-B": { name: "Berkshire" },
   "NYSE:GE": { name: "GE" },
-  "NYSE:GM": { name: "GM" },
   "NYSE:NOK": { name: "Nokia" },
   "NYSE:KO": { name: "Coca-Cola" },
-  "NYSE:DIS": { name: "Disney" },
   "NYSE:PEP": { name: "Pepsi" },
-  "NYSE:TWTR": { name: "Twitter" },
-  "NYSE:F": { name: "Ford", tags: "Automotive", pinned: true },
-  "NYSE:RACE": { name: "Ferrari" },
-  "NYSE:SPOT": { name: "Spotify" },
   "NYSE:CBS": { name: "CBS" },
   "NYSE:LGF-A": { name: "Lions Gate" },
-  "NYSE:SAP": { name: "SAP" },
-  "NYSE:FCAU": { name: "Fiat" },
-  "NYSE:CAJ": { name: "Canon" },
-  "NYSE:HMC": { name: "Honda" },
   "NYSE:SNE": { name: "Sony" },
-  "NYSE:TM": { name: "Toyota" },
   "NYSE:UPS": { name: "UPS" },
   "NYSE:FDX": { name: "FedEx" },
   "NYSE:GPS": { name: "The Gap" },
   "NYSE:AEO": { name: "American Eagle" },
   "NYSE:URBN": { name: "Urban Outfitters" },
   "NYSE:ANF": { name: "Abercrombie" },
-  "NYSE:SHOP": { name: "Shopify" },
   "NYSE:CAJ": { name: "Canon" },
   "NYSE:MSI": { name: "Motorola" },
-  "NYSE:AG": { name: "First Majestic Silver", tags: "Silver" },
   "NYSE:LIN": { name: "Linde" },
   "NYSE:MANU": { name: "Manchester United" },
   "NYSE:NKE": { name: "Nike" },
-  "NYSE:NOW": { name: "ServiceNow" },
   "NYSE:SWK": { name: "Black + Decker" },
   "NYSE:XOM": { name: "Exxon", tags: "Oil" },
   "NYSE:RDS-A": { name: "Shell", tags: "Oil" },
   "NYSE:BP": { name: "BP", tags: "Oil" },
-  "NYSE:JW-A": { name: "Wiley" },
   "NYSE:NYT": { name: "New York Times" },
-  "NYSE:HOG": { name: "Harley-Davidson" },
   "NYSE:MMM": { name: "3M" },
-  "NYSE:SNE": { name: "Sony" },
-  //"NYSE:WWE": { name: "World Wrestling" },
   "NYSE:CAT": { name: "Caterpillar" },
   "NYSE:DE": { name: "John Deere" },
-  "NYSE:DT": { name: "Dynatrace" },
-  "NYSE:NEWR": { name: "New Relic" },
-  "NYSE:ESTC": { name: "Elastic" },
 
   //ATX
   // "ATX:ANDR:96": { name: "Andritz" },
@@ -2682,7 +2683,7 @@ var defaults = {
   "NYSE:SPXL": { name: "ETF SP500 3x" },
   "NYSE:SPXS": { name: "ETF SP500 -3x" },
 
-  "NYSE:XLE": { name: "ETF Energy", tags: "Oil" },
+  "NYSE:XLE": { name: "ETF Energy"},
   "NYSE:ICLN": { name: "ETF Energy Clean" },
   "NYSE:TAN": { name: "ETF Energy Solar" },
   "NYSE:FAN": { name: "ETF Energy Wind" },
@@ -2693,7 +2694,6 @@ var defaults = {
   "NYSE:KOL": { name: "ETF Basic Coal" },
   "NYSE:FCG": { name: "ETF Basic Gas" },
   "NYSE:CPER": { name: "ETF Basic Copper" },
-  "NYSE:SLV": { name: "ETF Basic Silver", tags: "Silver" },
   "NYSE:LIT": { name: "ETF Basic Lithium" },
   "NYSE:PALL": { name: "ETF Basic Palladium" },
   "NYSE:PPLT": { name: "ETF Basic Platinum" },
@@ -2702,7 +2702,7 @@ var defaults = {
   "NYSE:WOOD": { name: "ETF Timber" },
   "NYSE:STZ": { name: "ETF Alcohol" },
   "NYSE:KBE": { name: "ETF Banks" },
-  "NYSE:CARZ": { name: "ETF Automotive" },
+  "NYSE:CARZ": { name: "ETF Automotive", tags: "automotive" },
   "NYSE:SEA": { name: "ETF Shipping" },
   "NYSE:EVX": { name: "ETF Waste Mgmt" },
   "NYSE:RWO": { name: "ETF REIT Global" },
@@ -2723,7 +2723,7 @@ var defaults = {
   "NYSE:EWL": { name: "ETF Geo Switzerland" },
   "NYSE:EWJ": { name: "ETF Geo Japan" },
 
-  //GOLD
+  //GOLD + GOLD MINERS
   "NASD:$GOLD": { name: "_ Gold Price", tags: "Gold"},
   "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
 
@@ -2754,7 +2754,19 @@ var defaults = {
   "TSE:TGZ.TO": { name: "Teranga", tags: "Gold Miner"},
   "TSXV:FSX.V": { name: "Fosterville South", tags: "Gold Miner"},
 
-  "NYSE:RIO": { name: "Rio Tinto", tags: "Coal Copper Diamond Iron Gold Miner"}
+  "NYSE:RIO": { name: "Rio Tinto", tags: "Coal Copper Diamond Iron Gold Miner"},
+
+  //SILVER + SILVER MINERS
+  "NASD:$SILVER": { name: "_ Silver Price", tags: "Silver"},
+  "NYSE:SLV": { name: "ETF Basic Silver", tags: "Silver" },
+
+  "NYSE:SLVP": { name: "ETF Silver Miners", tags: "Silver Miners" },
+
+  "NYSE:AG": { name: "First Majestic Silver", tags: "Silver Miner" },
+  "NYSE:PAAS": { name: "Pan American Silver", tags: "Silver Miner" },
+  "NYSE:SVM": { name: "Silvercorp", tags: "Silver Miner" },
+  "NYSE:WPM": { name: "Wheaton", tags: "Silver Miner" }
+
 };
 
 var metadata = getObject("metadata", defaults);
