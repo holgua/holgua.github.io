@@ -585,16 +585,20 @@ class Notation {
             reject("CALL_FREQUENCY_TOO_HIGH");
           } else {
             const intervals = response["Technical Analysis: SMA"];
-            const latestKey = Object.keys(intervals)[0];
-            const latestValue = intervals[latestKey];
-            const sma = parseFloat(latestValue["SMA"]);
-            const smaAsObject = { "avgSimpleYearly": sma };
+            if(intervals) {
+              const latestKey = Object.keys(intervals)[0];
+              const latestValue = intervals[latestKey];
+              const sma = parseFloat(latestValue["SMA"]);
+              const smaAsObject = { "avgSimpleYearly": sma };
 
-            //expire cache in 5d
-            setObjectExpiring(cacheKey, smaAsObject, 5 * 24 * 60 * 60 * 1000);
-            //console.log("CACHE MISS: " + JSON.stringify(sma));
+              //expire cache in 5d
+              setObjectExpiring(cacheKey, smaAsObject, 5 * 24 * 60 * 60 * 1000);
 
-            resolve(smaAsObject);
+              resolve(smaAsObject);
+            } else {
+              console.log(JSON.stringify(response));
+              reject("UNKNOWN_RESPONSE");
+            }
           }
         }).fail(function (e) { reject(e); });
       }
