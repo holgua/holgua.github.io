@@ -311,7 +311,7 @@ class Notation {
   }
 
   get purchaseInfo() {
-    const key = createKey("stock", notation.symbol, "calc");
+    const key = createKey("stock", this.symbol, "calc");
     let info = getObject(key);
     if (!info) {
       info = {
@@ -332,7 +332,7 @@ class Notation {
   setPurchaseInfo(investment, interest, sellAt) {
     const result = this.calcPurchaseInfo(investment, interest, sellAt);
 
-    const key = createKey("stock", notation.symbol, "calc");
+    const key = createKey("stock", this.symbol, "calc");
     setObject(key, {
       amount: investment,
       interest: interest,
