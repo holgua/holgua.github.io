@@ -2183,6 +2183,20 @@ function getObjectExpiring(name, fallback) {
 	return object;
 }
 
+function createKey() {
+	let key = "";
+
+	const len = arguments.length;
+	for (let i = 0; i < len; i++) {
+		key += arguments[i].toLowerCase().trim().replace(/  +/g, ' ').replace(/\//g, '');
+		if (i + 1 < len) {
+			key += "/";
+		}
+	}
+
+	return key;
+}
+
 function slugify(s) {
 	var t = s.toLowerCase().trim().replace(/  +/g, ' ').split(' ');
 
@@ -2271,7 +2285,8 @@ class Notation {
   setPurchaseInfo(investment, interest, sellAt) {
     const result = this.calcPurchaseInfo(investment, interest, sellAt);
 
-    setObject(notation.id, {
+    const key = createKey("stock", notation.symbol, "calc");
+    setObject(key, {
       amount: investment,
       interest: interest,
       sellAt: sellAt
@@ -2492,7 +2507,8 @@ class Notation {
 
     //get basic quote information
     const pQuote = new Promise(function (resolve, reject) {
-      const cacheKey = "priceDetails-quote-" + symbol;
+      const cacheKey = createKey("stock", symbol, "data", "quote");
+
       const cached = getObjectExpiring(cacheKey, null);
       if (cached) {
         //console.log("CACHE HIT: " + JSON.stringify(cached));
@@ -2505,7 +2521,7 @@ class Notation {
             //console.log("CALL_FREQUENCY_TOO_HIGH");
             reject("CALL_FREQUENCY_TOO_HIGH");
           } else if(response["Error Message"]) {
-            console.log(response["Error Message"]);
+            console.log(JSON.stringify(response));
             reject("UNKNOWN_ERROR");
           } else {
             const globalQuote = response["Global Quote"];
@@ -2528,7 +2544,8 @@ class Notation {
 
     //get simple moving average
     const pSma = new Promise(function (resolve, reject) {
-      const cacheKey = "priceDetails-avgSimpleYearly-" + symbol;
+      const cacheKey = createKey("stock", symbol, "data", "sma");
+
       const cached = getObjectExpiring(cacheKey, null);
       if (cached) {
         //console.log("CACHE HIT: " + JSON.stringify(cached));
@@ -2540,7 +2557,7 @@ class Notation {
           if (response.Note && response.Note.indexOf("call frequency") != -1) {
             reject("CALL_FREQUENCY_TOO_HIGH");
           } else if(response["Error Message"]) {
-            console.log(response["Error Message"]);
+            console.log(JSON.stringify(response));
             reject("UNKNOWN_ERROR");
           } else {
             const intervals = response["Technical Analysis: SMA"];
@@ -2827,7 +2844,7 @@ function getNotation(id) {
     var pinned = (md && md.pinned) ? true : false;
     if (!md) {
       metadata[id] = { name: name, pinned: pinned };
-      setObject("metadata", metadata);
+      setObject(createKey("root", "toc"), metadata);
     }
     notation = new Notation(id, name, tags, pinned);
   }
@@ -2841,13 +2858,13 @@ function setNotation(idOrNotation) {
     } else {
       metadata[idOrNotation.id] = { name: idOrNotation.name, pinned: idOrNotation.pinned, tags: idOrNotation.tags };
     }
-    setObject("metadata", metadata);
+    setObject(createKey("root", "toc"), metadata);
   }
 }
 
 function deleteNotation(id) {
   delete metadata[id];
-  setObject("metadata", metadata);
+  setObject(createKey("root", "toc"), metadata);
 }
 
 
@@ -2922,12 +2939,13 @@ function deleteNotation(id) {
   }
 
   //Prepare input field for filter
+  const filterKey = createKey("root", "filter");
   $("#filter").keyup(function() {
     var f = $("#filter").val();
-    setCookie("f", f);
+    setObject(filterKey, f);
     filter(f);
   });
-  var f = getCookie("f");
+  var f = getObject(filterKey);
   $("#filter").val(f);
   filter(f);
   $("#filter").focus();
