@@ -231,7 +231,8 @@ class Notation {
   }
 
   get purchaseInfo() {
-    let info = getObject(this.id);
+    const key = createKey("stock", notation.symbol, "calc");
+    let info = getObject(key);
     if (!info) {
       info = {
         amount: 4000,
