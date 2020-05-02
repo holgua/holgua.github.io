@@ -492,6 +492,9 @@ class Notation {
           if (response.Note && response.Note.indexOf("call frequency") != -1) {
             //console.log("CALL_FREQUENCY_TOO_HIGH");
             reject("CALL_FREQUENCY_TOO_HIGH");
+          } else if(response["Error Message"]) {
+            console.log(response["Error Message"]);
+            reject("UNKNOWN_ERROR");
           } else {
             const globalQuote = response["Global Quote"];
             const quote = {
@@ -523,24 +526,21 @@ class Notation {
         $.ajax(uri, { type: 'GET' }).done(function (response) {
           //console.log(JSON.stringify(response));
           if (response.Note && response.Note.indexOf("call frequency") != -1) {
-            //console.log("CALL_FREQUENCY_TOO_HIGH");
             reject("CALL_FREQUENCY_TOO_HIGH");
+          } else if(response["Error Message"]) {
+            console.log(response["Error Message"]);
+            reject("UNKNOWN_ERROR");
           } else {
             const intervals = response["Technical Analysis: SMA"];
-            if(intervals) {
-              const latestKey = Object.keys(intervals)[0];
-              const latestValue = intervals[latestKey];
-              const sma = parseFloat(latestValue["SMA"]);
-              const smaAsObject = { "avgSimpleYearly": sma };
+            const latestKey = Object.keys(intervals)[0];
+            const latestValue = intervals[latestKey];
+            const sma = parseFloat(latestValue["SMA"]);
+            const smaAsObject = { "avgSimpleYearly": sma };
 
-              //expire cache in 5d
-              setObjectExpiring(cacheKey, smaAsObject, 5 * 24 * 60 * 60 * 1000);
+            //expire cache in 5d
+            setObjectExpiring(cacheKey, smaAsObject, 5 * 24 * 60 * 60 * 1000);
 
-              resolve(smaAsObject);
-            } else {
-              console.log(JSON.stringify(response));
-              reject("UNKNOWN_RESPONSE");
-            }
+            resolve(smaAsObject);
           }
         }).fail(function (e) { reject(e); });
       }
