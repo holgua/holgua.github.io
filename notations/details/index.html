@@ -747,8 +747,11 @@ var defaults = {
 
   //ETFs
   "NYSE:SPY": { name: "ETF SP500" },
-  "NYSE:SPXL": { name: "ETF SP500 3x" },
-  "NYSE:SPXS": { name: "ETF SP500 -3x" },
+  // "NYSE:SPXL": { name: "ETF SP500 3x" },
+  // "NYSE:SPXS": { name: "ETF SP500 -3x" },
+
+  "NYSE:XLK": { name: "ETF SP500 Tech", tags: "technology fang faang" },
+  "NASD:QQQ": { name: "ETF Nasdaq 100", tags: "technology fang faang" },
 
   "NYSE:XLE": { name: "ETF Energy"},
   "NYSE:ICLN": { name: "ETF Energy Clean" },
@@ -772,31 +775,31 @@ var defaults = {
   "NYSE:CARZ": { name: "ETF Automotive", tags: "automotive" },
   "NYSE:SEA": { name: "ETF Shipping" },
   "NYSE:EVX": { name: "ETF Waste Mgmt" },
-  "NYSE:RWO": { name: "ETF REIT Global" },
-  "NYSE:VNQI": { name: "ETF REIT ex-US" },
-  "NYSE:SCHH": { name: "ETF REIT US" },
+  "NYSE:RWO": { name: "ETF REIT Global", tags: "reit real estate" },
+  "NYSE:VNQI": { name: "ETF REIT ex-US", tags: "reit real estate" },
+  "NYSE:SCHH": { name: "ETF REIT US", tags: "reit real estate" },
 
-  "NYSE:URTH": { name: "ETF MSCI World" },
-  "NYSE:ACWI": { name: "ETF MSCI ACWI" },
-  "NYSE:ACWX": { name: "ETF MSCI ACWI ex-US" },
+  "NYSE:URTH": { name: "ETF MSCI World", tags: "regions world" },
+  "NYSE:ACWI": { name: "ETF MSCI ACWI", tags: "regions world" },
+  "NYSE:ACWX": { name: "ETF MSCI ACWI ex-US", tags: "regions world" },
 
-  "NYSE:SDY": { name: "ETF Geo US" },
-  "NYSE:AFK": { name: "ETF Geo Africa" },
-  "NYSE:VGK": { name: "ETF Geo Europe" },
-  "NYSE:ILF": { name: "ETF Geo Latin America" },
-  "NYSE:GULF": { name: "ETF Geo Middle East" },
-  "NYSE:EWZ": { name: "ETF Geo Brazil" },
-  "NYSE:EZA": { name: "ETF Geo South Africa" },
-  "NYSE:EWL": { name: "ETF Geo Switzerland" },
-  "NYSE:EWJ": { name: "ETF Geo Japan" },
+  "NYSE:SDY": { name: "ETF Geo US", tags: "region" },
+  "NYSE:AFK": { name: "ETF Geo Africa", tags: "region" },
+  "NYSE:VGK": { name: "ETF Geo Europe", tags: "region" },
+  "NYSE:ILF": { name: "ETF Geo Latin America", tags: "region" },
+  "NYSE:GULF": { name: "ETF Geo Middle East", tags: "region" },
+  "NYSE:EWZ": { name: "ETF Geo Brazil", tags: "region country" },
+  "NYSE:EZA": { name: "ETF Geo South Africa", tags: "region country" },
+  "NYSE:EWL": { name: "ETF Geo Switzerland", tags: "region country" },
+  "NYSE:EWJ": { name: "ETF Geo Japan", tags: "region country" },
 
   //GOLD + GOLD MINERS
   "NASD:$GOLD": { name: ". Gold Price", tags: "Gold"},
   "NYSE:GLD": { name: "ETF Basic Gold", tags: "Gold" },
 
   "NYSE:GDX": { name: "ETF Gold Miners", tags: "Gold Miners" },
-  "NYSE:JNUG": { name: "ETF Gold Miners 3x", tags: "Gold Miners" },
-  "NYSE:JDST": { name: "ETF Gold Miners -3x", tags: "Gold Miners" },
+  // "NYSE:JNUG": { name: "ETF Gold Miners 3x", tags: "Gold Miners" },
+  // "NYSE:JDST": { name: "ETF Gold Miners -3x", tags: "Gold Miners" },
 
   "AMEX:EQX": { name: "Equinox Gold", tags: "Gold Miner"},
   "CVE:KNTNF": { name: "K92 Mining", tags: "Gold Miner"},
