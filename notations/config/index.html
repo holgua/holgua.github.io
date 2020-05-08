@@ -731,6 +731,8 @@ var defaults = {
   "NYSE:KL": { name: "Kirkland", tags: "Gold Miner"},
   "NYSE:NEM": { name: "Newmont", tags: "Gold Miner"},
   "NYSE:RGLD": { name: "Royal Gold", tags: "Gold Miner"},
+  "NYSE:SAND": { name: "Sandstorm Gold", tags: "Gold Miner"},
+  "NASD:SSRM": { name: "SSR Mining", tags: "Gold Miner"},
   "OTC:NESRF": { name: "Northern Star", tags: "Gold Miner"},
   "OTC:PMNXF": { name: "Perseus Mining", tags: "Gold Miner"},
   "TSE:AOT.TO": { name: "Ascot Resources", tags: "Gold Miner"},
@@ -740,6 +742,12 @@ var defaults = {
   "TSE:ROXG.TO": { name: "Roxgold", tags: "Gold Miner"},
   "TSE:TGZ.TO": { name: "Teranga", tags: "Gold Miner"},
   "TSXV:FSX.V": { name: "Fosterville South", tags: "Gold Miner"},
+  "TSE:ASR.TO": { name: "Alacer Gold", tags: "Gold Miner Turkey"},
+  "TSE:YRI.TO": { name: "Yamana Gold", tags: "Gold Miner"},
+  "TSE:PVG.TO": { name: "Pretium Resources", tags: "Gold Miner"},
+  "TSE:ORL.TO": { name: "Orocobre", tags: "Gold Miner"},
+  "TSE:OSK.TO": { name: "Osisko Mining", tags: "Gold Miner"},
+  "TSE:WDO.TO": { name: "Wesdome", tags: "Gold Miner"},
 
   "NYSE:RIO": { name: "Rio Tinto", tags: "Coal Copper Diamond Iron Gold Miner"},
 
@@ -750,7 +758,7 @@ var defaults = {
   "NYSE:SLVP": { name: "ETF Silver Miners", tags: "Silver Miners" },
 
   "NYSE:AG": { name: "First Majestic Silver", tags: "Silver Miner" },
-  "NYSE:PAAS": { name: "Pan American Silver", tags: "Silver Miner" },
+  "NYSE:PAAS": { name: "Pan American Silver", tags: "Silver Gold Miner" },
   "NYSE:SVM": { name: "Silvercorp", tags: "Silver Miner" },
   "NYSE:WPM": { name: "Wheaton", tags: "Silver Miner" }
 
@@ -832,7 +840,7 @@ function setNotation(idOrNotation) {
 
 function deleteNotation(id) {
   delete metadata[id];
-  setObject(createKey(metadataKey, metadata));
+  setObject(metadataKey, metadata);
 }
 
 
