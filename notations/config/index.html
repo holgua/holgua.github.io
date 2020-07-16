@@ -154,7 +154,12 @@ function createKey() {
 
 	const len = arguments.length;
 	for (let i = 0; i < len; i++) {
-		key += arguments[i].toLowerCase().trim().replace(/  +/g, ' ').replace(/\//g, '');
+		const arg = arguments[i];
+		if (arg) {
+			key += arg.toLowerCase().trim().replace(/  +/g, ' ').replace(/\//g, '');
+		} else {
+			key += arg;
+		}
 		if (i + 1 < len) {
 			key += "/";
 		}
