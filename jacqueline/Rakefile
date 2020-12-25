@@ -1,0 +1,24 @@
+require "net/http"
+require "uri"
+
+task :default => [:deploy]
+
+desc "Builds the website."
+task :build do
+	puts "Building website..."
+
+	# Execute jekyll so that it builds the website.
+	system "jekyll build"
+end
+
+desc "Deploys the build directory."
+task :deploy => [:build] do
+  puts "Deploying website..."
+
+	tgt = File.open('deployment.tgt', 'rb') { |f| f.read }
+	tgt.strip!
+	msg = "Deployment Jacqueline #{Time.now.strftime("%Y-%m-%d-%H%M")}"
+	system "mkdir -p #{tgt}/jacqueline/"
+	system "cp -rv _build/* #{tgt}/jacqueline/"
+	system "export GIT_WORK_TREE=#{tgt}/ && export GIT_DIR=#{tgt}/.git/ && git status && git add --all && git commit -a -m '#{msg}' && git push"
+end
