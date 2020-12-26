@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base target="_blank">
-    <style type="text/css">@font-face{font-family:"Dosis";font-style:normal;font-weight:300;src:local("Dosis Light"),local("Dosis-Light"),url(./font/dosis-light.woff2) format("woff2"),url(../font/dosis-light.woff2) format("woff2")}*{font-family:sans-serif;font-size:inherit;font-weight:inherit;line-height:inherit;list-style-position:inside;list-style-type:"- ";box-sizing:border-box;float:inherit;clear:inherit;padding:0;margin:0;border:none;outline:none;background-color:transparent;transition:all 0.0625s ease}html,body{height:100%}ul{padding:3px}a{text-decoration:none;color:#069}a:hover{text-decoration:underline}a:hover img{filter:hue-rotate(-10deg) contrast(110%);-webkit-filter:hue-rotate(-10deg) contrast(110%)}.grid-container{height:100%;display:grid;grid-template-columns:auto auto auto auto auto;grid-template-rows:min-content auto auto auto auto;gap:0px 0px;grid-template-areas:"hed hed hed hed hed" "c01 c02 c03 c04 c05" "c06 img img img c07" "c08 img img img c09" "c10 c11 c12 c13 c14"}.grid-container>div{border-collapse:collapse;position:relative;font-size:11px}.grid-container>div>h2{font-size:13px;font-weight:700;line-height:19px;padding-left:3px}.pop-over{position:fixed;display:none;height:100%;width:100%;top:0;left:0;background-color:rgba(0,0,0,0.2);cursor:zoom-out}.pop-over>div{position:fixed;top:50%;left:50%;width:auto;height:auto;max-width:600px;transform:translate(-50%, -50%);background-color:white;cursor:auto;padding:20px 16px 24px 16px}.pop-over>div h3{font-size:20px;font-weight:700;line-height:30px}.pop-over>div h4{font-size:16px;font-weight:700;line-height:24px;margin-top:24px}.pop-over>div p,.pop-over>div li{font-size:14px;line-height:21px;font-weight:300}.pop-over>div img{display:block;float:left;clear:none;width:200px;height:auto;margin:3px;border-radius:3px}h1{font-size:16px;font-weight:700;line-height:36px;text-align:center}.item-key{font-weight:550}.item-value{color:#333}.hero{width:inherit;height:inherit;text-align:center;overflow:hidden}.hero img{width:100%;height:auto;vertical-align:bottom}
+    <style type="text/css">@font-face{font-family:"Dosis";font-style:normal;font-weight:300;src:local("Dosis Light"),local("Dosis-Light"),url(./assets/dosis-light.woff2) format("woff2"),url(../assets/dosis-light.woff2) format("woff2")}*{font-family:sans-serif;font-size:inherit;font-weight:inherit;line-height:inherit;text-transform:lowercase;list-style-position:inside;list-style-type:"- ";box-sizing:border-box;float:inherit;clear:inherit;padding:0;margin:0;border:none;outline:none;background-color:transparent;transition:all 0.0625s ease}html,body{height:100%}ul{padding:3px}a{text-decoration:none;color:#069}a:hover{text-decoration:underline}a:hover img{filter:hue-rotate(-10deg) contrast(110%);-webkit-filter:hue-rotate(-10deg) contrast(110%)}.grid-container{height:100%;display:grid;grid-template-columns:auto auto auto auto auto;grid-template-rows:min-content auto auto auto auto;gap:0px 0px;grid-template-areas:"hed hed hed hed hed" "c01 c02 c03 c04 c05" "c06 img img img c07" "c08 img img img c09" "c10 c11 c12 c13 c14"}.grid-container>div{border-collapse:collapse;position:relative;font-size:11px;padding:0px 3px}.grid-container>div>h2{font-size:13px;font-weight:700;line-height:19px;padding-left:3px}.pop-over{position:fixed;display:none;height:100%;width:100%;top:0;left:0;background-color:rgba(0,0,0,0.2);cursor:zoom-out}.pop-over>div{position:fixed;top:50%;left:50%;width:auto;height:auto;max-width:600px;transform:translate(-50%, -50%);background-color:white;cursor:auto;padding:20px 16px 24px 16px}.pop-over>div h3{font-size:20px;font-weight:700;line-height:30px}.pop-over>div h4{font-size:16px;font-weight:700;line-height:24px;margin-top:24px}.pop-over>div p,.pop-over>div li{font-size:14px;line-height:21px;font-weight:300}.pop-over>div img{display:block;float:left;clear:none;width:200px;height:auto;margin:3px;border-radius:3px}h1{font-size:16px;font-weight:700;line-height:36px;text-align:center}.item-key{font-weight:550}.item-value{color:#333}.hero{width:inherit;height:inherit;text-align:center;overflow:hidden}.hero img{width:100%;height:auto;vertical-align:bottom;border-radius:3px}
 </style>
   </head>
 <body>
@@ -14,7 +14,7 @@
 
 <div class="grid-container">
   <div style="grid-area:hed;"><h1>Ford Mustang 1970 Mach1 428 Cobra Jet Jacqueline</h1></div>
-  <div class="hero" style="grid-area:img;"><img src="./assets/hero.png"/></div>
+  <div class="hero" style="grid-area:img;"><img src="./assets/hero.jpg"/></div>
 
   
   <div style="grid-area:c01;">
@@ -70,10 +70,10 @@
         <li>
           <span class="item-key">Hood Scoop:</span>
           <span class="item-value" >
-            
-            Mach1 with Turn Signals
+            <a href="#hood-scoop" target="_self" onclick='showPopOver("hood-scoop")'>
+            Mach1 with turn signals
 
-            
+            &#187;</a>
           </span>
         </li>
       
@@ -1132,6 +1132,21 @@ Ford paint code is M3077.</p>
   
     
   
+    
+      <div id="hood-scoop" class="pop-over" onclick="hideAllPopOvers(event)">
+        <div>
+          <h3>Hood Scoop</h3>
+          <p>Hood scoop is a Mach1 bolt-on made from fibreglass.
+It has amber turn signals embedded and 428 emblems on the sides.
+It does not funnel air to the engine bay.</p>
+
+<h4 id="links">Links</h4>
+<ul>
+  <li>Hood scoop on <a href="https://www.cjponyparts.com/hood-scoop-fiberglass-bolt-on-with-turn-signal-lights-mach-1-1969-1970/p/HDSC2/">cjponyparts</a></li>
+</ul>
+
+        </div>
+      </div>
     
   
     
