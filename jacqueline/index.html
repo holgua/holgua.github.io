@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base target="_blank">
-    <style type="text/css">*{font-family:sans-serif;font-size:inherit;font-weight:300;line-height:inherit;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-transform:none;list-style-position:inside;list-style-type:"- ";box-sizing:border-box;float:inherit;clear:inherit;padding:0;margin:0;border:none;border-collapse:collapse;outline:none;background-color:transparent;color:#e8e3dc;transition:all 0.0625s ease}html,body{height:100%;background-color:#00121f}a{text-decoration:none;color:#ff9f14}a:hover{text-decoration:underline}a:hover img{filter:hue-rotate(0deg) contrast(110%);-webkit-filter:hue-rotate(0deg) contrast(110%)}.grid-container{height:100%;display:grid;grid-template-columns:auto auto auto auto auto;grid-template-rows:min-content auto auto auto auto;gap:0px 0px;grid-template-areas:"hed hed hed hed hed" "c01 c02 c03 c04 c05" "c06 img img img c07" "c08 img img img c09" "c10 c11 c12 c13 c14"}.grid-container .hero{display:flex;justify-content:center;align-items:center;width:inherit;height:inherit;padding:1rem}.grid-container .hero a{line-height:0}.grid-container .hero a img{width:100%;height:auto;border-radius:.15rem}.grid-container>div{border-collapse:collapse;position:relative;font-size:.75rem;padding:0px .33rem}.grid-container>div h1{font-weight:700;font-size:1rem;line-height:3rem;text-align:center}.grid-container>div h2{font-weight:700;font-size:.8rem;line-height:1.2rem;padding-left:.33rem}.grid-container>div ul{padding:0 .33rem}.grid-container>div p,.grid-container>div li{line-height:1rem}.grid-container>div .item-key{color:#bfb6ac}.pop-over{position:fixed;display:none;height:100%;width:100%;top:0;left:0;background-color:rgba(0,18,31,0.66);cursor:zoom-out}.pop-over>div{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);width:auto;height:auto;max-width:600px;max-height:95%;padding:1rem;background-color:#00121f;border:1px solid #bfb6ac;border-radius:.15rem;cursor:auto;overflow:scroll}.pop-over>div h3{font-weight:700;font-size:1.25rem;line-height:1.875rem}.pop-over>div h4{font-weight:700;font-size:1rem;line-height:1.5rem;margin-top:1.5rem}.pop-over>div p,.pop-over>div li{font-size:.9rem;line-height:1.35rem}.pop-over>div p strong,.pop-over>div li strong{font-weight:700}.pop-over>div img{display:block;float:left;clear:none;width:180px;height:auto;margin:.15rem;border-radius:.15rem}
+    <style type="text/css">*{font-family:sans-serif;font-size:inherit;font-weight:300;line-height:inherit;text-align:center;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-transform:none;list-style-position:inside;list-style-type:"";box-sizing:border-box;float:inherit;clear:inherit;padding:0;margin:0;border:none;border-collapse:collapse;outline:none;background-color:transparent;color:#e8e3dc;transition:all 0.0625s ease}html,body{height:100%;background-color:#00121f}a{text-decoration:none;color:#ff9f14}a:hover{text-decoration:underline}a:hover img{filter:hue-rotate(0deg) contrast(110%);-webkit-filter:hue-rotate(0deg) contrast(110%)}.grid-container{height:100%;display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;grid-template-rows:min-content 1fr auto auto 1fr;gap:0px 0px;grid-template-areas:"hed hed hed hed hed" "c01 c02 c03 c04 c05" "c06 img img img c07" "c08 img img img c09" "c10 c11 c12 c13 c14"}.grid-container h1{font-weight:700;font-size:1rem;line-height:3rem;text-align:center}.grid-container .hero{display:flex;justify-content:center;align-items:center;width:inherit;height:inherit;padding:0;overflow:hidden}.grid-container .hero a{display:inline-block;line-height:0}.grid-container .hero a img{width:100%;height:auto}.grid-container>div{display:flex;justify-content:center;align-items:center}.grid-container>div>div{border-collapse:collapse;position:relative;font-size:.75rem;padding:0px .33rem}.grid-container>div>div h2{font-weight:700;font-size:.8rem;line-height:1.2rem;padding-left:.33rem}.grid-container>div>div ul{padding:0 .33rem}.grid-container>div>div p,.grid-container>div>div li{line-height:1rem}.grid-container>div>div .item-key{color:#bfb6ac}.pop-over{position:fixed;display:none;height:100%;width:100%;top:0;left:0;background-color:rgba(0,18,31,0.66);cursor:zoom-out}.pop-over>div{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);width:auto;height:auto;max-width:600px;max-height:95%;padding:1rem;background-color:#00121f;border:1px solid #bfb6ac;border-radius:.15rem;cursor:auto;overflow:scroll}.pop-over>div h3{font-weight:700;font-size:1.25rem;line-height:1.875rem}.pop-over>div h4{font-weight:700;font-size:1rem;line-height:1.5rem;margin-top:1.5rem}.pop-over>div p,.pop-over>div li{font-size:.9rem;line-height:1.35rem}.pop-over>div p strong,.pop-over>div li strong{font-weight:700}.pop-over>div img{display:block;float:left;clear:none;width:180px;height:auto;margin:.15rem;border-radius:.15rem}
 </style>
   </head>
 <body>
@@ -18,6 +18,7 @@
 
   
   <div style="grid-area:c01;">
+    <div>
       <h2>Chassis & Exterior</h2>
       <ul>
       
@@ -106,9 +107,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c02;">
+    <div>
       <h2>Steering</h2>
       <ul>
       
@@ -155,9 +158,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c03;">
+    <div>
       <h2>Dash & Information Systems</h2>
       <ul>
       
@@ -218,9 +223,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c04;">
+    <div>
       <h2>Interior & Convenience Systems</h2>
       <ul>
       
@@ -295,9 +302,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c05;">
+    <div>
       <h2>Electrics & Lights</h2>
       <ul>
       
@@ -344,9 +353,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c06;">
+    <div>
       <h2>Engine</h2>
       <ul>
       
@@ -462,24 +473,12 @@
           </span>
         </li>
       
-        
-
-        
-        
-        <li>
-          <span class="item-key">Compression:</span>
-          <span class="item-value">
-            
-            Unknown
-
-            
-          </span>
-        </li>
-      
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c07;">
+    <div>
       <h2>Exhaust</h2>
       <ul>
       
@@ -540,9 +539,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c08;">
+    <div>
       <h2>Cooling</h2>
       <ul>
       
@@ -589,9 +590,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c09;">
+    <div>
       <h2>Brakes</h2>
       <ul>
       
@@ -638,9 +641,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c10;">
+    <div>
       <h2>Air & Fuel Delivery</h2>
       <ul>
       
@@ -701,9 +706,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c11;">
+    <div>
       <h2>Ignition</h2>
       <ul>
       
@@ -792,9 +799,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c12;">
+    <div>
       <h2>Transmission & Clutch</h2>
       <ul>
       
@@ -855,9 +864,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c13;">
+    <div>
       <h2>Power Train</h2>
       <ul>
       
@@ -904,9 +915,11 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
   <div style="grid-area:c14;">
+    <div>
       <h2>Suspension & Wheels</h2>
       <ul>
       
@@ -953,6 +966,7 @@
         </li>
       
       </ul>
+    </div>
   </div>
   
 </div>
@@ -1066,6 +1080,11 @@ Horn button is a Shelby Cobra Horn Button.</p>
 
           
 
+          
+          <h4>Images</h4>
+          
+          <a href="./assets/wheel/grant-cobra-horn-button.jpg" title="grant-cobra-horn-button"><img src="./assets/thumbs/wheel/grant-cobra-horn-button.jpg" alt="grant-cobra-horn-button"/></a>
+          
           
         </div>
       </div>
@@ -1367,8 +1386,6 @@ Chamber size is 71cc.</p>
           
         </div>
       </div>
-    
-  
     
   
     
