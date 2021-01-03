@@ -1896,7 +1896,12 @@ Clutch linkage is mechanical in original Z-Bar style. It’s worn out.</p>
       <div id="bell-housing" class="pop-over" onclick="hideAllPopOvers(event)">
         <div>
           <h3>Bell Housing</h3>
-          <p>C5TA-7505-B, iron, truck housing, deeper than CJ housing</p>
+          <p>Bell housing is a <a href="https://www.google.com/search?q=C5TA-7505-B">C5TA-7505-B</a> iron housing.
+It is 6 3/4” deep, which is 1/2” deeper than the factory Cobra Jet housing.
+It has a rectangular opening on the driver side for manual clutch actuation.
+Due to it’s shape at the opening, we had to slightly modify it to make it work with a 12” clutch.
+This bell housing has been used mainly for trucks.
+The aftermarket alternative to this bell housing (in combination with a Ford FE 428 and a TKO 500/600) would be the <a href="https://www.holley.com/products/drivetrain/bellhousings/parts/RM-6056SFI">Quick Time RM-6056SFI</a>.</p>
 
 
           
@@ -1921,6 +1926,20 @@ Clutch linkage is mechanical in original Z-Bar style. It’s worn out.</p>
           <a href="./assets/-large/transmission-and-clutch/bell-housing/IMG_20200522_122904727.jpg" title="IMG_20200522_122904727"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/IMG_20200522_122904727.jpg" alt="IMG_20200522_122904727"/></a>
           
           <a href="./assets/-large/transmission-and-clutch/bell-housing/IMG_20200522_125502.jpg" title="IMG_20200522_125502"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/IMG_20200522_125502.jpg" alt="IMG_20200522_125502"/></a>
+          
+          <a href="./assets/-large/transmission-and-clutch/bell-housing/Screenshot 2020-05-23 at 10.16.59.jpg" title="Screenshot 2020-05-23 at 10.16.59"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/Screenshot 2020-05-23 at 10.16.59.jpg" alt="Screenshot 2020-05-23 at 10.16.59"/></a>
+          
+          <a href="./assets/-large/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 12.49.49.jpg" title="Screenshot 2020-05-24 at 12.49.49"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 12.49.49.jpg" alt="Screenshot 2020-05-24 at 12.49.49"/></a>
+          
+          <a href="./assets/-large/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.03.25.jpg" title="Screenshot 2020-05-24 at 13.03.25"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.03.25.jpg" alt="Screenshot 2020-05-24 at 13.03.25"/></a>
+          
+          <a href="./assets/-large/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.10.51.jpg" title="Screenshot 2020-05-24 at 13.10.51"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.10.51.jpg" alt="Screenshot 2020-05-24 at 13.10.51"/></a>
+          
+          <a href="./assets/-large/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.30.38.jpg" title="Screenshot 2020-05-24 at 13.30.38"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.30.38.jpg" alt="Screenshot 2020-05-24 at 13.30.38"/></a>
+          
+          <a href="./assets/-large/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.33.12.jpg" title="Screenshot 2020-05-24 at 13.33.12"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.33.12.jpg" alt="Screenshot 2020-05-24 at 13.33.12"/></a>
+          
+          <a href="./assets/-large/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.38.43.jpg" title="Screenshot 2020-05-24 at 13.38.43"><img src="./assets/-thumbs/transmission-and-clutch/bell-housing/Screenshot 2020-05-24 at 13.38.43.jpg" alt="Screenshot 2020-05-24 at 13.38.43"/></a>
           
           
         </div>
@@ -2145,6 +2164,7 @@ function showPopOver(id) {
   document.querySelector("#" + id).style.display = "block";
 }
 
+// React to keyboard events
 document.onkeyup = function (event) {
   event = event || window.event;
   if ("key" in event && (event.key === "Escape" || event.key === "Esc")) {
@@ -2152,6 +2172,7 @@ document.onkeyup = function (event) {
   }
 };
 
+// Open pop-up referenced in hash, if any
 const hash = window.location.hash.substr(1);
 if (hash) {
   showPopOver(hash);
