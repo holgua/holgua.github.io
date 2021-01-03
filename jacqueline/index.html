@@ -2145,6 +2145,13 @@ function showPopOver(id) {
   document.querySelector("#" + id).style.display = "block";
 }
 
+document.onkeyup = function (event) {
+  event = event || window.event;
+  if ("key" in event && (event.key === "Escape" || event.key === "Esc")) {
+    hideAllPopOvers();
+  }
+};
+
 const hash = window.location.hash.substr(1);
 if (hash) {
   showPopOver(hash);
