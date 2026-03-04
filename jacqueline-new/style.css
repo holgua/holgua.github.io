@@ -2,7 +2,6 @@
    JACQUELINE — 1970 Ford Mustang Fastback 428 Cobra Jet
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800&family=Inter:wght@400;500&display=swap');
 
 /* ---- Variables ------------------------------------------ */
 :root {
@@ -113,7 +112,7 @@ a:hover { text-decoration: underline; }
   text-align: center;
   padding: calc(var(--nav-h) + 5rem) 2rem 5rem;
   overflow: hidden;
-  background-image: url('hero-images/IMG_20180526_104004701-01.jpeg');
+  background-image: url('hero-images-opt/IMG_20180526_104004701-01.jpeg');
   background-size: cover;
   background-position: center 38%;
 }
