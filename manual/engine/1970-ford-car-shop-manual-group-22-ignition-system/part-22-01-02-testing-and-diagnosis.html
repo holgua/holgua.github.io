@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Testing and Diagnosis</title><meta charset="utf-8"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="1970 Ford Car Shop Manual"/><meta property="og:title" content="Testing and Diagnosis"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Testing and Diagnosis"/><meta name="twitter:description" content="General Ignition Service · 22-01-02 General Information The ignition system consists of a primary (low voltage) and a secondary (high voltage) circuit (Fig."/><meta property="og:description" content="General Ignition Service · 22-01-02 General Information The ignition system consists of a primary (low voltage) and a secondary (high voltage) circuit (Fig."/><meta property="og:image:alt" content="General Ignition Service · 22-01-02 General Information The ignition system consists of a primary (low voltage) and a secondary (high voltage) circuit (Fig."/><meta property="og:image" content="https://holgua.github.io/manual/static/og-image.png"/><meta property="og:image:url" content="https://holgua.github.io/manual/static/og-image.png"/><meta name="twitter:image" content="https://holgua.github.io/manual/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="holgua.github.io/manual"/><meta property="og:url" content="https://holgua.github.io/manual/engine/1970-ford-car-shop-manual-group-22-ignition-system/part-22-01-02-testing-and-diagnosis"/><meta property="twitter:url" content="https://holgua.github.io/manual/engine/1970-ford-car-shop-manual-group-22-ignition-system/part-22-01-02-testing-and-diagnosis"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="General Ignition Service · 22-01-02 General Information The ignition system consists of a primary (low voltage) and a secondary (high voltage) circuit (Fig."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2hvbGdlci9EZXNrdG9wL011c3Rhbmcvd2lraS9xdWFydHovcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="engine/1970-ford-car-shop-manual-group-22-ignition-system/part-22-01-02-testing-and-diagnosis"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">1970 Ford Car Shop Manual</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{if(a.isFolder!==b.isFolder)return a.isFolder?-1:1;let sa=a.slugSegment||\&quot;\&quot;,sb=b.slugSegment||\&quot;\&quot;,catOrder={chassis:0,engine:1,electrical:2,body:3,maintenance:4,vehicles:5},ca=catOrder[sa],cb=catOrder[sb];if(ca!==void 0&amp;&amp;cb!==void 0)return ca-cb;if(ca!==void 0)return-1;if(cb!==void 0)return 1;let folderRe=/-group-(\\d{2})-/,ga=folderRe.exec(sa),gb=folderRe.exec(sb);if(ga&amp;&amp;gb)return parseInt(ga[1],10)-parseInt(gb[1],10);if(sa===\&quot;index\&quot;)return-1;if(sb===\&quot;index\&quot;)return 1;let partRe=/^part-(\\d{2})-(\\d{2})(?:-(\\d{2})([a-z]?))?/,pa=partRe.exec(sa),pb=partRe.exec(sb);if(pa&amp;&amp;pb){let va=parseInt(pa[1],10)*1e8+parseInt(pa[2],10)*1e6+(pa[3]?parseInt(pa[3],10):0)*1e3+(pa[4]?pa[4].charCodeAt(0):0),vb=parseInt(pb[1],10)*1e8+parseInt(pb[2],10)*1e6+(pb[3]?parseInt(pb[3],10):0)*1e3+(pb[4]?pb[4].charCodeAt(0):0);return va-vb}return a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;})}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{if(!node.isFolder)return;let parents=new Map;for(let c of node.children){let seg=c.slugSegment||\&quot;\&quot;,m=/^part-(\\d{2})-(\\d{2})-(.+)$/.exec(seg);m&amp;&amp;!/^\\d/.test(m[3])&amp;&amp;parents.set(m[1]+\&quot;-\&quot;+m[2],c)}if(parents.size===0)return;let remaining=[];for(let c of node.children){let seg=c.slugSegment||\&quot;\&quot;,m=/^part-(\\d{2})-(\\d{2})-(\\d{2}[a-z]?)/.exec(seg);if(m){let parent=parents.get(m[1]+\&quot;-\&quot;+m[2]);if(parent&amp;&amp;parent!==c){parent.isFolder=!0,parent.isFileWithChildren=!0,parent.children.push(c);continue}}remaining.push(c)}node.children=remaining}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-864"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><div id="explorer-864" class="explorer-content" aria-expanded="true" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../engine/">Engine</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/">Ignition System</a></div></nav><h1 class="article-title">Testing and Diagnosis</h1><ul class="tags"><li><a href="../../tags/cougar" class="internal tag-link">cougar</a></li><li><a href="../../tags/fairlane" class="internal tag-link">fairlane</a></li><li><a href="../../tags/falcon" class="internal tag-link">falcon</a></li><li><a href="../../tags/ford" class="internal tag-link">ford</a></li><li><a href="../../tags/mercury" class="internal tag-link">mercury</a></li><li><a href="../../tags/meteor" class="internal tag-link">meteor</a></li><li><a href="../../tags/montego" class="internal tag-link">montego</a></li><li><a href="../../tags/mustang" class="internal tag-link">mustang</a></li><li><a href="../../tags/thunderbird" class="internal tag-link">thunderbird</a></li></ul></div></div><article class="popover-hint"><p><em><a href="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/part-22-01-general-ignition-service" class="internal alias" data-slug="engine/1970-ford-car-shop-manual-group-22-ignition-system/part-22-01-general-ignition-service">General Ignition Service</a> · 22-01-02</em></p>
+<h3 id="general-information">General Information<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#general-information" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The ignition system consists of a primary (low voltage) and a secondary (high voltage) circuit (<a href="#fig-2" class="internal alias">Fig. 2</a>).</p>
+<p>The primary circuit consists of the:</p>
+<ol>
+<li>
+<p>Battery.</p>
+</li>
+<li>
+<p>Ignition switch.</p>
+</li>
+<li>
+<p>Primary circuit resistance wire.</p>
+</li>
+<li>
+<p>Primary windings of the ignition coil.</p>
+</li>
+<li>
+<p>Breaker points.</p>
+</li>
+<li>
+<p>Condenser.</p>
+<p>The secondary circuit consists of the:</p>
+</li>
+<li>
+<p>Secondary windings of the ignition coil.</p>
+</li>
+<li>
+<p>Distributor rotor.</p>
+</li>
+<li>
+<p>Distributor cap.</p>
+</li>
+<li>
+<p>High tension wires.</p>
+</li>
+<li>
+<p>Spark plugs.</p>
+<p>When the breaker points are closed, current flows from the battery through the ignition switch to the primary windings in the coil, then to ground through the closed breaker points. When the breaker points open, the magnetic field built up in the primary windings of the coil moves through the secondary windings of the coil, producing high voltage. High voltage is produced each time the breaker points open. The high voltage flows through the coil high tension lead to the distributor cap where the rotor distributes it to one of the spark plug terminals in the distributor cap. This process is repeated for every power stroke of the engine.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_1_Picture_35.jpeg" alt="Typical Conventional Ignition System Circuits"/><br/>
+<em><a href="#fig-2" class="internal alias">Fig. 2</a> — Typical Conventional Ignition System Circuits</em></p>
+<p>Ignition system troubles are caused by a failure in the primary and/or the secondary circuit; incorrect ignition timing; or incorrect distributor advance. Circuit failures may be caused by shorts, corroded or dirty terminals, loose connections, defective wire insulation, cracked distributor cap or rotor, defective distributor points, fouled spark plugs, or by improper dwell angle.</p>
+<p>If an engine starting or operating trouble is attributed to the ignition system, start the engine and verify the complaint. On engines that will not start, be sure the fuel system is operating properly and there is gasoline in the fuel tank. Then locate the ignition system problem by an oscilloscope test or by a spark intensity test.</p>
+</li>
+</ol>
+<h3 id="tests">Tests<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tests" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="spark-intensity-test">Spark Intensity Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spark-intensity-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="trouble-isolation">Trouble Isolation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trouble-isolation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Disconnect the brown wire from the starter relay I terminal and the red and blue wire from the starter relay S terminal.</p>
+</li>
+<li>
+<p>Remove the coil high tension lead from the distributor cap.</p>
+</li>
+<li>
+<p>Turn on the ignition switch.</p>
+</li>
+<li>
+<p>While holding the high tension lead approximately 3/16 inch from the cylinder head or any other good ground, crank the engine by using an auxiliary starter switch between the starter relay battery and S terminals.</p>
+<p>If the spark is good, the trouble lies in the secondary circuit.</p>
+<p>If there is no spark or a weak spark, the trouble is in the primary circuit, coil to distributor high tension lead, or the coil.</p>
+</li>
+</ol>
+<h3 id="primary-circuit">Primary Circuit<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#primary-circuit" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A breakdown or energy loss in the primary circuit can be caused by: defective primary wiring, or loose or corroded terminals; burned, shorted, sticking or improperly adjusted breaker points; a defective coil; or defective condenser.</p>
+<p>A complete test of the primary circuit consists of checking the circuit from the battery to the coil, the circuit from the coil to ground, and the starting ignition circuit.</p>
+<p>Excessive voltage drop in the primary circuit will reduce the secondary output of the ignition coil, resulting in hard starting and poor performance.</p>
+<p>To isolate a trouble in the primary circuit, use a voltmeter and perform the following tests; Battery to Coil; Starting Ignition Circuit; Resistance Wire: Coil to Ground: or Breaker Points.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_2_Picture_19.jpeg" alt="Battery-To-Coil and Starting Ignition Circuit Test"/><br/>
+<em><a href="#fig-3" class="internal alias">Fig. 3</a> — Battery-To-Coil and Starting Ignition Circuit Test</em></p>
+<h3 id="secondary-circuit">Secondary Circuit<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#secondary-circuit" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A breakdown or energy loss in the secondary circuit can be caused by: fouled or improperly adjusted spark plugs; defective high tension wiring; or high tension leakage across the coil, distributor cap or rotor resulting from an accumulation of dirt.</p>
+<p>To check the spark intensity at the spark plugs, thereby isolating an ignition problem to a particular cylinder, proceed as follows:</p>
+<ol>
+<li>
+<p>Disconnect a spark plug wire. Check the spark intensity of one wire at a time.</p>
+</li>
+<li>
+<p>Install a terminal adapter in the terminal of the wire to be checked. Hold the adapter approximately 3/16-inch from the exhaust manifold and crank the engine, using a remote starter switch. The spark should jump the gap regularly.</p>
+</li>
+<li>
+<p>If the spark intensity of all the wires is satisfactory, the coil, condenser, rotor, distributor cap and the secondary wires are probably satisfactory.</p>
+<p>If the spark is good at only some wires, check the resistance of the faulty leads.</p>
+<p>If the spark is equal at all wires, but weak or intermittent, check the coil, distributor cap and the coil to distributor high tension wire. The wire should be clean and bright on the conducting ends, and on the coil tower and distributor sockets. The wire should fit snugly and be bottomed in the sockets.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_2_Picture_29.jpeg" alt="Ignition Switch Test"/><br/>
+<em><a href="#fig-4" class="internal alias">Fig. 4</a> — Ignition Switch Test</em></p>
+</li>
+</ol>
+<h3 id="battery-to-coil-voltmeter-test">Battery to Coil Voltmeter Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#battery-to-coil-voltmeter-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Connect the voltmeter leads as shown in <a href="#fig-3" class="internal alias">Fig. 3</a>.</p>
+</li>
+<li>
+<p>Install a jumper wire from the distributor terminal of the coil to a good ground on the distributor housing.</p>
+</li>
+<li>
+<p>Turn the lights and accessories off.</p>
+</li>
+<li>
+<p>Turn the ignition switch on.</p>
+</li>
+<li>
+<p>If the voltmeter reading is between 4.5 and 6.9 volts, the primary circuit from the battery to the coil is satisfactory.</p>
+</li>
+<li>
+<p>If the voltmeter reading is greater than 6.9 volts, check the following:</p>
+<p>The battery and cables for loose connections or corrosion.</p>
+<p>The primary wiring for worn insulation, broken strands, and loose or corroded terminals.</p>
+<p>The resistance wire for defects.</p>
+<p>The starter relay to ignition switch for defects.</p>
+<p>If the voltmeter reading is less than 4.5 volts the resistance wire should be replaced.</p>
+</li>
+</ol>
+<h3 id="starting-ignition-circuit-voltmeter-test">Starting Ignition Circuit Voltmeter Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#starting-ignition-circuit-voltmeter-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Connect the voltmeter leads as shown in <a href="#fig-3" class="internal alias">Fig. 3</a>.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_3_Picture_3.jpeg" alt="Resistance Wire Test"/><br/>
+<em><a href="#fig-5" class="internal alias">Fig. 5</a> — Resistance Wire Test</em></p>
+</li>
+<li>
+<p>Disconnect and ground the coil to distributor high tension lead at the distributor.</p>
+</li>
+<li>
+<p>With the ignition switch off, crank the engine by installing a jumper wire between the battery and the S terminal of the starter relay while observing the voltage drop.</p>
+</li>
+<li>
+<p>If the voltage drop is 0.1 volt or less, the starting ignition circuit is satisfactory.</p>
+</li>
+<li>
+<p>If the voltage drop is greater than 0.1 volt, clean and tighten the terminals in the circuit or replace the wiring as necessary.</p>
+</li>
+</ol>
+<h3 id="ignition-switch-voltmeter-test">Ignition Switch Voltmeter Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ignition-switch-voltmeter-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Connect the voltmeter leads as shown in <a href="#fig-4" class="internal alias">Fig. 4</a>.</li>
+<li>Install a jumper wire from the distributor terminal of the coil to a good ground on the distributor body.</li>
+<li>Turn all of the accessories and lights off.</li>
+<li>Turn the ignition switch on.</li>
+<li>If the voltmeter reading is 0.3 volt or less, the ignition switch and the relay to switch wire are satisfactory.</li>
+<li>If the voltmeter reading is greater than 0.3 volt, either the ignition switch and/or the wire is damaged.</li>
+</ol>
+<h3 id="resistance-wire-voltmeter-test">Resistance Wire Voltmeter Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resistance-wire-voltmeter-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Connect the voltmeter leads as shown in <a href="#fig-5" class="internal alias">Fig. 5</a>.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_3_Picture_19.jpeg" alt="Coil to Ground Test"/><br/>
+<em><a href="#fig-6" class="internal alias">Fig. 6</a> — Coil to Ground Test</em></p>
+</li>
+<li>
+<p>Install a jumper wire from the DIST terminal of the coil to a good ground.</p>
+</li>
+<li>
+<p>Turn all of the accessories and lights off.</p>
+</li>
+<li>
+<p>Turn the ignition switch on.</p>
+</li>
+<li>
+<p>If the voltmeter reading is between 6.6 and 4.5 volts, the resistance wire is satisfactory.</p>
+</li>
+<li>
+<p>If the voltmeter reading is greater than 6.6 volts, or less than 4.5 replace the resistance wire.</p>
+</li>
+<li>
+<p>Turn the ignition switch off. Disconnect the voltmeter leads. Remove the jumper wire connected to the coil DIST terminal and the distributor. Remove the jumper wire connected to the coil BAT terminal and the coil BAT lead. Connect the BAT lead to the BAT terminal and go on to the Coil to Ground Test.</p>
+</li>
+</ol>
+<h3 id="coil-to-ground-voltmeter-test">Coil to Ground Voltmeter Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#coil-to-ground-voltmeter-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Connect the voltmeter leads as shown in <a href="#fig-6" class="internal alias">Fig. 6</a>.</p>
+</li>
+<li>
+<p>Close the breaker points.</p>
+</li>
+<li>
+<p>Turn all lights and accessories off.</p>
+</li>
+<li>
+<p>Turn the ignition switch on.</p>
+</li>
+<li>
+<p>If the voltmeter reading is 0.25 volt or less, the primary circuit from coil to ground is satisfactory.</p>
+</li>
+<li>
+<p>If the voltmeter reading is greater than 0.25 volt, test the voltage drop between each of the following:</p>
+<p>The coil and the breaker point connections of the coil to distributor primary wire.</p>
+<p>The movable breaker point and the breaker plate.</p>
+<p>The breaker plate and the distributor housing.</p>
+<p>The distributor housing and engine ground.</p>
+</li>
+<li>
+<p>Turn the ignition switch off. Disconnect the voltmeter leads.</p>
+</li>
+</ol>
+<h4 id="breaker-points-check">Breaker Points Check<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#breaker-points-check" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Clean and inspect the breaker points by following the procedure under Cleaning and Inspection (Section 3 of this Part).</p>
+<p>The breaker point dwell can be checked with a distributor tester or a dwell meter by following the procedure under Distributor Tests in this section of the manual.</p>
+<p>The breaker point resistance can be checked with a Rotunda RE-1416 distributor tester by following the procedure under Distributor Tests in this section of the manual.</p>
+<h4 id="coil-test">Coil Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#coil-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Clean and inspect the coil by following the procedure under Cleaning and Inspection (Section 3 of this part).</p>
+<p>Check the coil on a coil tester by following the manufacturers instructions. Check for ohms resistance both primary and secondary. Also check the amperage draw both with the engine idling and stopped. These checks should all fall within specifications.</p>
+<h3 id="secondary-high-tension-wires-resistance-test">Secondary (High Tension) Wires Resistance Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#secondary-high-tension-wires-resistance-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The secondary wires include the wires connecting the distributor cap to the spark plugs and the wire connecting the center terminal of the distributor cap to the center terminal of the ignition coil.</p>
+<p>Clean and inspect the secondary wiring by following the procedure under Cleaning and Inspection (Section 3 of this Part).</p>
+<p>These wires are the radio resistance-type which filter out the high frequency electrical impulses that are the source of ignition noise interference. The resistance of each wire should not exceed 1000 ohms per inch. When checking the resistance of the wires or setting ignition timing, do not puncture the wires with a probe. The probe may cause a separation in the conductor.</p>
+<p>When removing the wires from the spark plugs grasp and twist the moulded cap, then pull the cap off the spark plug. Do not pull on the wire because the wire connection inside the cap may become separated or the insulator may be damaged.</p>
+<p>To check the spark intensity at the spark plugs, proceed as follows:</p>
+<ol>
+<li>
+<p>Disconnect a spark plug wire. Check the spark intensity of one wire at a time.</p>
+</li>
+<li>
+<p>Install a terminal adapter in the terminal of the wire to be checked. Hold the adapter approximately 3/16-inch from the exhaust manifold and crank the engine, using a remote starter switch. The spark should jump the gap regularly.</p>
+</li>
+<li>
+<p>If the spark intensity of all the wires is satisfactory, the coil, condenser, rotor, distributor cap and the secondary wires are probably satisfactory.</p>
+<p>If the spark is good at only some wires, check the resistance of the faulty leads.</p>
+<p>If the spark is equal at all wires, but weak or intermittent, check the coil, distributor cap and the coil to distributor high tension wires.</p>
+</li>
+</ol>
+<h3 id="spark-plug-test">Spark Plug Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spark-plug-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Inspect, clean, file the electrodes and gap the plugs following the instructions in Sections 2 and 3. After the proper gap is obtained, check the plugs on a testing machine. Compare the sparking efficiency of the cleaned and gapped plug with a new plug. Replace the plug if it fails to meet 70 percent of the new plug performance.</p>
+<p>Test the plugs for compression leakage at the insulator seal. Apply a coating of oil to the shoulder of the plug where the insulator projects through the shell, and to the top of the plug, where the center electrode and terminal project from the insulator. Place the spark plug under pressure with the tester’s high tension wire removed from the spark plug. Leakage is indicated by air bubbling through the oil. If the test indicates compression leakage, replace the plug. If the plug is satisfactory, wipe it clean.</p>
+<h3 id="distributor-shaft-end-play-check">Distributor Shaft End Play Check<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-shaft-end-play-check" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>If the shaft end play is not to specifications, check the location of the gear on the shaft (6-cyl. engine distributor) or the distributor shaft collar (8-cyl. engine distributor).</p>
+<h3 id="6-cylinder-engine-distributor">6-Cylinder Engine Distributor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-cylinder-engine-distributor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The shaft end play can be checked with the distributor installed on the engine.</p>
+<ol>
+<li>Mount a dial indicator on the distributor so that the indicator tip rests on the top of the distributor shaft.</li>
+<li>Push the shaft down as far as it will go and set the dial indicator on</li>
+<li>Pull the distributor shaft upward as far as it will go and read the end play. The end play should be within specifications with the distributor removed or installed.</li>
+</ol>
+<h3 id="8-cylinder-engine-distributor">8-Cylinder Engine Distributor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-cylinder-engine-distributor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Remove the distributor from the engine.</li>
+<li>Place the distributor in the holding tool and clamp it in a vise with the gear end up.</li>
+<li>Push the distributor shaft upward as far as it will go, and check the end play with a feeler gauge placed between the shaft collar and the distributor base. The end play should be within the specified limits. If the shaft end play is not to specifications, check the location of the distributor shaft collar.</li>
+</ol>
+<h3 id="distributor-tests--rotunda-are-27-44-dwell-tester">Distributor Tests — Rotunda ARE-27-44 Dwell Tester<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-tests--rotunda-are-27-44-dwell-tester" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="test-connections">Test Connections<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#test-connections" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Disconnect the distributor primary wire at the coil. Connect a short jumper wire to the DIST terminal of the coil and the distributor primary wire. Connect the red lead to the jumper wire.</li>
+<li>Connect the black lead to a good ground on the engine.</li>
+</ol>
+<h3 id="dwell-angle-check">Dwell Angle Check<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dwell-angle-check" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Disconnect the distributor vacuum line(s). Connect the tester.</p>
+</li>
+<li>
+<p>Turn the test control knob to the set position.</p>
+</li>
+<li>
+<p>Adjust the set control knob until the needle on the dwell meter lines up with the set line.</p>
+</li>
+<li>
+<p>Start the engine and let it idle.</p>
+</li>
+<li>
+<p>Turn the test control knob to the 8 CYL position for eight cylinder engines or to the 6 CYL position for 6 cylinder engines.</p>
+</li>
+<li>
+<p>Read the dwell angle on the dwell meter and compare the reading to specifications.</p>
+</li>
+<li>
+<p>Turn off the engine.</p>
+</li>
+<li>
+<p>If the dwell angle was below the specified amount, the breaker point gap is too large. If the dwell angle was above the specified amount, the breaker point gap is too small.</p>
+<p>If the dwell is to specifications, turn the test selector knob to the OFF position and disconnect the tester leads and jumper wire; then connect the distributor vacuum line(s).</p>
+</li>
+</ol>
+<h3 id="dwell-angle-adjustment">Dwell Angle Adjustment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dwell-angle-adjustment" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>If the dwell angle is not within specifications, proceed as follows:</p>
+<ol>
+<li>Remove the coil high tension lead from the distributor and ground it</li>
+<li>Remove the distributor cap and place it out of the way.</li>
+<li>Disconnect the brown wire (I terminal) and the red and blue wire (S terminal) from the starter relay.</li>
+<li>Loosen the breaker point assembly retaining screw near the breaker point contacts.</li>
+<li>With the ignition on, crank the engine with an auxiliary starter switch connected between the battery and S terminals of the starter relay and terminals of the starter relay and adjust the gap to specifications.</li>
+<li>Release the auxiliary starter switch and tighten the breaker point assembly retaining screw.</li>
+<li>Since the adjustment may have changed when the retaining screw was tightened, crank the engine again with the auxiliary starter switch and check the dwell. When the dwell is properly adjusted, remove the jumper wire, auxiliary starter switch and tester leads and install the distributor cap, coil high tension lead and starter relay wires. Connect the distributor vacuum line(s).</li>
+</ol>
+<h3 id="dual-breaker-point-dwell">Dual Breaker Point Dwell<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dual-breaker-point-dwell" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>If the distributor is equipped with dual breaker points, adjust the dwell of each set separately in order to get the specified combined dwell. The most precise method is to disconnect the wire to one set of points while adjusting the other, since spring tension on the cam is then equal. Alternately, a piece of plastic can be inserted between the contacts of one set to take it out of the circuit. As an example: where a 33 degree combined dwell is specified, the points are set separately at 25—25-1/2 degrees to secure the specified dwell.</p>
+<h3 id="distributor-tests--rotunda-distributor-tester">Distributor Tests — Rotunda Distributor Tester<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-tests--rotunda-distributor-tester" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="mounting-distributor-are-236-testers">Mounting Distributor ARE-236 Testers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mounting-distributor-are-236-testers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Adjust the distributor support arm in relation to the distributor shaft length.</li>
+<li>Set the distributor in the support arm and enter the lower end of the distributor shaft in the Syncrograph chuck.</li>
+<li>Tighten the chuck on the distributor shaft, using the wrench located near the support arm column.</li>
+<li>Align the distributor shaft by shifting the support arm and distributor, and tighten the clamp screw.</li>
+<li>Clamp the distributor securely in the distributor support arm clamp so that it will not turn in its mounting.</li>
+<li>Connect the Syncograph test lead to the primary wire of the distributor.</li>
+<li>Connect the tester vacuum line to the vacuum diaphragm fitting.</li>
+</ol>
+<h4 id="are-14-16-tester">ARE-14-16 Tester<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#are-14-16-tester" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ol>
+<li>Clamp the distributor securely in the distributor support arm clamp so that it will not turn in its mounting.</li>
+<li>Loosen the hand-operated locking screw on the side of distributor support arm, and adjust the support arm column up or down by turning the crank on the knob at the top of the column until the distributor shaft or adapter shaft can be securely fastened in the driving chuck.</li>
+<li>Securely tighten the drive chuck to the distributor drive shaft by means of the chuck key, attached by a chain to the Synchrograph.</li>
+<li>Rotate the drive chuck by hand to make sure the distributor shaft turns freely and then tighten the locking screw on the distributor support arm.</li>
+<li>Connect the Synchrograph test lead to the primary or distributor-transistor lead wire of the distributor.</li>
+</ol>
+<h3 id="breaker-point-resistance">Breaker Point Resistance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#breaker-point-resistance" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="are-14-16-tester-1">ARE-14-16 Tester<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#are-14-16-tester-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Turn the test selector to the POINT RES. position.</li>
+<li>Revolve the chuck by hand until the distributor breaker contacts are closed.</li>
+<li>The meter pointer on the cam angle meter should read in the OK zone at the left side of the meter scale to specifications. If the meter pointer does not fall in the OK zone, there is excessive resistance caused by a faulty contact across the distributor points, a faulty primary lead, or a poorly grounded base plate. A faulty contact across the distributor points indicates improper spring tension or burned or pitted points.</li>
+</ol>
+<h3 id="insulation-and-leakage-are-236-and-are-14-16-testers">Insulation and Leakage ARE-236 and ARE-14-16 Testers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#insulation-and-leakage-are-236-and-are-14-16-testers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Turn the test selector to the cam angle position and revolve the chuck by hand until the distributor breaker contacts are open.</p>
+</li>
+<li>
+<p>The cam angle meter should show a zero reading. If a zero reading is not obtained, a short circuit to ground exists.</p>
+<p>A short could be caused by poor primary wire insulation, a shorted condenser or a short between the breaker arm and breaker plate.</p>
+</li>
+</ol>
+<h3 id="mechanical-operation--are-236-and-are-14-16-testers">Mechanical Operation — ARE-236 and ARE-14-16 Testers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mechanical-operation--are-236-and-are-14-16-testers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Turn the OFF, SET, CAM, SYNC. switch to the SET position.</li>
+<li>Adjust the SET TACH control so that tachometer pointer is on the SET line.</li>
+<li>Turn the OFF, SET, CAM, SYNC. switch to the SYNC. position.</li>
+<li>On an ARE-14-16 Tester, turn the test selector to the SYNCHRO. position and check to make sure that the drive chuck is securely tightened on the distributor shaft.</li>
+<li>Turn the MOTOR switch to the LEFT for 8 cylinder cars or to the RIGHT for 6 cylinder cars.</li>
+<li>Adjust the speed control to vary the distributor speed between 400 and 4000 engine rpm, or at the maximum speed of the engine on which the distributor is used. Erratic or thin faint flashes of light preceding the regular flashes as the speed of rotation is increased can be due to weak breaker arm spring tension or binding of the breaker arm on the pivot pin.</li>
+<li>Operate the distributor at approximately 2500 engine rpm and move the protractor scale so that the zero degree mark on the scale is opposite one of the neon flashes. The balance of all the flashes should come within 1 degree, plus or minus, evenly around the protractor scale. A variation larger than 1 degree or erratic or wandering flashes may be caused by a worn cam or distributor shaft or a bent distributor shaft.</li>
+</ol>
+<h3 id="dwell-angle">Dwell Angle<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dwell-angle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Disconnect and plug the distributor vacuum line(s). On an ARE-236 Tester turn the OFF, SET, CAM, SYNC. switch to the CAM position. Operate the distributor at about 1000 rpm.</p>
+</li>
+<li>
+<p>On an ARE-14-16 Tester, turn the cylinder selector to the 8 position.</p>
+<p>Turn the test selector switch to the cam angle position and operate the distributor at approximately 1000 engine rpm.</p>
+</li>
+<li>
+<p>Adjust the breaker point gap until the dwell angle is to specifications. Unplug and connect the distributor vacuum line(s).</p>
+</li>
+</ol>
+<h3 id="breaker-plate-wear">Breaker Plate Wear<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#breaker-plate-wear" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A worn breaker plate on the distributor will cause the breaker point gap and contact dwell to change as engine speed and load conditions are varied.</p>
+<p>Adjust the test set to 0 degree advance, 0 inches vacuum, and 100 rpm. Adjust the dwell angle to 26 degrees. Apply vacuum to the distributor diaphragm and increase it very slowly while observing the indicated dwell angle. The maximum dwell angle variation should not exceed 6 degrees when going from zero to maximum vacuum at constant rpm. If the dwell angle variation exceeds this limit, there is excessive wear at the stationary subplate pin or the diaphragm rod is bent or distorted.</p>
+<h3 id="distributor-advance-and-retard-check--on-engine">Distributor Advance and Retard Check — On Engine<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-advance-and-retard-check--on-engine" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Check the initial ignition timing, centrifugal advance, vacuum advance, and vacuum retard (dual-diaphragm distributor), following the procedure under Initial Ignition Timing Adjustment in Section 2 of this part.</p>
+<h3 id="distributor-spark-advance-test--are-236-and-are-14-16-testers">Distributor Spark Advance Test — ARE-236 and ARE-14-16 Testers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-spark-advance-test--are-236-and-are-14-16-testers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The spark advance is checked to determine if the ignition timing advances in proper relation to engine speed and load.</p>
+<p>Check the contact dwell. If the contact dwell is not within specifications, adjust the breaker points.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_6_Picture_3.jpeg" alt="Centrifugal Advance Adjustment"/><br/>
+<em><a href="#fig-7" class="internal alias">Fig. 7</a> — Centrifugal Advance Adjustment</em></p>
+<p>Check the breaker arm spring tension and adjust it, if necessary.</p>
+<p>The dual advance distributor has two independently operated spark advance systems. Each system is adjusted separately. Adjust the centrifugal advance before adjusting the vacuum advance.</p>
+<h3 id="centrifugal-advance-adjustment">Centrifugal Advance Adjustment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#centrifugal-advance-adjustment" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Operate the distributor in the direction of rotation (counterclockwise for eight cylinder, clockwise for six cylinder) and adjust the speed to the initial rpm setting listed in the specifications. Move the protractor scale so that one of the flashes lines up with the zero degree mark.</p>
+</li>
+<li>
+<p>Slowly increase the rpm to the setting specified for the first advance reading listed in the specifications.</p>
+<p>If the correct advance is not indicated at this rpm, stop the distributor and bend one spring adjustment bracket to change its tension (<a href="#fig-7" class="internal alias">Fig. 7</a>). Bend the adjustment bracket away from the distributor shaft to decrease advance (increase spring tension) and toward the shaft to increase advance (decrease spring tension). After the adjustment is made, identify the bracket.</p>
+</li>
+<li>
+<p>After an adjustment has been made to one spring, check the minimum advance point again.</p>
+</li>
+<li>
+<p>Operate the distributor at the specified rpm to give an advance just below the maximum. If this advance is not to specifications, stop the distributor and bend the other spring bracket to give the correct advance.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_6_Picture_13.jpeg" alt="Centrifugal Advance Adjustment"/><br/>
+<em><a href="#fig-8" class="internal alias">Fig. 8</a> — Centrifugal Advance Adjustment</em></p>
+</li>
+<li>
+<p>Check the advance at all rpm settings listed in the specifications. Operate the distributor both up and down the rpm range.</p>
+</li>
+</ol>
+<h3 id="vacuum-advance-single-or-dual-diaphragm-adjustment">Vacuum Advance (Single or Dual Diaphragm) Adjustment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vacuum-advance-single-or-dual-diaphragm-adjustment" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Connect the test set vacuum line to the fitting on the diaphragm.</p>
+</li>
+<li>
+<p>Set the test set at 0 degree advance, 0 vacuum, and at 1000 rpm.</p>
+</li>
+<li>
+<p>Check the advance at the first vacuum setting given in the specifications.</p>
+</li>
+<li>
+<p>If the advance is incorrect, change the calibration washers between the vacuum chamber spring and nut (<a href="#fig-9" class="internal alias">Fig. 9</a>). After installing or removing the washers, position the gasket in place and tighten the nut. The addition of a washer will decrease advance and the removal of a washer will increase advance.</p>
+</li>
+<li>
+<p>After one vacuum setting has been adjusted, the others should be checked. Do not change the original rpm setting when going to a different vacuum setting. If the other settings are not within limits, there is incorrect spring tension, leakage in the vacuum chamber and/or line, or the wrong fibre stop has been installed in the vacuum chamber of the diaphragm housing.</p>
+<p>To check the diaphragm for leakage (either, or both on dual diaphragm distributors):</p>
+<p>Install the distributor on a distributor tester. Do not connect the vacuum line to the distributor.</p>
+<p>Adjust the vacuum pressure of a distributor tester to its maximum position. Hold your hand over the end of the tester’s vacuum hose and note the maximum reading obtained. Do not exceed 25 inches Hg.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_6_Picture_25.jpeg" alt="Vacuum Advance Adjustment"/><br/>
+<em><a href="#fig-9" class="internal alias">Fig. 9</a> — Vacuum Advance Adjustment</em></p>
+<p>If the maximum reading is 25 inches Hg or less, connect the tester’s vacuum line to the vacuum fitting on the diaphragm to be ‘tested without changing any of the adjustments. The maximum gauge reading should not be less than it was above. If it is less, the diaphragm is leaking and should be replaced.</p>
+</li>
+</ol>
+<h3 id="distributor-dual-diaphragm-test-on-engine">Distributor Dual Diaphragm Test (On Engine)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-dual-diaphragm-test-on-engine" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="vacuum-advance">Vacuum Advance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vacuum-advance" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Disconnect the vacuum lines from both the outer and inner diaphragms. Plug the line removed from the inner diaphragm.</li>
+<li>Using a tachometer, increase the idle speed by setting on the first step of the fast idle cam.</li>
+<li>Using a timing light observe ignition timing setting.</li>
+<li>Connect the carburetor vacuum line to the outer diaphragm. The timing should advance immediately. Adjust if necessary.</li>
+</ol>
+<h3 id="vacuum-retard">Vacuum Retard<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vacuum-retard" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Readjust the engine idle speed to 550-600 rpm.</p>
+</li>
+<li>
+<p>Using a timing light observe the spark timing.</p>
+</li>
+<li>
+<p>Remove the plug from the manifold vacuum line and connect the line to the inner diaphragm.</p>
+</li>
+<li>
+<p>The timing should retard immediately. Replace the dual diaphragm unit if the retard portion is out of calibration, the advance portion cannot be calibrated to specifications, or either of the diaphragms are leaking.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_7_Picture_3.jpeg" alt="Distributor Vacuum Deceleration Valve Cover Removed"/><br/>
+<em><a href="#fig-10" class="internal alias">Fig. 10</a> — Distributor Vacuum Deceleration Valve Cover Removed</em></p>
+</li>
+</ol>
+<h3 id="distributor-vacuum-deceleration-valve-test">Distributor Vacuum Deceleration Valve Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-vacuum-deceleration-valve-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Connect a tachometer to the engine.</p>
+</li>
+<li>
+<p>Start the engine and check engine idle speed. If required, adjust to normal specification with headlights on high beam.</p>
+</li>
+<li>
+<p>Turn off the headlights and note engine idle rpm under this condition.</p>
+</li>
+<li>
+<p>Remove the plastic cover (<a href="#fig-10" class="internal alias">Fig. 10</a>) from the distributor vacuum advance control valve exposing the adjusting screw. Slowly turn the adjusting screw counterclockwise without exerting excessive inward pressure. After five and no more than six turns, the idle speed should suddenly increase to approximately 1000 rpm. Any further turns outward will release the compressed spring and retainer washer. If the idle speed does not increase after the sixth turn, push inward on the end of the valve spring retainer and release. The engine idle speed will increase and stay at approximately 1000 rpm.</p>
+</li>
+<li>
+<p>After the valve has been triggered to the higher rpm level, slowly start to turn the adjusting screw in a clockwise direction until the idle speed drops and remains at the same level as Step 3. Then make one additional turn in the clockwise direction.</p>
+</li>
+<li>
+<p>After Step 5, increase engine speed to 2000 rpm, hold speed for approximately five seconds and then release throttle. The engine should return to idle, the speed noted in Step 3 within four seconds. If the idle speed does not return within four seconds, check the return time with the dashpot backed-off so that it does not contact the throttle lever at idle speed and repeat the rundown check from 2000 rpm.</p>
+</li>
+<li>
+<p>If the engine will not return to the idle speed of Step 3, in three seconds with dashpot backed-off, turn adjustment screw an additional onequarter turn in a clockwise direction and repeat the rundown check from 2000 rpm.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_7_Picture_14.jpeg" alt="Distributor Vacuum Control Valve"/><br/>
+<em><a href="#fig-11" class="internal alias">Fig. 11</a> — Distributor Vacuum Control Valve</em></p>
+</li>
+<li>
+<p>Repeat Step 7, if necessary, with one-quarter turn increments, checking the idle return time after each one-quarter turn until the engine returns to idle within the required time. Note: If it takes more than one complete turn from Step 5 to meet the idle return time specification, the valve should be replaced.</p>
+</li>
+</ol>
+<h3 id="distributor-vacuum-control-valve-test-coolant-temperature-sensing-valve">Distributor Vacuum Control Valve Test (Coolant Temperature Sensing Valve)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-vacuum-control-valve-test-coolant-temperature-sensing-valve" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The Distributor Vacuum Control Valve is shown in <a href="#fig-11" class="internal alias">Fig. 11</a>.</p>
+<ol>
+<li>
+<p>Make certain that all vacuum hoses are properly routed and installed.</p>
+</li>
+<li>
+<p>Attach a tachometer to the engine.</p>
+</li>
+<li>
+<p>Bring the engine up to operating temperature and be certain that the choke plate is in the vertical position. Engine must not be overheated.</p>
+</li>
+<li>
+<p>Note the engine idle rpm with transmission in neutral and carburetor throttle in the curb idle position.</p>
+</li>
+<li>
+<p>Disconnect the vacuum hose from the intake manifold at the temperature sensing valve and plug or clamp the hose.</p>
+</li>
+<li>
+<p>Note engine idle rpm with the hose disconnected. If no change in idle speed, the valve is acceptable up to this point. If there is a drop in idle speed of 100 rpm or more, the valve should be replaced.</p>
+</li>
+<li>
+<p>Install vacuum line on manifold fitting; then verify that the all season cooling mixture is up to specifications, and that the correct radiator cap is installed.</p>
+</li>
+<li>
+<p>Cover the radiator sufficiently to induce a high temperature condition.</p>
+</li>
+<li>
+<p>Continue to run the engine until the red high temperature light comes on or the temperature indicated on the temperature gauge is at the high end of the band indicating an above normal temperature.</p>
+<p>If the engine idle speed has by this time increased 100 rpm or more, the temperature sensing valve is satisfactory. If not, it should be replaced. Do not overheat the engine.</p>
+</li>
+</ol>
+<h3 id="electronic-distributor-modulator-test">Electronic Distributor Modulator Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#electronic-distributor-modulator-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The components of the electronic distributor modulator are shown in <a href="#fig-12" class="internal alias">Fig. 12</a>. This system should be checked when loss of engine performance and excessive fuel consumption are reported. Road test symptons will be those of retarded ignition timing. To check the system:</p>
+<ol>
+<li>Connect a vacuum gauge to the large hose connection of electronic module.</li>
+<li>Elevate the rear wheels of the vehicle</li>
+<li>Start the engine with the transmission in neutral. The vacuum gauge should read zero.</li>
+<li>With transmission in gear, slowly accelerate to 40 mph.</li>
+<li>Vacuum should cut in between 21 to 31 mph. At some speed in this range the vacuum should drop to zero and remain there.</li>
+<li>Allow the vehicle to coast down from 25 to 15 mph. At some speed in this range the vacuum should drop to zero and remain there.</li>
+<li>With the transmission in neutral and engine running at fast idle speed (approx. 1500 rpm), chill the thermal switch. There should be a vacuum reading.</li>
+<li>If unit checks out O.K., there is no need to proceed further. If not, proceed as follows:</li>
+</ol>
+<h3 id="power-supply">Power Supply<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#power-supply" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Check supply voltage at the red wire leading to the control module with ignition switch on. Meter should read the battery voltage.</li>
+<li>If meter reads zero, check the fuse and wiring from the ignition switch.</li>
+</ol>
+<h3 id="thermal-switch">Thermal Switch<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#thermal-switch" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Check the thermal switch by disconnecting the multiple plug and insert an ohmmeter from the gray wire (coming from the switch) to ground.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_8_Picture_3.jpeg" alt="Distributor Modulator — Schematic"/><br/>
+<em><a href="#fig-12" class="internal alias">Fig. 12</a> — Distributor Modulator — Schematic</em></p>
+</li>
+<li>
+<p>Place one hand on the thermal switch and allow the thermal switch to warm up. The switch should now be open (the switch is normally open above 68 degrees F).</p>
+</li>
+<li>
+<p>Chill the thermal switch, using ice, a cold object or by evaporation, using an aerosol starting fluid (ether) spray. Allow the thermal switch to cool off. The switch should now be closed (the switch is normally closed below 58 degrees F).</p>
+</li>
+<li>
+<p>Replace the switch with a known good one if it is broken or inoperative</p>
+</li>
+</ol>
+<h3 id="control-module">Control Module<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#control-module" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Leave the plug disconnected and insert a jumper between the two red wires on vehicles where the red wires are joined at this plug. Otherwise, leave plug disconnected.</li>
+<li>Run the engine on fast idle—1500 rpm (approx.).</li>
+<li>Connect a vacuum gauge at the carburetor spark port vacuum connection—record gauge reading.</li>
+<li>Reconnect vacuum line to carburetor.</li>
+<li>Connect a vacuum gauge at PVS connection (large hose connection) of solenoid valve.</li>
+<li>Vacuum gauge should read 0 inch Hg.</li>
+<li>Ground the system end of the gray wire at thermal switch multiple plug where the switch is unhooked from circuit.</li>
+<li>Gauge reading should be the same as in step 6.</li>
+<li>Return engine to normal idle speed.</li>
+<li>Replace module if reading is incorrect in either step 6 or 8.</li>
+</ol>
+<h3 id="speed-sensor">Speed Sensor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#speed-sensor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Remove jumper from the gray wire. Leave the switch disconnected.</p>
+</li>
+<li>
+<p>Raise the vehicle on a hoist.</p>
+</li>
+<li>
+<p>Run the vehicle (in gear) to 32 mph. Vacuum gauge should read a vacuum.</p>
+</li>
+<li>
+<p>Check the speed sensor for continuity. Resistance of the speed sensor is 40-60 ohms (at room temperature). Also check the resistance of the speed sensor to ground. The resistance should be an open circuit.</p>
+</li>
+<li>
+<p>Replace the speed sensor if meter reading is incorrect in step 4 and repeat step 3. If vacuum gauge still reads zero, replace the electronic module package. Tighten the nut on the speed sensor to 19-25 in-lbs to eliminate noise in the speedometer cable system.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_9_Picture_3.jpeg" alt="RPM Limiter Connected"/><br/>
+<em><a href="#fig-13" class="internal alias">Fig. 13</a> — RPM Limiter Connected</em></p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_9_Picture_5.jpeg" alt="Page 9 Figure 2"/></p>
+</li>
+</ol>
+<h3 id="electronic-rpm-limiter-governor-test">Electronic RPM Limiter (Governor) Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#electronic-rpm-limiter-governor-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>This device (<a href="#fig-13" class="internal alias">Fig. 13</a>) is used on high-performance engines to prevent engine overspeed. It is mounted in series with the primary circuit and grounds out the primary current to the distributor when the engine rpm exceeds $6000 \ (\pm 50 \ \text{rpm})$. The engine then acts as though the spark plugs were fouling out. This prevents accidental overspeed while shifting, etc.</p>
+<p>Dwell angle is critical when this device is used, and the engine may misfire at about 3000 rpm if the dwell angle is more than 3 degrees below the specified minimum setting.</p>
+<p>Improper operation of the governor usually results in an enginewon’t-start condition, misfiring, or loss of rpm limiting action.</p>
+<ol>
+<li>
+<p>In a case of engine-won’t-start, begin by making a coil spark intensity test as outlined in this Part. If the coil checks out, inspect the distributor cap, spark plug wires and fuel system for correct operation. If the spark from the coil is weak or no spark is observed, check all the electrical connections in the primary circuit. If these all check out, take the governor out of the circuit as shown in <a href="#fig-14" class="internal alias">Fig. 14</a>. If this corrects the trouble, replace the governor. If not, check the coil on a bench tester and check the primary circuit for continuity. Replace or repair as required.</p>
+</li>
+<li>
+<p>If engine has an intermittent misfire below 6000 rpm, first verify that the dwell angle is within specification (30 degree—33 degree). If this is correct, take the governor out of the circuit (<a href="#fig-14" class="internal alias">Fig. 14</a>). If the mis-fire continues, check the fuel system and secondary ignition wiring system. Replace or repair as necessary. If the mis-fire is corrected when the governor is out of the circuit, replace the governor.</p>
+</li>
+<li>
+<p>In cases of loss of rpm control above 6000 rpm, replace the governor.</p>
+<p>FIG. 14—RPM Limiter Disconnected</p>
+</li>
+</ol>
+<h2 id="in-vehicle-adjustments-and-repairs">In Vehicle Adjustments and Repairs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#in-vehicle-adjustments-and-repairs" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h4 id="general-procedures">General Procedures<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#general-procedures" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Accurate ignition system adjustments are of great importance in the control of hydro-carbon and carbon monoxide emissions for reducing air pollution.</p>
+<p>After any adjustment of ignition timing and distributor point dwell, check the distributor automatic advance for proper operation.</p>
+<p>To keep engine emission control within the limits of government regulations, the carburetor fuel mixture and idle speed adjustments should be checked after making ignition system adjustments. Also the exhaust control valve (if so equipped), crankcase ventilation system, and vacuum systems must be in good operating condition. Refer to the applicable group in this manual for maintenance and repair procedures.</p>
+<h3 id="breaker-points-andor-condenser">Breaker Points and/or Condenser<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#breaker-points-andor-condenser" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="removal">Removal<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#removal" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ol>
+<li>Remove the distributor cap and the rotor.</li>
+<li>Disconnect the primary and the condenser wires from the breaker point assembly.</li>
+<li>Remove the breaker point assembly and condenser retaining screws. Lift the breaker point assembly and condenser out of the distributor.</li>
+</ol>
+<h3 id="installation">Installation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#installation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Place the breaker point assembly and the condenser in position and install the retaining screws. Be sure to place the ground wire under the breaker point assembly screw farthest from the breaker point contacts on an eight cylinder engine distributor or under the condenser retaining screw on a six cylinder engine distributor.</li>
+<li>Align and adjust the breaker point assembly.</li>
+<li>Connect the primary and condenser wires to the breaker point assembly.</li>
+<li>Install the rotor and the distributor cap.</li>
+</ol>
+<h3 id="breaker-point-alignment">Breaker Point Alignment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#breaker-point-alignment" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The vented-type pivoted breaker points must be accurately aligned and strike squarely to assure normal breaker point life. Misalignment of these breaker point surfaces can cause premature wear, overheating and pitting.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_10_Picture_20.jpeg" alt="Checking Breaker Point Alignment — Pivoted Points"/><br/>
+<em><a href="#fig-15" class="internal alias">Fig. 15</a> — Checking Breaker Point Alignment — Pivoted Points</em></p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_10_Picture_22.jpeg" alt="Pivotless Point Wear Pattern"/><br/>
+<em><a href="#fig-16" class="internal alias">Fig. 16</a> — Pivotless Point Wear Pattern</em></p>
+<p>However, misalignment of pivotless points is not so critical, and as <a href="#fig-16" class="internal alias">Fig. 16</a> indicates, alignment tends to improve with use.</p>
+<ol>
+<li>
+<p>Turn the cam so that the breaker points are closed and check the alignment of the points (<a href="#fig-15" class="internal alias">Fig. 15</a>).</p>
+<p>If the distributor is in the engine, close the points by proceeding as follows:</p>
+<p>Disconnect the brown wire and the red and blue wire from the starter relay and, with the ignition switch off, crank the engine by using an auxiliary starter switch between the S and the battery terminals of the starter relay.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_10_Picture_29.jpeg" alt="Aligning Breaker Points"/><br/>
+<em><a href="#fig-17" class="internal alias">Fig. 17</a> — Aligning Breaker Points</em></p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_10_Picture_33.jpeg" alt="Using Alignment Tool"/><br/>
+<em><a href="#fig-18" class="internal alias">Fig. 18</a> — Using Alignment Tool</em></p>
+</li>
+<li>
+<p>Using the tool shown and exerting very light pressure, align the breaker points to make full face contact by bending the stationary breaker point bracket (Figs. 17 and 18). Do not bend the breaker arm.</p>
+</li>
+<li>
+<p>After the breaker points have been properly aligned, adjust the breaker point gap or dwell.</p>
+</li>
+</ol>
+<h3 id="breaker-point-gap-adjustment">Breaker Point Gap Adjustment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#breaker-point-gap-adjustment" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A scope, a dwell meter, or a feeler gauge can be used to check the gap of new breaker points.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_11_Picture_3.jpeg" alt="Adjusting New Breaker Point Gap"/><br/>
+<em><a href="#fig-19" class="internal alias">Fig. 19</a> — Adjusting New Breaker Point Gap</em></p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_11_Picture_5.jpeg" alt="Checking Breaker Point Spring Tension"/><br/>
+<em><a href="#fig-20" class="internal alias">Fig. 20</a> — Checking Breaker Point Spring Tension</em></p>
+<p>A scope or a dwell meter should be used to check the gap of used breaker points. Due to the roughness of used points, it is not advisable to use a feeler gauge to check the gap.</p>
+<p>To check and adjust the breaker points with a feeler gauge:</p>
+<ol>
+<li>
+<p>Check and adjust the breaker point alignment.</p>
+</li>
+<li>
+<p>Rotate the distributor until the rubbing block rests on the peak of a cam lobe.</p>
+<p>If the distributor is in the engine, place the rubbing block on the peak of the cam by proceeding as follows:</p>
+<p>Disconnect the brown wire and the red and blue wire from the starter relay and, with the ignition switch off, crank the engine by using an auxiliary starter switch between the S and battery terminals of the starter relay.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_11_Picture_13.jpeg" alt="Adjusting Breaker Point"/><br/>
+<em><a href="#fig-21" class="internal alias">Fig. 21</a> — Adjusting Breaker Point</em></p>
+<p>Insert the correct blade of a clean feeler gauge between the breaker points (<a href="#fig-19" class="internal alias">Fig. 19</a>). Adjust the points to the correct gap and tighten the screws.</p>
+<p>Apply a light film of distributor cam lubricant (C4AZ-19D530-A) to the cam when new points are installed. Do not use engine oil to lubricate the distributor cam.</p>
+<p>Set the ignition timing.</p>
+<p>Spring Tension</p>
+<p>If a scope or a dwell meter is used to adjust new points, be sure the points are in proper alignment. Also, set the contact dwell to the low setting.</p>
+<p>To check and adjust the breaker points with a scope, refer to the scope manufacturer’s instructions.</p>
+<p>To check and adjust the breaker points with a dwell meter, refer to Distributor Tests—Rotunda ARE-27-55 Dwell Tester.</p>
+</li>
+</ol>
+<h3 id="breaker-point-spring-tension-adjustment">Breaker Point Spring Tension Adjustment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#breaker-point-spring-tension-adjustment" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Correct breaker point spring tension is essential to proper engine operation and normal breaker point life. If the spring tension is too great, rapid wear of the breaker arm rubbing block will result, causing the breaker point gap to close up and retard the spark timing. If the spring tension is too weak, the breaker arm will flutter at high engine rpm resulting in an engine miss.</p>
+<p>To check the spring tension on either the pivot-type of the pivotless breaker points, place the hooked end of the spring tension gauge over the movable breaker point. Pull the gauge at a right angle (90 degrees) to the movable arm until the breaker points just start to open (<a href="#fig-20" class="internal alias">Fig. 20</a>). If the tension is not within specifications, adjust the spring tension on the pivottype points or replace the breaker point assembly on the pivotless points.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_11_Picture_24.jpeg" alt="Six Cylinder Engine Timing Marks"/><br/>
+<em><a href="#fig-22" class="internal alias">Fig. 22</a> — Six Cylinder Engine Timing Marks</em></p>
+<p>To adjust the spring tension (<a href="#fig-21" class="internal alias">Fig. 21</a>):</p>
+<ol>
+<li>Disconnect the primary lead wire and the condenser lead.</li>
+<li>Loosen the nut holding the spring in position. Move the spring toward the breaker arm pivot to decrease tension and in the opposite direction to increase tension.</li>
+<li>Tighten the lock nut; then check spring tension. Repeat the adjustment until the specified spring tension is obtained.</li>
+<li>Install the primary lead wire and the condenser lead.</li>
+</ol>
+<h3 id="ignition-timing">Ignition Timing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ignition-timing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="timing-mark-locations">Timing Mark Locations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#timing-mark-locations" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The timing marks and their locations are illustrated in Figs. 22, 23 and 24.</p>
+<p>For checking and adjusting the ignition timing with a scope refer to the scope manufacturer’s instructions. To check and adjust the timing with a Rotunda 13-07 power timing light, proceed as follows:</p>
+<h3 id="initial-ignition-timing">Initial Ignition Timing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#initial-ignition-timing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Clean and mark the timing marks. Be sure the distributor vacuum lines are properly connected.</p>
+</li>
+<li>
+<p>Disconnect the vacuum line (single-diaphragm distributors) or vacuum lines (dual-diaphragm distributors), and plug the disconnected vacuum line(s).</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_12_Picture_3.jpeg" alt="V-8 Engine Timing Marks"/><br/>
+<em><a href="#fig-23" class="internal alias">Fig. 23</a> — V-8 Engine Timing Marks</em></p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_12_Picture_5.jpeg" alt="V-8 Engine Timing Marks (390-428 Engines)"/><br/>
+<em><a href="#fig-24" class="internal alias">Fig. 24</a> — V-8 Engine Timing Marks (390-428 Engines)</em></p>
+</li>
+<li>
+<p>Connect a timing light to the No. I cylinder spark plug wire. Install an engine speed tachometer.</p>
+</li>
+<li>
+<p>Start the engine and reduce the idle speed to 600 rpm to be sure that the centrifugal advance is not operating. Adjust the initial ignition timing to specifications by rotating the distributor in the proper direction. On a six cylinder engine turn the distributor counterclockwise to advance the timing. On a V-8 engine turn the distributor clockwise to advance the timing.</p>
+</li>
+<li>
+<p>Check the centrifugal advance for proper operation. Start the engine and accelerate it to approximately 2000 rpm. If the ignition timing advances, the centrifugal advance mechanism is functioning properly. Note the engine speed when the advance begins and the amount of advance. Stop the engine.</p>
+</li>
+<li>
+<p>Unplug the vacuum line and connect it to the distributor vacuum advance unit (outer diaphragm on dual diaphragm distributors). Start the engine and accelerate it to approximately 2000 rpm. Note the engine speed when the advance begins and the amount of advance. Advance of the ignition timing should begin sooner and advance farther than when checking the centrifugal advance alone. Stop the engine.</p>
+</li>
+<li>
+<p>Check the vacuum retard operation on dual-diaphragm distributors. Connect the intake manifold vacuum line to the inner (retard) diaphragm side of the vacuum advance. Reset the carburetor to normal idle speed. The initial timing should retard to approximately TDC, if the initial ignition timing is correct. On some engines it will go as low as 6 degrees ATDC (see specifications-this Part).</p>
+</li>
+<li>
+<p>If the vacuum advance or vacuum retard (dual-diaphragm distributors) is not functioning properly (refer to steps 6 and 7 above), remove the distributor and check it on a distributor tester. Replace the dual diaphragm unit if the retard portion is out of calibration, the advance portion cannot be calibrated to specifications, or either of the diaphragms are leaking.</p>
+</li>
+</ol>
+<h3 id="spark-plug-wire-removal-and-installation">Spark Plug Wire Removal and Installation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spark-plug-wire-removal-and-installation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>When removing the wires from the spark plugs, grasp, twist and pull the moulded cap only. Do not pull on the wire because the wire connection inside the cap may become separated or the boot may be damaged.</p>
+<h3 id="six-cylinder-engines">Six Cylinder Engines<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#six-cylinder-engines" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The ignition wiring installation for this engine is shown in <a href="#fig-38" class="internal alias">Fig. 38</a>.</p>
+<h3 id="removal-1">Removal<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#removal-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Disconnect the wires at the spark plugs and at the distributor cap.</li>
+<li>Remove the coil high tension lead.</li>
+</ol>
+<h3 id="installation-1">Installation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#installation-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Connect the wires to the proper spark plug.</li>
+<li>Install the wires in the correct sockets in the distributor cap. Be sure the wires are forced all the way down into their sockets and that they are held firmly in position. The No. I socket is identified on the cap. Install the wires in a clockwise direction in the firing order (1-5-3-6-2-4) starting at the No. I socket.</li>
+<li>Install the coil high tension lead. Push all spark plug boots into position</li>
+</ol>
+<h3 id="all-v-8-engines">All V-8 Engines<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#all-v-8-engines" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The ignition wiring installation is shown in <a href="#fig-28" class="internal alias">Fig. 28</a>.</p>
+<h4 id="removal-2">Removal<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#removal-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ol>
+<li>Disconnect the wires from the spark plugs and distributor cap.</li>
+<li>Pull the wires from the brackets on the valve rocker arm covers and remove the wires.</li>
+<li>Remove the coil high tension lead.</li>
+</ol>
+<h3 id="installation-2">Installation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#installation-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Insert each wire in the proper socket of the distributor cap. Be sure the wires are forced all the way down into their sockets. The No. I socket is identified on the cap. Install the wires in a counterclockwise direction in the firing order (1-5-4-2-6-3-7-8) starting at the No. I socket. For 351 V-8 engines the firing order is (1-3-7-2-6-5-4-8). Cylinders are numbered from front to rear; right bank 1-2-3-4, left bank 5-6-7-8.</li>
+<li>Remove the brackets from the old spark plug wire set and install them on the new set in the same relative position. Install the wires in the brackets on the valve rocker arm covers. Connect the wires to the proper spark plugs. Install the coil high tension lead. Be sure the No. 7 spark plug wire is positioned in the bracket as shown in <a href="#fig-28" class="internal alias">Fig. 28</a>. Notice that the wires are positioned in this bracket in a special order from front to rear (7-5-6-8). This applies to all V-8 engines except the 351 engine. The wires for the 351 V-8 should be positioned in the bracket from front to rear (5-7-8-6).</li>
+</ol>
+<h3 id="spark-plugs">Spark Plugs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spark-plugs" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="removal-3">Removal<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#removal-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Remove the wire from each spark plug by grasping, twisting at then pulling the moulded cap of the wire only. Do not pull on the wire be- cause the wire connection inside the cap may become separated or the weatherseal may be damaged.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_13_Picture_3.jpeg" alt="Filing Spark Plug Electrode"/><br/>
+<em><a href="#fig-25" class="internal alias">Fig. 25</a> — Filing Spark Plug Electrode</em></p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_13_Picture_5.jpeg" alt="Checking Spark Plug Gap"/><br/>
+<em><a href="#fig-26" class="internal alias">Fig. 26</a> — Checking Spark Plug Gap</em></p>
+</li>
+<li>
+<p>After loosening each spark plug one or two turns, clean the area around each spark plug port with compressed air, then remove the spark plugs.</p>
+<p>After cleaning (<a href="../../part-22-01" class="internal alias" data-slug="part-22-01">Part 22-01</a>, Section 3) the electrodes must be dressed with a small file to obtain flat parallel surfaces on both the center and side electrodes (<a href="#fig-25" class="internal alias">Fig. 25</a>). Set the spark plug gap to specifications by bending the ground electrode (<a href="#fig-26" class="internal alias">Fig. 26</a>): all spark plugs new or used should have the gap checked and reset as required.</p>
+</li>
+</ol>
+<h3 id="installation-3">Installation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#installation-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Install the spark plugs and torque each plug to specifications.</p>
+<p>When a new spark plug is installed in a new replacement cylinder head, torque the plug to new plug specifications.</p>
+</li>
+<li>
+<p>Connect the spark plug wires.</p>
+</li>
+</ol>
+<h3 id="resistance-wire-removal-and-installation">Resistance Wire Removal and Installation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resistance-wire-removal-and-installation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="ford-mercury-and-meteor">Ford, Mercury and Meteor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ford-mercury-and-meteor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Disconnect the battery cable.</li>
+<li>Remove the hard shell connector from the back of the ignition switch to facilitate removal of the defective resistor wire and for the addition of terminals, and a double female connector to receive one end of the new resistor wire assembly.</li>
+<li>Cut the defective (pink) resistor wire approximately 1 inch from the ignition switch hard shell connector and tape to the existing red-yellow stripe wire. Completely cover the end of the pink wire with tape.</li>
+<li>Cut the red-yellow stripe wire approximately 2 inches from the hard shell connector and install a bullet terminal (FDT-14461-A) on both wire ends. Connect together with a double female connector (FDT-14487-B) and plug in the new resistor wire.</li>
+<li>Reassemble the ignition switch hard shell connector and attach all accessory wires.</li>
+<li>Route and tape the new resistor wire along the main wiring harness to the quick disconnect plate at the left side of the instrument panel.</li>
+<li>Disconnect the body main wiring assembly from the mating connector attached to the quick disconnect plate. Cut the red-green stripe wire as close to the connector as possible. Install a bullet terminal (FDT-14461-A) on the cut wire. Connect the red-green wire and the remaining end of the pink resistor wire with a single female connector (FDT-14487-A). Reassemble the hard shell connector to the plate.</li>
+<li>Connect the battery.</li>
+</ol>
+<h3 id="cougar-fairlane-falcon-montego-and-mustang">Cougar, Fairlane, Falcon, Montego and Mustang<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cougar-fairlane-falcon-montego-and-mustang" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Disconnect the battery.</li>
+<li>Disassemble the cluster housing from the instrument panel to expose the main instrument panel wiring.</li>
+<li>Looking through the cluster opening near the center of the instrument panel, locate the single female connector with the red-green stripe and the red-yellow stripe wire. Disconnect the pink resistor wire and cut as close to the harness as possible.</li>
+<li>Connect the new resistor wire assembly and route through the existing retainers along the harness to the multiple connector on the left hand side of the dash panel. Use tape to supplement the existing retainers to prevent wire from hanging loosely.</li>
+<li>Cut the damaged pink resistor wire approximately I inch from the multiple connector and tape to the red-green stripe wire for the purpose of insulation.</li>
+<li>Cut the red-green stripe wire approximately 1 inch from the taped portion and assemble a bullet terminal to each of the wire ends. Assemble a double connector between the two wire ends. Connect the remaining end of the new resistor wire into the double connector.</li>
+<li>Connect the battery.</li>
+</ol>
+<h3 id="continental">Continental<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#continental" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The primary resistance wire is checked for excessive resistance as outlined under Ignition System Tests.</p>
+<p>To replace the resistance wire:</p>
+<ol>
+<li>Disconnect the battery.</li>
+<li>Remove the instrument panel lower housing from the instrument panel.</li>
+<li>Disconnect the green multiple connectors.</li>
+<li>Cut the pink resistor wire approximately 1-inch from the green multiple connector and tape it to the red-yellow stripe wire. Cover the cut end of the pink resistor wire with tape.</li>
+<li>Cut the red-yellow stripe wire approximately 1-inch from the taped portion and assemble a bullet terminal to each of the wire ends. Assemble a double female connector between the two wire ends. Connect one end of the new resistor wire into the connector.</li>
+<li>Route the new resistor wire along the body main wiring to the red multiple connector below the circuit breaker panel.</li>
+<li>Cut the red-green stripe wire close to the red multiple connector. Install a bullet terminal on the cut wire. Connect the red-green stripe wire and the end of the pink resistor wire with a single female connector.</li>
+<li>Connect the battery.</li>
+</ol>
+<h3 id="thunderbird-and-mark-iii">Thunderbird and Mark III<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#thunderbird-and-mark-iii" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The primary resistance wire is checked for excessive resistance as outlined under Ignition System Tests.</p>
+<p>To replace the resistance wire:</p>
+<ol>
+<li>
+<p>Disconnect the battery.</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_14_Picture_3.jpeg" alt="Typical Six Cylinder Ignition Wiring"/><br/>
+<em><a href="#fig-27" class="internal alias">Fig. 27</a> — Typical Six Cylinder Ignition Wiring</em></p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_14_Picture_5.jpeg" alt="Typical V-8 Ignition Wiring (Except 351 Engines)"/><br/>
+<em><a href="#fig-28" class="internal alias">Fig. 28</a> — Typical V-8 Ignition Wiring (Except 351 Engines)</em></p>
+</li>
+<li>
+<p>Remove the headlight switch and mounting plate, the push on instrument panel lower finish panel outer moulding, the right hand side finish panel pad and retainer assembly. Disassembly of these components is further described in <a href="../../electrical/1970-ford-car-shop-manual-group-33-interior-lights-and-instruments/" class="internal alias" data-slug="electrical/1970-ford-car-shop-manual-group-33-interior-lights-and-instruments/index">Group 33</a> of this Shop Manual.</p>
+</li>
+<li>
+<p>Locate the end of the damaged pink resistor wire connected to the single female connector attached to the two (red-green stripe) wires near the fuse panel in the lower center instrument panel. Disconnect the damaged pink resistor wire, and cut as close to the harness as possible.</p>
+</li>
+<li>
+<p>Connect the new resistor wire assembly and route along the harness to the multiple connector located on the left hand side of the instrument panel above the headlight switch. Use tape to supplement the existing retainers to prevent wire from hanging loosely.</p>
+</li>
+<li>
+<p>Disconnect the green multiple connector with the damaged pink resistor wire from the mating green connector to facilitate the cutting and addition of a bullet terminal, and a single female connector.</p>
+</li>
+<li>
+<p>Cut the (red; green stripe) wire as close to the green connector as possible. Attach, a bullet terminal (FDT-14461-A) and a single female connector (FDT-14487-A) to the cut wire end. Connect with the new replacement resistor wire.</p>
+</li>
+<li>
+<p>Install the right side finish panel pad and retainer assembly, the push on instrument panel lower finish panel outer moulding and the headlight switch and mounting plate.</p>
+</li>
+<li>
+<p>Connect the battery.</p>
+</li>
+</ol>
+<h2 id="cleaning-and-inspection">Cleaning and Inspection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cleaning-and-inspection" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="spark-plugs-1">Spark Plugs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spark-plugs-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Examine the firing ends of the spark plugs, noting the type of deposits and the degree of electrode erosion. Refer to <a href="#fig-29" class="internal alias">Fig. 29</a> for the various types of spark plug fouling and their causes.</p>
+<p>Clean the plugs on a sand blast cleaner, following the manufacturer’s instructions. Do not prolong the use of the abrasive blast as it will erode the insulator and electrodes.</p>
+<p>Examine the plug carefully for cracked or broken insulators, badly pitted electrodes, and other signs of failure. Replace as required.</p>
+<h4 id="distributors">Distributors<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributors" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Soak all parts of the distributor assembly (except the condenser, breaker point assembly, lubricating wick, vacuum diaphragm, distributor base oil seal and electrical wiring) in a mild cleaning solvent or mineral spirits. Do not use a harsh cleaning solution. Wipe all parts that can not be immersed in a solvent with a clean dry cloth.</p>
+<p>After foreign deposits have been loosened by soaking, scrub the parts with a soft bristle brush. Do not use a wire brush, file, or other abrasive object. Dry the parts with compressed air.</p>
+<p>Examine the bushing surface(s) of the distributor shaft and the bushing(s) for wear.</p>
+<p>Inspect the distributor cam lobes for scoring and signs of wear. If any lobe is scored or worn, replace the cam assembly.</p>
+<p>Inspect the breaker plate assembly for signs of distortion. In addition, on the dual advance distributor, inspect the stationary sub-plate for worn nylon contact buttons. Replace the breaker plate assembly if it is defective.</p>
+<p>The breaker point assembly(ies) and condenser (if so equipped) should be replaced whenever the distributor is overhauled.</p>
+<p>Inspect all electrical wiring for fraying, breaks, etc., and replace any that is not in good condition.</p>
+<p>Check the distributor base for cracks or other damage.</p>
+<p>Check the diaphragm housing, bracket, and rod for damage. Check the vacuum line fitting for stripped threads or other damage. Test the</p>
+<p><img src="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/_page_15_Figure_18.jpeg" alt="Spark Plug Inspection"/><br/>
+<em><a href="#fig-29" class="internal alias">Fig. 29</a> — Spark Plug Inspection</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>CONDITION</th><th>CAUSED BY</th></tr></thead><tbody><tr><td>BURNED</td><td>Incorrect voltage regulator setting.  Radio condenser installed to the distributor side of the coil.</td></tr><tr><td>EXCESSIVE METAL<br/>TRANSFER OR PITTING</td><td>Incorrect alignment. Incorrect voltage regulator setting. Radio condenser installed to the distributor side of the coil. Ignition condenser of improper capacity. Extended operation of the engine at speeds other than normal.  B1443-C</td></tr></tbody></table></div>
+<p><em><a href="#fig-30" class="internal alias">Fig. 30</a> — Breaker Point Inspection</em></p>
+<p>vacuum fittings, case and diaphragm for leakage as explained under Distributor Tests. Replace all defective parts.</p>
+<p>The breaker point assembly consists of the stationary point bracket assembly, breaker arm and the primary wire terminal.</p>
+<p>Breaker points should be inspected, cleaned and adjusted as necessary. Breaker points can be cleaned with chloroform and a stiff bristle brush. Replace the breaker point assembly if the contacts are badly burned or excessive metal transfer between the points is evident (<a href="#fig-30" class="internal alias">Fig. 30</a>). Metal transfer is considered excessive when it equals or exceeds the gap setting.</p>
+<h3 id="distributor-cap">Distributor Cap<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distributor-cap" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Clean the distributor cap with a soft bristle brush and mild cleaning solvent or mineral spirits. Dry the cap with compressed air. Inspect the cap for cracks, burned contacts, broken carbon button, permanent carbon tracks or dirt or corrosion in the sockets. Replace the cap if it is damaged.</p>
+<h3 id="rotor">Rotor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rotor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Clean the rotor with a soft bristle brush and mild cleaning solvent or mineral spirits. Dry the rotor with compressed air. Inspect the rotor for cracks or burning. Replace the rotor if it is corroded or damaged.</p>
+<h3 id="secondary-wiring">Secondary Wiring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#secondary-wiring" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Wipe the wires with a damp cloth and check for fraying, breaks or cracked insulation. Inspect the terminals and boots for looseness or corrosion. Replace any wires that are not in good condition.</p>
+<h2 id="coil">Coil<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#coil" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Wipe the coil with a damp cloth and check for any cracks or other defects.</p>
+<h2 id="special-tools">Special Tools<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#special-tools" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="special-tools-1">Special Tools<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#special-tools-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Tool Description</th><th>Tool No.</th></tr></thead><tbody><tr><td>Breaker Point Aligning Tool</td><td>KD-111 or TK-419-A</td></tr><tr><td>Breaker Point Spring Tension<br/>Scale</td><td>12151</td></tr><tr><td>Bushing Burnisher</td><td>12132</td></tr><tr><td>Bushing Installer</td><td>T57L-12120-A or 12132-A</td></tr><tr><td>Bushing Remover</td><td>12132-H</td></tr><tr><td>Distributor Puller</td><td>T66L-12132-A</td></tr><tr><td>Distributor Puller Adapter</td><td>T66L-12132-B</td></tr><tr><td>Distributor Holding Clamp</td><td>T58L-12132-B</td></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Tool Description</th><th>Tool No.</th></tr></thead><tbody><tr><td>Distributor Testers</td><td>ARE-236 or ARE-1416</td></tr><tr><td>Drive Gear Installing Fixture</td><td>T52L-12390-DED and T65L-12390-B</td></tr><tr><td>Drive Gear Remover Kit</td><td>T52L-1290-C</td></tr><tr><td>Ignition Oscilloscopes</td><td>ARE-27-55 or ARE-881</td></tr><tr><td>Pin Removing Fixture</td><td>T52L-12131-CAD</td></tr><tr><td>Tach-Dwell Tester</td><td>ARE-27-44</td></tr><tr><td>Timing Light</td><td>13-07</td></tr></tbody></table></div></article><hr/><div class="page-footer"><div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true"><button class="lightbox-close" aria-label="Close">×</button><div class="lightbox-controls" aria-label="Rotate"><button class="lightbox-rotate" data-dir="-1" aria-label="Rotate left">↺</button><button class="lightbox-rotate" data-dir="1" aria-label="Rotate right">↻</button></div><img alt/><div class="caption"></div><div class="hint">CLICK BACKGROUND OR PRESS ESC TO CLOSE · ↺ ↻ TO ROTATE</div></div></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-227" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-1"><a href="#general-information" data-for="general-information">General Information</a></li><li class="depth-1"><a href="#tests" data-for="tests">Tests</a></li><li class="depth-1"><a href="#spark-intensity-test" data-for="spark-intensity-test">Spark Intensity Test</a></li><li class="depth-1"><a href="#trouble-isolation" data-for="trouble-isolation">Trouble Isolation</a></li><li class="depth-1"><a href="#primary-circuit" data-for="primary-circuit">Primary Circuit</a></li><li class="depth-1"><a href="#secondary-circuit" data-for="secondary-circuit">Secondary Circuit</a></li><li class="depth-1"><a href="#battery-to-coil-voltmeter-test" data-for="battery-to-coil-voltmeter-test">Battery to Coil Voltmeter Test</a></li><li class="depth-1"><a href="#starting-ignition-circuit-voltmeter-test" data-for="starting-ignition-circuit-voltmeter-test">Starting Ignition Circuit Voltmeter Test</a></li><li class="depth-1"><a href="#ignition-switch-voltmeter-test" data-for="ignition-switch-voltmeter-test">Ignition Switch Voltmeter Test</a></li><li class="depth-1"><a href="#resistance-wire-voltmeter-test" data-for="resistance-wire-voltmeter-test">Resistance Wire Voltmeter Test</a></li><li class="depth-1"><a href="#coil-to-ground-voltmeter-test" data-for="coil-to-ground-voltmeter-test">Coil to Ground Voltmeter Test</a></li><li class="depth-1"><a href="#secondary-high-tension-wires-resistance-test" data-for="secondary-high-tension-wires-resistance-test">Secondary (High Tension) Wires Resistance Test</a></li><li class="depth-1"><a href="#spark-plug-test" data-for="spark-plug-test">Spark Plug Test</a></li><li class="depth-1"><a href="#distributor-shaft-end-play-check" data-for="distributor-shaft-end-play-check">Distributor Shaft End Play Check</a></li><li class="depth-1"><a href="#6-cylinder-engine-distributor" data-for="6-cylinder-engine-distributor">6-Cylinder Engine Distributor</a></li><li class="depth-1"><a href="#8-cylinder-engine-distributor" data-for="8-cylinder-engine-distributor">8-Cylinder Engine Distributor</a></li><li class="depth-1"><a href="#distributor-tests--rotunda-are-27-44-dwell-tester" data-for="distributor-tests--rotunda-are-27-44-dwell-tester">Distributor Tests — Rotunda ARE-27-44 Dwell Tester</a></li><li class="depth-1"><a href="#test-connections" data-for="test-connections">Test Connections</a></li><li class="depth-1"><a href="#dwell-angle-check" data-for="dwell-angle-check">Dwell Angle Check</a></li><li class="depth-1"><a href="#dwell-angle-adjustment" data-for="dwell-angle-adjustment">Dwell Angle Adjustment</a></li><li class="depth-1"><a href="#dual-breaker-point-dwell" data-for="dual-breaker-point-dwell">Dual Breaker Point Dwell</a></li><li class="depth-1"><a href="#distributor-tests--rotunda-distributor-tester" data-for="distributor-tests--rotunda-distributor-tester">Distributor Tests — Rotunda Distributor Tester</a></li><li class="depth-1"><a href="#mounting-distributor-are-236-testers" data-for="mounting-distributor-are-236-testers">Mounting Distributor ARE-236 Testers</a></li><li class="depth-1"><a href="#breaker-point-resistance" data-for="breaker-point-resistance">Breaker Point Resistance</a></li><li class="depth-1"><a href="#are-14-16-tester" data-for="are-14-16-tester">ARE-14-16 Tester</a></li><li class="depth-1"><a href="#insulation-and-leakage-are-236-and-are-14-16-testers" data-for="insulation-and-leakage-are-236-and-are-14-16-testers">Insulation and Leakage ARE-236 and ARE-14-16 Testers</a></li><li class="depth-1"><a href="#mechanical-operation--are-236-and-are-14-16-testers" data-for="mechanical-operation--are-236-and-are-14-16-testers">Mechanical Operation — ARE-236 and ARE-14-16 Testers</a></li><li class="depth-1"><a href="#dwell-angle" data-for="dwell-angle">Dwell Angle</a></li><li class="depth-1"><a href="#breaker-plate-wear" data-for="breaker-plate-wear">Breaker Plate Wear</a></li><li class="depth-1"><a href="#distributor-advance-and-retard-check--on-engine" data-for="distributor-advance-and-retard-check--on-engine">Distributor Advance and Retard Check — On Engine</a></li><li class="depth-1"><a href="#distributor-spark-advance-test--are-236-and-are-14-16-testers" data-for="distributor-spark-advance-test--are-236-and-are-14-16-testers">Distributor Spark Advance Test — ARE-236 and ARE-14-16 Testers</a></li><li class="depth-1"><a href="#centrifugal-advance-adjustment" data-for="centrifugal-advance-adjustment">Centrifugal Advance Adjustment</a></li><li class="depth-1"><a href="#vacuum-advance-single-or-dual-diaphragm-adjustment" data-for="vacuum-advance-single-or-dual-diaphragm-adjustment">Vacuum Advance (Single or Dual Diaphragm) Adjustment</a></li><li class="depth-1"><a href="#distributor-dual-diaphragm-test-on-engine" data-for="distributor-dual-diaphragm-test-on-engine">Distributor Dual Diaphragm Test (On Engine)</a></li><li class="depth-1"><a href="#vacuum-advance" data-for="vacuum-advance">Vacuum Advance</a></li><li class="depth-1"><a href="#vacuum-retard" data-for="vacuum-retard">Vacuum Retard</a></li><li class="depth-1"><a href="#distributor-vacuum-deceleration-valve-test" data-for="distributor-vacuum-deceleration-valve-test">Distributor Vacuum Deceleration Valve Test</a></li><li class="depth-1"><a href="#distributor-vacuum-control-valve-test-coolant-temperature-sensing-valve" data-for="distributor-vacuum-control-valve-test-coolant-temperature-sensing-valve">Distributor Vacuum Control Valve Test (Coolant Temperature Sensing Valve)</a></li><li class="depth-1"><a href="#electronic-distributor-modulator-test" data-for="electronic-distributor-modulator-test">Electronic Distributor Modulator Test</a></li><li class="depth-1"><a href="#power-supply" data-for="power-supply">Power Supply</a></li><li class="depth-1"><a href="#thermal-switch" data-for="thermal-switch">Thermal Switch</a></li><li class="depth-1"><a href="#control-module" data-for="control-module">Control Module</a></li><li class="depth-1"><a href="#speed-sensor" data-for="speed-sensor">Speed Sensor</a></li><li class="depth-1"><a href="#electronic-rpm-limiter-governor-test" data-for="electronic-rpm-limiter-governor-test">Electronic RPM Limiter (Governor) Test</a></li><li class="depth-0"><a href="#in-vehicle-adjustments-and-repairs" data-for="in-vehicle-adjustments-and-repairs">In Vehicle Adjustments and Repairs</a></li><li class="depth-1"><a href="#breaker-points-andor-condenser" data-for="breaker-points-andor-condenser">Breaker Points and/or Condenser</a></li><li class="depth-1"><a href="#installation" data-for="installation">Installation</a></li><li class="depth-1"><a href="#breaker-point-alignment" data-for="breaker-point-alignment">Breaker Point Alignment</a></li><li class="depth-1"><a href="#breaker-point-gap-adjustment" data-for="breaker-point-gap-adjustment">Breaker Point Gap Adjustment</a></li><li class="depth-1"><a href="#breaker-point-spring-tension-adjustment" data-for="breaker-point-spring-tension-adjustment">Breaker Point Spring Tension Adjustment</a></li><li class="depth-1"><a href="#ignition-timing" data-for="ignition-timing">Ignition Timing</a></li><li class="depth-1"><a href="#timing-mark-locations" data-for="timing-mark-locations">Timing Mark Locations</a></li><li class="depth-1"><a href="#initial-ignition-timing" data-for="initial-ignition-timing">Initial Ignition Timing</a></li><li class="depth-1"><a href="#spark-plug-wire-removal-and-installation" data-for="spark-plug-wire-removal-and-installation">Spark Plug Wire Removal and Installation</a></li><li class="depth-1"><a href="#six-cylinder-engines" data-for="six-cylinder-engines">Six Cylinder Engines</a></li><li class="depth-1"><a href="#removal" data-for="removal">Removal</a></li><li class="depth-1"><a href="#installation-1" data-for="installation-1">Installation</a></li><li class="depth-1"><a href="#all-v-8-engines" data-for="all-v-8-engines">All V-8 Engines</a></li><li class="depth-1"><a href="#installation-2" data-for="installation-2">Installation</a></li><li class="depth-1"><a href="#spark-plugs" data-for="spark-plugs">Spark Plugs</a></li><li class="depth-1"><a href="#removal-1" data-for="removal-1">Removal</a></li><li class="depth-1"><a href="#installation-3" data-for="installation-3">Installation</a></li><li class="depth-1"><a href="#resistance-wire-removal-and-installation" data-for="resistance-wire-removal-and-installation">Resistance Wire Removal and Installation</a></li><li class="depth-1"><a href="#ford-mercury-and-meteor" data-for="ford-mercury-and-meteor">Ford, Mercury and Meteor</a></li><li class="depth-1"><a href="#cougar-fairlane-falcon-montego-and-mustang" data-for="cougar-fairlane-falcon-montego-and-mustang">Cougar, Fairlane, Falcon, Montego and Mustang</a></li><li class="depth-1"><a href="#continental" data-for="continental">Continental</a></li><li class="depth-1"><a href="#thunderbird-and-mark-iii" data-for="thunderbird-and-mark-iii">Thunderbird and Mark III</a></li><li class="depth-0"><a href="#cleaning-and-inspection" data-for="cleaning-and-inspection">Cleaning and Inspection</a></li><li class="depth-1"><a href="#spark-plugs-1" data-for="spark-plugs-1">Spark Plugs</a></li><li class="depth-1"><a href="#distributor-cap" data-for="distributor-cap">Distributor Cap</a></li><li class="depth-1"><a href="#rotor" data-for="rotor">Rotor</a></li><li class="depth-1"><a href="#secondary-wiring" data-for="secondary-wiring">Secondary Wiring</a></li><li class="depth-0"><a href="#coil" data-for="coil">Coil</a></li><li class="depth-0"><a href="#special-tools" data-for="special-tools">Special Tools</a></li><li class="depth-1"><a href="#special-tools-1" data-for="special-tools-1">Special Tools</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/" class="internal">Ignition System</a></li><li><a href="../../engine/1970-ford-car-shop-manual-group-22-ignition-system/part-22-01-general-ignition-service" class="internal">General Ignition Service</a></li><li><a href="../../vehicles/cougar" class="internal">Cougar</a></li><li><a href="../../vehicles/fairlane" class="internal">Fairlane</a></li><li><a href="../../vehicles/falcon" class="internal">Falcon</a></li><li><a href="../../vehicles/ford" class="internal">Ford</a></li><li><a href="../../vehicles/mercury" class="internal">Mercury</a></li><li><a href="../../vehicles/meteor" class="internal">Meteor</a></li><li><a href="../../vehicles/montego" class="internal">Montego</a></li><li><a href="../../vehicles/mustang" class="internal">Mustang</a></li><li><a href="../../vehicles/thunderbird" class="internal">Thunderbird</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="../../postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Testing</title><meta charset="utf-8"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="1970 Ford Car Shop Manual"/><meta property="og:title" content="Testing"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Testing"/><meta name="twitter:description" content="Automatic Temperature Control · 34-05-02a Fig. 16 gives an electrical schematic of the automatic climate control system. Use Figs."/><meta property="og:description" content="Automatic Temperature Control · 34-05-02a Fig. 16 gives an electrical schematic of the automatic climate control system. Use Figs."/><meta property="og:image:alt" content="Automatic Temperature Control · 34-05-02a Fig. 16 gives an electrical schematic of the automatic climate control system. Use Figs."/><meta property="og:image" content="https://holgua.github.io/manual/static/og-image.png"/><meta property="og:image:url" content="https://holgua.github.io/manual/static/og-image.png"/><meta name="twitter:image" content="https://holgua.github.io/manual/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="holgua.github.io/manual"/><meta property="og:url" content="https://holgua.github.io/manual/electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/part-34-05-02a-testing"/><meta property="twitter:url" content="https://holgua.github.io/manual/electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/part-34-05-02a-testing"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="Automatic Temperature Control · 34-05-02a Fig. 16 gives an electrical schematic of the automatic climate control system. Use Figs."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2hvbGdlci9EZXNrdG9wL011c3Rhbmcvd2lraS9xdWFydHovcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/part-34-05-02a-testing"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">1970 Ford Car Shop Manual</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{if(a.isFolder!==b.isFolder)return a.isFolder?-1:1;let sa=a.slugSegment||\&quot;\&quot;,sb=b.slugSegment||\&quot;\&quot;,catOrder={chassis:0,engine:1,electrical:2,body:3,maintenance:4,vehicles:5},ca=catOrder[sa],cb=catOrder[sb];if(ca!==void 0&amp;&amp;cb!==void 0)return ca-cb;if(ca!==void 0)return-1;if(cb!==void 0)return 1;let folderRe=/-group-(\\d{2})-/,ga=folderRe.exec(sa),gb=folderRe.exec(sb);if(ga&amp;&amp;gb)return parseInt(ga[1],10)-parseInt(gb[1],10);if(sa===\&quot;index\&quot;)return-1;if(sb===\&quot;index\&quot;)return 1;let partRe=/^part-(\\d{2})-(\\d{2})(?:-(\\d{2})([a-z]?))?/,pa=partRe.exec(sa),pb=partRe.exec(sb);if(pa&amp;&amp;pb){let va=parseInt(pa[1],10)*1e8+parseInt(pa[2],10)*1e6+(pa[3]?parseInt(pa[3],10):0)*1e3+(pa[4]?pa[4].charCodeAt(0):0),vb=parseInt(pb[1],10)*1e8+parseInt(pb[2],10)*1e6+(pb[3]?parseInt(pb[3],10):0)*1e3+(pb[4]?pb[4].charCodeAt(0):0);return va-vb}return a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;})}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{if(!node.isFolder)return;let parents=new Map;for(let c of node.children){let seg=c.slugSegment||\&quot;\&quot;,m=/^part-(\\d{2})-(\\d{2})-(.+)$/.exec(seg);m&amp;&amp;!/^\\d/.test(m[3])&amp;&amp;parents.set(m[1]+\&quot;-\&quot;+m[2],c)}if(parents.size===0)return;let remaining=[];for(let c of node.children){let seg=c.slugSegment||\&quot;\&quot;,m=/^part-(\\d{2})-(\\d{2})-(\\d{2}[a-z]?)/.exec(seg);if(m){let parent=parents.get(m[1]+\&quot;-\&quot;+m[2]);if(parent&amp;&amp;parent!==c){parent.isFolder=!0,parent.isFileWithChildren=!0,parent.children.push(c);continue}}remaining.push(c)}node.children=remaining}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-715"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><div id="explorer-715" class="explorer-content" aria-expanded="true" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../electrical/">Electrical</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/">Ventilating, Heating and Air Conditioning</a></div></nav><h1 class="article-title">Testing</h1><ul class="tags"><li><a href="../../tags/continental-mark-iii" class="internal tag-link">continental-mark-iii</a></li><li><a href="../../tags/thunderbird" class="internal tag-link">thunderbird</a></li></ul></div></div><article class="popover-hint"><p><em><a href="../../electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/part-34-05-automatic-temperature-control" class="internal alias" data-slug="electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/part-34-05-automatic-temperature-control">Automatic Temperature Control</a> · 34-05-02a</em></p>
+<p><a href="#fig-16" class="internal alias">Fig. 16</a> gives an electrical schematic of the automatic climate control system. Use Figs. 14 and 16 as aids in performing the following tests:</p>
+<h3 id="temperature-sensors-and-rheostat-test">Temperature Sensors and Rheostat Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#temperature-sensors-and-rheostat-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The following test is to be used to determine if the air temperature sen- sors, the temperature control lever rheostat and the interconnecting wiring are operating properly. All three of these components are connected in series between the A.C.C. box and ground.</p>
+<p>The vehicle and sensors must be at approximately 70 degrees F to 80 degrees F, for an accurate test. Set the temperature control lever at 75 degrees. Disconnect the red electrical wiring connector from the A.C.C. box. Connect the Rotunda ohmmeter between the green wire terminal of the electrical harness and the vehicle body. Observe the resistance.</p>
+<p>With the surrounding air temperature between 70 degrees F. and 80 degrees F., the resistance of the sensor string and rheostat should be between 1200 and 1300 ohms. If the re- sistance measured is somewhat higher or lower than that specified, check the resistance of the individual sensors and the rheostat. If the sensors and rheostat check out correctly, the interconnecting wire is loose or disconnected.</p>
+<p><a id="fig-15"></a>
+<img src="../../electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/_page_130_Picture_3.jpeg" alt="Fig. 15 -- Automatic Climate Control Vacuum System Schematic—Thunderbird and Continental Mark III"/><br/>
+<em><a href="#fig-15" class="internal alias">Fig. 15</a> — Automatic Climate Control Vacuum System Schematic—Thunderbird and Continental Mark III</em></p>
+<h3 id="outside-air-ambient-temperature-sensor-test">Outside Air (AMBIENT) Temperature Sensor Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#outside-air-ambient-temperature-sensor-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Disconnect the two terminal connectors at the sensor on the outside air (1) and recirculating air door (2), and connect the ohmmeter across the two terminals. The resistance should be between 165 ohms and 185 ohms with a surrounding (ambient) temperature of approximately 70 degrees F. to 80 degrees F.</p>
+<h3 id="temperature-control-rheostat-test">Temperature Control Rheostat Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#temperature-control-rheostat-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Use the Rotunda ARE 27-42 ohmmeter and measure the total resistance of the disconnected rheostat with the temperature control set for 85 degrees. Then set the temperature control at 65 degrees and again note the resistance reading. The difference in resistance between the 65 degrees and 85 degrees dial setting should be between 400 and 500 ohms. If the difference in resistance is less than 400 ohms, the rheostat does not have the right resistance value or has a loose shaft set screw. If the resistance difference is more than 500 ohms, the rheostat does not have the right resistance value.</p>
+<h3 id="in-car-air-temperature-sensor-test">In-Car Air Temperature Sensor Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#in-car-air-temperature-sensor-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Disconnect the wiring connector from the ambient temperature sensor located on the recirc-inlet air door. Connect an ohmmeter between the blue wire at the ambient temperature sensor connector and the white wire connector at the rheostat connector.</p>
+<p>The in-car sensor resistance should be between 750 ohms and 900 ohms. If the test shows infinite resistance, the wiring to the sensor is not connected or the sensor is broken.</p>
+<h3 id="functional-control-switch-test">Functional Control Switch Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#functional-control-switch-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The five position switch may be checked with a continuity tester. Use an ohmmeter or self powered test light. There should be electrical continuity between the indicated termi- nals for each switch position as shown in <a href="#fig-17" class="internal alias">Fig. 17</a>. If not, the rotary switch is not operating properly.</p>
+<h3 id="high-range-relay-test">High Range Relay Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#high-range-relay-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The high range relay is located on the right fender apron close to the dash panel. The relay, when energized, by-passes the control head switch and the low range resistor, and supplies power directly to the A/C portion of the temperature blend door (5) power servo switch blower control and also to the heat portion of the switch by way of the cold engine relay in the A.C.C. box.</p>
+<p>If the relay is not operating properly, there will be no blower speed change when shifting the functional control lever from low to high when the power servo switch is calling for higher blower speed. To check this, set the temperature control lever for maximum heating or maximum cooling.</p>
+<p>If the blower does operate, but there is no change in speed as the functional control lever is moved from low to high, or vice versa, it indicates that the relay or its associated wiring is not functioning properly.</p>
+<p><a id="fig-16"></a>
+<img src="../../electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/_page_131_Figure_3.jpeg" alt="Fig. 16 -- Automatic Climate Control Electrical Schematic"/><br/>
+<em><a href="#fig-16" class="internal alias">Fig. 16</a> — Automatic Climate Control Electrical Schematic</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>SWITCH POSITION</th><th>CONTINUITY BETWEEN</th><th></th></tr></thead><tbody><tr><td>OFF</td><td>Brown Wire in yellow connector</td><td>Red-Green wire in yellow connector</td></tr><tr><td>нісн</td><td>Brown wire in yellow connector</td><td>Blue wire in yellow connector White-Green wire in red connector Blue-yellow wire in red connector Black-Yellow wire in blue connector</td></tr><tr><td>rom</td><td>Brown wire in yellow connector</td><td>White-Green wire in red connector Blue-Yellow wire in red connector Red-White wire in blue connector Blue wire in yellow connector</td></tr><tr><td>DE-FOG</td><td>Brown wire in yellow connector</td><td>White-Green wire in red connector Blue-Yellow wire in red connector Black-Yellow wire in blue connector</td></tr><tr><td></td><td>Violet-White wire in blue connector</td><td>Yellow-Red wire in blue connector</td></tr><tr><td>DE-ICE</td><td>Brown wire in yellow connector</td><td>Black-Yellow wire in blue connector White-Green wire in red connector Yellow-Black wire in red connector</td></tr></tbody></table></div>
+<h3 id="fig-17--functional-control-switch-test"><a href="#fig-17" class="internal alias">Fig. 17</a> — Functional Control Switch Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fig-17--functional-control-switch-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="heater-water-valve-4-test">Heater Water Valve (4) Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#heater-water-valve-4-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The heater water valve (4) is used to cut off the flow of engine coolant through the heater core when the A.C.C. box and power servo calls for maximum air conditioning with recirculated air. The valve is open in the OFF position.</p>
+<p>To check the heater water valve (4), set the temperature control for 85 degrees. With the functional control lever set at LOW, run the engine until the water is warm. Check for the proper temperature blend door (5) vacuum motor position; it should be between the mid and full vacuum position. Warm air should be discharged from the heater ducts. If the air is not warm, check the heater water valve (4) by removing the 1/8 inch vacuum line from the valve and noting if a vacuum is available. If vacuum is available and no heat is noted, the heater water valve (4) should be replaced.</p>
+<h3 id="blower-motor-current-draw-test">Blower Motor Current Draw Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#blower-motor-current-draw-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Connect a 0-50 ammeter between the positive post of the battery and the blower motor orange wire. The motor should operate. The current draw should be approximately 17-23 amperes.</p>
+<h3 id="acc-control-box-test">A.c.c. Control Box Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#acc-control-box-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Figure 18 gives the procedures for testing the A.C.C. control box.</p>
+<h3 id="power-servo-test">Power Servo Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#power-servo-test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Figure 19 gives the procedures for testing the power servo.</p></article><hr/><div class="page-footer"><div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true"><button class="lightbox-close" aria-label="Close">×</button><div class="lightbox-controls" aria-label="Rotate"><button class="lightbox-rotate" data-dir="-1" aria-label="Rotate left">↺</button><button class="lightbox-rotate" data-dir="1" aria-label="Rotate right">↻</button></div><img alt/><div class="caption"></div><div class="hint">CLICK BACKGROUND OR PRESS ESC TO CLOSE · ↺ ↻ TO ROTATE</div></div></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-185" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#temperature-sensors-and-rheostat-test" data-for="temperature-sensors-and-rheostat-test">Temperature Sensors and Rheostat Test</a></li><li class="depth-0"><a href="#outside-air-ambient-temperature-sensor-test" data-for="outside-air-ambient-temperature-sensor-test">Outside Air (AMBIENT) Temperature Sensor Test</a></li><li class="depth-0"><a href="#temperature-control-rheostat-test" data-for="temperature-control-rheostat-test">Temperature Control Rheostat Test</a></li><li class="depth-0"><a href="#in-car-air-temperature-sensor-test" data-for="in-car-air-temperature-sensor-test">In-Car Air Temperature Sensor Test</a></li><li class="depth-0"><a href="#functional-control-switch-test" data-for="functional-control-switch-test">Functional Control Switch Test</a></li><li class="depth-0"><a href="#high-range-relay-test" data-for="high-range-relay-test">High Range Relay Test</a></li><li class="depth-0"><a href="#fig-17--functional-control-switch-test" data-for="fig-17--functional-control-switch-test">Fig. 17 — Functional Control Switch Test</a></li><li class="depth-0"><a href="#heater-water-valve-4-test" data-for="heater-water-valve-4-test">Heater Water Valve (4) Test</a></li><li class="depth-0"><a href="#blower-motor-current-draw-test" data-for="blower-motor-current-draw-test">Blower Motor Current Draw Test</a></li><li class="depth-0"><a href="#acc-control-box-test" data-for="acc-control-box-test">A.c.c. Control Box Test</a></li><li class="depth-0"><a href="#power-servo-test" data-for="power-servo-test">Power Servo Test</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/" class="internal">Ventilating, Heating and Air Conditioning</a></li><li><a href="../../electrical/1970-ford-car-shop-manual-group-34-ventilating-heating-and-air-conditioning/part-34-05-automatic-temperature-control" class="internal">Automatic Temperature Control</a></li><li><a href="../../vehicles/continental-mark-iii" class="internal">Continental Mark III</a></li><li><a href="../../vehicles/thunderbird" class="internal">Thunderbird</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="../../postscript.js" type="module" data-persist="true"></script></html>
