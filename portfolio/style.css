@@ -60,3 +60,18 @@ pre code { background: transparent; padding: 0; }
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid #ddd; padding: 0.4em 0.6em; text-align: left; }
 .back { display: inline-block; margin-bottom: 1rem; font-size: 0.95rem; }
+.subscribe { margin-top: 2rem; font-size: 0.95rem; color: #555; }
+.subscribe code { background: #f4f4f4; padding: 0.1rem 0.4rem; border-radius: 3px; user-select: all; }
+.subscribe a { text-decoration: none; }
+.subscribe a:hover code { background: #e8e8e8; }
+.score {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0.05em 0.45em;
+  font-size: 0.85em;
+  font-style: italic;
+  color: #555;
+  background: #f0f0f0;
+  border-radius: 3px;
+  white-space: nowrap;
+}
