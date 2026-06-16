@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio — 2026-06-15 (Partial Run) — Portfolio Reports</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← All reports</a></p>
+<h1 id="portfolio-2026-06-15-partial-run">Portfolio — 2026-06-15 (Partial Run)</h1>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p>This day's reading set is incomplete. Three per-holding notes were produced on 2026-06-15 but the full refresh was not finished. The complete 2026-06-16 reading set supersedes this entry.</p>
+<h2 id="the-lineup">The Lineup</h2>
+<p>The following notes were produced on 2026-06-15:</p>
+<ul>
+<li><a href="BKNG.html">Open the Booking note →</a></li>
+<li><a href="SPY.html">Open the SP500 note →</a></li>
+<li><a href="DE0001030583.html">Open the Bund Linker 2033 note →</a></li>
+</ul><h2 id="how-the-ranking-works">How the Ranking Works</h2>
+
+<p>The figure that follows each holding’s name above is its <strong>conviction score</strong> — one number that summarises how strongly the standing rules read the holding today. Higher means stronger conviction; lower means weaker. The score is a way to line the holdings up against each other on a single day; it is not a forecast of next year’s return.</p>
+
+<p>Every holding’s score is built from the same three inputs and the same formula:</p>
+
+<pre>conviction_score = quality_weight × (expected_annual_return − single_company_handicap)</pre>
+
+<p>The handicap is subtracted in percentage-point terms, then the quality weight is applied as a multiplier. The three inputs come from three different places on disk and are described one by one below; the final score is recomputed every time the portfolio is ranked and lives in <code>Portfolio/Ranking-{date}.md</code>.</p>
+
+<h3 id="ranking-expected-return">Input 1 — expected annual return</h3>
+
+<p>A single percentage figure (e.g. +25.30%, −0.50%) describing what the holding is expected to earn per year from today’s price, before tax, on the central scenario. The figure can be negative when the standing read is that the price has run ahead of what the business can support.</p>
+
+<p>Source: each holding’s value-side write-up produces three figures — a bearish case, a central case and a bullish case. The ranking uses the central case only. The number is stored as <code>forward_irr_base_pct</code> in <code>Holdings/{TICKER}/Analysis/{TICKER}-Ranking-Inputs.json</code>, which is regenerated from the write-up whenever the holding is refreshed.</p>
+
+<p>What it means: if the figure is +25.30%, the read is that a buyer paying today’s price would earn roughly that much per year if the conditions described in the per-holding note hold. A negative figure says the read is that today’s price is too high for the underlying numbers to keep up.</p>
+
+<h3 id="ranking-handicap">Input 2 — a small handicap for single-company holdings</h3>
+
+<p>A flat 2.0 percentage points, subtracted from the expected return of every single-company holding (an expected return of +25.30% becomes +23.30% after the handicap). Funds receive no handicap and pass the expected return through unchanged.</p>
+
+<p>Source: a portfolio-level constant set in <code>System/Tools/Rank-Portfolio.py</code>. Whether a holding counts as a single instrument or a fund is read from its <code>asset_type</code> field in the same Ranking-Inputs file (<code>company</code> and <code>bond</code> are single-instrument; <code>etf</code> is a fund and receives no handicap).</p>
+
+<p>What it means: owning a single company concentrates risk that a broad fund spreads across hundreds. The handicap puts a small thumb on the scale against single-company bets so that a fund with the same headline return ranks slightly above an individual company. Two percentage points is a deliberate, tunable default — not a precise measure of the risk gap.</p>
+
+<h3 id="ranking-quality">Input 3 — business-quality weight</h3>
+
+<p>A multiplier applied to the handicapped return. Three settings:</p>
+
+<table>
+<tr><th>Quality</th><th>Multiplier</th><th>Awarded for</th></tr>
+<tr><td>Wide / High</td><td>×1.20</td><td>A wide, durable competitive advantage that is hard for a rival to copy</td></tr>
+<tr><td>Narrow / Medium</td><td>×1.00</td><td>A narrower advantage; left at face value</td></tr>
+<tr><td>None / Low</td><td>×0.80</td><td>No clear advantage; marked down</td></tr>
+</table>
+
+<p>Source: the quality setting is decided in each holding’s value-side write-up and copied into <code>Holdings/{TICKER}/Analysis/{TICKER}-Ranking-Inputs.json</code> as <code>quality_tier</code>. For single companies the basis is a section on economic moats; for funds it is the average return on capital of the ten largest companies inside the fund. Both feed the same three tiers.</p>
+
+<p>What it means: holdings backed by durable businesses are favoured because the same headline return is more likely to keep showing up year after year; holdings with no defence are discounted because the same return is less reliable.</p>
+
+<h3 id="ranking-the-score">Putting it together — a worked example</h3>
+
+<p>For Booking on 2026-06-10 the inputs are an expected annual return of +25.30%, the single-company handicap of −2.0 percentage points, and the wide-quality multiplier of ×1.20. The score is:</p>
+
+<pre>1.20 × (25.30 − 2.0) = 1.20 × 23.30 = +27.96</pre>
+
+<p>That is the figure printed next to Booking at the top of the list above. The same arithmetic runs for every other holding on the page.</p>
+
+<h3 id="ranking-what-the-score-means">Reading the score</h3>
+
+<p>A score comfortably above zero says the standing rules read the holding as worth holding from here. A score near zero says the read is roughly flat. A score below zero says the read is negative — the holding sits at the bottom of the list and rewards a careful look at the linked note. The size of the gap between two scores is meaningful (a holding at +27 is in clearly stronger territory than one at +4); the second decimal place is not.</p>
+
+</main>
+</body>
+</html>
