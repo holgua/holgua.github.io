@@ -59,18 +59,18 @@
 
 <h3 id="ranking-quality">Input 3 — business-quality weight</h3>
 
-<p>A multiplier applied to the handicapped return. Three settings:</p>
+<p>A multiplier applied to the handicapped return. For single-company holdings, three settings:</p>
 
 <table>
-<tr><th>Quality</th><th>Multiplier</th><th>Awarded for</th></tr>
-<tr><td>Wide / High</td><td>×1.20</td><td>A wide, durable competitive advantage that is hard for a rival to copy</td></tr>
-<tr><td>Narrow / Medium</td><td>×1.00</td><td>A narrower advantage; left at face value</td></tr>
-<tr><td>None / Low</td><td>×0.80</td><td>No clear advantage; marked down</td></tr>
+<tr><th>Moat quality</th><th>Multiplier</th><th>Awarded for</th></tr>
+<tr><td>Wide</td><td>×1.20</td><td>A wide, durable competitive advantage that is hard for a rival to copy</td></tr>
+<tr><td>Narrow</td><td>×1.00</td><td>A narrower advantage; left at face value</td></tr>
+<tr><td>None</td><td>×0.80</td><td>No clear advantage; marked down</td></tr>
 </table>
 
-<p>Source: the quality setting is decided in each holding’s value-side write-up and copied into <code>Holdings/{TICKER}/Analysis/{TICKER}-Ranking-Inputs.json</code> as <code>quality_tier</code>. For single companies the basis is a section on economic moats; for funds it is the average return on capital of the ten largest companies inside the fund. Both feed the same three tiers.</p>
+<p>Source: the moat assessment is decided in each company’s value-side write-up and copied into <code>Holdings/{TICKER}/Analysis/{TICKER}-Ranking-Inputs.json</code>. Holdings backed by durable businesses are favoured because the same headline return is more likely to keep showing up year after year; holdings with no defence are discounted because the same return is less reliable.</p>
 
-<p>What it means: holdings backed by durable businesses are favoured because the same headline return is more likely to keep showing up year after year; holdings with no defence are discounted because the same return is less reliable.</p>
+<p><strong>Funds use a fixed ×1.00 multiplier.</strong> A fund’s basket quality is already priced into its earnings yield — the return figure that feeds Input 1 already reflects what investors are paying for the underlying businesses. Applying a separate quality multiplier on top would double-count that information. The quality of a fund’s top-10 holdings is still computed and shown alongside its ranking row as context, but it does not adjust the score.</p>
 
 <h3 id="ranking-the-score">Putting it together — a worked example</h3>
 
