@@ -5,8 +5,22 @@
 <link>https://holgua.github.io/portfolio/</link>
 <description>Daily reading sets.</description>
 <language>en</language>
-<lastBuildDate>Thu, 25 Jun 2026 04:28:24 GMT</lastBuildDate>
+<lastBuildDate>Fri, 03 Jul 2026 08:16:45 GMT</lastBuildDate>
 <atom:link href="https://holgua.github.io/portfolio/feed.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>The Portfolio on 2026-07-03: Mostly Working, Two Wobbling</title>
+<link>https://holgua.github.io/portfolio/2026-07-03/index.html</link>
+<guid isPermaLink="true">https://holgua.github.io/portfolio/2026-07-03/index.html</guid>
+<pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+<description>Fifteen positions are active across companies, funds, and a government bond. Thirteen carry the signal that the underlying thesis continues to hold; two are wobbling at the edges of their fair-value ranges. Three further positions are intentionally paused — more detail in the Paused holdings section below. Conviction is strongest at the top of The Lineup, where PayPal leads by a wide margin, and thinnest at the bottom, where VERBUND is generating a meaningfully negative expected return under the standing rules.</description>
+</item>
+<item>
+<title>Ten Working, Three Wobbling — 2026-06-29</title>
+<link>https://holgua.github.io/portfolio/2026-06-29/index.html</link>
+<guid isPermaLink="true">https://holgua.github.io/portfolio/2026-06-29/index.html</guid>
+<pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+<description>Thirteen positions are active. At the top of the ranking, PayPal, Booking, Dynatrace, and Berkshire all sit inside their fair-value ranges with positive expected returns from here. Three positions — All World, SP500, and VERBUND — are wobbling: their share prices sit at or above the price the standing rules treat as a trim, and in each case at least one monitored condition is straining. Europe 600 returned incomplete data this cycle and its position could not be determined. The full ranked list is in The Lineup.</description>
+</item>
 <item>
 <title>The Portfolio on 2026-06-24: Mostly Working, Three Wobbling</title>
 <link>https://holgua.github.io/portfolio/2026-06-24/index.html</link>
