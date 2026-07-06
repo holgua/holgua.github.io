@@ -23,11 +23,13 @@ $135                                 $203/$210                              $280
 </code></pre>
 <p>The two figures measure different things. The long-run figure assumes the market keeps valuing All World the way it does today. The five-year figure assumes the share price moves from today's $203 to the fair-value central estimate of $168.</p>
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
-<p>All World scores 1.0, ranking 12 of 15 active holdings by this measure — it sits in the lower third of the portfolio.</p>
+<p>All World scores 0.83, ranking 12 of 16 active holdings by this measure — it sits in the lower third of the portfolio.</p>
 <blockquote>
 <p><strong>score</strong>
-&nbsp;&nbsp;= (3.69% − 2.86%)
-&nbsp;&nbsp;= <strong>1.0</strong></p>
+&nbsp;&nbsp;= quality-weight × (expected return − hurdle rate)
+&nbsp;&nbsp;= 1.00 × (3.69% − 2.86%)
+&nbsp;&nbsp;= 1.00 × +0.83%
+&nbsp;&nbsp;= <strong>0.83</strong></p>
 </blockquote>
 <ul>
 <li><strong>Quality-weight: 1.00.</strong> Index funds are not assigned a moat tier; the weight is always one.</li>
@@ -117,11 +119,14 @@ $135                                 $203/$210                              $280
 </ul>
 <!-- dehallucinate-audit-v2
 schema: v2
-timestamp: 2026-07-06T00:00:00Z
-verdict: CLEAN
-applied: 0
+timestamp: 2026-07-06T12:00:00Z
+verdict: MINOR
+applied: 2
 hedged: 0
 advisory: 0
+---
+dehallucinate-audit-v2-finding: MEDIUM factual-contradiction at Reports/2026-07-06/URTH.md:28 — Score displayed as 1.0 but formula 1.00 × (3.69% − 2.86%) = 0.83; Index.md correctly shows 0.82. Confidence: High. Evidence: "= (3.69% − 2.86%) = 1.0" — arithmetic gives 0.83 not 1.0. Fix: Corrected score display to 0.83 and added missing formula lines.
+dehallucinate-audit-v2-finding: LOW factual-contradiction at Reports/2026-07-06/URTH.md:38 — Ranking stated as "12 of 15 active holdings" but Index.md shows 16 active holdings. Confidence: High. Evidence: Index.md lists 16 numbered active positions. Fix: Corrected to "12 of 16".
 -->
 </main>
 </body>
