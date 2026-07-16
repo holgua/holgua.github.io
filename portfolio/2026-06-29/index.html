@@ -59,7 +59,7 @@
 
 <p>A flat 2.0 percentage points, subtracted from the expected return of every single-company holding (an expected return of +12.50% becomes +10.50% after the handicap). Funds receive no handicap and pass the expected return through unchanged.</p>
 
-<p>Source: a portfolio-level constant set in <code>System/Tools/Rank-Portfolio.py</code>. Whether a holding counts as a single instrument or a fund is read from its <code>asset_type</code> field in the same Ranking-Inputs file (<code>company</code> and <code>bond</code> are single-instrument; <code>etf</code> is a fund and receives no handicap).</p>
+<p>Source: a portfolio-level constant set in <code>src/portfolio/rank_portfolio.py</code>. Whether a holding counts as a single instrument or a fund is read from its <code>asset_type</code> field in the same Ranking-Inputs file (<code>company</code> and <code>bond</code> are single-instrument; <code>etf</code> is a fund and receives no handicap).</p>
 
 <p>What it means: owning a single company concentrates risk that a broad fund spreads across hundreds. The handicap puts a small thumb on the scale against single-company bets so that a fund with the same headline return ranks slightly above an individual company. Two percentage points is a deliberate, tunable default — not a precise measure of the risk gap.</p>
 
