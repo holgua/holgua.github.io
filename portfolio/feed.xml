@@ -5,8 +5,15 @@
 <link>https://holgua.github.io/portfolio/</link>
 <description>Daily reading sets.</description>
 <language>en</language>
-<lastBuildDate>Thu, 16 Jul 2026 04:35:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 16 Jul 2026 16:06:28 GMT</lastBuildDate>
 <atom:link href="https://holgua.github.io/portfolio/feed.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>Portfolio Snapshot — 2026-07-16</title>
+<link>https://holgua.github.io/portfolio/2026-07-16/index.html</link>
+<guid isPermaLink="true">https://holgua.github.io/portfolio/2026-07-16/index.html</guid>
+<pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+<description>Eighteen active holdings span companies, index funds, and a government bond, ranked from highest to lowest conviction by a single measure: how much expected return each position delivers above the threshold a German inflation-linked government bond currently offers. At the top, PayPal, Amazon, and Booking show the widest margins; at the bottom, the S&amp;P 500 fund and Datadog have slipped into negative territory on that same measure. Three further positions are currently paused and excluded from the ranking. The full breakdown, price by price and note by note, is in The Lineup.</description>
+</item>
 <item>
 <title>Mostly Working, Three Wobbling — 2026-07-15</title>
 <link>https://holgua.github.io/portfolio/2026-07-15/index.html</link>
