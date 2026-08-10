@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DT: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-07-06 overview</a></p>
+<h1 id="dt-the-bet-still-works">DT: The Bet Still Works</h1>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-07-06 · Latest filing 2026-05-20.</em></p>
+<p>The bet is working. The share price sits <a href="#the-share-price">in the middle of the hold band</a>, <a href="#the-share-price">at fair value</a>. The one condition to watch closely is the platform-subscription penetration metric, which Dynatrace's annual filing does not disclose numerically — the figure must be sourced from quarterly earnings releases and the direction is unknown until the next one appears.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $31. Trim at $55. Exit at $101.</p>
+<p>At $31, the long-run total return is about 22% a year. At today's $41, about 20% a year. The figure assumes the business keeps growing at today's pace and the market keeps valuing the shares the same way.</p>
+<pre><code>buy         current        trim                                             exit
+$31         $41            $55                                              $101
+├───────────┼──────────────┼───────────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the share price moves to the fair-value central estimate, returns work out to bear −4.7%, base +15.1%, bull +35.4% a year.</p>
+<pre><code>bear                                 expected/base                          bull
+-4.7%                                +14.2%/+15.1%                        +35.4%
+├────────────────────────────────────┼─┼───────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 55% base, 20% bull): about +14.2% a year.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Dynatrace scores 11.22, ranking 5 of 15 active holdings by this measure — it sits comfortably in the upper third of the portfolio.</p>
+<blockquote>
+<p><strong>score</strong>
+&nbsp;&nbsp;= quality-weight × (expected return − hurdle rate)
+&nbsp;&nbsp;= 1.20 × (14.21% − 4.86%)
+&nbsp;&nbsp;= 1.20 × +9.35%
+&nbsp;&nbsp;= <strong>11.22</strong></p>
+</blockquote>
+<ul>
+<li><strong>Quality-weight: 1.20.</strong> This holding sits in the strongest of three moat tiers, which lifts the score by 20 per cent.</li>
+</ul>
+<p><strong>Expected return: 14.21%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (25% likelihood) — annualised return −4.7%.</strong> The bear case assumes observability commoditises — Datadog and open-source rivals erode pricing power, net retention compresses toward 104%, and the platform-subscription migration stalls — leaving cash generation well below today's run rate by 2029.</p>
+<p><strong>Base (55% likelihood) — annualised return +15.1%.</strong> The base case has platform-subscription expansion driving sustained 16–17% annual recurring revenue growth through 2029, operating leverage lifting margins, and the ongoing buyback programme reducing the share count materially.</p>
+<p><strong>Bull (20% likelihood) — annualised return +35.4%.</strong> The bull case has Dynatrace's artificial-intelligence observability capabilities becoming mandatory governance infrastructure under regulation and enterprise risk mandates, net retention expanding beyond 115%, and log management crossing a billion dollars of annual recurring revenue.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.25 × (−4.7) + 0.55 × 15.1 + 0.20 × 35.4 = +14.21%.</p>
+<ul>
+<li><strong>Hurdle rate: 4.86%.</strong> The hurdle rate is 4.86% — the 0.86% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point ECB inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</li>
+</ul>
+<p>A score of 11.22 puts Dynatrace fifth of fifteen active holdings — ahead of diversified index funds and most of the portfolio's large-cap names, though still well behind the two or three holdings where the expected return is most compressed by the current share price.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>Dynatrace's annual report for the year ending March 2026 confirmed every numerically testable condition in the thesis. Net revenue retention — the metric that measures how much existing customers spend year over year — held at 110% constant currency for a third consecutive year, a streak that is the most direct empirical test of the platform's switching cost moat. Annual recurring revenue grew 18% to $2,054 million, well above the 13% floor that would trigger a review. Free cash flow reached $529 million, a 26% margin on $2,018 million in revenue, comfortably above the 20% floor.</p>
+<p>On the capital allocation front, management repurchased $479 million of shares at an average of $37.71 during the year and launched a fresh $1 billion buyback authorisation with $849 million remaining as of 31 March 2026 — the clearest available signal of management's own view of intrinsic worth relative to the current price.</p>
+<p>Two items merit watching. Palo Alto Networks confirmed in its own filings that it acquired Chronosphere in 2026, the bundled-security-and-observability rival cited as a potential threat. The acquisition is preparatory; no displaced Dynatrace customers have been announced. Subscription gross margin compressed one percentage point to 85%, attributed to higher cloud-hosting costs as the platform scales — total gross margin nonetheless expanded. Neither development crosses a <a href="#the-case-for-the-bet">written exit condition</a>, but both warrant tracking at the next quarterly release.</p>
+<h2 id="about-dt">About DT</h2>
+<p>Dynatrace sells observability software to large enterprises: the tools that tell engineers, in real time, what is happening across thousands of interdependent services, databases, cloud containers, and user sessions — and, increasingly, why. Its central product is a software agent, OneAgent, that deploys automatically across an organisation's technology stack and feeds everything it measures into a proprietary data lakehouse called Grail. On top of that lakehouse sits an AI-assisted query and alerting layer called Davis, which the company markets under the Dynatrace Platform Subscription licence.</p>
+<p>The business model is subscription-based and almost entirely recurring. Customers sign annual or multi-year contracts, and because OneAgent becomes deeply embedded in production systems during deployment, replacing it requires a multi-year re-instrumentation programme across the entire technology estate. That friction creates the switching costs that anchor the economics. The platform earned $1,930 million in subscription revenue in fiscal year 2026 — roughly 96 cents of every revenue dollar — and has compounded total revenue at around 21% over the past four fiscal years.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The bet rests on one central idea: Dynatrace has built a software platform that is genuinely difficult to displace, and the market is currently pricing in growth assumptions that are more pessimistic than even the bear-case outlook. The conditions below must keep holding for that idea to remain credible.</p>
+<ol>
+<li><strong>Net revenue retention stays at or above 107%.</strong> This metric measures what existing customers spend in a given year compared with the year before — a reading above 100% means the installed base is expanding on its own, before any new customer is counted. The kill signal is two consecutive quarters below 107%; a single quarter below that line is a watch item, not an exit trigger.</li>
+</ol>
+<p><em>Latest reading:</em> Dollar-based net retention rate (constant currency) was 110% for fiscal year 2026, unchanged from 2025 and slightly below 2024's 111%. Three consecutive years at or above 110%; the exit threshold is clear of the current reading by a wide margin.</p>
+<ol>
+<li><strong>Annual recurring revenue growth (constant currency) stays above 13%.</strong> This is the top-line signal for whether the platform is winning enough new business to replace the organic expansion from the installed base. Two consecutive quarters below 13% would confirm a structural deceleration.</li>
+</ol>
+<p><em>Latest reading:</em> Annual recurring revenue reached $2,054 million as of March 2026, 18% higher year on year. The annual filing does not break out a separate constant-currency figure for the full ARR total (the constant-currency presentation applies only to net retention); 18% reported is nonetheless far above the 13% threshold even after any plausible currency adjustment.</p>
+<ol>
+<li><strong>Free cash flow margin stays above 20% for any full fiscal year.</strong> This is the acid test of whether the moat translates into durable profit generation rather than accounting constructs. A drop below 20% for a full year — not a quarter — would be the trigger.</li>
+</ol>
+<p><em>Latest reading:</em> Free cash flow was $529 million on $2,018 million of revenue — a 26.2% margin, up from 25.4% in fiscal year 2025. The margin is a full six percentage points above the exit threshold, and has been above 20% for every fiscal year in the data series.</p>
+<ol>
+<li><strong>No open-market equity sales by the chief executive or chief financial officer.</strong> Sales of $5 million or more within any 90-day window would indicate that management's private assessment of the business diverges sharply from the investment thesis.</li>
+</ol>
+<p><em>Latest reading:</em> No open-market equity sales by either the chief executive or chief financial officer in the twelve months to March 2026. The company repurchased $479 million of shares at the corporate level during the same period, with a new $1 billion authorisation launched in February 2026.</p>
+<ol>
+<li><strong>Platform-subscription penetration (Dynatrace Platform Subscription as a proportion of annual recurring revenue) stays above 72%.</strong> This migration metric signals whether existing customers are adopting the new consumption-based licence model. Stalling below 72% for three consecutive quarters — particularly if management ceases disclosing the figure — would indicate the expansion strategy is failing.</li>
+</ol>
+<p><em>Latest reading:</em> The annual filing does not disclose platform-subscription penetration as a numeric percentage. Management describes the model in detail and expresses intent to drive adoption, but the point-in-time figure is only available in quarterly earnings releases. The last disclosed figure (around 70% as of late 2025) is stale. This is the most significant blind spot in the current data set.</p>
+<ol>
+<li><strong>No confirmed enterprise customer displacement by Cisco/Splunk or Palo Alto/Chronosphere.</strong> These two merged security-and-observability platforms represent the bundled-suite threat: large customers choosing one consolidated vendor rather than a best-of-breed observability specialist. The trigger requires named customer wins, not merely acquisition announcements.</li>
+</ol>
+<p><em>Latest reading:</em> Palo Alto Networks confirmed the acquisition of Chronosphere in 2026 — the preparatory signal noted in the thesis. No named Dynatrace customer displacement has been disclosed by either Cisco or Palo Alto. Net retention at 110% is the primary counter-evidence that displacement is not occurring at scale.</p>
+<ol>
+<li><strong>Net cash stays above $600 million.</strong> Cash materially below that line — without a disclosed rationale such as an acquisition — would signal balance-sheet deterioration inconsistent with the thesis.</li>
+</ol>
+<p><em>Latest reading:</em> Cash and equivalents stood at $1,097 million as of 31 March 2026, with no outstanding borrowings under the credit facility. Net cash is well above the $600 million floor by any reasonable definition; the thesis figure of $823 million cited at the time of writing was an earlier snapshot.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At $41.42, Dynatrace sits in the middle of the hold band — the range between the price at which a new purchase would offer a meaningful margin of safety and the price at which trimming becomes the right call. That places the shares <a href="#the-bottom-line">at fair value</a> by the yield-based measure used here: free cash flow of $530 million against a market value of roughly $12 billion works out to a yield of 4.4%, essentially equal to the fair-value anchor of the same 4.4%.</p>
+<p>The buy edge sits at $31 — the price at which that free cash flow yield would rise to 5.9%, a level the model treats as offering sufficient excess return over the holding's cost of capital. The trim edge sits at $55 — where the yield would fall to 3.3%, close enough to the base-case intrinsic-value estimate of $58 that the remaining upside would require bull-case execution to justify a full position.</p>
+<p>The exit edge sits at $101 — the price at which the market would be pricing in roughly six years of compounding at today's growth rate, implying a forward return below the long-run equity premium. That level is 144% above the current price and functions as a hard ceiling beyond which the standing rules call for closing the position regardless of thesis state.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The rules translate the share-price bands into three standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement made here.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at $41, the fair-value anchor. The crossing means the share price has returned to a neutral reading; no action follows automatically, but a fresh read of the conditions is warranted.
+- A second alert at $31, the cheap edge. The crossing arms the buy order below; before adding, the latest re-validation should confirm the conditions are still working.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at $31. The rules call for accumulating in tranches once the share price closes at or below this line and the conditions are still working. Management's own buyback at $37.71 in fiscal year 2026 sets a practical floor and suggests that at $31 the free cash flow yield (above 6.2%) would represent a compelling accumulation zone.
+- A standing trim order at $55. The rules call for trimming toward a half-to-two-thirds position when the share price closes at or above this line, harvesting the premium while retaining the core holding. At that level the share price approaches the base-case estimate of around $58 and the remaining upside depends on bull-case execution.
+- A standing exit order at $101. The rules call for closing the full position when the share price closes at or above this line. At that reading the market would be pricing in roughly six years of base-case compounding in advance; the implied forward return falls below the long-run equity premium and reallocation becomes the better option.</p>
+<p>The three order levels do not contradict the current verdict above: those verdicts describe the reading today; the standing orders describe what the rules will execute if the share price moves to each line.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>Two conditions are producing mixed signals rather than clean confirmations.</p>
+<p><strong>Palo Alto/Chronosphere acquisition.</strong> The bundled-suite threat cited in the thesis has moved from hypothetical to confirmed preparation. Palo Alto Networks disclosed the Chronosphere acquisition in 2026, creating a directly competing observability platform within a major security vendor. Exit condition six requires proof of named Dynatrace customer losses, not merely competitive positioning — that evidence has not appeared. Net retention holding at 110% is the strongest available counter-signal. The watch item is Palo Alto's go-to-market announcements for the combined platform, expected at upcoming industry events and quarterly earnings calls.</p>
+<p><strong>Subscription gross margin compression.</strong> Subscription gross margin declined one percentage point to 85%, driven by higher cloud-hosting costs as the platform scales toward a more software-as-a-service delivery model. Total gross margin expanded from 81% to 82%, which confirms that the platform's pricing lever is intact at the product level. Exit condition three references free cash flow margin (26.2%, well above the 20% floor), not subscription gross margin; the compression does not cross any written line. It is, however, a cost trend that warrants monitoring as the subscription base grows.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Observability commoditises faster than expected.</strong> Datadog's product-development pace, the rapid adoption of open-source agents such as OpenTelemetry, and the emergence of eBPF-native startups all apply downward pressure on the pricing power that sustains 110% net retention. If generic alternatives reach feature parity with OneAgent at lower cost, net retention could compress materially within two or three years.</li>
+<li><strong>DPS conversion stalls.</strong> If the platform-subscription migration stalls below 72% of annual recurring revenue — and particularly if management stops disclosing the penetration figure — the expansion engine that drives natural revenue growth within the existing customer base would be impaired. This is the condition with the least current data.</li>
+<li><strong>Large-language-model-native monitoring emerges as a substitute.</strong> Dynatrace's filing explicitly acknowledges the risk from "generic LLMs, generative AI, and general-purpose agents" addressing enterprise monitoring needs without a specialised platform. If enterprise technology teams route observability questions to general-purpose AI assistants rather than dedicated platforms, the total addressable market could shrink.</li>
+<li><strong>Capital allocation deteriorates.</strong> A drop in net cash below $600 million without a disclosed acquisition rationale, or open-market equity sales by senior management, would signal a divergence between management's private assessment and the thesis. Neither has occurred, but both require quarterly monitoring.</li>
+<li><strong>Macro-driven IT budget cuts.</strong> Observability is a discretionary line item in enterprise technology budgets during a spending freeze. A severe macroeconomic contraction could compress net retention across the installed base regardless of product quality, temporarily breaking the 110% signal without any underlying loss of competitive position.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p><strong>Platform-subscription penetration is not disclosed in annual filings.</strong> The most important expansion metric — what proportion of annual recurring revenue has migrated to the Dynatrace Platform Subscription consumption model — is disclosed only in quarterly earnings commentary and not in the annual filing reviewed here. The last available figure (approximately 70% as of late 2025) is stale by at least two quarters. A complete picture requires monitoring the quarterly earnings releases.</p>
+<p><strong>Constant-currency annual recurring revenue growth rate.</strong> The annual filing discloses 18% total-ARR growth but does not separately present a constant-currency figure for the full ARR total (the constant-currency adjustment applies to net retention only). The 13% exit threshold was designed against a constant-currency measure; at 18% reported, any plausible currency effect still clears the threshold by a wide margin, but the exact constant-currency reading is unavailable from this source.</p>
+<p><strong>Risk-free rate sourced from SPY market data snapshot.</strong> The hurdle rate calculation uses the 10-year government bond yield read from the broader portfolio's SPY market data file (snapshot dated 2026-07-06) rather than from a DT-specific field, which is absent. This is a structural convenience rather than a data error; the rate would need to shift materially to affect the conclusion.</p>
+<p><strong>Fair-value drift between methods.</strong> The yield-based fair value ($41) and the scenario-weighted discounted cash flow midpoint ($158, from the base-case scenario analysis) diverge by roughly 75%. The yield method anchors to today's free cash flow; the scenario method prices in fifteen-plus years of compounding. The two approaches measure different things. Both are documented; neither has been reconciled into a single preferred figure.</p>
+<h2 id="the-rules">The Rules</h2>
+<p>If the thesis is confirmed — all conditions working and no exit triggered — the rule is to maintain the full position, continue monitoring the quarterly metrics, and consider adding modestly on dips below $38 while net retention holds at or above 107%.</p>
+<p>If the thesis is weakening — net retention declining toward 107% or annual recurring revenue growth decelerating toward 14% — the rule is to reduce to a half position within thirty days of the trigger signal, then monitor for two additional quarters before deciding whether to exit fully or rebuild. Weakening signals include net retention between 107% and 109% for one quarter, annual recurring revenue growth between 13% and 15% for one quarter, or platform-subscription penetration stalling below 72%.</p>
+<p>If the thesis is broken — net retention below 107% for two consecutive quarters, annual recurring revenue growth below 13% for two consecutive quarters, free cash flow margin below 20% for a full fiscal year, chief executive or chief financial officer open-market equity sales of $5 million or more, or confirmed displacement of named enterprise customers by Cisco/Splunk or Palo Alto/Chronosphere — the rule is to exit fully within one quarter of confirmed break. Averaging down on a broken thesis is explicitly excluded.</p>
+<p>If the price falls below the buy edge — free cash flow yield above 5.9%, implying a share price near $31 — the rule is to accumulate toward a full position size. At that level the implied return premium over the cost of capital is exceptional, and the management buyback at $37.71 provides evidence that the business itself regards prices near that level as deeply undervalued.</p>
+<p>If the price rises above the trim edge — free cash flow yield falling below 3.3%, implying a share price near $55 or above — the rule is to trim toward a half-to-two-thirds position. The exit rule does not apply unless the thesis is simultaneously breaking; a high-quality compounder with durable net retention and strong cash generation merits continued partial ownership through multiple expansions.</p>
+<!-- dehallucinate-audit-v2
+schema: v2
+timestamp: 2026-07-06T00:00:00Z
+verdict: CLEAN
+applied: 0
+hedged: 0
+advisory: 0
+-->
+</main>
+</body>
+</html>

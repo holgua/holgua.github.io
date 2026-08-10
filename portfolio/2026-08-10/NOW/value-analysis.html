@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ServiceNow, Inc. (NOW) — Value Analysis — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="index.html">← NOW report</a></p>
+<h1 id="servicenow-inc-now-value-analysis">ServiceNow, Inc. (NOW) — Value Analysis</h1>
+<p><em>Author: 11-Value-Analysis skill | Date: 2026-08-10 | Price anchor: $124.88 (Market Data, August 10, 2026)</em>
+<em>Inputs: NOW-Financial-Brief.md (primary), NOW-Financial-Analysis.md (fallback), NOW-Political-Exposure.md, NOW-Competition.md, NOW-Fair-Value-Bands.json, NOW-Scenario-Drivers.json</em></p>
+<blockquote>
+<p><strong>WARNINGS</strong>
+- SBC is 14.7% of revenue (FY2025). Owner earnings = FCF − SBC = $4,576M − $1,955M = $2,621M. All yield-based valuation anchors use owner earnings, not reported FCF. The apparent P/FCF of ~25× on reported FCF understates the true owner earnings multiple (~49×).
+- Net Debt per XBRL: [N/A] — LTD XBRL tag absent. Post-Armis gross debt ~$7.5B (Senior Notes $5.5B + commercial paper per Q2 2026 10-Q); cash $4.66B (Market Data §5) implies current net debt ~$3.8B. Scenario balance sheet projections from Fair-Value-Bands.json.
+- SANITY: Bull-case DCF-scenario-fcf IRR (+17.8%) is within [-75, +75] bounds. The Fair-Value-Bands sidecar bull estimate ($1,146 via peer-multiple central estimate) is outside bounds and overridden — sidecar uses <code>fair-value-bands</code> method; this Value Analysis uses <code>dcf-scenario-fcf</code> per the Q4 deterministic test. verify_holding.py may flag IRR divergence vs. sidecar.</p>
+</blockquote>
+<hr />
+<h2 id="section-1-value-investors-verdict">SECTION 1 — VALUE INVESTOR'S VERDICT</h2>
+<h3 id="11-circle-of-competence-check">1.1 Circle of Competence Check</h3>
+<p>ServiceNow sells enterprise software that automates workflows across IT, HR, security, and finance departments — the digital plumbing that connects employees to systems inside large organisations. The business model is simple: charge annual subscription fees, bill upfront, and make workflows so deeply embedded in enterprise operations that replacement is structurally painful. The platform is not building frontier AI models from scratch; it is overlaying AI assistance onto existing workflow-automation infrastructure that enterprises cannot easily leave. The primary competitive uncertainty — whether Microsoft and Salesforce will erode ServiceNow's expansion opportunities over the next decade — is a question of valuation upside, not whether the core incumbent position is at risk.</p>
+<p><strong>Verdict: Within circle.</strong> The business is a B2B SaaS incumbent with transparent economics (34.5% FCF margin, 98% renewal rate), a comprehensible competitive position, and a clear moat mechanism. Conviction is medium-high on the fundamental business quality; reduced modestly by the AI overlay's long-term competitive trajectory, where the range of outcomes is wider than for the core ITSM platform.</p>
+<h3 id="12-business-quality-scorecard">1.2 Business Quality Scorecard</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Score (1–5)</th>
+<th>Primary Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moat durability (can advantages be sustained for 10+ years?)</td>
+<td>4</td>
+<td>98% renewal rate sustained 7 consecutive years through Q2 2026; $29B RPO; &gt;2,000 patents; sole AI-ITSM Gartner MQ Leader. Microsoft Copilot (20M+ seats) is real but has not displaced installed base at renewal (Financial-Brief §3.3, Competition §7)</td>
+</tr>
+<tr>
+<td>Earnings power consistency (predictable, not episodic)</td>
+<td>4</td>
+<td>FCF grew $1.8B→$2.2B→$2.7B→$3.4B→$4.6B over FY2021–FY2025 with no year of decline; accruals ratio −0.142 (strongly positive earnings quality signal); FCF/Net Income 2.62× (Financial-Brief §1.1, §5.1–5.4)</td>
+</tr>
+<tr>
+<td>Pricing power (can the company raise prices without losing volume?)</td>
+<td>4</td>
+<td>ACV &gt;$5M customer cohort grew 23% YoY in Q2 2026; NowAssist AI surcharge monetises AI on captive base without renewal disruption; annual price increases absorbed by 98% renewing base (Competition §3, §7)</td>
+</tr>
+<tr>
+<td>Capital efficiency (high ROIC, low CapEx requirements)</td>
+<td>3</td>
+<td>ROIC 9.0% FY2025 (down from 13.1% FY2023 due to $9.8B acquisition goodwill); CapEx ~6.5% of revenue; FCF/Net Income 2.62×. ROIC depressed by goodwill absorption — core business efficiency intact (Financial-Brief §5.1–5.4)</td>
+</tr>
+<tr>
+<td>Balance sheet conservatism (low debt, financial flexibility)</td>
+<td>2</td>
+<td>Post-Armis gross debt ~$7.5B; Debt/Equity 67.54×; Current Ratio 0.70. Interest coverage 67.56× provides near-term safety but leverage is materially elevated. Financial flexibility constrained for further deal-making (Market Data §5, Financial-Brief §8.1)</td>
+</tr>
+<tr>
+<td>Management integrity (honest, shareholder-oriented)</td>
+<td>3</td>
+<td>Active DOJ investigation (Army CIO conflict-of-interest); COO departure July 2024 for policy violation; board risk score 9/10 (concern level). Offset by audit risk score 2/10 and accruals ratio −0.142 (no earnings manipulation signal). Risk disclosure forthright in Q2 2026 10-Q (Financial-Brief §4.1, Political-Exposure §1)</td>
+</tr>
+<tr>
+<td>Management rationality (intelligent capital allocation)</td>
+<td>3</td>
+<td>$11B in three acquisitions in 12 months is strategically coherent (TAM expansion, AI moat deepening) but introduces execution risk and has depressed ROIC. $5B buyback programme executed at prices materially above intrinsic value is not capital-rational (Financial-Brief §4.1)</td>
+</tr>
+<tr>
+<td>Margin of safety (price paid vs. conservative intrinsic value)</td>
+<td>1</td>
+<td>At $124.88, owner earnings yield is 2.03% — below the risk-free rate; 91% premium to base DCF intrinsic (~$65.46); bull-case DCF (~$121.61) barely clears current price with zero margin of safety (config.yaml, §5.3)</td>
+</tr>
+<tr>
+<td><strong>Overall Quality Score</strong></td>
+<td><strong>24/40</strong></td>
+<td>Exceptional business quality undermined entirely by valuation — a "wonderful company at a very expensive price"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-investment-stance">1.3 Investment Stance</h3>
+<p><strong>Hold / Watch</strong> — conviction: <strong>Medium</strong> (high business conviction, low valuation conviction).</p>
+<p>The single condition for reversal to <strong>Buy</strong>: price at or below $49/share (OEY ≥ 5.37%, representing a 25% margin of safety on the base-case DCF intrinsic of $65.46). The single condition for reversal to <strong>Avoid/Exit</strong>: renewal rate falls below 97% in any reported period — at current overvaluation a broken moat provides no price cushion, making exit the only rational response.</p>
+<hr />
+<h2 id="section-2-economic-moat">SECTION 2 — ECONOMIC MOAT</h2>
+<h3 id="21-moat-type-and-source">2.1 Moat Type and Source</h3>
+<p><strong>Switching costs — Present and strong.</strong> The 98% annual renewal rate sustained for seven consecutive years through Q2 2026 (confirmed in the Q2 2026 10-Q filed 2026-07-23) is the most direct and recent evidence of moat strength available in enterprise SaaS. ServiceNow's multi-instance, single-data-model architecture means each customer's IT, HR, security, and finance workflows are codified inside the Now Platform — replacement requires migrating years of accumulated workflow logic, &gt;2,000 integrations, and embedded employee habits. Microsoft Copilot has reached 20M+ paid seats in the same Fortune 500 enterprises, yet the renewal rate held at 98% through June 30, 2026. Switching costs are the dominant moat source (Financial-Analysis §2.4, Competition §3).</p>
+<p><strong>Intangible assets — Present and strong.</strong> ServiceNow holds &gt;2,000 issued patents and &gt;580 pending, nine consecutive years as Gartner ITSM Magic Quadrant Leader (now in Gartner's AI Applications in ITSM MQ where it is sole Leader, 2025), and &gt;85% Fortune 500 penetration. The "Now on Now" institutional dogfooding programme creates reputational credibility that functions as a durable intangible asset. NowAssist ACV crossing $1B in Q2 2026 — the first enterprise AI product in the industry to reach this milestone — reinforces intangible leadership (Financial-Analysis §2.3, Competition §7).</p>
+<p><strong>Network effects — Present but narrow.</strong> ServiceNow's &gt;4,000-partner ecosystem and Now Platform marketplace create indirect network effects: more integrations reduce the attractiveness of alternatives. These effects are real but secondary; Atlassian's developer community is stronger on this dimension. Network effects are a supporting, not primary, moat source (Competition §3).</p>
+<p><strong>Cost advantages — Absent as primary driver.</strong> At 34.5% FCF margin (FY2025), scale economics exist but cost leadership is not how ServiceNow defends pricing — switching costs and intangibles do the work. The Q2 2026 GAAP gross margin compression to 70.7% (from 79.1% a year prior) is driven by $219M/quarter in Armis purchased intangible amortisation — a non-cash accounting charge, not a structural cost disadvantage.</p>
+<p><strong>Efficient scale — Absent.</strong> The ITSM market is large and growing; ServiceNow is the dominant player but does not benefit from natural oligopoly mechanics.</p>
+<p><strong>Primary moat source:</strong> Switching costs, reinforced by intangible assets. Both are "Present and strong," satisfying the Wide moat classification per the §2 mapping rule.</p>
+<p><strong>Confidence:</strong> High on moat existence; medium on 10-year durability given ecosystem bundler risk (Microsoft, Salesforce) with distribution scale that ServiceNow cannot match.</p>
+<h3 id="22-moat-durability-the-ten-year-test">2.2 Moat Durability — The Ten-Year Test</h3>
+<p><strong>ROIC trend:</strong> 13.1% (FY2023) → 9.3% (FY2024) → 9.0% (FY2025). The decline reflects goodwill absorption from $9.8B in acquisitions (Armis, Moveworks, Veza), not core business deterioration. Underlying FCF generation and renewal rate are intact. If acquisitions earn above the cost of capital, ROIC recovers; goodwill impairment would accelerate the decline (Financial-Brief §5.1–5.4).</p>
+<p><strong>Specific structural threats from risk factors:</strong> Microsoft Copilot (20M+ paid seats, 90%+ Fortune 500 presence) is the most credible structural threat — embedding workflow automation inside existing M365 licences creates a free-at-the-margin alternative to extending ServiceNow's footprint into new workloads. Salesforce Agentforce IT Service (~200 signups after 6 months GA) is credible but nascent. Neither has demonstrated the ability to displace installed ServiceNow at renewal; both can reduce new logo wins in deeply entangled accounts (Competition §4, §6).</p>
+<p><strong>Verdict: Stable → Widening.</strong> Within the three-to-five-year horizon visible from current data, the moat is stable. AI Control Tower positioning and Armis/Veza security extensions could widen it by adding new switching-cost layers in security and identity governance. The ecosystem bundler threat from Microsoft is the primary reason the verdict is not a clean "Widening."</p>
+<h3 id="23-pricing-power-test">2.3 Pricing Power Test</h3>
+<p>Subscription gross margin held at 77–78% for FY2021–FY2025 before the Q2 2026 Armis amortisation distortion. The GAAP compression is a $219M/quarter non-cash charge, not a pricing or cost failure — non-GAAP subscription margins are stable. ACV &gt;$5M customer cohort grew 23% YoY in Q2 2026 with 98% renewal, confirming ServiceNow raises prices each year without material churn. The NowAssist AI surcharge demonstrates that management can monetise AI as an incremental pricing layer on captive relationships without disrupting the renewal dynamic (Financial-Brief §3.3, Competition §7).</p>
+<p><strong>Verdict: Strong pricing power.</strong> Evidence is direct and recent: sustained renewals at rising ACV, stable non-GAAP margins, new AI surcharge absorbed without pushback.</p>
+<hr />
+<h2 id="section-3-earnings-power-business-quality">SECTION 3 — EARNINGS POWER &amp; BUSINESS QUALITY</h2>
+<h3 id="31-owner-earnings">3.1 Owner Earnings</h3>
+<p><strong>Owner Earnings = FCF − SBC.</strong> SBC is 14.7% of FY2025 revenue ($1,955M) and is treated as a real economic cost. Maintenance CapEx proxy: total CapEx is used (conservative assumption — in a cloud SaaS business, true maintenance CapEx is a fraction of total CapEx, which primarily funds data centre capacity growth; using total CapEx understates owner earnings somewhat but errs on the side of conservatism). The Net Income + D&amp;A − CapEx calculation simplifies to Net Income when total CapEx is used as the D&amp;A proxy; owner earnings = Net Income − SBC under this simplification.</p>
+<table>
+<thead>
+<tr>
+<th>Fiscal Year</th>
+<th>Net Income ($M)</th>
+<th>+ D&amp;A ($M)</th>
+<th>− Total CapEx ($M)</th>
+<th>− SBC ($M)</th>
+<th><strong>Owner Earnings ($M)</strong></th>
+<th>OEY (vs. mkt cap at reporting date)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2025</td>
+<td>1,748</td>
+<td>CapEx proxy</td>
+<td>−868</td>
+<td>−1,955</td>
+<td><strong>2,621</strong></td>
+<td>2.03% (vs. $129.11B)</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>1,425</td>
+<td>CapEx proxy</td>
+<td>−852</td>
+<td>~1,637†</td>
+<td><strong>~1,636</strong></td>
+<td>est. lower (prev. price higher)</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td>1,731‡</td>
+<td>CapEx proxy</td>
+<td>−694</td>
+<td>~1,327†</td>
+<td><strong>~1,404‡</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><em>D&amp;A used as CapEx proxy (conservative; maintenance CapEx likely lower). †FY2023–2024 SBC estimated from trend; FY2025 SBC EDGAR-confirmed ($1,955M, Financial-Brief §4.1). ‡FY2023 includes $1.05B one-time deferred tax benefit; adjusted recurring Net Income ~$681M → adjusted owner earnings ~$354M — not representative.</em></p>
+<p><strong>Assessment:</strong> Owner earnings are growing strongly — from ~$1.6B (FY2024) to $2.6B (FY2025), approximately 60% growth year-over-year, reflecting both FCF margin expansion and SBC denominator growth from the rising revenue base. FY2025 is the most reliable anchor. At $124.88/share and 1,033.9M shares = $129.11B market cap, the owner earnings yield is <strong>2.03%</strong> — below the 10-year Treasury yield and far below a reasonable equity risk premium hurdle.</p>
+<h3 id="32-earnings-consistency-and-predictability">3.2 Earnings Consistency and Predictability</h3>
+<p><strong>5-year Net Income / FCF series:</strong>
+| FY | Net Income ($M) | FCF ($M) | Note |
+|---|---|---|---|
+| FY2021 | 230 | 1,799 | Early-stage GAAP profitability; FCF already exceptional |
+| FY2022 | 325 | 2,173 | Steady GAAP improvement; FCF growing consistently |
+| FY2023 | 1,731 | 2,704 | Includes $1.05B deferred tax benefit — not recurring |
+| FY2024 | 1,425 | 3,415 | Normalising; FCF trend intact |
+| FY2025 | 1,748 | 4,576 | FCF +34% YoY; SBC 14.7% of revenue |</p>
+<p>GAAP net income is volatile due to the one-time tax benefit (FY2023) and ongoing SBC treatment, but FCF is the more reliable consistency signal — five consecutive years of growth with no single year of decline.</p>
+<p><strong>Worst year:</strong> FY2021 — FCF of $1.8B at a 30.5% margin was already exceptional for a company at that revenue scale.</p>
+<p><strong>Accruals ratio:</strong> −0.142 (FY2025, Financial-Brief §1.1). Strongly negative = cash earnings substantially exceed accrual earnings. This is the highest-confidence signal of earnings quality — no earnings manipulation visible.</p>
+<p><strong>FCF / Net Income ratio:</strong> FY2025 = $4,576M / $1,748M = <strong>2.62×</strong>; FY2024 = $3,415M / $1,425M = <strong>2.40×</strong>. Both well above 1.0×, confirming high-quality cash-generative earnings.</p>
+<p><strong>Verdict: Highly predictable.</strong> The FCF stream is the most consistent element; GAAP is noisier but the cash generation is unambiguous. This predictability justifies high confidence in earnings power — which makes the valuation debate a cleaner question: what is the right price for this level of quality and predictability?</p>
+<h3 id="33-capital-requirements-the-wonderful-business-test">3.3 Capital Requirements — The "Wonderful Business" Test</h3>
+<p><strong>CapEx as % of revenue (5-year trend):</strong>
+- FY2021: $392M / $5,896M = 6.6%
+- FY2022: $550M / $7,245M = 7.6%
+- FY2023: $694M / $8,971M = 7.7%
+- FY2024: $852M / $10,984M = 7.8%
+- FY2025: $868M / $13,278M = <strong>6.5%</strong> (declining as revenue scales)</p>
+<p>CapEx intensity is modest and declining. ServiceNow's cloud infrastructure CapEx is primarily data centre capacity.</p>
+<p><strong>ROIC trend (3 years):</strong> 13.1% (FY2023) → 9.3% (FY2024) → 9.0% (FY2025). Decline driven by $9.8B goodwill absorption, not underlying deterioration. Legacy ROIC (ex-goodwill) would be substantially higher.</p>
+<p><strong>D&amp;A vs. CapEx:</strong> The FCF/Net Income ratio of 2.62× confirms significant non-cash charges (D&amp;A, SBC) flowing through GAAP P&amp;L. Post-Armis GAAP D&amp;A includes $219M/quarter in purchased intangible amortisation — a non-cash P&amp;L charge that improves FCF relative to GAAP income.</p>
+<p><strong>Classification: Capital-light compounder.</strong> The core platform requires 6–8% CapEx/revenue and generates 34.5% FCF margins. Acquisitions have temporarily elevated the capital base but do not change the asset-light character of the SaaS platform. If integration succeeds, incremental ROIC should recover toward the pre-Armis 13%+ level.</p>
+<hr />
+<h2 id="section-4-management-integrity-and-rationality">SECTION 4 — MANAGEMENT: INTEGRITY AND RATIONALITY</h2>
+<h3 id="41-integrity-assessment">4.1 Integrity Assessment</h3>
+<p><strong>Earnings tone and honesty:</strong> Management explicitly guides to non-GAAP metrics while GAAP results diverge from them. The Q2 2026 GAAP gross margin compression to 70.7% (−8pp year-over-year) is explained explicitly in the non-GAAP reconciliation ($219M amortisation charge, up from $25M prior year). The filing does not obscure the decline. The Raj Iyer / Army CIO situation is disclosed in Note 17 of the Q2 2026 10-Q with factual, non-minimising language confirming ongoing document production to the DOJ, DoD OIG, and Army Suspension and Debarment Office. Earnings tone analysis in the Financial Analysis suggests management is forthright about operational risks while being promotional about AI opportunity (Financial-Brief §4.1, Political-Exposure §1).</p>
+<p><strong>Restatements and accounting irregularities:</strong> Accruals ratio −0.142 is a strong signal against earnings manipulation. No restatements noted in source files. Audit risk score 2/10 (low, per Market Data §8).</p>
+<p><strong>Litigation:</strong> The DOJ investigation into the Army CIO hire is material — not because of current status (no charges, no debarment) but because it reveals that management allowed a conflict-of-interest hire that violated company policy. The COO's involvement (CJ Desai departed July 2024 for violating company policy in authorising the Iyer hire) indicates a senior-leadership cultural gap at that time. Current management (McDermott, Mastantuono) was not personally implicated (Political-Exposure §1).</p>
+<p><strong>Compensation:</strong> CEO McDermott earned $51.6M in FY2025 (251:1 CEO-to-median ratio). SBC of $1,955M annually is the most significant compensation-linked shareholder cost. Management has stated a target to reduce SBC below 10% of revenue by 2029 — a shareholder-positive commitment if met (Financial-Brief §4.1).</p>
+<p><strong>Rating: Integrity Medium.</strong> Most important evidence: the DOJ investigation reveals a historical governance failure at senior level, partially offset by the forthright disclosure posture — unchanged risk factor language in Q2 2026 10-Q suggests management is not minimising the investigation.</p>
+<h3 id="42-capital-allocation-rationality">4.2 Capital Allocation Rationality</h3>
+<p>Approximate FCF deployment, FY2023–FY2025 (3-year total FCF: ~$10.7B):</p>
+<table>
+<thead>
+<tr>
+<th>Use of FCF</th>
+<th>Amount (approx.)</th>
+<th>% of Total FCF</th>
+<th>Value-Creating?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Growth CapEx / R&amp;D</td>
+<td>~$2.9B CapEx (3 years); R&amp;D separately funded from operations</td>
+<td>~27%</td>
+<td>Yes — capacity enabling 20%+ revenue growth</td>
+</tr>
+<tr>
+<td>Acquisitions</td>
+<td>~$11B (Moveworks $2.85B + Veza ~$0.5B + Armis $6.4B; funded partly with $7.5B debt issued FY2025–FY2026)</td>
+<td>&gt;100% of 3-yr FCF (partially debt-funded)</td>
+<td>Uncertain — strategic fit strong; integration TBD</td>
+</tr>
+<tr>
+<td>Dividends</td>
+<td>$0</td>
+<td>0%</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Share buybacks</td>
+<td>$5B additional authorised Jan 2026; prior programmes also active</td>
+<td>est. 15–20% of 3-yr FCF</td>
+<td>Negative timing: repurchases at 91%+ premium to base DCF intrinsic destroy per-share value</td>
+</tr>
+<tr>
+<td>Debt service / refinancing</td>
+<td>Term Loan repaid May 2026 via $4B Senior Notes refi</td>
+<td>Neutral</td>
+<td>Improved maturity profile; leverage not reduced</td>
+</tr>
+<tr>
+<td>Cash accumulation</td>
+<td>Modest ($4.66B cash at Q2 2026)</td>
+<td>~5–10%</td>
+<td>Neutral</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Buybacks assessment:</strong> The January 2026 $5B programme at $124–194/share (52-week range) against a base DCF intrinsic of $65.46 is capital destruction for long-term shareholders. A value-rational management team would suspend buybacks until the stock approaches intrinsic value.</p>
+<p><strong>Acquisitions:</strong> Strategic logic is coherent — Moveworks removes the most credible AI-ITSM front-door startup competitor; Veza deepens identity governance; Armis triples security TAM and adds defense/intelligence customers aligned with the Trump administration's AI priorities. If ROIC on these acquisitions exceeds 9–10% over five years, they prove value-creating. The risk is overpayment: $9.8B goodwill on Armis alone.</p>
+<p><strong>Rating: Mixed.</strong> Operational reinvestment and acquisition strategy are strategically sound; buybacks at inflated prices are not. Management earns a "Good" on strategic M&amp;A discipline and a "Poor" on buyback timing, netting to Mixed.</p>
+<h3 id="43-skin-in-the-game-incentive-alignment">4.3 Skin in the Game &amp; Incentive Alignment</h3>
+<p><strong>Insider ownership:</strong> Insiders hold 0.17% of outstanding shares per Market Data §6 — a de minimis fraction for executives managing a $129B enterprise. CEO McDermott's personal equity accumulation has not been separately enumerated in the Brief; at ~0.1% personal ownership, his wealth trajectory is primarily a function of new equity grants rather than long-term compounding alongside shareholders.</p>
+<p><strong>Insider transaction trend:</strong> No open-market CEO/CFO sales observed. Teresa Briggs (Audit Chair) sold 1,595 shares at $108.70 — de minimis. No significant insider buying (Financial-Brief §4.1).</p>
+<p><strong>Incentive alignment:</strong> SBC at 14.7% of revenue ($1,955M annually) is the most significant misalignment signal. Shareholders bear this dilution cost while management benefits from the grant-date value. Management's stated goal to reduce SBC below 10% by 2029 would, if achieved, add approximately $620M annually to owner earnings — a meaningful alignment improvement.</p>
+<p><strong>Buffett test:</strong> Would this management team make the same decisions owning 100% of the business privately? Almost certainly not on buybacks (purchasing equity at 2× intrinsic value would be irrational for a private owner) and likely not on SBC at 14.7% of revenue. This is the clearest area of shareholder-management misalignment.</p>
+<hr />
+<h2 id="section-5-intrinsic-value-margin-of-safety">SECTION 5 — INTRINSIC VALUE &amp; MARGIN OF SAFETY</h2>
+<h3 id="51-owner-earnings-dcf-conservative">5.1 Owner Earnings DCF (Conservative)</h3>
+<p><strong>Inputs:</strong> FY2025 owner earnings = $2,621M. Stage 1 growth rate: 18% per year for years 1–10 (lower bound of base subscription revenue CAGR; conservative). Terminal growth: 3.0% (long-run nominal GDP). Base discount rate: 10%; sensitivity runs at 11% and 12%. Maintenance CapEx: total CapEx used as proxy (conservative; stated assumption). Net debt current: ~$3.8B (gross debt $7.5B from Q2 2026 10-Q per Political-Exposure §4, less $4.66B cash per Market Data §5).</p>
+<p><strong>DCF Table — Base Case (10% discount rate, 18% OE growth yr 1–10, 3.0% terminal growth):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Owner Earnings ($M)</th>
+<th>Discount Factor</th>
+<th>Present Value ($M)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3,093</td>
+<td>0.9091</td>
+<td>2,812</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3,650</td>
+<td>0.8264</td>
+<td>3,015</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4,307</td>
+<td>0.7513</td>
+<td>3,235</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5,082</td>
+<td>0.6830</td>
+<td>3,471</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5,997</td>
+<td>0.6209</td>
+<td>3,724</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7,076</td>
+<td>0.5645</td>
+<td>3,993</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8,350</td>
+<td>0.5132</td>
+<td>4,284</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9,853</td>
+<td>0.4665</td>
+<td>4,601</td>
+</tr>
+<tr>
+<td>9</td>
+<td>11,626</td>
+<td>0.4241</td>
+<td>4,929</td>
+</tr>
+<tr>
+<td>10</td>
+<td>13,719</td>
+<td>0.3855</td>
+<td>5,294</td>
+</tr>
+<tr>
+<td>Terminal Value</td>
+<td>13,719 × 1.03 / 0.07 = 201,871</td>
+<td>0.3855</td>
+<td>77,821</td>
+</tr>
+<tr>
+<td><strong>Sum of PVs</strong></td>
+<td></td>
+<td></td>
+<td><strong>117,179</strong></td>
+</tr>
+<tr>
+<td>Less: Current Net Debt (~$3,800M)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Equity Value</strong></td>
+<td></td>
+<td></td>
+<td><strong>~$113,379M</strong></td>
+</tr>
+<tr>
+<td><strong>Per Share (1,033.9M shares)</strong></td>
+<td></td>
+<td></td>
+<td><strong>~$109.65</strong></td>
+</tr>
+<tr>
+<td><strong>Current Price</strong></td>
+<td></td>
+<td></td>
+<td><strong>$124.88</strong></td>
+</tr>
+<tr>
+<td><strong>Implied Premium</strong></td>
+<td></td>
+<td></td>
+<td><strong>+14% (stock at premium)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sensitivity table:</strong>
+- 10% discount rate → ~$109.65/share (stock at 14% premium)
+- 11% discount rate → ~$82.50/share (stock at 51% premium)
+- 12% discount rate → ~$64.80/share (stock at 93% premium)</p>
+<p>Note: The config.yaml base DCF intrinsic of ~$65.46/share (which drives the OEY anchor of 3.87%) was derived using more conservative owner earnings growth assumptions than the 18% used above. The $65.46 figure is closest to the 12% sensitivity run — consistent with using a higher risk premium for a business with $7.5B in post-Armis leverage and an active DOJ investigation. The config.yaml anchors the margin-of-safety framework to this more conservative number, which is the appropriate standard for a value investor.</p>
+<h3 id="52-earnings-power-value-epv">5.2 Earnings Power Value (EPV)</h3>
+<p>EPV assumes zero growth — the floor value:</p>
+<ul>
+<li><strong>Normalised EBIT (3-year average, excl. one-time items):</strong> ($762M + $1,364M + $1,824M) / 3 = $1,317M</li>
+<li><strong>Effective tax rate:</strong> ~18% (normalised, from Financial-Brief §5.1 context)</li>
+<li><strong>NOPAT:</strong> $1,317M × (1 − 0.18) = $1,080M</li>
+<li><strong>Cost of capital:</strong> 10%</li>
+<li><strong>EPV = NOPAT / CoC:</strong> $1,080M / 0.10 = <strong>$10,800M</strong></li>
+<li><strong>Less net debt (~$3,800M):</strong> $10,800M − $3,800M = <strong>$7,000M</strong></li>
+<li><strong>EPV per share (1,033.9M shares):</strong> $7,000M / 1,033.9M = <strong>~$6.77/share</strong></li>
+</ul>
+<p>EPV is far below the current price of $124.88. At $124.88, investors are paying approximately 18× EPV — effectively paying for 18 years of the current normalised earnings base with zero growth. The current price is entirely a bet on growth; there is no value-floor support at current levels. EPV is useful as a reminder that the downside is not zero but is substantial if growth disappoints.</p>
+<h3 id="53-margin-of-safety-summary">5.3 Margin of Safety Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Conservative Value (per share)</th>
+<th>Current Price</th>
+<th>MoS / Premium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Owner Earnings DCF (10%, 18% OE growth)</td>
+<td>$109.65</td>
+<td>$124.88</td>
+<td>−12% (at premium)</td>
+</tr>
+<tr>
+<td>Owner Earnings DCF (12%, 18% OE growth)</td>
+<td>$64.80</td>
+<td>$124.88</td>
+<td>−93% (at premium)</td>
+</tr>
+<tr>
+<td>Earnings Power Value (zero growth)</td>
+<td>$6.77</td>
+<td>$124.88</td>
+<td>−1,744% (at enormous premium)</td>
+</tr>
+<tr>
+<td>Bear Case DCF-scenario-fcf (§9.1)</td>
+<td>$54.88</td>
+<td>$124.88</td>
+<td>−128% (at premium)</td>
+</tr>
+<tr>
+<td>Base Case DCF intrinsic (config.yaml anchor)</td>
+<td>$65.46</td>
+<td>$124.88</td>
+<td>−91% (at premium)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No margin of safety exists at $124.88.</strong> The current price exceeds every conservative valuation method by a substantial margin. Entry prices for a value investor:
+- <strong>25% MoS on base DCF intrinsic ($65.46):</strong> entry ≤ <strong>$49/share</strong> (config.yaml buy threshold OEY 5.37%)
+- <strong>40% MoS on base DCF intrinsic ($65.46):</strong> entry ≤ <strong>$39/share</strong>
+- <strong>25% MoS on the 10% DCF ($109.65):</strong> entry ≤ <strong>$82/share</strong> (if using optimistic 18% growth and 10% discount rate)</p>
+<hr />
+<h2 id="section-6-current-valuation-snapshot">SECTION 6 — CURRENT VALUATION SNAPSHOT</h2>
+<h3 id="61-multiples-vs-earnings-power">6.1 Multiples vs. Earnings Power</h3>
+<table>
+<thead>
+<tr>
+<th>Multiple</th>
+<th>Current (Market Data)</th>
+<th>What It Implies</th>
+<th>Buffett/Munger Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P/E (trailing TTM)</td>
+<td>78.05×</td>
+<td>Paying 78 years of trailing GAAP earnings</td>
+<td>GAAP distorted by SBC and Armis amortisation; not the cleanest earnings measure</td>
+</tr>
+<tr>
+<td>P/FCF (reported FCF)</td>
+<td>$129.1B / $5.15B TTM = 25.1×</td>
+<td>Paying 25 years of reported FCF</td>
+<td>Appears manageable — until SBC is deducted; owner FCF is $2.6B, not $5.1B</td>
+</tr>
+<tr>
+<td>Owner Earnings Yield</td>
+<td>$2,621M / $129,110M = <strong>2.03%</strong></td>
+<td>2.03 cents annually per dollar invested at current earnings power</td>
+<td>10-yr Treasury ~4.4–4.7%; owner earnings yield is deeply below risk-free. Munger: "You are paying to earn less than a government bond today, betting entirely on growth"</td>
+</tr>
+<tr>
+<td>EV/EBITDA</td>
+<td>45.87×</td>
+<td>Implies 25%+ EBITDA CAGR for many years to justify</td>
+<td>Elevated; market is embedding the bull case</td>
+</tr>
+<tr>
+<td>EV/Owner Earnings</td>
+<td>$132.9B / $2.621B = <strong>50.7×</strong></td>
+<td>50.7 years of current owner earnings</td>
+<td>Graham's test: 50× multiple implies 2% yield with no risk premium — appropriate only if growth materialises at bull-case rates</td>
+</tr>
+<tr>
+<td>P/Book</td>
+<td>10.32×</td>
+<td>—</td>
+<td>High P/B is acceptable only with sustained high ROE; ROE is 14.24% and declining — insufficient to support 10× book comfortably</td>
+</tr>
+<tr>
+<td>Forward P/E</td>
+<td>24.95×</td>
+<td>Market expects earnings near-tripling in 12–18 months</td>
+<td>Reflects normalisation of one-time items and SBC; still demands flawless execution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Owner Earnings Yield vs. 10-year Treasury:</strong> At 2.03%, the OEY is materially below a risk-free US Treasury yield (~4.4–4.7% as of August 2026 conditions). Investors are accepting a negative equity risk premium. This is only rational if the market's growth expectations — roughly 7.8% perpetual owner earnings growth (see §6.2) — materialise consistently.</p>
+<h3 id="62-what-growth-rate-is-the-market-pricing-in">6.2 What Growth Rate Is the Market Pricing In?</h3>
+<p>Using Gordon Growth Model: $129,110M = $2,621M × (1 + g) / (0.10 − g). Solving:
+→ $12,911M − $129,110M × g = $2,621M + $2,621M × g
+→ $10,290M = g × $131,731M
+→ <strong>Implied g ≈ 7.81%</strong></p>
+<p>The market is pricing in approximately 7.8% perpetual growth in owner earnings. In the context of a company with 14.7% SBC/revenue and $7.5B acquisition debt, 7.8% <em>perpetual</em> owner earnings growth from a compressed base of $2.6B requires sustained execution at roughly the base-case level across the full horizon without meaningful multiple compression.</p>
+<p><strong>Characterisation: Demanding.</strong> Slightly below the base subscription revenue CAGR (20%) but well above GDP, and perpetual — meaning the market embeds the assumption that this elevated growth rate never normalises. This is an optimistic but not impossible outcome for a business with the renewal rates ServiceNow demonstrates. A value investor wants the opposite: a price that assumes normalisation and rewards you if growth stays elevated.</p>
+<hr />
+<h2 id="section-7-risk-permanent-capital-loss">SECTION 7 — RISK: PERMANENT CAPITAL LOSS</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood (H/M/L)</th>
+<th>Potential for Permanent Impairment</th>
+<th>Buffett's Test: Would This Destroy the Moat?</th>
+<th>Early Warning Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moat erosion (Microsoft Copilot/Salesforce Agentforce IT displacing ITSM workloads)</td>
+<td>M</td>
+<td>M — reduces TAM expansion; installed base protected by switching costs</td>
+<td>No (installed base) / Yes (new logo pipeline slows, growth premium impaired)</td>
+<td>Renewal rate below 97% two consecutive quarters; cRPO growth below 18%</td>
+</tr>
+<tr>
+<td>Management integrity failure (DOJ investigation escalates to debarment or criminal charges)</td>
+<td>L-M</td>
+<td>H — debarment impairs ~11% of revenue and destroys federal moat thesis</td>
+<td>Yes — federal revenue is structural; losing it shrinks TAM permanently</td>
+<td>DOJ debarment notice or formal exclusion proceeding (8-K disclosure)</td>
+</tr>
+<tr>
+<td>Excessive leverage (Armis debt burden in a recession)</td>
+<td>L</td>
+<td>M — interest coverage 67.56× comfortable near-term; $7.5B gross debt limits flexibility</td>
+<td>No — operating moat intact; financial stress would constrain M&amp;A not operations</td>
+<td>Non-GAAP operating margin below 28% two consecutive quarters; any credit rating downgrade</td>
+</tr>
+<tr>
+<td>Regulatory / legal disruption (AI regulation, export controls, data sovereignty)</td>
+<td>L</td>
+<td>L-M — FedRAMP/EU data residency mitigations in place; software-only model minimises tariff exposure (Q2 2026 10-Q confirms no observed tariff impact)</td>
+<td>No</td>
+<td>New material risk factor language on AI regulation in 10-K/10-Q</td>
+</tr>
+<tr>
+<td>Capital allocation failure (Armis/Moveworks goodwill impairment)</td>
+<td>M</td>
+<td>M — $9.8B goodwill = 7.6% of market cap; impairment is non-cash but real economic loss was at acquisition</td>
+<td>Potentially — if Armis fails to integrate, strategic rationale impaired</td>
+<td>Goodwill impairment charge; Armis revenue below acquisition case 12 months out</td>
+</tr>
+<tr>
+<td>SBC dilution remains above 14% of revenue beyond FY2027</td>
+<td>L</td>
+<td>L — dilutive to per-share value but not permanent impairment; management states &lt;10% target by 2029</td>
+<td>No</td>
+<td>SBC/revenue above 14% in FY2026 full-year; no progress toward 10% target</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permanent Loss Assessment:</strong> The realistic worst-case scenario (without fraud or black-swan events) is the DOJ investigation resulting in federal contract debarment combined with Microsoft Copilot accelerating displacement of ServiceNow in M365-entangled accounts. Revenue growth slows to 8–10% CAGR; FCF margin stagnates at 26%; the market re-rates the stock at trough EV/EBITDA multiples. Bear case DCF intrinsic: ~$54.88/share (§9.1). From a $124.88 entry, the realistic permanent loss is approximately <strong>$54.88 − $124.88 = −$70/share (-56%)</strong> if the bear case materialises and management cannot reverse the trajectory. The business is not existentially threatened, but the severity of the impairment is significant for anyone buying today at a 91% premium to base intrinsic.</p>
+<hr />
+<h2 id="section-7b-political-regulatory-risk-value-investors-lens">SECTION 7B — POLITICAL &amp; REGULATORY RISK (VALUE INVESTOR'S LENS)</h2>
+<p><em>Source: NOW-Political-Exposure.md (present — full analysis). Administration Relationship Score: 4/5 (Political-Exposure §5).</em></p>
+<h3 id="7b1-political-moat-or-political-rent">7B.1 Political Moat or Political Rent?</h3>
+<p><strong>Classification: Political rent with structural moat characteristics.</strong> ServiceNow's government competitive position is not a pure utility franchise (multiple ITSM vendors can and do serve the government). The advantage is partly structural — FedRAMP High/IL5 certifications that any competitor must also obtain, plus accumulated ITIL workflow depth requiring years to replicate — and partly relationship-dependent. The GSA OneGov deal (September 2025), offering up to 70% list-price discounts to all eligible federal agencies and explicitly endorsed by GSA Acting Administrator Rigas, is genuinely structural in its mechanism (a government-wide procurement vehicle). However, its framing — "aligned with Trump's procurement consolidation executive order," CEO quotes on "shared ambition to transform government" — suggests that the degree of preferential positioning is partly administration-specific and may not be renewed on the same terms under a future administration with different priorities (Political-Exposure §5).</p>
+<p><strong>Primary evidence:</strong> Administration Relationship Score 4/5 reflects "unusually direct and publicly visible alignment with the Trump administration's AI modernization agenda." The GSA OneGov deal and Armis defense/intelligence expansion deepen the structural elements; the CEO's publicly documented "active, ongoing discussions with senior officials" adds a relationship layer that is real but fragile across administrations (Political-Exposure §5).</p>
+<h3 id="7b2-administration-sensitivity-permanent-capital-loss-test">7B.2 Administration Sensitivity — Permanent Capital Loss Test</h3>
+<p>Under a change in US administration, would ServiceNow's earning power be materially impaired? <strong>No for the core business; low-probability yes for the federal expansion premium.</strong> Installed federal ITSM contracts (Army $432M, Air Force $510M, HHS $250M BPA) survive administration changes — government IT systems are not ripped out at elections. However, the GSA OneGov deal's renewal in 2028 and the expansion of Armis into intelligence community IL5 contracts are more administration-sensitive. A future administration deprioritising the AI-modernisation agenda or favouring different vendors could slow federal revenue growth.</p>
+<p><strong>Primary tail risk:</strong> Federal contract debarment from the active DOJ investigation. Two years have elapsed since the July 2024 departures; no formal proceedings have been disclosed; the Q2 2026 10-Q risk language is unchanged. Continued contract wins (Air Force $510M September 2025; GSA OneGov September 2025) during the investigation suggest the practical risk remains contained but is non-zero (Political-Exposure §5, §7).</p>
+<p><strong>Verdict: Political risk is a cyclical factor but not an existential threat.</strong> The most important evidence: ServiceNow has continued winning federal contracts throughout the active DOJ investigation, demonstrating that product value sustains federal wins even under political pressure. The investigation's unresolved status is the primary political monitoring priority.</p>
+<h3 id="7b3-mungers-incentive-test-who-benefits-from-government-proximity">7B.3 Munger's Incentive Test — Who Benefits from Government Proximity?</h3>
+<p>PAC disbursements ($294K in 2024) and lobbying spend ($1.6M in 2024 = 0.010% of revenue) are modest relative to peers and proportionate to the regulatory environment. No outside spending or dark-money contributions. CEO's direct administration dialogue is a product-alignment strategy (AI Control Tower as federal AI governance platform), not traditional influence-buying. Armis's defense/intelligence angle is commercially motivated TAM expansion — incidentally well-timed with administration priorities but not dependent on them for product value.</p>
+<p><strong>Rating: Shareholders benefit.</strong> Federal revenue expansion is the primary beneficiary of ServiceNow's political positioning; lobbying costs are proportionate; no evidence of management extracting personal political benefit at shareholder expense (Political-Exposure §3, §7).</p>
+<hr />
+<h2 id="section-8-key-talking-points">SECTION 8 — KEY TALKING POINTS</h2>
+<ul>
+<li>
+<p><strong>The moat is real, durable, and empirically provable — the 98% renewal rate sustained for seven consecutive years through Q2 2026 is the single most important fact about this business.</strong> No competitor, including Microsoft with 20M+ Copilot seats in the same Fortune 500 accounts, has demonstrated the ability to displace installed ServiceNow at contract renewal. Switching costs in enterprise ITSM are architectural, not habitual — workflows codified in the Now Platform are not easily migrated. The moat strengthens the case for permanent ownership; the price destroys it.</p>
+</li>
+<li>
+<p><strong>The valuation is the only problem, and it is a large one.</strong> At $124.88, the owner earnings yield is 2.03% — below the risk-free rate — and the stock trades at a 91% premium to the base-case DCF intrinsic of $65.46. Even the bull-case DCF (~$121.61) barely clears current price with zero margin of safety. A value investor's first priority is not losing money; this price makes a permanent loss the expected outcome in the bear case.</p>
+</li>
+<li>
+<p><strong>SBC at 14.7% of revenue is the silent valuation killer.</strong> Reported FCF looks deceptively reasonable at 25× P/FCF; owner FCF is $2.6B, implying a true P/OE of ~49×. The $1.95B annual SBC is a real economic cost — it is what it costs to retain the talent that sustains the moat. Until SBC drops to the management-targeted &lt;10% of revenue, owner earnings will remain structurally below reported FCF.</p>
+</li>
+<li>
+<p><strong>The Armis acquisition is a large strategic bet that has introduced material execution risk and near-term balance sheet pressure.</strong> The $7.75B deal is strategically coherent — it triples the security TAM and adds defense/intelligence clients aligned with current administration priorities. But it also introduced $7.5B gross debt, $219M/quarter in GAAP amortisation drag (compressing Q2 2026 GAAP gross margin to 70.7%), and $9.8B in goodwill. The bear case includes an Armis integration failure; the current stock price embeds the bull case on integration.</p>
+</li>
+<li>
+<p><strong>The DOJ investigation is a known unknown with a non-trivial tail.</strong> Two years elapsed with no debarment proceedings; federal contracts keep coming. But the investigation remains active with ongoing document production, and the primary federal reseller (Carahsoft, ~11% of revenue) faces its own separate DOJ investigation. A debarment from federal contracting would permanently impair the thesis and remove $15–20B in market value.</p>
+</li>
+<li>
+<p><strong>AI monetisation is the most important confirming signal in the next 12 months.</strong> NowAssist ACV crossed $1B — the first enterprise AI product in the industry to reach this milestone — with agentic AI deployments growing ninefold in nine months. If NowAssist reaches $2.5B ACV by Q4 2026 without disrupting base platform renewal rates, the base case becomes more robust. If AI upsell stalls, the base case degrades toward bear.</p>
+</li>
+<li>
+<p><strong>The probability-weighted 3-year IRR is negative at current prices.</strong> Bear (20%) × −24.0% + Base (55%) × −2.5% + Bull (25%) × +17.8% ≈ <strong>−1.7% annualised</strong>. The entry price matters more for this business than for most — precisely because the moat quality is so high that the stock rarely trades at genuinely attractive prices. The value investor's conclusion is wait.</p>
+</li>
+</ul>
+<hr />
+<h2 id="section-9-bear-base-bull-cases-value-investors-lens">SECTION 9 — BEAR / BASE / BULL CASES (VALUE INVESTOR'S LENS)</h2>
+<h3 id="90-method-declaration">9.0 Method Declaration</h3>
+<blockquote>
+<p><strong>§9.0 — Method:</strong> <code>dcf-scenario-fcf</code> — ServiceNow is a single-segment, non-conglomerate company with no material segment divergence (Q1: not bond/ETF ✓; Q2: single segment ✓; Q3: not conglomerate ✓; Q4: <code>fcf-times-multiple</code> disqualified because <code>peer_bands.p_fcf.high = 224×</code> and <code>peer_bands.ev_ebitda.high = 185×</code> both exceed the 100× peer-high guardrail per condition (e) — deterministic fallback is <code>dcf-scenario-fcf</code>). §1.3 and §5 confirm that intrinsic value on a DCF basis is well below current price; Gordon Growth terminal-value model applied to year-3 FCF per scenario. WACC from task brief per config.yaml framework: bear 11%, base 10%, bull 9%. Terminal growth: bear 2.5%, base 3.0%, bull 3.5%.</p>
+<p><strong>Scenario inputs consumed:</strong> <code>scenarios_input.bear.fcf_usd_bn = 4.8</code>, <code>scenarios_input.base.fcf_usd_bn = 7.8</code>, <code>scenarios_input.bull.fcf_usd_bn = 10.4</code>. <code>balance_sheet_proj.base.shares_outstanding_mn = 985</code>.</p>
+<p><strong>Current price (Market Data):</strong> $124.88 (USD); USD-denominated listing, no FX conversion.</p>
+</blockquote>
+<h4 id="91-bear-case-ai-commoditisation-and-federal-contract-fallout">9.1 Bear Case — AI Commoditisation and Federal Contract Fallout</h4>
+<p><em>Probability: 20%</em></p>
+<p>The bear case assumes Microsoft Copilot and Salesforce Agentforce IT collectively demonstrate measurable displacement of ServiceNow in enterprise ITSM workflows over the next three years, stalling new logo growth and pressuring renewal rates toward the 96–97% range. Concurrently, the DOJ investigation results in a material adverse development — not necessarily debarment, but enough to slow the federal sales pipeline and weaken the GSA OneGov expansion trajectory. Revenue growth decelerates to approximately a 12% CAGR, Armis integration drags on gross margin recovery beyond the 12–18 month management target, and FCF margin stagnates at 26%, producing FY2028E FCF of $4.8B. The stock re-rates on EBITDA-based peer multiples at trough levels, and the federal revenue premium is impaired.</p>
+<p><strong>Fair-value estimate:</strong> <code>terminal_value = 4.8 × (1.025) / (0.11 − 0.025) = 4.92 / 0.085 = $57.88B</code>; <code>equity_value = 57.88 − 3.0 = $54.88B</code>; <code>per_share = $54,880M / 1,000M shares = $54.88</code>. (FCF: <code>scenarios_input.bear.fcf_usd_bn = 4.8</code>; net debt: <code>balance_sheet_proj.bear.net_debt_usd_bn = 3.0</code>; shares: <code>balance_sheet_proj.bear.shares_outstanding_mn = 1,000M</code>.)</p>
+<p><strong>3-Year Bear Return (annualised):</strong> ($54.88 / $124.88)^(1/3) − 1 = (0.4395)^0.333 − 1 ≈ <strong>−24.0%</strong> annualised.</p>
+<p><strong>Margin of Safety at Bear Case:</strong> The current price of $124.88 is 127% above the bear-case fair value of $54.88 — no margin of safety exists at the current entry; the bear case represents a severe permanent capital loss.</p>
+<p><strong>Confirming Signal (12-month):</strong> Subscription revenue growth falls below 18% YoY in two consecutive quarters, or the DOJ issues a formal show-cause notice, suspension notice, or debarment proceeding disclosed in an 8-K.</p>
+<h4 id="92-base-case-durable-compounder-at-an-expensive-price">9.2 Base Case — Durable Compounder at an Expensive Price</h4>
+<p><em>Probability: 55%</em></p>
+<p>In the base case, ServiceNow sustains 18–20% subscription revenue CAGR through NowAssist AI upsell and continued four-pillar cross-sell across IT, HR, security, and finance. Non-GAAP operating margin expands toward 32–33%; Armis integrates on the 12–18 month timeline guided by management, and GAAP gross margin recovers from Q2 2026 lows as amortisation drag is diluted by revenue growth. FCF margin recovers toward 34%, producing FY2028E FCF of $7.8B. The DOJ matter resolves without material adverse outcome. The renewal rate holds at 97–98%, and NowAssist ACV reaches $2.5B+ by Q4 2026, confirming AI monetisation is incremental rather than cannibalistic to the core platform.</p>
+<p><strong>Fair-value estimate:</strong> <code>terminal_value = 7.8 × (1.03) / (0.10 − 0.03) = 8.034 / 0.07 = $114.77B</code>; <code>equity_value = 114.77 − 0.8 = $113.97B</code>; <code>per_share = $113,970M / 985M shares = $115.70</code>. (FCF: <code>scenarios_input.base.fcf_usd_bn = 7.8</code>; net debt: <code>balance_sheet_proj.base.net_debt_usd_bn = 0.8</code>; shares: <code>balance_sheet_proj.base.shares_outstanding_mn = 985M</code>.)</p>
+<p><strong>3-Year Base Return (annualised):</strong> ($115.70 / $124.88)^(1/3) − 1 = (0.9265)^0.333 − 1 ≈ <strong>−2.5%</strong> annualised.</p>
+<p><strong>Confirming Signal (12-month):</strong> NowAssist ACV reaches $2.5B by Q4 2026 without renewal rate disruption; GAAP gross margin recovers toward 75%+ in Q4 2026 as Armis amortisation is absorbed by subscription revenue growth.</p>
+<h4 id="93-bull-case-ai-control-tower-captures-enterprise-ai-governance">9.3 Bull Case — AI Control Tower Captures Enterprise AI Governance</h4>
+<p><em>Probability: 25%</em></p>
+<p>The bull case assumes ServiceNow's AI Control Tower becomes the de facto enterprise AI governance platform — the system of record for managing agentic AI workflows across the enterprise, across all vendors. Subscription revenue grows at 25%+ CAGR as AI ACV accelerates beyond $2.5B, the Armis/Veza/Moveworks stack generates material cross-sell revenue in security and identity governance, and SBC drops ahead of guidance to approximately 10% of revenue by FY2028. FCF margin expands to 38%, producing FY2028E FCF of $10.4B. Management's $30B+ 2030 revenue target comes into view by FY2028. The market re-rates ServiceNow as the AI infrastructure incumbent at premium multiples.</p>
+<p><strong>Fair-value estimate:</strong> <code>terminal_value = 10.4 × (1.035) / (0.09 − 0.035) = 10.764 / 0.055 = $195.71B</code>; <code>equity_value = 195.71 + 1.5 (net cash) = $197.21B</code>; <code>per_share = $197,210M / 965M shares = $204.36</code>. (FCF: <code>scenarios_input.bull.fcf_usd_bn = 10.4</code>; net debt: <code>balance_sheet_proj.bull.net_debt_usd_bn = −1.5</code>; shares: <code>balance_sheet_proj.bull.shares_outstanding_mn = 965M</code>.)</p>
+<p><strong>3-Year Bull Return (annualised):</strong> ($204.36 / $124.88)^(1/3) − 1 = (1.6364)^0.333 − 1 ≈ <strong>+17.8%</strong> annualised.</p>
+<p><strong>Confirming Signal (12-month):</strong> Subscription revenue YoY growth re-accelerates above 22% in H2 2026; AI ACV exceeds $2.5B by Q4 2026 with measurable expansion in NowAssist take-rates across existing accounts; SBC as % of revenue shows a declining trend toward 12% in FY2026.</p>
+<h4 id="94-probability-weighted-return">9.4 Probability-Weighted Return</h4>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Probability</th>
+<th>Annualised 3yr Return</th>
+<th>Weighted Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>20%</td>
+<td>−24.0%</td>
+<td>−4.80%</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>55%</td>
+<td>−2.5%</td>
+<td>−1.38%</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>25%</td>
+<td>+17.8%</td>
+<td>+4.45%</td>
+</tr>
+<tr>
+<td><strong>Probability-Weighted Expected Return</strong></td>
+<td><strong>100%</strong></td>
+<td></td>
+<td><strong>≈ −1.7% annualised</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The probability-weighted expected 3-year return is approximately <strong>−1.7% annualised</strong> — materially below the value investor's 10% hurdle rate and below the risk-free rate. The expected return does not clear the hurdle. The business quality is exceptional; the entry price is not. Hold existing positions; no new capital at $124.88.</p>
+<hr />
+<h2 id="section-10-monitoring-framework">SECTION 10 — MONITORING FRAMEWORK</h2>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Source</th>
+<th>Current Value (from inputs)</th>
+<th>"Moat Intact" Signal</th>
+<th>"Moat at Risk" Signal</th>
+<th>Review Cadence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net Renewal Rate</td>
+<td>10-Q MD&amp;A (non-GAAP operating metric)</td>
+<td>98% (Q2 2026, seven-year streak confirmed per 10-Q filed 2026-07-23)</td>
+<td>≥ 97% maintained in all reported periods</td>
+<td>&lt; 97% in any reported period — the single most critical moat signal; config.yaml exit condition 2 uses 97% as the threshold (not 96%); a decline below 97% indicates contract value erosion and triggers exit protocol</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>Subscription Revenue Growth (YoY)</td>
+<td>10-Q Revenue disclosure</td>
+<td>20.9% FY2025; 24% TTM (Market Data)</td>
+<td>≥ 18% for two consecutive quarters</td>
+<td>&lt; 15% for two consecutive quarters (config.yaml exit condition 1 — confirms AI commoditisation thesis winning)</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>Current RPO Growth (cRPO, YoY)</td>
+<td>10-Q Note on remaining performance obligations</td>
+<td>RPO $29.0B (+21% YoY); cRPO $13.4B (+21% YoY) as of Q2 2026</td>
+<td>≥ 18% — forward pipeline strengthening</td>
+<td>&lt; 18% for two consecutive quarters (config.yaml exit condition 3 — contracted backlog no longer supports growth thesis)</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>NowAssist ACV (AI monetisation)</td>
+<td>Quarterly earnings disclosure (non-GAAP)</td>
+<td>$1B ACV (Q2 2026); ninefold agentic AI growth in 9 months</td>
+<td>On track to $2.5B by Q4 2026 without renewal disruption</td>
+<td>Fails to reach $2.5B by Q4 2026 (config.yaml exit condition 4 — AI layer stalling, primary incremental revenue driver absent)</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>GAAP Gross Margin</td>
+<td>10-Q/10-K (XBRL: GrossProfit / Revenue)</td>
+<td>70.7% Q2 2026 (compressed from 79.1% YoY by $219M/quarter Armis amortisation)</td>
+<td>Recovery toward ≥ 75% sustained by Q4 2026 (amortisation absorbed by revenue growth)</td>
+<td>&lt; 70% for two consecutive quarters (config.yaml exit condition 5 — integration cost overrun; operational leverage thesis impaired)</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>DOJ Investigation Status</td>
+<td>10-K Note 18 / 10-Q Note 17; any 8-K filings</td>
+<td>Ongoing — cooperating; document production continuing; no debarment proceedings; unchanged risk language Q2 2026 10-Q</td>
+<td>Investigation resolved without material adverse finding; federal contract pipeline unaffected</td>
+<td>Debarment notice, formal exclusion proceeding, or material adverse development disclosed via 8-K (config.yaml exit condition 6 — directly impairs ~11% of revenue and federal moat)</td>
+<td>8-K immediate / Quarterly check</td>
+</tr>
+<tr>
+<td>Owner Earnings Yield (OEY)</td>
+<td>Calculated: owner FCF / market cap</td>
+<td>2.03% at $124.88 (FY2025 owner FCF $2,621M / $129.11B market cap)</td>
+<td>OEY ≥ 5.37% (price ≤ ~$49/share) — buy zone; 25% MoS on base DCF intrinsic</td>
+<td>OEY ≤ 2.37% (price ≥ ~$138/share) — trim signal deepening; valuation further above intrinsic</td>
+<td>Quarterly (post-earnings price update)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="section-11-ranking-inputs">SECTION 11 — RANKING INPUTS</h2>
+<pre><code class="language-yaml">ranking_inputs:
+  moat_tier: Wide
+  moat_tier_basis: &quot;Switching costs (98% renewal rate sustained 7 consecutive years through Q2 2026, multi-instance architecture with customer-dedicated database layer) and intangible assets (&gt;2,000 patents, sole AI-ITSM Gartner MQ Leader 2025, 9-year consecutive ITSM MQ Leader) are both Present and strong; Ten-Year Test verdict is Stable with potential Widening from AI Control Tower and Armis/Veza security extensions.&quot;
+  forward_irr_bear_pct: -24.0
+  forward_irr_base_pct: -2.5
+  forward_irr_bull_pct: 17.8
+  forward_irr_bear_probability_pct: 20
+  forward_irr_base_probability_pct: 55
+  forward_irr_bull_probability_pct: 25
+  forward_irr_horizon_years: 3
+</code></pre>
+</main>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>US Treasury 0-1y: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-07-11 overview</a></p>
+<h1 id="us-treasury-0-1y-the-bet-still-works">US Treasury 0-1y: The Bet Still Works</h1>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-07-11 · Latest filing 2026-07-11.</em></p>
+<p>The bet is working. The T-bill basket is doing exactly what it was set up to do — earning short-term US government interest while all three vehicle-integrity conditions remain clean. <a href="#the-share-price">The share price</a> sits in the upper half of the hold band, meaningfully above fair value at $46; at today's $59.21, the basket yield has compressed well below the 4.8% fair-value anchor. The figure to watch is the yield's remaining buffer above the 3.5% trim signal — today that buffer is 23 basis points (hundredths of a percentage point), the equivalent of roughly one further Federal Reserve rate cut priced in. Nothing has broken; one move could change that.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $40. Trim at $63. Exit at $74.</p>
+<p>At $40, the yield is 5.5%. At today's $59, the yield is 3.7%.</p>
+<pre><code>buy                                          current  trim                  exit
+$40                                          $59      $63                    $74
+├────────────────────────────────────────────┼────────┼────────────────────────┤
+</code></pre>
+<p>Over the next five years, if <a href="#the-share-price">the share price</a> moves to the fair-value central estimate, returns work out to bear +3.5%, base +3.7%, bull +5.5% a year.</p>
+<pre><code>bear     base                                                               bull
++3.5%    +3.7%                                                             +5.5%
+├────────┼─────────────────────────────────────────────────────────────────────┤
+</code></pre>
+<h2 id="recent-development">Recent Development</h2>
+<p>The T-bill basket's yield to maturity — the annualised return implied by holding each bill to redemption — stands at 3.730% as of the most recent Vanguard data snapshot (effective 2026-05-31). That is 107 basis points below the 4.8% fair-value anchor embedded in the thesis, a compression consistent with the bear-case scenario described when the position was established: an aggressive Federal Reserve cutting cycle pushing short rates lower. The yield remains within the configured band, clearing the 3.5% trim signal by only 23 basis points.</p>
+<p>The primary thing to watch is that gap. One further Fed cut — at the standard 25-basis-point increment — would push the yield to approximately 3.5% and trigger the trim signal. No action follows today, but the margin is thin enough that the next quarterly refresh matters.</p>
+<p>A secondary note: the automated pipeline was unable to retrieve the fund's annual fee and total assets from the market-data feed this cycle. Both figures rely on carry-forward values from prior manual verification — the annual fee at 0.07% and total assets at approximately $2.4 billion. Neither carry-forward value approaches an exit threshold, but re-verifying directly against the Vanguard factsheet at the next quarterly review is required to restore the automated guardrail. For more on <a href="#the-case-for-the-bet">the case for the bet</a> and the current valuation reading, see those sections below.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>US Treasury 0-1y scores 1.84, ranking 12 of 17 active holdings by this measure — it sits in the lower half of the portfolio, as expected for a near-cash position whose job is stability rather than return.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= (3.73% − 2.20% − 0.00%)
+  &nbsp;&nbsp;= +1.53%
+  &nbsp;&nbsp;= <strong>1.84</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> This fund holds US Treasury bills — obligations of the US federal government, which places it in the strongest of three credit tiers. That tier lifts the score by 20 per cent.</p>
+<p><strong>Expected return: 3.73%.</strong> The expected return is the base-case forward return of 3.73% a year over five years. Index funds and bonds use their contractual or index-implied return directly — no scenario blend is applied.</p>
+<p><strong>Hurdle rate: 0.00%.</strong> The hurdle rate is zero. This fund is held as the USD cash-equivalent baseline; comparing its own T-bill yield against the Bund Linker real yield would systematically understate its value relative to alternatives. The hurdle is set to zero for this reason — no further premium is required.</p>
+<p>A score of 1.84 puts US Treasury 0-1y 12th of 17 active holdings — solidly in the lower half, which is precisely the right place for a position whose purpose is optionality, not outperformance.</p>
+<h2 id="about-the-fund">About the Fund</h2>
+<p>The fund holds a rolling basket of US Treasury bills maturing in zero to one year — the shortest-duration segment of the US government debt market. When a bill reaches maturity, the principal is reinvested into the next tranche of short-term paper. Income is accumulated internally rather than paid out as a distribution, so the fund's net asset value drifts upward slowly as interest accrues. The fund is structured as an exchange-traded fund domiciled in Ireland (UCITS), listed on the London Stock Exchange in US dollars.</p>
+<p>Because all holdings are US sovereign obligations, there is no diversification across credit counterparties in the conventional sense — concentration risk does not apply. The relevant credit consideration is US government creditworthiness itself. The fund's weighted-average maturity as of the last snapshot was 0.375 years, approximately four and a half months, which implies near-zero sensitivity to changes in longer-term interest rates. Annual cost: 0.07% (Ongoing Charges Figure per Vanguard published data; the market-data feed does not return this figure for UCITS-listed funds).</p>
+<p><strong>Tax profile.</strong> The fund is registered as a reporting fund for Austrian tax purposes (OeKB Meldefonds). As an accumulating share class, income is taxed annually based on a deemed distribution figure, not on actual cash received; no US partnership K-1 is issued.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>This position is held as a USD cash-equivalent — a place to park capital at the prevailing short-term US interest rate while waiting for equity opportunities to become attractively priced. The vehicle-integrity conditions below define when the fund remains a suitable instrument for that purpose. None has been breached:</p>
+<ol>
+<li><strong>Annual fund fee (Ongoing Charges Figure) below 0.10% — sustained breach for two consecutive quarterly reviews triggers exit.</strong>  At 0.07%, comparable ultra-short-duration US Treasury funds are available at lower cost if the fee advantage is lost, making continued tenure unjustifiable on cost grounds.</li>
+</ol>
+<p><em>Latest reading:</em> 0.07% per Vanguard published data (carry-forward from prior verification; the market-data feed returned no value this cycle — status: needs review). Exit condition (1) is inactive; 3 basis points of headroom to the threshold.</p>
+<ol>
+<li><strong>Total fund assets above USD 1 billion — breach signals liquidity or redemption risk.</strong> A fund whose value proposition is instant, daily-liquid access to the T-bill curve ceases to serve that purpose if assets fall to a level where large redemptions could impair liquidity.</li>
+</ol>
+<p><em>Latest reading:</em> approximately $2.395 billion per carry-forward (Trackinsight source; the market-data feed does not return this figure for UCITS-listed funds — status: unknown). Exit condition (2) is inactive; approximately 2.4 times the floor.</p>
+<ol>
+<li><strong>US sovereign credit above AA− by at least two of the three major rating agencies (Fitch, Moody's, and S&amp;P).</strong> A downgrade below this threshold by two agencies would signal a structural shift in the creditworthiness of the underlying obligor and require a fundamental reassessment of the cash-equivalent premise.</li>
+</ol>
+<p><em>Latest reading:</em> no automated signal of a downgrade or credit watch action in the pipeline (driver status: silent). Exit condition (3) is inactive. Monitoring is conducted externally via Vanguard regulatory filings and rating-agency announcements.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>This fund does not have a price-to-earnings ratio — US Treasury bills do not generate earnings in the conventional sense. The relevant metric is the basket's yield to maturity: the annualised return implied by holding each bill through to its repayment date.</p>
+<p>Today's basket yield is 3.730%. The thesis defines a fair-value yield of 4.8% (the mid-2026 Fed funds projection embedded at the time the position was established), a buy signal when the yield reaches 5.5% (the bull-case anchor where T-bill rates are unusually attractive), and a trim signal when the yield compresses to 3.5% (the bear-case anchor where USD carry versus EUR alternatives has materially weakened). Current price: $59.21.</p>
+<p>At 3.730%, the basket sits in the upper half of the hold band — inside the configured range but on the compressed side, 107 basis points below the fair-value anchor and only 23 basis points above the trim threshold. In price terms, the share price is meaningfully above fair value ($46.01). The two readings are consistent: a compressed yield implies a higher share price than the fair-value yield would justify.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p><a href="#the-rules">The rules</a> translate the yield-band thresholds into price levels and operationalise them as standing orders. Each price is derived from the yield threshold at the current snapshot; because the accumulating share class drifts upward as coupons reinvest, these prices must be recomputed at each quarterly refresh.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at $46, the fair-value anchor. The crossing means the basket yield has returned to the 4.8% base-case level; no action follows, but a fresh confirmation of the vehicle-integrity conditions is warranted.
+- A second alert at $40, the cheap-edge. The crossing arms the add order below; before adding, the latest re-validation should confirm exit conditions (1), (2), and (3) are still clear.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing add order at $40. Per <a href="#the-rules">the rules</a>, adding at the margin follows when the share price closes at or below this line and the vehicle-integrity conditions are still clear — at that level the basket yield has reached the bull-case 5.5%, marking T-bill rates as unusually attractive relative to EUR alternatives.
+- A standing trim order at $63. Per <a href="#the-rules">the rules</a>, trimming at the margin follows when the share price closes at or above this line — at that level the basket yield has compressed to the bear-case 3.5%, where USD carry versus EUR cash is materially weaker.
+- A standing exit order at $74. Per <a href="#the-rules">the rules</a>, closing the full position follows when the share price closes at or above this line.</p>
+<p>Vehicle-integrity breaches (exit conditions 1, 2, or 3) and the named exit-condition trigger are independent additional paths to exit — the price order is not the only mechanism that can close this position.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The proximity concern is the yield buffer. At 3.730%, the basket yield is only 23 basis points above the 3.5% trim signal. One standard Federal Reserve rate cut of 25 basis points — if fully transmitted to the short end — would push the yield through the trim threshold and activate the trim order. Nothing has been triggered yet, but the margin is thin.</p>
+<p>The second wobble is data quality. The automated market-data feed returned no value for either the annual fee or total fund assets this cycle. Both vehicle-integrity guardrails are therefore operating on carry-forward values rather than fresh automated readings: the fee at 0.07% (Vanguard published data, prior verification) and assets at approximately $2.4 billion (Trackinsight, prior manual verification). Neither carry-forward value is near a threshold, but the absence of fresh readings means a breach would not be detected automatically until the next quarterly review.</p>
+<p>The mandate-and-credit driver has no automated signal at all — it relies entirely on external monitoring of Vanguard regulatory filings and rating-agency announcements. That is a structural limitation of this position in the pipeline, not a new development.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Yield compression through the trim band and beyond.</strong> If the Federal Reserve cuts rates aggressively — the bear-case scenario — the basket yield could compress through 3.5% and eventually through 3.0%, activating first the trim order and then the exit order in succession. The fund would still return the prevailing rate; the case for holding it weakens relative to alternatives.</li>
+<li><strong>Fund fee increase above threshold.</strong> If Vanguard raises the Ongoing Charges Figure to 0.10% or above for two consecutive quarterly reviews, the cost advantage over comparable ultra-short-duration US Treasury funds disappears and exit condition (1) fires regardless of yield level.</li>
+<li><strong>Asset base decline below the liquidity floor.</strong> If total fund assets fall below USD 1 billion — whether through market outflows, NAV decline, or fund restructuring — exit condition (2) fires. Daily liquidity could be impaired at smaller asset levels.</li>
+<li><strong>US sovereign credit downgrade.</strong> If two of the three major agencies downgrade US sovereign credit below AA−, exit condition (3) fires and the cash-equivalent premise requires reassessment from first principles.</li>
+</ul>
+<p>(For this fund, exit fires when the share price reaches the exit edge, when a vehicle-integrity condition breaches, or when the named exit-condition trigger fires — any of three paths.)</p>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<ul>
+<li>Price edges are translated from yield thresholds at the current snapshot. The accumulating share class drifts upward as coupons reinvest, so these prices must be recomputed at each quarterly refresh.</li>
+<li>The annual fee (Ongoing Charges Figure) and total fund assets are not returned by the market-data feed for UCITS-listed funds. Both figures rely on carry-forward values from prior manual verification and must be re-verified against the Vanguard factsheet at each quarterly review. The automated vehicle-integrity guardrail for these two fields is inactive until the pipeline can retrieve them directly.</li>
+<li>The scenario return chart above uses the thesis band anchors (bear 3.5%, base 3.7%, bull 5.5%) as forward-return proxies, not independently modelled returns. The bear and base figures are below 5%, which makes one-decimal precision meaningful but also illustrates how narrow the return envelope is relative to equity holdings. The probability-weighted expected return was not computed this cycle — bear or base-case scenario returns are not available in the weighted form required for the footer line.</li>
+<li>The Austrian deemed-distribution yield (Ausschüttungsgleiche Erträge) has not been populated from the OeKB register. A proxy figure is in use for tax-drag estimation; populate from OeKB for an exact computation.</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>If all three vehicle-integrity conditions remain clear and the yield is within the hold band: hold. Vehicle integrity intact — annual fee within budget, assets above floor, mandate unchanged.</p>
+<p>If any driver weakens without crossing an exit threshold: do not add. Re-assess at the next quarterly review, monitoring fee and asset trends before increasing allocation.</p>
+<p>If one or more numbered exit conditions fire — annual fee above 0.10% for two consecutive quarters, assets below USD 1 billion, or US sovereign credit downgraded below AA− by two agencies: exit. Reinvest in EUR cash or short nominal German government bonds.</p>
+<p>If the basket yield reaches the bull-case 5.5% level (share price at or below $40): add at the margin if cash is available. T-bill rates would be unusually attractive relative to EUR alternatives at that level; vehicle-integrity conditions still gate any large addition.</p>
+<p>If the basket yield compresses to the bear-case 3.5% level (share price at or above $63): trim at the margin. USD carry versus EUR cash is materially weaker at that yield; vehicle-integrity conditions still gate exit.</p>
+<p>If the share price reaches or exceeds the exit level ($74): exit per the applicable exit condition (1), (2), or (3).</p>
+<!-- dehallucinate-audit-v2
+schema: v2
+timestamp: 2026-07-11T12:00:00Z
+verdict: CLEAN
+applied: 0
+hedged: 0
+advisory: 0
+-->
+</main>
+</body>
+</html>

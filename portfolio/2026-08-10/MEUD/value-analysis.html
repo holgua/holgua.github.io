@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEUD — ETF Value Analysis (Buffett/Munger Lens) — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="index.html">← MEUD report</a></p>
+<h1 id="meud-etf-value-analysis-buffettmunger-lens">MEUD — ETF Value Analysis (Buffett/Munger Lens)</h1>
+<p><em>Snapshot: 2026-07-30T09:42:59.078614+00:00</em>. Source: Market-Data.json sidecar.</p>
+<blockquote>
+<p>A look-through analysis of the basket as a set of businesses, not as a vehicle. The vehicle side lives in <code>MEUD-Vehicle-Profile.md</code>. The verb decision lives in <code>14-Thesis-Validate</code>.</p>
+</blockquote>
+<hr />
+<h2 id="1-look-through-valuation">1. Look-Through Valuation</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Long-run S&amp;P 500 reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basket Trailing P/E</td>
+<td>18.70</td>
+<td>~16</td>
+</tr>
+<tr>
+<td>Basket Earnings Yield</td>
+<td>5.35%</td>
+<td>~6.25%</td>
+</tr>
+<tr>
+<td>Distribution Yield</td>
+<td>0.0%</td>
+<td>~1.8%</td>
+</tr>
+</tbody>
+</table>
+<p>At 5.35%, the basket earnings yield sits 15 basis points below the 5.50% fair-value anchor — marginally on the expensive side of fair value on a long-run Stoxx 600 P/E basis. The STOXX Europe 600 has historically traded in a P/E range of roughly 12–22×; the current 18.70× sits in the upper-middle of that range, comfortably inside the mid-band and meaningfully below the trim trigger of P/E 22×. European equities have re-rated since the 2022–2023 trough but have not reached the stretched levels that would warrant trimming. The basket earnings yield is modestly below the US long-run reference (6.25%), consistent with a mild re-rating of European equities toward US multiples, though the structural discount remains intact.</p>
+<blockquote>
+<p><strong>CAPE deferred</strong> — requires aggregated constituent earnings history not exposed by yfinance for ETFs. Defer to V2.</p>
+</blockquote>
+<hr />
+<h2 id="2-equity-risk-premium">2. Equity Risk Premium</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basket Earnings Yield</td>
+<td>5.35%</td>
+</tr>
+<tr>
+<td>Risk-free rate (^TNX)</td>
+<td>4.62%</td>
+</tr>
+<tr>
+<td><strong>Equity Risk Premium</strong></td>
+<td><strong>+0.72%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Judgment: MIXED</strong> — ERP of +0.72% is positive, meaning the basket still compensates equity-holders over the 10-year Treasury, but by only 72 basis points rather than the 200 basis points the thesis requires for a CONFIRM (config <code>confirm_min_pct: 2.0</code>). The thesis exit condition (1) — two consecutive quarters of negative ERP — is not triggered; the risk premium has been positive across all recorded snapshots. However, the margin is thin: with the US 10-year at 4.62%, a further ~72-basis-point compression in the earnings yield (or equivalent rise in Treasury yields) would eliminate the premium entirely. The basket is priced for a risk-free rate meaningfully lower than today's — investors pricing in rate normalisation are implicitly betting on ERP expansion from here.</p>
+<hr />
+<h2 id="3-look-through-quality-top-10-deduped">3. Look-Through Quality (top-10 deduped)</h2>
+<p><em>MEUD is cap-weighted; the top-10 constituents are stable but subject to float-driven rebalancing.</em></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Median ROE (top-10)</strong></td>
+<td><strong>18.79%</strong></td>
+</tr>
+<tr>
+<td>Weighted-Mean ROE (top-10)</td>
+<td>29.01%</td>
+</tr>
+<tr>
+<td>Custom European confirm floor</td>
+<td>15.00%</td>
+</tr>
+<tr>
+<td>Custom European challenges ceiling</td>
+<td>12.00%</td>
+</tr>
+</tbody>
+</table>
+<p>The weighted mean (29.01%) diverges substantially from the median (18.79%) — a gap of ~10 pp — driven primarily by ASML's ROE of 53.94% at the largest weight (5.03%). This is a genuine quality signal (ASML's elevated ROE reflects its monopolistic lithography franchise, not financial leverage-inflated book) rather than a distortion, but the median remains the load-bearing read for the basket as a whole.</p>
+<p><strong>Top-10 constituent ROE table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Weight</th>
+<th>ROE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ASML.AS</td>
+<td>ASML Holding NV</td>
+<td>5.03%</td>
+<td>0.5394</td>
+</tr>
+<tr>
+<td>HSBA.L</td>
+<td>HSBC Holdings PLC</td>
+<td>2.15%</td>
+<td>0.1161</td>
+</tr>
+<tr>
+<td>NOVN.SW</td>
+<td>Novartis AG Registered Shares</td>
+<td>1.97%</td>
+<td>0.3035</td>
+</tr>
+<tr>
+<td>AZN.L</td>
+<td>AstraZeneca PLC</td>
+<td>1.91%</td>
+<td>0.2197</td>
+</tr>
+<tr>
+<td>ROP.SW</td>
+<td>Roche Holding AG Ordinary Shares new</td>
+<td>1.90%</td>
+<td>0.3811</td>
+</tr>
+<tr>
+<td>NESN.SW</td>
+<td>Nestle SA</td>
+<td>1.74%</td>
+<td>0.2624</td>
+</tr>
+<tr>
+<td>SIE.DE</td>
+<td>Siemens AG</td>
+<td>1.55%</td>
+<td>0.1259</td>
+</tr>
+<tr>
+<td>SHEL.L</td>
+<td>Shell PLC</td>
+<td>1.44%</td>
+<td>0.1070</td>
+</tr>
+<tr>
+<td>SAN.MC</td>
+<td>Banco Santander SA</td>
+<td>1.33%</td>
+<td>0.1311</td>
+</tr>
+<tr>
+<td>SU.PA</td>
+<td>Schneider Electric SE</td>
+<td>1.24%</td>
+<td>0.1561</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read</strong>: Median ROE of 18.79% clears the custom European CONFIRM floor of 15.00% by 3.79 pp, confirming that the visible quality tier of the basket — pharma (Novartis, AstraZeneca, Roche), industrials (Siemens, Schneider), semiconductors (ASML), and staples (Nestle) — is compounding capital well above cost. The two banking names (HSBC, Santander) and Shell pull the floor lower structurally, reflecting regulated capital requirements and commodity cyclicality rather than poor-quality businesses. Overall, the basket's underlying earning power is healthy and supports the hold thesis.</p>
+<hr />
+<h2 id="4-margin-of-safety">4. Margin of Safety</h2>
+<table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>Yield</th>
+<th>P/E equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buy band edge</td>
+<td>7.00%</td>
+<td>14.3×</td>
+</tr>
+<tr>
+<td>Fair value</td>
+<td>5.50%</td>
+<td>18.2×</td>
+</tr>
+<tr>
+<td>Trim band edge</td>
+<td>4.50%</td>
+<td>22.2×</td>
+</tr>
+<tr>
+<td><strong>Current</strong></td>
+<td><strong>5.35%</strong></td>
+<td><strong>18.70</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Position: WITHIN BAND</strong></p>
+<p><strong>Margin vs. fair-value yield: −0.15%</strong> absolute (basket earnings yield is 15 bps below the 5.50% fair-value anchor, or roughly −2.7% relative). The basket is marginally expensive relative to its long-run anchor but well clear of the 4.50% trim trigger — 85 bps of room remain before trimming is warranted. The buy band edge at 7.00% requires a basket earnings yield 1.65 pp above current levels (roughly a decline to P/E 14.3×), implying a meaningful price decline from here to enter cheapness territory.</p>
+<hr />
+<h2 id="5-owner-perspective-buffett-frame">5. Owner Perspective (Buffett Frame)</h2>
+<p><em>"Would Berkshire deploy cash into this basket today?"</em></p>
+<p>Owning MEUD is economically equivalent to buying a diversified collection of European large-cap businesses at roughly 18.70× trailing earnings, with those businesses collectively generating a median ROE of 18.79% on book. The earnings yield of 5.35% exceeds the 10-year Treasury (4.62%) by only 72 basis points — adequate compensation for equity risk in isolation, but well short of the 200-bp threshold Buffett historically cites as the floor for favouring equities over bonds decisively. By Buffett/Munger standards, this basket earns a hold rather than a buy: the underlying businesses are high-quality compounders (median ROE 18.79% comfortably above cost of equity), the price is fair-to-marginally-stretched, and the margin of safety is thin. Berkshire would likely not deploy material incremental cash here given the thin ERP, but would hold an existing position for its diversification value and quality characteristics.</p>
+<hr />
+<h2 id="6-bear-base-bull-on-5-year-forward-return">6. Bear / Base / Bull on 5-Year Forward Return</h2>
+<p>§6 scenarios follow <code>Pipeline-Conventions.md §13</code> — bear requires both operating trajectory below trend AND exit multiple below fair value simultaneously. The bear EPS is sector-weighted (data-driven, not a flat offset), and the bear terminal P/E is config-overridden at 13×.</p>
+<p><em>Source: <code>compute_etf_forward_returns.py MEUD</code>. Basket cyclicality score: 1.11 (sector-weighted). Top-10 concentration: 20.27%. Distribution yield: 0.0% (accumulating UCITS — dividends reinvested within fund).</em></p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>EPS growth</th>
+<th>Terminal P/E</th>
+<th>Multiple change (annualised)</th>
+<th>Dividend yield</th>
+<th><strong>Forward return</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>−11.1%</td>
+<td>13.0</td>
+<td>derived from 18.70</td>
+<td>0.0%</td>
+<td><strong>−18.13%</strong></td>
+</tr>
+<tr>
+<td>Base</td>
+<td>+5.0%</td>
+<td>18.0</td>
+<td>derived from 18.70</td>
+<td>0.0%</td>
+<td><strong>+4.24%</strong></td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>+7.0%</td>
+<td>22.0</td>
+<td>derived from 18.70</td>
+<td>0.0%</td>
+<td><strong>+10.30%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The bear EPS growth of −11.1% is data-driven from the basket's sector composition: Financial Services (24.66%), Industrials (19.95%), Energy (4.85%), Consumer Cyclical (6.86%), and Basic Materials (4.77%) are cyclical sectors that compress earnings harder in downturns — the basket cyclicality score of 1.11 reflects this European-market tilt toward economically sensitive sectors. The bear terminal P/E of 13× is config-overridden (thesis exit condition targeting GFC-trough territory) rather than ERP-anchored; this is more conservative than the formula default. The base case holds the terminal multiple near current levels (18.0× vs. 18.70× trailing) while compounding EPS at the 5% long-run European nominal growth rate, yielding a modest +4.24% annualised return. The bull case allows re-rating to 22× while applying 7% EPS growth, adding multiple expansion for a +10.30% annualised return.</p>
+<p>The spread between bear and bull (28 pp) is structurally wide, driven by the European market's historically volatile P/E range. Even the base case produces only modest real returns at current valuations, consistent with the "within band, marginally below fair value" positioning. The accumulating structure (0% distribution yield) means all return is captured in NAV — no income floor in the bear scenario.</p>
+<p><em>Note: <code>config.forward_return.terminal_pe_bear=13.0</code> overrides the ERP-anchored default.</em></p>
+<hr />
+<h2 id="7-data-gaps">7. Data Gaps</h2>
+<p>No data gaps — <code>missing_fields</code> is empty in the Market-Data sidecar.</p>
+<p><em>Contextual gaps noted in config (not blocking):</em>
+- AUM: null from yfinance; Amundi MEUD complex AUM ~€13–15B per Amundi product page — far above the €1B floor.
+- Tracking difference/error: null — STOXX factsheet parser not configured (deferred).
+- CAPE: no user-input configured — deferred.
+- EUR risk-free benchmark (DE10YT=RR): yfinance acceptance unverified; ^TNX (USD 10Y) used as default.
+- <code>base_growth_rate</code>: 0.05 sourced from config (not defaulted).</p>
+<hr />
+<h2 id="8-ranking-inputs-machine-readable-closing-block">8. Ranking Inputs (machine-readable closing block)</h2>
+<p>Consumed deterministically by <code>src/portfolio/extract_ranking_inputs.py</code> for the portfolio-level conviction ranking. The numeric fields are restated from §6 (already computed); <code>quality_tier</code> is bucketed by the Python helper from the sidecar's structural data.</p>
+<p><strong>Quality tier basis:</strong> <code>stockPosition</code> = 99.76% (≥80% equity). Active sectors ≥5%: Financial Services (24.66%), Industrials (19.95%), Healthcare (12.85%), Technology (9.99%), Consumer Defensive (7.69%), Consumer Cyclical (6.86%) = <strong>6 active sectors</strong> (≥6). Top-10 sum = 20.27% (≤50%). Rule fires: <strong>High</strong>.</p>
+<pre><code class="language-yaml">ranking_inputs:
+  quality_tier: High
+  quality_tier_basis: &quot;stockPosition=99.76% (≥80%); active_sectors_5pct=6 (≥6); top10_sum_pct=20.27% (≤50%) → High&quot;
+  forward_irr_bear_pct: -18.13
+  forward_irr_base_pct: 4.24
+  forward_irr_bull_pct: 10.30
+</code></pre>
+<hr />
+<h2 id="end-of-value-analysis-etf">End of Value-Analysis-ETF</h2>
+</main>
+</body>
+</html>

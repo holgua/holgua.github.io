@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elastic: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-07-12 overview</a></p>
+<h1 id="elastic-the-bet-still-works">Elastic: The Bet Still Works</h1>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-07-12 · Latest filing 2026-06-08.</em></p>
+<p>The bet is working. All seven directly testable exit conditions are intact as of the annual report covering the year ended April 30, 2026: customer retention is strong, cloud revenue is growing well above the exit floor, cash generation is expanding, and the path to accounting profitability remains on track. At $59, shares sit in the lower half of the hold band, deeply below fair value — the market is pricing in roughly 6% long-run cash-flow growth, compared with the 15% base case embedded in the thesis. The one condition to watch is <a href="#whats-wobbling">What's Wobbling</a>: the market's implied growth estimate is 9 percentage points below the base case, a gap wide enough to warrant keeping any new capital deployment staged rather than concentrated.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $56. Trim at $140.</p>
+<p>At $56, the long-run total return is about 21% a year. At today's $59, about 20% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy/current                                                                     trim
+$56/$59                                                                         $140
+├──┼───────────────────────────────────────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if shares move to the fair-value central estimate, returns work out to bear −14%, base +12%, bull +36% a year.</p>
+<pre><code>bear                                  expected/base                            bull
+-14%                                  +10.1%/+12%                             +36%
+├─────────────────────────────────────┼─┼──────────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 55% base, 20% bull): about +10.1% a year over the next three years.</p>
+<p>The gap between the two figures is a timing question, not a contradiction. The long-run figure is a steady-state estimate over many years; the three-year figure assumes shares move from today's price of 59 to the fair-value central estimate of 101 within that window, so near-term drift can dominate. A separate scenario analysis in the value analysis derives a different central estimate of 208; see <a href="#gaps-in-the-picture">Gaps in the Picture</a> for why the two numbers diverge.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The most important number from Elastic's annual report for the year ended April 30, 2026 is the customer retention metric: the net expansion rate held at 112%, unchanged from the prior year, and the count of customers spending at least $100,000 a year rose from 1,510 to 1,720, an increase of 14%. In plain terms, not only are existing customers spending more each year, but the tier of customers whose spending is large enough to signal deep enterprise adoption is growing quickly. That much is settled.</p>
+<p>Alongside retention, cash generation strengthened further. Cash from operations less minimal equipment purchases delivered $321.8 million for the full fiscal year — an 18.5% cash margin on $1.74 billion of revenue. The operating loss on an accounting basis narrowed from $54.9 million to $33.5 million, a 39% reduction, keeping the target of accounting profitability by FY2028 plausible on the current trajectory. Cloud-hosted revenue (where customers pay as they use rather than on fixed subscriptions) grew 22% year-on-year to $837 million, reaching 48% of total revenue; within that, the annual cloud subscription tier grew 28%.</p>
+<p>One data point that the annual report cannot supply is the competitive standing against Datadog, Elastic's primary rival in the observability segment. Exit condition seven requires comparing Elastic's year-on-year revenue growth against Datadog's for two consecutive fiscal years; that comparison requires Datadog's own filings and is not extractable from Elastic's report alone. On the evidence that is in the report, every driver that can be tested is confirming the thesis. For the full valuation picture, see <a href="#the-share-price">the Share Price</a>.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Elastic scores 3.73, ranking 9 of 17 active holdings by this measure — it sits exactly at the portfolio median.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
+  &nbsp;&nbsp;= 1.00 × (10.07% − 1.46% − 4.88%)
+  &nbsp;&nbsp;= 1.00 × +3.73%
+  &nbsp;&nbsp;= <strong>3.73</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.00.</strong> This holding sits in the middle moat tier; the weight is one, so it leaves the score unchanged.</p>
+<p><strong>Expected return: 10.07%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (25% likelihood) — annualised return −14.2%.</strong> The bear case assumes AWS OpenSearch closes the functionality gap with Elasticsearch, enterprise AI spending routes to hyperscaler-native tools, and revenue growth stalls toward 5%, leaving the business generating cash but with its growth engine seized.</p>
+<p><strong>Base (55% likelihood) — annualised return +11.6%.</strong> The base case has revenue growing 17–19% in line with guidance and the contracted revenue pipeline, non-GAAP margins expanding toward 22–24% by FY2028, and the AI workload tailwind providing incremental consumption growth on top of the existing subscription base.</p>
+<p><strong>Bull (20% likelihood) — annualised return +36.2%.</strong> The bull case has Elastic becoming the standard context layer for enterprise AI workflows — agentic search, retrieval-augmented generation, multimodal retrieval — with the customer retention rate expanding above 115% and cloud revenue growth re-accelerating above 30%.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.25 × (−14.2) + 0.55 × 11.6 + 0.20 × 36.2 = +10.07%.</p>
+<p><strong>Hurdle rate: 4.88%.</strong> The hurdle rate is 4.88% — the 0.88% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of 3.73 puts Elastic precisely at the portfolio median — not a standout, but not a drag either.</p>
+<h2 id="about-elastic">About Elastic</h2>
+<p>Elastic N.V. is a software company whose core product, Elasticsearch, is the most widely installed open-source search and data retrieval engine in the world. At its simplest, Elasticsearch is the technology behind the search box — when an enterprise types a query into an internal application and gets relevant results back in milliseconds, Elasticsearch is often what is running underneath. Over time, the same engine has been extended into two adjacent areas: observability (monitoring what is happening inside a company's technology stack by ingesting and searching through machine-generated logs and metrics) and security (scanning and correlating those same logs to detect threats and unusual activity).</p>
+<p>Elastic makes its money by offering a commercial version of this software — either as an on-premises licence or, increasingly, as a cloud-hosted service — to enterprises that want the product with professional support, reliability guarantees, and security certifications. The cloud-hosted version, called Elastic Cloud, represented 48% of total revenue in the year ended April 2026 and is growing faster than the overall business. The company is incorporated in the Netherlands but headquartered in California, lists on the New York Stock Exchange, and reports in US dollars.</p>
+<p>What makes the business interesting as an investment is the combination of asset-lightness and customer stickiness. The product costs almost nothing to distribute — capital expenditure runs at roughly 0.3% of revenue — while customers who have woven Elasticsearch into their data infrastructure find it expensive and disruptive to replace. That combination of low capital requirements and high retention is what drove cash from operations from near-zero in FY2022 to $322 million in FY2026.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The central proposition is that Elasticsearch is embedded deeply enough in enterprise data infrastructure to create durable switching costs, and that the transition to cloud-hosted delivery compounds revenue per customer as usage deepens. The bet requires four things to keep holding:</p>
+<ol>
+<li><strong>Customer retention rate (net expansion rate) above 105% for every consecutive pair of quarters.</strong> The net expansion rate measures how much more existing customers spend each year compared with what they spent in the prior year — a rate above 100% means the installed base is growing without requiring new customer acquisitions to sustain revenue. The exit condition fires if the rate falls below 105% for two consecutive quarterly readings.</li>
+</ol>
+<p><em>Latest reading:</em> 112% as of April 30, 2026. Unchanged from the prior year. Customer count at the $100,000+ annual spend tier grew from 1,510 to 1,720.</p>
+<ol>
+<li><strong>Elastic Cloud year-on-year revenue growth above 10% for any full fiscal year.</strong> Cloud growth below 10% on an annual basis would confirm that AWS OpenSearch — the free fork of Elasticsearch maintained by Amazon — is successfully drawing customers away from Elastic's hosted offering.</li>
+</ol>
+<p><em>Latest reading:</em> 22% year-on-year growth to $837 million (full fiscal year ended April 2026). The premium annual cloud tier grew 28%. Both figures are well above the 10% exit floor and also above the 15% level that would signal the bear scenario beginning to emerge.</p>
+<ol>
+<li><strong>Cash flow margin (cash from operations less capital expenditure, divided by revenue) above 14% on a full-fiscal-year view.</strong> A margin below 14% would indicate that the operating leverage story — the thesis that costs grow slower than revenue — has reversed.</li>
+</ol>
+<p><em>Latest reading:</em> 18.5% for FY2026 ($321.8 million cash on $1.74 billion revenue). This is 450 basis points (that is, 4.5 percentage points) above the exit floor. The company guided to a further improvement — approximately 21.5% — for FY2027.</p>
+<ol>
+<li><strong>Stock-based compensation (share awards to employees) below 18% of revenue for any two consecutive fiscal years.</strong> High equity compensation is a real cost to shareholders, even though it does not consume cash directly: it dilutes ownership. The exit condition requires two consecutive years above 18% to trigger — a single elevated year is not enough.</li>
+</ol>
+<p><em>Latest reading:</em> 17.2% of revenue in FY2026, down from 17.4% in FY2025. The figure has been below 18% in both years, so the consecutive-year count has not started.</p>
+<ol>
+<li><strong>No acquisition exceeding $500 million at a revenue multiple above 8 times without a disclosed plan for cash-flow accretion within three years.</strong> This is the capital discipline condition: large, expensive acquisitions that cannot be justified on cash-flow terms are an exit signal.</li>
+</ol>
+<p><em>Latest reading:</em> Two small acquisitions in FY2026 — an AI embeddings company for $43 million and a data-management tool for $11 million. Both are well within the $500 million threshold.</p>
+<ol>
+<li><strong>Accounting operating margin turns positive by FY2028.</strong> The operating loss on a reported basis has been narrowing: from −10.2% in FY2024 to −3.7% in FY2025 to −1.9% in FY2026. The trajectory must reach zero by the fiscal year ending April 2028.</li>
+</ol>
+<p><em>Latest reading:</em> Operating loss of $33.5 million (−1.9% margin) in FY2026, a 39% improvement from the prior year's $54.9 million loss. The trend is consistent with reaching positive operating income by FY2028.</p>
+<ol>
+<li><strong>Datadog's year-on-year revenue growth does not exceed Elastic's by more than 15 percentage points for two consecutive fiscal years, AND Elastic retains its position as a Leader in the Gartner Observability ranking.</strong> Datadog is Elastic's primary rival in the observability segment; a persistent, wide growth-rate gap combined with a demotion in independent analyst rankings would signal structural competitive deterioration.</li>
+</ol>
+<p><em>Latest reading:</em> The annual report does not contain Datadog's revenue growth rate or an updated Gartner ranking. This driver requires external sources — Datadog's own quarterly filings and Gartner's annual publication — and is therefore rated as not yet assessable from the filing just reviewed.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At $59.46, the share price implies an annual cash yield of roughly 5.2% on the business's FY2026 cash generation — calculated as $321.8 million divided by the current market value of approximately $6.2 billion. That yield sits in the lower half of the hold band: above the 3.04% level that represents fair value on this methodology, and below the 5.5% level that would represent the buy edge. The shares are deeply below the fair-value implied price of $101.</p>
+<p>That gap between today's price ($59) and the fair-value anchor ($101) is substantial — approximately 41%. The market is not blind: it is implying that the business's cash flows will grow at roughly 6% a year over the long run, versus the 15% rate embedded in the thesis. That disagreement is the source of the potential return, and it is addressed directly in <a href="#why-the-market-sees-it-differently">Why the Market Sees It Differently</a>.</p>
+<h2 id="why-the-market-sees-it-differently">Why the Market Sees It Differently</h2>
+<p>The market is pricing Elastic at $59, which implies the business will generate long-run cash flow growing at roughly 6% a year — compared with the 15% embedded in the base case. The gap is 9 percentage points, and the discount from the fair-value estimate is 41%. That is not a rounding difference; it is a genuine divergence in what the two sides believe about the business's future.</p>
+<p>Three hypotheses could explain why the market assigns that lower growth estimate. The first is structural demand loss: the market may be pricing the AWS OpenSearch fork progressively winning over customers and compressing both the renewal base and new cloud adoption. The current-period evidence refutes this — customer retention is 112%, cloud revenue grew 22%, and the contracted revenue pipeline grew 28%. The second is margin or quality erosion: the market may be pricing an eventual collapse in cash-flow margins as competition forces increased spending. The evidence also refutes this — cash margins expanded 4.5 percentage points above the exit floor, and the trajectory toward positive accounting profits continues. The third is capital-allocation concern: the company deployed $340 million in share buybacks at an average price of $76.91, which is 29% above the current share price. That is a real blemish — capital was spent at prices above what the market now values those shares at, and only partially offset by the argument that management acted confidently on an intrinsic-value assessment that the market has since revised downward. This third hypothesis has partial support from the evidence in the filing.</p>
+<p>What would have to happen for the market's lower growth estimate to be right? Either the customer expansion rate would have to decelerate toward the exit threshold over the next two years, or cloud revenue would have to decelerate toward single-digit growth, or both. Neither is happening in the current data. What could close the gap between the current price and the fair-value estimate is a sustained period in which the revenue pipeline evidence — particularly the retained revenue metric and the cloud growth rate — continues to run above the 10–15% thresholds, until the market updates its implied growth estimate upward toward the thesis base case.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The pre-committed rules (stated in full in <a href="#the-rules">the Rules</a>) translate the share-price bands into two standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement introduced here.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at $101, the fair-value anchor. The crossing means the share price has returned to a neutral reading; no action follows, but a fresh read of the conditions is warranted.
+- A second alert at $56, the cheap edge. The crossing arms the buy order below; before adding, the latest re-validation should confirm the conditions are still working.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at $56. This calls for adding in tranches once the price closes at or below this line and the conditions are still working. Given the bear case carries a 25% probability of a loss of roughly 14% a year over three years, no more than half of the target position size should be deployed in a single tranche — the destructive tail argues for staged entry with thesis confirmation between additions.
+- A standing trim order at $140. This calls for trimming 25% of the position when the price closes at or above this line, harvesting the premium while keeping the core holding for continued compounding if the base case plays out.</p>
+<p>No exit-tier rule has been authored for this holding at a specific price. Vehicle-integrity and the written exit conditions govern the sell side beyond the trim level.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The most significant wobble is the fair-value gap itself. The market is pricing Elastic at a 41% discount to the fair-value estimate of $101, implying it believes long-run cash-flow growth will average roughly 6% — not 15%. That disagreement is not a reason to exit, but it is a reason to be deliberate about adding: if the market has reason to believe the business's competitive position will deteriorate faster than the current data shows, a concentrated entry at current prices would be premature.</p>
+<p>There are two more specific wobbles to track.</p>
+<p>First, the buyback programme. The company spent $340 million in FY2026 repurchasing shares at an average price of $76.91 — roughly 29% above today's price. From a shareholder's perspective, that capital was deployed less efficiently than holding it in reserve for a lower entry price would have been. The remaining authorisation is approximately $160 million; how management chooses to deploy it near current prices is worth monitoring.</p>
+<p>Second, the competitive position against Datadog. The annual filing names Datadog as a competitor but contains no data that allows a direct comparison of revenue growth rates. Exit condition seven — which requires Datadog's growth to exceed Elastic's by more than 15 percentage points for two consecutive fiscal years, combined with a Gartner ranking degradation — cannot be assessed from the filing alone. This condition is in a sustained state of incomplete evidence; it is monitored through Datadog's own quarterly reports and Gartner's annual publication, and the current state is that neither trigger leg has been confirmed as fired.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>AWS OpenSearch closes the functionality gap.</strong> The fork is maintained by a large team under the Linux Foundation and backed by Amazon's engineering resources. If it reaches genuine feature parity with Elasticsearch for the observability and security use cases that drive Elastic's large-enterprise tier, customers have a credible zero-cost alternative. The early warning is the customer retention rate dropping below 108% for two consecutive quarterly readings.</li>
+<li><strong>Hyperscaler-native AI search displaces the search use case.</strong> Amazon, Microsoft, and Google all offer embedded vector search and AI retrieval as part of their cloud platforms at no marginal cost to existing cloud customers. If enterprise AI spending consolidates on those native tools rather than a specialist layer, the search segment — approximately 40% of the addressable opportunity — faces structural substitution.</li>
+<li><strong>Revenue-recognition shift creates volatility.</strong> The growth of cloud serverless pricing (where customers pay per computation rather than per seat) creates quarterly revenue variability that can look like deceleration even during a healthy underlying demand environment. The contracted revenue pipeline is the correct leading indicator here — a single weak quarter is not sufficient evidence of structural deterioration.</li>
+<li><strong>SBC dilution persists or worsens.</strong> At $298 million in FY2026, equity compensation represents 17% of revenue and, after adjusting for it, the business's net owner earnings are substantially lower than the raw cash flow figure. The buyback programme partially offsets dilution in share count but consumes cash at the same time. If share-based compensation rises toward or above 18% of revenue for two consecutive years, the compensation discipline condition fires.</li>
+<li><strong>Capital-allocation failure on a large acquisition.</strong> The thesis requires that any acquisition above $500 million comes with a disclosed path to cash-flow accretion within three years. If management pursues a large strategic acquisition at a high revenue multiple without that disclosure, the exit condition fires regardless of whether the underlying business rationale appears sound.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<ul>
+<li>The competitive position against Datadog (exit condition seven) cannot be assessed from the annual filing. Datadog's revenue growth rate must come from Datadog's own quarterly reports; Gartner's Observability ranking must come from Gartner's annual publication. Both are checked at each annual refresh cycle. The current status is not assessable — neither the trigger nor its absence can be confirmed from the filing reviewed.</li>
+<li>Two fair-value anchors coexist in the underlying analytical files: a yield-method anchor of $101 per share (derived from the cash yield on FY2026 cash generation at a 3.04% fair-value yield) and a bottom-up scenario model anchor of approximately $208 per share (derived from peer revenue multiples and self-multiple history). The $101 figure is the anchor used in <a href="#the-share-price">the Share Price</a> and <a href="#the-standing-orders">the Standing Orders</a> sections, as it is the more conservative estimate and is directly tied to the yield methodology that generates the buy and trim thresholds. The $208 figure reflects a peer-multiple expansion scenario and is used as the central estimate in the three-year return projections above. A future schema update will align these two anchors in a single consistent framework.</li>
+<li>Two fair-value anchors coexist: the yield-method anchor of 101 and the bottom-up peer-multiples anchor of 208. A future schema migration will resolve the divergence.</li>
+<li>The net expansion rate is disclosed only as an approximation in the annual filing ("approximately 112%") rather than as a precise percentage. This is standard practice for Elastic's reporting format; quarterly earnings releases provide the same approximation. The precision is sufficient to confirm the condition against the 105% exit threshold.</li>
+<li>The fair-value-drift warnings in the underlying analysis flag that the 3.04% fair-value yield anchor diverges from both the current cash yield (5.17%) and the peer-multiple implied fair value. The divergence is intentional and documented — the anchor is calibrated to the base-case scenario discounted cash flow output, not to a trailing yield mean-reversion target. Before adding materially to the position, confirming that the 15% long-run growth rate is still defensible is the appropriate check.</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>The rules governing this holding are fixed in advance and derive directly from the combination of the current thesis state and the share-price position. One clause per pre-committed condition:</p>
+<ul>
+<li><strong>If all exit conditions are intact and the share price remains in the hold band</strong> (as is the case now): retain the position and monitor customer retention and cloud growth at each quarterly earnings release, and confirm the stock-based compensation trajectory at each annual filing.</li>
+<li><strong>If one or more thesis conditions show deterioration without a confirmed exit condition</strong> (for example, the customer retention rate declining toward 107% or cloud growth slowing below 15% for two consecutive quarters): do not add to the position. Require two consecutive quarters of deterioration before acting — a single weak quarter is not sufficient confirmation.</li>
+<li><strong>If any written exit condition fires</strong> (customer retention below 105% for two quarters; cloud growth below 10% for a full fiscal year; cash margin below 14%; equity compensation above 18% for two consecutive years; an acquisition above $500 million without accretion disclosure; accounting operating margin not positive by FY2028; or Datadog's growth gap exceeding 15 percentage points for two fiscal years combined with a Gartner ranking fall below Leader): exit the full position within 30 days. No averaging down once an exit condition has fired.</li>
+<li><strong>If the share price falls to or below $56</strong> (the buy edge): confirm first that no exit condition has been triggered, then add in tranches. No more than half of the target position size in a single addition — the 25% probability bear case is severe enough to require staged entry.</li>
+<li><strong>If the share price rises to or above $140</strong> (the trim edge): trim 25% of the position to harvest the premium while retaining the core holding.</li>
+<li><strong>If the share price rises to a level implying a cash yield below 1.50%</strong> (approximately $200 per share on the current cash generation basis): exit the full remaining position. At that price the market is pricing in the bull-case tail, the implied return falls below the long-run equity premium, and reallocation is the correct response.</li>
+</ul>
+<!-- dehallucinate-audit-v2
+schema: v2
+timestamp: 2026-07-12T12:00:00Z
+verdict: CLEAN
+applied: 0
+hedged: 0
+advisory: 0
+---
+-->
+</main>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanguard Group (Ireland) Limited Ultra-Short US Treasury ETF — VDST Vehicle-Profile — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="index.html">← VDST report</a></p>
+<h1 id="vanguard-group-ireland-limited-ultra-short-us-treasury-etf-vdst-vehicle-profile">Vanguard Group (Ireland) Limited Ultra-Short US Treasury ETF — VDST Vehicle-Profile</h1>
+<p><em>Snapshot: 2026-07-20T20:24:39.207620+00:00</em>. Source: yfinance via Fetch-Market-Data ETF mode; YTM via Vanguard Polaris (portId 9933).</p>
+<hr />
+<h2 id="1-mandate">1. Mandate</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Category</td>
+<td>n/a (not returned by yfinance for this UCITS ETF)</td>
+</tr>
+<tr>
+<td>Fund Family</td>
+<td>Vanguard Group (Ireland) Limited</td>
+</tr>
+<tr>
+<td>Legal Type</td>
+<td>Exchange Traded Fund</td>
+</tr>
+<tr>
+<td>Ticker</td>
+<td>VDST (yfinance: VDST.L, LSE)</td>
+</tr>
+<tr>
+<td>ISIN</td>
+<td>IE00BLRPPV00</td>
+</tr>
+<tr>
+<td>Current Price</td>
+<td>$59.27</td>
+</tr>
+<tr>
+<td>NAV</td>
+<td>$59.24</td>
+</tr>
+<tr>
+<td>Price / NAV</td>
+<td>1.0005 (premium of ~$0.03)</td>
+</tr>
+</tbody>
+</table>
+<p>VDST is the Vanguard U.S. Treasury 0–1 Year Bond UCITS ETF (Acc), domiciled in Ireland (ISIN IE00BLRPPV00). It holds exclusively US Treasury bills maturing within one year and internally accumulates income — no cash distributions are paid. The mandate is a narrow, single-asset-class slice: sovereign USD T-bills only. Weighted-average maturity is 0.378 years (~4.5 months); basket YTM as of 2026-06-30 is 3.851% (source: vanguard-polaris:9933).</p>
+<h2 id="2-cost">2. Cost</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annual Expense Ratio (OCF)</td>
+<td>0.07% (source: config — Vanguard published TER; yfinance returns null for this UCITS ETF)</td>
+</tr>
+<tr>
+<td>Distribution Yield</td>
+<td>0.00% (accumulating share class — income internally reinvested)</td>
+</tr>
+<tr>
+<td>Basket YTM</td>
+<td>3.851% (Vanguard Polaris portId 9933, effective date 2026-06-30)</td>
+</tr>
+<tr>
+<td>Weighted-Avg Maturity</td>
+<td>0.378 years (~4.5 months)</td>
+</tr>
+<tr>
+<td>Tracking Difference (1Y)</td>
+<td>n/a — not available in this snapshot</td>
+</tr>
+<tr>
+<td>Tracking Error (1Y)</td>
+<td>n/a — not available in this snapshot</td>
+</tr>
+</tbody>
+</table>
+<p>The expense ratio of 0.07% is not returned by yfinance for this LSE-listed UCITS ETF; the value is carried from the Vanguard-published OCF in <code>config.yaml</code>. The configured ceiling is <code>expense_ratio_max_pct</code> = 0.10%; at 0.07% the headroom is 3 bps. The early-drift band sits at 0.09% (10% relative around the 0.10% ceiling), which means the current 0.07% is below early-drift territory — no flag warranted this cycle. No securities lending revenue is configured. No tracking-difference or tracking-error data is available in this snapshot.</p>
+<h3 id="tax-profile">Tax Profile</h3>
+<ul>
+<li><strong>Wrapper type:</strong> Accumulating UCITS (Ireland-domiciled)</li>
+<li><strong>OeKB Meldefonds:</strong> Yes — registered as a reporting fund for Austrian tax purposes</li>
+<li><strong>Annual AGE yield (Ausschüttungsgleiche Erträge):</strong> Not yet populated — run Fetch-OeKB-Steuerdaten.py to populate <code>annual_age_yield_pct</code>. Pauschalbesteuerung proxy of 4.5% (US T-bill 0-1y coupon) in use until OeKB classification is confirmed by tax adviser.</li>
+<li><strong>K-1 issued:</strong> No (UCITS structure; no US partnership K-1)</li>
+</ul>
+<h2 id="3-holdings-concentration-top-10-deduped">3. Holdings Concentration (top-10, deduped)</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Weight</th>
+<th>ROE (top-10 only)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>No top-holdings data returned by yfinance for this UCITS ETF</td>
+<td>—</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top-1</strong>: n/a — top_holdings list is empty in the sidecar.
+<strong>Top-10 sum</strong>: n/a.</p>
+<p>The configured <code>top1_concentration_max_pct</code> ceiling is 100.0% — a non-binding sentinel. VDST holds US Treasury bills, which are fungible obligations of a single sovereign obligor (US federal government); single-name concentration risk does not apply in the conventional sense. The relevant credit risk is sovereign credit quality, not issuer diversification across counterparties. ROE is not applicable to sovereign debt instruments.</p>
+<h2 id="4-sector-tilt">4. Sector Tilt</h2>
+<table>
+<thead>
+<tr>
+<th>Sector</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>Not applicable — no sector data returned by yfinance for this UCITS ETF</td>
+</tr>
+</tbody>
+</table>
+<p>A portfolio of US Treasury bills carries no equity-sector exposure; the sector tilt frame is not applicable to this vehicle. The sidecar returns <code>sector_weightings_pct</code> = {} (empty), consistent with a pure sovereign-debt mandate.</p>
+<h2 id="4a-factor-tilts-heuristic">4a. Factor Tilts (heuristic)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trailing P/E</td>
+<td>n/a (bond ETF — no equity earnings)</td>
+</tr>
+<tr>
+<td>Forward P/E</td>
+<td>n/a (bond ETF — no equity earnings)</td>
+</tr>
+<tr>
+<td>Price / Book</td>
+<td>n/a (bond ETF — no book-value concept)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tilt read:</strong> All three equity factor metrics are n/a for a sovereign bond ETF. The standard equity-tilt heuristic (P/E and P/B thresholds) does not apply. The relevant duration factor is captured by the weighted-average maturity of 0.378 years: VDST is ultra-short-duration, carrying near-zero interest-rate sensitivity (DV01 immaterial at this tenor).</p>
+<blockquote>
+<p><strong>Caveat:</strong> This is a heuristic derived from yfinance aggregate fields. Formal Fama-French / Barra factor attribution requires a dedicated factor model and is not available in this pipeline.</p>
+</blockquote>
+<h2 id="5-asset-class-breakdown">5. Asset-Class Breakdown</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash</td>
+<td>55.43%</td>
+</tr>
+<tr>
+<td>Bond</td>
+<td>44.57%</td>
+</tr>
+<tr>
+<td>Stock</td>
+<td>0.00%</td>
+</tr>
+<tr>
+<td>Preferred</td>
+<td>0.00%</td>
+</tr>
+<tr>
+<td>Convertible</td>
+<td>0.00%</td>
+</tr>
+<tr>
+<td>Other</td>
+<td>0.00%</td>
+</tr>
+</tbody>
+</table>
+<p>The 55.43% cash position is consistent with a T-bill fund: yfinance classifies very-short-dated Treasury bills (those within the settlement window or already tendered) as "cash" rather than "bonds." The economic substance is unchanged — all assets are US Treasury obligations. Bond + Cash = 100.00%.</p>
+<h2 id="6-liquidity">6. Liquidity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUM</td>
+<td>n/a (yfinance returns null for UCITS ETFs; ~$2.4B per Trackinsight carry-forward)</td>
+</tr>
+<tr>
+<td>Average daily volume</td>
+<td>~$6.1M equivalent (yfinance 3-month avg: ~102,972 units × ~$59.27)</td>
+</tr>
+</tbody>
+</table>
+<p>The configured AUM floor is $1,000,000,000 (config.valuation.vehicle_integrity.aum_floor_usd = USD 1 billion). The yfinance sidecar returns null for AUM on this LSE-listed UCITS ETF. The carry-forward estimate from Trackinsight (~$2.4B) is above the $1 billion floor with ample headroom; however, automated breach detection is blocked until yfinance surfaces this field — manual verification against the Vanguard fund factsheet is required quarterly per thesis exit condition (2). Average daily volume of approximately $6.1M equivalent is adequate for routine rebalancing at typical portfolio allocation sizes; no minimum-daily-volume threshold is configured.</p>
+<h2 id="7-sponsor-methodology-stability">7. Sponsor &amp; Methodology Stability</h2>
+<p>The fund is managed by <strong>Vanguard Group (Ireland) Limited</strong> and structured as an <strong>Exchange Traded Fund</strong> (UCITS) domiciled in Ireland (ISIN: IE00BLRPPV00). The mandate — tracking a basket of US Treasuries maturing in 0–1 year, accumulating income — is narrow and operationally stable. Vanguard's cooperative ownership structure removes the primary commercial incentive to raise fees or change fund mandates for revenue reasons; sponsor-change risk is assessed as low.</p>
+<p>Index methodology changes (e.g. index provider switch, maturity-band widening) would constitute a material KIID change under UCITS IV and must be user-monitored externally via Vanguard regulatory filings and UCITS KIID update logs. No automated detection is implemented in this pipeline.</p>
+<p><strong>US sovereign credit watch:</strong> Thesis exit condition (3) requires reassessment if US sovereign credit is downgraded below AA− by two of three major agencies (Fitch AA+, Moody's Aaa, S&amp;P AA+). Current ratings are above the trigger; monitoring is the user's responsibility.</p>
+<h2 id="8-data-gaps">8. Data Gaps</h2>
+<ul>
+<li><strong>trailing_pe</strong>: Structurally n/a — P/E is undefined for a sovereign-debt ETF. No action required.</li>
+<li><strong>equity_risk_premium_pct</strong>: Structurally n/a — ERP is undefined for a T-bill basket (VDST's basket IS the risk-free proxy). No action required.</li>
+<li><strong>expense_ratio_pct</strong>: yfinance does not return OCF for UCITS ETFs. Known value (0.07%) sourced from Vanguard published TER and held in <code>config.yaml</code>. Manual re-verification required quarterly against Vanguard factsheet; hard ceiling is 0.10% (exit condition 1).</li>
+</ul>
+<p>Additional gaps not in missing_fields but requiring manual attention:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aum_usd</td>
+<td>null from yfinance — verify manually each quarter against Vanguard factsheet vs. USD 1B floor (exit condition 2)</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Not returned by yfinance for this UCITS ETF. Inferred from mandate: ultra-short-duration US Treasury ETF.</td>
+</tr>
+<tr>
+<td>top_holdings</td>
+<td>Empty list — constituent-level data unavailable from yfinance for this UCITS listing. Mandate verification relies on the Vanguard factsheet and KIID.</td>
+</tr>
+<tr>
+<td>tracking_difference_pct_1y</td>
+<td>null — not surfaced by yfinance for UCITS ETFs. Track from annual KIID or Trackinsight.</td>
+</tr>
+<tr>
+<td>tracking_error_pct_1y</td>
+<td>null — same source constraint as above.</td>
+</tr>
+<tr>
+<td>annual_age_yield_pct (OeKB)</td>
+<td>null — Pauschalbesteuerung proxy (4.5%) in use until OeKB classification is confirmed by tax adviser.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="end-of-vehicle-profile">End of Vehicle-Profile</h2>
+</main>
+</body>
+</html>

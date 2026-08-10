@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SP500: The Bet Is Wobbling — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-07-06 overview</a></p>
+<h1 id="sp500-the-bet-is-wobbling">SP500: The Bet Is Wobbling</h1>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-07-06 · Latest filing 2026-07-06.</em></p>
+<p>The bet is wobbling. The basket's earnings yield — the share of every dollar of market price that the underlying businesses collectively earn — has slipped below the return available on a ten-year US government bond, meaning the five hundred companies inside the fund are collectively priced at a level where a riskless bond pays more. The share price sits above the trim line, well above fair value. The one condition to watch is whether the gap between the basket's earnings yield and the Treasury yield narrows over the next two quarterly snapshots; if it does not, <a href="#whats-wobbling">the written exit condition fires</a>.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $447. Trim at $698. Exit at $931.</p>
+<p>At $447, the long-run total return is about 12% a year. At today's $745, about 10% a year. The figure assumes the basket keeps growing at today's pace and the market keeps valuing it the same way.</p>
+<pre><code>buy                                      trim    current                    exit
+$447                                     $698    $745                       $931
+├────────────────────────────────────────┼───────┼─────────────────────────────┤
+</code></pre>
+<p>The two figures measure different things. The long-run figure assumes the market keeps valuing SP500 the way it does today. The five-year figure assumes the share price moves from today's $745 to the fair-value central estimate of $558.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>SP500 scores −1.78, ranking 14 of 15 active holdings by this measure — it sits near the foot of the portfolio.</p>
+<blockquote>
+<p><strong>score</strong>
+&nbsp;&nbsp;= quality-weight × (expected return − hurdle rate)
+&nbsp;&nbsp;= 1.20 × (1.38% − 2.86%)
+&nbsp;&nbsp;= 1.20 × −1.48%
+&nbsp;&nbsp;= <strong>−1.78</strong></p>
+</blockquote>
+<ul>
+<li><strong>Quality-weight: 1.20.</strong> This fund's quality classification produces a multiplier of 1.20, lifting the score by 20 per cent.</li>
+</ul>
+<p><strong>Expected return: 1.38%.</strong> The expected return is the base-case forward return of 1.38% a year over five years. Index funds and bonds use their contractual or index-implied return directly — no scenario blend is applied.</p>
+<ul>
+<li><strong>Hurdle rate: 2.86%.</strong> The hurdle rate is 2.86% — the 0.86% linker real yield plus the 2.0 percentage-point ECB inflation target (to put the comparison on a nominal footing); no equity-risk premium is added for a diversified fund.</li>
+</ul>
+<p>A score of −1.78 puts SP500 second-to-last in the portfolio ranking — the expected return falls short of the hurdle by 1.48 percentage points.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>At the 2026-07-06 re-validation, the basket's earnings yield (the total earnings of all five hundred companies expressed as a percentage of the total market price) stood at 3.749%, while the ten-year US Treasury yield stood at 4.485%. The arithmetic gap — 3.749% minus 4.485% — is −0.736%, meaning the riskless government bond currently yields more than the S&amp;P 500 basket. All seven weekly snapshots recorded since 2026-06-16 have shown this gap in negative territory, ranging from −0.594% to −0.758%.</p>
+<p>The written exit condition for this holding requires the gap to remain negative for two consecutive quarterly snapshots, not just weekly ones. That quarterly gate has not yet been crossed: all seven readings fall within a single quarter. The next quarterly reading is the critical checkpoint. If it arrives negative, the exit condition fires regardless of where the share price sits.</p>
+<p>Vehicle integrity remains untroubled. The fund's annual charge is 0.0945%, well inside the 0.15% ceiling. Assets under management are $783.8 billion — about 7.8 times the $100 billion floor. The largest single holding, NVIDIA, accounts for 7.89% of the basket, well short of the 13% hard ceiling. NAV deviation is 0.11%. None of the structural exit triggers are active. The underlying businesses are also healthy: the median return on equity of the top nine holdings is 37%, well above the 15% threshold that would signal basket-quality collapse. These readings are explored in detail at <a href="#the-case-for-the-bet">The Case for the Bet</a>.</p>
+<h2 id="about-the-fund">About the Fund</h2>
+<p>SP500 is the SPDR S&amp;P 500 ETF Trust, the first US-listed exchange-traded fund, launched in January 1993 and operated continuously since then by State Street Investment Management. It tracks the S&amp;P 500 index — a cap-weighted basket of the five hundred largest publicly traded companies in the United States, maintained by S&amp;P Dow Jones Indices. When the share prices of the largest companies rise, their weight in the basket rises too; the basket therefore tilts naturally toward whatever has done well recently.</p>
+<p>The fund's annual charge is 0.0945% — roughly 9½ pence on every £100 of investment per year, or just under one dollar per year on every thousand invested. The fund operates as a Unit Investment Trust, the oldest US exchange-traded fund structure, which means it cannot reinvest dividends between distribution dates; a small cash sleeve (0.11% of assets) accumulates between payouts as a result. No K-1 tax form is issued. Tracking difference and tracking error figures are not available from the fund's data feed; they should be verified from the State Street SPDR factsheet directly.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The holding is kept only while the basket clears a value test: the earnings yield of the five hundred underlying businesses must exceed the risk-free rate plus a reasonable equity risk premium. Six specific exit conditions define the boundaries.</p>
+<ol>
+<li><strong>Equity risk premium turns and stays negative.</strong> The basket's earnings yield falls below the ten-year US Treasury yield for two consecutive quarterly snapshots. The premium must be absent, not just thin.</li>
+</ol>
+<p><em>Latest reading:</em> Earnings yield 3.749%, Treasury yield 4.485%, gap −0.736%. All seven weekly snapshots since 2026-06-16 are negative. Quarterly persistence not yet met: all seven readings fall within a single quarter.</p>
+<ol>
+<li><strong>Annual charge rises above 0.15% with no competitive response.</strong> State Street raises the expense ratio beyond the hard ceiling while cheaper alternatives (IVV, VOO) remain available.</li>
+</ol>
+<p><em>Latest reading:</em> Charge is 0.0945%, 5.55 percentage points below the 0.12% early-warning level and 5.55 points below the 0.15% hard ceiling. Exit condition inactive.</p>
+<ol>
+<li><strong>Assets under management fall below $100 billion.</strong> A sustained drawdown of that magnitude would signal extraordinary liquidity stress.</li>
+</ol>
+<p><em>Latest reading:</em> Assets under management are $783.8 billion — 7.8 times the floor. Exit condition inactive.</p>
+<ol>
+<li><strong>Top single-name weight exceeds 13%.</strong> Single-company concentration at that level signals a regime change, not normal market drift.</li>
+</ol>
+<p><em>Latest reading:</em> NVIDIA holds 7.89% of the basket, inside both the 10% early-warning band and the 13% hard ceiling. Exit condition inactive.</p>
+<ol>
+<li><strong>S&amp;P 500 index methodology is materially restructured.</strong> S&amp;P Dow Jones Indices changes the broad-market mandate in a way that undermines what the basket represents.</li>
+</ol>
+<p><em>Latest reading:</em> No methodology change has been announced. Exit condition inactive.</p>
+<ol>
+<li><strong>Median return on equity of the top ten holdings collapses below 15%.</strong> The basket has lost its quality anchor.</li>
+</ol>
+<p><em>Latest reading:</em> Median return on equity of the top nine deduped holdings is 37.3%, well above the 15% threshold. Exit condition inactive.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At $744.78, the share price is above the trim line of $698. In yield terms, the basket currently earns 3.749% per dollar of market price. The thesis defines fair value at a 5% earnings yield — the price at which the basket is neither expensive nor cheap relative to the underlying businesses' earning power — which corresponds to a share price of $558. At $745, the price is 33% above that level.</p>
+<p>The basket has crossed into trim territory: earnings yield has fallen below the 4% trim threshold, which corresponds to a price of $698. The exit threshold of 3% earnings yield — the point at which the basket is fully priced versus risk-free alternatives — corresponds to a price of $931. The current price of $745 sits between the trim line and the exit line, closer to the trim edge.</p>
+<p>To be clear: the trim signal is about relative value, not about business quality. The underlying companies are producing healthy returns on their invested capital. The question is purely what price is being paid for that quality, and at $745 the answer is: a great deal.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The rules translate the share-price bands into three standing orders and two price alerts.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at $558, the fair-value anchor. Crossing this level means the price has returned to a neutral reading; no action follows automatically, but a fresh re-validation of the conditions is warranted.
+- A second alert at $447, the cheap edge. Crossing this level arms the buy order below; before adding, the latest re-validation should confirm the conditions are still working.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at $447. The rules call for adding in tranches once the share price closes at or below this line and the conditions are still intact. At that price, the basket's earnings yield would be 6.25% against a historical average of roughly 6.25% — a genuinely cheap entry by the thesis's own standard.
+- A standing trim order at $698. The rules call for trimming 25 to 33% of the position when the share price closes at or above this line, to harvest the premium while keeping the core holding. The trim line has already been crossed: the current price of $745 is $47 above it.
+- A standing exit order at $931. At that price the basket's earnings yield would be 3.0% — fully priced versus risk-free alternatives. The rules call for closing the full position and redeploying proceeds to risk-free assets or to a holding that meets the value test.</p>
+<p>Vehicle-integrity breaches and the written exit-condition triggers described in the thesis are independent paths to exit — they fire regardless of the share price.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The equity risk premium is the one active wobble. The basket's earnings yield has been below the ten-year Treasury yield continuously since 2026-06-16. The spread has ranged from −0.594% to −0.758%, with the 2026-07-06 reading at −0.736%. This is the "Buffett cash" condition: riskless government bonds currently pay more than the underlying businesses earn per dollar of market price.</p>
+<p>The written exit condition for this holding requires two consecutive quarterly readings of negative risk premium, not merely sustained weekly observations. The seven snapshots on record all fall within a single quarter. If the next quarterly re-validation, expected in the three months ending September 2026, also shows a negative premium, the exit condition fires and the thesis transitions from wobbling to broken.</p>
+<p>The wobble does not overturn the trim call — it reinforces it. The valuation-band rule (earnings yield below the 4% trim threshold) is already active and takes priority over the drivers-only assessment. What the negative premium adds is urgency: the basket is not just expensive by historical earnings standards; it is priced below what a riskless bond delivers. Both signals point in the same direction.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li>The basket's price could rise further before any correction, driven by continued multiple expansion in the technology sector, which currently accounts for 39% of the basket. A buyer at $745 who trims late would harvest less of the premium.</li>
+<li>A sharp fall in the ten-year Treasury yield could restore a positive earnings premium without any change in the share price, turning the wobble into a confirmation. The trigger for this would be a Federal Reserve pivot toward easing.</li>
+<li>The bear case — a return of the basket's earnings multiple from today's 26.7 times earnings to the long-run average of 16 times — delivers an annualised loss of roughly 6.9% over five years, without any deterioration in the underlying businesses.</li>
+<li>NVIDIA's weight at 7.89% is still inside the 10% early-warning band, but continued share price outperformance could push it toward that band within one or two quarters. At 10% concentration, an early-warning flag fires; at 13%, the exit condition triggers.</li>
+<li>The quarterly earnings-premium snapshot due in the three months ending September 2026 is the single most important near-term data point. If negative, the thesis moves to broken. (For this fund, exit fires when the share price reaches the exit edge, when a vehicle-integrity condition breaches, or when the named exit-condition trigger fires — any of three paths.)</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>Tracking difference and tracking error for the one-year period are not available from the fund's data feed — both fields are null in the underlying data. These should be verified from the State Street SPDR factsheet. In their absence, the cost picture rests on the annual charge alone (0.0945%).</p>
+<p>The Shiller cyclically adjusted earnings ratio — a measure that smooths the earnings figure over ten years to remove short-term distortions — has not been populated for this holding. The current assessment relies on trailing twelve-month earnings. A high Shiller ratio would reinforce the expensive reading; the direction of the adjustment, if known, would be consistent with the trim signal already active.</p>
+<p>The securities-lending revenue (income the fund earns by temporarily lending its holdings to short-sellers) is not applicable for a Unit Investment Trust structure and is therefore absent. The net cost figure is the annual charge alone.</p>
+<p>Qualified dividend percentage and capital-gain distribution history for the fund are not verified from primary State Street sources; the pipeline returns null for both. These affect tax efficiency but do not affect the valuation assessment.</p>
+<p>Scenario IRR (bear/base) missing or non-numeric — risk chart suppressed.</p>
+<h2 id="the-rules">The Rules</h2>
+<ul>
+<li>If the basket is reasonably priced and the vehicle is sound: hold.</li>
+<li>If the bet is wobbling — the equity risk premium is negative but quarterly persistence is not yet confirmed, or median look-through return on equity is declining: do not add. Re-validate after the next quarter. If the premium stays negative or quality keeps falling, swap to a lower-cost alternative (such as IVV or VOO) or move to cash per the position-sizing rule.</li>
+<li>If the vehicle has broken — a structural exit condition has triggered: exit. Move proceeds to risk-free assets or to a holding that meets the value test.</li>
+<li>If the price is below the cheap edge of $447: add to the position. The basket is meaningfully cheap versus risk-free.</li>
+<li>If the price is above the trim line of $698: trim 25 to 33% of the position. The basket is meaningfully expensive versus risk-free; harvest the premium.</li>
+<li>If the price is above the exit line of $931: exit. The basket's earnings yield is at or below 3.0% — fully priced versus risk-free. Redeploy proceeds to risk-free assets or to a holding that meets the value test.</li>
+</ul>
+<!-- dehallucinate-audit-v2
+schema: v2
+timestamp: 2026-07-06T00:00:00Z
+verdict: CLEAN
+applied: 0
+hedged: 0
+advisory: 0
+-->
+</main>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-10 overview</a></p>
+<h1 id="amazon-the-bet-still-works">Amazon: The Bet Still Works</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if AMZN is a genuine non-payer this is expected, otherwise check yfinance_symbol
+- PORTFOLIO: (stale ranking, 2026-07-30) - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if AMZN is a genuine non-payer this is expected, otherwise check yfinance_symbol
+- PLAUSIBILITY: base-case return (+24.9%) sign is opposite to the fair-value gap direction (231 → 176). Valuation inputs may need refreshing — reported as computed.</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-10 · Latest filing 2026-04-30.</em></p>
+<p>The bet is working. At $231, the stock sits in the upper half of the hold band, well above fair value, with a healthy equity premium — the long-run expected return of about 13% a year runs roughly 8 percentage points ahead of the risk-free rate. The one condition warranting close attention is the capital-expenditure trajectory: Amazon spent $43.2 billion on infrastructure in a single quarter, and management has committed to further increases through 2026; so long as cloud-computing revenue grows fast enough to justify that scale, no exit condition fires.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $140. Trim at $263. Exit at $421.</p>
+<p>At $140, the long-run total return is about 16% a year. At today's $231, about 13% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy                      current   trim                                     exit
+$140                     $231      $263                                     $421
+├────────────────────────┼─────────┼───────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the share price moves to the fair-value central estimate, returns work out to bear -8%, base +25%, bull +46% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> below for a full explanation of bear, base, and bull.)</em></p>
+<pre><code>bear                                        expected/base                   bull
+-8%                                         +22.0%/+25%                     +46%
+├───────────────────────────────────────────┼───┼──────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 50% base, 25% bull): about +22.0% a year over the next three years.</p>
+<p>The base-case return (+24.9%) implies a direction opposite to the gap between the current price and the fair-value estimate (231 → 176). This usually means the valuation inputs need refreshing.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Amazon scores 18.75, ranking 4 of 20 active holdings by this measure — it sits comfortably in the upper tier of the portfolio.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
+  &nbsp;&nbsp;= 1.20 × (22.00% − 1.46% − 4.91%)
+  &nbsp;&nbsp;= 1.20 × +15.63%
+  &nbsp;&nbsp;= <strong>18.75</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> Amazon sits in the strongest of three moat tiers, which lifts the score by 20 per cent. That classification reflects four concurrent sources of competitive protection: the cost advantage Amazon's own chip designs (Graviton for general computing, Trainium for machine-learning workloads) give its cloud-computing division over rivals; the marketplace network effect that draws buyers because sellers are there, and sellers because buyers are there; the brand loyalty and switching costs created by the Prime membership bundle; and the logistics scale that has become its own efficient barrier to entry.</p>
+<p><strong>Expected return: 22.00%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (25% likelihood) — annualised return -8.3%.</strong> The bear case assumes that the wave of capital Amazon is pouring into artificial-intelligence infrastructure does not translate into commensurate cloud-revenue acceleration, leaving the business generating a fraction of its expected free cash flow across the three-year window.</p>
+<p><strong>Base (50% likelihood) — annualised return +24.9%.</strong> The base case has cloud-computing revenue continuing to compound at double-digit rates as enterprise demand for artificial-intelligence capacity absorbs the infrastructure build, with advertising and international profitability providing secondary growth engines.</p>
+<p><strong>Bull (25% likelihood) — annualised return +46.4%.</strong> The bull case has cloud-computing re-accelerating beyond current rates as artificial-intelligence workloads scale faster than anticipated, with advertising approaching the margins of the market's specialist players and the international retail business reaching sustained double-digit operating margins.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.25 × (−8.3) + 0.50 × 24.9 + 0.25 × 46.4 = +21.98%.</p>
+<p><strong>Hurdle rate: 4.91%.</strong> The hurdle rate is 4.91% — the 0.91% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of 18.75 puts Amazon fourth of 20 active holdings — well above the portfolio median, with only three holdings carrying a higher reading.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The three months ending in March 2026 delivered on the central promises of the bet. Amazon's cloud-computing division, which it calls Amazon Web Services, reported revenue 28% above the same period a year earlier and an operating profit margin of 37.7% — well above the 15% revenue-growth floor and the 28% margin floor that would each trigger an exit from the position if breached across two consecutive quarters. Advertising revenue reached $17.2 billion for the quarter, 24% above the prior year, and the international retail segment posted a 3.6% operating profit margin on $39.8 billion of sales — a business that was loss-making as recently as 2022.</p>
+<p>The one open question is capital expenditure. Amazon spent $43.2 billion on infrastructure in a single quarter — 78% more than the same period a year earlier — and management explicitly guided for further increases through 2026. That annualised pace comfortably exceeds the $120 billion annual threshold that would trigger exit condition four if sustained into 2027 and 2028 <em>without</em> commensurate cloud-revenue acceleration. With cloud-computing growing at 28%, the qualification is currently met, and no exit condition fires. But the pace of spending means the FY2027 trajectory will be a decisive data point.</p>
+<p>On top of the infrastructure spend, Amazon committed $15 billion to the OpenAI series-C round plus a further $35 billion equity commitment, and announced a $10.9 billion acquisition of satellite-communications company Globalstar. Not one of these has triggered an exit condition, but together they represent a significant shift in how aggressively the company is allocating capital. The full implications for <a href="#the-share-price">the share price</a> and <a href="#the-standing-orders">the Standing Orders</a> are covered in the sections below.</p>
+<h2 id="about-amazon">About Amazon</h2>
+<p>Amazon began as an online bookshop and is now the largest general-merchandise marketplace in the United States, the global leader in the business of renting computing capacity over the internet, and one of the largest advertising businesses in the world. Its retail operations connect hundreds of millions of buyers with millions of third-party merchants; its cloud-computing division sells storage, software tools, and raw computing power to businesses and governments; and its advertising business sells placement inside its own shopping interface, where a buyer is frequently moments away from a purchase.</p>
+<p>The proportions matter more than the description. In the three months ending in March 2026, the cloud-computing division — which runs at an operating profit margin of nearly 38 cents on every dollar of revenue — contributed the majority of the company's total operating profit despite generating far less revenue than the retail segments. The retail business in North America earned an operating profit margin of roughly 8%. The retail business outside North America, long loss-making, turned a slim 3.6% operating profit margin in the same quarter. The advertising business, which is embedded inside the retail experience, grew at 24% and carries margins estimated to be among the highest of any revenue line in the company.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>Amazon is held because two profit pools — cloud-computing and advertising — are still far below the operating margins they could plausibly reach at maturity, and the retail-logistics base that funds them is becoming modestly profitable internationally for the first time. The bet is that these pools compound faster than the overall business for the next three to five years while capital allocation remains disciplined enough not to destroy the compounding. Eight specific conditions define what must remain true:</p>
+<ol>
+<li><strong>Cloud-computing revenue grows at 18% or more per year.</strong> Growth at this rate demonstrates that demand for cloud infrastructure and artificial-intelligence capacity is absorbing the enormous capital investment Amazon is making. Two consecutive quarters of revenue growth below 15% would indicate the investment thesis has not converted into demand — exit condition one.</li>
+</ol>
+<p><em>Latest reading:</em> 28% year-on-year revenue growth in the three months ending 2026-03-31 ($37.6 billion vs $29.3 billion). The order backlog of $364 billion — 5.5 years of weighted average remaining life — and a newly announced $100 billion, eight-year capacity expansion with OpenAI provide contractual anchoring for continued growth.</p>
+<ol>
+<li><strong>Cloud-computing operating profit margin holds above 28%.</strong> A margin below this threshold for two consecutive quarters would indicate that the economics of absorbing the current wave of capital investment have broken down — exit condition two.</li>
+</ol>
+<p><em>Latest reading:</em> 37.7% operating profit margin for the three months ending 2026-03-31 ($14.2 billion operating profit on $37.6 billion revenue). This is 9.7 percentage points above the exit floor. There has been slight compression from the 39.5% reported in the same period of the prior year, consistent with intentional infrastructure investment rather than structural impairment.</p>
+<ol>
+<li><strong>No court-ordered structural remedy in the antitrust case.</strong> A court order requiring Amazon to sell or separate a business unit is an immediate exit — exit condition three.</li>
+</ol>
+<p><em>Latest reading:</em> The quarterly report filed on 2026-04-30 contains only the standing litigation disclosure. The Federal Trade Commission antitrust trial expected in autumn 2026 remains unresolved. No structural remedy has been ordered; exit condition three is not triggered.</p>
+<ol>
+<li><strong>Capital expenditure does not exceed $120 billion in both 2027 and 2028 without commensurate cloud-revenue growth.</strong> The condition requires both: runaway spending AND a failure of revenue to accelerate in parallel. Either alone does not trigger the exit — exit condition four.</li>
+</ol>
+<p><em>Latest reading:</em> As of 2026-03-31, the annualised capital-expenditure run-rate exceeds $150 billion. This is above the $120 billion threshold, but the qualifier — "without commensurate revenue acceleration" — is currently not met because cloud-computing revenue is growing at 28%. The exit condition is not triggered; the 2027 trajectory will be decisive.</p>
+<ol>
+<li><strong>Advertising revenue grows faster than single digits per year.</strong> Two consecutive years of single-digit advertising revenue growth would indicate the third compounding engine has run out of room — exit condition five.</li>
+</ol>
+<p><em>Latest reading:</em> 24% year-on-year advertising revenue growth for the three months ending 2026-03-31 ($17.2 billion vs $13.9 billion). Well above the single-digit threshold. Exit condition five is not triggered.</p>
+<ol>
+<li><strong>No disclosure of material weakness in internal controls, and no unexpected change of auditor.</strong> Either event is an immediate exit — exit condition six.</li>
+</ol>
+<p><em>Latest reading:</em> The quarterly report filed on 2026-04-30 contains no material-weakness disclosure. The auditor (Ernst &amp; Young) is unchanged. Exit condition six is not triggered.</p>
+<ol>
+<li><strong>Insider share-sale filings do not exceed 40 million shares in a single filing.</strong> A sale of this scale by Jeff Bezos under the established trading plan would signal unusual acceleration beyond the pattern that has been publicly disclosed — exit condition seven.</li>
+</ol>
+<p><em>Latest reading:</em> No filing of this scale was disclosed in the three months ending 2026-03-31. Exit condition seven is not triggered.</p>
+<ol>
+<li><strong>An owner-earnings yield (operating cash flow minus capital expenditure, net of share-based compensation, divided by market capitalisation) that stays above 3.0%.</strong> A reading below this level would indicate that Amazon's stock price has risen to a point where the business's current earnings power no longer justifies the valuation even under optimistic assumptions about capital-expenditure normalisation — exit condition eight.</li>
+</ol>
+<p><em>Latest reading:</em> 4.6% owner-earnings yield as of 2026-03-31, using full-year 2025 data. This is comfortably above the 3.0% exit threshold. The yield is computed using Amazon's narrow definition of capital expenditure (total capital expenditure as reported in the cash-flow statement); management's own free-cash-flow definition, which netted out equipment incentives, was just $1.2 billion for the trailing twelve months because of the scale of the infrastructure spend.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At $231, the share is priced in the upper portion of the hold band — above the fair-value anchor of $176 but well short of the $263 level at which <a href="#the-rules">the rules</a> call for trimming. An owner-earnings yield of 4.6% (the ratio of owner earnings to market capitalisation, as described under condition eight above) sits between the 7.5% level that would make the share cheap and the 4.0% level that would make it expensive enough to trim.</p>
+<p>Put plainly: the current price does not offer a margin of safety, but it does not yet signal that the market has priced in an implausible amount of future growth. A new position started today carries the full risk of the bet without the cushion of a low entry price. An existing position at most cost bases is comfortably within <a href="#the-rules">the rules'</a> hold zone.</p>
+<p>The $176 fair-value anchor deserves a note. It is derived from a 6% owner-earnings yield — a conservative anchor calibrated before the current wave of artificial-intelligence capital expenditure began to compress reported cash flows. The market appears to be pricing Amazon on a different basis: a forward earnings model that capitalises the earnings power the business will generate once the infrastructure build has peaked, a sum-of-the-parts approach that places the base-case intrinsic value at roughly $454 per share. Neither anchor is wrong; they describe two different things. The yield anchor is more conservative; the forward earnings approach depends on the capital expenditure converting into lasting revenue acceleration. <a href="#the-rules">The rules</a> are set to the more conservative anchor, which is why <a href="#why-the-market-sees-it-differently">Why the Market Sees It Differently</a> examines the gap in more detail.</p>
+<h2 id="why-the-market-sees-it-differently">Why the Market Sees It Differently</h2>
+<p>The price says the business will earn more over time than the conservative yield-based fair-value anchor implies. The more cautious anchor sits roughly 31.5% below the current share price — a material gap that warrants an explanation.</p>
+<p>Three hypotheses explain what the market could be pricing. First, structural demand acceleration: the market may be right that Amazon Web Services's artificial-intelligence workload growth will absorb the 2025–26 capital-expenditure surge and sustain revenue growth above 25% through 2028. The evidence from the latest filing supports this hypothesis — the contractual order backlog stands at $364 billion and a new eight-year capacity deal with OpenAI worth $100 billion was announced in the same quarter. Second, margin expansion through the capital cycle: the market may be pricing in a period when infrastructure investment peaks and cash conversion improves sharply. Operating profit margins are already expanding at the consolidated level, though the capital-expenditure-to-margin conversion remains the open question. This hypothesis is partially supported. Third, a genuinely underweighted portfolio of technology investments: Amazon holds equity stakes in OpenAI and Anthropic — the two leading large-language-model businesses — with a combined carrying value of roughly $89 billion, equivalent to about $8 per share. A yield-based valuation method does not capture this optionality; the market likely does.</p>
+<p>The most plausible reading is that the gap is methodological rather than a sign of market exuberance. The conservative yield anchor was calibrated before the current capital cycle began. If the cycle converts at the rates Amazon's backlog suggests, the fair-value anchor may need refreshing upward — a question for the next full value-analysis update rather than a reason to act on the position today.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p><a href="#the-rules">The rules</a> translate the share-price bands into three standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement made here.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at $176, the fair-value anchor. The crossing means the share price has returned to a neutral reading; no action follows, but a fresh read of the conditions is warranted before any new capital is committed.
+- A second alert at $140, the cheap-edge. The crossing arms the buy order below; before adding, the latest re-validation should confirm all conditions are still working and that cloud-computing revenue growth is at or above 18%.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at $140. Per <a href="#the-rules">the rules</a>: add in tranches once the stock closes at or below this line and the conditions — particularly cloud-computing revenue growth at or above 18% — are still working. The order may be staged across one or two quarters rather than filled in a single transaction.
+- A standing trim order at $263. Per <a href="#the-rules">the rules</a>: trim a quarter to a third of the position when the stock closes at or above this line, to harvest the premium while keeping the core holding. The remaining position is re-evaluated after the trim.
+- A standing exit order at $421. Per <a href="#the-rules">the rules</a>: close the full position when the stock closes at or above this line. At that reading, the market is pricing in roughly 11 years of base-case compounding instantly; the implied forward return falls below the long-term equity premium, and reallocation to a cheaper opportunity becomes the rational move. No re-entry is permitted within 90 days of an exit, to avoid anchoring to the price at which the position was sold.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>Two things are wobbling, and neither has crossed a line — yet.</p>
+<p><strong>Capital expenditure is accelerating, not normalising.</strong> The bet requires that spending eventually converts into cash generation. In the three months ending in March 2026, Amazon spent $43.2 billion on infrastructure — 78% more than the same period a year earlier — and management guided for further increases. The management definition of free cash flow (operating cash flow minus total capital expenditure, net of equipment incentives) compressed to just $1.2 billion for the twelve months ending March 2026, down from $25.9 billion in the prior year period. Exit condition four monitors whether this trajectory continues into 2027 and 2028 without the revenue acceleration to match. The acceleration is currently present (cloud-computing up 28%), so the exit condition does not fire. But the 2027 trajectory will be the decisive data point, and the pace of spending leaves no margin for error. Every future quarterly filing should be read first for this number.</p>
+<p><strong>Capital allocation has shifted from disciplined to aggressive.</strong> The thesis described capital allocation as "acceptable but not excellent." In the three months ending in March 2026, that characterisation was tested. No shares were repurchased under the existing $10 billion authorisation (with $6.1 billion remaining unused). Simultaneously, Amazon committed $15 billion to the OpenAI series-C round, entered a $35 billion equity commitment for future OpenAI shares, announced the $10.9 billion acquisition of Globalstar, made a further $5 billion commitment to Anthropic, and raised $53.8 billion of new long-term debt. These are large, concentrated bets on artificial-intelligence infrastructure, and they come with fixed future cash obligations regardless of how the underlying businesses perform. No exit condition has been crossed — there has been no confirmed value-destructive acquisition — but the bar is being tested. For more context on what could still go wrong, see <a href="#what-could-still-go-wrong">What Could Still Go Wrong</a>.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>The infrastructure capital does not convert.</strong> Amazon is spending at a rate that implies cloud-computing revenue must keep growing rapidly for years. If enterprise adoption of artificial-intelligence workloads slows, or if a competitor prices aggressively enough to take share, the economics of the investment do not recover on any reasonable timeline. This is the bear case — and in the bear scenario, the annualised return over the next three years is estimated at roughly -8%.</li>
+<li><strong>The Federal Trade Commission antitrust case results in a structural remedy.</strong> A court order requiring Amazon to divest its marketplace from its logistics network, or its cloud-computing division from its retail operations, would be an immediate exit regardless of the share price. The trial expected in autumn 2026 is an unresolved binary risk.</li>
+<li><strong>Tariffs and trade policy disrupt the marketplace.</strong> A significant share of Amazon's third-party marketplace revenue and advertising revenue comes from sellers based in China. Material shifts in tariff policy — or regulatory changes to the de-minimis import threshold that has historically favoured cross-border e-commerce — could reduce seller activity and advertising spend simultaneously.</li>
+<li><strong>The OpenAI and Anthropic bets fail to deliver.</strong> The combined carrying value of Amazon's stakes in OpenAI and Anthropic is roughly $89 billion — about $8 per share. If either business fails to establish durable commercial revenue at scale, the write-downs would be material, and the capital committed to those relationships would not generate a return.</li>
+<li><strong>Bezos insider-selling accelerates beyond the established pattern.</strong> The thesis treats the founder's concentrated ownership as an alignment signal. A single Form 144 filing disclosing a sale of more than 40 million shares would contradict that signal and triggers exit condition seven immediately.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>Amazon does not pay a dividend, so the dividend-yield field in the market-data snapshot is blank. This is expected behaviour for a non-payer and does not affect any valuation calculation.</p>
+<p>An owner-earnings yield is calculated by dividing Amazon's earnings from operations (operating cash flow minus capital expenditure, net of share-based compensation) by the company's market capitalisation. Throughout this analysis, that yield is computed on Amazon's narrow capital-expenditure definition as reported in the annual cash-flow statement, which excludes equipment acquired under financing arrangements. The management definition of free cash flow, which deducts all property purchases net of incentive proceeds, was just $1.2 billion for the twelve months ending 2026-03-31. The two definitions diverge materially in the current capital cycle. The narrow definition is used because it is the basis on which the exit conditions are written; those who prefer the management definition should treat the current share price as offering a significantly thinner margin of safety.</p>
+<p>The fair-value anchor of $176 (corresponding to a 6% yield on owner earnings) was calibrated before the current capital-expenditure cycle began. A sum-of-the-parts model, which capitalises post-normalisation earnings power, places the base-case intrinsic value at roughly $454 — a 61.3% divergence from the yield-based anchor. Both figures are informative; neither is definitively correct. The yield anchor is used in the standing orders and exit conditions; the larger figure represents the upside scenario in which the capital expenditure converts fully.</p>
+<ul>
+<li>Risk-free rate for AMZN read from SPY's Market-Data snapshot (per-holding field not present; SPY snapshot: 2026-08-10)</li>
+<li>PLAUSIBILITY: base-case return (+24.9%) sign is opposite to the fair-value gap direction (231 → 176). Valuation inputs may need refreshing — reported as computed.</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>The rules below are the pre-committed responses to each possible combination of conditions and share price. They were set in advance and apply without modification.</p>
+<ol>
+<li>
+<p><strong>If all conditions are working and no exit condition has fired:</strong> hold the position. No action. Continue compounding through the cloud-computing and advertising flywheel.</p>
+</li>
+<li>
+<p><strong>If one or more conditions are deteriorating but no exit condition has fired:</strong> do not add to the position. Re-run the thesis validation on the specific deteriorating driver — most commonly cloud-computing revenue growth or operating margin. Wait for the reading across two consecutive quarterly filings before deciding. One quarter of data is not enough.</p>
+</li>
+<li>
+<p><strong>If any written exit condition fires:</strong> exit the full position within 30 days. Do not average down. Record which exit condition fired and why. Note: cloud-computing revenue or margin exits require confirmation across two consecutive quarters before action; an antitrust structural remedy or an unexpected auditor change triggers an immediate exit without waiting for a second confirming read.</p>
+</li>
+<li>
+<p><strong>If the share price falls to the buy edge ($140) and conditions are working:</strong> confirm first that no exit condition has been triggered and that cloud-computing revenue growth is at or above 18%. If confirmed, add to the position in tranches over one to two quarters.</p>
+</li>
+<li>
+<p><strong>If the share price rises to the trim edge ($263):</strong> trim a quarter to a third of the position to harvest the premium while keeping the core holding. Re-evaluate the remaining position size after the trim.</p>
+</li>
+<li>
+<p><strong>If the share price rises to the exit edge ($421):</strong> exit the full position. At that price the market is pricing in roughly 11 years of base-case compounding instantly; redeploy the proceeds at the next cheap-edge crossing or into a cheaper alternative. No re-entry within 90 days.</p>
+</li>
+</ol>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IQQH — ETF Value Analysis (Buffett/Munger Lens) — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="index.html">← IQQH report</a></p>
+<h1 id="iqqh-etf-value-analysis-buffettmunger-lens">IQQH — ETF Value Analysis (Buffett/Munger Lens)</h1>
+<p><em>Snapshot: 2026-07-30T09:40:57.887597+00:00</em>. Source: Market-Data.json sidecar.</p>
+<blockquote>
+<p>A look-through analysis of the basket as a set of businesses, not as a vehicle. The vehicle side lives in <code>IQQH-Vehicle-Profile.md</code>. The verb decision lives in <code>14-Thesis-Validate</code>.</p>
+</blockquote>
+<hr />
+<h2 id="1-look-through-valuation">1. Look-Through Valuation</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Long-run S&amp;P 500 reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basket Trailing P/E</td>
+<td>21.77</td>
+<td>~16</td>
+</tr>
+<tr>
+<td>Basket Earnings Yield</td>
+<td>4.5935%</td>
+<td>~6.25%</td>
+</tr>
+<tr>
+<td>Distribution Yield</td>
+<td>0.78%</td>
+<td>~1.8%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read</strong>: The IQQH basket currently trades at a trailing P/E of 21.77×, implying an earnings yield of 4.59% — 166 basis points below the long-run S&amp;P 500 earnings-yield anchor of ~6.25% (P/E ~16). The clean-energy basket has historically commanded a premium multiple relative to broad-market indices given its thematic growth narrative and utility-heavy constituency, but at 21.77× the basket is priced above the broad-market long-run average without broad-market earnings diversification. Distribution yield of 0.78% is well below the S&amp;P 500's ~1.8% reference, reflecting that most constituent earnings are reinvested in capital expansion rather than distributed. CAPE is deferred — constituent earnings history is not exposed by yfinance for ETFs.</p>
+<blockquote>
+<p><strong>CAPE deferred</strong> — requires aggregated constituent earnings history not exposed by yfinance for ETFs. Defer to V2.</p>
+</blockquote>
+<hr />
+<h2 id="2-equity-risk-premium">2. Equity Risk Premium</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basket Earnings Yield</td>
+<td>4.5935%</td>
+</tr>
+<tr>
+<td>Risk-free rate (^TNX)</td>
+<td>4.622%</td>
+</tr>
+<tr>
+<td><strong>Equity Risk Premium</strong></td>
+<td><strong>−0.0285%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Judgment: CHALLENGES</strong> — ERP of −0.0285% is below the mixed_min threshold of 0.0% (config: confirm ≥ 2.0%, mixed 0.0–2.0%, challenges &lt; 0.0%). The basket currently yields fractionally less than the risk-free 10-year Treasury.</p>
+<p>The basket earnings yield of 4.59% versus the 10-year Treasury at 4.622% means investors accepting a diversified basket of clean-energy equities are receiving less income than from a risk-free US government bond — the regime Buffett describes as "cash is a better deal." Two important caveats: (1) the benchmark is ^TNX (USD 10-year), while IQQH is EUR-denominated; substituting the Bund (approximately 2.5% as of July 2026) would produce an ERP of approximately +2.1%, which shifts the judgment from CHALLENGES to CONFIRM under the config thresholds — this USD/EUR mismatch is documented in the thesis as a known, unresolved gap; (2) the primary investment rationale for IQQH is thematic, not a value-vs-risk-free trade, so the ERP signal carries lower decision weight here than it would for SPY or URTH. Exit condition (1) — EY above 8.0% for four consecutive quarters coinciding with persistent capital losses — is not engaged; the basket yield is well below the 8.0% trap threshold.</p>
+<hr />
+<h2 id="3-look-through-quality-top-10-deduped">3. Look-Through Quality (top-10 deduped)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Median ROE (top-10)</strong></td>
+<td><strong>14.87%</strong></td>
+</tr>
+<tr>
+<td>Weighted-Mean ROE (top-10)</td>
+<td>3.28%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Median ROE (14.87%) and weighted-mean ROE (3.28%) diverge by 11.59 percentage points — exceeding the 10 pp threshold. The divergence is not from buyback distortion but from two loss-making constituents: PLUG (ROE −128.79%) and SEDG (ROE −72.50%), which together represent ~5.5% of basket weight. Their negative book equity dramatically depresses the weighted mean. The median is the load-bearing read; the weighted mean is distorted and overstates basket-level weakness.</p>
+</blockquote>
+<p><strong>Top-10 constituent ROE table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Weight</th>
+<th>ROE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BE</td>
+<td>Bloom Energy Corp</td>
+<td>14.76%</td>
+<td>1.29%</td>
+</tr>
+<tr>
+<td>FSLR</td>
+<td>First Solar Inc</td>
+<td>8.41%</td>
+<td>18.44%</td>
+</tr>
+<tr>
+<td>NXT</td>
+<td>Nextpower Inc</td>
+<td>7.31%</td>
+<td>29.57%</td>
+</tr>
+<tr>
+<td>600900.SS</td>
+<td>China Yangtze Power Co Ltd</td>
+<td>5.77%</td>
+<td>15.63%</td>
+</tr>
+<tr>
+<td>ENPH</td>
+<td>Enphase Energy Inc</td>
+<td>4.87%</td>
+<td>14.11%</td>
+</tr>
+<tr>
+<td>VWS.CO</td>
+<td>Vestas Wind Systems AS</td>
+<td>3.11%</td>
+<td>23.20%</td>
+</tr>
+<tr>
+<td>PLUG</td>
+<td>Plug Power Inc</td>
+<td>2.85%</td>
+<td>−128.79%</td>
+</tr>
+<tr>
+<td>SEDG</td>
+<td>SolarEdge Technologies Inc</td>
+<td>2.64%</td>
+<td>−72.50%</td>
+</tr>
+<tr>
+<td>EQTL3.SA</td>
+<td>Equatorial SA</td>
+<td>2.55%</td>
+<td>6.94%</td>
+</tr>
+<tr>
+<td>SUZLON.BO</td>
+<td>Suzlon Energy Ltd</td>
+<td>2.52%</td>
+<td>39.37%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read</strong>: The median ROE of 14.87% clears the custom CONFIRM floor of 10.0% set for this holding (deliberately lowered from the broad-market default of 20% to reflect the structurally lower return-on-equity profile of clean-energy utilities and equipment manufacturers). Several top-10 names are genuine capital compounders: Nextpower (29.57%), Suzlon (39.37%), and Vestas (23.20%) earn well above cost of equity. The largest constituent, Bloom Energy (14.76% weight, 1.29% ROE), earns barely above zero on equity. The two distressed names (PLUG, SEDG) are a persistent basket feature, not new deterioration. On balance, the median signals adequate underlying earning power for the thematic thesis, though the basket quality profile is heterogeneous and would not clear the broad-market CONFIRM bar of 20%.</p>
+<hr />
+<h2 id="4-margin-of-safety">4. Margin of Safety</h2>
+<table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>Yield</th>
+<th>P/E equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buy band edge</td>
+<td>6.25%</td>
+<td>16.0</td>
+</tr>
+<tr>
+<td>Fair value</td>
+<td>5.00%</td>
+<td>20.0</td>
+</tr>
+<tr>
+<td>Trim band edge</td>
+<td>4.00%</td>
+<td>25.0</td>
+</tr>
+<tr>
+<td><strong>Current</strong></td>
+<td><strong>4.5935%</strong></td>
+<td><strong>21.77</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Position</strong>: WITHIN BAND — basket earnings yield of 4.5935% sits between the trim edge (4.00%, P/E 25×) and the fair-value anchor (5.00%, P/E 20×). The basket is priced above the fair-value yield threshold (i.e., the earnings yield is below 5.00%, equivalent to paying above the 20× fair-value P/E), but has not reached the trim edge.</p>
+<p><strong>Margin vs. fair-value yield</strong>: −0.4065% absolute (basket EY is 0.41 pp below the 5.00% fair-value yield, equivalent to trading approximately 8.1% above intrinsic fair value on the earnings-yield frame). This is a moderately expensive reading within the hold band. The EY bands are explicitly flagged in config as inherited from SPY/URTH/MWEQ and not calibrated to the clean-energy basket's structural characteristics; the primary holding rationale is thematic, and the OEY framework is tracked for portfolio consistency rather than as the primary decision signal.</p>
+<hr />
+<h2 id="5-owner-perspective-buffett-frame">5. Owner Perspective (Buffett Frame)</h2>
+<p><em>"Would Berkshire deploy cash into this basket today?"</em></p>
+<p>Berkshire would not deploy fresh capital into IQQH at the current price. The basket earnings yield of 4.5935% is fractionally below the risk-free 10-year Treasury at 4.622% (ERP = −0.0285%), meaning the equity premium over risk-free is negative on the USD-benchmarked frame. Even granting the Bund-adjusted ERP of approximately +2.1%, the margin is thin for a thematic basket with meaningful single-stock concentration: the top constituent (Bloom Energy) represents 14.76% of the basket at a 1.29% ROE, and two loss-making constituents (PLUG, SEDG) are material enough to depress the weighted-mean ROE to 3.28%. Buffett's framework requires both an adequate yield premium over risk-free and a high-quality underlying business base; the basket does not meet either test cleanly on USD benchmarks. The median ROE of 14.87% tells a better story for the basket's core names but is still below typical Berkshire quality bars. The correct holding rationale for IQQH is not value-vs-risk-free but thematic conviction in the decarbonisation capital-expenditure cycle sustained by regulatory mandates (EU Green Deal, US IRA) and the structural cost advantage of renewables over a ~10-year horizon.</p>
+<hr />
+<h2 id="6-bear-base-bull-on-5-year-forward-return">6. Bear / Base / Bull on 5-Year Forward Return</h2>
+<p>§6 scenarios follow <code>Pipeline-Conventions.md §13</code> — bear requires both operating trajectory below trend AND exit multiple below fair value simultaneously. The bear EPS is sector-weighted (data-driven, not a flat offset), and the bear terminal P/E is ERP-anchored. These are not re-rating scenarios.</p>
+<p>Computed by <code>src/analyze/compute_etf_forward_returns.py IQQH</code> (run 2026-07-30).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>EPS growth</th>
+<th>Terminal P/E</th>
+<th>Multiple change (annualised)</th>
+<th>Dividend yield</th>
+<th><strong>Forward return</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>−17%</td>
+<td>15.0</td>
+<td>contraction from 21.77×</td>
+<td>0.78%</td>
+<td><strong>−23.81%</strong></td>
+</tr>
+<tr>
+<td>Base</td>
+<td>8%</td>
+<td>22.0</td>
+<td>modest expansion from 21.77×</td>
+<td>0.78%</td>
+<td><strong>8.99%</strong></td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>10%</td>
+<td>30.0</td>
+<td>expansion from 21.77×</td>
+<td>0.78%</td>
+<td><strong>17.40%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The bear EPS growth of −17.4% (<code>bear_eps_growth_pct</code>) is data-driven from the basket's sector composition: the cyclicality score is 0.9978 (near-unity), reflecting a blend of Industrials (31.24%), Technology (33.81%), and Utilities (33.47%). The top-10 concentration adjustment fires (top-10 sum = 54.79%, above the 30% threshold), adding to the EPS decline. The bear terminal P/E of 15.0× (<code>terminal_pe_bear</code>) is config-specified — deliberately set at 15 rather than the ERP-anchored value to reflect clean-energy multiples' historically elevated and volatile range. The script emits a warning: "config.forward_return.terminal_pe_bear=15.0 overrides ERP-anchored value" — the config P/E of 15× is more generous than the ERP-anchored value would be at current risk-free rates; the bear multiple may be optimistic. In the base case, EPS grows at 8% annually (<code>base_eps_growth_pct</code>) with a terminal P/E of 22× — a modest expansion from today's 21.77×, consistent with no structural re-rating. Both bear inputs are sourced directly from <code>forward_returns</code> JSON.</p>
+<blockquote>
+<p><strong>Script warning</strong>: "config.forward_return.terminal_pe_bear=15.0 overrides ERP-anchored value."</p>
+</blockquote>
+<p><strong>Read</strong>: The scenario spread from −23.81% to +17.40% over five years is exceptionally wide, reflecting genuine uncertainty in the clean-energy thematic outcome. The base case of +8.99% annualised is supported by the 8% EPS growth assumption (decarbonisation capex tailwind) and a terminal P/E of 22×, implying minimal multiple change from today. The bear case requires simultaneous EPS contraction of −17.4% and multiple compression to 15× — both a capex-cycle reversal and re-rating event. The bull case at +17.40% requires 10% EPS growth and re-rating to 30×, which is aggressive against a 4.6% risk-free rate. Even the base case does not clear a particularly high return bar (roughly 9% annualised), and the bear case is severe. The basket is best understood as a directional thematic bet on decarbonisation policy durability rather than a conventional margin-of-safety holding.</p>
+<hr />
+<h2 id="7-data-gaps">7. Data Gaps</h2>
+<p>No data gaps in this snapshot (<code>missing_fields: []</code>).</p>
+<hr />
+<h2 id="8-ranking-inputs-machine-readable-closing-block">8. Ranking Inputs (machine-readable closing block)</h2>
+<p>Consumed deterministically by <code>src/portfolio/extract_ranking_inputs.py</code> for the portfolio-level conviction ranking. The numeric fields are restated from §6 (already computed); <code>quality_tier</code> is bucketed by <code>src/portfolio/extract_ranking_inputs.py::compute_etf_quality_tier()</code> from the sidecar's <code>asset_classes_pct</code>, <code>sector_weightings_pct</code>, and <code>top_holdings[].weight_pct</code>.</p>
+<p><strong>Note:</strong> <code>quality_tier</code> feeds the ranking composite via the High/Medium/Low → 1.20/1.00/0.80 dial in <code>ranking_math.QUALITY_TIER_WEIGHTS</code>. Under the "durability of the cash-flow base" frame, High = broadly diversified or backed by sovereign-IG credit; Low = single-theme/sector concentration or sub-IG credit. The Python helper is canonical; the YAML block below is advisory/display.</p>
+<p><strong>Note on bear/bull fields:</strong> <code>Extract-Ranking-Inputs.py</code> only reads <code>forward_irr_base_pct</code> for ETFs; bear/bull are ignored by the ranking formula. Emitted for display completeness only — copied directly from the §6 table.</p>
+<pre><code class="language-yaml">ranking_inputs:
+  quality_tier: Low
+  quality_tier_basis: &quot;Equity ETF with stockPosition 99.54% ≥ 80%; only 3 active sectors ≥ 5% (Industrials 31.24%, Technology 33.81%, Utilities 33.47%) — active_sectors_5pct=3 &lt; 5 → Low tier (single-theme thematic concentration)&quot;
+  forward_irr_bear_pct: -23.81
+  forward_irr_base_pct: 8.99
+  forward_irr_bull_pct: 17.4
+</code></pre>
+<hr />
+<h2 id="end-of-value-analysis-etf">End of Value-Analysis-ETF</h2>
+</main>
+</body>
+</html>

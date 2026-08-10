@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Europe 600: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-10 overview</a></p>
+<h1 id="europe-600-the-bet-still-works">Europe 600: The Bet Still Works</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- asset_type='etf' — use Compute-Etf-Forward-Returns.py for ETFs; bonds have no equity IRR
+- PORTFOLIO: - PAUSCHAL-FALLBACK: MEUD</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-10 · Latest filing 2026-07-30.</em></p>
+<p>The bet is working. All six thesis conditions are either confirmed or silent; no exit trigger has been pulled. At €315, the price sits in the middle of the hold band, at fair value — close to but not below the €306 anchor that would signal a neutral read; <a href="#the-share-price">the Share Price</a> section runs through the detail. The one condition worth watching is the equity risk premium, which sits at a thin +0.72 percentage points above the 10-year Treasury yield; positive, but well short of the 2.0 percentage-point floor the thesis treats as a comfortable margin.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at €240. Trim at €374. Exit at €561.</p>
+<p>At €240, the long-run total return is about 12% a year. At today's €315, about 10% a year. Both figures are steady-state estimates over a horizon of many years — they assume the basket keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy               current        trim                                       exit
+€240              €315           €374                                       €561
+├─────────────────┼──────────────┼─────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next five years, if the price moves to the fair-value central estimate, returns work out to bear −18.1%, base +4.2%, bull +10.3% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear                                           expected   base              bull
+-18.1%                                         +0.2%      +4.2%           +10.3%
+├──────────────────────────────────────────────┼──────────┼────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 50% base, 25% bull): about +0.2% a year over the next five years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Europe 600 scores 0.96, ranking 14 of 20 active holdings by this measure — it sits in the lower half of the portfolio, where a number of diversified index funds cluster.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= (4.24% − 0.53% − 2.91%)
+  &nbsp;&nbsp;= +0.80%
+  &nbsp;&nbsp;= <strong>0.96</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> Index funds are not assigned a moat tier; the weight is always one.</p>
+<p><strong>Expected return: 4.24%.</strong> The expected return is the base-case forward return of 4.24% a year over five years. Index funds and bonds use their contractual or index-implied return directly — no scenario blend is applied.</p>
+<p><strong>Hurdle rate: 2.91%.</strong> The hurdle rate is 2.91% — the 0.91% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing); no equity-risk premium is added for a diversified fund.</p>
+<p>A score of 0.96 places Europe 600 in the lower half of the portfolio, slightly ahead of the broader All World fund but below holdings where a concentrated thesis or higher forward return produces a stronger signal.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The basket's earnings yield stands at 5.35%, a touch below the 5.50% fair-value anchor used as the long-run centre of the STOXX Europe 600's historical price range. The gap is small — 15 basis points (where a basis point is one-hundredth of a percentage point) — and the basket sits well clear of the 4.50% trim trigger, which would require another 85-basis-point compression in the yield before any reducing action would be called for. No exit condition has been triggered; the current reading falls comfortably in the middle of the hold band.</p>
+<p>The one live wobble is the equity risk premium — the spread between the basket's earnings yield and the 10-year US Treasury yield. At +0.72 percentage points (basket yield 5.35% minus Treasury yield 4.62%), the premium is positive, meaning the basket still pays more than the government bond. But the thesis sets 2.0 percentage points as the floor for a comfortable read, and the current premium falls 1.28 percentage points short of that line. The condition for exit — two consecutive quarters of a negative premium — is not close to being triggered; all recorded snapshots over fifteen periods have shown a positive premium. It is compressing, however: the reading at the prior snapshot was +0.83%, and the one before that slightly higher still, suggesting that rising Treasury yields and a modest expansion in the basket's price-to-earnings multiple are together narrowing the buffer. The read is mixed rather than challenged, and nothing here changes <a href="#the-bottom-line">the bottom line</a>.</p>
+<p>On the vehicle side, every guardrail is intact. The annual expense ratio remains at 0.07% — unchanged, eight basis points below the 0.15% ceiling at which the thesis calls for exit. ASML Holding, the largest single holding in the basket, stands at 5.03% of the fund, comfortably inside the 8.0% ceiling above which the thesis treats concentration as a structural signal. Asset-under-management data is not available from the automated pipeline for the MEUD share class, but the Amundi STOXX Europe 600 complex has historically managed roughly €13–15 billion — well above the €1 billion floor the thesis uses as a fund-closure risk threshold.</p>
+<h2 id="about-the-fund">About the Fund</h2>
+<p>Europe 600 tracks the STOXX Europe 600 Index — a free-float, cap-weighted index of approximately 600 large-, mid-, and small-cap companies spread across 17 European developed-market countries. Constituents are rebalanced quarterly by STOXX Ltd., a joint venture between Deutsche Börse and SIX Group. The STOXX 600 spans the full European developed-market equity universe: it is broader than a pure blue-chip index (it runs well beyond the largest 50 or 100 names) and more diversified than a single-country fund.</p>
+<p>The fund is operated by Amundi Luxembourg S.A., Europe's largest asset manager, and is structured as an accumulating UCITS fund — dividends paid by the underlying companies are retained within the fund rather than distributed, so all return accrues to the net asset value. The legal structure is Luxembourg-domiciled, which means no K-1 tax form is issued; the tax treatment for each holder depends on their home country. Whether Amundi MEUD holds UK Reporting Fund status has not been verified. Annual cost is 0.07% in total expense ratio. Tracking difference and tracking error data are not available from the current pipeline, as the Amundi factsheet uses a STOXX layout that the automated parser has not yet been configured to read.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The holding exists to provide European developed-market equity exposure as a structural counterweight to the heavy US weight that dominates global cap-weighted funds. European equities have historically traded at lower price-to-earnings multiples than US equities, producing a structurally higher basket earnings yield. European economic cycles, currency dynamics, and sector composition — more Financial Services and Industrials, less Technology mega-cap — differ meaningfully from those in the United States. This is a long-term allocation to a different risk factor, not a tactical trade on European outperformance. Six conditions must continue to hold:</p>
+<ol>
+<li><strong>Equity risk premium remains positive.</strong> The basket earnings yield must exceed the 10-year risk-free rate, with exit triggered by two consecutive quarters of a negative premium — meaning the basket no longer compensates equity-holders over the sovereign bond.</li>
+</ol>
+<p><em>Latest reading:</em> +0.72 percentage points as of 2026-07-30. All fifteen recorded snapshots have shown a positive premium; the two-consecutive-quarters exit condition is not engaged.</p>
+<ol>
+<li><strong>Annual expense ratio remains below 0.15%.</strong> The current total expense ratio of 0.07% should never approach 0.15% for a full-replication index fund of this scale; any increase signals a business model change or regulatory headwind.</li>
+</ol>
+<p><em>Latest reading:</em> 0.07% as of 2026-07-30. Eight basis points of headroom remain below the exit trigger.</p>
+<ol>
+<li><strong>Assets under management remain above €1 billion.</strong> European funds below this threshold face elevated closure risk; a sustained drawdown to this floor is a vehicle-survival signal, not a market-price signal.</li>
+</ol>
+<p><em>Latest reading:</em> Not available from the automated pipeline as of 2026-07-30. The Amundi STOXX Europe 600 complex has historically managed approximately €13–15 billion per Amundi's product page — far above the floor. The automated guardrail cannot confirm this numerically and shows unknown status.</p>
+<ol>
+<li><strong>Top single-holding weight stays below 8%.</strong> The STOXX 600 is diversified by construction; a weight above 8% for a single name signals a structural concentration event or a methodology change.</li>
+</ol>
+<p><em>Latest reading:</em> ASML Holding at 5.03% as of 2026-07-30, with 2.97 percentage points of headroom before the trigger.</p>
+<ol>
+<li><strong>STOXX 600 index methodology remains stable.</strong> A shift from free-float cap-weighting to factor-weighting, a change in the eligible universe, a merger with another index family, or Amundi transferring the mandate to a different index provider would each constitute a material methodology change.</li>
+</ol>
+<p><em>Latest reading:</em> No automated signal of methodology drift or sponsor restructuring as of 2026-07-30. Monitored manually via STOXX Ltd. announcements.</p>
+<ol>
+<li><strong>Median look-through return on equity of the top ten holdings stays above 15%.</strong> Below 15%, the visible quality tier of the basket has deteriorated; the 15% threshold is set lower than the equivalent test for a US fund to account for the structural mix of European banks and utilities.</li>
+</ol>
+<p><em>Latest reading:</em> Median return on equity for the deduped top ten is 18.79% as of 2026-07-30, 3.79 percentage points above the 15% floor. Weighted-mean return on equity is 29.01%, pulled up substantially by ASML's 53.94% figure — a genuine quality signal from its monopolistic position in semiconductor lithography rather than a book-value distortion.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At €315, the share price sits 2.9% above the fair-value anchor of €306. The underlying basket earnings yield is 5.35%, compared with the 5.50% yield that corresponds to fair value — a gap of 15 basis points. In practical terms, the basket is priced marginally more expensively than the long-run STOXX 600 mid-range, but not by enough to warrant any action. The trim trigger requires the yield to fall to 4.50% — equivalent to a basket price of roughly €374 — which is 85 basis points above today's reading. The buy trigger requires the yield to rise to 7.00% — equivalent to a basket price of roughly €240 — which is 165 basis points below today's reading. Both edges are distant.</p>
+<p>The current price-to-earnings ratio of 18.70 sits in the upper-middle of the STOXX 600's historical range of roughly 12 to 22 times earnings. European equities have re-rated since the 2022–2023 trough but have not reached levels that would historically signal stretched valuations. The net asset value of the fund as of the last available reading was €317.65, and the market price of €319.10 (per the Vehicle-Profile snapshot) trades at a 0.46% premium — well inside the 3.0% NAV-deviation tolerance that the thesis uses as a vehicle-integrity guardrail.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The pre-committed order framework (detailed in <a href="#the-rules">the Rules</a>) translates the basket-yield bands into three standing orders and two price alerts.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at €306, the fair-value anchor. Crossing this line means the price has returned to a neutral yield reading; no action follows, but a fresh review of the conditions is warranted.
+- A second alert at €240, the cheap-edge. Crossing this line arms the buy order below; before adding, a current re-validation should confirm the conditions are still intact.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at €240. Adding in tranches is called for once the price closes at or below this line and the conditions are still intact. At €240, the basket earnings yield would reach 7.0% — historically cheap territory for European developed-market equities.
+- A standing trim order at €374. Trimming 25–33% of the position is called for when the price closes at or above this line, to harvest the premium while keeping the core allocation.
+- A standing exit order at €561. Closing the full position is called for when the price closes at or above this line. At €561, the basket earnings yield would fall to 3.0% — fully priced against the risk-free rate, and consistent with a market that has priced in years of nominal growth instantly.</p>
+<p>Vehicle-integrity breaches — an expense-ratio breach, an assets-under-management breach, a top-holding concentration breach, or a confirmed index-methodology change — and the named exit-condition trigger are independent additional paths to exit, operating separately from the price-level standing orders above.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The equity risk premium is the only live wobble. At +0.72 percentage points, the spread between the basket earnings yield (5.35%) and the 10-year US Treasury yield (4.62%) is positive but thin. The thesis sets 2.0 percentage points as the level at which the premium is deemed comfortable; the current reading falls 1.28 percentage points short of that line. The premium has compressed slightly from the prior snapshot (+0.83%), as Treasury yields edged upward and the basket's price-to-earnings multiple expanded modestly. Nothing here crosses any threshold in <a href="#the-case-for-the-bet">the case for the bet</a>: exit condition (1) requires two consecutive quarters of a negative premium, not a low positive one, and no such persistence has been recorded. The wobble is real but the line has not been approached.</p>
+<p>No other condition is wobbling. The vehicle guardrails are uniformly clean. The quality of the visible top of the basket — measured by the median return on equity of the top ten holdings — is well above its floor. The methodology and sponsor are stable.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<p>The bear case for this fund requires two things to happen simultaneously: earnings across the basket contract below their long-run trend, and the market's willingness to pay for those earnings (the price-to-earnings multiple) falls below what the thesis treats as fair value. A partial version — say, a multiple contraction without an earnings decline, or a temporary earnings dip that recovers quickly — would be a drawdown, not the bear case as defined here.</p>
+<ul>
+<li><strong>European recession + multiple contraction.</strong> The basket's sector composition tilts toward cyclical industries — Financial Services (25% of the fund), Industrials (20%), Consumer Cyclical (7%), and Energy (5%) together account for more than half the portfolio. In a synchronised European recession, earnings in these sectors can contract materially. The bear scenario in the forward-return analysis assumes an 11.1% fall in basket earnings (driven by sector-weighted cyclicality), combined with a reversion of the price-to-earnings multiple toward 13 times earnings — roughly at the Global Financial Crisis trough for European equities — producing an annualised return of about −18% over five years.</li>
+<li><strong>Rising risk-free rates eliminating the equity premium.</strong> The equity risk premium is already thin at +0.72 percentage points. A further rise in 10-year government bond yields, or a further compression of the basket earnings yield from multiple expansion, could push the premium negative. Two consecutive quarters of a negative premium trigger exit condition (1).</li>
+<li><strong>Expense-ratio increase.</strong> If Amundi raises the total expense ratio above 0.15%, the thesis treats this as a business-model change and calls for exit regardless of valuation.</li>
+<li><strong>Index-methodology change.</strong> If STOXX Ltd. shifts the STOXX 600 from free-float cap-weighting to a factor-weighted or fundamentals-weighted methodology, the risk factor the holding was purchased for changes. Exit follows.</li>
+<li><strong>Single-name concentration event.</strong> If a merger, acquisition, or sustained outperformance pushes a single constituent above 8% of the basket, the thesis treats this as a structural concentration signal incompatible with broad diversification.</li>
+</ul>
+<p>(For this fund, exit fires when the share price reaches the exit edge at €561, when a vehicle-integrity condition breaches, or when the named equity-risk-premium trigger fires for two consecutive quarters — any of three paths.)</p>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>Two analysis files that the validation pipeline would normally use to assess political and competitive risk for individual companies are not applicable to a diversified index fund and have not been produced: the Political-Exposure file and the Competition file. This is a structural absence, not a gap in coverage, because a basket of 600 companies does not carry the single-issuer political risk that these analyses are designed to surface.</p>
+<p>Assets under management cannot be confirmed numerically from the automated pipeline. The data feed does not return a fund-size figure for the MEUD.PA listing. The Amundi product page documents the STOXX Europe 600 complex at approximately €13–15 billion, and this figure is used in the narrative above, but it is not sourced from the automated sidecar and does not feed the guardrail calculation. The guardrail shows unknown status as a result.</p>
+<p>Tracking difference and tracking error — the two metrics that quantify how closely the fund has followed its index in practice — are not available. The Amundi factsheet uses a STOXX layout that the current automated pipeline parser does not match; populating these fields requires a dedicated parser extension.</p>
+<p>The risk-free rate used in the equity-risk-premium calculation is the 10-year US Treasury yield (4.62% at the time of the last validation) rather than a euro-zone benchmark. A German Bund yield would be the more natural comparison for a EUR-denominated fund, but the automated pipeline has not verified that the Deutsche Börse benchmark (DE10YT=RR) is accepted by the data provider used here.</p>
+<p>A Pauschal-Steuer fallback is in use for the tax-drag calculation in the score formula: because the annual accumulation yield (Ausschüttungsgleiche Erträge, a German tax concept) has not been populated from the OeKB Meldedaten, a proxy of 60% of the gross dividend yield is used. The score is therefore an approximation; populating the AGE figure from the OeKB source would give an exact drag figure.</p>
+<h2 id="the-rules">The Rules</h2>
+<p>If the thesis is confirmed — all conditions intact, basket priced within the hold band — hold the position. The European basket is reasonably priced, the equity risk premium is positive, and the vehicle is intact. Maintain the allocation as a counterweight to the US tilt in the rest of the portfolio.</p>
+<p>If the thesis is weakened — any driver reads as challenged — do not add. Re-validate after the next quarter. If the equity risk premium compresses below 0.5 percentage points for two quarters with no recovery catalyst, consider reducing the allocation in favour of the global cap-weight core or the risk-free alternative.</p>
+<p>If the thesis is broken — a vehicle-integrity condition breaches, or the equity risk premium turns negative for two consecutive quarters — exit. Move the proceeds to the global cap-weight core fund or to the risk-free alternative.</p>
+<p>If the share price falls to the buy band — the basket earnings yield reaches or exceeds 7.0%, equivalent to a price at or below €240 — add to the position. At that yield, the basket is in historically cheap territory for European developed-market equities; increase the allocation decisively.</p>
+<p>If the share price rises to the trim band — the basket earnings yield falls to or below 4.50%, equivalent to a price at or above €374 — trim 25–33%. At that yield, the basket is meaningfully expensive against the risk-free rate; harvest gains and redeploy to the risk-free alternative or to undervalued holdings.</p>
+<p>If the share price rises to the exit band — the basket earnings yield falls to or below 3.0%, equivalent to a price at or above €561 — exit. At that yield, the basket is fully priced against the risk-free rate; redeploy the proceeds to the risk-free alternative or to a holding that still meets the value test.</p>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+  <li><a href="vehicle-profile.html">Vehicle profile</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ULVR — Value Analysis — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="index.html">← ULVR report</a></p>
+<h1 id="ulvr-value-analysis">ULVR — Value Analysis</h1>
+<p><em>Unilever PLC | LSE: ULVR.L | Analysis date: 2026-07-21</em>
+<em>Sources: ULVR-Financial-Brief.md (primary), ULVR-Financial-Analysis.md (supplemental), ULVR-Market-Data.md, ULVR-Fair-Value-Bands.json, ULVR-Political-Exposure.md</em>
+<em>Currency note: ULVR reports in EUR (ESEF/IFRS). Market price in GBp. All valuation in USD unless stated.</em></p>
+<hr />
+<h2 id="section-1-value-investors-verdict">SECTION 1 — VALUE INVESTOR'S VERDICT</h2>
+<h3 id="11-circle-of-competence-check">1.1 Circle of Competence Check</h3>
+<p>Unilever sells branded everyday consumer goods — soap, shampoo, mayonnaise, laundry detergent — to roughly a third of humanity every day. The economics are simple: brand equity and distribution scale allow the company to charge a premium over private-label alternatives; repeat purchase behaviour compounds that premium across decades. The business model has been structurally stable for a century: buy inputs, manufacture at scale, distribute through proprietary last-mile networks (190+ countries), and invest a portion of gross profit back into brand building. The only meaningful complexity in the current period is the portfolio-simplification cycle: the Ice Cream demerger (completed December 2025) and the McCormick Foods transaction (signed March 2026, expected mid-2027 close) are introducing short-term revenue base changes that complicate year-on-year comparisons without altering the underlying return mechanism.</p>
+<p><strong>Verdict: Within circle.</strong> FMCG is one of Buffett's preferred industries. The earning power in ten years is predictable within a reasonable range: absent structural moat erosion (the risk to monitor), Unilever's power brands and distribution footprint will still be generating EUR 7–10bn in operating cash flow a decade from now. Conviction is not reduced by this assessment.</p>
+<h3 id="12-business-quality-scorecard">1.2 Business Quality Scorecard</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Score (1–5)</th>
+<th>Primary Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moat durability (can advantages be sustained for 10+ years?)</td>
+<td>4</td>
+<td>Operating margin held 16.6–17.9% across 5 years including a EUR 10bn commodity spike (FY2022); ROIC recovered to 14.7% FY2025 from 11.5% trough (Financial-Analysis §3.3)</td>
+</tr>
+<tr>
+<td>Earnings power consistency (predictable, not episodic)</td>
+<td>4</td>
+<td>Operating income EUR 8.7–10.8bn in a tight band across EUR 50–60bn revenue range; accruals ratio negative or near-zero FY2023–FY2025 (Financial-Analysis §5.6)</td>
+</tr>
+<tr>
+<td>Pricing power (can the company raise prices without losing volume?)</td>
+<td>4</td>
+<td>FY2022 revenue spike to EUR 60bn from commodity price pass-through; margin held at 17.9% through that cycle, confirming pricing power (Financial-Analysis §5.1)</td>
+</tr>
+<tr>
+<td>Capital efficiency (high ROIC, low CapEx requirements)</td>
+<td>3</td>
+<td>ROIC 14.7% vs EUR WACC ~8%, spread of ~6pp; CapEx not tagged in ESEF — estimated ~3% of revenue (maintenance); moderate capital intensity for manufacturing-based FMCG (Financial-Analysis §5.3)</td>
+</tr>
+<tr>
+<td>Balance sheet conservatism (low debt, financial flexibility)</td>
+<td>2</td>
+<td>Net debt ~USD 23.3bn (Market-Data §5); estimated Net Debt/EBITDA ~2.5–3×; current ratio 0.79×; leverage is manageable for investment-grade FMCG but limits balance-sheet flexibility (Financial-Analysis §5.2)</td>
+</tr>
+<tr>
+<td>Management integrity (honest, shareholder-oriented)</td>
+<td>3</td>
+<td>No restatements in 5-year XBRL series; accruals ratio negative over FY2023–FY2024; ESEF narrative extraction failed so tone analysis not available; FY2025 net income spike correctly reflects disposal gains, not earnings manipulation (Financial-Analysis §4.2)</td>
+</tr>
+<tr>
+<td>Management rationality (intelligent capital allocation)</td>
+<td>3</td>
+<td>Financing CF consistently EUR −6.8 to −8.9bn annually = dividends plus buybacks; Ice Cream demerger and McCormick disposal concentration strategy is rational; past portfolio build (GSK bid failure) was not (Financial-Analysis §4.3)</td>
+</tr>
+<tr>
+<td>Margin of safety (price paid vs. conservative intrinsic value)</td>
+<td>2</td>
+<td>OE-DCF at 8% WACC yields $60.29/share vs current $62.31; essentially zero margin of safety at base discount rate; EPV at $34.93 shows zero MoS at current price (§5.1–5.3 below)</td>
+</tr>
+<tr>
+<td><strong>Overall Quality Score</strong></td>
+<td><strong>25/40</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-investment-stance">1.3 Investment Stance</h3>
+<p><strong>Hold / Watch</strong> — Conviction: <strong>Medium</strong></p>
+<p>Unilever is a genuinely high-quality wide-moat business whose current price reflects fair value, not a bargain. The single condition that would cause a reversal to Buy: price declines to approximately GBX 3,370 (USD 45), delivering a 25% margin of safety relative to the OE-DCF intrinsic value at an 8% discount rate. The single condition that would cause a reversal to Sell/Avoid: any two of the seven exit conditions in the config.yaml thesis fire simultaneously — operating margin below 14%, ROIC below 10%, Power Brand USG below 1.5%, or owner earnings below EUR 5.5bn for two consecutive fiscal years.</p>
+<hr />
+<h2 id="section-2-economic-moat">SECTION 2 — ECONOMIC MOAT</h2>
+<h3 id="21-moat-type-and-source">2.1 Moat Type and Source</h3>
+<p><strong>Intangible assets — Present and strong.</strong> Dove, Hellmann's, Magnum, Knorr, Axe/Lynx are individual brands with pricing premiums over private-label alternatives sustained across decades. Operating margin of 16.6–17.9% over five years, including the most severe commodity inflation episode in a decade, is the evidence. A commoditised business — one without brand pricing power — would have seen margins compress to 12–14% in FY2022. Unilever held 17.9%. Brand investment sustains the asset; it is the primary moat source. (Financial-Analysis §3.3)</p>
+<p><strong>Switching costs — Absent.</strong> Consumers face no switching cost to a private-label alternative. Brand loyalty in FMCG is habitual, not contractual; it is durable but not locked in.</p>
+<p><strong>Network effects — Absent.</strong> FMCG products do not exhibit network effects.</p>
+<p><strong>Cost advantages — Present but narrow.</strong> Scale in procurement (EUR 50bn revenue base), manufacturing, and logistics creates structural cost advantages that are real but reproducible at the margin by P&amp;G or Nestlé. Not a primary moat source; a secondary reinforcement.</p>
+<p><strong>Efficient scale — Present and strong.</strong> The proprietary last-mile distribution network across 190+ countries — particularly in emerging markets — cannot be replicated quickly or cheaply. Building a multi-country EM distribution network requires decades of investment, local relationships, and regulatory navigation. This is Unilever's second primary moat source and the most durable: it creates structural barriers even where brand premiums are under pressure. (Financial-Analysis §3.1)</p>
+<p><strong>Primary moat conclusion:</strong> Dual-source — brand equity + EM distribution network. Both are "Present and strong." The dual-source nature is the key reason for a Wide designation rather than Narrow; neither source alone would be sufficient, but together they are reinforcing.</p>
+<h3 id="22-moat-durability-the-ten-year-test">2.2 Moat Durability — The Ten-Year Test</h3>
+<p><strong>ROIC trend:</strong> FY2023 13.3% → FY2024 11.5% → FY2025 14.7%. The FY2024 trough coincided with elevated goodwill impairment and restructuring costs, not structural moat erosion. The recovery to 14.7% in one year — while simultaneously executing two major disposals — is strong evidence of underlying moat durability. ROIC has remained above estimated EUR WACC (8–9%) throughout the 3-year observable window. (Financial-Analysis §5.4)</p>
+<p><strong>Structural threats:</strong> Private-label penetration in DM foods is the primary structural risk. It is relevant for the Nutrition segment (being disposed of via McCormick) and limited for Personal Care and Beauty, where brand stickiness is higher. DTC beauty brand proliferation is structural but has not yet shown up in Unilever's operating margin. (Financial-Analysis §3.5)</p>
+<p><strong>Ten-Year Test verdict: Stable.</strong> The EM distribution network is a structural asset that will still be an advantage in ten years. The brand portfolio is actively being repositioned toward higher-moat segments (Beauty/Personal Care) through the McCormick disposal. Private-label risk in foods is real but declining in relevance for the post-McCormick portfolio. No structural technology disruption threatens the consumer-staples category at the scale that matters for this holding.</p>
+<h3 id="23-pricing-power-test">2.3 Pricing Power Test</h3>
+<p><strong>Evidence for pricing power:</strong>
+- FY2022 revenue rose from EUR 52.4bn to EUR 60.1bn (+14.5%) while operating margin held at 17.9% — Unilever passed through extraordinary commodity cost inflation with zero net margin impact. This is the single most important empirical fact in the dataset. (Financial-Analysis §5.1)
+- FY2023 revenue normalised (−14%) as commodity costs fell and price increases were partly reversed — consistent with a company that raised prices successfully but did not entrench them artificially.
+- Gross margin data is not tagged in ULVR's ESEF taxonomy; the operating margin proxy confirms the direction.</p>
+<p><strong>Verdict: Strong.</strong> The commodity cycle evidence is conclusive. Unilever can raise prices to offset input cost increases without material volume loss in its core categories. Private-label substitution risk in foods introduces a ceiling on DM price increases, but the dominant EM market exposure faces less private-label pressure.</p>
+<hr />
+<h2 id="section-3-earnings-power-business-quality">SECTION 3 — EARNINGS POWER &amp; BUSINESS QUALITY</h2>
+<h3 id="31-owner-earnings">3.1 Owner Earnings</h3>
+<p><strong>Maintenance CapEx assumption:</strong> CapEx is not tagged in ULVR's ESEF XBRL taxonomy. The config.yaml uses a maintenance CapEx proxy of EUR ~1,500mn (~3% of revenue), which is consistent with Unilever's PP&amp;E base (~EUR 10.8bn) and industry norms for asset-moderate FMCG businesses. D&amp;A is also untagged in ESEF. The owner_earnings_override_usd of USD 7,598mn in config.yaml represents the 3-year normalised average (FY2023–FY2025) OCF of approximately EUR 9.1bn minus EUR 1.5bn maintenance CapEx = EUR 7.6bn, converted at EUR/USD 1.1467. All owner earnings below use this figure for valuation; spot-year figures are OCF minus EUR 1.5bn proxy maintenance CapEx, converted to USD.</p>
+<p><em>Note: D&amp;A and maintenance CapEx are not separately available from ESEF. The config.yaml override is used for both §3.1 owner earnings and §5.1 DCF. The owner_earnings_override_usd = USD 7,598mn is the canonical value per the task context.</em></p>
+<table>
+<thead>
+<tr>
+<th>Fiscal Year</th>
+<th>OCF (USD mn)</th>
+<th>+ D&amp;A</th>
+<th>− Maintenance CapEx (est.)</th>
+<th>± WC Change (embedded in OCF)</th>
+<th><strong>Owner Earnings (est.)</strong></th>
+<th>OE Yield (vs. Market Cap $99.9bn)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2025</td>
+<td>9,133</td>
+<td>[N/A — ESEF]</td>
+<td>−1,644 (3% × $54.8bn rev)</td>
+<td>included in OCF</td>
+<td><strong>~$7,489mn</strong></td>
+<td><strong>~7.5%</strong></td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>10,387</td>
+<td>[N/A — ESEF]</td>
+<td>−1,710 (3% × $57.0bn rev)</td>
+<td>included in OCF</td>
+<td><strong>~$8,677mn</strong></td>
+<td><strong>~8.7%</strong></td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td>10,763</td>
+<td>[N/A — ESEF]</td>
+<td>−1,716 (3% × $57.2bn rev)</td>
+<td>included in OCF</td>
+<td><strong>~$9,047mn</strong></td>
+<td><strong>~9.1%</strong></td>
+</tr>
+<tr>
+<td><strong>3yr Normalised (override)</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>USD 7,598mn</strong></td>
+<td><strong>7.6%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>OCF converted from EUR at EUR/USD 1.1426 (Financial-Analysis §1.3). Revenue converted similarly. Maintenance CapEx proxy = 3% of revenue per config.yaml. WC changes embedded in OCF per IFRS presentation.</em></p>
+<p>Owner earnings are broadly flat to slightly declining in USD terms over FY2023–FY2025, primarily because FY2025 OCF (EUR 8.35bn) was lower than FY2023–FY2024 (EUR 9.4–9.5bn) due to working capital timing and demerger-related cash costs. The 3-year normalised base of USD 7.6bn is the appropriate foundation for valuation, smoothing the transitional FY2025 dip. The trend is <strong>flat to slightly declining</strong> in the short term, but the post-McCormick portfolio (higher-margin segments, reduced restructuring drag) should stabilise or improve the base.</p>
+<h3 id="32-earnings-consistency-and-predictability">3.2 Earnings Consistency and Predictability</h3>
+<p><strong>5-year operating income series (USD mn):</strong>
+- FY2021: $8,702 | FY2022: $10,755 | FY2023: $8,998 | FY2024: $8,829 | FY2025: $9,037</p>
+<p>Operating income is remarkably stable in absolute terms — the range is USD 8.7–10.8bn on revenues that swung EUR 52–60bn. The FY2022 spike was pricing-driven, not a volume windfall, and normalised in FY2023 without sustained margin compression. The worst year in the dataset is FY2021 at USD 8.7bn; the business recovered to above-FY2021 levels in every subsequent year.</p>
+<p>Net income is more volatile: FY2024 fell to $5.7bn (goodwill impairment), then spiked to $9.5bn in FY2025 (Ice Cream disposal gain). These are non-operating events. <strong>Operating income is the correct signal; net income is noise in this dataset.</strong> (Financial-Analysis §5.1)</p>
+<p><strong>Accruals ratio:</strong> FY2025: +0.016 | FY2024: −0.047 | FY2023: −0.039. Three consecutive years below +0.05 — accruals are immaterial to earnings quality. The FY2025 reading (+0.016) reflects the disposal gain sitting above OCF (below-the-line in IFRS), not an accruals concern. (Financial-Analysis §5.6)</p>
+<p><strong>FCF / Net Income ratio:</strong> Not directly computable (CapEx untagged in ESEF). Using OCF/Net Income: FY2025 0.88× (depressed by disposal gain in NI numerator), FY2024 1.66×, FY2023 1.45×. The FY2024–FY2023 readings well above 1.0× confirm high cash earnings quality. FY2025 ratio is distorted by the disposal gain in net income, not a quality concern.</p>
+<p><strong>Verdict: Highly predictable</strong> — operating earnings power. This business earns within a narrow band regardless of external shocks. The valuation confidence level is high.</p>
+<h3 id="33-capital-requirements-the-wonderful-business-test">3.3 Capital Requirements — The "Wonderful Business" Test</h3>
+<p><strong>CapEx as % of revenue:</strong> Untagged in ESEF; estimated ~3% (maintenance) + ~1% (growth) = ~4% total. This is moderate for a manufacturing-based FMCG company — not asset-light by Buffett's highest standard, but not capital-intensive either.</p>
+<p><strong>ROIC trend (3yr):</strong> FY2023: 13.3% | FY2024: 11.5% | FY2025: 14.7%. ROIC consistently exceeds estimated EUR WACC (8–9%); the spread of 5–7pp represents genuine economic value creation. The FY2024 trough was driven by impairments (distorted invested capital base), not operating deterioration. (Financial-Analysis §5.4)</p>
+<p><strong>Incremental ROIC:</strong> Estimated positive based on ROIC recovery from FY2024 trough despite continued restructuring costs. Each dollar of capital deployed through the Growth Action Plan is producing returns above cost of capital. This is the most important confirmation of moat durability.</p>
+<p><strong>D&amp;A vs. CapEx:</strong> Both untagged in ESEF. PP&amp;E net book value stable at EUR 10.3–10.8bn (FY2024–FY2025) despite no directly observable CapEx — consistent with maintenance spending approximately matching depreciation, which is the hallmark of a capital-maintenance business rather than a capital-consuming one.</p>
+<p><strong>Classification: Capital-intensive but high-return.</strong> Unilever is not capital-light in the way that See's Candies is — it manufactures physical goods at scale. But the ROIC spread above WACC confirms that the capital deployed earns well above its cost. The combination means it is not Munger's ideal ("earns high returns and deploys much more capital at those rates"), but it is the next tier: earns well above cost of capital and returns the surplus to shareholders via a progressive dividend and buyback programme.</p>
+<hr />
+<h2 id="section-4-management-integrity-and-rationality">SECTION 4 — MANAGEMENT: INTEGRITY AND RATIONALITY</h2>
+<h3 id="41-integrity-assessment">4.1 Integrity Assessment</h3>
+<p><strong>Restatement history:</strong> No XBRL restatement flags across the 5-year filing series (FY2021–FY2025). Clean signal. (Financial-Analysis §4.2)</p>
+<p><strong>Accruals quality:</strong> Consistently near-zero to negative over FY2023–FY2025, indicating cash earnings dominate reported earnings. This is the strongest available integrity signal from the XBRL data. (Financial-Analysis §5.6)</p>
+<p><strong>FY2025 net income spike:</strong> The EUR 9.5bn net income vs EUR 5.7bn in FY2024 is a disclosure-transparency test. The driver (Ice Cream disposal gain from the demerger completed December 2025) was a known and announced corporate action. No attempt to obscure it in the headline number. (Financial-Analysis §5.1)</p>
+<p><strong>ESEF narrative failure:</strong> All five filing years' narrative sections (MD&amp;A, risk factors) failed ESEF iXBRL extraction, so tone analysis of management commentary is not available. This limits the assessment — retrieve AFR PDF for qualitative verification.</p>
+<p><strong>Litigation and governance:</strong> No material litigation flag visible in structured XBRL data. UK Corporate Governance Code compliant; no controlling shareholder; widely held institutional ownership (51.3% institutional). (Financial-Analysis §4.4; Market-Data §6)</p>
+<p><strong>Compensation structure:</strong> [NOT PARSEABLE FROM ESEF — AGM materials required.] The insider ownership of 2.44% suggests management has a meaningful but not dominant equity stake. (Market-Data §6)</p>
+<p><strong>Rating: Integrity Medium.</strong> The XBRL signal is clean and the disposal-gain transparency is reassuring. The ESEF narrative failure prevents a full integrity assessment; the Medium rating reflects this data gap rather than an affirmative concern.</p>
+<h3 id="42-capital-allocation-rationality">4.2 Capital Allocation Rationality</h3>
+<p>Financing CF was consistently EUR −6.8 to −8.9bn annually across FY2021–FY2025. The capital return programme is the most visible allocation signal:</p>
+<table>
+<thead>
+<tr>
+<th>Use of FCF</th>
+<th>Amount (approx.)</th>
+<th>% of Total Financing CF</th>
+<th>Value-Creating?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dividends</td>
+<td>EUR ~4.0–4.5bn/yr</td>
+<td>~55–60%</td>
+<td>Yes — progressive, covered by OCF</td>
+</tr>
+<tr>
+<td>Share buybacks</td>
+<td>EUR ~1.5–2.5bn/yr</td>
+<td>~20–30%</td>
+<td>Mixed — price discipline unclear from ESEF</td>
+</tr>
+<tr>
+<td>Debt repayment (net)</td>
+<td>EUR ~0.5–1.5bn/yr (estimated)</td>
+<td>~10–15%</td>
+<td>Yes — leverage reduction beneficial</td>
+</tr>
+<tr>
+<td>Growth CapEx / acquisitions</td>
+<td>Minimal (net disposals)</td>
+<td>Minimal (FY2022 investing CF positive)</td>
+<td>N/A — disposal cycle</td>
+</tr>
+<tr>
+<td>Cash accumulation</td>
+<td>Cash EUR 3.9–6.1bn range</td>
+<td>Modest</td>
+<td>Yes — adequate liquidity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Buybacks:</strong> Were repurchases made when the stock was cheap? The 5-year price range of GBX 3,644–5,542 suggests buybacks were conducted across a wide range, including well above current levels in 2023–2024. The SKILL's specific test (buybacks below intrinsic value) cannot be assessed from ESEF alone; the absence of detailed timing data prevents a positive rating.</p>
+<p><strong>Acquisitions:</strong> The Growth Action Plan under Hein Schumacher reversed the prior decade of value-destroying M&amp;A (the abandoned GlaxoSmithKline consumer bid in 2022 was a near-miss on a terrible capital allocation decision at EUR 50bn+). The current team has pivoted to disposals: Ice Cream demerger and McCormick transaction. This is the correct capital allocation response to a portfolio that had accumulated low-return acquisitions. (Financial-Analysis §4.5)</p>
+<p><strong>Dividends:</strong> Payout ratio 79% (trailing TTM, Market-Data §3) — high but sustainable given OCF cover. Unilever is a progressive-dividend payer; the dividend has not been cut. At EUR ~4bn annually vs EUR 8.4bn OCF FY2025, coverage is approximately 2.1×. (Financial-Analysis §5.3)</p>
+<p><strong>Rating: Good.</strong> The current team (Fernando Fernandez, Growth Action Plan continuation) is making rational portfolio decisions. The dividend is well-covered and growing. The historical sin of value-destroying M&amp;A is being unwound. The unresolved question is whether buybacks were executed at attractive prices — data unavailable.</p>
+<h3 id="43-skin-in-the-game-incentive-alignment">4.3 Skin in the Game &amp; Incentive Alignment</h3>
+<p><strong>Insider ownership:</strong> 2.44% held by insiders (Market-Data §6). At market cap USD 99.9bn, this represents approximately USD 2.4bn in aggregate insider value — meaningful in absolute terms but small relative to a company this size; management cannot move the stock through personal decisions.</p>
+<p><strong>CEO:</strong> Fernando Fernandez (from March 2025) — Argentine national, 38-year Unilever career. No documented government advisory appointments. No Form 4/PDMR data available from ESEF; UK insider transaction disclosures route through the FCA National Storage Mechanism (not extractable from ESEF). (Political-Exposure §1)</p>
+<p><strong>Insider transaction trend (12 months):</strong> [NOT AVAILABLE IN ESEF — FCA MAR Art.19 register required.] Cannot confirm net buyer / net seller trend.</p>
+<p><strong>Buffett test:</strong> Management is currently making decisions — portfolio disposals, dividend maintenance, continued brand investment — that an owner of 100% of the business would endorse. The Growth Action Plan's emphasis on concentrating capital in higher-ROIC segments over a sustained period is the most Buffett-compatible decision the company has made in a decade.</p>
+<hr />
+<h2 id="section-5-intrinsic-value-margin-of-safety">SECTION 5 — INTRINSIC VALUE &amp; MARGIN OF SAFETY</h2>
+<h3 id="51-owner-earnings-dcf-conservative">5.1 Owner Earnings DCF (Conservative)</h3>
+<p><strong>Inputs:</strong> Owner earnings = USD 7,598mn (config.yaml override: 3-year normalised OCF minus maintenance CapEx). Stage 1 growth = 3.5% (lower bound of base-case revenue CAGR). Stage 2 terminal growth = 2.5% (long-run nominal GDP; Unilever's EM exposure warrants a slightly higher terminal rate than a pure DM franchise, but 2.5% is conservative and consistent with the SKILL requirement). WACC = 8.0% base (UK gilt ~4.3% as risk-free rate + 3.0% business risk premium for wide moat, stable earnings; the Financial-Analysis §7.1 EUR WACC of 6–7% is EUR-denominated and uses a lower risk-free rate; the USD-equivalent at a USD discount rate is appropriately higher).</p>
+<p>Net debt = USD 23.27bn (Market-Data §5: $28.28bn total debt − $5.01bn cash). Diluted shares = 2,153.2mn (Market-Data §6). Current price = GBX 4,639 × GBP/USD 1.34311 / 100 = <strong>USD 62.31/share</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Owner Earnings (USD bn)</th>
+<th>Discount Factor (8%)</th>
+<th>Present Value (USD bn)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>7.864</td>
+<td>0.9259</td>
+<td>7.281</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8.139</td>
+<td>0.8573</td>
+<td>6.978</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8.424</td>
+<td>0.7938</td>
+<td>6.687</td>
+</tr>
+<tr>
+<td>4</td>
+<td>8.719</td>
+<td>0.7350</td>
+<td>6.409</td>
+</tr>
+<tr>
+<td>5</td>
+<td>9.024</td>
+<td>0.6806</td>
+<td>6.142</td>
+</tr>
+<tr>
+<td>6</td>
+<td>9.340</td>
+<td>0.6302</td>
+<td>5.886</td>
+</tr>
+<tr>
+<td>7</td>
+<td>9.667</td>
+<td>0.5835</td>
+<td>5.640</td>
+</tr>
+<tr>
+<td>8</td>
+<td>10.005</td>
+<td>0.5403</td>
+<td>5.405</td>
+</tr>
+<tr>
+<td>9</td>
+<td>10.355</td>
+<td>0.5002</td>
+<td>5.180</td>
+</tr>
+<tr>
+<td>10</td>
+<td>10.718</td>
+<td>0.4632</td>
+<td>4.964</td>
+</tr>
+<tr>
+<td>Terminal Value (TV)</td>
+<td>199.7</td>
+<td>0.4632</td>
+<td>92.5</td>
+</tr>
+<tr>
+<td><strong>Sum of PVs</strong></td>
+<td></td>
+<td></td>
+<td><strong>153.1</strong></td>
+</tr>
+<tr>
+<td><strong>Less: Net Debt</strong></td>
+<td></td>
+<td></td>
+<td><strong>(23.3)</strong></td>
+</tr>
+<tr>
+<td><strong>Equity Value</strong></td>
+<td></td>
+<td></td>
+<td><strong>129.8</strong></td>
+</tr>
+<tr>
+<td><strong>Equity Value per Share</strong></td>
+<td></td>
+<td></td>
+<td><strong>$60.29</strong></td>
+</tr>
+<tr>
+<td><strong>Current Price (Market Data)</strong></td>
+<td></td>
+<td></td>
+<td><strong>$62.31</strong></td>
+</tr>
+<tr>
+<td><strong>Implied Margin of Safety</strong></td>
+<td></td>
+<td></td>
+<td><strong>−3.2% (premium)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>TV = $10.718bn × 1.025 / (0.08 − 0.025) = $199.7bn; discounted at WACC^10 = 0.4632.</em></p>
+<p><strong>Three-rate sensitivity:</strong></p>
+<table>
+<thead>
+<tr>
+<th>WACC</th>
+<th>Per Share (USD)</th>
+<th>Implied MoS / Premium vs $62.31</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.0% (base)</td>
+<td>$60.29</td>
+<td>−3.2% (at/near fair value)</td>
+</tr>
+<tr>
+<td>9.0% (base+1%)</td>
+<td>$49.19</td>
+<td>−21.1% (above intrinsic value)</td>
+</tr>
+<tr>
+<td>10.0% (base+2%)</td>
+<td>$41.05</td>
+<td>−34.1% (well above intrinsic value)</td>
+</tr>
+</tbody>
+</table>
+<p>At the most aggressive defensible discount rate (8%) the current price is essentially at fair value — zero margin of safety. At any more conservative assumption the stock is above intrinsic value. This is not a bargain.</p>
+<h3 id="52-earnings-power-value-epv">5.2 Earnings Power Value (EPV)</h3>
+<p>EPV answers: what is this business worth if it never grows again? Normalised EBIT (3-year average FY2023–FY2025, from Financial-Analysis §5.1): (EUR 8,998 + EUR 8,829 + EUR 9,037) / 3 = EUR 8,955mn = USD 10,228mn at EUR/USD 1.1426.</p>
+<p>Effective tax rate (3-year normalised, excluding FY2024 spike): 23% (average FY2021–FY2023: 24.2%, 21.3%, 23.5%).</p>
+<p>NOPAT = USD 10,228mn × (1 − 0.23) = USD 7,876mn.</p>
+<p>EPV enterprise = USD 7,876mn / 0.08 = USD 98.4bn.</p>
+<p>EPV equity = USD 98.4bn − USD 23.27bn (net debt) = USD 75.1bn.</p>
+<p>EPV per share = USD 75.1bn × 1,000 / 2,153.2mn shares = <strong>$34.88/share</strong>.</p>
+<p>The current price of $62.31 is <strong>79% above EPV</strong>. The market is paying a substantial premium for growth — specifically for the operating leverage from the EM distribution network and the margin improvement expected from the portfolio rationalisation. At the current price, the growth assumption is load-bearing.</p>
+<h3 id="53-margin-of-safety-summary">5.3 Margin of Safety Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Conservative Value / Share</th>
+<th>Current Price</th>
+<th>Implied MoS / Premium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Owner Earnings DCF (8% base)</td>
+<td>$60.29</td>
+<td>$62.31</td>
+<td>−3.2% (essentially at fair value)</td>
+</tr>
+<tr>
+<td>Owner Earnings DCF (9%, conservative +1%)</td>
+<td>$49.19</td>
+<td>$62.31</td>
+<td>−21.1% (price above IV)</td>
+</tr>
+<tr>
+<td>Earnings Power Value (zero growth)</td>
+<td>$34.88</td>
+<td>$62.31</td>
+<td>−44.1% (price well above EPV)</td>
+</tr>
+<tr>
+<td>Financial Analysis Bear Case fair value</td>
+<td>$24.95 (§9.1 DCF)</td>
+<td>$62.31</td>
+<td>−59.9%</td>
+</tr>
+<tr>
+<td>Financial Analysis Base Case fair value</td>
+<td>$47.21 (§9.2 DCF)</td>
+<td>$62.31</td>
+<td>−24.2%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Is there a margin of safety at the current price?</strong> No. At the most aggressive (lowest) defensible discount rate (8%), the stock is essentially at fair value. Under any more conservative assumption, the price exceeds intrinsic value.</p>
+<p><strong>Price for 25% margin of safety:</strong> The OE-DCF intrinsic value at 8% WACC is $60.29. A 25% MoS requires entry at $60.29 × 0.75 = <strong>$45.22 = GBX 3,367</strong>.</p>
+<p><strong>Price for 40% margin of safety:</strong> $60.29 × 0.60 = <strong>$36.17 = GBX 2,693</strong>.</p>
+<p>This explains the config.yaml buy threshold of GBX 3,470 (OE yield ≥ 8.0%) — which implies approximately a 25% discount to the current price and corresponds to a margin of safety just above Buffett's minimum.</p>
+<hr />
+<h2 id="section-6-current-valuation-snapshot">SECTION 6 — CURRENT VALUATION SNAPSHOT</h2>
+<h3 id="61-multiples-vs-earnings-power">6.1 Multiples vs. Earnings Power</h3>
+<table>
+<thead>
+<tr>
+<th>Multiple</th>
+<th>Current (Market Data)</th>
+<th>What It Implies</th>
+<th>Buffett/Munger Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P/E (trailing)</td>
+<td>20.8×</td>
+<td>20.8 years of trailing earnings</td>
+<td>Distorted — FY2025 NI inflated by disposal gain; forward P/E of 15.9× is more relevant</td>
+</tr>
+<tr>
+<td>P/FCF (market FCF)</td>
+<td>15.9× ($6.27bn yfinance FCF)</td>
+<td>Market FCF includes CapEx deductions not in ESEF</td>
+<td>Reasonable for wide-moat FMCG if growth is real</td>
+</tr>
+<tr>
+<td>Owner Earnings Yield (OE / market cap)</td>
+<td>7.6% ($7.60bn / $99.9bn)</td>
+<td>7.6 cents per dollar of market cap</td>
+<td>At 10yr gilt ~4.3%, OE yield provides ~330bps equity risk premium — adequate but not compelling</td>
+</tr>
+<tr>
+<td>EV/EBITDA</td>
+<td>11.7× (Market-Data §2)</td>
+<td>Reasonable for FMCG</td>
+<td>Peer (PG) trades at 14.97× EV/EBITDA — ULVR is at a discount</td>
+</tr>
+<tr>
+<td>EV/Owner Earnings</td>
+<td>16.7× ($127.2bn / $7.6bn)</td>
+<td>16.7 years to recover EV from owner earnings</td>
+<td>Acceptable for a stable compounder; not cheap</td>
+</tr>
+<tr>
+<td>P/Book</td>
+<td>7.6× (Market-Data §2)</td>
+<td>High P/B — acceptable only with sustained high ROE; FY2025 ROE 61% is disposal-distorted; structural ROE ~30% is more appropriate</td>
+<td>7.6× P/B on structural ~30% ROE is roughly consistent — no valuation distortion</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Owner Earnings Yield vs. risk-free rate:</strong> 7.6% OE yield vs. ~4.3% UK gilt (10yr). Equity risk premium implied: ~330 basis points. Buffett's test is that earnings yield should "comfortably" exceed the risk-free rate to compensate for equity risk. At 330bps spread, ULVR passes marginally — it is not cheap, but it is not pricing in zero risk premium.</p>
+<h3 id="62-what-growth-rate-is-the-market-pricing-in">6.2 What Growth Rate Is the Market Pricing In?</h3>
+<p>Using a single-stage Gordon growth model at WACC 8%: at the current price of $62.31, the implied perpetual growth rate is approximately <strong>3.0%</strong>. This is in line with the base-case revenue CAGR assumption (3–4%) from Financial-Analysis §6.1.</p>
+<p>The market is not pricing in the bull case. It is also not being pessimistic. The market is pricing the base case as the central expectation with near-zero margin of safety.</p>
+<p><strong>Characterisation: Fair.</strong> The market is pricing approximately base-case economics. This is neither pessimistic (no upside from undervaluation) nor demanding (bull case not priced in). For a value investor, "fair" is not a buying opportunity.</p>
+<hr />
+<h2 id="section-7-risk-permanent-capital-loss">SECTION 7 — RISK: PERMANENT CAPITAL LOSS</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood (H/M/L)</th>
+<th>Potential for Permanent Impairment</th>
+<th>Buffett's Test: Would This Destroy the Moat?</th>
+<th>Early Warning Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Private-label penetration in core DM categories (foods)</td>
+<td>M</td>
+<td>Medium — reduces addressable premium, not total business</td>
+<td>Partial: Nutrition moat is narrower than Personal Care moat</td>
+<td>Power Brand USG &lt; 1.5% for 2 consecutive trading periods (exit condition 7)</td>
+</tr>
+<tr>
+<td>Management integrity failure</td>
+<td>L</td>
+<td>High if it occurred</td>
+<td>Yes — trust in reported earnings is the foundation</td>
+<td>Accruals ratio &gt; +0.10 for 2 consecutive years; restatement</td>
+</tr>
+<tr>
+<td>Excessive leverage restricting capital returns</td>
+<td>M</td>
+<td>Low-Medium — leverage is high but serviceable at current OCF</td>
+<td>No — debt is financing brand investment, not destroying it</td>
+<td>Net Debt/EBITDA &gt; 4× while OCF/Revenue declining</td>
+</tr>
+<tr>
+<td>EM currency basket decline (−15%)</td>
+<td>M</td>
+<td>Low — natural hedge from local cost base; 5-year margin resilience proves partial pass-through</td>
+<td>No — EM presence is the moat, not a financial structure vulnerability</td>
+<td>EUR-reported revenue CAGR &lt; −5% for 2 consecutive years without portfolio action</td>
+</tr>
+<tr>
+<td>McCormick transaction failure (deal collapse or regulatory block)</td>
+<td>L-M</td>
+<td>Low — deal collapse returns assets to Unilever; value impaired if proceeds cannot be redeployed efficiently</td>
+<td>No — but strategic rationale is delayed</td>
+<td>McCormick deal terminated or repriced &gt; 20% downward (exit condition 6)</td>
+</tr>
+<tr>
+<td>Capital allocation failure (return to value-destroying M&amp;A)</td>
+<td>L</td>
+<td>High — GlaxoSmithKline near-miss in 2022 showed this risk is real</td>
+<td>Potentially yes — large-cap M&amp;A at premium multiples destroys brand equity economics</td>
+<td>Any announced acquisition &gt; USD 10bn at EV/OE &gt; 20×</td>
+</tr>
+<tr>
+<td>MAHA food ingredient enforcement</td>
+<td>L</td>
+<td>Low — primarily affects Nutrition segment being disposed</td>
+<td>No — core remaining portfolio (Dove, Axe, Domestos) is not an ingredient-safety target</td>
+<td>US FDA or state enforcement naming Unilever products in class actions</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permanent Loss Assessment:</strong> The realistic worst case without fraud or black-swan events is the bear scenario: EM currency basket declines 15%, private-label penetration compresses margins to ~15.5%, and the market re-rates the stock to bear DCF fair value of $24.95. From the current price of $62.31, this represents a maximum realistic loss of approximately <strong>−60%</strong>. The bear scenario requires both operating deterioration AND multiple compression simultaneously (Financial-Brief §12.2). An exit at config.yaml exit conditions 1–7 would limit losses by triggering a sale before terminal deterioration. Under the Financial-Analysis bear case probability of 25%, the expected permanent loss exposure (probability-weighted bear scenario loss) is approximately −15% from current price — a meaningful but not catastrophic risk profile for a wide-moat holding.</p>
+<hr />
+<h2 id="section-7b-political-regulatory-risk-value-investors-lens">SECTION 7B — POLITICAL &amp; REGULATORY RISK (VALUE INVESTOR'S LENS)</h2>
+<p><em>Source: ULVR-Political-Exposure.md (Political Exposure file is present and used as the primary source for this section).</em></p>
+<h3 id="7b1-political-moat-or-political-rent">7B.1 Political Moat or Political Rent?</h3>
+<p><strong>Classification: Politically neutral — with one transitional liability.</strong></p>
+<p>Unilever's competitive position does not depend on government relationships, licences, or regulatory approvals. Its moat (brand equity + EM distribution) would survive a change of government in any country it operates in. No government licence is required to sell soap or condiments. No regulatory approval creates a barrier to entry that benefits Unilever specifically.</p>
+<p>The one transitional liability is the MAHA (Make America Healthy Again) regulatory movement in the US, which targets ultra-processed food ingredients. As of July 2026, state-level food ingredient bans have passed in more than a dozen US states, affecting several of Unilever's Nutrition brands (Hellmann's, Knorr, Marmite). This is a <strong>Political liability</strong> for the Nutrition segment specifically — not for the company as a whole. The paradox: the McCormick transaction, if completed, disposes of exactly the brands most exposed to MAHA, converting this political liability into a closed chapter. (Political-Exposure §5)</p>
+<p>The McCormick antitrust review (UK CMA, EU DG COMP, US DOJ) is the principal near-term political risk. A deal block is exit condition 6 in the config.yaml thesis. (Political-Exposure §6)</p>
+<p><strong>Administration Relationship Score: 2 — Exposed</strong> (per Political-Exposure §5). This reflects MAHA headwind to Nutrition segment, not executive administration proximity; no Unilever board member has government background (Political-Exposure §1).</p>
+<h3 id="7b2-administration-sensitivity-permanent-capital-loss-test">7B.2 Administration Sensitivity — Permanent Capital Loss Test</h3>
+<p>The MAHA food ingredient agenda has migrated from a Trump administration executive initiative to a bipartisan state-level legislative movement with more than a dozen state laws passed in 2025. This is now <strong>structural, not administration-specific.</strong> Even if the current US administration changes, MAHA-style food ingredient regulation is unlikely to be reversed at state level.</p>
+<p><strong>Permanent impairment test:</strong> Under the worst-case MAHA scenario (reformulation costs EUR 200–500mn for US product lines), the impact on owner earnings is approximately 3–7% reduction — material but not business-altering. Unilever's US revenue is estimated at ~20% of total, limiting the total exposure. (Political-Exposure §6)</p>
+<p><strong>Tariff exposure:</strong> Management confirmed US tariff impact as "limited and manageable" in 2025. The local-production model — manufacturing largely in the country of sale — provides a structural hedge against import tariffs. This is not a permanent capital loss risk. (Political-Exposure §6)</p>
+<p><strong>Verdict: Political risk is a cyclical factor but not an existential threat.</strong> The primary mechanism — MAHA regulation of the Nutrition segment — is being resolved by the McCormick disposal. The antitrust review of that disposal is the primary political/regulatory risk until mid-2027, but its most likely outcome is clearance with standard remedies.</p>
+<h3 id="7b3-mungers-incentive-test-who-benefits-from-government-proximity">7B.3 Munger's Incentive Test — Who Benefits from Government Proximity?</h3>
+<p><strong>Lobbying spend:</strong> USD ~760,000 FY2025 combined (Unilever U.S. Inc. + Unilever plc parent) = 0.001% of revenue. The Q4 2025 acceleration ($280,000 in a single quarter) directly tracks MAHA state-level bill activity. (Political-Exposure §2)</p>
+<p><strong>PAC contributions:</strong> None — Unilever is UK-incorporated and cannot operate a US corporate PAC under FECA §30121. (Political-Exposure §3)</p>
+<p><strong>Government contracts:</strong> Non-material. No federal contract revenue identified. (Political-Exposure §4)</p>
+<p><strong>Assessment:</strong> Lobbying activity is defensive (protecting existing regulatory frameworks for food ingredients) and proportionate to the regulatory threat. The Q1 2026 acceleration to $540,000 in a single quarter signals management is taking the MAHA risk seriously, not that the business model requires ongoing political cultivation to function. No revolving-door risk, no PAC patronage, no federal contract dependency.</p>
+<p><strong>Rating: Shareholders benefit.</strong> The lobbying spend is protective — shareholders benefit from management defending operating businesses against MAHA-inspired reformulation mandates. It is not offensive rent-seeking or evidence of a business model that requires political patronage.</p>
+<hr />
+<h2 id="section-8-key-talking-points">SECTION 8 — KEY TALKING POINTS</h2>
+<ul>
+<li>
+<p><strong>The moat is real, dual-source, and durable.</strong> Unilever's brand equity (Dove, Hellmann's, Axe) sustained a 16.6–17.9% operating margin through the worst commodity inflation cycle in a decade. Combined with an EM distribution network in 190+ countries that competitors cannot replicate cheaply or quickly, this franchise will still be the dominant FMCG player in emerging markets in ten years. This is the single most important fact about the business.</p>
+</li>
+<li>
+<p><strong>The price is fair, not cheap.</strong> The OE-DCF at 8% WACC yields $60.29 per share — 3% below the current $62.31. At any more conservative discount rate assumption, the stock is above intrinsic value. A value investor needs a 25% margin of safety minimum; that requires GBX 3,370 or below. The business is a "wonderful company at a fair price" — Buffett's second-best outcome after "wonderful company at a wonderful price."</p>
+</li>
+<li>
+<p><strong>The restructuring is value-accretive but the benefits are not yet in the price.</strong> The Ice Cream demerger (December 2025) and McCormick transaction (expected mid-2027) concentrate Unilever in Beauty &amp; Wellbeing and Personal Care — higher-margin, faster-growing, less private-label-exposed segments. If the McCormick deal closes cleanly at USD 44.8bn, the proceeds fund accelerated buybacks and debt reduction; the owner earnings base should improve post-demerger. The market is pricing approximately the base case with zero credit for this optionality.</p>
+</li>
+<li>
+<p><strong>The leverage is the fly in the ointment.</strong> Net debt of USD 23.3bn on a business generating USD 7.6bn in normalised owner earnings represents approximately 3× OE — not alarming for an investment-grade FMCG company, but enough to limit financial flexibility and explain why the stock scores only 2/5 on balance sheet conservatism. If OCF fell to the bear-case $4.3bn, debt coverage becomes genuinely strained. The leverage level is inconsistent with Buffett's "fortress balance sheet" ideal.</p>
+</li>
+<li>
+<p><strong>The dividend is real income, not a return of capital.</strong> At 3.62% dividend yield on the current price, and a payout ratio of 79% of trailing earnings (or approximately 56% of normalised owner earnings), the dividend is well-covered and growing. For a hold-at-fair-price thesis, the dividend is the primary return mechanism. This is not a bad outcome — 3.62% plus low-single-digit organic growth in owner earnings produces a reasonable if unexciting total return in the base case.</p>
+</li>
+<li>
+<p><strong>MAHA risk is real but shrinking.</strong> The Hellmann's and Knorr brands most exposed to MAHA food ingredient regulation are precisely those being disposed via the McCormick transaction. A successful deal close converts the principal political liability into a closed chapter. Until mid-2027, the MAHA risk is alive; post-close, it narrows materially to residual food ingredients in Home Care — a much smaller exposure.</p>
+</li>
+<li>
+<p><strong>The probability-weighted DCF return does not clear the hurdle rate.</strong> Bear −26.3% × 25% + Base −8.8% × 50% + Bull +5.5% × 25% = −9.6% price-only, or −6.0% total return including dividends. This is below a 10% value-investor hurdle by approximately 16pp. A value investor buying today is essentially taking a yield trade (3.62% dividend) with modest downside and limited upside — not a compounding thesis.</p>
+</li>
+</ul>
+<hr />
+<h2 id="section-9-bear-base-bull-cases-value-investors-lens">SECTION 9 — BEAR / BASE / BULL CASES (VALUE INVESTOR'S LENS)</h2>
+<blockquote>
+<p><strong>§9.0 — Method:</strong> <code>dcf-scenario-fcf</code> — Single-stage Gordon growth model applied to year-3 FCF; ULVR is a single-segment post-demerger FMCG company (Q1: not bond/ETF; Q2: no divergent segment multiples — Beauty/PC/Home Care/Nutrition all trade at comparable FMCG multiples; Q3: not conglomerate; Q4: <code>self_bands.p_fcf</code> has n=0 [INSUFFICIENT HISTORY] — condition (a) fails, <code>fcf-times-multiple</code> disqualified); the §5.1 OE-DCF provides the WACC calibration anchor.</p>
+<p><strong>Scenario inputs consumed:</strong> <code>scenarios_input.bear.fcf_usd_bn = 4.3</code>, <code>scenarios_input.base.fcf_usd_bn = 6.5</code>, <code>scenarios_input.bull.fcf_usd_bn = 8.8</code>. <code>balance_sheet_proj.bear.net_debt_usd_bn = 26.5</code> / <code>base = 22.0</code> / <code>bull = 17.5</code>. <code>balance_sheet_proj.bear.shares_outstanding_mn = 2150</code> / <code>base = 2100</code> / <code>bull = 2000</code>.</p>
+<p><strong>Current price (Market Data):</strong> GBX 4,639 × GBP/USD 1.34311 / 100 = <strong>USD 62.31/share</strong> (Market-Data.json <code>current_price_local = 4,639 GBp</code> × <code>fx_to_usd = 1.34311118</code>). WACC = 8.0% (§5.1 base; risk-free ~4.3% + 3.0% moat premium). Terminal growth = 2.5%.</p>
+</blockquote>
+<h4 id="91-bear-case-em-currency-collapse-and-private-label-acceleration">9.1 Bear Case — EM Currency Collapse and Private-Label Acceleration</h4>
+<p><em>Probability: 25%</em></p>
+<p>The bear case requires both adverse operating trajectory and adverse exit multiple simultaneously. On the operating side: the EM currency basket declines 15% against EUR, compressing reported revenue on the post-demerger portfolio to USD ~37.6bn (EUR ~33bn); simultaneously, private-label penetration in DM Nutrition accelerates, and commodity re-inflation compresses margins toward 15.5%. By year 3, the post-McCormick portfolio generates approximately USD 4.3bn in FCF — roughly 43% below the current normalised owner earnings base. On the exit multiple side: the market reprices FMCG below fair-value as EM growth decelerates and the restructuring thesis appears to be failing, driving the company-specific discount rate above cost of capital. In 12 months, the confirming signal would be Power Brand underlying sales growth falling below +1.5% for two consecutive trading-statement periods while EM USD revenue declines year-on-year.</p>
+<p><strong>Fair-value estimate:</strong> <code>terminal_value = $4.3bn × (1 + 2.5%) / (8.0% − 2.5%) = $4.3bn × 1.025 / 0.055 = $80.1bn</code>; <code>equity_value = $80.1bn − $26.5bn = $53.6bn</code>; <code>per_share = $53.6bn × 1,000 / 2,150mn = **$24.95**</code>.</p>
+<p><strong>3-Year Bear Return (annualised):</strong> ($24.95 / $62.31)^(1/3) − 1 = <strong>−26.3%</strong></p>
+<p><strong>Margin of Safety at Bear Case:</strong> Current price of $62.31 provides no protection against the bear scenario — the bear intrinsic value is 60% below current price. If the bear scenario materialises, a 60% permanent capital loss is possible.</p>
+<p><strong>Confirming Signal (12-month):</strong> Power Brand USG below +1.5% AND EM organic growth below +3% for two consecutive trading-statement periods, combined with operating margin guidance cut below 16%.</p>
+<h4 id="92-base-case-stable-compounder-completing-its-restructuring">9.2 Base Case — Stable Compounder Completing Its Restructuring</h4>
+<p><em>Probability: 50%</em></p>
+<p>The base case is the market's current implied scenario: 3–4% organic growth on the remaining post-demerger portfolio, operating margins stable at 17.5%, and the McCormick transaction closing cleanly in mid-2027 with proceeds returning to shareholders via accelerated buybacks and debt reduction. By year 3, the leaner portfolio generates USD 6.5bn in FCF — roughly consistent with the current normalised OE base, reflecting the revenue base reduction from McCormick disposal partially offset by organic growth in the remaining higher-margin portfolio. The valuation multiple remains at approximately fair value — the market prices the base case but provides no growth-kicker re-rating. The confirming signal within 12 months: McCormick transaction receiving regulatory clearance from at least two of three jurisdictions (CMA, EU DG COMP, US DOJ) by mid-2027 and Power Brand USG maintaining above +3%.</p>
+<p><strong>Fair-value estimate:</strong> <code>terminal_value = $6.5bn × 1.025 / 0.055 = $121.1bn</code>; <code>equity_value = $121.1bn − $22.0bn = $99.1bn</code>; <code>per_share = $99.1bn × 1,000 / 2,100mn = **$47.21**</code>.</p>
+<p><strong>3-Year Base Return (annualised):</strong> ($47.21 / $62.31)^(1/3) − 1 = <strong>−8.8%</strong></p>
+<p><strong>Confirming Signal (12-month):</strong> McCormick regulatory clearance received; OCF in FY2026 rebounds to EUR 9.0bn or above; Power Brand USG at or above +3% in two consecutive trading periods.</p>
+<h4 id="93-bull-case-restructuring-delivers-re-rating">9.3 Bull Case — Restructuring Delivers Re-Rating</h4>
+<p><em>Probability: 25%</em></p>
+<p>The bull case requires both volume recovery accelerating beyond expectations AND the market re-rating the post-McCormick portfolio at a higher multiple. On the operating side: EM volume recovery continues, restructuring savings from the Growth Action Plan materialise in margins above management's guidance, and the leaner post-McCormick portfolio (concentrated in Beauty/PC/Home Care) earns 18.5–19.0% operating margins — the top of Unilever's achievable range at its current scale. FCF reaches USD 8.8bn by year 3 as disposal proceeds eliminate leverage and reduce interest expense. On the exit multiple side: the market recognises that Unilever post-McCormick is a materially higher-quality business than the current portfolio implies, and re-rates from approximately 11.7× EV/EBITDA toward the 13–15× range seen for pure-play beauty/personal care FMCG. The confirming signal within 12 months: both India and the EM basket showing USG above +7% in Q3 2026 AND operating margin guidance raised to 18–19% at the H1 2026 results (expected August 2026).</p>
+<p><strong>Fair-value estimate:</strong> <code>terminal_value = $8.8bn × 1.025 / 0.055 = $164.0bn</code>; <code>equity_value = $164.0bn − $17.5bn = $146.5bn</code>; <code>per_share = $146.5bn × 1,000 / 2,000mn = **$73.25**</code>.</p>
+<p><strong>3-Year Bull Return (annualised):</strong> ($73.25 / $62.31)^(1/3) − 1 = <strong>+5.5%</strong></p>
+<p><strong>Confirming Signal (12-month):</strong> EM organic growth above +7% AND operating margin guidance raised above 18% at the H1 2026 results.</p>
+<h4 id="94-probability-weighted-return">9.4 Probability-Weighted Return</h4>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Probability</th>
+<th>Annualised Return (price-only)</th>
+<th>Weighted Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>25%</td>
+<td>−26.3%</td>
+<td>−6.6%</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>50%</td>
+<td>−8.8%</td>
+<td>−4.4%</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>25%</td>
+<td>+5.5%</td>
+<td>+1.4%</td>
+</tr>
+<tr>
+<td><strong>Probability-weighted IRR (price-only)</strong></td>
+<td><strong>100%</strong></td>
+<td></td>
+<td><strong>−9.6%</strong></td>
+</tr>
+<tr>
+<td><strong>+ Dividend yield (3.62%)</strong></td>
+<td></td>
+<td></td>
+<td><strong>+3.62%</strong></td>
+</tr>
+<tr>
+<td><strong>Probability-weighted total return</strong></td>
+<td></td>
+<td></td>
+<td><strong>−6.0%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The probability-weighted expected total return is <strong>−6.0% annually</strong>, well below a value investor's hurdle rate of 10% annualised before tax. The dividend yield provides meaningful income support but does not close the gap to the hurdle rate. At the current price, Unilever is a fair-value hold for an income-seeking investor — not a compounder buy for a Buffett-style return target.</p>
+<hr />
+<h2 id="section-10-monitoring-framework">SECTION 10 — MONITORING FRAMEWORK</h2>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Source</th>
+<th>Current Value (from inputs)</th>
+<th>"Moat Intact" Signal</th>
+<th>"Moat at Risk" Signal</th>
+<th>Review Cadence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating Margin</td>
+<td>XBRL: OperatingIncomeLoss / Revenue</td>
+<td>17.9% (FY2025)</td>
+<td>≥ 16% annually</td>
+<td>&lt; 14% for 2 consecutive fiscal years (exit condition 1)</td>
+<td>Annual (FY filing)</td>
+</tr>
+<tr>
+<td>ROIC</td>
+<td>XBRL: NOPAT / InvestedCapital</td>
+<td>14.7% (FY2025)</td>
+<td>≥ 12% (above WACC spread)</td>
+<td>&lt; 10% for 2 consecutive fiscal years (exit condition 2)</td>
+<td>Annual (FY filing)</td>
+</tr>
+<tr>
+<td>Owner Earnings (OCF − est. CapEx EUR 1.5bn)</td>
+<td>XBRL: OCF; CapEx proxy</td>
+<td>~USD 7.5bn (FY2025)</td>
+<td>≥ EUR 6bn / USD 6.9bn</td>
+<td>&lt; EUR 5.5bn / USD 6.3bn for 2 consecutive years (exit condition 3)</td>
+<td>Annual (FY filing)</td>
+</tr>
+<tr>
+<td>Accruals Ratio</td>
+<td>XBRL: (NI − OCF) / Total Assets</td>
+<td>+0.016 (FY2025)</td>
+<td>Below +0.05</td>
+<td>&gt; +0.10 for 2 consecutive years (exit condition 5)</td>
+<td>Annual (FY filing)</td>
+</tr>
+<tr>
+<td>Power Brand Underlying Sales Growth (USG)</td>
+<td>Quarterly trading statements</td>
+<td>+4.0% volume Q1 2026</td>
+<td>Volume-positive for 2+ consecutive periods</td>
+<td>&lt; +1.5% for 2 consecutive trading periods (exit condition 7)</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>McCormick Transaction Status</td>
+<td>Press releases / regulatory filings</td>
+<td>Signed March 2026; clearance pending</td>
+<td>Regulatory clearance received from all 3 jurisdictions by Q2 2027</td>
+<td>Collapse or repricing &gt; 20% downward (exit condition 6)</td>
+<td>Continuous</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="section-11-ranking-inputs-machine-readable-closing-block">SECTION 11 — RANKING INPUTS (machine-readable closing block)</h2>
+<pre><code class="language-yaml">ranking_inputs:
+  moat_tier: Wide        # Wide: ≥2 sources &quot;Present and strong&quot; (brand equity + EM distribution) AND §2.2 Ten-Year Test = Stable
+  moat_tier_basis: &quot;Dual-source moat — brand equity (Dove, Hellmann's, Axe) and proprietary EM last-mile distribution (190+ countries) are both Present and strong per §2.1; §2.2 Ten-Year Test verdict is Stable with ROIC recovering to 14.7% FY2025.&quot;
+  forward_irr_bear_pct: -26.3    # informational — sidecar is canonical
+  forward_irr_base_pct: -8.8    # informational — sidecar is canonical
+  forward_irr_bull_pct: 5.5     # informational — sidecar is canonical
+  forward_irr_bear_probability_pct: 25
+  forward_irr_base_probability_pct: 50
+  forward_irr_bull_probability_pct: 25
+  forward_irr_horizon_years: 3
+</code></pre>
+</main>
+</body>
+</html>

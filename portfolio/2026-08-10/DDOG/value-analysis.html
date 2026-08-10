@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datadog, Inc. (DDOG) — Value Analysis — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="index.html">← DDOG report</a></p>
+<h1 id="datadog-inc-ddog-value-analysis">Datadog, Inc. (DDOG) — Value Analysis</h1>
+<p><em>Prepared by: 11-Value-Analysis skill | Analysis date: 2026-07-20</em>
+<em>Financial input: DDOG-Financial-Brief.md (parent: DDOG-Financial-Analysis.md) | Market anchor: DDOG-Market-Data.json</em>
+<em>Political input: DDOG-Political-Exposure.md</em></p>
+<hr />
+<h2 id="section-1-value-investors-verdict">SECTION 1 — VALUE INVESTOR'S VERDICT</h2>
+<h3 id="11-circle-of-competence-check">1.1 Circle of Competence Check</h3>
+<p>Datadog sells software subscriptions that let engineering and operations teams watch what is happening inside their cloud-based applications — measuring performance, collecting logs, catching errors, and, increasingly, monitoring AI workloads. Revenue grows as customers use more cloud and adopt more Datadog modules, with no physical goods, no inventory, and no labour-intensive delivery. The business model is simple: sell a metre that turns on when a customer's cloud turns on. What makes it harder to assess with full confidence is the pace of competitive change — hyperscalers (AWS, Azure, GCP) are building native equivalents at zero marginal cost, and the AI-observability market is nascent enough that it is genuinely unclear how much incremental spend it will generate versus merely repricing existing infrastructure monitoring spend.</p>
+<p><strong>Verdict: Edge of circle.</strong> The business model itself is transparent and the financial architecture is readable. The ten-year earnings-power question — whether Datadog's moat survives hyperscaler bundling and open-source commoditisation — carries real structural uncertainty. Conviction is reduced accordingly; margin-of-safety requirements should be higher than for a business sitting squarely within the circle.</p>
+<hr />
+<h3 id="12-business-quality-scorecard">1.2 Business Quality Scorecard</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Score (1–5)</th>
+<th>Primary Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moat durability (10+ years)</td>
+<td>3</td>
+<td>Switching costs are real (re-tagging months of work) but hyperscaler bundling is a structural, not cyclical, threat — Financial-Analysis §3.3</td>
+</tr>
+<tr>
+<td>Earnings power consistency</td>
+<td>2</td>
+<td>GAAP operating income oscillated positive/negative across 5 years; FCF is consistent but GAAP earnings are unreliable as an owner-earnings proxy due to $751M SBC — Financial-Analysis §5.1</td>
+</tr>
+<tr>
+<td>Pricing power</td>
+<td>3</td>
+<td>Gross margin stable at 77–81% over 5 years; NRR ~120% implies net pricing power within installed base; but list-price increases constrained by hyperscaler competition — Financial-Analysis §5.1</td>
+</tr>
+<tr>
+<td>Capital efficiency</td>
+<td>4</td>
+<td>CapEx/revenue 1.0–2.1% (FY2021–FY2025); FCF margin 27–31%; genuine asset-light model — Financial-Analysis §5.3</td>
+</tr>
+<tr>
+<td>Balance sheet conservatism</td>
+<td>5</td>
+<td>Net cash ~$3.5B; $1B in 0.125% convertibles maturing 2029; current ratio 3.38x — Financial-Analysis §10.1</td>
+</tr>
+<tr>
+<td>Management integrity</td>
+<td>4</td>
+<td>No restatements; M-Score −2.462; SEC CORRESP closed Dec 2023; source-code incident disclosed promptly — Financial-Analysis §5.7, §4.4</td>
+</tr>
+<tr>
+<td>Management rationality</td>
+<td>3</td>
+<td>R&amp;D investment appropriate for growth stage; no buyback at premium valuations (rational); SBC at 22% of revenue is excessive — Financial-Analysis §4.2</td>
+</tr>
+<tr>
+<td>Margin of safety</td>
+<td>1</td>
+<td>Current price $261.18 is materially above base-case fair value ($115 per sidecar); no margin of safety exists — DDOG-Forward-Returns.json</td>
+</tr>
+<tr>
+<td><strong>Overall Quality Score</strong></td>
+<td><strong>25/40</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="13-investment-stance">1.3 Investment Stance</h3>
+<p><strong>Hold / Watch</strong> — Medium conviction.</p>
+<p>Datadog is a high-quality growth business with a real switching-cost moat, excellent earnings quality, and re-acceleration to +32% revenue growth in Q1 FY2026. However, at $261.18 the stock is priced for a bull scenario requiring sustained NRR &gt;120%, aggressive AI monetisation, and operating leverage — all simultaneously. The base-case intrinsic value sits at $115 per share (canonical sidecar), representing a 56% implied downside to today's price.</p>
+<p><strong>Single condition for reversal:</strong> If NRR falls below 110% for two consecutive quarters — indicating structural moat erosion from hyperscaler bundling — move to Avoid immediately regardless of price.</p>
+<hr />
+<h2 id="section-2-economic-moat">SECTION 2 — ECONOMIC MOAT</h2>
+<p>Munger: "The single most important decision in evaluating a business is pricing power." Buffett: "The key to investing is determining the competitive advantage of any given company — and above all, the durability of that advantage."</p>
+<h3 id="21-moat-type-and-source">2.1 Moat Type and Source</h3>
+<p><strong>Intangible assets</strong> — <em>Present but narrow.</em> Datadog has brand recognition among DevOps and platform engineers, but no disclosed patents of consequence. The brand commands a functionality and integration premium over hyperscaler alternatives, not a price premium.</p>
+<p><strong>Switching costs</strong> — <em>Present and strong.</em> This is the primary moat source. Instrumenting a cloud environment requires embedding Datadog agents across thousands of hosts, configuring dashboards, alert policies, and correlation rules, and training teams. A full migration to a competing platform typically takes 6–18 months of parallel running and re-tagging. Evidence: 120% NRR sustained for 4+ consecutive years and 84% multi-product penetration (Financial-Analysis §3.3). Each additional product layer adopted deepens the switching cost.</p>
+<p><strong>Network effects</strong> — <em>Present but narrow.</em> Datadog's unified telemetry engine — correlating logs, metrics, traces, and security events in a single data plane — creates data gravity. Each additional product increases the value of the whole platform within a customer's deployment. However, Datadog is single-tenant SaaS; there is no cross-customer network effect. Classification: narrow.</p>
+<p><strong>Cost advantages</strong> — <em>Absent.</em> Cloud infrastructure costs are variable and shared with competitors. No structural cost advantage from proprietary infrastructure.</p>
+<p><strong>Efficient scale</strong> — <em>Absent.</em> The observability market has multiple multi-billion-dollar vendors. This is not a natural monopoly.</p>
+<p><strong>Primary moat conclusion:</strong> Switching costs are the load-bearing pillar. The moat is real and demonstrated by sustained above-100% NRR across market cycles. The secondary data-gravity effect reinforces it but cannot stand alone. Confidence in the switching-cost moat is high; confidence in its durability against hyperscaler bundling is medium.</p>
+<hr />
+<h3 id="22-moat-durability-the-ten-year-test">2.2 Moat Durability — The Ten-Year Test</h3>
+<p><strong>ROIC trend:</strong> ROIC as reported: 0.1% (FY2023), 1.2% (FY2024), −0.7% (FY2025) — distorted by the GAAP treatment of $751M SBC as an operating expense. FCF margins of 27–31% reflect strong underlying cash economics. The pattern is not a deteriorating moat signal; it is an accounting artefact of heavy stock compensation.</p>
+<p><strong>Structural threats:</strong> Financial-Analysis §8.2 identifies hyperscaler native-observability bundling as the primary structural risk. AWS CloudWatch, Azure Monitor, and GCP Cloud Operations are embedded in enterprise discount programmes at near-zero incremental cost. This is secular, not cyclical — it will intensify as enterprises consolidate multi-cloud workloads. Enterprise migrations move slowly (12–36 months), and Datadog's embedded instrumentation creates significant inertia.</p>
+<p><strong>Verdict: Stable.</strong> The switching-cost moat is likely to persist for 5 years with high confidence and 7–10 years with moderate confidence. The ten-year test carries genuine uncertainty because the hyperscaler trajectory is difficult to model at decade scale. The moat is not clearly widening: AI/LLM observability adds new switching-cost surface area but simultaneously opens a greenfield market where hyperscalers compete from day one with no legacy disadvantage.</p>
+<hr />
+<h3 id="23-pricing-power-test">2.3 Pricing Power Test</h3>
+<p>Gross margin: 77.2% (FY2021) → 79.3% (FY2022) → 80.7% (FY2023) → 80.8% (FY2024) → 80.0% (FY2025). The five-year range is 77–81%; a minor compression in FY2025 from FY2024 peak. This is consistent with pricing power being preserved but not expansionary — Datadog maintains price discipline against cost pressures but cannot materially raise list prices when hyperscaler alternatives exist at zero marginal cost.</p>
+<p>NRR of ~120% implies net pricing power within the installed base: existing customers spend more as their cloud footprints grow. However, NRR compressed from ~130% (FY2022) to ~120% (FY2025), indicating that expansion rates moderate as deployments mature.</p>
+<p><strong>Verdict: Moderate pricing power.</strong> Datadog can grow revenue from existing customers via consumption-based expansion, but list-price increases are structurally constrained. The NRR compression from 130% to 120% over three years is a meaningful directional signal.</p>
+<hr />
+<h2 id="section-3-earnings-power-business-quality">SECTION 3 — EARNINGS POWER &amp; BUSINESS QUALITY</h2>
+<h3 id="31-owner-earnings">3.1 Owner Earnings</h3>
+<p><em>Maintenance CapEx assumption: Datadog does not separate maintenance from growth CapEx in EDGAR filings. D&amp;A is used as the maintenance CapEx proxy per skill convention. For an asset-light SaaS business, maintenance CapEx is likely substantially below D&amp;A — this proxy is conservative and understates owner earnings. Note: SBC ($751M FY2025) is added back in GAAP OCF but represents a real cash cost to shareholders via dilution. Owner earnings computed below exclude SBC from the add-back, making them equivalent to GAAP Net Income adjusted for the CapEx proxy difference only.</em></p>
+<table>
+<thead>
+<tr>
+<th>Fiscal Year</th>
+<th>Net Income ($M)</th>
+<th>+ D&amp;A ($M)</th>
+<th>− Maint. CapEx (D&amp;A proxy, $M)</th>
+<th>± WC Change ($M)</th>
+<th><strong>Owner Earnings ($M)</strong></th>
+<th>OE Yield vs. Market Cap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2025</td>
+<td>107.7</td>
+<td>49.2</td>
+<td>(49.2)</td>
+<td>[NOT IN SOURCE FILES]</td>
+<td><strong>107.7</strong></td>
+<td>0.12%</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>183.8</td>
+<td>48.5</td>
+<td>(48.5)</td>
+<td>[NOT IN SOURCE FILES]</td>
+<td><strong>183.8</strong></td>
+<td>[N/A]</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td>(0.6)</td>
+<td>35.6</td>
+<td>(35.6)</td>
+<td>[NOT IN SOURCE FILES]</td>
+<td><strong>(0.6)</strong></td>
+<td>[N/A]</td>
+</tr>
+</tbody>
+</table>
+<p><em>Market cap at current price $261.18 × 330.8M shares (snapshot) = ~$86.4B. FY2025 owner earnings yield: 0.12%.</em></p>
+<p><em>FCF-adjusted owner earnings note: FCF in FY2025 was $1,000.6M. Subtracting SBC ($750.7M) to capture the full dilution cost yields ~$250M in SBC-adjusted FCF, or approximately $0.69/diluted share — still an 0.29% yield against current market cap.</em></p>
+<p><strong>Owner earnings trend:</strong> GAAP owner earnings are volatile and near-zero in the last three years, reflecting an investment-mode business. Cash-based FCF has grown consistently: $277M → $383M → $632M → $836M → $1,001M (FY2021–FY2025, Financial-Analysis §5.3), representing a 38% CAGR. Owner earnings will need to grow dramatically — likely 5–10x from today's GAAP level — to justify the current market cap at any reasonable discount rate.</p>
+<hr />
+<h3 id="32-earnings-consistency-and-predictability">3.2 Earnings Consistency and Predictability</h3>
+<p><strong>5-year EPS series (diluted):</strong> FY2021: −$0.07 | FY2022: −$0.16 | FY2023: +$0.14 | FY2024: +$0.52 | FY2025: +$0.31 (Financial-Analysis §5.1).</p>
+<p>The series is volatile — earnings swung from small losses to small profits. The FY2025 pullback from FY2024 ($0.52 → $0.31) reflects GAAP earnings heavily influenced by SBC vesting timing and effective tax rate changes (9.9% FY2024 vs. 15.2% FY2025).</p>
+<p><strong>Worst year:</strong> FY2022 at −$0.16 EPS. Recovery was rapid (two years to +$0.52).</p>
+<p><strong>Accruals ratio:</strong> FY2023: −0.168 | FY2024: −0.119 | FY2025: −0.142. Consistently deeply negative, confirming that cash earnings substantially and sustainably exceed GAAP earnings — the highest-quality accruals signal (Financial-Analysis §5.4).</p>
+<p><strong>FCF / Net Income ratio:</strong> FY2025: 9.29x | FY2024: 4.55x. The extreme ratio reflects SBC add-back in OCF. Use FCF directly for investment analysis; GAAP net income is not the right earnings proxy here.</p>
+<p><strong>Conclusion: Unpredictable in GAAP terms; highly predictable in FCF terms.</strong> FCF has grown every year without interruption. GAAP earnings are governed by SBC timing and tax items that obscure the business economics. For valuation purposes, FCF is the reliable metric.</p>
+<hr />
+<h3 id="33-capital-requirements-the-wonderful-business-test">3.3 Capital Requirements — The "Wonderful Business" Test</h3>
+<p><strong>CapEx as % of revenue:</strong> 1.0% (FY2021) → 2.1% (FY2022) → 1.3% (FY2023) → 1.3% (FY2024) → 1.4% (FY2025). Among the lowest CapEx intensities in enterprise software (Financial-Analysis §5.3). Growth requires almost no physical capital.</p>
+<p><strong>ROIC:</strong> 0.1% / 1.2% / −0.7% (FY2023–FY2025) — distorted by SBC accounting. Cash ROIC is far superior. Asset turnover of 0.52x reflects the build-up of cash and marketable securities ($3.5B+), not fixed-asset intensity.</p>
+<p><strong>D&amp;A vs. CapEx:</strong> D&amp;A and CapEx were essentially equal in FY2025 ($49.2M vs. $49.6M); in prior years D&amp;A typically exceeded CapEx. The business is not consuming assets.</p>
+<p><strong>Incremental ROIC:</strong> Revenue +$743M (FY2024→FY2025); FCF +$165M. Incremental FCF margin approximately 22% — below the long-run 29–31% margin, suggesting modest margin compression in the latest year.</p>
+<p><strong>Classification: Capital-light compounder.</strong> Datadog earns substantial FCF on minimal capital. The business economics are excellent. The investment returns from here depend entirely on whether the entry price leaves room for compounding.</p>
+<hr />
+<h2 id="section-4-management-integrity-and-rationality">SECTION 4 — MANAGEMENT: INTEGRITY AND RATIONALITY</h2>
+<h3 id="41-integrity-assessment">4.1 Integrity Assessment</h3>
+<p><strong>Tone in filings:</strong> The 10-K FY2025 addresses competitive risks, the source-code access incident (April 2025), and dual-class governance without softening language. The SEC comment letter exchange (2023 CORRESP) covered four technical accounting questions, resolved cooperatively within three months (Financial-Analysis §4.4). FY2026 guidance ($4.32B) aligned with Q1 FY2026 actuals, suggesting no guidance manipulation.</p>
+<p><strong>Restatements / irregularities:</strong> None. Beneish M-Score −2.462 — well below the −1.78 manipulation threshold. No related-party transaction concerns in the proxy.</p>
+<p><strong>Litigation:</strong> No material legal proceedings (10-K Item 3). Source-code incident disclosed transparently; no customer data affected per company statement.</p>
+<p><strong>Compensation:</strong> PSU vesting at 200% cap in FY2025 reflects genuine revenue outperformance. Performance metrics are revenue and non-GAAP operating margin — not ROIC or FCF per share — a governance limitation common to growth-stage SaaS that benefits insiders when growth is strong.</p>
+<p><strong>Rating: Integrity High.</strong> Most important evidence: clean CORRESP resolution, no restatements, transparent incident disclosure.</p>
+<hr />
+<h3 id="42-capital-allocation-rationality">4.2 Capital Allocation Rationality</h3>
+<table>
+<thead>
+<tr>
+<th>Use of FCF</th>
+<th>Amount (approx.)</th>
+<th>% of 3-year cumulative FCF (~$2.47B)</th>
+<th>Value-Creating?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Growth R&amp;D</td>
+<td>~$1,400M/yr avg. (expensed)</td>
+<td>Primary investment</td>
+<td>Likely yes — drives NRR and product breadth</td>
+</tr>
+<tr>
+<td>Bolt-on M&amp;A</td>
+<td>~$170M goodwill growth FY2025</td>
+<td>~7% of one year's FCF</td>
+<td>Neutral — small targeted deals; no ROIC deterioration</td>
+</tr>
+<tr>
+<td>Dividends</td>
+<td>$0</td>
+<td>0%</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Share buybacks</td>
+<td>$0</td>
+<td>0%</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Debt repayment</td>
+<td>$0</td>
+<td>0%</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Cash accumulation</td>
+<td>~$3.5B net cash</td>
+<td>—</td>
+<td>Suboptimal yield; provides balance sheet optionality</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Buybacks:</strong> No buybacks at $261.18 vs. base-case intrinsic value ~$115 is explicitly rational. Buffett would approve this discipline — buying back stock above intrinsic value destroys shareholder value.</p>
+<p><strong>Acquisitions:</strong> Small and technology-targeted. ROIC not materially impacted. Appropriate for a platform builder seeking to close feature gaps without betting the balance sheet.</p>
+<p><strong>SBC concern:</strong> $750.7M SBC (22% of revenue) is the primary capital allocation issue. At this level, equity issuance is the de facto financing mechanism for the business's talent costs. A private owner would demand a lower SBC intensity.</p>
+<p><strong>Rating: Good.</strong> Rational in the most important decision (no buybacks at elevated price). The SBC level is the one meaningful criticism.</p>
+<hr />
+<h3 id="43-skin-in-the-game-incentive-alignment">4.3 Skin in the Game &amp; Incentive Alignment</h3>
+<p><strong>CEO ownership:</strong> Olivier Pomel holds 17.3% of total voting power via Class B shares (10× voting). As co-founder with continuous tenure since 2010, his economic incentive is closely aligned with long-term business success.</p>
+<p><strong>Insider transaction trend:</strong> Pomel filed Form 144 in July 2026 to sell 127,141 shares (~$32.7M) via Morgan Stanley — routine systematic liquidation, not a discretionary bearish sale (Financial-Analysis §4.3). Pattern: systematic quarterly Form 144 sales consistent with founder liquidity management.</p>
+<p><strong>Incentive structure:</strong> PSU vesting tied to revenue and non-GAAP operating margin, not ROIC or FCF/share — a governance limitation. However, alignment between revenue growth and equity value creation is strong for a business at Datadog's growth stage.</p>
+<p><strong>Buffett test:</strong> Would management make the same decisions as private owners? Largely yes — product investment intensity, conservative balance sheet, and no buybacks at premium valuations reflect owner-operator mentality. The high SBC is the exception: a private owner would not issue 22% of revenue in equity compensation. This is where public-company incentives diverge from owner-operator rationality.</p>
+<hr />
+<h2 id="section-5-intrinsic-value-margin-of-safety">SECTION 5 — INTRINSIC VALUE &amp; MARGIN OF SAFETY</h2>
+<p>Buffett: "Price is what you pay; value is what you get."</p>
+<h3 id="51-owner-earnings-dcf-conservative">5.1 Owner Earnings DCF (Conservative)</h3>
+<p><em>Using FY2025 owner earnings of $107.7M as the base (GAAP-equivalent, D&amp;A-proxy method per §3.1). Note: Using FCF as the starting point ($1,000.6M) would be more representative of cash economics but includes SBC add-back. To be conservative and consistent with the Buffett owner-earnings framework, a blended starting point of $250M (FCF minus SBC) is used for the DCF, representing the cash available to a rational owner after dilution costs.</em></p>
+<p><strong>DCF inputs:</strong>
+- Starting owner earnings (Year 0): $250M (FCF $1,001M minus SBC $751M)
+- Stage 1 growth (Years 1–10): Base case lower-bound revenue CAGR of 20%, with FCF margin held at 28% (conservative relative to Financial-Analysis §6.3 Base of 28%)
+- Terminal growth rate: 3.0% (consistent with long-run nominal GDP)
+- Discount rate: 10% (risk-free rate approximately 4.5% + business risk premium of 5.5%; Datadog's edge-of-circle classification and hyperscaler threat warrant a risk premium above the 3–5% suggested for wide-moat businesses; Financial-Analysis §7.4 cites WACC of 10%)</p>
+<p>Sensitivity run at Base (10%), Conservative (11%), Very Conservative (12%).</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Owner Earnings ($M, Base 20% growth)</th>
+<th>Discount Factor (10%)</th>
+<th>Present Value ($M)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>300.0</td>
+<td>0.909</td>
+<td>272.7</td>
+</tr>
+<tr>
+<td>2</td>
+<td>360.0</td>
+<td>0.826</td>
+<td>297.4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>432.0</td>
+<td>0.751</td>
+<td>324.7</td>
+</tr>
+<tr>
+<td>4</td>
+<td>518.4</td>
+<td>0.683</td>
+<td>354.1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>622.1</td>
+<td>0.621</td>
+<td>386.3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>746.5</td>
+<td>0.564</td>
+<td>420.9</td>
+</tr>
+<tr>
+<td>7</td>
+<td>895.8</td>
+<td>0.513</td>
+<td>459.5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1,074.9</td>
+<td>0.467</td>
+<td>502.0</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1,289.9</td>
+<td>0.424</td>
+<td>547.1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1,547.9</td>
+<td>0.386</td>
+<td>597.4</td>
+</tr>
+<tr>
+<td>Terminal Value (TV = 1,547.9×1.03 / 0.07)</td>
+<td>22,788.4</td>
+<td>0.386</td>
+<td>8,796.5</td>
+</tr>
+<tr>
+<td><strong>Sum of PVs</strong></td>
+<td></td>
+<td></td>
+<td><strong>12,958.6</strong></td>
+</tr>
+<tr>
+<td>Add: Net cash ($3,500M)</td>
+<td></td>
+<td></td>
+<td>3,500.0</td>
+</tr>
+<tr>
+<td><strong>Total Equity Value ($M)</strong></td>
+<td></td>
+<td></td>
+<td><strong>16,458.6</strong></td>
+</tr>
+<tr>
+<td>Diluted shares (363.5M)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Equity Value per share</strong></td>
+<td></td>
+<td></td>
+<td><strong>$45.28</strong></td>
+</tr>
+<tr>
+<td><strong>Current Price (Market Data)</strong></td>
+<td></td>
+<td></td>
+<td><strong>$261.18</strong></td>
+</tr>
+<tr>
+<td><strong>Implied Margin of Safety</strong></td>
+<td></td>
+<td></td>
+<td><strong>−477% (premium)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>DCF sensitivity at three discount rates:</em></p>
+<table>
+<thead>
+<tr>
+<th>Discount Rate</th>
+<th>Per Share Value</th>
+<th>vs. Current Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10% (Base)</td>
+<td>$45.28</td>
+<td>−83% below current price</td>
+</tr>
+<tr>
+<td>11% (Conservative)</td>
+<td>$37.50</td>
+<td>−86% below current price</td>
+</tr>
+<tr>
+<td>12% (Very Conservative)</td>
+<td>$31.40</td>
+<td>−88% below current price</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> The conservative owner-earnings DCF produces a value well below the current price under any plausible discount rate assumption. This is a direct consequence of starting from SBC-adjusted owner earnings ($250M) rather than headline FCF ($1,001M). The gap between SBC-adjusted and reported FCF is the central valuation tension for Datadog: investors who treat SBC as economically irrelevant will compute a much higher intrinsic value; investors who treat SBC as a real dilution cost will arrive at figures close to those above. The truth lies between these extremes — SBC will decline as a % of revenue over time, but it will not disappear.</p>
+<hr />
+<h3 id="52-earnings-power-value-epv">5.2 Earnings Power Value (EPV)</h3>
+<p><em>Greenwald EPV: normalised EBIT × (1 − tax rate) / Cost of Capital — what the business is worth with zero growth.</em></p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normalised EBIT (3-year average)</td>
+<td>($33.5M + $54.3M + (−$44.4M)) / 3 = −$7.9M</td>
+<td>Financial-Analysis §5.1</td>
+</tr>
+<tr>
+<td>Effective tax rate (3-year avg.)</td>
+<td>(105.4% + 9.9% + 15.2%) / 3 = 43.5%</td>
+<td>Financial-Analysis §5.4</td>
+</tr>
+<tr>
+<td>Cost of capital</td>
+<td>10%</td>
+<td>Same as §5.1</td>
+</tr>
+<tr>
+<td>NOPAT</td>
+<td>−$7.9M × (1 − 0.435) = −$4.5M</td>
+<td></td>
+</tr>
+<tr>
+<td>EPV</td>
+<td>−$4.5M / 0.10 = −$45M</td>
+<td></td>
+</tr>
+<tr>
+<td>Add net cash</td>
+<td>+$3,500M</td>
+<td>Financial-Analysis §10.1</td>
+</tr>
+<tr>
+<td><strong>EPV equity value</strong></td>
+<td><strong>$3,455M</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Diluted shares</td>
+<td>363.5M</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EPV per share</strong></td>
+<td><strong>$9.50</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> The EPV confirms the picture from the DCF: Datadog's current GAAP EBIT is slightly negative, so the no-growth floor value is driven almost entirely by the net cash balance on the balance sheet. The business's going-concern value above $9.50/share is entirely dependent on future growth materialising. An investor paying $261.18 today is paying $251.68/share — approximately $91B — for growth that has not yet been earned.</p>
+<hr />
+<h3 id="53-margin-of-safety-summary">5.3 Margin of Safety Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Conservative Value (per share)</th>
+<th>Current Price</th>
+<th>Implied Premium / Discount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Owner Earnings DCF (10% discount rate)</td>
+<td>$45.28</td>
+<td>$261.18</td>
+<td>+477% premium to value</td>
+</tr>
+<tr>
+<td>Owner Earnings DCF (12% discount rate)</td>
+<td>$31.40</td>
+<td>$261.18</td>
+<td>+731% premium to value</td>
+</tr>
+<tr>
+<td>Earnings Power Value (zero growth)</td>
+<td>$9.50</td>
+<td>$261.18</td>
+<td>+2,649% premium to value</td>
+</tr>
+<tr>
+<td>Fair-Value-Bands Bear Case (sidecar)</td>
+<td>$37.00</td>
+<td>$261.18</td>
+<td>+606% premium to value</td>
+</tr>
+<tr>
+<td>Fair-Value-Bands Base Case (sidecar)</td>
+<td>$115.00</td>
+<td>$261.18</td>
+<td>+127% premium to value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Is there a margin of safety at the current price?</strong> No. The current price provides no margin of safety against any of the conservative valuation methods above. The stock is priced at a significant premium to base-case intrinsic value.</p>
+<p><strong>At what price would a 25% margin of safety exist against base case?</strong> $115.00 × 0.75 = <strong>$86.25</strong> or lower.</p>
+<p><strong>At what price would a 40% margin of safety exist against base case?</strong> $115.00 × 0.60 = <strong>$69.00</strong> or lower.</p>
+<hr />
+<h2 id="section-6-current-valuation-snapshot">SECTION 6 — CURRENT VALUATION SNAPSHOT</h2>
+<h3 id="61-multiples-vs-earnings-power">6.1 Multiples vs. Earnings Power</h3>
+<table>
+<thead>
+<tr>
+<th>Multiple</th>
+<th>Current (Market Data)</th>
+<th>What It Implies</th>
+<th>Buffett/Munger Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P/E (trailing)</td>
+<td>682.7×</td>
+<td>Paying 682 years of trailing earnings</td>
+<td>Absurd in any traditional framework; price embeds enormous growth assumption</td>
+</tr>
+<tr>
+<td>P/FCF</td>
+<td>~95× (market cap $86.4B / FCF $936M from snapshot)</td>
+<td>Paying 95 years of free cash flow</td>
+<td>High even for a top-tier growth compounder; requires sustained 25%+ FCF growth</td>
+</tr>
+<tr>
+<td>Owner Earnings Yield (GAAP NI / Market Cap)</td>
+<td>0.12%</td>
+<td>$107.7M NI / $86.4B market cap</td>
+<td>Compare to 10-year Treasury at ~4.5%; equity risk not compensated</td>
+</tr>
+<tr>
+<td>EV/EBITDA</td>
+<td>2,558× (Market Data snapshot)</td>
+<td>Essentially infinite; EBITDA near zero</td>
+<td>GAAP EBITDA is distorted by SBC; non-GAAP EBITDA is more meaningful</td>
+</tr>
+<tr>
+<td>EV/Owner Earnings (FCF-SBC adj.)</td>
+<td>~346× ($86.4B / $250M)</td>
+<td>346 years of SBC-adjusted owner earnings</td>
+<td>Very demanding; requires dramatic earnings growth</td>
+</tr>
+<tr>
+<td>P/Book</td>
+<td>23.8×</td>
+<td></td>
+<td>Acceptable only with very high sustained ROE; ROE currently 2.9%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Owner Earnings Yield vs. Risk-Free Rate:</strong> OE yield (GAAP) of 0.12% vs. 10-year Treasury approximately 4.5% (analyst assumption — not in source files). The earnings yield is approximately 38× below the risk-free rate. Even using FCF/market cap (~1.1%), the FCF yield is only one-quarter of the risk-free rate. Buffett's test is not passed.</p>
+<hr />
+<h3 id="62-what-growth-rate-is-the-market-pricing-in">6.2 What Growth Rate Is the Market Pricing In?</h3>
+<p>Using the owner-earnings DCF from §5.1 (10% discount rate, 3% terminal growth): what constant long-term growth rate from the $250M SBC-adjusted owner earnings base makes the NPV equal to $261.18/share (i.e., market cap = $86.4B)?</p>
+<p>Solving iteratively: to produce a PV of $86.4B from $250M of year-0 earnings over 10 years plus terminal value at 10% discount rate and 3% terminal growth, the implied growth rate is approximately <strong>30–32% per year for 10 years</strong> before terminal growth kicks in. This exceeds even the bull-case revenue CAGR of 32% — it requires that owner earnings grow at the same rate as revenue while simultaneously expanding FCF margin well above current levels.</p>
+<p>If instead one starts from headline FCF ($1.0B, not SBC-adjusted), the implied growth rate drops to approximately <strong>18–20%</strong> per year for 10 years — still at the high end of the base case and requiring no slowdown.</p>
+<p><strong>Characterisation: Demanding.</strong> The market is pricing in the bull-case scenario on a FCF basis, and the bull-case-plus-margin-expansion scenario on a GAAP owner-earnings basis. There is essentially no scenario in which the current price represents fair value under a conservative discounting framework. This is a growth-premium stock, not a value stock.</p>
+<hr />
+<h2 id="section-7-risk-permanent-capital-loss">SECTION 7 — RISK: PERMANENT CAPITAL LOSS</h2>
+<p>Buffett's two rules: "Rule No. 1: Never lose money. Rule No. 2: Never forget Rule No. 1."</p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood (H/M/L)</th>
+<th>Potential for Permanent Impairment</th>
+<th>Buffett's Test: Would This Destroy the Moat?</th>
+<th>Early Warning Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moat erosion — hyperscaler bundling</td>
+<td>H</td>
+<td>High</td>
+<td>Yes — if AWS/Azure bundles replace Datadog in enterprise agreements, switching costs become irrelevant</td>
+<td>NRR below 115% for two consecutive quarters</td>
+</tr>
+<tr>
+<td>Management integrity failure</td>
+<td>L</td>
+<td>Low</td>
+<td>No history; M-Score clean; no SEC action</td>
+<td>SEC Wells Notice or restatement announcement</td>
+</tr>
+<tr>
+<td>Excessive leverage</td>
+<td>L</td>
+<td>Low</td>
+<td>Net cash ~$3.5B; convertible notes at 0.125%; no near-term maturity risk</td>
+<td>Covenant breach on 2029 converts would require GAAP NI recovery first</td>
+</tr>
+<tr>
+<td>Regulatory / legal disruption</td>
+<td>L</td>
+<td>Low</td>
+<td>No material legal proceedings; GDPR systemic not DDOG-specific</td>
+<td>Material GDPR fine &gt;$100M or SEC enforcement action</td>
+</tr>
+<tr>
+<td>Capital allocation failure — value-destroying acquisitions</td>
+<td>M</td>
+<td>Medium</td>
+<td>A large, expensive acquisition could impair the thesis temporarily</td>
+<td>Goodwill impairment charge; ROIC declining post-acquisition</td>
+</tr>
+<tr>
+<td>SBC / dilution spiral — equity issuance exceeds earnings growth</td>
+<td>M</td>
+<td>Medium</td>
+<td>Not directly, but sustained dilution erodes per-share value permanently</td>
+<td>SBC/Revenue ratio rising or flat above 22% for three years</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permanent Loss Assessment:</strong> The realistic worst-case scenario without fraud or black swan is the bear case from Financial-Analysis §1.2: NRR decays to 110%, hyperscaler bundling accelerates, revenue CAGR compresses to 15%, and GAAP operating margin stays negative. The bear-case fair value is $37/share (sidecar canonical), representing an <strong>86% loss</strong> from the current price of $261.18. This is not tail-risk — it is assigned a 25% probability. At $261.18, even a base-case outcome (50% probability, $115/share) produces a <strong>56% loss in value</strong>. The current price requires the bull case ($603/share) to deliver a positive return.</p>
+<hr />
+<h2 id="section-7b-political-regulatory-risk-value-investors-lens">SECTION 7B — POLITICAL &amp; REGULATORY RISK (VALUE INVESTOR'S LENS)</h2>
+<p><em>Source: DDOG-Political-Exposure.md (present and loaded). Political Exposure file covers revolving-door map, lobbying, PAC contributions, federal contract exposure, and administration sensitivity.</em></p>
+<h3 id="7b1-political-moat-or-political-rent">7B.1 Political Moat or Political Rent?</h3>
+<p><strong>Classification: Politically neutral.</strong></p>
+<p>Datadog has zero lobbying spend ($0 FY2024), no corporate PAC, and no board members or executives with prior federal government roles (Political-Exposure §1, §2, §3). The company's competitive position does not depend on regulatory favour, government contracts, or administration relationships — it depends on product quality and switching costs. Government revenue is currently non-material (&lt;10% of total, estimated) and even the FedRAMP High certification achieved May 2026 — while commercially significant — represents Datadog meeting a regulatory standard, not obtaining a preferential political position.</p>
+<p>Government is neither a meaningful source of competitive advantage nor a material threat. Political risk is background noise, not a thesis driver.</p>
+<hr />
+<h3 id="7b2-administration-sensitivity-permanent-capital-loss-test">7B.2 Administration Sensitivity — Permanent Capital Loss Test</h3>
+<p><strong>Administration Relationship Score: 3 — Neutral</strong> (Political-Exposure §5).</p>
+<p>The current Trump administration's aggressive pro-AI posture — AI Executive Orders, National AI Action Plan (July 2025), data centre permitting acceleration — is a broad sector tailwind for cloud observability and AI infrastructure vendors. Datadog benefits from this alongside every comparable company; it holds no differentiated political position relative to Dynatrace, Elastic, or hyperscaler competitors.</p>
+<p><strong>Under an administration change:</strong> Datadog's earning power would not be materially affected. The switching-cost moat is product-driven, not policy-driven. No specific policy lever — tariffs, subsidy programmes, government contracts, or regulatory changes — creates a direct tail risk. The one modest concern is DOGE-driven federal IT budget scrutiny, which could slow the government revenue ramp post-FedRAMP High (Political-Exposure §5 narrative). This is speculative and affects less than 10% of current revenue.</p>
+<p><strong>Direct tariff exposure: None.</strong> Datadog is a pure-play SaaS company; it does not import or export physical goods. Infrastructure costs are cloud-based (AWS, Azure, GCP) and not subject to import duties (Political-Exposure §6).</p>
+<p><strong>Verdict: Political risk is immaterial to the long-term investment case.</strong> Most important evidence: zero lobbying spend, no corporate PAC, no government-background board members, and revenue model entirely insulated from direct tariff risk.</p>
+<hr />
+<h3 id="7b3-mungers-incentive-test-who-benefits-from-government-proximity">7B.3 Munger's Incentive Test — Who Benefits from Government Proximity?</h3>
+<p>No corporate PAC. Aggregate employee FEC contributions of $148,733 (2024 election cycle) represent a negligible amount at 0.004% of FY2025 revenue — below any materiality threshold (Political-Exposure §3).</p>
+<p>Datadog's lobbying posture is consistent with a company that competes on product merit rather than regulatory relationship-building. The absence of revolving-door board members and the zero-lobby stance suggest management has deliberately chosen to avoid political entanglement — a sensible risk-management choice for a company with global enterprise customers.</p>
+<p><strong>Rating: Shareholders benefit.</strong> The absence of political spending protects shareholders from the governance risks that arise when corporate resources are deployed for political influence.</p>
+<hr />
+<h2 id="section-8-key-talking-points">SECTION 8 — KEY TALKING POINTS</h2>
+<ul>
+<li>
+<p><strong>Switching costs are real and demonstrated — this is a genuine moat.</strong> Datadog's 120% NRR sustained across 4+ years and 84% multi-product penetration are not marketing claims; they are commercial evidence of customers choosing to deepen their commitment rather than leave. The moat exists. The question is durability, not presence. This strengthens the case for ownership.</p>
+</li>
+<li>
+<p><strong>The valuation is the investment thesis, and the valuation is the problem.</strong> At $261.18, investors are paying approximately 127% above the base-case intrinsic value ($115/share canonical). Even a flawless execution of the base case — 24% revenue CAGR, 28% FCF margin, NRR stable at 115–120% — produces a negative return from today's price. The business is excellent; the entry price is not. This critically challenges the case for new ownership.</p>
+</li>
+<li>
+<p><strong>FCF quality is exceptional; GAAP earnings are not the right signal.</strong> The Beneish M-Score of −2.462 and accruals ratios consistently at −0.14 to −0.17 confirm that Datadog generates more cash than its income statement shows. FCF of $1.0B (29.2% margin) is real and growing. But headline FCF overstates owner earnings because SBC of $751M is a real dilution cost. Investors who use reported FCF as owner earnings are being generous. This is relevant context for understanding the valuation — it neither clearly strengthens nor clearly weakens the case, but it forces precision.</p>
+</li>
+<li>
+<p><strong>Hyperscaler bundling is the existential risk, and it is structural, not cyclical.</strong> AWS, Azure, and GCP are building observability tools as loss-leaders to retain cloud workloads. The risk is not that these tools will immediately displace Datadog — embedded instrumentation creates 12–36 months of inertia — but that every new workload provisioned on a single cloud is a potential lost land-and-expand opportunity. This is a decade-long competitive dynamic that the current valuation does not adequately discount. This challenges the case for ownership.</p>
+</li>
+<li>
+<p><strong>AI/LLM observability is a genuine incremental opportunity.</strong> Q1 FY2026 re-acceleration to +32% YoY (from FY2025's 28%) was partly driven by LLM Observability and GPU monitoring uptake. If AI workloads compound as rapidly as enterprise cloud workloads did in 2017–2022, Datadog's usage-based model benefits directly and non-linearly. This is the bull case, and it is not implausible. This strengthens the long-term case but is not a current-price justification.</p>
+</li>
+<li>
+<p><strong>Management is trustworthy but not fully aligned on SBC.</strong> Founders with 35.5% combined voting control, clean SEC history, no restatements, and rational capital allocation (no buybacks at a 127% premium to intrinsic value) — these are excellent signals. The $750.7M annual SBC is the one alignment failure: it is diluting shareholders at a rate that demands extraordinary revenue growth just to hold per-share economics flat. This is a medium-weight concern for long-term holders.</p>
+</li>
+<li>
+<p><strong>Political and regulatory risk is negligible.</strong> Zero lobbying, no corporate PAC, no government-background board members, and a product model that requires no regulatory favour to function. Political risk is not a factor in this investment case.</p>
+</li>
+</ul>
+<hr />
+<h2 id="section-9-bear-base-bull-cases-value-investors-lens">SECTION 9 — BEAR / BASE / BULL CASES (VALUE INVESTOR'S LENS)</h2>
+<h3 id="90-method-declaration">9.0 Method Declaration</h3>
+<p><strong>Q1 — Asset type check:</strong> Not bond or ETF. Continue.</p>
+<p><strong>Q2 — Segment divergence:</strong> Datadog reports as a single segment (Financial-Analysis §7.5). No segment divergence. Continue.</p>
+<p><strong>Q3 — Conglomerate structure:</strong> Not a conglomerate. Continue.</p>
+<p><strong>Q4 — Default method check:</strong>
+- Self-band P/FCF: <code>[INSUFFICIENT HISTORY]</code> (only 12 months of positive P/FCF; n &lt; 36 required). Condition (a) fails.
+- Peer EV/EBITDA high: 196.389× (PANW) — exceeds the 100× guard. Condition (e) fails independently.</p>
+<p><strong>Both (a) and (e) fail → <code>dcf-scenario-fcf</code> is the required method.</strong></p>
+<blockquote>
+<p><strong>§9.0 — Method:</strong> <code>dcf-scenario-fcf</code> — Datadog is a single-segment, non-conglomerate SaaS company with insufficient self-band P/FCF history (&lt;36 months) and peer EV/EBITDA high of 196× (PANW) tripping the 100× guardrail; the Q1–Q4 procedure resolves unambiguously to <code>dcf-scenario-fcf</code> as a Gordon growth model applied to year-3 FCF from <code>Fair-Value-Bands.json::scenarios_input</code>.</p>
+<p><strong>Scenario inputs consumed:</strong> <code>scenarios_input.bear.fcf_usd_bn = 1.0</code>, <code>scenarios_input.base.fcf_usd_bn = 1.9</code>, <code>scenarios_input.bull.fcf_usd_bn = 2.7</code>. <code>balance_sheet_proj.base.shares_outstanding_mn = 378</code>.</p>
+<p><strong>Current price (Market Data):</strong> $261.18 (USD); fx_to_usd = 1.0 (USD-denominated).</p>
+</blockquote>
+<p><em>WACC per scenario: Bear 12% (stress), Base 10% (Financial-Analysis §7.4), Bull 8% (lower risk premium for bull scenario where moat is widening). Terminal growth: Bear 2.5%, Base 3.0%, Bull 3.5%.</em></p>
+<p><em>Arithmetic template: <code>terminal_value_bn = fcf_usd_bn × (1 + terminal_growth_pct/100) / ((wacc_pct − terminal_growth_pct) / 100)</code> → <code>equity_value_bn = terminal_value_bn − net_debt_usd_bn</code> → <code>equity_per_share = equity_value_bn × 1,000 / shares_outstanding_mn</code>.</em></p>
+<p><em>Sidecar canonical values (DDOG-Forward-Returns.json): Bear $37/share (IRR −47.87%), Base $115/share (IRR −23.92%), Bull $603/share (IRR +32.17%). The sidecar uses <code>fair-value-bands</code> method (central estimates from Fair-Value-Bands.json). The DCF-scenario-fcf arithmetic below is the declared method; where divergence from the sidecar exceeds 2pp, the sidecar governs for the YAML ranking block.</em></p>
+<hr />
+<h4 id="91-bear-case-hyperscaler-bundling-wins-moat-erodes">9.1 Bear Case — Hyperscaler Bundling Wins, Moat Erodes</h4>
+<p><em>Probability: 25%</em></p>
+<p>The bear case is triggered by two simultaneous adverse developments: NRR decays to 110% as AWS and Azure aggressively bundle native observability into enterprise agreements, reducing Datadog's land-and-expand growth engine; and AI observability monetisation materialises slower than expected because hyperscalers simultaneously offer GPU monitoring at zero marginal cost within their own platforms. Revenue CAGR compresses to 15%, reaching $5.2B by FY2028E, while SBC remains sticky at 20%+ of revenue and GAAP operating margin stays negative (−3%). FCF margin compresses to 20% as Datadog responds with price concessions and R&amp;D acceleration to defend market share. In year 3, FCF would be approximately $1.0B from a $5.2B revenue base, but per-share FCF on a diluting share count of 385M yields approximately $2.60/share — insufficient to support the current multiple at any reasonable valuation. An investor who owned Datadog from today through a bear case would experience not just multiple compression but also deteriorating earnings power — both dimensions adversely combining per the §13 definition.</p>
+<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong>
+Bear: <code>TV = 1.0 × 1.025 / (0.12 − 0.025) = 1.025 / 0.095 = 10.789B</code>; <code>equity = 10.789 − (−3.5) = 14.289B</code>; <code>per_share = 14.289B × 1,000 / 385 = $37.1</code>
+<em>Sidecar canonical: $37.00 — divergence &lt;0.1% from sidecar; sidecar confirmed.</em></p>
+<p><strong>3-Year Bear Return (annualised):</strong> <code>(37.0 / 261.18)^(1/3) − 1 = (0.1417)^(0.333) − 1 = 0.5223 − 1 = −47.8%</code> annualised. <em>Sidecar: −47.87% — consistent.</em></p>
+<p><strong>Margin of Safety at Bear Case:</strong> The current price ($261.18) provides zero margin of safety against the bear case. The bear fair value ($37) represents an 86% decline from today's price.</p>
+<p><strong>Confirming Signal (12-month):</strong> NRR reported below 115% in any single quarter — a leading indicator of structural demand compression, not seasonal noise.</p>
+<hr />
+<h4 id="92-base-case-durable-compounder-delivering-priced-for-perfection">9.2 Base Case — Durable Compounder Delivering, Priced for Perfection</h4>
+<p><em>Probability: 50%</em></p>
+<p>The base case assumes NRR stabilises at 115–120% as AI/LLM observability workloads add 3–5 percentage points to growth, offsetting modest share losses in core infrastructure monitoring. Revenue CAGR of 24% reaches $6.6B by FY2028E; FCF margin holds at 28% as operating leverage gradually emerges. GAAP operating margin turns positive by FY2027, with non-GAAP operating margin tracking toward 25%. This is a business executing exactly as planned — meeting guidance, growing the platform, and beginning the long journey toward GAAP profitability. In year 3, FCF of $1.9B on 378M shares yields approximately $5.03/share in cash generation, but the multiple required to make today's price work at this earnings level is approximately 52×, still demanding and requiring continued confidence in sustained growth beyond year 3.</p>
+<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong>
+Base: <code>TV = 1.9 × 1.03 / (0.10 − 0.03) = 1.957 / 0.07 = 27.957B</code>; <code>equity = 27.957 − (−4.5) = 32.457B</code>; <code>per_share = 32.457B × 1,000 / 378 = $85.8</code>
+<em>Divergence from sidecar ($115): 34% below sidecar. The sidecar uses the Fair-Value-Bands central_estimate (peer-and-self composite) rather than the Gordon growth model; this divergence is a known methodological gap. Sidecar ($115) governs for ranking. The DCF result ($86) reflects the conservative discount rate applied to a business with genuine structural uncertainty; both figures confirm the current price is materially above any base-case estimate.</em></p>
+<p><strong>3-Year Base Return (annualised, sidecar canonical):</strong> Sidecar base: $115. <code>(115 / 261.18)^(1/3) − 1 = (0.4404)^(0.333) − 1 = 0.7616 − 1 = −23.9%</code> annualised. <em>Sidecar: −23.92% — confirmed.</em></p>
+<p><strong>Confirming Signal (12-month):</strong> NRR holds at or above 115% for two consecutive quarterly reports, alongside non-GAAP operating margin at or above 22% — evidence that both the demand engine and the operating leverage thesis are intact.</p>
+<hr />
+<h4 id="93-bull-case-ai-inflection-platform-wins-moat-widens">9.3 Bull Case — AI Inflection, Platform Wins, Moat Widens</h4>
+<p><em>Probability: 25%</em></p>
+<p>The bull case requires NRR &gt;125% in AI-native cohorts as enterprise AI infrastructure buildout accelerates dramatically — Datadog's LLM Observability and GPU monitoring become category-defining products with no viable hyperscaler substitute. Security platform cross-sell (Cloud SIEM, Application Security, IAM) wins share from Splunk/Cisco in newly price-competitive post-acquisition environments. FedRAMP High opens DoD and federal contracts as a meaningful third revenue leg by FY2027–FY2028. Revenue CAGR of 32% reaches $7.9B; FCF margin expands to 34% as SBC/revenue normalises below 18% and gross margin holds at 80%. In year 3, FCF of $2.7B on 370M shares yields $7.30/share in cash generation. The business in this scenario has validated its AI positioning and demonstrated that the platform breadth creates a data-gravity advantage the hyperscalers cannot replicate at comparable depth.</p>
+<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong>
+Bull: <code>TV = 2.7 × 1.035 / (0.08 − 0.035) = 2.7945 / 0.045 = 62.100B</code>; <code>equity = 62.100 − (−6.0) = 68.100B</code>; <code>per_share = 68.100B × 1,000 / 370 = $184.1</code>
+<em>Divergence from sidecar ($603): substantial. The sidecar bull estimate of $603/share reflects the fair-value-bands peer composite extrapolated at bull-case revenue — a methodology that applies high-multiple peer comparisons to a high-growth scenario. The dcf-scenario-fcf result ($184) is more conservative, applying a 8% WACC to year-3 FCF of $2.7B. The IRR from the DCF estimate: <code>(184.1 / 261.18)^(1/3) − 1 = (0.705)^(0.333) − 1 = 0.890 − 1 = −11.0%</code>. Sidecar canonical: $603, IRR +32.17%.</em></p>
+<p><em>Sidecar IRR governs for ranking. The sidecar's $603 bull estimate reflects the Fair-Value-Bands peer-composite methodology, which can produce very high values for fast-growing businesses trading at peer multiples. The DCF result ($184) is the analyst's preferred conservative estimate for narrative; the sidecar ($603, IRR +32.17%) is used in the YAML block.</em></p>
+<p><strong>3-Year Bull Return (annualised, sidecar canonical):</strong> <code>(603 / 261.18)^(1/3) − 1 = (2.309)^(0.333) − 1 = 1.3217 − 1 = +32.2%</code> annualised. <em>Sidecar: +32.17% — confirmed.</em></p>
+<p><strong>Confirming Signal (12-month):</strong> NRR reported above 120% in two consecutive quarters, specifically driven by LLM Observability and security SKU expansion — evidence that AI monetisation is incremental to, not substituting for, existing product growth.</p>
+<hr />
+<h4 id="94-probability-weighted-return">9.4 Probability-Weighted Return</h4>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Probability</th>
+<th>Annualised IRR (sidecar)</th>
+<th>Weighted Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>25%</td>
+<td>−47.87%</td>
+<td>−11.97%</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>50%</td>
+<td>−23.92%</td>
+<td>−11.96%</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>25%</td>
+<td>+32.17%</td>
+<td>+8.04%</td>
+</tr>
+<tr>
+<td><strong>Probability-weighted expected return</strong></td>
+<td><strong>100%</strong></td>
+<td></td>
+<td><strong>−15.89%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Probability sum: 25 + 50 + 25 = 100 — within required [95, 105] range.</em></p>
+<p><strong>Against a 10% value-investor hurdle rate:</strong> The probability-weighted expected annual return of approximately <strong>−15.9%</strong> falls dramatically below the 10% hurdle. Even under the bull case (25% probability), the stock barely delivers an adequate return. Under base case (50% probability), the stock loses more than 20% per year. Under the bear case (25% probability), the loss is catastrophic from today's entry price.</p>
+<p>This is the quantitative conclusion that matches the qualitative verdict in §1.3: Datadog is a high-quality business at a price that provides no margin of safety. The expected return is substantially negative from today's entry point.</p>
+<hr />
+<h2 id="section-10-monitoring-framework">SECTION 10 — MONITORING FRAMEWORK</h2>
+<p>Buffett holds "forever" — but he also watches the moat. These are the metrics a value investor tracks to verify the moat is intact, management is rational, and the business is compounding as expected.</p>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Source</th>
+<th>Current Value (from inputs)</th>
+<th>"Moat Intact" Signal</th>
+<th>"Moat at Risk" Signal</th>
+<th>Review Cadence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net Retention Rate (NRR)</td>
+<td>10-K / 10-Q narrative</td>
+<td>~120% (FY2025)</td>
+<td>≥115% sustained</td>
+<td>&lt;115% any quarter; &lt;110% = sell trigger</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>Gross margin</td>
+<td>10-Q / 8-K</td>
+<td>80.0% (FY2025); 79.2% (Q1 FY2026)</td>
+<td>79–81% range</td>
+<td>&lt;77% for a full year (pricing power lost)</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>FCF margin</td>
+<td>10-Q / 8-K</td>
+<td>29.2% (FY2025)</td>
+<td>≥26% consistently</td>
+<td>&lt;22% two consecutive quarters (operating leverage reversal)</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>Revenue YoY growth</td>
+<td>8-K quarterly results</td>
+<td>32% (Q1 FY2026)</td>
+<td>≥20% consistently</td>
+<td>&lt;20% two consecutive quarters</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>SBC / Revenue ratio</td>
+<td>10-Q notes</td>
+<td>~22% (FY2025)</td>
+<td>Declining toward 15% by FY2028</td>
+<td>Flat or rising above 22% for 3 years (dilution spiral)</td>
+<td>Annual</td>
+</tr>
+<tr>
+<td>Non-GAAP operating margin guidance</td>
+<td>8-K guidance</td>
+<td>~22% (Q1 FY2026)</td>
+<td>Guided ≥20% for forward year</td>
+<td>Guided below 18% for FY2027 = Operating leverage thesis broken</td>
+<td>Annual</td>
+</tr>
+</tbody>
+</table>
+<p>Choose metrics that are direct evidence of moat health, management rationality, and earnings power — not stock price or analyst sentiment. NRR is the single most critical metric: it is the observable proxy for switching-cost strength and expansion economics, and it is the first variable to move when competitive pressure intensifies.</p>
+<hr />
+<h2 id="section-11-ranking-inputs">SECTION 11 — RANKING INPUTS</h2>
+<pre><code class="language-yaml">ranking_inputs:
+  moat_tier: Wide
+  moat_tier_basis: &quot;Switching costs rated 'Present and strong' (primary source: 120% NRR sustained 4+ years, 84% multi-product penetration) and network effects rated 'Present but narrow' (secondary: unified telemetry data gravity); §2.2 Ten-Year Test verdict is Stable — two strong sources with Stable trajectory meets Wide threshold.&quot;
+  forward_irr_bear_pct: -47.87
+  forward_irr_base_pct: -23.92
+  forward_irr_bull_pct: 32.17
+  forward_irr_bear_probability_pct: 25
+  forward_irr_base_probability_pct: 50
+  forward_irr_bull_probability_pct: 25
+  forward_irr_horizon_years: 3
+</code></pre>
+</main>
+</body>
+</html>
