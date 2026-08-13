@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Equal Weight: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
+<h1 id="world-equal-weight-the-bet-still-works">World Equal Weight: The Bet Still Works</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- DATA_ERROR: current snapshot status field 'info_fetch_status' is null/absent on a v2 sidecar for MWEQ — Fetch-Market-Data writer bug; please report and re-run: python3 src/fetch/fetch_market_data.py MWEQ
+- DATA_ERROR: fund composition status field 'funds_data_fetch_status' is null/absent on a v2 sidecar for MWEQ — Fetch-Market-Data writer bug; please report and re-run: python3 src/fetch/fetch_market_data.py MWEQ
+- DATA_ERROR: risk-free rate status field 'rfr_fetch_status' is null/absent on a v2 sidecar for MWEQ — Fetch-Market-Data writer bug; please report and re-run: python3 src/fetch/fetch_market_data.py MWEQ
+- config.forward_return.terminal_pe_bear=12.0 overrides ERP-anchored value
+- currency drift: config.yaml says 'EUR' but Market-Data.json says 'USD' — re-run _Refresh-Holding MWEQ if Market-Data.json is stale
+- PORTFOLIO: (stale ranking, 2026-08-10) - PORTFOLIO: - PAUSCHAL-FALLBACK: MWEQ
+- PORTFOLIO: (stale ranking, 2026-08-10) - PAUSCHAL-FALLBACK: MWEQ
+- Basket earnings yield unavailable (yfinance returned no trailingPE). Valuation position is UNDETERMINED; rules table falls through to HOLD unless vehicle_integrity.any_breach fires EXIT.
+- [MISSING-POLITICAL-EXPOSURE-BLOCK] MWEQ-Political-Exposure.md not found in Holdings/MWEQ/Analysis/ — run 07-Political-Exposure skill.
+- [MISSING-COMPETITION-BLOCK] MWEQ-Competition.md not found in Holdings/MWEQ/Analysis/ — run 08-Competition-Research skill.</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-12 · Latest filing 2026-08-12.</em></p>
+<p>The bet is working. All six thesis conditions are reading at satisfactory, cautionary, or unreported levels — not one has deteriorated, and no exit condition has fired. The fund's share price at €5.90 sits modestly above its fair-value anchor, which means the basket is priced slightly ahead of where the equal-weight thesis says it is fully valued. The one reading to watch closely is the equity risk premium — the gap between what the basket earns and what a government bond pays — which has compressed to just 0.15 percentage points above zero as of the latest snapshot.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>World Equal Weight scores 4.30, ranking 11 of 20 active holdings by this measure — it sits just below the midpoint of the portfolio.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= (7.61% − 0.37% − 2.94%)
+  &nbsp;&nbsp;= +4.30%
+  &nbsp;&nbsp;= <strong>4.30</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.0.</strong> Index funds are not assigned a moat tier; the weight is always one.</p>
+<p><strong>Expected return: 7.61%.</strong> The expected return is the base-case forward return of 7.61% a year over five years. Index funds use their index-implied return directly — no scenario blend is applied.</p>
+<p><strong>Hurdle rate: 2.94%.</strong> The hurdle rate is 2.94% — the 0.94% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing); no equity-risk premium is added for a diversified fund.</p>
+<p>A score of 4.30 puts World Equal Weight 11th of 20 active holdings — in the lower half of the field, with the expected return clearing the hurdle by a comfortable margin despite the fund's modest spot-yield position.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The headline reading from the 2026-08-12 snapshot is unchanged from prior periods: the basket's earnings yield (what the basket earns as a fraction of its share price, analogous to the earnings yield of a single company) stands at 4.845%, and all six vehicle and thesis conditions remain passing. That is the same verdict as prior snapshots, but the margin on the most important condition has continued to narrow.</p>
+<p>The equity risk premium — the gap between the basket's earnings yield and the 10-year US government bond yield — has continued to compress. At the 2026-07-30 snapshot it stood at 0.27 percentage points; by the 2026-08-10 reading it had fallen to 0.15 percentage points, driven by rising bond yields (the 10-year reached 4.696%) while the basket's trailing earnings multiple expanded slightly (from 20.53× to 20.64×). All 13 history entries remain positive — the consecutive-negative condition that would start the exit clock has not been triggered — but the gap to zero has never been smaller. One additional quarter of rising yields or multiple expansion could push it negative and begin the persistence leg of exit condition (1).</p>
+<p>The vehicle guardrails are clean. The fund's total assets of 1.64 billion US dollars are 3.28 times the 500 million dollar floor. The top single holding (Astera Labs, a semiconductor interconnect company) accounts for 0.15% of the basket — well within the 1.0% ceiling that defines equal-weight integrity. No changes to the MSCI World Equal Weighted index methodology or to Invesco's fund mandate have been recorded. The annual charge field is missing from the data vendor, a known gap; the documented Invesco figure of 0.20% per year is 10 basis points below the 0.30% ceiling. See <a href="#the-bottom-line">The Bottom Line</a> for the overall verdict.</p>
+<h2 id="about-world-equal-weight">About World Equal Weight</h2>
+<p>The Invesco MSCI World Equal Weight UCITS ETF tracks the MSCI World Equal Weighted index, which takes the same approximately 1,500 companies that make up the standard MSCI World and weights them equally — each at roughly 0.07% of the basket on the quarterly rebalance date — rather than by market capitalisation. In a standard cap-weighted MSCI World fund, the five largest companies can collectively account for more than 20% of the portfolio; in this fund, no single name may mechanically drift above roughly 1% before the next rebalance corrects it. The index is rebalanced each quarter, which creates a structural "sell the winner, buy the laggard" dynamic: companies whose share prices have risen the most are trimmed back; those that have fallen are bought up.</p>
+<p>The practical result is a basket tilted toward smaller and mid-size names within MSCI World, toward non-US developed markets (Japan, the United Kingdom, and Continental Europe carry proportionally more weight than in the roughly 70% US allocation found in standard cap-weighted indices), and toward companies with lower-than-average earnings multiples, which tends to raise the basket's earnings yield relative to a cap-weighted peer. The trade-offs are real: the quarterly rebalance generates roughly 30% annual turnover (creating a small but permanent cost in transaction friction), sampling replication — the fund holds a representative subset rather than every one of the 1,500 constituents — means modest tracking error, and the median profitability of a 1,500-name equal-weight basket is structurally lower than the top ten names of a cap-weighted index.</p>
+<p>Annual cost: 0.20% per year (known from the Invesco factsheet; the automated data-vendor field is currently absent — see <a href="#gaps-in-the-picture">Gaps in the Picture</a>). The fund is an accumulating share class under the Irish UCITS structure, meaning dividends are retained inside the fund rather than paid out.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>Equal-weight developed-market equity exposure is the structural rationale: the fund is held as a deliberate counterweight to the mega-cap concentration in cap-weighted indices, on the thesis that spreading weight across 1,500 names at near-equal fractions raises the basket's earnings yield and diversifies away single-name and sector concentration risk. Six conditions must keep holding for that rationale to remain valid:</p>
+<ol>
+<li><strong>The basket's earnings yield must exceed the risk-free rate, or the case for taking equity risk has failed.</strong> Exit condition (1) fires when the equity risk premium (basket earnings yield minus the 10-year government bond yield) is negative for two consecutive quarters. The confirm standard — the level at which the premium is unambiguously healthy — is 2.0 percentage points; a reading between zero and 2.0 percentage points is a caution zone, not yet an exit trigger.</li>
+</ol>
+<p><em>Latest reading:</em> Equity risk premium +0.149% as of 2026-08-10. Positive but only 15 basis points above zero — 185 basis points below the 2.0 percentage-point healthy level. Thirteen consecutive positive readings; no consecutive-negative condition. The premium has compressed steadily: +0.87 percentage points in mid-July → +0.27 percentage points on 2026-07-30 → +0.15 percentage points on 2026-08-10. One further rise in bond yields or expansion in the basket's earnings multiple would push the reading below zero for the first time.</p>
+<ol>
+<li><strong>The fund's annual expense ratio must stay below 0.30%.</strong> Equal-weight funds run higher costs than cap-weighted peers because of rebalance turnover; 0.30% per year is the ceiling before the cost overhead erases the thesis's diversification benefit and a cheaper alternative becomes more rational.</li>
+</ol>
+<p><em>Latest reading:</em> The data-vendor field was absent at the 2026-08-10 snapshot; the documented Invesco factsheet figure is 0.20% per year, which is 10 basis points below the ceiling. The automated guardrail cannot fire until the vendor field is populated, but the known cost is safely within the limit.</p>
+<ol>
+<li><strong>The fund's total assets must remain above 500 million US dollars.</strong> UCITS funds below approximately 300–500 million euros face elevated fund-closure risk; Invesco has closed sub-scale UCITS products in the past. A sustained decline to this floor would be a vehicle-survival signal, not a market-price signal.</li>
+</ol>
+<p><em>Latest reading:</em> Total assets 1,640 million US dollars as of 2026-08-10 — 3.28 times the floor. Solidly passing.</p>
+<ol>
+<li><strong>The top single holding must not exceed 1.0% of the basket.</strong> By construction, equal-weighting holds every constituent near 0.07% on rebalance day; any drift above 1.0% — roughly 14 times the target weight — signals either a methodology change, a rebalance failure, or extreme intra-quarter price drift that the sampling strategy has not corrected.</li>
+</ol>
+<p><em>Latest reading:</em> Top single holding is Astera Labs at 0.15% as of 2026-08-10 — 85 basis points below the 1.0% ceiling. Equal-weight integrity intact.</p>
+<ol>
+<li><strong>The MSCI World Equal Weighted index methodology must not be materially restructured.</strong> A shift to factor-tilted weighting, removal of the quarterly rebalance, or a change of the parent universe from MSCI World to a narrower index would alter the product the thesis was written for.</li>
+</ol>
+<p><em>Latest reading:</em> No MSCI methodology restructuring or Invesco sponsor change on record as of 2026-08-12. Exit condition (5) not triggered — no signal to report.</p>
+<ol>
+<li><strong>The median profitability of the basket's top visible holdings must not collapse below 12%.</strong> The equal-weight construction pulls in smaller names with structurally lower profitability than the top names of a cap-weighted index; 12% is the floor below which even the visible top of the basket has lost quality.</li>
+</ol>
+<p><em>Latest reading:</em> Median return on equity of the top-10 intra-quarter drift leaders 31.0% as of 2026-08-10 — well above both the 15.0% healthy level and the 12.0% exit floor. Note: the top-10 drift leaders are currently heavily semiconductor- and semiconductor-equipment-weighted (names such as KLA, Applied Materials, and Micron Technology lead the pack); the full 1,500-name basket will exhibit a structurally lower median profitability than the visible top-10 suggests.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At a current price of €5.90, the basket's earnings yield stands at 4.845%. The equal-weight thesis is calibrated against three yield levels: a buy signal at 6.25% (earnings yield — when the basket is cheap), a fair-value anchor at 5.0%, and a trim signal at 4.0% (when the basket is expensive). At 4.845%, the basket sits between the fair-value anchor and the trim line — within the hold band, priced modestly above fair value.</p>
+<p>In price terms, the fair-value anchor corresponds to approximately €5.72 and the buy edge to approximately €4.57 (both derived from the basket's current earnings at the respective yield thresholds, as reported in the latest re-validation). The current price of €5.90 is about 3% above fair value — not expensive, but not a bargain either. A reversion to fair value would imply a price near €5.72; a reversion to the buy edge would require roughly a 23% decline from the current level, with earnings flat.</p>
+<p>The precise price edges as explicit euro amounts could not be extracted from the underlying valuation model this cycle because the basket earnings yield field was unavailable from the data vendor; the yield percentages above come from the latest re-validation directly. See <a href="#gaps-in-the-picture">Gaps in the Picture</a>.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The explicit buy, trim, and exit price levels could not be computed this cycle — the data vendor did not return a trailing earnings figure for the Xetra-listed ticker, so the pipeline could not derive the price-equivalent edges from the basket yield thresholds. The yield thresholds themselves remain in effect: a basket earnings yield at or above 6.25% is the buy signal; at or below 4.0% is the trim signal; at or below 3.0% is the exit signal. Those signals translate to specific euro prices at the next snapshot when the earnings yield field is restored.</p>
+<p>In addition to yield-based signals, <a href="#the-standing-orders">the Standing Orders</a> include independent vehicle-integrity paths that do not require a yield trigger: a breach of the total-assets floor, the annual-charge ceiling, the top-1 concentration ceiling, or a confirmed index-methodology restructuring each fires an exit regardless of where the share price sits.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p><strong>The equity risk premium is the single reading that carries the most weight.</strong> At 0.149 percentage points as of 2026-08-10, it is positive — which means the basket is still offering more than the risk-free rate, and exit condition (1) has not triggered. But the margin is thin: at current 10-year yields of 4.696%, a basket earnings multiple of 20.64× is enough to produce only 0.15 percentage points of premium. Thirteen consecutive readings have been positive; not one has gone negative. However, the trajectory is clear — the premium has been compressing steadily as bond yields have risen while the basket's multiple has held. One further reading below zero would start the persistence leg of exit condition (1). Two consecutive negative readings would trigger the exit.</p>
+<p>This does not cross any of the lines in <a href="#the-case-for-the-bet">The Case for the Bet</a> as they currently stand. The healthy threshold is 2.0 percentage points; the cautionary zone runs from zero to 2.0 percentage points; the exit condition fires only after two consecutive negative readings. At 0.15 percentage points, the reading is in the cautionary zone — the middle ground, not exit territory.</p>
+<p><strong>The annual charge field is a data gap, not a condition breach.</strong> The data vendor has not returned an automated expense figure for the Xetra-listed ticker; the known Invesco factsheet cost of 0.20% per year sits 10 basis points below the 0.30% ceiling. Until the automated field is populated (or a manual override is added to the holding's settings), the system cannot fire the automated guardrail — but the known cost is safe. The condition is watching, not firing.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Sustained bond-yield rise forces the equity risk premium below zero.</strong> If the 10-year yield rises further — or the basket's earnings multiple expands — the premium crosses zero. Two consecutive quarters below zero trigger exit condition (1). At the current trajectory this is the most proximate risk.</li>
+<li><strong>Fund scale declines materially.</strong> A severe broad-market drawdown could push total assets toward the 500 million dollar floor. At 1.64 billion dollars today that would require roughly a 70% decline — remote, but the condition exists and is not price-linked.</li>
+<li><strong>Invesco raises the annual charge above 0.30%.</strong> Equal-weight funds carry rebalance-turnover costs that cap-weighted funds do not; if the annual charge rises above the ceiling, the cost overhead erodes the thesis and a switch to a cheaper alternative becomes rational.</li>
+<li><strong>Top-1 concentration drifts above 1.0%.</strong> If a single constituent appreciates rapidly between rebalance dates — as semiconductor names occasionally do — the equal-weight integrity condition fires. At 0.15% today the headroom is 85 basis points, but the threshold is deliberately tight.</li>
+<li><strong>MSCI restructures the Equal Weighted index methodology.</strong> A move away from quarterly equal-weight rebalancing, or a change of the parent universe, would change the product being held. No current signals of this.</li>
+</ul>
+<p>(For this fund, exit fires when a vehicle-integrity condition breaches, when the equity risk premium is negative for two consecutive quarters, or when the basket's earnings yield reaches the exit level of 3.0% — any of these three paths.)</p>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<ul>
+<li>The basket's earnings yield field was absent from the data vendor (yfinance did not return a trailing price-to-earnings figure for the Xetra-listed ticker at the 2026-08-10 snapshot). The earnings yield of 4.845% used in the re-validation was retrieved from an alternative source (the London-listed ticker); the precise euro-denominated price edges for buy, trim, and exit could not be computed from the primary data path. The standing-order price levels are accordingly suppressed this cycle.</li>
+<li>The annual charge field is missing from the data vendor. The documented Invesco factsheet figure of 0.20% per year is used as a manual reference; the automated guardrail cannot fire until the field is populated or a known-expense-ratio override is added to the holding's settings.</li>
+<li>Three sidecar fetch-status fields (info_fetch_status, funds_data_fetch_status, rfr_fetch_status) are missing or absent on the v2 market-data sidecar — a data-fetch writer bug. These affect automated data-quality checks. Re-running the market-data fetch restores them.</li>
+<li>Political exposure and competitive landscape analyses have not been run for this holding. Both are listed as missing in the context warnings.</li>
+<li>The annual Austrian reporting-fund yield figure (used for the precise tax cost in the score formula) was estimated from the factsheet distribution yield of 2.26% as a proxy; the exact figure requires running the OeKB data fetch.</li>
+<li>Score section used the distribution yield proxy of 2.26% for the tax drag (0.37%), which is an approximation. The gap is noted in the scoring formula and may shift modestly when the OeKB figure is populated.</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>The pre-committed rules for this holding cover six states. The verbs below are plain English — hold, add, trim, exit — consistent with the portfolio's long-term allocation approach.</p>
+<ul>
+<li><strong>If the thesis is confirmed</strong> (all conditions at healthy, cautionary, or unreported levels; no exit condition fired; vehicle integrity intact): hold — the equal-weight basket is reasonably priced, the vehicle is sound, and the equal-weight earnings-yield premium over the cap-weighted alternative remains intact.</li>
+<li><strong>If the thesis is weakened</strong> (at least one condition reads as a challenge but no exit condition has fired): do not add. Re-validate after the next quarterly snapshot. If the equal-weight earnings-yield premium over the cap-weighted MSCI World fund compresses below 0.5 percentage points for two consecutive quarters, the diversification benefit no longer justifies the higher annual cost relative to the cap-weighted alternative — consider consolidating into that fund.</li>
+<li><strong>If the thesis is broken</strong> (vehicle integrity breached, or two consecutive quarters of negative equity risk premium): exit. Move proceeds to a cap-weighted global core fund or to the risk-free rate.</li>
+<li><strong>If the basket's earnings yield rises to or above 6.25%</strong> (the buy signal): add to the position. An equal-weight basket at this yield level is meaningfully cheap relative to the risk-free rate; the structural earnings-yield premium over the cap-weighted alternative makes the case decisive.</li>
+<li><strong>If the basket's earnings yield falls to or below 4.0%</strong> (the trim signal): trim 25–33% of the position. The equal-weight basket is meaningfully expensive relative to the risk-free rate; harvest the yield compression and redeploy on the next rebalance.</li>
+<li><strong>If the basket's earnings yield falls to or below 3.0%</strong> (the exit signal): exit. At that level the basket is fully priced relative to the risk-free rate; redeploy proceeds to the risk-free rate or to a holding that still meets the value test.</li>
+</ul>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+  <li><a href="vehicle-profile.html">Vehicle profile</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

@@ -5,8 +5,15 @@
 <link>https://holgua.github.io/portfolio/</link>
 <description>Daily reading sets.</description>
 <language>en</language>
-<lastBuildDate>Mon, 10 Aug 2026 17:29:01 GMT</lastBuildDate>
+<lastBuildDate>Thu, 13 Aug 2026 05:15:49 GMT</lastBuildDate>
 <atom:link href="https://holgua.github.io/portfolio/feed.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>The Portfolio on 2026-08-12: The Bet Mostly Still Works</title>
+<link>https://holgua.github.io/portfolio/2026-08-12/index.html</link>
+<guid isPermaLink="true">https://holgua.github.io/portfolio/2026-08-12/index.html</guid>
+<pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+<description>Twenty-one positions are active; twelve carry the verdict that the underlying bet is still working, seven are wobbling, and two — PayPal and Booking — have prompted an update rather than a clear verdict in either direction. The strongest conviction sits in Elastic and Dynatrace, where the forward-return read is sharply positive and each share price sits inside its fair-value range. The wobbles most worth a careful read are Datadog, where the share price has moved well above any fair-value measure, and VERBUND, where the model lacks enough data to produce a forward-return estimate at all. The Lineup sets out every position in detail.</description>
+</item>
 <item>
 <title>The Portfolio on 2026-08-10: The Bet Still Works — With Three Wobbles Worth Watching</title>
 <link>https://holgua.github.io/portfolio/2026-08-10/index.html</link>

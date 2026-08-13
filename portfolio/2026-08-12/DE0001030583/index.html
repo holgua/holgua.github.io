@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bund Linker 2033: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
+<h1 id="bund-linker-2033-the-bet-still-works">Bund Linker 2033: The Bet Still Works</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- asset_type='bond' — use Compute-Etf-Forward-Returns.py for ETFs; bonds have no equity IRR
+- [MISSING-POLITICAL-EXPOSURE-BLOCK] DE0001030583-Political-Exposure.md not found in Holdings/DE0001030583/Analysis/ — run 07-Political-Exposure skill.
+- [MISSING-COMPETITION-BLOCK] DE0001030583-Competition.md not found in Holdings/DE0001030583/Analysis/ — run 08-Competition-Research skill.</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-12 · Latest filing 2026-08-12.</em></p>
+<p>The bet is working: all four drivers confirm, and the inflation-hedge function remains intact. The price sits at the buy edge, at fair value — €94.58 is a small discount to the fair-value-implied price of €97.38, and the real yield of 0.94% is comfortably within the hold band. With a modest positive real yield on offer, the bond continues to earn above zero in purchasing-power terms, and it remains 72 basis points ahead of what EUR cash currently delivers in real terms.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at €91. Trim at €104. Exit at €108.</p>
+<p>Buy at €91 and expect 1.5% p.a. Buy today at €95 and expect 0.9% p.a. — over the next ~7y to 2033 maturity.</p>
+<pre><code>buy             current                                       trim          exit
+€91             €95                                           €104          €108
+├───────────────┼─────────────────────────────────────────────┼────────────────┤
+</code></pre>
+<p>Over the next six years, if the share price moves to the fair-value central estimate, returns work out to bear -0.1%, base +2.9%, bull +3.9% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear                                             expected  base             bull
+-0.1%                                            +2.4%     +2.9%           +3.9%
+├────────────────────────────────────────────────┼─────────┼───────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 50% base, 25% bull): about +2.4% a year over the next six years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Bund Linker 2033 scores 3.50, ranking 12 of 20 active holdings by this measure — it sits in the lower half of the portfolio, reflecting its role as a low-risk anchor rather than a return driver.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
+  &nbsp;&nbsp;= 1.20 × (2.94% − 0.03% − 0.00%)
+  &nbsp;&nbsp;= 1.20 × +2.91%
+  &nbsp;&nbsp;= <strong>3.50</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> This holding sits in the strongest of three moat tiers, which lifts the score by 20 per cent. For a sovereign bond issued by Germany — rated AAA by all three major agencies — the credit quality is as high as it gets in fixed income; the tier reflects that structural advantage.</p>
+<p><strong>Expected return: 2.94%.</strong> The expected return is the base-case forward return of 2.94% a year over six years. Index funds and bonds use their contractual or index-implied return directly — no scenario blend is applied.</p>
+<p><strong>Hurdle rate: 0.00%.</strong> The hurdle rate is zero — the bond itself is the baseline the linker yield measures against; no further premium is required.</p>
+<p>A score of 3.50 places Bund Linker 2033 12th of 20 active holdings, sitting just below the portfolio median — appropriate for a holding whose job is to hedge inflation rather than to outperform equities.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>Real yield on the bond ticked up from 0.91% (as of 2026-08-10) to 0.94% at the 2026-08-12 snapshot, leaving the position comfortably within the hold band. The buy threshold stands at 1.50% and the trim threshold at −0.50%; with 44 basis points of headroom above the fair-yield anchor of 0.50%, nothing has moved materially.</p>
+<p>The compound trigger — which combines a persistent real yield below −1.00% with EUR cash offering a superior return — remains entirely inactive. The linker's 0.94% real yield leads EUR cash by 72 basis points (the European Central Bank's deposit rate is 2.25%, set against break-even inflation of 2.03%, giving a cash real yield of roughly 0.22%). Both legs of that exit condition are unsatisfied. Germany's AAA sovereign rating is unchanged, and no pending restructuring of the HICP ex-tobacco index has been recorded.</p>
+<p>In short, this is a quiet cycle. The inflation-hedge function is performing as designed, and no threshold has been crossed. For the full picture on where the bond currently sits in its valuation band, see <a href="#the-share-price">the Share Price</a>.</p>
+<h2 id="about-bund-linker-2033">About Bund Linker 2033</h2>
+<p>Bund Linker 2033 is an inflation-linked bond issued by the Federal Republic of Germany (ISIN DE0001030583). It matures on 2033-04-15 and carries a stated coupon of 0.10% a year — but that low number is not the whole story. Both the coupon payments and the principal repaid at maturity are scaled upward by an indexation coefficient that tracks the German Harmonised Index of Consumer Prices excluding tobacco (HICP ex-tobacco), compiled by Eurostat. In practice, this means that as consumer prices rise, the bondholder receives correspondingly more in euros. Credit risk is negligible: Germany has never defaulted on a euro-denominated obligation and carries a AAA rating from all three major rating agencies.</p>
+<p>Settlement mechanics are slightly more involved than for a conventional bond. A buyer pays the dirty price — €119.55 per €100 original face value at settlement, not the €94.58 quoted as the clean price. The €94.58 is the clean price expressed in real terms, using the same purchasing-power units as the issuance date in 2021. To arrive at the actual euros that change hands, multiply the clean price by the indexation coefficient (currently 1.26370) and then add accrued interest. The indexation coefficient is the cumulative rise in the HICP ex-tobacco index since issuance; it grows over time as prices rise, ensuring the bondholder keeps pace with inflation.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The bond is held as a structural EUR inflation hedge: provided Germany remains creditworthy, HICP methodology stays intact, and real yields do not collapse to deeply negative territory, the bond preserves purchasing power in a way that nominal bonds and cash cannot guarantee. Three conditions govern whether that bet remains worth holding:</p>
+<ol>
+<li><strong>Real yield stays above −1.00% persistently, and EUR cash does not offer a superior real return.</strong> The compound trigger requires both legs simultaneously: the bond's real yield must fall below −1.00% for at least 90 calendar days, and EUR cash must at the same time offer a better real return. Neither condition need fire alone to trigger exit.</li>
+</ol>
+<p><em>Latest reading:</em> Real yield 0.94% as of 2026-08-12, 194 basis points above the exit threshold. EUR cash real yield approximately 0.22% (ECB deposit 2.25% minus break-even inflation 2.03%). Linker advantage: +72 basis points. Neither leg of the compound trigger is satisfied; persistence counter at 0 of 90 days.</p>
+<ol>
+<li><strong>German sovereign credit rating holds above AA- at two of the three major agencies.</strong> A downgrade below AA- by Fitch, Moody's, and S&amp;P simultaneously — or any two of the three — would signal a structural shift in issuer creditworthiness and would fire exit condition (2).</li>
+</ol>
+<p><em>Latest reading:</em> All three agencies above the AA- exit trigger as of 2026-06-15: Fitch AAA, Moody's Aaa, S&amp;P AAA. No rating action pending. Exit condition (2) not triggered.</p>
+<ol>
+<li><strong>HICP ex-tobacco index methodology remains unchanged.</strong> A material restructuring by Eurostat that severs the link between the index and realised consumer-price inflation — for example, substituting a different reference index — would fire exit condition (3) and remove the inflation-hedge rationale entirely.</li>
+</ol>
+<p><em>Latest reading:</em> No pending HICP methodology restructuring recorded in the ratings sidecar as of 2026-06-15. Exit condition (3) not triggered.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>The bond currently trades at a clean price of €94.58, which implies a real yield of 0.94%. That yield sits within the hold band: below the buy threshold of 1.50% (which would trigger adding to the position) and well above the trim threshold of −0.50% (which would prompt trimming). Against the fair-value anchor of 0.50% real yield — corresponding to a clean price of €97.38 — the bond trades at a modest discount, meaning it offers a small yield premium over what is considered fair. The valuation position is comfortable: no trigger fires in either direction.</p>
+<p>The relevant comparison is EUR cash. The European Central Bank's deposit facility rate stands at 2.25%. With break-even inflation at 2.03%, EUR cash earns a real yield of approximately +0.22%. The linker's 0.94% real yield is therefore +72 basis points ahead. This comparison is pre-tax — German income tax applies to both legs; the after-tax direction is not modelled here.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The rules translate the real-yield bands into three standing orders and two price alerts. Each is the operationalisation of a pre-committed rule, not new judgement.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at €97, the fair-value anchor (corresponding to a real yield of 0.50%). A crossing means the bond has returned to a neutral yield reading; no action follows automatically, but a fresh read of the conditions is warranted.
+- A second alert at €91, the cheap-edge price (corresponding to a real yield of 1.50%). A crossing arms the buy order below; before adding, the compound trigger state and the driver evidence should be confirmed.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at €91. When the clean price closes at or below this level and all conditions are working, the action plan calls for adding to the position in proportion to the inflation-hedge allocation target. A real yield of 1.50% on a seven-year AAA-rated EUR sovereign linker represents a highly attractive entry point for an inflation hedge.
+- A standing trim order at €104. On the first occasion the clean price closes at or above this level (corresponding to a real yield of −0.50%), the action plan calls for trimming 25% of the position. If the real yield remains below −0.50% at the next quarterly review — 90 or more calendar days later — a further 25% trim follows. The ladder is bounded: further crossings do not trigger additional trims until exit condition (1) fires.
+- A standing exit order at €108. When the compound trigger fires — real yield below −1.00% for at least 90 days and EUR cash simultaneously offering a superior real return — the action plan calls for closing the full position. At that point the inflation-hedge function is no longer additive compared with the alternative; proceeds move to EUR cash or short-duration nominal German government bonds.</p>
+<h2 id="how-the-standing-orders-drift">How the Standing Orders Drift</h2>
+<p>The clean prices in the standing orders correspond to each target real yield as of today. The same real yields imply different clean prices as the bond approaches its 2033-04-15 maturity — the price drifts toward €100. The table shows where the fair-value yield (97.38%) sits at the available forward settlement points:</p>
+<table>
+<thead>
+<tr>
+<th>Settlement</th>
+<th>Years to maturity</th>
+<th>Clean price at 97.38% real yield</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2027-08-12</td>
+<td>–</td>
+<td>€97.77</td>
+</tr>
+<tr>
+<td>2029-08-12</td>
+<td>–</td>
+<td>€98.55</td>
+</tr>
+<tr>
+<td>2031-08-12</td>
+<td>–</td>
+<td>€99.33</td>
+</tr>
+</tbody>
+</table>
+<p>Quarterly review must recompute the standing-order prices accordingly.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>No wobbles were recorded in the latest re-validation. All four thesis drivers — real yield, break-even inflation, German sovereign credit, and HICP index integrity — returned confirmation readings as of 2026-08-12. Not a single threshold in <a href="#the-case-for-the-bet">the Case for the Bet</a> has been crossed or is under stress.</p>
+<p>The closest metric to watch is the linker advantage over EUR cash: at +72 basis points, it is positive and meaningful, but it would narrow if the European Central Bank were to cut its deposit rate further without a corresponding fall in break-even inflation. That narrowing would not trigger any action rule on its own — only the compound trigger (persistent real yield below −1.00% plus cash offering a superior return) matters for the exit decision — but it is the single statistic most worth monitoring between quarterly reviews.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Sustained deeply negative real yield and a cash alternative.</strong> If European Central Bank rate cuts push nominal yields below inflation for a prolonged period, the bond's real yield could fall below −1.00%. If EUR cash simultaneously offers a better real return, the compound exit trigger fires and the inflation-hedge rationale collapses.</li>
+<li><strong>German sovereign downgrade.</strong> A deterioration in Germany's fiscal position severe enough to prompt two of the three major agencies to cut the rating below AA- would fire exit condition (2). While remote given Germany's current position, a structural shift in European sovereign risk — driven by large fiscal programmes or a euro-area crisis — could not be ruled out over a seven-year horizon.</li>
+<li><strong>HICP index methodology change.</strong> If Eurostat materially restructures the HICP ex-tobacco index — substituting a different reference basket or methodology — the bond's inflation-linkage would no longer track realised consumer-price inflation in the intended way. Exit condition (3) would fire. This is a tail risk; Eurostat methodology changes are rare and heavily signalled in advance.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>Two analytical blocks are absent from this holding's research file. No political-exposure assessment has been run for this instrument; the associated analysis would cover German fiscal policy and European Central Bank governance risks. No competitive-landscape analysis has been filed either, which for a sovereign bond would cover the comparison universe of alternative inflation hedges (index-linked bonds from other sovereigns, real-assets funds, gold). Both omissions are noted; neither affects the current valuation reading or the standing orders.</p>
+<p>The sovereign credit ratings sidecar was last checked on 2026-06-15. No update has been triggered since; the ratings are treated as unchanged unless a sidecar refresh fires.</p>
+<h2 id="the-rules">The Rules</h2>
+<p>The six pre-committed rules below are drawn directly from the action plan. They are stated in terms of the bond's real yield and exit conditions, not the price level.</p>
+<ul>
+<li><strong>If the thesis is confirmed</strong> — all four drivers in agreement and real yield within the hold band — hold the position. Real yield is within band, German credit is intact, and HICP linkage provides inflation protection as intended.</li>
+<li><strong>If the thesis is weakened</strong> — one or more drivers showing concern but no exit condition yet triggered — do not add. Re-assess if real yield moves below 0% but has not yet triggered exit condition (1); compare real after-tax return against EUR cash and nominal German government bonds before adding.</li>
+<li><strong>If the thesis is broken</strong> — one or more numbered exit conditions triggered — exit in full. One or more of: real yield persistently below −1%, German downgrade below AA- by two agencies, or HICP methodology change. Move proceeds to nominal short-duration German government bonds or EUR cash.</li>
+<li><strong>If price is below the buy band</strong> (real yield above 1.50%) — add to the position. A real yield above 1.50% on a seven-year AAA-rated EUR sovereign linker is highly attractive; scale in proportionally to the inflation-hedge allocation target.</li>
+<li><strong>If price is above the trim band</strong> (real yield below −0.50%) — trim 25% on the first crossing. If real yield remains below −0.50% at the next quarterly review (90 or more calendar days later), trim a further 25%. The 25 + 25 ladder is bounded — further crossings do not trigger additional trims until exit condition (1) fires. Park proceeds in EUR cash or short-duration conventional German government bonds.</li>
+<li><strong>If price is above the exit band</strong> (compound trigger has fired) — exit in full. The compound trigger requires both: real yield below −1.00% for at least 90 days, and EUR cash simultaneously offering a superior real return. Switch proceeds to EUR cash or short-duration nominal German government bonds; the inflation-hedge function is no longer additive vs. the alternative.</li>
+</ul>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

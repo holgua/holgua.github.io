@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PayPal: An Update on the Bet — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
+<h1 id="paypal-an-update-on-the-bet">PayPal: An Update on the Bet</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- DATA_ERROR: upcoming earnings fetch failed for PYPL: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py PYPL
+- STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]
+- Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing's MD&amp;A for material growth-vs-maintenance CapEx differences.
+- FAIR-VALUE CONFLICT (61% gap): Two built-in valuation methods disagree on what PYPL is worth. The FCF-yield anchor (config fair_value = 10.5%) says fair value is ~$48: at $4480.0M FCF ÷ 10.5% ÷ 882M shares, today's $56 implies a 9.1% FCF yield vs the 10.5% anchor, and you would only add near $41 (12.5% yield threshold). The scenario-band model says $124: it applies the price multiples that peer companies and PYPL's own trading history trade at to projected financials — on that view, $56 is a steep discount to the $124 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.
+- PLAUSIBILITY: base-case return (+31.7%) sign is opposite to the fair-value gap direction (56 → 48). Valuation inputs may need refreshing — reported as computed.</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-12 · Latest filing 2026-07-28.</em></p>
+<p>The bet is wobbling. Two of PayPal's seven thesis drivers — branded checkout revenue contribution and operating margin — have now posted weaker readings for two consecutive quarters, though neither has crossed a written exit condition. At $56, the share price sits in the upper half of the hold band, meaningfully above the fair-value anchor of $48 — see <a href="#the-share-price">the Share Price</a> for the full valuation picture.</p>
+<p>The load-bearing pillar of the thesis — the buyback programme — continues in the opposite direction: PayPal repurchased $3 billion of its own shares in the first six months of 2026, retiring 67 million shares and shrinking the total count by 7% in seven months. That mechanical compounding of per-share value continues regardless of the branded-checkout debate. The one condition to watch is whether the operating margin, which fell to 16.4% in the three months ending June 2026, recovers in the second half of the year as the reorganisation's first cost savings come through. If it does not, the annual operating income floor of $5.5 billion — one of the five written exit conditions — begins to come into view.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $40. Trim at $59. Exit at $77.</p>
+<p>At $40, the long-run total return is about 17% a year. At today's $56, about 13% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy                              current/trim                               exit
+$40                              $56/$59                                     $77
+├────────────────────────────────┼──────┼──────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the market price moves to the fair-value central estimate, returns work out to bear −1.5%, base +31.7%, bull +66.7% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a>.)</em></p>
+<pre><code>bear                                  base/expected                         bull
+-1.5%                                 +31.7%/+32.1%                       +66.7%
+├─────────────────────────────────────┼┼───────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 50% base, 25% bull): about +32.1% a year over the next three years.</p>
+<p>The base-case return (+31.7%) implies a direction opposite to the gap between the current price and the fair-value estimate (56 → 48). This usually means the valuation inputs need refreshing.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>PayPal scores 25.62, ranking 3 of 20 active holdings by this measure — it sits near the top of the portfolio, behind only Elastic and DT.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)
+  &nbsp;&nbsp;= 1.00 × (32.14% − 0.12% − 1.46% − 4.94%)
+  &nbsp;&nbsp;= 1.00 × +25.62%
+  &nbsp;&nbsp;= <strong>25.62</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.00.</strong> PayPal sits in the middle moat tier; the weight is one, so it leaves the score unchanged. The two-sided network effect across 439 million active accounts is genuine and persistent, but the branded checkout layer is under sustained pressure from device-native competitors, which prevents a top-tier classification.</p>
+<p><strong>Expected return: 32.14%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (25% likelihood) — annualised return −1.5%.</strong> The bear case assumes branded checkout stagnates, Braintree's margin advantage over rivals narrows further, and the new chief executive's reorganisation disrupts rather than repairs the operating cost structure — leaving annual free cash flow compressed to about $4.6 billion by 2028.</p>
+<p><strong>Base (50% likelihood) — annualised return +31.7%.</strong> The base case has branded checkout returning to modest growth, the reorganisation delivering its targeted cost savings in the second half of 2026, and the buyback programme continuing to retire roughly 8% of shares per year — leaving free cash flow at about $6.4 billion by 2028.</p>
+<p><strong>Bull (25% likelihood) — annualised return +66.7%.</strong> The bull case has agentic commerce and the new stablecoin framework opening revenue streams not yet in reported results, while branded checkout re-accelerates — lifting free cash flow to about $8.1 billion by 2028.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.25 × (−1.5) + 0.50 × 31.7 + 0.25 × 66.7 = +32.15%.</p>
+<p><strong>Hurdle rate: 4.94%.</strong> The hurdle rate is 4.94% — the 0.94% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of 25.62 puts PayPal third in the portfolio ranking — well above the median and comfortably in the upper tier, though the score reflects an expected return that is itself a forward projection subject to the wobbles described in <a href="#whats-wobbling">What's Wobbling</a>.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The headline from PayPal's filing for the three months ending 30 June 2026 is a second consecutive quarter of branded revenue decline. In the quarter, PayPal-branded products contributed approximately −$130 million to transaction revenue — a slight improvement from the −$140 million drag in the prior quarter, but still negative. Meanwhile, the Braintree payment-processing business contributed approximately $400 million to the same revenue line, and Venmo added about $60 million. Total payment volume grew 10% year-on-year and the number of transactions per active account improved to 60.0 from 58.3, the first engagement gain in several quarters. Volume health, in other words, is fine; the branded product's share of the revenue it brings in is the problem.</p>
+<p>Operating income fell 5% year-on-year in the quarter, taking the margin to 16.4% against 18.1% a year earlier. The primary driver is transaction expense growing at 11% — faster than revenue, which grew at 5% — because the high-volume Braintree business carries a structurally higher processing cost per dollar than the branded PayPal button. The April 2026 strategic reorganisation, which targets $1.5 billion in gross savings over two to three years, has not yet delivered visible savings; the first reductions are targeted for the fourth quarter of 2026.</p>
+<p>On the capital-return front, the picture brightened: $1.5 billion of shares were repurchased in the quarter alone at an average price of $45.74, bringing the six-month total to $3 billion and reducing the outstanding share count by 7% in the first seven months of 2026. That rate of share retirement is ahead of last year's full-year pace. For the thesis, which rests not on branded checkout winning outright but on buybacks compounding per-share value from a depressed base, this is the figure that matters most. See <a href="#the-share-price">the Share Price</a> for what the current price implies in valuation terms.</p>
+<h2 id="about-paypal">About PayPal</h2>
+<p>PayPal operates a global digital payments network that connects approximately 439 million consumers with millions of merchants across more than 200 countries. When a consumer pays at an online checkout using the PayPal button, or sends money to a friend via Venmo, or a merchant processes a high-volume payment through Braintree, PayPal earns a fraction of the dollars that flow through its pipes — typically between 1.5% and 3% of the transaction value, depending on product and geography. The company generated $33.2 billion in revenue in 2025 by moving $1.79 trillion of total payment volume. It takes no inventory risk and owns no physical infrastructure; its assets are the accounts, the licences, and the settlement infrastructure that make the two-sided network work.</p>
+<p>The business has two distinct engines. The first is the branded consumer wallet — the PayPal button and the Venmo app — which earns its margin from name recognition, stored payment credentials, and the convenience of a single checkout that works across merchants without re-entering card details. The second is Braintree, a payment-processing platform that handles large enterprise merchants' backend transaction infrastructure; it grows faster but earns a thinner margin because it competes on reliability and price rather than consumer preference. The central strategic question — which engine is bigger, faster, and more durable over a three-year horizon — is precisely the question the Q2 2026 results leave open.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The bet is that PayPal's two-sided payments network, combined with an aggressive buyback programme, can compound per-share value from a depressed starting price even if branded checkout growth stays modest — because $5 to $7 billion of annual free cash flow returned via buybacks at current prices mechanically raises earnings per share by 8 to 12% a year regardless of top-line acceleration:</p>
+<ol>
+<li><strong>Branded checkout retains its position without catastrophic share loss.</strong> The written exit condition requires branded checkout volume share to fall by more than 2 percentage points in a single fiscal year — a threshold calibrated to distinguish secular displacement from cyclical softness. The thesis does not require branded checkout to grow aggressively; it requires it not to collapse.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30 (Q2 2026). PayPal-branded products contributed approximately −$130 million in net transaction revenue for the quarter, the second consecutive quarter of branded net-negative contribution. Annual branded checkout share loss has not yet been computed — the exit condition requires a full fiscal year of data. The Q3 2026 filing will be the first opportunity to assess whether the two-quarter pattern constitutes a structural trend or a deliberate commercial trade-off.</p>
+<ol>
+<li><strong>Operating margins stay above the $5.5 billion annual floor.</strong> Exit condition (5) fires if annual operating income falls below $5.5 billion, or if management guides non-GAAP operating income below $5.0 billion for the following year. The floor is the lower bound of what the business generates without growth — a signal that margin discipline has been abandoned.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30 (Q2 2026). The first-half 2026 operating income was $2,915 million, implying an annualised run-rate of approximately $5,830 million — $330 million above the exit floor. Operating margin fell to 16.4% in Q2 2026 from 18.1% a year earlier. The margin-of-safety over the exit floor has narrowed from approximately $450 million after Q1 2026 to $330 million after Q2. Phase 1 reorganisation savings are targeted for the fourth quarter of 2026; their arrival is the key H2 monitoring point.</p>
+<ol>
+<li><strong>The buyback programme continues at disciplined prices.</strong> Exit condition (4) fires if management abandons the buyback programme or takes on material incremental debt above 2.0× net debt relative to operating earnings. The programme is the primary compounding mechanism at a depressed share price.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-07-22. PayPal repurchased $3.0 billion of shares in the first six months of 2026 (67 million shares), retiring 7% of the outstanding count. As of 22 July 2026, 855.5 million shares remained outstanding, compared to 920 million at the 2025 year-end. $10.9 billion of authorisation remains. The May 2026 issuance of $2.0 billion in senior notes increased long-term debt to $10.9 billion, but the company's total investable assets (cash plus investments, excluding customer funds) stand at approximately $13.5 billion, leaving net debt below the 2.0× threshold.</p>
+<ol>
+<li><strong>No regulatory consent order materially restricts core product features.</strong> Exit condition (2) requires a formal enforcement outcome — a consent decree or court order — that limits PayPal's ability to offer its core consumer or merchant products. Information requests and investigations, even sustained ones, do not trigger this condition.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30 (Q2 2026). The UK Financial Conduct Authority's investigation into contractual provisions with Visa and Mastercard (opened March 2026) continues. US Federal Trade Commission and Consumer Financial Protection Bureau civil investigative demands remain at the cooperative information-request stage. The consolidated Branded Checkout Securities class action (filed under In re PayPal Branded Checkout Securities Litigation as of May 2026) is a plaintiff allegation, not a finding or a consent order. Exit condition (2) has not been triggered.</p>
+<ol>
+<li><strong>Consumer credit losses stay below 10%.</strong> Exit condition (3) fires if the consumer loan net charge-off rate rises above 10% without a disclosed recovery path. The portfolio includes short-term 'buy now, pay later' loans and longer-duration instalment credit.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30 (Q2 2026). The consumer loan net charge-off rate was 4.8% in Q2 2026, up from 3.6% in Q2 2025 — a reversal of the improvement seen in Q1 2026. The merchant loan net charge-off rate was 7.6%, up from 6.1%. Both readings are materially below the 10% exit threshold. The portfolio composition changed in late 2025 when US short-term 'buy now, pay later' loans were reclassified as held-for-sale, which affects sequential comparisons.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>The valuation anchor used by <a href="#the-rules">the Rules</a> set a fair value of 10.5% — that is, the share price is considered fair when the ratio of annual earnings available to the business's true economic owners (roughly, operating cash flow minus capital spending and share-based pay) to the total market value of the company equals 10.5%. At the current price of $56, that ratio is approximately 9.0% — meaning the price is above the fair-value anchor. In price terms, fair value translates to approximately $48 per share.</p>
+<p>That said, $56 also sits below the trim edge of $59, which is where <a href="#the-rules">the Rules</a> would call for reducing the position. The current price is therefore in the hold zone — above fair value by the yield-anchor measure, but not yet in territory that triggers a trim.</p>
+<p>A second valuation method — one that applies the price multiples at which comparable payment companies have historically traded to PayPal's projected future earnings — puts the base-case fair value closer to $124. The gap between the two methods (61%) is a permanent feature of the setup, not a data error. The lower anchor treats today's earnings as the baseline; the higher anchor looks through to projected future scale. Both agree on one thing: at $56, the position is not in trim or exit territory.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p><a href="#the-rules">The Rules</a> translate the share-price bands into three standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement made here.</p>
+<p><strong>Price alerts (informational).</strong></p>
+<ul>
+<li>A first alert at $48, the fair-value anchor. The crossing means the share price has returned to a neutral reading on the yield basis; no action follows, but a fresh read of the conditions is warranted.</li>
+<li>A second alert at $40, the cheap edge. The crossing arms the buy order; before adding, the latest re-validation should confirm no exit condition has been triggered.</li>
+</ul>
+<p><strong>Standing orders (actionable).</strong></p>
+<ul>
+<li>A standing buy order at $40. Per <a href="#the-rules">the Rules</a>, adding in tranches follows once the share price closes at or below this line and all written conditions remain intact. Given the current reading of two wobbling drivers, the written action plan specifies not adding until two consecutive quarters of confirming data are in hand — the buy order does not override that filter.</li>
+<li>A standing trim order at $59. Per <a href="#the-rules">the Rules</a>, trimming 25 to 33% of the position follows when the share price closes at or above this line, to harvest the premium while retaining the core holding.</li>
+<li>A standing exit order at $77. Per <a href="#the-rules">the Rules</a>, closing the full position follows when the share price closes at or above this line. At that price, the market would be pricing in roughly eleven years of base-case compounding instantly; the implied forward return falls below the long-term equity premium, and reallocation beats holding.</li>
+</ul>
+<p>The three order levels describe what the pre-committed rules execute if the price moves to each line; they describe a potential future state, not the current reading.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>Two drivers have now produced weaker readings for two consecutive quarters, neither of which has crossed a written exit condition.</p>
+<p><strong>Branded checkout revenue contribution.</strong> In the three months ending June 2026, PayPal-branded products subtracted approximately $130 million from the transaction revenue line, driven by higher co-marketing campaigns with large merchants (recorded as revenue reductions) and lower foreign-exchange fee revenue. The prior quarter saw a similar drag of approximately $140 million. The written exit condition requires branded checkout volume share to fall by more than 2 percentage points in a full fiscal year — a figure that requires annual data and will not be computable until the year-end filing. The two-quarter trend is a legitimate concern, but the exit condition language was written to require sustained annual-scale evidence, not a two-quarter signal. The <a href="#the-case-for-the-bet">Case for the Bet</a> sets out what confirming or disconfirming evidence looks like.</p>
+<p><strong>Operating margin.</strong> The operating margin fell to 16.4% in the three months ending June 2026, against 18.1% a year earlier — a contraction of 170 basis points (roughly 1.7 percentage points) year-on-year. In the prior quarter, it contracted by 180 basis points. Transaction expense is the structural driver: it grew 11% in both quarters, while revenue grew at roughly half that rate. The Braintree business, which processes high volumes for large enterprise merchants, carries a higher processing cost per dollar than the branded PayPal consumer button — and as Braintree's share of the mix grows, so does the transaction expense ratio. The reorganisation's first cost savings ($400 million annualised run-rate targeted for the fourth quarter of 2026) have not yet arrived. The annualised operating income run-rate from the first half of 2026 is approximately $5,830 million — above the $5.5 billion exit floor by $330 million, but with less breathing room than three months ago.</p>
+<p>What prevents these wobbles from changing the current verdict is the buyback programme. Regardless of which way the branded checkout argument eventually resolves, the company returned $3 billion to shareholders in the first six months of 2026 by retiring shares at prices between $42 and $48 — each of which is below the current price and well below the buy-edge of $40. That mechanical per-share compounding continues without requiring branded checkout to win.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li>Branded checkout volume share falls by more than 2 percentage points in 2026, confirming that Apple Pay and Google Pay have permanently captured the consumer authentication layer at the point of sale, and that the Braintree revenue offset cannot make up the gap. At that point, the thesis premise changes rather than wobbles.</li>
+<li>The reorganisation produces disruption without savings: the new chief executive's $1.5 billion gross-savings programme delays or misses its targets, while the deliberate technology reinvestment spending (+11% year-on-year in the three months ending June 2026) does not translate into competitive product improvements within the planning period.</li>
+<li>Operating income falls below $5.5 billion on an annual basis — either because H2 2026 results do not recover from the H1 trough, or because management guides non-GAAP operating income below $5.0 billion for 2027, signalling that margin discipline has been abandoned.</li>
+<li>Consumer credit quality deteriorates toward the 10% exit threshold. The consumer net charge-off rate moved from 3.6% to 4.8% between the second quarters of 2025 and 2026. A further 200-basis-point deterioration by year-end would still leave it well below the 10% floor, but the direction of travel bears watching — particularly in the merchant portfolio, where the charge-off rate reached 7.6% in Q2 2026.</li>
+<li>A value-destructive acquisition uses the $14 billion net-cash balance to buy a business at an inflated price, impairs the capital-return programme, and saddled shareholders with integration risk at a moment when the core business is already under operational pressure.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>Two slightly different methodologies underlie the earnings calculation: the validation context uses post-share-compensation free cash flow ($4,480 million) as the numerator, while the pre-configured yield rule uses net income plus depreciation minus capital spending ($5,344 million). The position label — within the hold band — is unchanged under either basis, but the implied fair-value price differs: the post-SBC basis implies approximately $48 per share, while the pre-SBC basis implies approximately $51. Both are below the current price of $56, so the hold verdict is unaffected.</p>
+<p>The fair-value conflict between the two built-in valuation methods is material and permanent. The earnings-yield anchor places fair value at approximately $48; a scenario-band model that applies comparable-company multiples to projected 2028 financials places the base-case fair value at approximately $124. The 61% gap reflects a genuine methodological difference — not a data error — between anchoring to current earnings and projecting future scale. Both methods agree that the position is neither in trim nor exit territory at $56.</p>
+<p>Upcoming earnings data could not be retrieved this cycle due to a missing software dependency. Re-running the market-data fetch after installing the required library restores the figure.</p>
+<p>The risk-free rate needed to compute the Dimension B return comparison for <a href="#how-the-score-adds-up">the Score section</a> was unavailable from both the holding's own market-data file and the fallback source. The return sentence in <a href="#the-bottom-line">The Bottom Line</a> is therefore omitted.</p>
+<ul>
+<li>No 'Thesis state: <strong>TOKEN</strong>' pattern found in PYPL-10-Q-2026-07-28-ReValidation.md</li>
+<li>Risk-free rate unavailable for PYPL: neither holding's nor SPY's Market-Data.json carries risk_free_10y_pct. Dimension B skipped.</li>
+<li>PLAUSIBILITY: base-case return (+31.7%) sign is opposite to the fair-value gap direction (56 → 48). Valuation inputs may need refreshing — reported as computed.</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>If the thesis is confirmed — all drivers holding and no exit condition triggered — hold without action and continue compounding.</p>
+<p>If the thesis is weakened — one or more drivers are mixed but no exit condition has fired — do not add. Require two consecutive quarters of confirming data before acting; one quarter of weakness is not sufficient to change course.</p>
+<p>If the thesis is broken — any one of the five written exit conditions has fired — exit the full position within 30 days. No averaging down. Document which condition fired.</p>
+<p>If the share price falls below the buy edge — the earnings yield rises above 12.5%, implying a price at or below approximately $40 — confirm that the thesis is still intact and no exit condition has been triggered, then add in tranches over one to two quarters.</p>
+<p>If the share price rises above the trim edge — the earnings yield falls below 8.5%, implying a price at or above approximately $59 — trim 25 to 33% of the position to harvest the premium while retaining the core holding.</p>
+<p>If the share price rises above the exit edge — implying a price at or above approximately $77, roughly 11 years of base-case compounding priced in instantly — exit the full position and redeploy proceeds at the next cheap-edge crossing or into a cheaper alternative. No re-entry within 90 days.</p>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

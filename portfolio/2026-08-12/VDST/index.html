@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>US Treasury 0-1y: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
+<h1 id="us-treasury-0-1y-the-bet-still-works">US Treasury 0-1y: The Bet Still Works</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- DATA_ERROR: current snapshot status field 'info_fetch_status' is null/absent on a v2 sidecar for VDST — Fetch-Market-Data writer bug; please report and re-run: python3 src/fetch/fetch_market_data.py VDST
+- DATA_ERROR: fund composition status field 'funds_data_fetch_status' is null/absent on a v2 sidecar for VDST — Fetch-Market-Data writer bug; please report and re-run: python3 src/fetch/fetch_market_data.py VDST
+- DATA_ERROR: risk-free rate status field 'rfr_fetch_status' is null/absent on a v2 sidecar for VDST — Fetch-Market-Data writer bug; please report and re-run: python3 src/fetch/fetch_market_data.py VDST
+- DATA_ERROR: history fetch failed for VDST: empty history — re-run: python3 src/fetch/fetch_market_data.py VDST
+- PORTFOLIO: (stale ranking, 2026-08-10) - PORTFOLIO: (stale ranking, 2026-07-30) - VDST: quality_tier=UNKNOWN (composite weight defaults to 1.00)
+- PORTFOLIO: (stale ranking, 2026-08-10) - PORTFOLIO: - VDST: quality_tier=UNKNOWN (composite weight defaults to 1.00)
+- PORTFOLIO: (stale ranking, 2026-08-10) - PORTFOLIO: - PAUSCHAL-FALLBACK: VDST
+- PORTFOLIO: (stale ranking, 2026-08-10) - PAUSCHAL-FALLBACK: VDST
+- Basket earnings yield unavailable (yfinance returned no trailingPE). Valuation position is UNDETERMINED; rules table falls through to HOLD unless vehicle_integrity.any_breach fires EXIT.
+- [MISSING-POLITICAL-EXPOSURE-BLOCK] VDST-Political-Exposure.md not found in Holdings/VDST/Analysis/ — run 07-Political-Exposure skill.
+- [MISSING-COMPETITION-BLOCK] VDST-Competition.md not found in Holdings/VDST/Analysis/ — run 08-Competition-Research skill.</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-12 · Latest filing 2026-08-12.</em></p>
+<p>The bet is working. US Treasury 0-1y holds a basket of short-dated US government bills, accumulating their income internally, and the three conditions that define its purpose — low fees, adequate size, and an intact US sovereign credit rating — remain clear. The one reading to watch is the basket's weighted-average yield: the most recent Vanguard factsheet, dated 2026-06-30, showed 3.851%, which sits above the trim level but below the thesis base case; given that short-term rates have edged higher since that date, the current yield is likely somewhat above that figure.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>US Treasury 0-1y scores 2.60, ranking 13 of 20 active holdings by this measure — it sits in the lower half of the portfolio, which is expected for a cash-equivalent vehicle competing against equity holdings on the same return metric.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= (4.80% − 2.20% − 0.00%)
+  &nbsp;&nbsp;= +2.60%
+  &nbsp;&nbsp;= <strong>2.60</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.00.</strong> Index funds are not assigned a moat tier; the weight is always one.</p>
+<p><strong>Expected return: 4.80%.</strong> The expected return is the base-case forward return of 4.80% a year over five years. Index funds and bonds use their contractual or index-implied return directly — no scenario blend is applied.</p>
+<p><strong>Hurdle rate: 0.00%.</strong> The hurdle rate is zero — this holding is the portfolio's USD cash-equivalent baseline; no additional premium is required for comparing it against itself.</p>
+<p>A score of 2.60 puts US Treasury 0-1y 13th of 20 active holdings — modestly positive but well below the equity positions that carry genuine return expectations above the risk-free rate.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The 2026-08-12 review confirms that all three exit conditions remain dormant. The basket's weighted-average yield to maturity stands at 3.851% as of the most recent Vanguard factsheet (dated 2026-06-30), placing it above the trim level of 3.5% and well inside the hold band. Because the data point is now six weeks old and the US 10-year Treasury yield has risen to 4.70% since that factsheet was printed, the current short-end yield is almost certainly modestly higher than 3.851% — the hold verdict holds regardless.</p>
+<p>On the vehicle-integrity side, the annual charges figure remains at 0.07% per the last known Vanguard published figure, three basis points below the 0.10% ceiling that would trigger exit condition one. Assets under management are not surfaced by the data provider for this fund; the last verified estimate from an independent data aggregator put the figure near $2.4 billion, well above the $1 billion floor set by exit condition two. The US sovereign credit rating remains AA+ or equivalent across all three major agencies — exit condition three is not triggered.</p>
+<p>In short, this is a quiet cycle: nothing has moved materially. The full conditions and their current readings are set out in <a href="#the-case-for-the-bet">the Case for the Bet</a>.</p>
+<h2 id="about-us-treasury-0-1y">About US Treasury 0-1y</h2>
+<p>The fund — formally the Vanguard U.S. Treasury 0–1 Year Bond UCITS ETF (accumulating) — holds exclusively US Treasury bills that mature within one year. Treasury bills are short-term obligations of the US federal government: they are issued at a discount and repaid at face value on maturity, generating a return equal to the difference. Because the fund holds bills maturing in less than a year, the entire basket rolls over continuously; the portfolio's weighted-average maturity was approximately four and a half months at the last snapshot. Income from maturing bills is reinvested inside the fund rather than paid out as a cash distribution, so the fund's share price rises gradually with accumulated returns rather than paying a regular dividend.</p>
+<p>The fund is domiciled in Ireland and listed in USD on the London Stock Exchange. It is managed by Vanguard Group (Ireland) Limited, whose cooperative ownership structure removes the typical commercial incentive to raise fees. The fund's annual running cost is 0.07% of assets — 7 pence per £100 invested per year — making it one of the lowest-cost ways to hold USD Treasury-bill exposure on a European exchange. No tracking-difference or tracking-error data was available in this snapshot; those metrics are best verified against the fund's annual KIID.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>US Treasury 0-1y is held as a near-cash placeholder — a home for capital that earns the short-term US government rate while the portfolio awaits equity opportunities at fair prices. Three conditions must keep holding for that premise to remain sound:</p>
+<ol>
+<li><strong>Ongoing charges figure stays below 0.10% for no more than one consecutive quarter above that ceiling.</strong> An annual running cost above 0.10% for two consecutive quarters would mean comparable ultra-short-duration Treasury funds — available at similar or lower cost — offer a materially better deal, and the fee advantage that justifies this vehicle over a simple cash alternative would be gone.</li>
+</ol>
+<p><em>Latest reading:</em> 0.07% as of the most recent Vanguard factsheet (carry-forward; yfinance does not surface this figure for this fund's listing). Three basis points of headroom beneath the ceiling; exit condition one is inactive.</p>
+<ol>
+<li><strong>Assets under management stay above USD 1 billion.</strong> A fund managing less than $1 billion of assets risks widening bid-ask spreads, reduced creation/redemption efficiency, and an elevated probability of eventual closure — all of which would undermine the daily-liquidity premise that is the fund's core utility.</li>
+</ol>
+<p><em>Latest reading:</em> Data provider returns no figure for this fund. An independent aggregator's carry-forward estimate of approximately $2.4 billion sits well above the floor, but the figure requires manual confirmation against the Vanguard product page each quarter. Exit condition two is assessed as inactive.</p>
+<ol>
+<li><strong>US sovereign credit is not downgraded below AA− by two or more major rating agencies.</strong> The fund's entire return rests on the creditworthiness of the US federal government as obligor. A two-agency downgrade below AA− would signal a structural shift in that creditworthiness and require a full reassessment of whether the cash-equivalent premise still holds.</li>
+</ol>
+<p><em>Latest reading:</em> Fitch AA+, Moody's Aaa, S&amp;P AA+ as of 2026-08-12. All three are above the AA− trigger; exit condition three is not triggered.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>The fund's shares trade at $59.25. Because VDST holds very short-dated instruments that reprice continuously, the share price itself is not the valuation signal — the basket's weighted-average yield to maturity is. At 3.851% (as of 2026-06-30), the yield sits above the trim level of 3.5% and below the thesis base-case anchor of 4.8%, placing the holding comfortably within the hold band. The gap to fair value — roughly 95 basis points — is not a price risk: at a weighted-average maturity of under five months, interest-rate sensitivity is minimal, and the portfolio reprices to whatever the prevailing rate is within a matter of months.</p>
+<p>No price-based buy or trim edge can be computed from the current snapshot, because the basket earnings yield — the metric the valuation model uses to translate yield thresholds into share-price equivalents — is not surfaced by the data provider for this fund's listing. Price-edge computations are deferred until that figure becomes available; <a href="#the-standing-orders">the Standing Orders</a> section below explains the consequence.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>No price-based standing orders can be set at this time. The fund's valuation model translates yield thresholds into share-price equivalents, but that computation requires a basket earnings yield that the data provider does not surface for this fund's listing. Until the figure is available, no numeric buy or trim price can be stated. The operative signal remains the basket's weighted-average yield: add at the margin when yield reaches 5.5%, trim at the margin when it falls to 3.5%, and exit if it falls to 3.0% or if any vehicle-integrity condition fires. The full rules are in <a href="#the-rules">the Rules</a>.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The main wobble is data staleness, not a fundamental condition shift. The basket yield figure of 3.851% is sourced from the Vanguard factsheet dated 2026-06-30 — six weeks before this review. The data provider does not surface this metric for the fund's listing, so the pipeline cannot update it automatically. The direction of travel since that date is clear: short-term US rates have edged upward, with the 10-year Treasury at 4.70%, suggesting the current basket yield is probably somewhere between 4.0% and 4.3%. That range keeps the holding well within the hold band; no threshold has been crossed.</p>
+<p>All three exit conditions — fee ceiling, fund-size floor, sovereign credit — remain clear of stress. The staleness of the yield figure and the absence of automated fund-size data mean that both readings rely on manual confirmation. That confirmation falls to the quarterly review process per the terms of the thesis.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Fee creep.</strong> If Vanguard raises the annual running cost above 0.10% — still well above the current 0.07% — and that elevated rate persists for two consecutive quarterly reviews, exit condition one fires. Comparable alternatives exist; the transition cost is low.</li>
+<li><strong>Fund shrinkage.</strong> A sustained wave of redemptions could take assets below $1 billion, triggering exit condition two. The manual nature of the fund-size check means a breach might not be detected until the next quarterly review. Daily monitoring of the fund's size is impractical without an automated data source.</li>
+<li><strong>US sovereign downgrade.</strong> A two-agency downgrade of US federal debt below AA− would trigger exit condition three. Such a downgrade is a low-probability event but cannot be excluded; it would affect every USD Treasury holding simultaneously, not just this fund. The appropriate response per <a href="#the-rules">the Rules</a> is to exit and reinvest in EUR cash or short nominal Bunds.</li>
+<li><strong>Yield compression.</strong> An aggressive Federal Reserve cutting cycle could push the basket yield below 3.5%, crossing the trim threshold, and eventually below 3.0%, crossing the exit threshold. At that point the opportunity cost of holding USD T-bills versus EUR alternatives would become material and <a href="#the-rules">the Rules</a> call for trimming and then exiting.</li>
+<li><strong>Data blindspot.</strong> The pipeline's inability to source live basket yield data or live fund-size figures for this fund's listing means that a condition breach could go undetected between quarterly manual checks. This is a process risk, not an investment risk, but it is the most operationally relevant caveat for day-to-day oversight.</li>
+<li><em>(For this fund, exit fires when a vehicle-integrity condition breaches, when the basket yield falls to the exit level, or when the named exit conditions fire — any of those paths leads to the same action.)</em></li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>The basket's weighted-average yield to maturity is sourced from the Vanguard factsheet dated 2026-06-30 — the most recent figure available in the pipeline. The data provider does not surface this metric for the fund's listing, so this is a standing gap refreshed only when a new factsheet is published. The figure is now six weeks old; manual verification is recommended.</p>
+<p>Assets under management are not available from the data provider for this fund. The carry-forward estimate of approximately $2.4 billion from an independent aggregator is unverified in this cycle. Manual confirmation against the Vanguard product page is required quarterly.</p>
+<p>The fund's expense ratio is not returned by the data provider for this listing. The 0.07% figure is carried from the Vanguard-published annual charges figure and requires manual re-verification against the fund factsheet each quarter.</p>
+<p>The data provider does not surface price-history data for this fund's listing in the current snapshot, which means no price-chart or momentum data can be produced. The basket-earnings yield — used by the valuation model to translate yield thresholds into price equivalents — is also absent, leaving the standing-order prices without a computable figure this cycle.</p>
+<p>The OeKB annual reportable yield (Ausschüttungsgleiche Erträge) for Austrian tax purposes has not been populated. A Pauschalbesteuerung proxy of 4.5% is in use until the OeKB classification is confirmed by a tax adviser.</p>
+<p>Score section note: quality tier classification is listed as unknown in the pipeline's current data (the asset-class breakdown is present but the automated classification did not complete this cycle); the composite weight defaults to 1.00.</p>
+<h2 id="the-rules">The Rules</h2>
+<ul>
+<li>If the thesis is confirmed (vehicle-integrity conditions clear, basket yield within band), hold. Vehicle integrity intact — ongoing charges figure within budget, assets under management above floor, mandate unchanged.</li>
+<li>If the thesis weakens (one condition approaching but not crossing a threshold), do not add. Re-assess at the next quarterly review; monitor the charges figure and fund size before increasing the allocation.</li>
+<li>If the thesis breaks (one or more numbered exit conditions trigger — charges figure above 0.10% for two consecutive quarters, assets under management below $1 billion, or US sovereign downgrade below AA− by two agencies), exit. Reinvest proceeds in EUR cash or short nominal Bunds.</li>
+<li>If the basket yield reaches 5.5% or above, add at the margin if cash is available — T-bill rates would be unusually attractive relative to EUR alternatives. Vehicle-integrity conditions still gate any large addition.</li>
+<li>If the basket yield falls to 3.5% or below, trim at the margin — yield compression to this level means USD T-bill carry versus EUR cash is materially weaker. Vehicle-integrity conditions still gate a full exit.</li>
+<li>If the basket yield falls to 3.0% or below, exit per the applicable exit condition (fee ceiling, fund-size floor, or sovereign downgrade — whichever applies).</li>
+</ul>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+  <li><a href="vehicle-profile.html">Vehicle profile</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

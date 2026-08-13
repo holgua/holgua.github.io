@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berkshire: The Bet Is Wobbling — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
+<h1 id="berkshire-the-bet-is-wobbling">Berkshire: The Bet Is Wobbling</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- DATA_ERROR: upcoming earnings fetch failed for BRK-B: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py BRK-B
+- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol
+- current_price_usd derived from market_cap/shares (approximate) — run Extract-Ranking-Inputs.py for exact price
+- STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
+- STRUCTURAL: fair-value band self_bands.p_e unavailable — [INSUFFICIENT HISTORY]
+- PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol
+- PORTFOLIO: - PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol
+- shares_diluted absent from XBRL — implied from market_cap / current price (1072.34B USD / 497.18 = 2156.9M shares). Verify against per-share book value disclosed in the filing.
+- Class A equivalent ratio configured (1500:1). The BV/share above uses diluted shares from XBRL as reported. Verify against the per-share book value that management discloses directly in the filing — the LLM extractor should surface that figure if present.</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-12 · Latest filing 2026-08-10.</em></p>
+<p>The bet is wobbling. Five of Berkshire's nine monitored drivers confirmed the compounding thesis in the latest filing — book value growth, the insurance float, operating earnings, buybacks, and the freight rail business all read as healthy — but the car-insurance unit, Berkshire's car-insurance business, GEICO, has now deteriorated for two consecutive reporting periods, and that single wobble is enough to put the whole thesis on watch. As set out in <a href="#the-share-price">the Share Price</a> below, the share price sits in the upper half of the hold band, at fair value: not expensive enough to trigger a trim, not cheap enough to invite a buy.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $416. Trim at $582. Exit at $649.</p>
+<p>At $416, the long-run total return is about 4% a year. At today's $497, about 4% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy                         current                     trim                exit
+$416                        $497                        $582                $649
+├───────────────────────────┼───────────────────────────┼──────────────────────┤
+</code></pre>
+<p>Over the next three years, if the share price moves to the fair-value central estimate, returns work out to bear -24%, base -12%, bull +18% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear                   base      expected                                   bull
+-24%                   -12%      -6.9%                                      +18%
+├──────────────────────┼─────────┼─────────────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (20% bear, 55% base, 25% bull): about -6.9% a year over the next three years.</p>
+<p>The gap between the two figures is a timing question, not a contradiction. The long-run figure is a steady-state estimate over many years; the three-year figure assumes the share price moves from today's 497 to the fair-value central estimate of 482 within that window, so near-term drift can dominate.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Berkshire scores -15.98, ranking 19 of 20 active holdings by this measure — it sits near the foot of the portfolio, a direct consequence of the three-year scenario returns being weighted heavily toward the negative.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
+  &nbsp;&nbsp;= 1.20 × (-6.92% − 1.46% − 4.94%)
+  &nbsp;&nbsp;= 1.20 × −13.32%
+  &nbsp;&nbsp;= <strong>-15.98</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> Berkshire sits in the strongest of three moat tiers — the insurance float at near-zero cost and the physically irreplicable freight-rail network are both present and durable — which lifts the conviction score by 20 per cent relative to a holding with no distinguishable edge.</p>
+<p><strong>Expected return: -6.92%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (20% likelihood) — annualised return -24.2%.</strong> The bear case has the freight-rail business under sustained volume pressure and the energy subsidiary facing wildfire losses, while the equity portfolio falls sharply and Greg Abel's first large independent acquisition disappoints — compressing both the operating outlook and the multiple the market is willing to pay.</p>
+<p><strong>Base (55% likelihood) — annualised return -11.9%.</strong> The base case has stable insurance underwriting, modest float growth, a recovery in freight volumes, and the equity portfolio flat to slightly up — driving mid-single-digit revenue growth and steady book-value compounding, but the share price returning toward fair value from its current slight premium.</p>
+<p><strong>Bull (25% likelihood) — annualised return +17.8%.</strong> The bull case has record underwriting profits, the energy subsidiary's wildfire liability cleared, further bolt-on acquisitions adding meaningful revenue, and the equity portfolio appreciating, with Abel demonstrating Buffett-calibre capital discipline.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.20 × (−24.2) + 0.55 × (−11.9) + 0.25 × 17.8 = −6.94%.</p>
+<p><strong>Hurdle rate: 4.94%.</strong> The hurdle rate is 4.94% — the 0.94% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of -15.98 places Berkshire 19th of 20 active holdings — second from the bottom, separated from last place by a wide margin but well below the portfolio median.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The three months ending in June 2026 confirmed that Berkshire's compounding engine is broadly intact — and that one part of it is misfiring in a way that warrants close attention.</p>
+<p>The headline from the filing is the buyback: management repurchased $4.5 billion of stock in the second quarter alone, the largest single-quarter repurchase in recent memory. That number matters because it is a direct statement from Abel and Buffett that the share price, in the $490s, sits below their estimate of intrinsic value. Book value per share grew approximately 12.1% over the twelve months ending in June 2026, comfortably ahead of any plausible broad-market benchmark — the primary test against which the thesis is measured. Operating earnings (excluding investment gains) grew 5.1% in the first half of 2026 versus the same period a year earlier, led by manufacturing and services (+15.1%), the freight-rail business (+9.5%), and the energy subsidiary (+11.5%). The insurance float reached $177.5 billion, up $1.1 billion from year-end, at a negative cost — meaning the insurance businesses collectively generated an underwriting profit, so the float is genuinely free.</p>
+<p>The singular concern is Berkshire's car-insurance business, GEICO. Its combined ratio — the share of every premium dollar paid out in claims and expenses, where anything below 100% signals profit — deteriorated to 89.3% in the first half of 2026 from 81.7% in the same period a year earlier, a 7.6 percentage-point move in the wrong direction. Underwriting profit fell 40% to $2.4 billion. Both the frequency and the severity of claims rose, with bodily-injury claim frequencies up five to seven per cent and severities up ten to twelve per cent. Advertising spend surged, suggesting GEICO is paying aggressively to recover market share lost to competitors with more advanced pricing technology. Not one of these developments crosses a written exit condition — underwriting is still profitable, and the overall insurance result actually improved because the freight-rail and energy businesses recovered from wildfire losses that depressed last year's figure. But the deterioration now spans two consecutive reporting periods, which is what moved the thesis from stable to wobbling. For more on <a href="#the-share-price">the Share Price</a> context, the valuation read as of 2026-08-12 is set out below.</p>
+<h2 id="about-berkshire">About Berkshire</h2>
+<p>Berkshire Hathaway is a holding company that owns a diversified collection of operating businesses and a large portfolio of publicly traded shares, all assembled over six decades under Warren Buffett and now run by Greg Abel, who became chief executive at the start of 2026. The operating businesses span car insurance (Berkshire's car-insurance business, GEICO), freight rail (Berkshire's railway subsidiary, BNSF, which runs a 32,500-route-mile network across the western United States), regulated electricity and gas utilities (Berkshire Hathaway Energy, known as BHE), and a broad mix of manufacturers, retailers, and service businesses ranging from precision components to pilot training. On top of these operating subsidiaries, Berkshire holds roughly $400 billion in publicly traded equities — a concentrated portfolio funded partly by the insurance float, a pool of money that policyholders have paid in premiums but that Berkshire has not yet paid out in claims.</p>
+<p>The insurance float is the structural engine of the business. At $177.5 billion, it costs Berkshire nothing — because the insurance operations generate an underwriting profit, the float is effectively free leverage that can be deployed into equities and owned businesses at management's discretion. No competitor can legally or economically replicate this: it took six decades of profitable underwriting to build, and its self-reinforcing nature (scale attracts more business, which deepens the statistical edge, which allows better pricing) means the moat compounds alongside the float itself. The operating businesses — rail, energy, and manufacturing — each carry their own durable advantages: BNSF's track network cannot be economically rebuilt; BHE's utility service territories give it a captive customer base; and several of the manufacturing subsidiaries operate in specialty markets where scale and reputation create lasting pricing power. Berkshire does not pay a dividend; the entire investment thesis rests on management's ability to keep reinvesting earnings and float into high-returning assets at above-market rates.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The central bet is that Greg Abel and the management culture Warren Buffett built will continue to reinvest retained earnings and the insurance float into high-returning businesses and securities at rates exceeding what a passive allocation to a broad index could achieve. The specific conditions that must hold for this bet to keep working are:</p>
+<ol>
+<li><strong>Book value per share grows at or above the broad market total return, measured over rolling five-year periods.</strong> If book value per share trails the MSCI World total return for five or more consecutive years, the compounding edge has gone and the holding's rationale disappears.</li>
+</ol>
+<p><em>Latest reading:</em> Per-Class-A-equivalent book value grew approximately 12.1% in the twelve months to June 2026 — well ahead of any plausible MSCI World total-return reading for that period. Shareholders' equity reached $747.9 billion at June 30, 2026, up from $670.3 billion a year earlier.</p>
+<ol>
+<li><strong>Capital allocation discipline is intact through the Abel era.</strong> Any acquisition above $20 billion at a price exceeding 1.5 times the book value of the target, or that subsequently requires a goodwill impairment exceeding $5 billion, would signal that the culture of capital discipline had broken.</li>
+</ol>
+<p><em>Latest reading:</em> The quarterly filing is silent on any new large acquisition. The $4.5 billion buyback at approximately $490–500 per share is the most recent capital allocation decision on record, and it signals that Abel and Buffett regard current prices as below intrinsic value — the opposite of capital misallocation. No material goodwill impairments disclosed.</p>
+<ol>
+<li><strong>No structural culture change — no regular dividend, no break-up, no activist capitulation.</strong> The decentralised owner-operator model must survive the succession intact. A dividend, break-up, or forced restructuring would signal that the model had been abandoned.</li>
+</ol>
+<p><em>Latest reading:</em> Nothing in the quarterly filing suggests any of the three triggers. Normal quarterly cadence, no succession commentary, no dividend proposal.</p>
+<ol>
+<li><strong>The ratio of share price to book value per share (price-to-book) stays below 2.0 times.</strong> Above that threshold, the valuation fully prices in optimistic compounding and the opportunity cost versus a passive index becomes clearly negative.</li>
+</ol>
+<p><em>Latest reading:</em> The price-to-book ratio using FY2025 equity and the current share price of $497 is approximately 1.495 times — within the hold band (buy edge 1.25 times, trim edge 1.75 times, exit condition 2.0 times) and slightly above the fair-value anchor of 1.45 times. No exit condition is close to being triggered.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>The current share price of $497 sits in the upper half of the hold band. Using the year-end 2025 shareholders' equity and the implied share count, the price-to-book ratio works out to approximately 1.495 times — against a fair-value anchor of 1.45 times, a buy edge at 1.25 times, and a trim edge at 1.75 times.</p>
+<p>In dollar terms, that translates to: fair value around $482, the cheap edge at $416, and the trim edge at $582. At $497, the share price is modestly above fair value — not by enough to trigger a trim order, but enough that there is no margin of safety for a new position. This is a holding-weather price, not a buying price.</p>
+<p>The point-in-time reading using June 2026 equity (rather than the FY2025 figure the valuation model uses) would put the ratio slightly lower — approximately 1.43 times — because the balance sheet has grown. That spot check is informational rather than operative; the validation uses year-end figures by convention, and the two readings are close enough that neither changes the conclusion.</p>
+<p>Berkshire does not pay a dividend, so there is no yield component to offset the mild premium above fair value. The entire expected return comes from book-value compounding and, eventually, a reversion of the price-to-book ratio toward fair value. At the current price that long-run return estimate is approximately 4% per year — which is modest relative to the hurdle rate, and is reflected directly in the score.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p><a href="#the-rules">The Rules</a> translate the share-price bands into three standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement made here.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at $482, the fair-value anchor. The crossing means the share price has returned to a neutral reading; no action follows automatically, but a fresh reading of the conditions is warranted before any decision.
+- A second alert at $416, the cheap edge. The crossing arms the buy order below; before adding, the latest re-validation should confirm the conditions are still working and the thesis has not deteriorated further.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at $416. Per <a href="#the-rules">the Rules</a>, once the share price closes at or below this line and the conditions — in particular the book-value compounding rate and the capital-allocation discipline — are still working, the position is added in tranches. The order may be staged across one or two quarters rather than filled in a single transaction.
+- A standing trim order at $582. Per <a href="#the-rules">the Rules</a>, once the share price closes at or above this line, 25 to 33 per cent of the position is trimmed to harvest the premium while keeping the core holding intact.
+- A standing exit order at $649. Per <a href="#the-rules">the Rules</a>, once the share price closes at or above this line, the full position is closed. At that price, the market would be pricing in roughly ten years of base-case compounding instantly; the implied forward return falls below the long-term equity premium even before growth, and reallocation beats continuing to hold. No re-entry within 90 days thereafter.</p>
+<p>The three order levels do not contradict the current valuation read: those verdicts describe today's reading; the standing orders describe what will follow if the share price moves to each line.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The single wobble that has moved the thesis from stable to wobbling is GEICO's underwriting performance. The combined ratio — the share of every premium dollar paid out in claims and expenses — deteriorated to 89.3% in the first half of 2026 from 81.7% in the same period a year earlier, a 7.6 percentage-point swing. Underwriting profit fell 40% to $2.4 billion. Both the frequency of claims (bodily injury up five to seven per cent) and their severity (bodily injury claims up ten to twelve per cent) rose. Advertising spend jumped sharply, suggesting GEICO is spending to defend and recover market share against competitors — primarily Progressive — that use telematics-based pricing to identify lower-risk drivers more precisely.</p>
+<p>This does not cross any written exit condition: underwriting is still profitable, the float is growing, and the aggregate insurance result for the group actually improved year-on-year because the other insurance segments recovered strongly. But the deterioration now spans two consecutive quarters, and there is no disclosed evidence that GEICO's market share is recovering or that its competitive pricing disadvantage against Progressive's technology platform is narrowing. The wobble to watch in <a href="#the-case-for-the-bet">the Case for the Bet</a> is condition one — specifically, whether GEICO's sustained drag begins to weigh on overall book-value compounding relative to the market benchmark.</p>
+<p>A secondary, less acute wobble is BHE's regulatory environment. The Oregon Court of Appeals reversed a major wildfire verdict against BHE's electricity subsidiary, PacifiCorp, in April 2026 — a materially positive development that reduced the estimated wildfire liability from $1.2 billion to $572 million. But the Oregon Supreme Court granted review of that reversal, with oral argument scheduled for November 2026. The liability could be reinstated. BHE's earnings grew 11.5% in the first half of 2026, so the operational picture is good; the uncertainty is legal, not operational.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li>
+<p><strong>GEICO's competitive disadvantage becomes structural.</strong> Progressive's telematics platform gives it the ability to identify and price for low-risk drivers that GEICO cannot match without building comparable capabilities. If GEICO's combined ratio continues to deteriorate toward the 95–100% range across multiple quarters — meaning the business barely breaks even or begins to lose money on underwriting — the free float advantage narrows materially, because float that costs money is no longer free leverage.</p>
+</li>
+<li>
+<p><strong>Greg Abel makes a large acquisition at too high a price.</strong> With $52.6 billion of cash on the balance sheet at year-end 2025, Abel has the firepower for a transformative deal. A transaction above $20 billion, at a price exceeding 1.5 times the target's book value, that subsequently requires a goodwill impairment above $5 billion would signal that the capital-allocation culture had changed — and that is a written exit condition.</p>
+</li>
+<li>
+<p><strong>The BHE wildfire liability revives.</strong> The Oregon Supreme Court is reviewing the appellate reversal of the Oregon wildfire verdict against PacifiCorp. New wildfire seasons add incremental liability. If BHE's total wildfire exposure returns toward $1 billion or beyond, the energy subsidiary's earnings would be meaningfully impaired and its capital position would require attention.</p>
+</li>
+<li>
+<p><strong>The equity portfolio drawdown.</strong> Berkshire holds roughly $400 billion in publicly traded shares, with a significant concentration in a single technology company. A 25% or greater drawdown in that portfolio would reduce book value by $50–100 billion — not an existential threat to a company with $333 billion in statutory surplus, but a material drag on the compounding rate that the thesis depends on.</p>
+</li>
+<li>
+<p><strong>BHE's energy-transition economics weaken.</strong> A 2025 law phases out wind and solar production tax credits for new projects placed in service after the end of 2027. BHE has invested $38 billion in renewable energy partly on the economics of those credits. The estimated impact is a 10 to 15 per cent reduction in BHE's long-run earnings trajectory relative to pre-law assumptions — roughly $400 to $600 million a year foregone.</p>
+</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>The share count used in the valuation is derived from market capitalisation divided by share price rather than from the company's own structured financial data, because Berkshire's multi-class share structure does not map cleanly to the standard automated extraction logic. The derived count of approximately 2,156 million Class-B-equivalent shares is consistent with the independently verifiable market-capitalisation figure, but it should be cross-checked against the per-share book value that management discloses directly in the filing. The Q2 2026 filing reports shareholders' equity of $747.9 billion and Class-A-equivalent shares of 1,431,693, implying approximately $348 per Class-B share in spot book value — slightly above the FY2025 figure used in the valuation model. This spot check does not change the valuation conclusion but confirms the model is not materially misstated.</p>
+<p>Berkshire does not pay a dividend; the absent dividend yield figure in the data is expected and correct, not a data error.</p>
+<p>The earnings-dates fetch failed due to a missing software dependency. This has no effect on the valuation or thesis assessment — earnings dates are informational — but the warning is retained so the data-freshness record is complete.</p>
+<h2 id="the-rules">The Rules</h2>
+<p>The rules below follow directly from the pre-committed action plan and are stated without modification. They are conditions of the evaluation, not new instructions from this update.</p>
+<ul>
+<li>If the filing evidence triggers a written exit condition — book-value growth trailing the market for five or more consecutive years, a large acquisition revealing capital-allocation failure, a structural culture change, or the price-to-book ratio exceeding 2.0 times — then exit the full position within 30 days. No averaging down.</li>
+<li>If the thesis is weakening — meaning one or more drivers are challenging the thesis but no written exit condition has fired — then hold the position without adding. Run a fresh re-validation on the specific deteriorating driver. Decide after the next quarterly filing.</li>
+<li>If the thesis is fully confirmed, with all drivers reading as supportive — then hold and let the position compound. No action required.</li>
+<li>If the share price falls below the buy edge (price-to-book at or below 1.25 times, approximately $416 at current book value) — then confirm the thesis is intact first. If confirmed, add to the position.</li>
+<li>If the share price rises above the trim edge (price-to-book at or above 1.75 times, approximately $582 at current book value) — then trim 25 to 33 per cent of the position to harvest the premium while keeping the core holding.</li>
+<li>If the share price rises above the exit level (price-to-book at or above 2.0 times, approximately $649 at current book value) — then exit the full position. At that reading, the market is pricing in roughly ten years of base-case compounding instantly; redeploy proceeds at the next cheap-edge crossing or into a cheaper alternative. No re-entry within 90 days to defuse anchor bias.</li>
+</ul>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

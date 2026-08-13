@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VDST — ETF Value Analysis (Buffett/Munger Lens) — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="index.html">← VDST report</a></p>
+<h1 id="vdst-etf-value-analysis-buffettmunger-lens">VDST — ETF Value Analysis (Buffett/Munger Lens)</h1>
+<p><em>Snapshot: 2026-07-20T20:24:39.207620+00:00</em>. Source: Market-Data.json sidecar.</p>
+<blockquote>
+<p>A look-through analysis of the basket as a set of businesses, not as a vehicle. The vehicle side lives in <code>VDST-Vehicle-Profile.md</code>. The verb decision lives in <code>14-Thesis-Validate</code>.</p>
+</blockquote>
+<hr />
+<h2 id="1-look-through-valuation">1. Look-Through Valuation</h2>
+<p>[FIXED-INCOME BRANCH — basket_earnings_yield_pct null AND yield_to_maturity_pct non-null]</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weighted-Avg Yield to Maturity</td>
+<td>3.851% (as of 2026-06-30)</td>
+</tr>
+<tr>
+<td>Weighted-Avg Maturity</td>
+<td>0.378 years (~4.5 months)</td>
+</tr>
+<tr>
+<td>Distribution Yield</td>
+<td>0.0% (accumulating share class — income reinvested in NAV)</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>vanguard-polaris:9933</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read</strong>: The current WAYTM of 3.851% sits below the thesis fair-value yield of 4.8% and well below the buy-band edge of 5.5%, placing the basket WITHIN BAND but on the compressed side — 95 basis points below the thesis base case and 35 bp above the trim-band edge of 3.5%. This is a month-end snapshot from Vanguard Polaris (portId 9933, effective 2026-06-30). The yield has ticked up from 3.73% (2026-05-31) to 3.85% (2026-06-30), consistent with the short-end T-bill rate stabilising near current Fed funds levels. For VDST specifically, YTM reflects the weighted average of the underlying T-bill basket, not a single bond's coupon — it tracks the prevailing Fed funds / T-bill rate closely. No add or trim signal is warranted; vehicle-integrity rules govern any allocation change within this band.</p>
+<h2 id="2-equity-risk-premium">2. Equity Risk Premium</h2>
+<p>[FIXED-INCOME BRANCH]</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weighted-Avg YTM</td>
+<td>3.851%</td>
+</tr>
+<tr>
+<td>Risk-free benchmark (^TNX)</td>
+<td>4.60%</td>
+</tr>
+<tr>
+<td><strong>Yield spread vs. 10y benchmark</strong></td>
+<td><strong>-0.749%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: For VDST, whose basket IS the short-end cash-equivalent, the spread is duration-driven (0.4–0.5y T-bills vs. 10y Treasury), not credit-driven. A negative spread is expected and normal — it reflects the normal yield curve shape where short-term rates are below long-term rates, not a yield disadvantage in isolation. A deeply inverted curve (where this spread turns positive) would be the unusual case requiring re-assessment.</p>
+<h2 id="3-look-through-quality-top-10-deduped">3. Look-Through Quality (top-10 deduped)</h2>
+<p>[FIXED-INCOME BRANCH]</p>
+<blockquote>
+<p><strong>Look-Through Quality: Not Applicable.</strong> The basket holds US sovereign debt — there is no equity ROE concept. Quality is assessed through the vehicle-integrity block (see §5 / Thesis-Validate output).</p>
+</blockquote>
+<h2 id="4-margin-of-safety">4. Margin of Safety</h2>
+<p>[FIXED-INCOME BRANCH — yield-only table, no P/E column]</p>
+<table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>Yield</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buy band edge</td>
+<td>5.500%</td>
+</tr>
+<tr>
+<td>Fair value</td>
+<td>4.800%</td>
+</tr>
+<tr>
+<td>Trim band edge</td>
+<td>3.500%</td>
+</tr>
+<tr>
+<td><strong>Current (WAYTM)</strong></td>
+<td><strong>3.851%</strong> (as of 2026-06-30)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Position</strong>: WITHIN BAND. At 3.851%, the current WAYTM sits above the trim-band edge (3.5%) and below the fair-value anchor (4.8%). No action threshold has been crossed. Vehicle-integrity rules govern any add or trim decision within this band; the yield metric alone does not trigger action.</p>
+<p><strong>Margin vs. thesis fair-value yield</strong>: -0.949% absolute (current yield is 95 bp below the 4.8% base-case anchor). Note: price edges are omitted. At 0.378y modified duration, a 70-bp yield gap translates to ~$0.25 price difference — narrower than the LSE bid-ask spread and swamped by NAV accumulation within weeks. The yield itself is the decision-useful signal.</p>
+<h2 id="5-owner-perspective-buffett-frame">5. Owner Perspective (Buffett Frame)</h2>
+<p><em>"Would Berkshire deploy cash into this basket today?"</em></p>
+<p>At 3.851% nominal YTM with sub-6-month average maturity, VDST IS the cash equivalent in this portfolio — not a bet on rate direction, not a credit spread play. Buffett's framework treats T-bills as the cost of optionality: their return is foregone while waiting for a compelling equity idea at a fair price. Within that frame, VDST is doing its job. The 0.07% OCF (last known Vanguard published TER) costs 7 bp per year for daily-liquid, USD-denominated, LSE-listed access to the T-bill curve — negligible. Against the equity ERP context, with the 10-year Treasury at 4.60% and S&amp;P 500-level earnings yields in the 4–5% range, the T-bill yield of 3.851% is marginally below both — the case for holding is intact, but not for adding aggressively. Berkshire would park cash here while awaiting better equity opportunities, not grow the allocation at these yields.</p>
+<h2 id="6-bear-base-bull-on-5-year-forward-return">6. Bear / Base / Bull on 5-Year Forward Return</h2>
+<p>§6 scenarios follow <code>Pipeline-Conventions.md §13</code> — bond/T-bill basket branch applies (<code>config.yaml::asset_class == "bond-etf"</code>).</p>
+<p>[BOND/T-BILL basket — asset_class: bond-etf]</p>
+<p>The VDST-Forward-Returns.json sidecar returned <code>forward_returns: null</code> with warning: <em>"asset_type='etf' — use Compute-Etf-Forward-Returns.py for ETFs; bonds have no equity IRR."</em> The equity IRR path is not applicable to this basket.</p>
+<p><strong>Bear / Base / Bull: UNDETERMINED via script.</strong> Yield scenarios from <code>config.yaml</code> valuation thresholds are used as the analytical frame. At 0.378y maturity, the basket reprices to the prevailing rate within months — forward return approximates path-average yield (carry-yield approximation, not IRR). No MTM haircut applies (weighted-avg maturity 0.378y &lt; 3y threshold):</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>YTM assumption</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td><strong>2.5%</strong></td>
+<td><code>trim_threshold − 1.0%</code> = 3.5% − 1.0%; aggressive Fed cutting cycle, T-bill rate approaches lower bound</td>
+</tr>
+<tr>
+<td>Base</td>
+<td><strong>4.8%</strong></td>
+<td><code>fair_value</code>; mid-cycle Fed funds level (thesis base case); current 3.851% is 95 bp below</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td><strong>5.5%</strong></td>
+<td><code>buy_threshold</code>; persistent inflation, T-bill rate re-elevated to peak-cycle levels</td>
+</tr>
+</tbody>
+</table>
+<p>These are carry-yield approximations appropriate for a cash-equivalent instrument, not IRR estimates. The spread from bear (2.5%) to bull (5.5%) is 300 bp — wide enough to encompass a full rate cycle. Even in the bear case, the 2.5% return exceeds zero in real terms at sub-3% inflation; the basket is robust to the scenarios contemplated by the thesis.</p>
+<hr />
+<h2 id="7-data-gaps">7. Data Gaps</h2>
+<ul>
+<li><strong>trailing_pe</strong>: null — structurally expected for a T-bill basket; the P/E concept does not apply to sovereign debt. No analytical impact.</li>
+<li><strong>equity_risk_premium_pct</strong>: null — derived from <code>basket_earnings_yield_pct</code>, which is also null for this vehicle; the fixed-income yield-spread table in §2 replaces this field. No analytical impact.</li>
+<li><strong>expense_ratio_pct</strong>: null — yfinance returned no value for this UCITS ETF this cycle. Last known OCF is 0.07% (Vanguard published TER, carry-forward); manual re-verification against the Vanguard factsheet is required quarterly. Carry-forward is 3 bp below the 0.10% exit threshold, so exit condition (1) is currently inactive.</li>
+</ul>
+<hr />
+<h2 id="8-ranking-inputs-machine-readable-closing-block">8. Ranking Inputs (machine-readable closing block)</h2>
+<p>Consumed deterministically by <code>src/portfolio/extract_ranking_inputs.py</code> for the portfolio-level conviction ranking. <code>quality_tier</code> is canonical from <code>compute_etf_quality_tier()</code>: bond/cash ETF with <code>bondPosition + cashPosition</code> = 100% ≥ 80%, <code>etf_credit_type: sovereign-ig</code> → <strong>High</strong>. Forward IRR fields are carry-yield approximations from the §6 scenarios; <code>Extract-Ranking-Inputs.py</code> reads only <code>forward_irr_base_pct</code> for ETFs.</p>
+<pre><code class="language-yaml">ranking_inputs:
+  quality_tier: High
+  quality_tier_basis: &quot;bond/cash ETF (bondPosition + cashPosition = 100% ≥ 80%); etf_credit_type: sovereign-ig → quality_tier High&quot;
+  forward_irr_bear_pct: 2.5
+  forward_irr_base_pct: 4.8
+  forward_irr_bull_pct: 5.5
+</code></pre>
+<hr />
+<h2 id="end-of-value-analysis-etf">End of Value-Analysis-ETF</h2>
+</main>
+</body>
+</html>

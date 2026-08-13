@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ServiceNow: The Bet Is Wobbling — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
+<h1 id="servicenow-the-bet-is-wobbling">ServiceNow: The Bet Is Wobbling</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- DATA_ERROR: upcoming earnings fetch failed for NOW: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py NOW
+- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if NOW is a genuine non-payer this is expected, otherwise check yfinance_symbol
+- SANITY: forward_irr_bull_pct value 109.36 outside sanity range (-75.0, 75.0) — reported as computed. Common causes (in order): (a) §9 arithmetic used a multiple above the three-way min (self p90, peer high, absolute cap) — see 11-Value-Analysis "Multiple ceiling"; (b) bull FCF CAGR exceeded the 10y normalised owner-earnings CAGR (see 03-Analyze-Edgar §8.5 "10y OE-anchored bull"); (c) both. Re-run 11-Value-Analysis §9 with corrected inputs.
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
+- PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if NOW is a genuine non-payer this is expected, otherwise check yfinance_symbol
+- PORTFOLIO: - PORTFOLIO: (stale ranking, 2026-07-30) - VDST: quality_tier=UNKNOWN (composite weight defaults to 1.00)
+- PORTFOLIO: - PORTFOLIO: (stale ranking, 2026-07-30) - URTH: quality_tier=UNKNOWN (composite weight defaults to 1.00)
+- PORTFOLIO: - PORTFOLIO: (stale ranking, 2026-07-30) - SPY: quality_tier=UNKNOWN (composite weight defaults to 1.00)
+- PORTFOLIO: - PORTFOLIO: - VDST: quality_tier=UNKNOWN (composite weight defaults to 1.00)
+- PORTFOLIO: - PORTFOLIO: - URTH: quality_tier=UNKNOWN (composite weight defaults to 1.00)
+- PORTFOLIO: - PORTFOLIO: - SPY: quality_tier=UNKNOWN (composite weight defaults to 1.00)
+- Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing's MD&amp;A for material growth-vs-maintenance CapEx differences.
+- [FAIR-VALUE-DRIFT] config.valuation.fair_value (3.87) diverges from current Owner Earnings Yield (%) (2.030) by 47.5% (threshold: 30%). Consider updating fair_value in Holdings/NOW/config.yaml.
+- [FAIR-VALUE-DRIFT] Fair-Value-Bands base-scenario central estimate ($105) implies an OEY of 2.41%, diverging from config fair_value (3.87%) by 37.6%. Review NOW-Fair-Value-Bands.md and consider updating fair_value.</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-12 · Latest filing 2026-07-23.</em></p>
+<p>The bet is wobbling. At $125, the stock sits above the trim line, well above fair value. The single condition to watch is gross margin: it compressed to 70.7% in the three months ending June 2026, a little over half a percentage point above the 70% line at which the exit countdown would begin.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $47. Trim at $107. Exit at $291.</p>
+<p>At $47, the long-run total return is about 29% a year. At today's $125, about 26% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy                trim/current                                             exit
+$47                $107/$125                                                $291
+├──────────────────┼─────┼─────────────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the share price moves to the fair-value central estimate, returns work out to bear -28%, base -6%, bull +109% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear         base          expected                                         bull
+-28%         -6%           +18.7%                                          +109%
+├────────────┼─────────────┼───────────────────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (20% bear, 55% base, 25% bull): about +18.7% a year over the next three years.</p>
+<p>The gap between the two figures is a timing question, not a contradiction. The long-run figure is a steady-state estimate over many years; the three-year figure assumes the share price moves from today's 125 to the fair-value central estimate of 66 within that window, so near-term drift can dominate. A separate scenario analysis in §8 derives a different central estimate of 105; see Gaps in the Picture for why the two numbers diverge.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>ServiceNow scores 14.75, ranking 6 of 20 active holdings by this measure — it sits in the upper third of the portfolio, ahead of the median.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
+  &nbsp;&nbsp;= 1.20 × (18.69% − 1.46% − 4.94%)
+  &nbsp;&nbsp;= 1.20 × +12.29%
+  &nbsp;&nbsp;= <strong>14.75</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> ServiceNow sits in the strongest of three moat tiers, which lifts the score by 20 per cent. The classification reflects seven consecutive years of 98% renewal rates and more than 2,000 patents on a platform architecture that is deeply embedded in enterprise operations — switching costs that compound year by year.</p>
+<p><strong>Expected return: 18.69%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (20% likelihood) — annualised return −27.8%.</strong> The bear case assumes AI-driven commoditisation from Microsoft and Salesforce erodes pricing power, government contract exposure is impaired by the Department of Justice investigation, and the Armis acquisition introduces margin drag that the business cannot absorb — leaving growth stalled in the low double digits.</p>
+<p><strong>Base (55% likelihood) — annualised return −5.6%.</strong> The base case has subscription revenue compounding at 18–20% per year through AI product upsell and cross-sell across four workflow pillars, non-GAAP operating margins recovering toward 32–33%, and the legal matter resolving without a debarment outcome.</p>
+<p><strong>Bull (25% likelihood) — annualised return +109.4%.</strong> The bull case has the AI Control Tower becoming the enterprise standard for AI governance across all verticals, subscription growth accelerating above 25% per year, and stock-based compensation falling toward 10% of revenue ahead of management's stated target.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.20 × (−27.8) + 0.55 × (−5.6) + 0.25 × 109.4 = +18.71%. Note that even the weighted blend is positive because the bull scenario's magnitude dwarfs the bear losses — a distribution with a wide right tail but a below-hurdle central case.</p>
+<p><strong>Hurdle rate: 4.94%.</strong> The hurdle rate is 4.94% — the 0.94% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of 14.75 places ServiceNow sixth among the portfolio's 20 active positions — above the midpoint and clear of the median, though well behind the three holdings at the top of the field.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The quarterly report filed 2026-07-23 delivered a filing that was strong on the measures that define the thesis and worrying on the one measure that did not use to be a concern. Subscription revenues grew 24.6% in the three months ending June 2026 compared to the same period a year earlier, and the renewal rate held at 98% — unchanged across seven consecutive years. The contracted pipeline also came in above the threshold that matters: total remaining performance obligations grew 21% to $29.0 billion, with the near-term slice (obligations due in the next twelve months, about 46% of the total) also up 21%.</p>
+<p>The worry arrived in the gross margin line. The overall reported gross margin for the June quarter fell to 70.7%, down from 77.5% a year earlier. The compression is almost entirely a consequence of $194 million in additional amortisation charges that began flowing through cost of revenues after the Armis and Veza acquisitions closed in early 2026. At $3.78 billion of acquired intangible assets amortising over five to six years, the quarterly charge runs to roughly $160–190 million. That charge is non-cash and will eventually run off — but for now it is dragging reported margins down toward a written exit condition. The 70% floor requires two consecutive quarters below that line; Q2 2026 did not breach it. Management has guided margins to continue declining through the remainder of 2026, which means the outcome of the September quarter print will be the decisive data point.</p>
+<p>The stock continued to trade above the trim line throughout the period. At $125 as of the filing reference date, that yield — cash generation net of stock-based compensation as a percentage of market capitalisation — stands at 2.03%, sitting below the trim threshold of 2.37%. For details on the pre-committed response to that reading, see <a href="#the-standing-orders">The Standing Orders</a>.</p>
+<h2 id="about-servicenow">About ServiceNow</h2>
+<p>ServiceNow sells software to large organisations — governments, banks, manufacturers, healthcare systems — that automates the internal processes employees use to get things done. When an IT team needs to provision a new laptop, when a finance department runs an approval workflow, when a security team responds to an alert, ServiceNow is typically the platform those processes run through. The company calls its product the Now Platform. It connects IT, human resources, security, and finance workflows in one data model, meaning the accumulated history of what employees have done and how processes are configured lives inside ServiceNow's infrastructure, not the customer's own systems.</p>
+<p>That architecture is the source of the business's durability. Moving from ServiceNow to a competitor requires migrating years of accumulated workflow logic, thousands of software integrations, and the habits of tens of thousands of employees. The company charges annual subscription fees, billed in advance, which means cash arrives before the service is delivered — a structural advantage that keeps operating cash flow substantially higher than reported accounting profit. In the financial year ending December 2025, operating cash flow was $5.4 billion while reported net profit was $1.7 billion.</p>
+<p>ServiceNow generated $13.3 billion in revenue in the year ending December 2025, of which 97% came from subscription contracts. It has approximately 8,700 enterprise customers, and its largest product category — IT service management, the digital helpdesk layer that enterprise IT departments run — commands roughly 42% of its market. The company has for the past two years been adding an artificial intelligence layer on top of its existing platform, branded Now Assist; this product crossed $1 billion in contracted annual value in the three months ending June 2026.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The thesis rests on one proposition: ServiceNow holds a defensible position in enterprise workflow automation, built on switching costs that compound annually, and the company can monetise that position for years by raising prices and selling adjacent products to captive relationships. Seven specific conditions define the boundary of that proposition — any one of them failing would indicate the proposition is wrong:</p>
+<ol>
+<li><strong>Subscription revenue growth above 15% per year.</strong> If growth falls below 15% for two consecutive quarters without a clear macroeconomic explanation, it suggests that AI competition from Microsoft and Salesforce is winning at the margin — new customers choosing alternatives or existing customers not expanding their subscriptions.</li>
+</ol>
+<p><em>Latest reading:</em> Subscription revenues grew 24.6% in the three months ending 2026-06-30, and 23.4% in the six months ending on the same date. Both are well above the 15% threshold. Growth was driven by purchases by new and existing customers across all workflow pillars.</p>
+<ol>
+<li><strong>Net renewal rate at or above 97%.</strong> The renewal rate is the single most critical signal: it measures what fraction of expiring subscription value renews. Seven consecutive years at 98% is the empirical foundation of the switching-cost claim. A fall below 97% would indicate that contract value is eroding at the margin — that customers are choosing not to renew or are renewing at lower contract values.</li>
+</ol>
+<p><em>Latest reading:</em> The renewal rate was 98% for both the three and six months ending 2026-06-30, unchanged from the comparable 2025 periods. The seven-year streak is intact.</p>
+<ol>
+<li><strong>Current remaining performance obligations growth above 18%.</strong> Remaining performance obligations (the total contracted revenue that has not yet been recognised, essentially the forward pipeline) growing at 18% or more confirms that new and expanded contracts are replacing expiring ones at a pace that supports the growth thesis. Two consecutive quarters below 18% would signal that the contracted backlog is weakening.</li>
+</ol>
+<p><em>Latest reading:</em> Total obligations were $29.0 billion as of 2026-06-30, up 21% from a year earlier. The near-term tranche — obligations due within the next twelve months — also grew 21%. Both are above the 18% threshold.</p>
+<ol>
+<li><strong>Now Assist AI product reaching $2.5 billion in contracted annual value by the end of 2026.</strong> Now Assist is the AI pricing layer added on top of existing subscriptions. Failing to reach $2.5 billion by the end of 2026 would indicate that AI monetisation is stalling and the primary incremental revenue driver above the base platform is not delivering.</li>
+</ol>
+<p><em>Latest reading:</em> The quarterly filing does not separately disclose the Now Assist contracted annual value. The most recent public figure — $1 billion, disclosed in relation to the June 2026 quarter — comes from company communications outside the filing. Whether the path to $2.5 billion by year-end is on track cannot be assessed from this filing alone.</p>
+<ol>
+<li><strong>Reported gross margin above 70% for any given quarter.</strong> The condition requires two consecutive quarters below 70% to trigger — one quarter is a warning, not a confirmation. The Armis and Veza acquisitions have introduced large non-cash amortisation charges into cost of revenues; the question is whether the underlying business retains its economics once those charges are absorbed.</li>
+</ol>
+<p><em>Latest reading:</em> Reported gross margin was 70.7% in the three months ending 2026-06-30, down from 77.5% in the same period a year earlier. The margin has not yet breached 70%. Management has guided that gross margin will continue to decline through the end of 2026. One quarter of printing at or below 70% starts the two-quarter clock; Q3 2026 is the decisive test.</p>
+<ol>
+<li><strong>No debarment notice or formal exclusion proceeding from the Department of Justice.</strong> The investigation centres on a conflict-of-interest hire in ServiceNow's federal sales channel. A debarment would directly impair approximately 13% of revenues (the concentration of a single federal channel partner that has risen from 11% to 13% of total revenues between 2025 and the June 2026 quarter).</li>
+</ol>
+<p><em>Latest reading:</em> The investigation is ongoing as of 2026-07-23. No debarment notice or formal exclusion proceeding has been issued. The company continues to cooperate and deliver documents to the Department of Justice and the Army Suspension and Debarment Office.</p>
+<ol>
+<li><strong>Non-GAAP operating margin above 28%.</strong> This metric excludes stock-based compensation and acquisition-related charges. Falling below 28% for two consecutive quarters would indicate that AI investment is consuming economics faster than it generates incremental revenue.</li>
+</ol>
+<p><em>Latest reading:</em> Non-GAAP operating margin was 29.4% in the three months ending 2026-06-30 and 30.6% in the six months ending on the same date. Both are above the 28% threshold, though compressing from roughly 31% a year earlier, driven by elevated stock-based compensation (up 31% in the June quarter) and acquisition-related costs.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At $125, the share price sits above the trim line. The owner earnings yield — the company's cash generation net of stock-based compensation, expressed as a percentage of market capitalisation — stands at 2.03%. The fair-value yield anchored in the thesis is 3.87%, which corresponds to a price of approximately $66 per share. At $125, the market is pricing the business at roughly 91% above that estimate of intrinsic value.</p>
+<p>To put that concretely: at $125 and with owner earnings of $2.6 billion, an investor buying today pays approximately 49 times what the business generates for them after accounting for stock-based compensation. The trim threshold was set at 2.37% — approximately $107 per share — on the basis that above that level the stock prices in growth expectations that exceed even the optimistic scenario. At the current reading, trimming is called for rather than adding. The exit threshold sits at $291 per share, which is not approached.</p>
+<p>A separate peer-based estimate of fair value, using market multiples from comparable software businesses rather than a direct cash-flow model, arrives at approximately $105 per share. That higher estimate uses reported cash flow before netting out stock-based compensation — a methodology that produces a more favourable reading. The thesis framework anchors to the more conservative number because stock-based compensation of $1.95 billion per year is a real cost to shareholders, not a bookkeeping entry. Both methodologies agree that the stock is materially overvalued relative to intrinsic value; they disagree on the magnitude. The discrepancy is noted in <a href="#gaps-in-the-picture">Gaps in the Picture</a>.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p><a href="#the-rules">The Rules</a> translate the share-price bands into three standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement made here.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at $66, the fair-value anchor. The crossing means the share price has returned to a neutral reading relative to owner earnings; no action follows automatically, but a fresh read of the conditions is warranted before sizing decisions are made.
+- A second alert at $47, the cheap edge. The crossing arms the buy order below. Before adding at this level, the latest re-validation should confirm all seven exit conditions are still unbroken.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at $47. Pre-committed instructions call for adding in tranches once the share price closes at or below this line and all seven conditions remain unbroken. The order may be staged across one or two quarters rather than filled in a single transaction. At $47, that cash-yield measure crosses 5.37% — the first genuinely attractive entry point for this business at its current quality level, representing a 25% margin of safety on the base-case intrinsic estimate.
+- A standing trim order at $107. Pre-committed instructions call for trimming 25–33% of the position when the share price closes at or above this line, to harvest the premium while holding the core. At $125 the stock already sits above this level.
+- A standing exit order at $291. Pre-committed instructions call for closing the full position when the share price closes at or above this line. The market would be pricing in roughly 7 years of base-case compounding instantly; the implied forward return falls below any reasonable long-term equity premium, and reallocation to a cheaper alternative is called for. No re-entry within 90 days thereafter, to avoid anchoring back to the exited price.</p>
+<p>At $125 the position sits above the trim order and below the exit order, in the trim-eligible zone. The three order levels do not contradict the wobbling thesis: the trim order reflects a valuation stance, not a thesis-quality judgement. A position where thesis conditions are broadly met but the share price is materially above intrinsic value calls for trimming rather than holding the full position unchanged.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>One condition is in challenged territory: gross margin. The reported gross margin of 70.7% in the three months ending June 2026 sits less than one percentage point above the 70% floor. The challenge is almost entirely a consequence of the Armis and Veza acquisitions: when ServiceNow paid $6.4 billion for Armis and roughly $500 million for Veza, it acquired intangible assets that are now amortising through the cost of revenues line at approximately $160–190 million per quarter. That is an accounting charge, not cash leaving the business, but the exit condition is written against reported numbers. Management has guided that the gross margin will continue to decline through the end of 2026. Two consecutive quarters below 70% trigger exit condition 5. The September 2026 quarter print is the next decisive data point.</p>
+<p>Two other conditions are mixed and worth watching, though neither approaches a threshold. The Department of Justice investigation into the Army procurement conflict-of-interest remains open. No escalation to formal debarment proceedings has occurred, and the company continues to win new federal contracts. What has changed is the concentration: the single federal channel partner now accounts for 13% of revenues, up from 11% a year ago, which increases the materiality of exit condition 6 if the investigation were ever to escalate. The non-GAAP operating margin is also compressing year-over-year — from approximately 31% to 29.4% in the June quarter — driven by stock-based compensation growing faster than revenue and acquisition-related costs. The margin remains above the 28% threshold.</p>
+<p>The conditions that form the core of the switching-cost thesis — subscription growth, renewal rate, contracted pipeline growth — all confirmed cleanly in the June filing. The moat itself is not wobbling. The wobble is in the economics layer that sits between the moat and the reported numbers, introduced by the decision to acquire three large companies in twelve months.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Gross margin falls below 70% for two consecutive quarters.</strong> Management has guided further compression through the end of 2026. If Q3 and Q4 both print below 70%, exit condition 5 triggers — even though the underlying cause is non-cash amortisation from the acquisitions rather than deteriorating unit economics on the platform.</li>
+<li><strong>The Department of Justice investigation escalates to debarment proceedings.</strong> The investigation has been open since mid-2024 with no escalation, but a formal debarment notice targeting the federal channel would impair approximately 13% of revenues immediately and call into question the GSA OneGov federal-platform positioning.</li>
+<li><strong>AI competition erodes new logo capture, compressing subscription growth toward 15%.</strong> Microsoft's productivity suite and Salesforce's enterprise relationship network give each of them distribution leverage that ServiceNow cannot match. A world where enterprise buyers choose to expand within existing Microsoft or Salesforce relationships rather than add a ServiceNow subscription would show up first in growth deceleration.</li>
+<li><strong>Armis, Moveworks, or Veza integration proves harder than expected.</strong> Three acquisitions totalling more than $9 billion, closed across twelve months, represent the most significant operational execution test ServiceNow has run. Goodwill impairment, management turnover from integration friction, or acquired-product revenue that does not materialise would each signal a capital allocation mistake at scale.</li>
+<li><strong>Stock-based compensation remains above 10% of revenue into 2027 and beyond.</strong> At 14.7% of revenue in the year ending December 2025, stock-based compensation costs real-dollar value to shareholders through dilution. Management has committed to reducing this below 10% by 2029. If the commitment slips, cash generation net of dilution continues to understate the apparent cash-flow multiple.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>The underlying numbers carry three caveats worth naming.</p>
+<p>First, the maintenance versus growth split of capital expenditure is not separately disclosed. The valuation framework uses total capital expenditure as a conservative proxy for maintenance capital needs, which understates owner earnings somewhat — the true maintenance requirement for a cloud software platform is likely a fraction of total spending. The figures used are nonetheless a reasonable conservative anchor.</p>
+<p>Second, two fair-value estimates coexist and they disagree substantially. The thesis framework anchors to approximately $66 per share, derived from a direct cash-flow model using owner earnings net of stock-based compensation. A separate peer-multiple analysis, using market comparable ratios applied to reported cash flow before the stock-based compensation deduction, arrives at approximately $105 per share. Both approaches agree the stock is overvalued at $125; they disagree on by how much. A future update to the valuation framework will resolve the methodology question.</p>
+<p>Third, the Now Assist contracted annual value — the metric that defines exit condition 4 — is not disclosed in the quarterly filing. The only figure available is from company communications indicating the product crossed $1 billion in the June 2026 quarter. Whether the path to $2.5 billion by year-end 2026 is on track cannot be verified from the public filing.</p>
+<ul>
+<li>Risk-free rate unavailable for NOW: neither holding's nor SPY's Market-Data.json carries risk_free_10y_pct. Dimension B skipped.</li>
+<li>Two fair-value anchors coexist: the config-derived 66 (yield method) and the bottom-up 105 (peer/self multiples). A future schema migration will resolve the divergence.</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>If the thesis conditions are broadly intact (most drivers confirming, all seven exit conditions unbroken), the rule is to hold the existing position with no new capital added at the current price. The stock trades at a 91% premium to the base-case intrinsic estimate; holding is the appropriate response to a high-quality business at a high price, not adding.</p>
+<p>If the thesis shows signs of weakening — one condition challenging, not yet breaking — the rule is to hold without adding, give the business two quarterly filings to demonstrate stabilisation, and not treat any price pullback as a buy-the-dip signal given the starting overvaluation. A weakened thesis at these prices is a hold at reduced conviction, not an entry opportunity.</p>
+<p>If any of the seven exit conditions fires — if the thesis breaks — the rule is to exit the full position within 30 days with no averaging down. At a 91% premium to intrinsic, a broken thesis provides no price cushion whatsoever.</p>
+<p>If the share price falls to or below $47 (owner earnings yield crossing 5.37%), and all seven exit conditions remain unbroken, the rule is to add to the position in tranches across one or two quarters. That price level represents a 25% margin of safety on the base-case intrinsic estimate — the first genuinely attractive entry point.</p>
+<p>If the share price rises to or above $107 (owner earnings yield crossing below 2.37%), the rule is to trim 25–33% of the position to harvest the premium while keeping the core holding. At $125, the stock already sits above this level.</p>
+<p>If the share price rises to or above $291, the rule is to exit the full position. The market would be pricing in roughly 7 years of base-case owner earnings compounding instantly; the implied forward return falls below a reasonable long-term equity premium, and redeployment into a cheaper alternative is called for. No re-entry within 90 days thereafter.</p>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

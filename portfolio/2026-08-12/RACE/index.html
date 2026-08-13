@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferrari: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
+<h1 id="ferrari-the-bet-still-works">Ferrari: The Bet Still Works</h1>
+<blockquote>
+<p><strong>Warnings</strong>
+- DATA_ERROR: upcoming earnings fetch failed for RACE: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py RACE
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
+- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]
+- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]
+- Owner earnings = config.valuation.owner_earnings_override_usd (1.60B; yield 2.57%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.
+- FAIR-VALUE CONFLICT (41% gap): Two built-in valuation methods disagree on what RACE is worth. The FCF-yield anchor (config fair_value = 2.75%) says fair value is ~$330: at $1596.9M FCF ÷ 2.75% ÷ 176M shares, today’s $353 implies a 2.6% FCF yield vs the 2.75% anchor, and you would only add near $214 (4.25% yield threshold). The scenario-band model says $556: it applies the price multiples that peers (PAH3) and RACE’s own trading history trade at to projected financials — on that view, $353 is a steep discount to the $556 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.</p>
+</blockquote>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-12 · Latest filing 2025-12-31.</em></p>
+<p>The bet is working. Ferrari's scarcity-franchise thesis — the idea that permanently capping production while expanding margins proves out an irreplicable moat — passed every numerical test in the FY2025 annual report. At €352.85, <a href="#the-share-price">the share price</a> sits in the middle of the hold band, modestly above our fair value of roughly €330. No condition to watch is flashing red; the only live uncertainty is the Elettrica electric vehicle order book, which is not yet open.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at €214. Trim at €727.</p>
+<p>At €214, the long-run total return is about 13% a year. At today's €353, about 12% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy                  current                                                trim
+€214                 €353                                                   €727
+├────────────────────┼─────────────────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the share price moves to the fair-value central estimate, returns work out to bear +1.7%, base +12.0%, bull +20.5% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear                                       base/expected                    bull
++1.7%                                      +12.0%/+12.0%                  +20.5%
+├──────────────────────────────────────────┼───────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (20% bear, 55% base, 25% bull): about +12.0% a year over the next three years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Ferrari scores 8.19, ranking 8 of 20 active holdings by this measure — it sits just above the middle of the pack.</p>
+<blockquote>
+<p><strong>score</strong>
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
+  &nbsp;&nbsp;= 1.20 × (12.04% − 0.28% − 4.94%)
+  &nbsp;&nbsp;= 1.20 × +6.82%
+  &nbsp;&nbsp;= <strong>8.19</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> Ferrari sits in the strongest of three moat tiers — a wide moat anchored in seven decades of brand heritage, the scarcity architecture that keeps demand permanently above supply, and an efficient-scale position as the sole operator at 38%-plus margins in the ultra-luxury automotive segment. That tier lifts the score by 20 per cent.</p>
+<p><strong>Expected return: 12.04%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking three years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (20% likelihood) — annualised return +1.7%.</strong> The bear case assumes a luxury macro slowdown forces modest volume relaxation, Elettrica development costs compress margins toward 34–35%, and institutional investors move Ferrari back toward automotive-sector valuation benchmarks — stalling earnings growth at 3–5% a year and leaving the stock barely above today's price three years out.</p>
+<p><strong>Base (55% likelihood) — annualised return +12.0%.</strong> The base case has Ferrari sustaining its production-cap discipline through FY2027, the Purosangue sport utility vehicle running at capacity, the Elettrica order book opening with validated scarcity pricing above €500,000, and margins holding at 38–39% — giving earnings growth of 9–11% a year and a share price near €515 in three years.</p>
+<p><strong>Bull (25% likelihood) — annualised return +20.5%.</strong> The bull case has Elettrica proving margin-accretive, the limited-series hypercar pipeline extending, and institutional investors completing a luxury-goods re-classification of Ferrari toward the Hermès peer set, pushing margins toward 41% and the equity value toward €644 per share in three years.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.20 × 1.7 + 0.55 × 11.9 + 0.25 × 20.5 = +12.01%.</p>
+<p><strong>Hurdle rate: 4.94%.</strong> The hurdle rate is 4.94% — the 0.94% real yield on the German inflation-linked government bond (the real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of 8.19 puts Ferrari eighth of twenty active holdings — above the portfolio median of 4.63, in the upper tier but well clear of the leaders.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The FY2025 annual filing confirmed every numerically measurable pillar of the thesis in one stroke. Operating income climbed 11.76% to EUR 2,110 million; revenue grew 7.03% to EUR 7,146 million at essentially flat delivery volume of 13,640 units — meaning every euro of extra revenue came from higher prices and a richer product mix, not from selling more cars. The earnings quality ratio — operating cash flow divided by net income — reached 1.47 times, which means that for every euro Ferrari reported as profit, it collected EUR 1.47 in actual cash from operations. That figure has never fallen below 1.25 times in five years of observable data.</p>
+<p>The one live uncertainty is the US tariff regime. Ferrari faced a 25% import surcharge on its US-bound vehicles during 2025, responded with selective price increases of up to 10% on the Purosangue and 12Cilindri models, and still delivered an annual margin of 38.8% — above its own guidance floor of 38.3%. A July 2026 EU-US trade agreement subsequently reduced the all-inclusive tariff ceiling to 15%. A fresh threat to re-escalate to 25% emerged in May 2026 but remains unconfirmed as of the analysis date. The two-leg exit condition for tariff risk requires both a rate of 25% and a Ferrari guidance cut below 38% margin — neither leg is currently met.</p>
+<p>Nothing in the latest filing changes the call at <a href="#the-bottom-line">the Bottom Line</a>. The Elettrica electric vehicle was revealed at Ferrari's October 2025 Capital Markets Day — more than 1,000 horsepower, deliveries from late 2026, expected pricing above €500,000 — but the commercial order book is not yet open, so the oversubscription test that forms exit condition six cannot yet begin.</p>
+<h2 id="about-ferrari">About Ferrari</h2>
+<p>Ferrari N.V. makes its money by selling fewer cars than its customers want to buy. The company manufactures roughly 13,500–14,000 ultra-luxury sports cars, grand tourers, and the Purosangue sport utility vehicle each year from its Maranello, Italy, factory — a figure that has held broadly flat for years by deliberate choice. Because demand structurally exceeds supply, Ferrari sets prices rather than accepting them: the implied average selling price across its FY2025 deliveries of 13,640 vehicles was approximately EUR 524,000 per car. That pricing discipline, combined with a famously efficient production base, produces earnings margins typically associated with software companies or luxury-goods houses. In FY2025 the operating margin before depreciation and amortisation (the share of each revenue euro that became operating cash profit before non-cash charges) reached 38.8% — expanded from 34.8% in FY2022, against a backdrop of rising input costs and new tariff friction.</p>
+<p>The business model has two reinforcing structural advantages. The first is brand heritage: seven decades of Formula 1 racing, a mythology built around Enzo Ferrari, and an ownership experience that cannot be replicated by simply spending capital. The second is the loyalty staircase: access to Ferrari's most desirable limited-edition models is gated by a documented history of prior ownership, meaning the most profitable customers are also the stickiest. Both advantages compound over time and become harder to replicate the longer they run. A third structural protection sits in the financial statements: operating cash flow has exceeded net income in every year of the five-year observable record, with the ratio reaching a series-high of 1.47 times in FY2025 — the clearest available signal that the reported profits are real and not the product of accounting choices.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>Ferrari is held on the thesis that its scarcity-governed luxury franchise is the only business in global equities capable of sustaining above-38% operating-cash margins at stable volume — and that no competitor can replicate the combination of brand heritage, production-cap discipline, and the loyalty staircase. Six conditions must keep holding for the thesis to remain intact:</p>
+<ol>
+<li><strong>Annual production volume stays at or below 14,500 units, with no credible guidance above 16,000.</strong> The 16,000-unit threshold is the moat-breaking event — any management commentary framing volume expansion as a strategic choice would immediately invalidate the thesis by signalling that the scarcity premium has been abandoned.</li>
+</ol>
+<p><em>Latest reading:</em> 13,640 units delivered in FY2025 (confirmed from the Ferrari Annual Report, sourced via the Competition analysis). Volume was broadly flat from FY2024's 13,752 units. Both the 14,500-unit discipline threshold and the 16,000-unit exit threshold remain uncrossed. Exit condition not triggered.</p>
+<ol>
+<li><strong>The operating-cash margin (earnings before depreciation and amortisation as a share of revenue) stays at or above 35% in every fiscal year.</strong> A sustained breach below 35% would signal either that the scarcity premium has been compromised or that the Elettrica electric-vehicle development costs have permanently compressed the cost structure.</li>
+</ol>
+<p><em>Latest reading:</em> 38.8% in FY2025, expanded from 38.3% in FY2024 and 38.2% in FY2023. The 2026 guidance issued at the Capital Markets Day targets at least 39%. The 35% exit floor stands 380 basis points below the current level. Exit condition not triggered.</p>
+<ol>
+<li><strong>Operating cash flow divided by net income stays above 1.0 times in every fiscal year.</strong> A breach would trigger an immediate accounting quality review, since the ratio has never fallen below 1.25 times across the five-year observable record, making any dip below 1.0 an anomaly.</li>
+</ol>
+<p><em>Latest reading:</em> 1.47 times in FY2025, sourced directly from the company's structured financial data. Operating cash flow reached EUR 2,349 million against net income of EUR 1,597 million. The accruals ratio — the difference between cash earnings and reported earnings — was the most negative in the five-year series, meaning cash generation exceeded reported profits by the widest margin on record. Exit condition not triggered.</p>
+<ol>
+<li><strong>The implied average selling price (total revenue divided by units delivered) does not decline for two consecutive fiscal years on non-limited models.</strong> Two consecutive years of price deterioration on the standard lineup would signal that demand has softened enough to affect pricing even where Ferrari has the most pricing latitude.</li>
+</ol>
+<p><em>Latest reading:</em> Implied average selling price approximately EUR 524,000 in FY2025, against EUR 485,000 in FY2024 (derived from revenue divided by delivery count). Revenue grew 7.03% on a 0.8% decline in unit volume, confirming that the entire top-line increment was pricing and product-mix enrichment. Exit condition not triggered.</p>
+<ol>
+<li><strong>The US tariff rate stays below 25%, or — if it returns to 25% — Ferrari's annual guidance does not include a cut in the operating-cash margin below 38% attributable to tariff absorption.</strong> This two-leg condition is deliberately strict: Ferrari's pricing power is only falsified if the tariff is high enough and the company cannot pass it through.</li>
+</ol>
+<p><em>Latest reading:</em> Current US tariff 15% under the July 2026 EU-US trade agreement — below the 25% exit threshold. Ferrari absorbed the 2025 25% tariff episode with selective price surcharges and delivered an annual margin of 38.8%, confirming pass-through at that level. A threat to re-escalate to 25% emerged in May 2026 (unconfirmed as of 2026-08-12). The 2026 guidance of at least 39% margin does not model a re-escalation cut. Exit condition not triggered.</p>
+<ol>
+<li><strong>The Elettrica electric-vehicle order book, once open, oversubscribes within twelve months — without price concessions, delivery deferrals, or supplemental incentives.</strong> Slow uptake or pricing compromise would signal that the battery-electric transition requires volume or price adjustments that undermine the scarcity model.</li>
+</ol>
+<p><em>Latest reading:</em> The commercial order book is not yet open as of 2026-08-12. The Elettrica was revealed at the October 2025 Capital Markets Day at a specification of more than 1,000 horsepower, with deliveries from late 2026 and an expected price above €500,000. The twelve-month oversubscription clock begins from the date the order book formally opens. Exit condition not yet assessable.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>The share price at €352.85 sits modestly above the fair-value anchor of roughly €330. At the current net income of EUR 1,597 million and 175.8 million shares outstanding, the earnings yield — the share of each market-value euro that Ferrari earns for its owners — is approximately 2.58%. The pre-committed fair-value reference for this holding sets 2.75% as the neutral yield: the price at which the business is neither cheap nor dear. At 2.58%, the share is trading at a small premium to that anchor, corresponding to a market capitalisation of roughly EUR 62 billion.</p>
+<p>The buy edge sits at a 4.25% earnings yield — roughly EUR 214 per share at current earnings. That is where <a href="#the-rules">the Rules</a> call for adding to a position, on the logic that an earnings yield meaningfully above the long-run cost of capital represents a genuine margin of safety for an exceptional business. The trim edge sits at 1.25% — roughly EUR 727 per share — where the market is discounting many years of future compounding into the present price. The exit tier has not been configured for this holding; the valuation-band rules here have two actionable edges, not three.</p>
+<p>There is a structural footnote worth naming plainly. A second valuation method — which looks at what Ferrari's earnings multiples have traded at historically and what its closest comparable businesses (Porsche, Hermès) trade at today — produces a mid-point estimate near €556 per share, substantially above the EUR 330 earnings-yield anchor. The gap exists because the two methods ask different questions: the earnings-yield method asks what Ferrari earns today and what yield that represents; the multiple-based method asks what earnings are likely to be in three to five years and what the market will pay for them. Both are legitimate frameworks; they produce different answers for a business priced for substantial future growth. <a href="#the-rules">The Rules</a> for this holding are anchored to the earnings-yield method, so the standing orders in <a href="#the-standing-orders">the Standing Orders</a> follow the EUR 214 and EUR 727 edges, not the multiple-model estimate.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p><a href="#the-rules">The Rules</a> translate the earnings-yield band into two price alerts and two standing orders. Each is the operationalisation of a pre-committed rule — not a judgement made at the time of reading.</p>
+<p><strong>Price alerts (informational).</strong>
+- A first alert at €330, the fair-value anchor — the earnings yield at which the share price is neutral. Crossing this level means the price has returned to a fair reading; no action follows, but a re-read of the six conditions is warranted before any other move.
+- A second alert at €214, the cheap edge. Crossing this level arms the buy order below; the conditions should be confirmed intact before adding.</p>
+<p><strong>Standing orders (actionable).</strong>
+- A standing buy order at €214. <a href="#the-rules">The Rules</a> call for adding in tranches over one to two quarters once the share price closes at or below this line and the six conditions are still passing. A price at or below €214 implies an earnings yield above 4.25% on current owner earnings — a rare entry point into an exceptional franchise.
+- A standing trim order at €727. <a href="#the-rules">The Rules</a> call for trimming 25–33% of the position when the share price closes at or above this line. At that level the market capitalisation would exceed roughly €128 billion on current earnings, discounting decades of compounding at the present price. Disciplined reduction preserves the ability to re-enter at a better yield.</p>
+<p>No exit-tier rule has been configured for this holding at any price level above the trim edge. The standing orders are therefore limited to two actionable levels; above the trim edge, <a href="#the-rules">the Rules</a> call for holding, not exiting.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The only live wobble is the US tariff situation, which registers as a mixed rather than a clean confirmation. The current tariff on Ferrari vehicles entering the United States is 15% under the July 2026 EU-US trade agreement — below the 25% threshold that forms the first leg of exit condition five. Ferrari has already demonstrated empirically that it can absorb tariff pressure: during 2025, when the rate reached 25%, the company applied selective price surcharges and still delivered margins above its own guidance. The threat to re-escalate to 25% that emerged in media reports in May 2026 is real but unconfirmed. Exit condition five requires both legs to fire simultaneously — a 25% rate and a Ferrari guidance cut below 38% margin — and neither leg is currently active. The wobble is worth monitoring at each US trade policy announcement, but it does not change <a href="#the-bottom-line">the Bottom Line</a> today.</p>
+<p>Two drivers are silent rather than confirming. The Elettrica order book is not yet open, so exit condition six has not begun its twelve-month clock. The governance-and-ownership driver shows no adverse signal from the available structured financial data — earnings per share under CEO Vigna compounded at 20.7% annually from EUR 4.50 in FY2021 to EUR 8.96 in FY2025 — but qualitative governance disclosures require narrative filings that were not available from the structured data source used in this cycle. Neither silent driver changes the overall verdict.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>The Elettrica disappoints on demand.</strong> If the order book opens and fails to oversubscribe within twelve months — through slow uptake, required price concessions, or delivery deferrals — it would signal that the battery-electric transition requires volume or pricing compromise, undermining the scarcity model at the moment when Ferrari is betting the franchise on extending it into a new powertrain.</li>
+<li><strong>Margins compress below 35%.</strong> A sustained dip below 35% in any fiscal year would trigger exit condition two and imply either that the scarcity premium has cracked or that Elettrica development costs have permanently reset the cost structure. At 38.8% currently, the buffer is 380 basis points — real, but not infinite.</li>
+<li><strong>Production cap is breached.</strong> If management guidance or delivered figures exceed 16,000 units in any year, the moat breaks. This is the one exit condition that fires irreversibly: the brand heritage that makes the scarcity premium possible takes generations to build and can be squandered in a single strategic pivot.</li>
+<li><strong>US tariffs re-escalate to 25% and pass-through fails.</strong> Ferrari passed the 2025 tariff test at 25%, but that test ran for one year against a client base whose order books were already committed. A sustained 25% rate combined with weakening luxury demand could push the effective pass-through below the 38% guidance floor and trigger exit condition five.</li>
+<li><strong>Luxury macro contraction hits the standard lineup.</strong> A broad slowdown among ultra-high-net-worth buyers — the primary owners of Purosangue and standard Ferrari models — could soften demand enough to affect pricing on non-limited vehicles for two consecutive years, triggering exit condition four. Ferrari's scarcity model insulates it from mass-market cycles but is not immune to UHNWI-specific wealth contractions.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>Four of the seven thesis drivers — production volume discipline, Elettrica launch execution, US tariff regime, and management governance — could not be sourced from Ferrari's structured financial data filing. Italy's ESEF filing format provides rich numerical data but the narrative text could not be extracted from the electronic filings in this refresh cycle. All four drivers were evaluated instead from auxiliary analyses (the Competition analysis, the Political-Exposure analysis, and the Financial Brief). Three of the four are effectively resolved from those sources; only the Elettrica order book status remains genuinely unverifiable until the commercial launch is announced.</p>
+<p>There is a discrepancy in the delivery count between two sections of the Competition analysis: the main section cites 13,640 FY2025 deliveries from the Ferrari Annual Report, while a summary table references approximately 14,633. Both figures are below the 14,500-unit thesis discipline threshold and the 16,000-unit exit threshold; the discrepancy should be reconciled at the next Competition analysis refresh.</p>
+<p>The risk-free rate comparison used in the hurdle-rate calculation could not be retrieved from either Ferrari's own market-data file or the portfolio's SPY market-data file for this refresh. Dimension B of the bottom-line scale — which compares the estimated long-run return to the current risk-free rate to characterise the equity premium — was therefore skipped.</p>
+<ul>
+<li>Risk-free rate unavailable for RACE: neither holding's nor SPY's Market-Data.json carries risk_free_10y_pct. Dimension B skipped.</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>The pre-committed action plan for this holding operates on six conditions, each triggering a specific response:</p>
+<ul>
+<li>If the thesis is confirmed — all six exit conditions remain untriggered, no driver is weakening, and the share price is within the band — hold with no action. The moat is intact and compounding is the correct posture.</li>
+<li>If the thesis is weakening — at least one driver is showing adverse movement but no exit condition has fired — do not add to the position. Re-run the thesis validation focused on the weakening driver (most likely the operating-cash margin trend or the Elettrica order-book uptake). Monitor for one full fiscal year before reassessing position size.</li>
+<li>If the thesis is broken — any single exit condition fires — exit the full position within 30 days. Exit condition one (production above 16,000 units) destroys the moat irreversibly and must be acted on immediately. No averaging down. Document the triggered condition.</li>
+<li>If the share price falls below the buy edge (earnings yield above 4.25%, roughly €214 at current earnings) — confirm the thesis is intact first. If confirmed, add in tranches over one to two quarters. A price at that level represents a rare buy-band entry into an exceptional franchise and should be acted on decisively.</li>
+<li>If the share price rises above the trim edge (earnings yield below 1.25%, roughly €727 at current earnings) — trim 25–33% of the position to harvest the premium. At that level the market is discounting decades of compounding instantly; disciplined reduction preserves the ability to re-enter at a better yield.</li>
+<li>If the share price rises above the exit threshold (earnings yield below 1.0%, roughly €910 at current earnings) — exit the full position. The market would be pricing in an extraordinary number of years of base-case compounding at the current price; the implied forward return falls below any reasonable long-term equity premium. No re-entry within 90 days to remove the anchor of the exit price from the decision.</li>
+</ul>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>
