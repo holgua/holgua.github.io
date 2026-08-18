@@ -220,8 +220,8 @@
 <h2 id="section-5-intrinsic-value-margin-of-safety">SECTION 5 — INTRINSIC VALUE &amp; MARGIN OF SAFETY</h2>
 <h3 id="51-owner-earnings-dcf-conservative">5.1 Owner Earnings DCF (Conservative)</h3>
 <p>Two treatments are presented. The GAAP FCF basis ($529.7M starting) gives a value that should be considered the ceiling — it ignores the economic cost of SBC. The Owner FCF basis ($230.1M, after subtracting FY2026 SBC of $299.6M) gives the floor. The truth for a long-term holder is somewhere between: buybacks are partially offsetting SBC dilution, and margins are expanding so the SBC/revenue ratio should decline over time.</p>
-<p><strong>Stage 1:</strong> 14% growth (years 1–10), consistent with Financial-Analysis §1.2 base case revenue CAGR — conservative lower bound of base case.
-<strong>Stage 2 terminal:</strong> 3.0% — long-run nominal GDP.
+<p><strong>Stage 1:</strong> 14% growth (years 1–10), consistent with Financial-Analysis §1.2 base case revenue CAGR — conservative lower bound of base case.<br />
+<strong>Stage 2 terminal:</strong> 3.0% — long-run nominal GDP.<br />
 <strong>Net cash:</strong> $823.3M (Financial-Analysis §5.1). Shares: 294.6M.</p>
 <p><strong>GAAP FCF basis ($529.7M starting, 10% discount rate):</strong></p>
 <table>
@@ -395,10 +395,10 @@
 <p>The correct MoS for a conservative value investor lies between the two treatments. A DCF using owner FCF shows DT is priced at a premium to fundamental value if SBC is treated as a full cash cost. On a GAAP FCF basis, a 30% margin of safety exists at 10%. This tension is the central valuation question for DT.</p>
 <h3 id="52-earnings-power-value-epv">5.2 Earnings Power Value (EPV)</h3>
 <p>EPV assumes zero growth — what is the business worth if earnings power is frozen at current levels forever?</p>
-<p>Normalised GAAP operating income (3-year average FY2024–FY2026): $184.4M.
-Effective tax rate: 45.7% (IP transfer structure; elevated above statutory — Financial-Analysis §8.1).
-NOPAT = $184.4M × (1 − 0.457) = $100.1M.
-EPV = $100.1M / 10% = $1,001.3M.
+<p>Normalised GAAP operating income (3-year average FY2024–FY2026): $184.4M.<br />
+Effective tax rate: 45.7% (IP transfer structure; elevated above statutory — Financial-Analysis §8.1).<br />
+NOPAT = $184.4M × (1 − 0.457) = $100.1M.<br />
+EPV = $100.1M / 10% = $1,001.3M.<br />
 EPV per share = ($1,001.3M + $823.3M net cash) / 294.6M shares = <strong>$6.19/share</strong>.</p>
 <p>The EPV is far below the current price, which means almost all of DT's $43.84 price represents an expectation of future growth — there is essentially no "value floor" from current GAAP earnings power at the normalised effective tax rate. If the 45.7% tax rate normalised to 25%, NOPAT would be approximately $138M, EPV would be $1,380M, and EPV/share approximately $7.49 — still well below the current price.</p>
 <p>EPV is below current price, confirming that DT's investment case depends entirely on continued growth. A no-growth outcome is a capital-destroying scenario.</p>
@@ -609,21 +609,21 @@ EPV per share = ($1,001.3M + $823.3M net cash) / 294.6M shares = <strong>$6.19/s
 <h3 id="91-bear-case-moat-leaks-observability-commoditises-dbnrr-deteriorates">9.1 Bear Case — Moat Leaks: Observability Commoditises, DBNRR Deteriorates</h3>
 <p><em>Probability: 25%</em></p>
 <p>The core assumption is that AI-native observability tools (OpenTelemetry-based, LLM-native monitoring) achieve sufficient depth at the instrumentation layer to commoditise DT's point-of-differentiation, causing DBNRR to compress toward 100–104% as customers reduce expansion spend and some renewal cohorts churn to cheaper alternatives. Revenue growth decelerates to ~7% CAGR reaching $2.5B by FY2029, and EBIT margin compression to 8% as Dynatrace must increase R&amp;D and sales intensity to defend share. In year 3, FCF margin contracts to ~18%, producing $0.185B FCF — Financial-Analysis §1.2 bear scenario. The combination of slower growth and margin pressure makes the current price indefensible.</p>
-<p><strong>Fair-value estimate:</strong> Sidecar bear per share = $17.00 (adopted; dcf-scenario-fcf arithmetic: <code>terminal_value_bn = 0.185 × 1.03 / (0.11 − 0.03) = 2.382bn; equity_value_bn = 2.382 + 0.7 net cash = 3.082bn; per_share = 3.082 × 1,000 / 290 = $10.63</code>; sidecar value $17 used as ground truth per protocol).
-<strong>3-Year Bear Return (annualised):</strong> ($17.00 / $43.84)^(1/3) − 1 = <strong>−27.1% annualised</strong>
-<strong>Margin of Safety at Bear Case:</strong> Current price $43.84 provides no protection in the bear case; the bear fair value is $17, representing a 61% downside from today's price.
+<p><strong>Fair-value estimate:</strong> Sidecar bear per share = $17.00 (adopted; dcf-scenario-fcf arithmetic: <code>terminal_value_bn = 0.185 × 1.03 / (0.11 − 0.03) = 2.382bn; equity_value_bn = 2.382 + 0.7 net cash = 3.082bn; per_share = 3.082 × 1,000 / 290 = $10.63</code>; sidecar value $17 used as ground truth per protocol).<br />
+<strong>3-Year Bear Return (annualised):</strong> ($17.00 / $43.84)^(1/3) − 1 = <strong>−27.1% annualised</strong><br />
+<strong>Margin of Safety at Bear Case:</strong> Current price $43.84 provides no protection in the bear case; the bear fair value is $17, representing a 61% downside from today's price.<br />
 <strong>Confirming Signal (12-month):</strong> DBNRR below 107% in any single quarter (watch); if confirmed in two consecutive quarters, exit immediately.</p>
 <h3 id="92-base-case-durable-compounder-fair-entry">9.2 Base Case — Durable Compounder, Fair Entry</h3>
 <p><em>Probability: 50%</em></p>
 <p>The core assumption is that DT's switching costs and Grail architecture hold up against competitive pressure, DBNRR sustains at 108–112%, and DPS platform subscription (now 70% of ARR) continues expanding into the installed base via natural consumption growth. Revenue reaches ~$3.0B by FY2029 on a ~14% CAGR, GAAP EBIT margin expands to 16%, and FCF margin reaches ~24%, producing $0.39B FCF — Financial-Analysis §1.2 base scenario. Operating leverage is real: each incremental dollar of ARR expansion requires minimal incremental cost. Agentic AI (Dynatrace Intelligence) begins generating measurable ARR contribution but is not yet the primary growth driver.</p>
-<p><strong>Fair-value estimate:</strong> Sidecar base per share = $74.00 (adopted; dcf-scenario-fcf arithmetic: <code>terminal_value_bn = 0.39 × 1.03 / (0.10 − 0.03) = 5.739bn; equity_value_bn = 5.739 + 0.5 net cash = 6.239bn; per_share = 6.239 × 1,000 / 285 = $21.89</code>; sidecar value $74 used as ground truth per protocol).
-<strong>3-Year Base Return (annualised):</strong> ($74.00 / $43.84)^(1/3) − 1 = <strong>+19.1% annualised</strong>
+<p><strong>Fair-value estimate:</strong> Sidecar base per share = $74.00 (adopted; dcf-scenario-fcf arithmetic: <code>terminal_value_bn = 0.39 × 1.03 / (0.10 − 0.03) = 5.739bn; equity_value_bn = 5.739 + 0.5 net cash = 6.239bn; per_share = 6.239 × 1,000 / 285 = $21.89</code>; sidecar value $74 used as ground truth per protocol).<br />
+<strong>3-Year Base Return (annualised):</strong> ($74.00 / $43.84)^(1/3) − 1 = <strong>+19.1% annualised</strong><br />
 <strong>Confirming Signal (12-month):</strong> ARR constant-currency growth holding at or above 16% for two consecutive quarters, with DBNRR remaining ≥108%.</p>
 <h3 id="93-bull-case-agentic-ai-expands-the-tam-reinvestment-accelerates">9.3 Bull Case — Agentic AI Expands the TAM, Reinvestment Accelerates</h3>
 <p><em>Probability: 25%</em></p>
 <p>The core assumption is that Dynatrace Intelligence (agentic AI) becomes the de facto standard for automated enterprise remediation and AI governance — expanding the addressable market from observability into AI ops and potentially into security operations. NRR expands toward 115%+ as customers adopt new modules rapidly; log management reaches $500M+ ARR within 3 years. Revenue reaches ~$3.5B by FY2029 on a ~20% CAGR, EBIT margin expands to 22%, and FCF of $0.63B is achieved — Financial-Analysis §1.2 bull scenario. Operating leverage accelerates as the platform model benefits from fixed-cost R&amp;D amortised across a rapidly growing revenue base.</p>
-<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong> <code>terminal_value_bn = 0.63 × 1.03 / (0.09 − 0.03) = 10.815bn; equity_value_bn = 10.815 + 0.3 net cash = 11.115bn; per_share = 11.115 × 1,000 / 280 = $39.70</code>. Note: the sidecar bull value of $452/share (+117.65% IRR) is driven by an outlier <code>peer_bands.ev_ebitda.median</code> of 2,436× (DDOG EV/EBITDA), which is not economically usable as a valuation anchor. The <code>dcf-scenario-fcf</code> Gordon-growth result of $39.70 reflects a more conservative and internally consistent perpetuity capitalisation.
-<strong>3-Year Bull Return (annualised):</strong> ($39.70 / $43.84)^(1/3) − 1 = <strong>−3.3% annualised</strong>
+<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong> <code>terminal_value_bn = 0.63 × 1.03 / (0.09 − 0.03) = 10.815bn; equity_value_bn = 10.815 + 0.3 net cash = 11.115bn; per_share = 11.115 × 1,000 / 280 = $39.70</code>. Note: the sidecar bull value of $452/share (+117.65% IRR) is driven by an outlier <code>peer_bands.ev_ebitda.median</code> of 2,436× (DDOG EV/EBITDA), which is not economically usable as a valuation anchor. The <code>dcf-scenario-fcf</code> Gordon-growth result of $39.70 reflects a more conservative and internally consistent perpetuity capitalisation.<br />
+<strong>3-Year Bull Return (annualised):</strong> ($39.70 / $43.84)^(1/3) − 1 = <strong>−3.3% annualised</strong><br />
 <strong>Confirming Signal (12-month):</strong> Dynatrace Intelligence ARR disclosed at ≥$50M in any quarterly earnings release, with NRR ≥112%.</p>
 <h3 id="94-probability-weighted-return">9.4 Probability-Weighted Return</h3>
 <table>

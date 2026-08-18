@@ -497,10 +497,10 @@
 <h2 id="section-9-bear-base-bull-cases-value-investors-lens">SECTION 9 — BEAR / BASE / BULL CASES (VALUE INVESTOR'S LENS)</h2>
 <h3 id="90-method-declaration">9.0 Method Declaration</h3>
 <p><strong>Method selected: <code>dcf-scenario-fcf</code></strong></p>
-<p>Method determination (per Q1–Q4 decision tree):
-- Q1: Not a bond or ETF → continue.
-- Q2: Segment divergence? BKNG is primarily a single-segment OTA marketplace (accommodation-centric); no meaningful segment-level DCF split required → continue with single-entity method.
-- Q3: Conglomerate? No → continue.
+<p>Method determination (per Q1–Q4 decision tree):<br />
+- Q1: Not a bond or ETF → continue.<br />
+- Q2: Segment divergence? BKNG is primarily a single-segment OTA marketplace (accommodation-centric); no meaningful segment-level DCF split required → continue with single-entity method.<br />
+- Q3: Conglomerate? No → continue.<br />
 - Q4: Default method is <code>dcf-scenario-fcf</code> unless conditions (a)–(e) all hold for <code>fcf-times-multiple</code>. Check: condition (a) requires ≥36 monthly observations in Fair-Value-Bands.json self_bands for P/FCF; <code>self_bands.p_fcf.status = "[INSUFFICIENT HISTORY]"</code>, n=0 — condition (a) fails. Therefore <code>dcf-scenario-fcf</code> is the required method.</p>
 <p><strong>Scenario inputs consumed (from Fair-Value-Bands.json <code>scenarios_input</code>):</strong></p>
 <table>
@@ -545,33 +545,33 @@
 <p><strong>Terminal value formula:</strong> <code>TV = FCF_terminal × (1+g) / (WACC − g)</code> where FCF_terminal = scenario FCF after 3 years at 0% incremental growth (terminal FCF = scenario FCF as stated, representing steady-state earnings in year 3).</p>
 <h3 id="91-bear-case">9.1 Bear Case</h3>
 <p>AI agents from Google, OpenAI, and Perplexity materially erode paid-search ROI and reduce consumer traffic to Booking.com as a trip-discovery front-door. Simultaneously, the EU DMA/DSA enforcement tightens ranking and parity rules, suppressing take-rate and forcing BKNG to increase performance marketing spend to defend room-night share. Room-night growth decelerates to low single digits; ADR growth stalls as macro softness hits European travel. Management delivers $7.5B FCF in the three-year window's terminal year — a sharp deceleration from FY2025's $9.1B — at a 24% FCF margin.</p>
-<p><strong>Bear fair value:</strong>
-- TV = 7.5 × 1.035 / (0.10 − 0.035) = 7.763 / 0.065 = $119.4B enterprise value
-- Equity value = $119.4B − $4.0B net debt = $115.4B
-- Per share = $115.4B × 1000 / 750M shares = <strong>$154 per share</strong>
-- (Cross-check with Fair-Value-Bands.json bear central_estimate: $108 — uses peer-multiple blended method; DCF gives $154; bear fair value range $108–$154)
+<p><strong>Bear fair value:</strong><br />
+- TV = 7.5 × 1.035 / (0.10 − 0.035) = 7.763 / 0.065 = $119.4B enterprise value<br />
+- Equity value = $119.4B − $4.0B net debt = $115.4B<br />
+- Per share = $115.4B × 1000 / 750M shares = <strong>$154 per share</strong><br />
+- (Cross-check with Fair-Value-Bands.json bear central_estimate: $108 — uses peer-multiple blended method; DCF gives $154; bear fair value range $108–$154)<br />
 - Bear central estimate from bands: <strong>$108</strong></p>
 <p><strong>3-year bear IRR (at $108):</strong> $(108 / 210.72)^{1/3} - 1 = 0.5125^{0.333} - 1 = 0.800 - 1 = <strong>−20.0%</strong></p>
 <p><strong>Margin of safety at bear:</strong> ($210.72 − $108) / $210.72 = <strong>−49%</strong> (current price is 49% above bear fair value)</p>
 <p><strong>Confirming signal:</strong> KAYAK impairment signal already live; Google AI Overviews in search reducing paid-click volumes is a documented 2025–2026 trend; Morningstar cut 2025 BKNG revenue growth to 3.5% from 8% on tariff/AI headwinds.</p>
 <h3 id="92-base-case">9.2 Base Case</h3>
 <p>Network effect broadly stable; AI deployed to improve unit economics (smarter customer acquisition, better property ranking) rather than disintermediate core OTA economics. Regulatory compliance costs are real but no structural product remedy is imposed. Room-night growth continues at 6–9%; FCF margin holds at 30%; Connected Trip monetisation contributes incremental take-rate. Terminal year FCF: $10.7B.</p>
-<p><strong>Base fair value:</strong>
-- TV = 10.7 × 1.035 / (0.10 − 0.035) = 11.075 / 0.065 = $170.4B enterprise value
-- Equity value = $170.4B − $1.5B net debt = $168.9B
-- Per share = $168.9B × 1000 / 700M shares = <strong>$241 per share</strong>
-- (Cross-check with Fair-Value-Bands.json base central_estimate: $165; peer-blended method anchors lower; DCF gives $241; base fair value range $165–$241)
+<p><strong>Base fair value:</strong><br />
+- TV = 10.7 × 1.035 / (0.10 − 0.035) = 11.075 / 0.065 = $170.4B enterprise value<br />
+- Equity value = $170.4B − $1.5B net debt = $168.9B<br />
+- Per share = $168.9B × 1000 / 700M shares = <strong>$241 per share</strong><br />
+- (Cross-check with Fair-Value-Bands.json base central_estimate: $165; peer-blended method anchors lower; DCF gives $241; base fair value range $165–$241)<br />
 - Base central estimate from bands: <strong>$165</strong></p>
 <p><strong>3-year base IRR (at $165):</strong> $(165 / 210.72)^{1/3} - 1 = 0.783^{0.333} - 1 = 0.921 - 1 = <strong>−7.9%</strong></p>
 <p><strong>Margin of safety at base (using $165 central estimate):</strong> ($210.72 − $165) / $210.72 = <strong>−22%</strong></p>
 <p><strong>Confirming signal:</strong> FY2025 FCF of $9.1B and Q1 2026 revenue of $5.5B (+25% YoY) consistent with base-case trajectory; Genius loyalty penetration stable; Transformation Program $550M run-rate savings delivered ahead of schedule.</p>
 <h3 id="93-bull-case">9.3 Bull Case</h3>
 <p>Connected Trip multi-vertical monetisation (flights, attractions, rental cars) expands take-rate meaningfully. Asia Pacific accelerates — Japan, South Korea, Southeast Asia room-night growth outpaces global average. Direct-booking mix rises above 65% as AI assistant on Booking.com captures trip-planning demand rather than surrendering it to Google. Marketing leverage improves materially; FCF margin expands toward 33%; terminal year FCF: $13.6B.</p>
-<p><strong>Bull fair value:</strong>
-- TV = 13.6 × 1.035 / (0.10 − 0.035) = 14.076 / 0.065 = $216.6B enterprise value
-- Equity value = $216.6B − $0.0B net debt = $216.6B
-- Per share = $216.6B × 1000 / 660M shares = <strong>$328 per share</strong>
-- (Cross-check with Fair-Value-Bands.json bull central_estimate: $698 — reflects extreme bull scenario inputs including self P/E expansion; DCF gives $328; bull fair value range $328–$698)
+<p><strong>Bull fair value:</strong><br />
+- TV = 13.6 × 1.035 / (0.10 − 0.035) = 14.076 / 0.065 = $216.6B enterprise value<br />
+- Equity value = $216.6B − $0.0B net debt = $216.6B<br />
+- Per share = $216.6B × 1000 / 660M shares = <strong>$328 per share</strong><br />
+- (Cross-check with Fair-Value-Bands.json bull central_estimate: $698 — reflects extreme bull scenario inputs including self P/E expansion; DCF gives $328; bull fair value range $328–$698)<br />
 - Bull central estimate from bands: <strong>$698</strong></p>
 <p><strong>3-year bull IRR (at $698):</strong> $(698 / 210.72)^{1/3} - 1 = 3.312^{0.333} - 1 = 1.490 - 1 = <strong>+49.0%</strong></p>
 <p><strong>Confirming signal:</strong> Connected Trip pilot results showing multi-vertical attach; Asia room-night growth rates disclosed in quarterly operating metrics; direct-mix rising above 60%.</p>

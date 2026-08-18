@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PepsiCo: The Bet Is Wobbling — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-17 overview</a></p>
+<h1 id="pepsico-the-bet-is-wobbling">PepsiCo: The Bet Is Wobbling</h1>
+<blockquote class="notice notice--error">
+<p><strong>Errors</strong></p>
+<ul>
+<li>DATA_ERROR: upcoming earnings fetch failed for PEP: ERROR:ImportError:`Import lxml` failed.  Use pip or conda to install the lxml package. — re-run: python3 src/fetch/fetch_market_data.py PEP</li>
+</ul>
+</blockquote>
+
+<blockquote class="notice notice--info">
+<p><strong>Information</strong></p>
+<ul>
+<li>WARN: PEP config declares valuation.method=&#x27;owner_earnings_yield&#x27; but no valuation.dcf/dcf_two_stage/sotp block — sidecar uses fair-value-bands</li>
+<li>STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]</li>
+<li>Owner earnings = config.valuation.owner_earnings_override_usd (8.96B; yield 4.72%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.</li>
+<li>[FAIR-VALUE-DRIFT] Fair-Value-Bands base-scenario central estimate ($216) implies an OEY of 3.04%, diverging from config fair_value (4.7%) by 35.4%. Review PEP-Fair-Value-Bands.md and consider updating fair_value.</li>
+</ul>
+</blockquote>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-17 · Latest filing 2026-07-09.</em></p>
+<p>The bet is wobbling — one of PepsiCo's seven monitored conditions is persistently moving in the wrong direction, and has been for at least nine consecutive reporting quarters. <a href="#the-share-price">The Share Price</a> sits in the middle of the hold band, at fair value. The long-run expected return is about 8% a year — a modest equity premium over the current risk-free rate, which is not wide enough to justify adding to the position while the beverage volume signal remains unresolved.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $101. Trim at $205. Exit at $469.</p>
+<p>At $101, the long-run total return is about 10% a year. At today's $139, about 8% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy     current       trim                                                  exit
+$101    $139          $205                                                  $469
+├───────┼─────────────┼────────────────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if prices converge to the fair-value central estimate, returns work out to bear +6%, base +22%, bull +40% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear                                  base/expected                         bull
++6%                                   +22%/+22.5%                           +40%
+├─────────────────────────────────────┼┼───────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 50% base, 25% bull): about +22.5% a year over the next three years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>PepsiCo scores 18.74, ranking 2 of 21 active holdings by this measure — it sits near the top of the portfolio, second only to PayPal.</p>
+<blockquote>
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.20 × (22.52% − 0.53% − 1.46% − 4.93%)<br />
+  &nbsp;&nbsp;= 1.20 × +15.61%<br />
+  &nbsp;&nbsp;= <strong>18.74</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> This holding sits in the strongest of three moat tiers, which lifts the score by 20 per cent.</p>
+<p><strong>Expected return: 22.52%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (25% likelihood) — annualised return +5.6%.</strong> The bear case assumes GLP-1 adoption accelerates North American snack volume declines, tariff pass-through proves insufficient, and the beverage franchise continues losing share — pushing earnings power and the valuation multiple both below trend simultaneously.</p>
+<p><strong>Base (50% likelihood) — annualised return +22.3%.</strong> The base case has organic revenue growing at roughly 3% a year, the productivity restructuring completing cleanly, international markets offsetting North American softness, and operating margins recovering toward the levels seen before the Rockstar impairment.</p>
+<p><strong>Bull (25% likelihood) — annualised return +40.0%.</strong> The bull case has GLP-1 concerns proving overstated, North American snack volumes recovering to sustained positive growth, and international acceleration in emerging markets lifting both revenue and the earnings multiple.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.25 × 5.6 + 0.50 × 22.3 + 0.25 × 40.0 = +22.55%.</p>
+<p><strong>Hurdle rate: 4.93%.</strong> The hurdle rate is 4.93% — the 0.93% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of 18.74 puts PepsiCo second in the portfolio ranking — behind PayPal and comfortably above the median, which sits at roughly 1.4 for Berkshire Hathaway.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The most consequential development in the latest quarterly filing — covering the 24 weeks ended 2026-06-13 — is that PepsiCo Beverages North America unit volume declined 4% in the second quarter and 3% across the first half of the year. Both carbonated and non-carbonated categories fell. This extends a losing streak that has now run for at least nine consecutive reporting periods without a positive turn. A 6-percentage-point commodity cost headwind in the second quarter compressed the segment's operating income even as the broader company posted a strong year-on-year improvement (distorted, in the prior year, by a $1.86 billion non-cash write-down on the Rockstar Energy brand).</p>
+<p>The rest of the business tells a different story. Consolidated gross margins were 54.7% in the first half — firmly within the 53–55% thesis band — confirming that the brand portfolio is still absorbing cost pressure without surrendering pricing. Free cash flow recovered sharply: $1.17 billion in the first half against a $342 million deficit in the same period a year ago. The 54-year consecutive dividend growth streak extended further with a 4% increase to $5.92 per share annualised, effective June 2026. Management also disclosed that a new Supreme Court ruling on tariff legality has prompted claims for refunds on certain tariff payments, which could partially offset previously modelled headwinds — though timing and amounts remain uncertain.</p>
+<p>The bottom line is that the structural moat is holding at the gross-margin and dividend level, while the beverage volume signal remains the one condition that has not inflected. For the current position assessment, see <a href="#the-share-price">the Share Price</a>.</p>
+<h2 id="about-pepsico">About PepsiCo</h2>
+<p>PepsiCo makes its money selling snack foods and beverages that people buy out of habit, often many times a week. The snack business — operating under the Frito-Lay banner in North America — produces chips, crisps, and savoury snacks under brands including Lay's, Doritos, Cheetos, and Tostitos, commanding roughly 60% of the US salty snack market. The beverage business spans Pepsi-Cola, Mountain Dew, Gatorade, and a growing range of non-carbonated drinks. Both are sold in over 200 countries and territories. International revenue accounts for roughly 44% of the total.</p>
+<p>What distinguishes PepsiCo from most food and beverage companies is its proprietary Direct-Store-Delivery network in North America — a fleet of delivery routes that places merchandise directly on supermarket shelves without passing through a retailer's warehouse. That network requires roughly $4.4 billion in annual capital investment to maintain, makes PepsiCo indispensable to large-format grocery chains, and is not something a new entrant or private-label competitor can replicate cheaply or quickly. Pair that with the brand portfolio — Lay's alone is the world's best-selling snack brand — and the result is a business that has sustained a gross margin corridor of 53–55% through a commodity price spike, a pandemic, and sustained consumer price sensitivity. Revenue in the financial year ending December 2025 was approximately $93.9 billion.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>PepsiCo is held on the thesis that its combination of iconic global brands and a structurally difficult-to-replicate distribution network gives it durable pricing power across economic cycles, and that the business will generate reliable cash returns to shareholders for decades. The bet holds as long as the following conditions remain intact:</p>
+<ol>
+<li><strong>Organic revenue grows at or above 2% annually.</strong> Below this level for two consecutive quarters, the pricing and volume engines are not working together, and the base-case growth assumption of roughly 3.8% per year to 2028 is threatened.</li>
+</ol>
+<p><em>Latest reading:</em> Consolidated organic revenue grew 2.5% in the first half of 2026 and 2.0% in the second quarter alone — above the 2% floor at the consolidated level. The North American convenient-foods division, however, posted a -2% organic result in the second quarter on unfavourable pricing. International divisions (the international beverages franchise, Europe, Middle East and Africa, and Latin American Foods) were all positive. The reading is mixed: the consolidated figure passes; one major division does not.</p>
+<ol>
+<li><strong>Gross margin holds above 52% for each reported period.</strong> This is the single most observable signal of whether brand pricing power is genuinely absorbing cost pressure or whether commodity and tariff headwinds are eroding the moat at the gross-profit line.</li>
+</ol>
+<p><em>Latest reading:</em> Gross margin was 54.2% in the second quarter of 2026 and 54.7% in the first half — both within the 53–55% thesis band and well above the 52% exit threshold. Brand pricing power is intact at the gross level. Exit condition (4) is not approached.</p>
+<ol>
+<li><strong>Operating margin (as reported under standard accounting rules) stays above 11.5% for any two consecutive fiscal quarters.</strong> A sustained breach of this floor, combined with continuing negative beverage volume, would confirm that the FY2025 compression was structural rather than temporary.</li>
+</ol>
+<p><em>Latest reading:</em> Reported operating margin was 16.6% for both the second quarter and the first half of 2026. The prior-year comparison is distorted by a $1.86 billion non-cash charge on the Rockstar brand. On a core (adjusted) basis, operating profit grew 4% in the second quarter and 6% in the first half. Exit condition (1) requires both the operating margin floor and the beverage volume condition to fire simultaneously — the margin leg is nowhere near triggering.</p>
+<ol>
+<li><strong>PBNA (the North American beverage segment) unit volume turns positive.</strong> Sustained negative volume extending across three or more consecutive fiscal quarters, combined with an operating margin breach, would trigger exit condition (1). The volume condition is currently the one chronic watch item.</li>
+</ol>
+<p><em>Latest reading:</em> PBNA unit volume declined 4% in the second quarter and 3% in the first half of 2026. Both carbonated and non-carbonated categories were negative. The streak of negative volume now runs across at least nine consecutive reporting periods with no positive inflection visible in the latest filing. This is the sole driver of the wobbling verdict.</p>
+<ol>
+<li><strong>Net debt to underlying earnings (before interest, tax, and non-cash charges) stays below 3.0× for at most one annual reporting period.</strong> PepsiCo raised this ratio to 2.48× at the end of FY2025 — the highest in the three-year window — partly from the poppi and Siete Foods acquisitions. A sustained breach of 3.0× without a credible management-disclosed plan to reduce leverage would signal that acquisition financing has permanently impaired capital allocation flexibility.</li>
+</ol>
+<p><em>Latest reading:</em> Long-term debt was essentially flat at $42.6 billion as of 2026-06-13 against $42.3 billion at year-end 2025. Commercial paper stood at $6.1 billion. Mid-year leverage cannot be precisely computed without a full disclosure of underlying earnings (before interest, tax, and non-cash charges), but directionally the ratio is flat or slightly improving as free cash flow turns positive. Exit condition (3) applies to two consecutive annual periods — not interim quarters — and is not in danger.</p>
+<ol>
+<li><strong>The 54-year consecutive annual dividend growth streak continues.</strong> Any year-over-year freeze or reduction in the declared annual dividend per share would signal management's own loss of confidence in cash generation durability.</li>
+</ol>
+<p><em>Latest reading:</em> PepsiCo increased its annualised dividend by 4% to $5.92 per share, effective June 2026. First-half dividends of $2.9025 per share compared with $2.7775 in the same period a year earlier. The streak is intact. Exit condition (2) is not triggered.</p>
+<ol>
+<li><strong>No goodwill or intangible impairment exceeding $300 million on the Siete Foods, poppi, or SodaStream acquisitions within the FY2026–FY2028 monitoring window.</strong> The Rockstar write-down ($1.86 billion in FY2025 on a $3.85 billion acquisition) established the precedent; a repeat on the more recent acquisitions would confirm a pattern of capital destruction through overpriced deals.</li>
+</ol>
+<p><em>Latest reading:</em> No impairment charge related to Siete, poppi, or SodaStream has been recorded. The contingent consideration liability on poppi declined from $278 million to $117 million across the first half of 2026 — a signal that performance milestones tied to a 2027 deadline are being revised downward in probability — but no accounting impairment has been triggered. Exit condition (5) is not triggered.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At $139 per share, PepsiCo's owner earnings yield — the ratio of its normalised annual cash profit to the total market value of its shares — is approximately 4.7%. <a href="#the-rules">The Rules</a> set a fair-value anchor for that yield at 4.7%, meaning the current price sits essentially at fair value: not cheap, not expensive, no valuation trigger applies in either direction.</p>
+<p>To understand what that means in practice: if owner earnings (a three-year average of $8,964 million, used because any single year is distorted by one-off items) were to grow as the base case assumes and the market were to price shares at the same yield it does today, a holder at $139 would collect dividends and capital appreciation consistent with a low-double-digit total annual return. That is attractive in absolute terms. It is not attractive enough to justify adding to the position while one of the seven monitoring conditions is persistently deteriorating.</p>
+<p>The buy edge sits at approximately $101 per share, where the earnings yield would reach 6.5% — providing a genuine margin of safety. The trim edge begins at approximately $205, where the yield would fall to 3.2% and the market would be pricing in a level of optimism that exceeds the base case. The exit edge opens at approximately $469, where three decades of base-case compounding would be priced in instantaneously.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p><a href="#the-rules">The Rules</a> translate the share-price bands into three standing orders and two price alerts.</p>
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $140, the fair-value anchor. A crossing signals the share price has returned to a neutral reading; no action follows, but a fresh review of the conditions is warranted.<br />
+- A second alert at $101, the cheap-edge. The crossing arms the buy order; before adding, the latest re-validation should confirm the conditions are still working — particularly that the beverage volume condition has not worsened.</p>
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $101. <a href="#the-rules">The Rules</a> call for adding in tranches once the share price closes at or below this line and no exit condition has triggered. The buy threshold is aligned with the conservative discounted cash-flow intrinsic value from the value analysis; a purchase at that level acquires the business at or below its conservatively estimated intrinsic worth. Tranching across one to two quarters is specified — not a single fill.<br />
+- A standing trim order at $205. <a href="#the-rules">The Rules</a> call for trimming 25–33% of the position when the share price closes at or above this line. At that yield, the market is pricing in long-run growth well beyond the base case; harvesting a portion while keeping the core holding captures the premium without abandoning the thesis.<br />
+- A standing exit order at $469. <a href="#the-rules">The Rules</a> call for closing the full position when the share price closes at or above this line. At that price, the market would be pricing in roughly 33 years of base-case compounding instantly — the implied forward return falls below any reasonable long-run equity premium, and redeployment into a position with a better return prospect is the pre-committed response.</p>
+<p>The three order levels describe what <a href="#the-rules">the Rules</a> will execute if the share price moves to each line; they do not describe the current reading, which is at fair value with no valuation trigger active.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The wobble is PBNA unit volume — the North American beverage segment's aggregate sales volume measured in units, stripped of price changes and currency effects. It declined 4% in the second quarter of 2026 and 3% across the first half. Both carbonated soft drinks and non-carbonated beverages fell. This reading extends a run that has lasted at least nine consecutive quarterly reporting periods.</p>
+<p>This matters because exit condition (1) — the compound trigger that would require a full exit — requires both this beverage volume condition and a sustained breach of the 11.5% operating margin floor. The operating margin leg is currently at 16.6%, well above the floor. So the compound trigger has not fired; a single leg failing does not satisfy the two-leg rule. But the sustained nature of the volume deterioration is what tips the thesis verdict from "intact" to "wobbling": when a condition shows no positive inflection across nine reporting periods, the base case assumption of recovery within the monitoring horizon is under pressure.</p>
+<p>The wobble does not break the case for continuing to hold. Four of the seven conditions confirm the thesis is working, two are mixed, and one is persistently in the wrong direction. <a href="#the-rules">The Rules'</a> response to "wobbling" is to hold the current position without adding, and to wait for two consecutive quarterly filings before drawing a structural conclusion from one condition alone.</p>
+<p>A separate data note worth carrying: the fair-value estimate embedded in the valuation model — a 4.7% owner earnings yield equating to roughly $140 per share — diverges substantially from the multi-method peer-comparison model, which produces a base-case fair-value estimate of roughly $216. The valuation model and the peer-comparison model have not been reconciled. See <a href="#gaps-in-the-picture">Gaps in the Picture</a>.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>GLP-1 medications accelerate snack volume decline beyond the modelled bear case.</strong> The bear case already embeds a negative 3–5% per year trend in North American convenient-foods volumes. If adoption rates exceed the modelled ceiling and consumer snack spending contracts more sharply, gross margins could compress below 53% while volume also falls — the dual-condition that would signal the brand moat is eroding rather than absorbing the headwind. Current evidence: gross margins held at 54.2–54.7% in the first half of 2026. Signal to watch: gross margin below 53% in any single reported quarter.</li>
+<li><strong>Private-label substitution accelerates in the US salty snack market.</strong> US private-label grocery sales hit a record $282.8 billion in 2025, growing three times as fast as branded equivalents. If consumer price sensitivity intensifies further and private-label tortilla chips and crisps capture shelf space at the expense of Doritos and Lay's, the volume component of the bear case arrives faster than the three-year timeline assumes.</li>
+<li><strong>The Mars-Kellanova competitive combination proves more disruptive than modelled.</strong> The December 2025 combination of Mars and Kellanova — creating a private entity with Pringles, Cheez-It, Pop-Tarts, and M&amp;M's — is the first credible scaled competitor to Frito-Lay's salty snack dominance. The three-year thesis assumes Frito-Lay's 60% US share and Direct-Store-Delivery infrastructure create a durable lead. A sustained, well-funded competitive push from a combined entity with $36 billion in revenues could challenge that assumption on shelf space and promotion terms.</li>
+<li><strong>Leverage remains elevated as earnings recovery stalls.</strong> At 2.48× net debt to underlying earnings at year-end FY2025, PepsiCo has limited balance-sheet room. If the earnings recovery anticipated in the base case (operating margins returning toward 13% by FY2027) fails to materialise — because tariff headwinds persist or volume does not recover — the leverage ratio drifts toward the 3.0× exit threshold at the same time the dividend and capital expenditure commitments constrain management's ability to pay down debt.</li>
+<li><strong>The poppi or Siete Foods acquisitions require a write-down exceeding $300 million.</strong> The contingent consideration on poppi has already declined from $278 million to $117 million in the first half of 2026, suggesting the revenue and margin milestones tied to a Q3 2027 deadline are tracking below plan. If targets are missed materially and a goodwill or intangible impairment is recognised in any fiscal year within the monitoring window, exit condition (5) fires — this is the Rockstar precedent repeating.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>The earnings figure used in the valuation — $8,964 million, a three-year average for FY2023–FY2025 — comes from a manually entered override in the holding's setup rather than from direct extraction of the automated financial data. The automated system could not read capital expenditure from the company's public filings because the relevant standardised data tag was absent. The override traces to the value analysis and has been validated there, but it needs to be refreshed whenever the value analysis is updated.</p>
+<p>The fair-value-bands peer-comparison model — which uses multiples from Coca-Cola, Mondelez, and Keurig Dr Pepper — produces a base-case central fair-value estimate of roughly $216 per share, implying an owner earnings yield of 3.0%. This is 1.7 percentage points below the 4.7% yield used in the main valuation model. The two models have not been reconciled. The peer-comparison model may be capturing a structural re-rating relative to the valuation model's anchor — or the peer multiples may be elevated by factors specific to those companies. This divergence is the most significant unresolved data question in the current picture.</p>
+<p>The risk-free rate used to calibrate the long-run return comparison was read from the SPY (S&amp;P 500 index fund) holding's market data rather than from a PepsiCo-specific data pull, because the per-holding field was not populated at the time of the last data refresh. The SPY snapshot was dated 2026-08-17, which is within a reasonable range for this use.</p>
+<p>Several of the historical peer multiple bands (price-to-book, price-to-free-cash-flow, enterprise-value-to-revenue, enterprise-value-to-earnings before interest, tax, and amortisation) could not be computed due to insufficient history in the available data — these bands are marked as unavailable in the underlying model. The valuation rests on the remaining methods.</p>
+<ul>
+<li>Risk-free rate for PEP read from SPY's Market-Data snapshot (per-holding field not present; SPY snapshot: 2026-08-17)</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>If the thesis is confirmed — all seven conditions are intact or producing mixed readings, and the share price is within the hold band — hold the current position. Collect the approximately 4.3% dividend yield and re-evaluate at the next quarterly filing (the third-quarter 2026 earnings release, expected around October 2026). The two near-term confirming signals to watch for are PBNA volume turning positive and operating margin recovering toward 13.0%.</p>
+<p>If the thesis is weakened — one or more conditions are moving persistently in the wrong direction, as is currently the case with PBNA volume — do not add to the position. Review the specific deteriorating driver against the latest filing. Wait for the next two quarterly filings before drawing a structural conclusion from any single quarterly reading. The 90-day cadence is deliberate: three simultaneous uncertainties (tariff trajectory, volume recovery, acquisition integration) need more than one data point to resolve.</p>
+<p>If the thesis is broken — any one of exit conditions (1) through (5) has fired as defined in the written thesis — exit the full position within 30 days. No averaging down. Record which exit condition fired and at what price the exit was executed, for the post-mortem.</p>
+<p>If the share price falls below the buy band (approximately $101 per share, where the earnings yield reaches 6.5%) — confirm that no exit condition has triggered and that operating margin is recovering. If confirmed, add to the position in tranches over one to two quarters. The buy threshold aligns with the conservative discounted cash-flow intrinsic value from the value analysis; a purchase at that level acquires the business at its conservatively estimated intrinsic worth.</p>
+<p>If the share price rises above the trim band (approximately $205 per share, where the earnings yield falls to 3.2%) — trim 25–33% of the position to harvest the premium. At that yield, the market is pricing in long-run growth materially beyond the base case. Re-evaluate the remaining position size after the trim.</p>
+<p>If the share price rises above the exit band (approximately $469 per share) — exit the full position. At that price, the market is pricing in roughly 33 years of base-case compounding instantly. Redeploy the proceeds at the next cheap-edge crossing or into a higher-conviction position. No re-entry within 90 days to defuse anchor bias.</p>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

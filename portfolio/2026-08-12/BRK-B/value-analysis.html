@@ -11,8 +11,8 @@
 <main>
 <p class="back"><a href="index.html">← BRK-B report</a></p>
 <h1 id="berkshire-hathaway-inc-brk-b-value-analysis">Berkshire Hathaway Inc. (BRK-B) — Value Analysis</h1>
-<p><em>Prepared: 2026-07-28 | Analyst: Value Investor's Lens (Buffett/Munger tradition)</em>
-<em>Inputs: BRK-B-Financial-Brief.md, BRK-B Market Data.md, BRK-B-Political-Exposure.md, BRK-B-Fair-Value-Bands.json</em>
+<p><em>Prepared: 2026-07-28 | Analyst: Value Investor's Lens (Buffett/Munger tradition)</em><br />
+<em>Inputs: BRK-B-Financial-Brief.md, BRK-B Market Data.md, BRK-B-Political-Exposure.md, BRK-B-Fair-Value-Bands.json</em><br />
 <em>Current Price: $497.18 (Market Data, 2026-07-28)</em></p>
 <hr />
 <h2 id="section-1-value-investors-verdict">SECTION 1 — VALUE INVESTOR'S VERDICT</h2>
@@ -175,11 +175,11 @@
 <p><em>Operating earnings FY2025: per Financial-Brief §1.1 (~$44.4B). FY2024/FY2023 estimates derived from reported operating income trajectory and segment data in Financial-Brief §5.1. D&amp;A estimated as EBITDA margin × revenue − operating income: (9.0% × $371.4B) − $20.1B ≈ $13.3B for FY2025.</em></p>
 <p>Owner earnings yield of 4.2% vs. current price compares unfavourably to a ~4.3% 10-year Treasury — but Berkshire's owner earnings grow, and the Treasury's do not.</p>
 <h3 id="32-earnings-consistency-and-predictability">3.2 Earnings Consistency and Predictability</h3>
-<p>Operating earnings series (FY2021–FY2025, from Financial-Brief §5.1 operating income and segment data):
-- FY2021: Operating income not reported in Brief; OCF $39.4B indicates strong performance
-- FY2022: Operating income $11.2B (GAAP); note GEICO in deep underwriting loss — this was the trough
-- FY2023: Operating income $17.3B; GEICO recovery beginning
-- FY2024: Operating income $17.2B; insurance further recovery
+<p>Operating earnings series (FY2021–FY2025, from Financial-Brief §5.1 operating income and segment data):<br />
+- FY2021: Operating income not reported in Brief; OCF $39.4B indicates strong performance<br />
+- FY2022: Operating income $11.2B (GAAP); note GEICO in deep underwriting loss — this was the trough<br />
+- FY2023: Operating income $17.3B; GEICO recovery beginning<br />
+- FY2024: Operating income $17.2B; insurance further recovery<br />
 - FY2025: Operating income $20.1B; operating earnings $44.4B (including investment income from Treasury portfolio)</p>
 <p>GAAP net income is entirely unpredictable (swings: -$22.8B in FY2022 to +$96.2B in FY2023). Operating earnings tell a different, more reassuring story: the trend is up and accelerating. OCF is the most reliable series: $26.2B / $21.9B / $29.8B / $11.6B / $25.0B (FY2021–FY2025) — the $11.6B in FY2024 is an outlier reflecting the $19B CapEx year at BHE/BNSF. FCF generation is real and substantial.</p>
 <p>The worst-year test: FY2022 saw GAAP net income of -$22.8B (mark-to-market portfolio losses); operating earnings still positive. The business never stopped earning. FCF/Net Income ratio is meaningless given GAAP distortion; FCF-to-operating-earnings is more relevant — and FCF of $25B vs. $44.4B operating earnings (56%) in FY2025 reflects the capital intensity of BNSF/BHE capex programs.</p>
@@ -246,12 +246,12 @@
 <hr />
 <h2 id="section-5-intrinsic-value-margin-of-safety">SECTION 5 — INTRINSIC VALUE &amp; MARGIN OF SAFETY</h2>
 <h3 id="51-owner-earnings-dcf-conservative">5.1 Owner Earnings DCF (Conservative)</h3>
-<p><strong>Assumptions:</strong>
-- Base owner earnings: $44,400M (FY2025 operating earnings, Financial-Brief §1.1); per BRK-B-equivalent share (2,150M shares) = $20.65/share
-- Stage 1 growth (Years 1–10): 3.0% per config.yaml <code>base_growth_rate</code>
-- Stage 2 terminal growth: 2.5%
-- Discount rates tested: 8.5% (base), 9.5% (+1%), 10.5% (+2%)
-- Maintenance CapEx = D&amp;A proxy; owner earnings ≈ operating earnings (D&amp;A ~$13.3B used as proxy; stated assumption: BNSF/BHE true maintenance CapEx modestly exceeds D&amp;A, understating the proxy by ~10–15%)
+<p><strong>Assumptions:</strong><br />
+- Base owner earnings: $44,400M (FY2025 operating earnings, Financial-Brief §1.1); per BRK-B-equivalent share (2,150M shares) = $20.65/share<br />
+- Stage 1 growth (Years 1–10): 3.0% per config.yaml <code>base_growth_rate</code><br />
+- Stage 2 terminal growth: 2.5%<br />
+- Discount rates tested: 8.5% (base), 9.5% (+1%), 10.5% (+2%)<br />
+- Maintenance CapEx = D&amp;A proxy; owner earnings ≈ operating earnings (D&amp;A ~$13.3B used as proxy; stated assumption: BNSF/BHE true maintenance CapEx modestly exceeds D&amp;A, understating the proxy by ~10–15%)<br />
 - Current price anchor: $497.18 (Market Data 2026-07-28)</p>
 <p><strong>Base rate (8.5% discount, 3.0% Stage 1 growth, 2.5% terminal):</strong></p>
 <table>
@@ -591,27 +591,27 @@
 <h3 id="90-method-declaration">9.0 Method Declaration</h3>
 <p>Pre-compute step executed: <code>CLAUDE_LOG_SESSION=4da27a01 python3.11 src/analyze/compute_company_forward_returns.py BRK-B</code> — completed, output: bear $334 (−24.2%), base $525 (−11.87%), bull $1,253 (+17.78%) at the script's approximate price of $766.89 (market-cap/share-count derived). Recalculated below at actual market price of $497.18.</p>
 <p><strong>§9.0 — Method:</strong> <code>book-plus-earnings</code> — BRK-B is the BRK-B archetype cited in §9.0; Q3 triggers immediately because its value is primarily governed by book value growth plus capitalised excess earnings above book returns.</p>
-<p><strong>Scenario inputs consumed from BRK-B-Fair-Value-Bands.json <code>balance_sheet_proj</code>:</strong>
-- Bear: <code>book_value_usd_bn = 760</code>, shares = 2,150M → book/share year-3 = $353.49
-- Base: <code>book_value_usd_bn = 850</code>, shares = 2,150M → book/share year-3 = $395.35
+<p><strong>Scenario inputs consumed from BRK-B-Fair-Value-Bands.json <code>balance_sheet_proj</code>:</strong><br />
+- Bear: <code>book_value_usd_bn = 760</code>, shares = 2,150M → book/share year-3 = $353.49<br />
+- Base: <code>book_value_usd_bn = 850</code>, shares = 2,150M → book/share year-3 = $395.35<br />
 - Bull: <code>book_value_usd_bn = 960</code>, shares = 2,150M → book/share year-3 = $446.51</p>
-<p><strong>Owner Earnings per share inputs:</strong>
-- Bear OE/share: FCF bear $17B / 2,150M = $7.91/share
-- Base OE/share: Operating earnings $44.4B / 2,150M = $20.65/share
+<p><strong>Owner Earnings per share inputs:</strong><br />
+- Bear OE/share: FCF bear $17B / 2,150M = $7.91/share<br />
+- Base OE/share: Operating earnings $44.4B / 2,150M = $20.65/share<br />
 - Bull OE/share: FCF bull $40B / 2,150M = $18.60/share (using bull FCF; bull operating earnings higher)</p>
 <p><strong>Cost of equity:</strong> 9.0%; Terminal growth rate: 2.5%; Capitalisation denominator: 9.0% − 2.5% = 6.5%</p>
 <p><strong>Current price (Market Data):</strong> $497.18 (USD)</p>
-<p><strong>book-plus-earnings formula:</strong>
-Fair value/share = book_per_share_yr3 + (excess_EPS / (cost_of_equity − terminal_g))
+<p><strong>book-plus-earnings formula:</strong><br />
+Fair value/share = book_per_share_yr3 + (excess_EPS / (cost_of_equity − terminal_g))<br />
 where excess_EPS = OE/share − (book_per_share_yr3 × cost_of_equity)</p>
 <h3 id="91-bear-case-insurance-stress-bhe-wildfire-abel-stumble">9.1 Bear Case — Insurance Stress, BHE Wildfire, Abel Stumble</h3>
 <p><em>Probability: 20%</em></p>
 <p>In the bear case, BNSF volume pressure from coal secular decline combines with BHE wildfire liability that fails to decline (new PacifiCorp events add to reserves), the equity portfolio draws down more than 25% as Apple and other holdings reprice, and Abel's first large independent acquisition destroys capital. Insurance underwriting deteriorates as Progressive's telematics advantage takes market share from GEICO. Operating margins compress from 5.4% to approximately 3.5%. Book value compounds to $760B over three years (~4.0% CAGR from estimated FY2025 end book of ~$675B) — the combination of operating headwinds AND portfolio drawdown compresses book growth while exit multiples remain depressed. The stock would trade at or below book.</p>
-<p><strong>Fair-value estimate (book-plus-earnings arithmetic):</strong>
-- Book/share yr-3: $760B × 1,000 / 2,150 = <strong>$353.49</strong>
-- Excess EPS: $7.91 − ($353.49 × 0.09) = $7.91 − $31.81 = <strong>−$23.90</strong> (negative; no excess above CoE)
-- Capitalised excess = $0 (floored at zero; below-CoE returns reflected in depressed book price)
-- <strong>Fair value = $353.49</strong> (book value alone; at bear P/B ~1.0×, market would discount to ~$334 — central_estimate from Fair-Value-Bands.json)
+<p><strong>Fair-value estimate (book-plus-earnings arithmetic):</strong><br />
+- Book/share yr-3: $760B × 1,000 / 2,150 = <strong>$353.49</strong><br />
+- Excess EPS: $7.91 − ($353.49 × 0.09) = $7.91 − $31.81 = <strong>−$23.90</strong> (negative; no excess above CoE)<br />
+- Capitalised excess = $0 (floored at zero; below-CoE returns reflected in depressed book price)<br />
+- <strong>Fair value = $353.49</strong> (book value alone; at bear P/B ~1.0×, market would discount to ~$334 — central_estimate from Fair-Value-Bands.json)<br />
 - Using central_estimate: <strong>$334/share</strong></p>
 <p><strong>3-Year Bear Return (annualised):</strong> ($334 / $497.18)^(1/3) − 1 = (0.6718)^(0.3333) − 1 = <strong>−10.7%/year</strong></p>
 <p><strong>Margin of Safety at Bear Case:</strong> Bear fair value $334 vs. cost $497.18 = <strong>−32.8% downside</strong></p>
@@ -619,29 +619,29 @@ where excess_EPS = OE/share − (book_per_share_yr3 × cost_of_equity)</p>
 <h3 id="92-base-case-float-compounder-gradual-normalisation">9.2 Base Case — Float Compounder, Gradual Normalisation</h3>
 <p><em>Probability: 55%</em></p>
 <p>In the base case, insurance underwriting remains profitable (GEICO CR in the 85–90% range), the float grows modestly, BNSF recovers on industrial volumes as tariff friction moderates, BHE wildfire accruals decline as PacifiCorp liability clarifies, and Abel's OxyChem integration delivers expected synergies. The public equity portfolio appreciates modestly with the broader market. Operating earnings grow at 4–6% per year from the $44.4B FY2025 base, and book value compounds to $850B over three years (~8.0% CAGR). Abel demonstrates capital discipline — no major transformational M&amp;A, continued bolt-on acquisitions. The stock re-rates to slightly above current P/B as uncertainty dissipates.</p>
-<p><strong>Fair-value estimate (book-plus-earnings arithmetic):</strong>
-- Book/share yr-3: $850B × 1,000 / 2,150 = <strong>$395.35</strong>
-- Excess EPS: $20.65 − ($395.35 × 0.09) = $20.65 − $35.58 = <strong>−$14.93</strong> (negative; OE yield on book &lt; CoE)
-- Capitalised excess = $0 (floored)
-- Book-plus-earnings = $395.35; at historical P/B median 1.55× → $612.79; at P/FCF base ($28B/2150 = $13.02/share) × median 33.5× = $436.17
+<p><strong>Fair-value estimate (book-plus-earnings arithmetic):</strong><br />
+- Book/share yr-3: $850B × 1,000 / 2,150 = <strong>$395.35</strong><br />
+- Excess EPS: $20.65 − ($395.35 × 0.09) = $20.65 − $35.58 = <strong>−$14.93</strong> (negative; OE yield on book &lt; CoE)<br />
+- Capitalised excess = $0 (floored)<br />
+- Book-plus-earnings = $395.35; at historical P/B median 1.55× → $612.79; at P/FCF base ($28B/2150 = $13.02/share) × median 33.5× = $436.17<br />
 - Central_estimate from Fair-Value-Bands.json average of P/B and P/FCF methods: <strong>$525/share</strong></p>
 <p><strong>3-Year Base Return (annualised):</strong> ($525 / $497.18)^(1/3) − 1 = (1.0560)^(0.3333) − 1 = <strong>+1.84%/year</strong></p>
 <p><strong>Confirming Signal (12-month):</strong> Operating earnings run rate above $45B annualised on Q1/Q2 2026 reporting; GEICO CR below 90%; no new major wildfire accrual at BHE.</p>
 <h3 id="93-bull-case-record-underwriting-bhe-cleared-oxychem-accretive">9.3 Bull Case — Record Underwriting, BHE Cleared, OxyChem Accretive</h3>
 <p><em>Probability: 25%</em></p>
 <p>In the bull case, BHE's wildfire liability (PacifiCorp) is resolved via settlement below current reserves, releasing significant capital. GEICO achieves combined ratios in the low-80s, generating record underwriting profit. OxyChem integrates smoothly and contributes $1–1.5B to operating earnings ahead of schedule. Abel demonstrates Buffett-calibre capital allocation — a large transaction at a demonstrably fair price followed by value creation. The equity portfolio (especially Apple) appreciates 20–30%, adding meaningfully to book value. Book value compounds to $960B over three years (~13% CAGR). The market re-rates BRK toward 1.7–1.8× book as certainty about the Abel era's quality increases. The P/FCF multiple expands toward 90× on depressed free cash flow that recovers sharply.</p>
-<p><strong>Fair-value estimate (book-plus-earnings arithmetic):</strong>
-- Book/share yr-3: $960B × 1,000 / 2,150 = <strong>$446.51</strong>
-- Excess EPS: $18.60 (bull FCF/share) − ($446.51 × 0.09) = $18.60 − $40.19 = <strong>−$21.59</strong> (negative)
-- Capitalised excess = $0 (floored); book-plus-earnings = $446.51
-- But at expanded P/B (~1.73×): $446.51 × 1.73 = $772.47; at P/FCF bull ($40B/2150 = $18.60) × 93× = $1,729.80
+<p><strong>Fair-value estimate (book-plus-earnings arithmetic):</strong><br />
+- Book/share yr-3: $960B × 1,000 / 2,150 = <strong>$446.51</strong><br />
+- Excess EPS: $18.60 (bull FCF/share) − ($446.51 × 0.09) = $18.60 − $40.19 = <strong>−$21.59</strong> (negative)<br />
+- Capitalised excess = $0 (floored); book-plus-earnings = $446.51<br />
+- But at expanded P/B (~1.73×): $446.51 × 1.73 = $772.47; at P/FCF bull ($40B/2150 = $18.60) × 93× = $1,729.80<br />
 - Central_estimate from Fair-Value-Bands.json (average of methods): <strong>$1,253/share</strong></p>
 <p><strong>3-Year Bull Return (annualised):</strong> ($1,253 / $497.18)^(1/3) − 1 = (2.5205)^(0.3333) − 1 = <strong>+36.0%/year</strong></p>
 <p><strong>Confirming Signal (12-month):</strong> BHE wildfire settlement announced below current accruals; GEICO CR below 83% for two consecutive quarters; OxyChem acquisition integration ahead of guidance.</p>
 <h3 id="94-probability-weighted-return">9.4 Probability-Weighted Return</h3>
-<p>Expected probability-weighted annualised return:
-(0.20 × −10.7%) + (0.55 × +1.84%) + (0.25 × +36.0%)
-= −2.14% + 1.01% + 9.00%
+<p>Expected probability-weighted annualised return:<br />
+(0.20 × −10.7%) + (0.55 × +1.84%) + (0.25 × +36.0%)<br />
+= −2.14% + 1.01% + 9.00%<br />
 = <strong>+7.87%/year</strong></p>
 <p><strong>Does it clear the 10% hurdle rate? No.</strong> The probability-weighted expected return of ~7.9% per year falls short of the 10% hurdle. This is consistent with a "Hold, not Buy" stance: BRK at $497.18 is a reasonable investment for capital preservation (the bear case is survivable and the moat is intact), but it does not offer the return required to justify new capital deployment over alternatives that meet the hurdle rate. The bull case is large and real; the base case return is modest. Adding at current prices dilutes the portfolio's overall IRR.</p>
 <hr />

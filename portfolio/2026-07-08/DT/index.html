@@ -30,10 +30,10 @@ $31                                            $45                           $55
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>Dynatrace scores 9.47, ranking 5 of 12 active holdings by this measure — it sits in the upper half of the portfolio.</p>
 <blockquote>
-<p><strong>score</strong>
-&nbsp;&nbsp;= quality-weight × (expected return − hurdle rate)
-&nbsp;&nbsp;= 1.20 × (14.21% − 4.86%)
-&nbsp;&nbsp;= 1.20 × +9.35%
+<p><strong>score</strong><br />
+&nbsp;&nbsp;= quality-weight × (expected return − hurdle rate)<br />
+&nbsp;&nbsp;= 1.20 × (14.21% − 4.86%)<br />
+&nbsp;&nbsp;= 1.20 × +9.35%<br />
 &nbsp;&nbsp;= <strong>9.47</strong></p>
 </blockquote>
 <ul>
@@ -91,11 +91,11 @@ $31                                            $45                           $55
 <p>The buy zone begins at a cash yield of 5.9%, which corresponds to a share price of roughly $31. The trim zone begins at a yield of 3.3%, corresponding to roughly $55. At $45, the price sits in the middle of the band between those two lines — not meaningfully cheap, not meaningfully expensive. The market assigns a modestly higher valuation than the fair-value anchor implies, a 9% gap — within the range of normal variation.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p>The rules translate the share-price bands into two standing orders and two price alerts.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at $41, the fair-value anchor. The crossing means the share price has returned to a neutral reading; no action follows automatically, but a fresh reading of the conditions is warranted.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $41, the fair-value anchor. The crossing means the share price has returned to a neutral reading; no action follows automatically, but a fresh reading of the conditions is warranted.<br />
 - A second alert at $31, the cheap-edge. The crossing arms the buy order below; before adding, the latest re-validation should confirm the conditions are still working.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at $31. The rules call for accumulating toward a full position once the share price closes at or below this line and the conditions are still working. The buy zone implies a cash yield above 5.9% — materially above the computed fair value. Adding in tranches rather than a single fill is consistent with the uncertainty around the bear case.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $31. The rules call for accumulating toward a full position once the share price closes at or below this line and the conditions are still working. The buy zone implies a cash yield above 5.9% — materially above the computed fair value. Adding in tranches rather than a single fill is consistent with the uncertainty around the bear case.<br />
 - A standing trim order at $55. The rules call for trimming toward a half-to-two-thirds position when the share price closes at or above this line. At $55 the cash yield would fall to 3.3%, approaching the level where the base-case upside requires bull-case execution to materialise. The holding is not exited at this level — it is sized down.</p>
 <p>No exit-tier rule has been authored at a specific price above the trim line. The exit condition that terminates the holding is a breach of one of the seven thesis conditions, not a valuation level.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

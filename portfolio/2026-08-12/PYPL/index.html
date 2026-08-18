@@ -12,15 +12,15 @@
 <p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
 <h1 id="paypal-an-update-on-the-bet">PayPal: An Update on the Bet</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- DATA_ERROR: upcoming earnings fetch failed for PYPL: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py PYPL
-- STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]
-- Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing's MD&amp;A for material growth-vs-maintenance CapEx differences.
-- FAIR-VALUE CONFLICT (61% gap): Two built-in valuation methods disagree on what PYPL is worth. The FCF-yield anchor (config fair_value = 10.5%) says fair value is ~$48: at $4480.0M FCF ÷ 10.5% ÷ 882M shares, today's $56 implies a 9.1% FCF yield vs the 10.5% anchor, and you would only add near $41 (12.5% yield threshold). The scenario-band model says $124: it applies the price multiples that peer companies and PYPL's own trading history trade at to projected financials — on that view, $56 is a steep discount to the $124 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.
+<p><strong>Warnings</strong><br />
+- DATA_ERROR: upcoming earnings fetch failed for PYPL: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py PYPL<br />
+- STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]<br />
+- Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing's MD&amp;A for material growth-vs-maintenance CapEx differences.<br />
+- FAIR-VALUE CONFLICT (61% gap): Two built-in valuation methods disagree on what PYPL is worth. The FCF-yield anchor (config fair_value = 10.5%) says fair value is ~$48: at $4480.0M FCF ÷ 10.5% ÷ 882M shares, today's $56 implies a 9.1% FCF yield vs the 10.5% anchor, and you would only add near $41 (12.5% yield threshold). The scenario-band model says $124: it applies the price multiples that peer companies and PYPL's own trading history trade at to projected financials — on that view, $56 is a steep discount to the $124 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.<br />
 - PLAUSIBILITY: base-case return (+31.7%) sign is opposite to the fair-value gap direction (56 → 48). Valuation inputs may need refreshing — reported as computed.</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -45,10 +45,10 @@ $40                              $56/$59                                     $77
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>PayPal scores 25.62, ranking 3 of 20 active holdings by this measure — it sits near the top of the portfolio, behind only Elastic and DT.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)
-  &nbsp;&nbsp;= 1.00 × (32.14% − 0.12% − 1.46% − 4.94%)
-  &nbsp;&nbsp;= 1.00 × +25.62%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.00 × (32.14% − 0.12% − 1.46% − 4.94%)<br />
+  &nbsp;&nbsp;= 1.00 × +25.62%<br />
   &nbsp;&nbsp;= <strong>25.62</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.00.</strong> PayPal sits in the middle moat tier; the weight is one, so it leaves the score unchanged. The two-sided network effect across 439 million active accounts is genuine and persistent, but the branded checkout layer is under sustained pressure from device-native competitors, which prevents a top-tier classification.</p>

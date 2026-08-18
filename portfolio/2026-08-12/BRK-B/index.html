@@ -12,21 +12,21 @@
 <p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
 <h1 id="berkshire-the-bet-is-wobbling">Berkshire: The Bet Is Wobbling</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- DATA_ERROR: upcoming earnings fetch failed for BRK-B: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py BRK-B
-- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol
-- current_price_usd derived from market_cap/shares (approximate) — run Extract-Ranking-Inputs.py for exact price
-- STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_e unavailable — [INSUFFICIENT HISTORY]
-- PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol
-- PORTFOLIO: - PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol
-- shares_diluted absent from XBRL — implied from market_cap / current price (1072.34B USD / 497.18 = 2156.9M shares). Verify against per-share book value disclosed in the filing.
+<p><strong>Warnings</strong><br />
+- DATA_ERROR: upcoming earnings fetch failed for BRK-B: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py BRK-B<br />
+- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol<br />
+- current_price_usd derived from market_cap/shares (approximate) — run Extract-Ranking-Inputs.py for exact price<br />
+- STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_e unavailable — [INSUFFICIENT HISTORY]<br />
+- PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol<br />
+- PORTFOLIO: - PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if BRK-B is a genuine non-payer this is expected, otherwise check yfinance_symbol<br />
+- shares_diluted absent from XBRL — implied from market_cap / current price (1072.34B USD / 497.18 = 2156.9M shares). Verify against per-share book value disclosed in the filing.<br />
 - Class A equivalent ratio configured (1500:1). The BV/share above uses diluted shares from XBRL as reported. Verify against the per-share book value that management discloses directly in the filing — the LLM extractor should surface that figure if present.</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -50,10 +50,10 @@ $416                        $497                        $582                $649
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>Berkshire scores -15.98, ranking 19 of 20 active holdings by this measure — it sits near the foot of the portfolio, a direct consequence of the three-year scenario returns being weighted heavily toward the negative.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
-  &nbsp;&nbsp;= 1.20 × (-6.92% − 1.46% − 4.94%)
-  &nbsp;&nbsp;= 1.20 × −13.32%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.20 × (-6.92% − 1.46% − 4.94%)<br />
+  &nbsp;&nbsp;= 1.20 × −13.32%<br />
   &nbsp;&nbsp;= <strong>-15.98</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.20.</strong> Berkshire sits in the strongest of three moat tiers — the insurance float at near-zero cost and the physically irreplicable freight-rail network are both present and durable — which lifts the conviction score by 20 per cent relative to a holding with no distinguishable edge.</p>
@@ -96,12 +96,12 @@ $416                        $497                        $582                $649
 <p>Berkshire does not pay a dividend, so there is no yield component to offset the mild premium above fair value. The entire expected return comes from book-value compounding and, eventually, a reversion of the price-to-book ratio toward fair value. At the current price that long-run return estimate is approximately 4% per year — which is modest relative to the hurdle rate, and is reflected directly in the score.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p><a href="#the-rules">The Rules</a> translate the share-price bands into three standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement made here.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at $482, the fair-value anchor. The crossing means the share price has returned to a neutral reading; no action follows automatically, but a fresh reading of the conditions is warranted before any decision.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $482, the fair-value anchor. The crossing means the share price has returned to a neutral reading; no action follows automatically, but a fresh reading of the conditions is warranted before any decision.<br />
 - A second alert at $416, the cheap edge. The crossing arms the buy order below; before adding, the latest re-validation should confirm the conditions are still working and the thesis has not deteriorated further.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at $416. Per <a href="#the-rules">the Rules</a>, once the share price closes at or below this line and the conditions — in particular the book-value compounding rate and the capital-allocation discipline — are still working, the position is added in tranches. The order may be staged across one or two quarters rather than filled in a single transaction.
-- A standing trim order at $582. Per <a href="#the-rules">the Rules</a>, once the share price closes at or above this line, 25 to 33 per cent of the position is trimmed to harvest the premium while keeping the core holding intact.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $416. Per <a href="#the-rules">the Rules</a>, once the share price closes at or below this line and the conditions — in particular the book-value compounding rate and the capital-allocation discipline — are still working, the position is added in tranches. The order may be staged across one or two quarters rather than filled in a single transaction.<br />
+- A standing trim order at $582. Per <a href="#the-rules">the Rules</a>, once the share price closes at or above this line, 25 to 33 per cent of the position is trimmed to harvest the premium while keeping the core holding intact.<br />
 - A standing exit order at $649. Per <a href="#the-rules">the Rules</a>, once the share price closes at or above this line, the full position is closed. At that price, the market would be pricing in roughly ten years of base-case compounding instantly; the implied forward return falls below the long-term equity premium even before growth, and reallocation beats continuing to hold. No re-entry within 90 days thereafter.</p>
 <p>The three order levels do not contradict the current valuation read: those verdicts describe today's reading; the standing orders describe what will follow if the share price moves to each line.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

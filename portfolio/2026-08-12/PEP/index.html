@@ -12,13 +12,13 @@
 <p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
 <h1 id="pepsico-the-bet-is-wobbling">PepsiCo: The Bet Is Wobbling</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- DATA_ERROR: upcoming earnings fetch failed for PEP: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py PEP
-- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]
-- Owner earnings = config.valuation.owner_earnings_override_usd (8.96B; yield 4.72%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.
+<p><strong>Warnings</strong><br />
+- DATA_ERROR: upcoming earnings fetch failed for PEP: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py PEP<br />
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]<br />
+- Owner earnings = config.valuation.owner_earnings_override_usd (8.96B; yield 4.72%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.<br />
 - [FAIR-VALUE-DRIFT] Fair-Value-Bands base-scenario central estimate ($216) implies an OEY of 3.04%, diverging from config fair_value (4.7%) by 35.4%. Review PEP-Fair-Value-Bands.md and consider updating fair_value.</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -42,10 +42,10 @@ $101    $139          $205                                                  $469
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>PepsiCo scores 18.44, ranking 5 of 20 active holdings by this measure — it sits solidly in the upper quarter of the portfolio.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)
-  &nbsp;&nbsp;= 1.20 × (22.30% − 0.54% − 1.46% − 4.94%)
-  &nbsp;&nbsp;= 1.20 × +15.37%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.20 × (22.30% − 0.54% − 1.46% − 4.94%)<br />
+  &nbsp;&nbsp;= 1.20 × +15.37%<br />
   &nbsp;&nbsp;= <strong>18.44</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.20.</strong> PepsiCo sits in the strongest of three moat tiers, which lifts the score by 20 per cent. The classification reflects two independent strong moat sources — a globally recognised brand portfolio (Lay's is the world's number-one snack brand; Gatorade, Doritos, and Pepsi-Cola each command decades of consumer loyalty) and a proprietary direct-delivery distribution network in North America that no competitor has replicated at scale. Both sources have held their value through five years of commodity disruption, as evidenced by gross margins remaining within a narrow 53–55% corridor throughout that period.</p>
@@ -91,12 +91,12 @@ $101    $139          $205                                                  $469
 <p>A separate analysis using peer and historical earnings multiples arrives at a base-case fair value closer to $216 per share, well above the current price. <a href="#gaps-in-the-picture">Gaps in the Picture</a> explains why the two estimates diverge and which deserves more weight at the moment.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p>The pre-committed action plan translates the share-price bands into three standing orders and two price alerts. Each is the operationalisation of a pre-committed instruction — not a new judgement made here.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at $140, the fair-value anchor. The crossing means the share price has returned to neutral; no action follows, but a fresh read of the conditions is warranted.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $140, the fair-value anchor. The crossing means the share price has returned to neutral; no action follows, but a fresh read of the conditions is warranted.<br />
 - A second alert at $101, the cheap edge. The crossing arms the buy order below; before adding, the latest re-validation should confirm the conditions are still working.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at $101. When the share price closes at or below this line and the conditions remain intact, tranches are added over one or two quarters rather than in a single trade.
-- A standing trim order at $205. When the share price closes at or above this line, 25–33% of the position is trimmed to harvest the premium while keeping the core holding.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $101. When the share price closes at or below this line and the conditions remain intact, tranches are added over one or two quarters rather than in a single trade.<br />
+- A standing trim order at $205. When the share price closes at or above this line, 25–33% of the position is trimmed to harvest the premium while keeping the core holding.<br />
 - A standing exit order at $469. When the share price closes at or above this line, the full position is closed. At that price, the market would be pricing in roughly 33 years of base-case compounding instantly; the implied forward return falls below the long-term equity premium, and reallocation beats continuing to hold. No re-entry within 90 days.</p>
 <p>The three order levels do not contradict the cost-basis verdicts above: those describe the current reading; the standing orders describe what fires if the share price moves to each line.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

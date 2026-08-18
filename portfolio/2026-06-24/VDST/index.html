@@ -23,8 +23,8 @@ verbund/spamzn/de00iqqh/brk-b/dt/meud/vdstbkngq                             pypl
 <p>The chart places US Treasury 0-1y in the precise middle of a portfolio that stretches from a deeply negative score (VERBUND) to a very high one (PayPal). Six holdings score below 4.8; six score above. The fund's median position reflects a simple arithmetic fact: with a hurdle rate set to zero, the score equals the expected return directly.</p>
 <blockquote>
 <p><strong>score = quality-weight × (expected return − hurdle rate)</strong></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; = 1.0 × (4.8% − 0.0%)
-&nbsp;&nbsp;&nbsp;&nbsp; = 1.0 × +4.80%
+<p>&nbsp;&nbsp;&nbsp;&nbsp; = 1.0 × (4.8% − 0.0%)<br />
+&nbsp;&nbsp;&nbsp;&nbsp; = 1.0 × +4.80%<br />
 &nbsp;&nbsp;&nbsp;&nbsp; = <strong>4.8</strong></p>
 </blockquote>
 <ul>
@@ -98,11 +98,11 @@ $40                                                               $59        $63
 <p>In practical terms, the share price of $59 sits in the upper half of the hold band. The buy edge is at $40 (corresponding to a 5.5% yield) and the trim edge is at $63 (3.5% yield). An important caveat: because the fund accumulates income internally, its net asset value drifts upward at roughly the current yield per year as interest reinvests. These price edges are valid only as of the 2026-06-24 snapshot and must be recomputed at each quarterly refresh.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p>The pre-committed rules translate the yield and price bands into two price alerts and two standing orders. Each is an operationalisation of the rules as written, not new judgement from this evaluation. Prices below must be recomputed each quarter as the accumulating share class drifts.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at $46, the fair-value price anchor (corresponding to a 4.8% basket yield). Crossing that level in either direction signals a shift in the yield regime; no action follows automatically, but a fresh look at conditions is warranted.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $46, the fair-value price anchor (corresponding to a 4.8% basket yield). Crossing that level in either direction signals a shift in the yield regime; no action follows automatically, but a fresh look at conditions is warranted.<br />
 - A second alert at $40, the cheap edge (5.5% yield). Crossing that level arms the buy order; before adding, the latest quarterly review should confirm the vehicle-integrity conditions remain green.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at $40 (5.5% yield). The rules call for adding at the margin once the share price closes at or below this line and the three conditions still hold. The vehicle-integrity rules gate any large addition.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $40 (5.5% yield). The rules call for adding at the margin once the share price closes at or below this line and the three conditions still hold. The vehicle-integrity rules gate any large addition.<br />
 - A standing trim order at $63 (3.5% yield). The rules call for trimming at the margin once the share price closes at or above this line, as the carry advantage over EUR cash has compressed to the bear-case level.</p>
 <p>For this fund, no price-based exit order has been authored. Vehicle-integrity breaches — not the share price — govern any full exit, as set out in <a href="#the-case-for-the-bet">The Case for the Bet</a>.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

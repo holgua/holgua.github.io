@@ -71,12 +71,12 @@
 <p>The relevant comparison is EUR cash. The European Central Bank's deposit facility rate stands at 2.25%. With break-even inflation at 1.98%, EUR cash earns a real yield of approximately +0.27%. The linker's 0.78% real yield is therefore +51 basis points ahead. This comparison is pre-tax — German income tax applies to both legs (Abgeltungssteuer on cash interest and on the linker's coupon plus index accrual); the after-tax direction is not modelled here.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p>The rules translate the real-yield bands into concrete price levels and three standing orders.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at €97, the clean price that corresponds to the 0.50% fair-value anchor. The crossing means the bond has moved to a neutral reading; no action follows, but a fresh read of the conditions is warranted.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at €97, the clean price that corresponds to the 0.50% fair-value anchor. The crossing means the bond has moved to a neutral reading; no action follows, but a fresh read of the conditions is warranted.<br />
 - A second alert at €91, the clean price that corresponds to the 1.50% real-yield buy threshold. The crossing arms the add order below; before scaling in, the latest re-validation should confirm that all conditions are still working.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing add order at €91. The rules call for adding in proportion to the inflation-hedge allocation target once the clean price closes at or below this level and the conditions are still working. At that yield, a seven-year AAA EUR sovereign linker is highly attractive relative to EUR cash.
-- A standing trim order at €104. The rules call for trimming 25% of the position when the clean price closes at or above this level, with a second 25% trim at the following quarterly review if the real yield remains below −0.50%. Proceeds go to EUR cash or short-duration conventional German government bonds.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing add order at €91. The rules call for adding in proportion to the inflation-hedge allocation target once the clean price closes at or below this level and the conditions are still working. At that yield, a seven-year AAA EUR sovereign linker is highly attractive relative to EUR cash.<br />
+- A standing trim order at €104. The rules call for trimming 25% of the position when the clean price closes at or above this level, with a second 25% trim at the following quarterly review if the real yield remains below −0.50%. Proceeds go to EUR cash or short-duration conventional German government bonds.<br />
 - A standing exit order at €108. The compound exit trigger — real yield below −1.0% for at least 90 days AND EUR cash simultaneously offering a better real return — governs this level. If that trigger fires, the full position is closed and proceeds move to EUR cash or short-duration nominal German government bonds.</p>
 <p>Note that because <code>years_priced_at_exit</code> is not yet populated in the valuation context, the standing exit order does not carry an explicit forward-years interpolation at this time.</p>
 <p>The three standing-order prices correspond to real yields as of the 2026-06-16 factsheet. As the bond approaches its 2033-04-15 maturity, the same real yields imply different clean prices — the price drifts toward €100.</p>

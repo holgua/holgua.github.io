@@ -12,13 +12,13 @@
 <p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
 <h1 id="ferrari-the-bet-still-works">Ferrari: The Bet Still Works</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- DATA_ERROR: upcoming earnings fetch failed for RACE: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py RACE
-- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]
-- Owner earnings = config.valuation.owner_earnings_override_usd (1.60B; yield 2.57%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.
+<p><strong>Warnings</strong><br />
+- DATA_ERROR: upcoming earnings fetch failed for RACE: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py RACE<br />
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]<br />
+- Owner earnings = config.valuation.owner_earnings_override_usd (1.60B; yield 2.57%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.<br />
 - FAIR-VALUE CONFLICT (41% gap): Two built-in valuation methods disagree on what RACE is worth. The FCF-yield anchor (config fair_value = 2.75%) says fair value is ~$330: at $1596.9M FCF ÷ 2.75% ÷ 176M shares, today’s $353 implies a 2.6% FCF yield vs the 2.75% anchor, and you would only add near $214 (4.25% yield threshold). The scenario-band model says $556: it applies the price multiples that peers (PAH3) and RACE’s own trading history trade at to projected financials — on that view, $353 is a steep discount to the $556 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -41,10 +41,10 @@
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>Ferrari scores 8.19, ranking 8 of 20 active holdings by this measure — it sits just above the middle of the pack.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
-  &nbsp;&nbsp;= 1.20 × (12.04% − 0.28% − 4.94%)
-  &nbsp;&nbsp;= 1.20 × +6.82%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.20 × (12.04% − 0.28% − 4.94%)<br />
+  &nbsp;&nbsp;= 1.20 × +6.82%<br />
   &nbsp;&nbsp;= <strong>8.19</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.20.</strong> Ferrari sits in the strongest of three moat tiers — a wide moat anchored in seven decades of brand heritage, the scarcity architecture that keeps demand permanently above supply, and an efficient-scale position as the sole operator at 38%-plus margins in the ultra-luxury automotive segment. That tier lifts the score by 20 per cent.</p>
@@ -94,11 +94,11 @@
 <p>There is a structural footnote worth naming plainly. A second valuation method — which looks at what Ferrari's earnings multiples have traded at historically and what its closest comparable businesses (Porsche, Hermès) trade at today — produces a mid-point estimate near €556 per share, substantially above the EUR 330 earnings-yield anchor. The gap exists because the two methods ask different questions: the earnings-yield method asks what Ferrari earns today and what yield that represents; the multiple-based method asks what earnings are likely to be in three to five years and what the market will pay for them. Both are legitimate frameworks; they produce different answers for a business priced for substantial future growth. <a href="#the-rules">The Rules</a> for this holding are anchored to the earnings-yield method, so the standing orders in <a href="#the-standing-orders">the Standing Orders</a> follow the EUR 214 and EUR 727 edges, not the multiple-model estimate.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p><a href="#the-rules">The Rules</a> translate the earnings-yield band into two price alerts and two standing orders. Each is the operationalisation of a pre-committed rule — not a judgement made at the time of reading.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at €330, the fair-value anchor — the earnings yield at which the share price is neutral. Crossing this level means the price has returned to a fair reading; no action follows, but a re-read of the six conditions is warranted before any other move.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at €330, the fair-value anchor — the earnings yield at which the share price is neutral. Crossing this level means the price has returned to a fair reading; no action follows, but a re-read of the six conditions is warranted before any other move.<br />
 - A second alert at €214, the cheap edge. Crossing this level arms the buy order below; the conditions should be confirmed intact before adding.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at €214. <a href="#the-rules">The Rules</a> call for adding in tranches over one to two quarters once the share price closes at or below this line and the six conditions are still passing. A price at or below €214 implies an earnings yield above 4.25% on current owner earnings — a rare entry point into an exceptional franchise.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at €214. <a href="#the-rules">The Rules</a> call for adding in tranches over one to two quarters once the share price closes at or below this line and the six conditions are still passing. A price at or below €214 implies an earnings yield above 4.25% on current owner earnings — a rare entry point into an exceptional franchise.<br />
 - A standing trim order at €727. <a href="#the-rules">The Rules</a> call for trimming 25–33% of the position when the share price closes at or above this line. At that level the market capitalisation would exceed roughly €128 billion on current earnings, discounting decades of compounding at the present price. Disciplined reduction preserves the ability to re-enter at a better yield.</p>
 <p>No exit-tier rule has been configured for this holding at any price level above the trim edge. The standing orders are therefore limited to two actionable levels; above the trim edge, <a href="#the-rules">the Rules</a> call for holding, not exiting.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

@@ -11,12 +11,12 @@
 <main>
 <p class="back"><a href="index.html">← NOW report</a></p>
 <h1 id="servicenow-inc-now-value-analysis">ServiceNow, Inc. (NOW) — Value Analysis</h1>
-<p><em>Author: 11-Value-Analysis skill | Date: 2026-08-10 | Price anchor: $124.88 (Market Data, August 10, 2026)</em>
+<p><em>Author: 11-Value-Analysis skill | Date: 2026-08-10 | Price anchor: $124.88 (Market Data, August 10, 2026)</em><br />
 <em>Inputs: NOW-Financial-Brief.md (primary), NOW-Financial-Analysis.md (fallback), NOW-Political-Exposure.md, NOW-Competition.md, NOW-Fair-Value-Bands.json, NOW-Scenario-Drivers.json</em></p>
 <blockquote>
-<p><strong>WARNINGS</strong>
-- SBC is 14.7% of revenue (FY2025). Owner earnings = FCF − SBC = $4,576M − $1,955M = $2,621M. All yield-based valuation anchors use owner earnings, not reported FCF. The apparent P/FCF of ~25× on reported FCF understates the true owner earnings multiple (~49×).
-- Net Debt per XBRL: [N/A] — LTD XBRL tag absent. Post-Armis gross debt ~$7.5B (Senior Notes $5.5B + commercial paper per Q2 2026 10-Q); cash $4.66B (Market Data §5) implies current net debt ~$3.8B. Scenario balance sheet projections from Fair-Value-Bands.json.
+<p><strong>WARNINGS</strong><br />
+- SBC is 14.7% of revenue (FY2025). Owner earnings = FCF − SBC = $4,576M − $1,955M = $2,621M. All yield-based valuation anchors use owner earnings, not reported FCF. The apparent P/FCF of ~25× on reported FCF understates the true owner earnings multiple (~49×).<br />
+- Net Debt per XBRL: [N/A] — LTD XBRL tag absent. Post-Armis gross debt ~$7.5B (Senior Notes $5.5B + commercial paper per Q2 2026 10-Q); cash $4.66B (Market Data §5) implies current net debt ~$3.8B. Scenario balance sheet projections from Fair-Value-Bands.json.<br />
 - SANITY: Bull-case DCF-scenario-fcf IRR (+17.8%) is within [-75, +75] bounds. The Fair-Value-Bands sidecar bull estimate ($1,146 via peer-multiple central estimate) is outside bounds and overridden — sidecar uses <code>fair-value-bands</code> method; this Value Analysis uses <code>dcf-scenario-fcf</code> per the Q4 deterministic test. verify_holding.py may flag IRR divergence vs. sidecar.</p>
 </blockquote>
 <hr />
@@ -150,13 +150,13 @@
 <p><em>D&amp;A used as CapEx proxy (conservative; maintenance CapEx likely lower). †FY2023–2024 SBC estimated from trend; FY2025 SBC EDGAR-confirmed ($1,955M, Financial-Brief §4.1). ‡FY2023 includes $1.05B one-time deferred tax benefit; adjusted recurring Net Income ~$681M → adjusted owner earnings ~$354M — not representative.</em></p>
 <p><strong>Assessment:</strong> Owner earnings are growing strongly — from ~$1.6B (FY2024) to $2.6B (FY2025), approximately 60% growth year-over-year, reflecting both FCF margin expansion and SBC denominator growth from the rising revenue base. FY2025 is the most reliable anchor. At $124.88/share and 1,033.9M shares = $129.11B market cap, the owner earnings yield is <strong>2.03%</strong> — below the 10-year Treasury yield and far below a reasonable equity risk premium hurdle.</p>
 <h3 id="32-earnings-consistency-and-predictability">3.2 Earnings Consistency and Predictability</h3>
-<p><strong>5-year Net Income / FCF series:</strong>
-| FY | Net Income ($M) | FCF ($M) | Note |
-|---|---|---|---|
-| FY2021 | 230 | 1,799 | Early-stage GAAP profitability; FCF already exceptional |
-| FY2022 | 325 | 2,173 | Steady GAAP improvement; FCF growing consistently |
-| FY2023 | 1,731 | 2,704 | Includes $1.05B deferred tax benefit — not recurring |
-| FY2024 | 1,425 | 3,415 | Normalising; FCF trend intact |
+<p><strong>5-year Net Income / FCF series:</strong><br />
+| FY | Net Income ($M) | FCF ($M) | Note |<br />
+|---|---|---|---|<br />
+| FY2021 | 230 | 1,799 | Early-stage GAAP profitability; FCF already exceptional |<br />
+| FY2022 | 325 | 2,173 | Steady GAAP improvement; FCF growing consistently |<br />
+| FY2023 | 1,731 | 2,704 | Includes $1.05B deferred tax benefit — not recurring |<br />
+| FY2024 | 1,425 | 3,415 | Normalising; FCF trend intact |<br />
 | FY2025 | 1,748 | 4,576 | FCF +34% YoY; SBC 14.7% of revenue |</p>
 <p>GAAP net income is volatile due to the one-time tax benefit (FY2023) and ongoing SBC treatment, but FCF is the more reliable consistency signal — five consecutive years of growth with no single year of decline.</p>
 <p><strong>Worst year:</strong> FY2021 — FCF of $1.8B at a 30.5% margin was already exceptional for a company at that revenue scale.</p>
@@ -164,11 +164,11 @@
 <p><strong>FCF / Net Income ratio:</strong> FY2025 = $4,576M / $1,748M = <strong>2.62×</strong>; FY2024 = $3,415M / $1,425M = <strong>2.40×</strong>. Both well above 1.0×, confirming high-quality cash-generative earnings.</p>
 <p><strong>Verdict: Highly predictable.</strong> The FCF stream is the most consistent element; GAAP is noisier but the cash generation is unambiguous. This predictability justifies high confidence in earnings power — which makes the valuation debate a cleaner question: what is the right price for this level of quality and predictability?</p>
 <h3 id="33-capital-requirements-the-wonderful-business-test">3.3 Capital Requirements — The "Wonderful Business" Test</h3>
-<p><strong>CapEx as % of revenue (5-year trend):</strong>
-- FY2021: $392M / $5,896M = 6.6%
-- FY2022: $550M / $7,245M = 7.6%
-- FY2023: $694M / $8,971M = 7.7%
-- FY2024: $852M / $10,984M = 7.8%
+<p><strong>CapEx as % of revenue (5-year trend):</strong><br />
+- FY2021: $392M / $5,896M = 6.6%<br />
+- FY2022: $550M / $7,245M = 7.6%<br />
+- FY2023: $694M / $8,971M = 7.7%<br />
+- FY2024: $852M / $10,984M = 7.8%<br />
 - FY2025: $868M / $13,278M = <strong>6.5%</strong> (declining as revenue scales)</p>
 <p>CapEx intensity is modest and declining. ServiceNow's cloud infrastructure CapEx is primarily data centre capacity.</p>
 <p><strong>ROIC trend (3 years):</strong> 13.1% (FY2023) → 9.3% (FY2024) → 9.0% (FY2025). Decline driven by $9.8B goodwill absorption, not underlying deterioration. Legacy ROIC (ex-goodwill) would be substantially higher.</p>
@@ -359,9 +359,9 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Sensitivity table:</strong>
-- 10% discount rate → ~$109.65/share (stock at 14% premium)
-- 11% discount rate → ~$82.50/share (stock at 51% premium)
+<p><strong>Sensitivity table:</strong><br />
+- 10% discount rate → ~$109.65/share (stock at 14% premium)<br />
+- 11% discount rate → ~$82.50/share (stock at 51% premium)<br />
 - 12% discount rate → ~$64.80/share (stock at 93% premium)</p>
 <p>Note: The config.yaml base DCF intrinsic of ~$65.46/share (which drives the OEY anchor of 3.87%) was derived using more conservative owner earnings growth assumptions than the 18% used above. The $65.46 figure is closest to the 12% sensitivity run — consistent with using a higher risk premium for a business with $7.5B in post-Armis leverage and an active DOJ investigation. The config.yaml anchors the margin-of-safety framework to this more conservative number, which is the appropriate standard for a value investor.</p>
 <h3 id="52-earnings-power-value-epv">5.2 Earnings Power Value (EPV)</h3>
@@ -419,9 +419,9 @@
 </tr>
 </tbody>
 </table>
-<p><strong>No margin of safety exists at $124.88.</strong> The current price exceeds every conservative valuation method by a substantial margin. Entry prices for a value investor:
-- <strong>25% MoS on base DCF intrinsic ($65.46):</strong> entry ≤ <strong>$49/share</strong> (config.yaml buy threshold OEY 5.37%)
-- <strong>40% MoS on base DCF intrinsic ($65.46):</strong> entry ≤ <strong>$39/share</strong>
+<p><strong>No margin of safety exists at $124.88.</strong> The current price exceeds every conservative valuation method by a substantial margin. Entry prices for a value investor:<br />
+- <strong>25% MoS on base DCF intrinsic ($65.46):</strong> entry ≤ <strong>$49/share</strong> (config.yaml buy threshold OEY 5.37%)<br />
+- <strong>40% MoS on base DCF intrinsic ($65.46):</strong> entry ≤ <strong>$39/share</strong><br />
 - <strong>25% MoS on the 10% DCF ($109.65):</strong> entry ≤ <strong>$82/share</strong> (if using optimistic 18% growth and 10% discount rate)</p>
 <hr />
 <h2 id="section-6-current-valuation-snapshot">SECTION 6 — CURRENT VALUATION SNAPSHOT</h2>
@@ -482,9 +482,9 @@
 </table>
 <p><strong>Owner Earnings Yield vs. 10-year Treasury:</strong> At 2.03%, the OEY is materially below a risk-free US Treasury yield (~4.4–4.7% as of August 2026 conditions). Investors are accepting a negative equity risk premium. This is only rational if the market's growth expectations — roughly 7.8% perpetual owner earnings growth (see §6.2) — materialise consistently.</p>
 <h3 id="62-what-growth-rate-is-the-market-pricing-in">6.2 What Growth Rate Is the Market Pricing In?</h3>
-<p>Using Gordon Growth Model: $129,110M = $2,621M × (1 + g) / (0.10 − g). Solving:
-→ $12,911M − $129,110M × g = $2,621M + $2,621M × g
-→ $10,290M = g × $131,731M
+<p>Using Gordon Growth Model: $129,110M = $2,621M × (1 + g) / (0.10 − g). Solving:<br />
+→ $12,911M − $129,110M × g = $2,621M + $2,621M × g<br />
+→ $10,290M = g × $131,731M<br />
 → <strong>Implied g ≈ 7.81%</strong></p>
 <p>The market is pricing in approximately 7.8% perpetual growth in owner earnings. In the context of a company with 14.7% SBC/revenue and $7.5B acquisition debt, 7.8% <em>perpetual</em> owner earnings growth from a compressed base of $2.6B requires sustained execution at roughly the base-case level across the full horizon without meaningful multiple compression.</p>
 <p><strong>Characterisation: Demanding.</strong> Slightly below the base subscription revenue CAGR (20%) but well above GDP, and perpetual — meaning the market embeds the assumption that this elevated growth rate never normalises. This is an optimistic but not impossible outcome for a business with the renewal rates ServiceNow demonstrates. A value investor wants the opposite: a price that assumes normalisation and rewards you if growth stays elevated.</p>

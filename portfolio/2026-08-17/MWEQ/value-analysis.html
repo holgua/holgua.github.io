@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MWEQ — ETF Value Analysis (Buffett/Munger Lens) — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="index.html">← MWEQ report</a></p>
+<h1 id="mweq-etf-value-analysis-buffettmunger-lens">MWEQ — ETF Value Analysis (Buffett/Munger Lens)</h1>
+<p><em>Snapshot: 2026-08-10T16:01:13.247462+00:00</em>. Source: Market-Data.json sidecar.</p>
+<blockquote>
+<p>A look-through analysis of the basket as a set of businesses, not as a vehicle. The vehicle side lives in <code>MWEQ-Vehicle-Profile.md</code>. The verb decision lives in <code>14-Thesis-Validate</code>.</p>
+</blockquote>
+<hr />
+<h2 id="1-look-through-valuation">1. Look-Through Valuation</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Long-run S&amp;P 500 reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basket Trailing P/E</td>
+<td>20.64</td>
+<td>~16</td>
+</tr>
+<tr>
+<td>Basket Earnings Yield</td>
+<td>4.85%</td>
+<td>~6.25%</td>
+</tr>
+<tr>
+<td>Distribution Yield</td>
+<td>2.24%</td>
+<td>~1.8%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read</strong>: At a basket earnings yield of 4.85%, MWEQ trades 23% below the long-run S&amp;P 500 reference yield of 6.25% — meaning the market is pricing this basket somewhat expensively relative to historical norms. The trailing P/E of 20.64× sits above the long-run ~16× reference, reflecting the extended valuation environment across developed-market equities. On the positive side, the distribution yield of 2.24% is modestly above the S&amp;P 500 historical average of ~1.8%, consistent with the equal-weight tilt toward higher-yielding ex-US names. The basket is not historically cheap, but it is priced meaningfully better than cap-weighted peers like URTH, where concentrated mega-cap positions have driven earnings yield further below 4%.</p>
+<blockquote>
+<p><strong>CAPE deferred</strong> — requires aggregated constituent earnings history not exposed by yfinance for ETFs. Defer to V2.</p>
+</blockquote>
+<h2 id="2-equity-risk-premium">2. Equity Risk Premium</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basket Earnings Yield</td>
+<td>4.85%</td>
+</tr>
+<tr>
+<td>Risk-free rate (^TNX)</td>
+<td>4.696%</td>
+</tr>
+<tr>
+<td><strong>Equity Risk Premium</strong></td>
+<td><strong>0.15%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Judgment</strong>: MIXED — ERP of 0.15% falls in the 0.0–2.0% MIXED band (confirm_min_pct: 2.0%; mixed_min_pct: 0.0%).</p>
+<p>The ERP of just 0.15 percentage points is the single most important number in this snapshot. At current US 10-year yields of ~4.70%, the equal-weight basket is offering almost no premium over a risk-free government bond. Historically a healthy equity risk premium runs 3–5%; anything below 2% is a caution flag, and below 1% it is hard to justify equity risk on a pure yield basis. The equal-weight tilt should structurally deliver a higher basket EY than cap-weighted MSCI World — and it does, compared to URTH — but high bond yields have eroded that advantage. The ERP does not yet reach zero (which would trigger a CHALLENGES verdict per the thesis), but the margin is thin enough that one quarter of further yield compression could push it negative.</p>
+<h2 id="3-look-through-quality-top-10-deduped">3. Look-Through Quality (top-10 deduped)</h2>
+<blockquote>
+<p><strong>Equal-weight caveat</strong>: MWEQ rebalances ~1,500 holdings to near-equal weight quarterly. The top-10 constituents shown here are the intra-quarter drift leaders — names that have appreciated the most since the last rebalance. They are not representative of the full basket's quality profile and tend to be higher-growth, higher-ROE names. Interpret the top-10 ROE figures as a ceiling, not an average.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Median ROE (top-10)</strong></td>
+<td><strong>30.93%</strong></td>
+</tr>
+<tr>
+<td>Weighted-Mean ROE (top-10)</td>
+<td>42.60%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Buyback-distortion caveat</strong>: The spread between median ROE (30.93%) and weighted-mean ROE (42.60%) is 11.67 percentage points — above the 10 pp threshold. Several constituents (KLAC 87.5%, Kioxia 87.1%, MU 66.6%) carry extremely high ROEs driven by capital-light business models or leveraged buyback programs that mechanically inflate the metric. Weight toward these names inflates the weighted mean above what the median suggests is typical.</p>
+</blockquote>
+<p><strong>Top-10 constituent ROE table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Weight</th>
+<th>ROE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ALAB</td>
+<td>Astera Labs Inc</td>
+<td>0.15%</td>
+<td>25.83%</td>
+</tr>
+<tr>
+<td>DELL</td>
+<td>Dell Technologies Inc</td>
+<td>0.14%</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>KLAC</td>
+<td>KLA Corp</td>
+<td>0.14%</td>
+<td>87.50%</td>
+</tr>
+<tr>
+<td>AMAT</td>
+<td>Applied Materials Inc</td>
+<td>0.14%</td>
+<td>39.69%</td>
+</tr>
+<tr>
+<td>6981.T</td>
+<td>Murata Manufacturing Co Ltd</td>
+<td>0.14%</td>
+<td>10.06%</td>
+</tr>
+<tr>
+<td>285A.T</td>
+<td>Kioxia Holdings Corp</td>
+<td>0.14%</td>
+<td>87.11%</td>
+</tr>
+<tr>
+<td>MRVL</td>
+<td>Marvell Technology Inc</td>
+<td>0.13%</td>
+<td>16.03%</td>
+</tr>
+<tr>
+<td>MU</td>
+<td>Micron Technology Inc</td>
+<td>0.13%</td>
+<td>66.64%</td>
+</tr>
+<tr>
+<td>7735.T</td>
+<td>Screen Holdings Co Ltd</td>
+<td>0.13%</td>
+<td>18.87%</td>
+</tr>
+<tr>
+<td>8035.T</td>
+<td>Tokyo Electron Ltd</td>
+<td>0.12%</td>
+<td>30.93%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read</strong>: The intra-quarter drift leaders are heavily semiconductor- and semiconductor-equipment-weighted — a reflection of the outsized price performance in that sector between rebalance dates. Median look-through ROE of 30.93% is well above the equal-weight thesis threshold of 15% (confirm_min_pct) and comfortably above the CHALLENGES floor of 12%. However, these are the basket's best-performing names by recent price action, not its average names. The full ~1,500-holding basket will exhibit a substantially lower median ROE, likely in the 12–18% range consistent with developed-market mid-cap equities. Quality at the top of the drift leaders is MIXED-to-HIGH; quality of the full basket is structurally lower by design.</p>
+<h2 id="4-margin-of-safety">4. Margin of Safety</h2>
+<table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>Yield</th>
+<th>P/E equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buy band edge</td>
+<td>6.25%</td>
+<td>16.0×</td>
+</tr>
+<tr>
+<td>Fair value</td>
+<td>5.00%</td>
+<td>20.0×</td>
+</tr>
+<tr>
+<td>Trim band edge</td>
+<td>4.00%</td>
+<td>25.0×</td>
+</tr>
+<tr>
+<td><strong>Current</strong></td>
+<td><strong>4.85%</strong></td>
+<td><strong>20.64×</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Position</strong>: WITHIN BAND — current basket earnings yield of 4.85% sits between the trim-band edge (4.00%) and the fair-value anchor (5.00%).</p>
+<p><strong>Margin vs. fair-value yield</strong>: −0.155 pp absolute (current yield is below the 5.00% fair-value anchor), roughly −3.1% relative. The basket is priced modestly above fair value on an earnings-yield basis. There is no margin of safety at current prices — the market is asking a slight premium to fair value, not offering a discount. This is not a buy signal; it is a hold. The basket would need to reprice to ~6.25% earnings yield (P/E ~16×) to reach the buy band, implying roughly a 22% decline in price with earnings flat.</p>
+<h2 id="5-owner-perspective-buffett-frame">5. Owner Perspective (Buffett Frame)</h2>
+<p><em>"Would Berkshire deploy cash into this basket today?"</em></p>
+<p>At a 0.15% equity risk premium and a basket earnings yield of 4.85%, Berkshire would almost certainly not deploy significant capital into this basket today. The core Berkshire test is simple: can we earn more than the risk-free rate, with reasonable certainty, by owning this set of businesses? At current 10-year yields near 4.70%, the answer is barely yes — and "barely yes" is not Buffett's standard. The median ROE of the visible top-10 drift leaders (30.93%) is attractive at face value, but Berkshire invests in businesses it understands and controls, not sampling-replicated equal-weight baskets of 1,500 names. The structural virtue of MWEQ — deliberate dilution of mega-cap concentration, higher EY than URTH, developed-market breadth — is a diversification argument, not a value argument. Buffett would frame this as "paying fair price for average businesses, diversified beyond the point of edge." That is a reasonable holding posture for a portfolio allocator who accepts index-like returns; it is not a compelling deployment of opportunistic capital.</p>
+<h2 id="6-bear-base-bull-on-5-year-forward-return">6. Bear / Base / Bull on 5-Year Forward Return</h2>
+<p>§6 scenarios follow <code>Pipeline-Conventions.md §13</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>EPS growth</th>
+<th>Terminal P/E</th>
+<th>Multiple change (annualised)</th>
+<th>Dividend yield</th>
+<th><strong>Forward return</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>−11%</td>
+<td>12×</td>
+<td>contraction from 20.64×</td>
+<td>2.24%</td>
+<td><strong>−19.25%</strong></td>
+</tr>
+<tr>
+<td>Base</td>
+<td>6%</td>
+<td>20×</td>
+<td>flat from 20.64×</td>
+<td>2.24%</td>
+<td><strong>7.61%</strong></td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>8%</td>
+<td>25×</td>
+<td>expansion from 20.64×</td>
+<td>2.24%</td>
+<td><strong>14.15%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>: The bear EPS growth of −11.2% is derived by the <code>compute_etf_forward_returns.py</code> script from the basket cyclicality score (1.12 — moderate-to-high cyclicality given the semiconductor drift-leader concentration) applied against a bear-scenario EPS contraction formula. The terminal P/E bear of 12× is user-configured in config.yaml — lower than the ERP-anchored default — reflecting the belief that an equal-weight developed-market basket in a risk-off environment should trade at a more substantial discount. This override is flagged in Forward-Returns.json warnings.</p>
+<p><strong>Read</strong>: The wide spread between bear (−19.3%) and bull (+14.2%) reflects two sources of uncertainty operating simultaneously: earnings cyclicality (semiconductor-heavy drift leaders in a downturn) and multiple compression (from 20.64× to 12× in the bear case, a −42% valuation de-rating). The base case of 7.6% annualised is uninspiring relative to the current risk-free rate of 4.7% — that is an ERP of roughly 2.9 percentage points on a 5-year forward basis, better than the spot ERP of 0.15% but still modest. The risk-reward is asymmetric to the downside: the bear scenario gives back nearly three years of base returns in a single bad year. For a holder already in the position this is a hold; for new capital allocation there are better-compensated opportunities elsewhere in the portfolio.</p>
+<hr />
+<h2 id="7-data-gaps">7. Data Gaps</h2>
+<ul>
+<li><strong>roe:DELL</strong> — Dell Technologies' ROE was not available from yfinance at snapshot time. Dell's capital structure is complex (significant debt from the EMC acquisition) and its ROE is likely high but distorted by leverage; absence does not materially change the median or weighted-mean ROE given the basket's other nine entries.</li>
+<li><strong>expense_ratio_pct</strong> — yfinance did not return an expense ratio for MWEQ.DE at snapshot time. The TER of 0.20% is documented in the Invesco factsheet and config.yaml; the missing field is a data-source gap, not an unknown cost.</li>
+</ul>
+<hr />
+<h2 id="8-ranking-inputs-machine-readable-closing-block">8. Ranking Inputs (machine-readable closing block)</h2>
+<pre><code class="language-yaml">ranking_inputs:
+  quality_tier: Medium
+  quality_tier_basis: &quot;ERP 0.15% (MIXED); median ROE top-10 30.93% above 15% confirm bar but equal-weight drift-leader caveat applies; full basket ROE structurally lower&quot;
+  forward_irr_bear_pct: -19.25
+  forward_irr_base_pct: 7.61
+  forward_irr_bull_pct: 14.15
+</code></pre>
+<hr />
+<h2 id="end-of-value-analysis-etf">End of Value-Analysis-ETF</h2>
+</main>
+</body>
+</html>

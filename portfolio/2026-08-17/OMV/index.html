@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OMV: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-17 overview</a></p>
+<h1 id="omv-the-bet-still-works">OMV: The Bet Still Works</h1>
+<blockquote class="notice notice--error">
+<p><strong>Errors</strong></p>
+<ul>
+<li>DATA_ERROR: upcoming earnings fetch failed for OMV: ERROR:ImportError:`Import lxml` failed.  Use pip or conda to install the lxml package. — re-run: python3 src/fetch/fetch_market_data.py OMV</li>
+<li>FAIR-VALUE CONFLICT (99% gap): Two built-in valuation methods disagree on what OMV is worth. The FCF-yield anchor (config fair_value = 5.6%) says fair value is ~$95: at $1740.0M FCF ÷ 5.6% ÷ 326M shares, today's $62 implies a 8.6% FCF yield vs the 5.6% anchor, and you would only add near $71 (7.5% yield threshold). The scenario-band model says $48: it applies the price multiples that peers (ENI) and OMV's own trading history trade at to projected financials — on that view, $62 is above the $48 scenario estimate — priced beyond the base case. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.</li>
+</ul>
+</blockquote>
+
+<blockquote class="notice notice--info">
+<p><strong>Information</strong></p>
+<ul>
+<li>Bear FVB central is -$1 (DCF inapplicable under negative FCF); peer_p_b fallback $38.90 used as bear anchor. FVB regenerated 2026-08-10.</li>
+<li>All FVB centrals fell materially vs prior run (bear $13→-$1, base $60→$48, bull $227→$169) due to compressed peer multiples in August 2026.</li>
+<li>STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]</li>
+<li>Owner earnings = config.valuation.owner_earnings_override_usd (1.74B; yield 7.58%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.</li>
+<li>[FAIR-VALUE-DRIFT] config.valuation.fair_value (5.6) diverges from current Owner Earnings Yield (%) (7.577) by 35.3% (threshold: 30%). Consider updating fair_value in Holdings/OMV/config.yaml.</li>
+</ul>
+</blockquote>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-17 · Latest filing 2025-12-31.</em></p>
+<p>The bet is working. OMV's operating cash flow held above €5 billion for the fifth consecutive year in 2025, its chemicals investment is intact, and interest coverage is comfortable — no exit condition has fired. At €62, OMV sits below the buy edge and meaningfully below fair value as that is defined by the income-yield method. The long-run expected return is about 11% a year — a healthy equity premium over the risk-free rate. The one condition to watch is the effective tax rate: at 54.7% in 2025, it sits just 0.3 percentage points below the level at which exit condition three would trigger in any year after 2026.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at €63. Trim at €104. Exit at €180.</p>
+<p>At €63, the long-run total return is about 10% a year. At today's €62, about 11% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>current/buy                 trim                                            exit
+€62/€63                     €104                                            €180
+├───────────────────────────┼──────────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the share price moves to the fair-value central estimate, returns work out to bear -15%, base -9%, bull +36% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear     base           expected                                            bull
+-14.7%   -8.9%          +0.9%                                             +36.1%
+├────────┼──────────────┼──────────────────────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 50% base, 25% bull): about +0.9% a year over the next three years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>OMV scores -5.36, ranking 16 of 21 active holdings by this measure — it sits in the lower quarter of the portfolio, reflecting a scenario-weighted expected return that barely covers the drag of currency conversion and Austrian dividend tax before the hurdle rate is even applied.</p>
+<blockquote>
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.00 × (0.89% − 1.32% − 4.93%)<br />
+  &nbsp;&nbsp;= 1.00 × −5.36%<br />
+  &nbsp;&nbsp;= <strong>-5.36</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.00.</strong> OMV sits in the middle moat tier; the weight is one, so it leaves the score unchanged. The holding earns this classification through two credible but non-self-reinforcing moat sources — Central and Eastern European exploration licences backed by the Austrian state's 31.5% ownership stake, and Borouge Group International's Abu Dhabi feedstock cost advantage — neither of which compounds on its own.</p>
+<p><strong>Expected return: 0.89%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking three years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (25% likelihood) — annualised return -14.7%.</strong> The bear case assumes Brent crude falls to roughly 55 US dollars per barrel simultaneously with the European Union's windfall profit tax being re-enacted, turning cash flow negative and forcing a dividend cut.</p>
+<p><strong>Base (50% likelihood) — annualised return -8.9%.</strong> The base case has Brent stabilising in the 70–80 US dollar per barrel range, the windfall levy remaining a one-off event, and Borouge Group International generating a neutral contribution as polyolefin margins recover from their recent trough.</p>
+<p><strong>Bull (25% likelihood) — annualised return +36.1%.</strong> The bull case has Brent recovering above 90 US dollars per barrel, the effective tax rate normalising toward 35% as windfall taxes lapse, and Borouge Group International delivering returns above the cost of capital, with the special dividend resuming.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.25 × (−14.7) + 0.50 × (−8.9) + 0.25 × 36.1 = +0.90%.</p>
+<p><strong>Hurdle rate: 4.93%.</strong> The hurdle rate is 4.93% — the 0.93% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of -5.36 puts OMV 16th of 21 active holdings — in the lower tier of the portfolio, where the weighted return falls well short of the hurdle even before quality weighting is applied.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The FY2025 annual filing confirmed that OMV's operating cash engine remains intact. Cash flow from operations came in at €5,215 million — a 4.4% decline from the prior year's €5,456 million, but the fifth consecutive year above the €4.5 billion threshold that the thesis defines as the bull-signal line. A consistently negative accruals ratio of −0.08 confirms that cash earnings are real rather than a product of accounting conventions. No exit condition was triggered.</p>
+<p>Three items are worth tracking before the next filing. The effective tax rate reached 54.7% in 2025, which sits 0.3 percentage points below the 55% level at which exit condition three fires — but only for years after 2026. The trigger is not yet breached, and the rate has edged down from its 58.4% peak in 2023. Five European Union finance ministers, including Austria's, signed a joint letter in April 2026 calling for a new solidarity levy; if enacted for 2026, that exit condition would likely cross. Capital expenditure as a share of operating cash flow is estimated at around 74% for 2025, broadly flat from 2024 and still below the 90% exit threshold, though the hoped-for spending peak has not yet arrived. Incoming chief executive Emma Delaney, joining from bp in September 2026 with a stated focus on capital discipline, is the most significant near-term catalyst for that metric. The BGI chemicals stake — now a 46.94% position in Borouge Group International, the world's fourth-largest polyolefin producer — was valued at €5,255 million at year-end 2025, 31% above the written exit floor and above the €5 billion stability threshold.</p>
+<p>For a full assessment of where the share price stands against these conditions, see <a href="#the-share-price">The Share Price</a>.</p>
+<h2 id="about-omv">About OMV</h2>
+<p>OMV is Austria's largest oil, gas and chemicals company. Its revenue divides across three operations: an upstream arm that finds and extracts hydrocarbons in Central and Eastern Europe, Norway, and the United Arab Emirates; a downstream arm that refines crude oil and distributes fuel through a network of filling stations concentrated in Austria and Romania; and a 46.94% equity stake in Borouge Group International, a global producer of polypropylene and polyethylene that was assembled in March 2026 by combining OMV's previous Borealis holding with Abu Dhabi National Chemicals Company's Borouge joint venture and NOVA Chemicals of North America. The result is the world's fourth-largest polyolefin producer, giving OMV a proportional claim on a chemicals business with structurally low feedstock costs from Abu Dhabi gas reserves.</p>
+<p>The company's fortunes are closely tied to the oil price. Operating cash flow held in a range between €5.2 billion and €7.8 billion over the five years to 2025, despite a 61% collapse in headline revenue from the 2022 energy-crisis peak — a result of the way integrated oil producers hedge price risk across their upstream and downstream segments. Revenue at that peak was €62.3 billion; by 2025 it had fallen to €24.3 billion, while cash generation barely moved. Net income is a different story: it swung from €5.2 billion in 2022 to €1.5 billion in 2025, largely because the effective tax rate — the share of pre-tax profit taken by national and European authorities — sat between 51% and 58% in recent years, including a solidarity levy of €552 million in 2023 that the Austrian government advocated for while simultaneously holding 31.5% of OMV through the state holding company ÖBAG. The Abu Dhabi sovereign fund's investment arm, XRG, holds a further 24.9%. Combined, state-affiliated entities control more than half the company's votes.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The central bet is that OMV's cash-generating engine is durable enough to sustain a meaningful dividend yield, and that the BGI chemicals pivot will eventually produce returns above the cost of capital — all while none of the six written exit conditions fires. That durability rests on the following conditions:</p>
+<ol>
+<li><strong>Annual operating cash flow remains at or above €4.5 billion at prevailing oil prices.</strong> The thesis requires OCF to hold above this line to confirm that the integrated model is genuinely resilient across the commodity cycle, not just at commodity-price peaks. Below €3.5 billion at Brent above 60 US dollars per barrel would be the bear warning signal.</li>
+</ol>
+<p><em>Latest reading:</em> €5,215 million in 2025 (2025-12-31). This is the fifth consecutive year above the threshold. Operating cash flow has held between €5.2 billion and €7.8 billion over five years despite revenue falling 61% from its 2022 peak — a strong demonstration of structural cash generation.</p>
+<ol>
+<li><strong>Capital expenditure as a share of operating cash flow stays below 90% for two consecutive years.</strong> If this ratio crosses 90% for two consecutive years, it would signal that the business is becoming a cash-flow trap: spending more on maintenance and expansion than it generates before returning capital to shareholders, with dividends funded by debt rather than operations.</li>
+</ol>
+<p><em>Latest reading:</em> Approximately 73.8% in 2025 (2025-12-31), using the broader capital expenditure definition that includes exploration and BGI-related spending. A narrower proxy using investing cash flow gives approximately 53%. Both readings remain below the 90% exit threshold. The spending peak expected in 2025 has not yet been confirmed by filed data.</p>
+<ol>
+<li><strong>BGI chemicals stake keeps its book value above €4.0 billion for two consecutive years.</strong> The 46.94% stake in Borouge Group International is the primary long-term value-creation vehicle. If the book value falls below €4.0 billion for two consecutive years, it would confirm that the chemicals pivot is destroying rather than creating value.</li>
+</ol>
+<p><em>Latest reading:</em> €5,255 million at 2025-12-31 — 31% above the exit floor and above the €5.0 billion stability threshold. This is the last annual filing under the old Borealis entity label; the BGI consolidation completed in March 2026, so future filings will report a larger combined entity. The exit threshold may need recalibrating to reflect the new scale.</p>
+<ol>
+<li><strong>Effective tax rate stays below 55% in any year after 2026.</strong> The 2023 solidarity levy pushed the effective tax rate to 58.4% and cost OMV €552 million. If the levy recurs and the effective tax rate exceeds 55% in any year from 2027 onward, exit condition three fires — confirming that the EU windfall tax is a structural drag on earning power rather than a one-off.</li>
+</ol>
+<p><em>Latest reading:</em> 54.7% in 2025 (2025-12-31). This is 0.3 percentage points below the trigger level, but the exit condition applies only to years after 2026, so FY2025 does not trigger it. The rate has declined from its 2023 peak. Five EU finance ministers signed a letter in April 2026 calling for a new solidarity levy; if enacted for 2026, exit condition three would likely cross in the subsequent annual filing.</p>
+<ol>
+<li><strong>Interest coverage ratio stays above 4.0 times for two consecutive years.</strong> This is the leverage safeguard: EBIT divided by interest expense must not fall below 4.0 times for two consecutive years, which would signal that the debt load is threatening the investment programme.</li>
+</ol>
+<p><em>Latest reading:</em> 8.0 times in 2025 (2025-12-31), down from 10.8 times in 2024 and 12.6 times in 2023 as operating income compressed with lower commodity prices. The coverage ratio remains well above the exit threshold.</p>
+<ol>
+<li><strong>CEE fuel sales volume in Austria and Romania does not decline more than 10% over any two-year period.</strong> PKN Orlen, the Polish state energy champion, has been expanding aggressively across Central and Eastern Europe after merging with several Polish energy companies. A 10% or more decline in OMV's fuel volumes across the two core markets over two years would signal structural moat erosion in the downstream retail business.</li>
+</ol>
+<p><em>Latest reading:</em> 16.2 million tonnes across eight European countries in 2024 (last available). FY2025 data is not available from structured filing data — the annual report's narrative section, which would contain this figure, could not be extracted from the electronic filing format. Refer to the annual report published at omv.com for the 2025 update.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At a current share price of €62, OMV sits below the buy edge of €63 — the point at which the income yield on owner earnings clears the 7.5% threshold that <a href="#the-rules">the Rules</a> define as cheap. Put differently, at today's price, every €100 invested in OMV notionally buys about €7.6 worth of annual owner earnings (net income, using the D&amp;A-as-maintenance-proxy approach that the thesis employs). This is the buy band: at or below this price, the margin of safety on the intrinsic value calculation is at least 25%.</p>
+<p>The fair-value anchor under the income-yield method sits at €84 per share — the price at which owner earnings would yield exactly 5.6%, the rate that fair compensation for holding a narrow-moat business implies. At €62, the current price sits meaningfully below that anchor.</p>
+<p>It is worth being transparent about a complication. Two methods for assessing OMV's value disagree substantially. The income-yield approach described above says fair value is around €84 and today's price is cheap. The scenario-band model — which applies the price-to-earnings multiples at which OMV's closest peers trade — places the base-case fair value at around €42 per share (based on peer multiples regenerated in August 2026), which would make today's price of €62 materially above fair value on that method. The scenario-band model was regenerated in August 2026 using updated peer multiples, which compressed the estimates. The errors box above describes this conflict in detail. Both methods have merits and limits; the pre-committed framework anchors to the income-yield approach, but readers should be aware that a peer-multiple lens gives a less favourable reading.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>Two standing orders and two price alerts operationalise the share-price bands. Each is the direct application of a pre-committed instruction.</p>
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at €84, the fair-value anchor under the income-yield method. When the share price crosses this level, it has returned to a neutral reading; no immediate action follows, but a fresh check of the conditions is warranted before adding further.<br />
+- A second alert at €63, the cheap edge. The crossing arms the buy order; before adding, the latest re-validation should confirm the conditions are still working — in particular that the effective tax rate has not crossed 55% for a year after 2026.</p>
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at €63. Pre-committed instructions call for adding in tranches once the price closes at or below this line and the conditions remain working. The order may be staged across two tranches; the second tranche should not be committed until the operating cash flow trend confirms it is not deteriorating.<br />
+- A standing trim order at €104. Pre-committed instructions call for trimming 25–33% of the position when the price closes at or above this line. At that level, the income yield would fall to approximately 4.5% — stretched valuation territory, well above even the bull-case scenario fair value of around €58.</p>
+<p>No exit-tier price order has been written for OMV. A price of €180 emerges mechanically from the valuation framework, but no specific instruction for that level exists in the pre-committed action plan beyond the six exit conditions listed in <a href="#the-case-for-the-bet">The Case for the Bet</a>. Any of those six conditions firing would require exiting the full position regardless of price.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>Three wobbles were noted at the time of the latest annual filing review, none of which changes the overall verdict.</p>
+<p><strong>The effective tax rate is uncomfortably close to the exit trigger.</strong> At 54.7% in 2025, the rate sits just 0.3 percentage points below the level that would trigger exit condition three — but that condition applies only to years from 2027 onward, so the 2025 reading does not breach it. The rate has actually declined from its 2023 peak of 58.4%, suggesting partial normalisation. The risk is what happens in 2026: five EU finance ministers, including Austria's, signed a letter in April 2026 calling for a new solidarity levy. If that levy is enacted for 2026, the 2026 annual filing would likely show the rate crossing 55%, and exit condition three would fire. This is the highest-urgency item to monitor heading into the 2026 reporting cycle.</p>
+<p><strong>Capital expenditure as a share of operating cash flow has not peaked.</strong> The thesis expected 2025 to mark the peak of OMV's capital expenditure cycle, after which spending would moderate as the BGI chemicals consolidation completed and new exploration commitments wound down. That peak has not yet appeared in the filed data. The ratio sits at approximately 74% — well below the 90% exit threshold for two consecutive years, but the direction has not turned. Incoming chief executive Emma Delaney arrives from bp in September 2026 with a stated mandate of capital discipline; her first public guidance on spending is the next data point.</p>
+<p><strong>The fair-value anchor may be stale.</strong> The income-yield method uses 5.6% as the fair-value yield, implying a fair price of around €84. But the current income yield at today's price of €62 is already 7.58%, and the peer-multiple-based scenario model places the base-case fair value at around €42. Both figures suggest the 5.6% anchor — set when the thesis was written — may no longer reflect the level at which the market fairly values an integrated oil and gas company with OMV's risk profile. This does not change the buy-order price (anchored to the 7.5% income-yield threshold independently), but it does affect the trim-order price. A revised anchor of, say, 7.5–8.5% would lower the trim price considerably. For now the pre-committed instructions stand as written; the discrepancy is flagged here so a reader can factor it in.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Windfall tax recurrence at scale.</strong> The 2023 solidarity levy cost OMV €552 million and pushed the effective tax rate to 58.4%. A structurally recurring EU windfall tax — which the April 2026 five-country finance ministers' letter has made more plausible — would reduce annual owner earnings by 30–40% on a sustained basis, making the income-yield argument for the current price invalid.</li>
+<li><strong>Oil price collapse combined with chemicals trough.</strong> The bear scenario (25% probability) requires Brent crude to fall to around 55 US dollars per barrel simultaneously with the EU windfall tax being re-enacted. Under those conditions, cash flow turns negative (approximately minus €1 billion), the dividend requires debt financing, and the share price would likely fall to approximately €34 per share — roughly 45% below today's level — based on a peer book-value anchor as the most credible floor for that scenario.</li>
+<li><strong>Capital expenditure trap materialising.</strong> If the capital expenditure-to-operating cash flow ratio crosses 90% for two consecutive years, the business is effectively consuming its entire cash generation on maintaining and growing the asset base, leaving dividends to be funded by debt. The 5% dividend yield that currently underpins the investment case would be at direct risk of a cut.</li>
+<li><strong>Borouge Group International failing to deliver returns above the cost of capital.</strong> The BGI chemicals pivot is the primary long-term value-creation bet. Polyolefin markets are cyclical, and as of 2025 margins remain in a trough. If the combined entity — Borealis, Borouge, and NOVA Chemicals — consistently earns below the cost of the capital tied up in it, the €5.3 billion book value begins to look like a liability rather than an asset.</li>
+<li><strong>PKN Orlen capturing CEE fuel retail volume.</strong> The Polish state energy champion, after merging with several Polish energy companies, has the scale and access to expand aggressively into Austria and Romania — OMV's strongest retail markets. A sustained 10% or more volume decline over two years would signal that the downstream retail moat is eroding faster than the thesis assumes.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>Several important figures are not available from OMV's structured annual filing data, which uses the European electronic reporting format. Capital expenditure is not tagged in a way the automated pipeline can read — so precise cash flow generation after investment spending cannot be computed directly. Net debt carries the same gap. These two missing numbers are significant because they determine whether the dividend is genuinely self-funding from operations or is drawing down the balance sheet. The thesis uses a proxy — treating depreciation and amortisation as a stand-in for maintenance capital expenditure — which is a simplification and likely understates true spending given that OMV's depreciation runs at €2.5 billion per year while estimated capital expenditure is closer to €3.8 billion.</p>
+<p>The annual report narrative sections — management commentary, governance disclosures, and fuel-volume segment data — could not be extracted from the electronic filing because the document is filed in German and the automated text extraction encountered errors. This means the fuel-sales volume figure for Austria and Romania (exit condition six) is not confirmed for 2025, and the governance disclosures that might reveal unusual ÖBAG-directed capital allocation cannot be assessed from structured data alone.</p>
+<p>The fair-value anchor used in the income-yield method (5.6%) is flagged as potentially stale: it diverges from the current income yield by 35% and from the peer-multiple-based estimate by 56%. Anyone using the buy and trim price levels in <a href="#the-standing-orders">the Standing Orders</a> should be aware that the trim price in particular may be set too high relative to current market pricing of similar businesses.</p>
+<ul>
+<li>Risk-free rate for OMV read from SPY's Market-Data snapshot (per-holding field not present; SPY snapshot: 2026-08-17)</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>The conditions above are governed by five pre-committed rules. These are not judgements made in reviewing OMV's latest results — they were written in advance and apply mechanically.</p>
+<ul>
+<li><strong>If the thesis is confirmed</strong> — operating cash flow above €4.5 billion, capital expenditure ratio declining toward 60%, BGI book value stable or rising above €5.3 billion, effective tax rate below 55%, and interest coverage above 6 times — then hold the current allocation and collect the dividend yield. Do not add new capital at the current price near €62, because the probability-weighted three-year return is negative at this entry level; the thesis requires a lower price for new capital to make sense.</li>
+<li><strong>If the thesis weakens</strong> — defined as capital expenditure above 80% of operating cash flow for one year, BGI book value declining toward €4.5 billion, effective tax rate sustained above 53%, Brent below 60 US dollars per barrel for two consecutive quarters, or PKN Orlen capturing material CEE retail volume — then do not add to the position. Reduce the review cadence to annual and re-evaluate after the next annual filing.</li>
+<li><strong>If the thesis breaks</strong> — any one exit condition fires, as listed in <a href="#the-case-for-the-bet">The Case for the Bet</a> — then exit the full position. Move the proceeds to a European diversified energy fund or to euro cash, depending on the portfolio's concentration at the time.</li>
+<li><strong>If the price falls below the buy band</strong> — owner earnings yield above 7.5%, corresponding to a price at or below approximately €62 per share — then add to the position in two tranches. Confirm that operating cash flow is not deteriorating before committing the second tranche. Maximum addition is 50% of the existing allocation per tranche.</li>
+<li><strong>If the price rises above the trim band</strong> — owner earnings yield below 4.5%, corresponding to a price above approximately €94 per share — then trim 25–33% of the position. At that price the market would be pricing in structural earnings recovery beyond even the bull-case macro assumptions; harvest partial gains and consider re-establishing at a lower yield if conditions warrant.</li>
+</ul>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

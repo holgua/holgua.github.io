@@ -11,7 +11,7 @@
 <main>
 <p class="back"><a href="index.html">← ESTC report</a></p>
 <h1 id="elastic-nv-estc-growth-analysis">Elastic N.V. (ESTC) — Growth Analysis</h1>
-<p><strong>Analyst:</strong> 10-Growth-Analysis | <strong>Date:</strong> 2026-07-20 | <strong>Filing:</strong> 10-K 2026-06-08 | <strong>FY End:</strong> April 30
+<p><strong>Analyst:</strong> 10-Growth-Analysis | <strong>Date:</strong> 2026-07-20 | <strong>Filing:</strong> 10-K 2026-06-08 | <strong>FY End:</strong> April 30<br />
 <em>All figures USD. Source: ESTC-Financial-Analysis.md, ESTC-Financial-Brief.md, 10-K 2026-06-08, config.yaml.</em></p>
 <hr />
 <h2 id="1-investment-stance-growth-lens">§ 1. Investment Stance (Growth Lens)</h2>
@@ -189,34 +189,34 @@
 </ul>
 <p>CEO Ashutosh Kumar (8-K, May 28, 2026): <em>"We achieved the key milestone of FedRAMP High authorization, opening up the federal market for our high-security applications."</em> The federal revenue ramp will likely begin appearing in FY2027–FY2028.</p>
 <h3 id="ai-vector-search-adoption-elser-hybrid-retrieval">AI / Vector Search Adoption (ELSER, Hybrid Retrieval)</h3>
-<p>The 10-K describes the Elasticsearch Platform as incorporating:
-- <strong>Native vector database</strong> — Elasticsearch is the most downloaded open source vector database (10-K, Item 1, Technology Features)
-- <strong>ELSER and hybrid BM25 + vector retrieval</strong> — enabling Relevance Without Compromise (RWC) combining keyword precision with semantic understanding
-- <strong>Better Binary Quantization</strong> — reduces vector memory requirements without accuracy loss; a competitive differentiation against pure-play vector databases (Pinecone, Qdrant, Weaviate)
-- <strong>Agent Builder</strong> — an AI conversational capability enabling agentic workflows grounded in customer data (RAG-style architectures)
+<p>The 10-K describes the Elasticsearch Platform as incorporating:<br />
+- <strong>Native vector database</strong> — Elasticsearch is the most downloaded open source vector database (10-K, Item 1, Technology Features)<br />
+- <strong>ELSER and hybrid BM25 + vector retrieval</strong> — enabling Relevance Without Compromise (RWC) combining keyword precision with semantic understanding<br />
+- <strong>Better Binary Quantization</strong> — reduces vector memory requirements without accuracy loss; a competitive differentiation against pure-play vector databases (Pinecone, Qdrant, Weaviate)<br />
+- <strong>Agent Builder</strong> — an AI conversational capability enabling agentic workflows grounded in customer data (RAG-style architectures)<br />
 - <strong>Jina AI acquisition ($43.4M, October 2025)</strong> — added multimodal, multilingual embedding models and semantic reranking to the retrieval stack</p>
 <p>CEO commentary: <em>"Our AI-powered search capabilities are resonating with customers as they look to build retrieval-augmented generation applications and AI agents that require relevance and accuracy."</em></p>
 <p>The AI vector search opportunity is additive to the existing Observability and Security segments. Customers already using Elastic for logging or SIEM are natural adopters of Elastic's search/RAG capabilities — a cross-sell motion requiring no new deployment infrastructure.</p>
 <h3 id="platform-consolidation-three-use-cases-single-data-layer">Platform Consolidation (Three Use Cases, Single Data Layer)</h3>
-<p>Elastic's architecture positions three solutions (Search &amp; AI, Elastic Observability, Elastic Security) on a single Elasticsearch data layer. Strategic value:
-- <strong>Data duplication elimination:</strong> Logs ingested for Observability are immediately queryable for Security SIEM — no re-ingestion, no additional cost
-- <strong>AI cross-solution benefit:</strong> LLM models and vector indexes built for Search improve anomaly detection in Observability and threat detection in Security
+<p>Elastic's architecture positions three solutions (Search &amp; AI, Elastic Observability, Elastic Security) on a single Elasticsearch data layer. Strategic value:<br />
+- <strong>Data duplication elimination:</strong> Logs ingested for Observability are immediately queryable for Security SIEM — no re-ingestion, no additional cost<br />
+- <strong>AI cross-solution benefit:</strong> LLM models and vector indexes built for Search improve anomaly detection in Observability and threat detection in Security<br />
 - <strong>Land-and-expand:</strong> The 10-K notes Elastic often enters through one use case; multi-use-case expansion is the primary NER driver</p>
 <p>From the 10-K: <em>"we often enter an organization through a single use case or solution… knowledge of Elastic often spreads within an organization to new teams of developers, architects, IT operations personnel, security personnel, and senior executives, leading to more use cases."</em></p>
 <p>This platform consolidation story is the structural underpinning of the 112% NER and the 1,720 customers in the &gt;$100K ACV cohort.</p>
 <h3 id="dps-cloud-consumption-model-deepening">DPS / Cloud Consumption Model Deepening</h3>
-<p>Elastic Cloud uses a resource-based consumption pricing model. As customers migrate from self-managed licenses to Cloud Hosted and Serverless:
-- Revenue becomes elastic to usage (customers pay as they grow)
-- Elastic Cloud Serverless auto-scales, removing customer capacity planning friction
+<p>Elastic Cloud uses a resource-based consumption pricing model. As customers migrate from self-managed licenses to Cloud Hosted and Serverless:<br />
+- Revenue becomes elastic to usage (customers pay as they grow)<br />
+- Elastic Cloud Serverless auto-scales, removing customer capacity planning friction<br />
 - Higher utilization = higher ARPU without requiring formal upsell motion</p>
 <p>The consumption model deepening is reflected in cloud growing to 48% of revenue while Other Subscription declined -0.9%. The FY2027 guidance for ~21.5% adjusted FCF margin implies that consumption-model margins are superior to the blended historical mix.</p>
 <hr />
 <h2 id="4-growth-risks">§ 4. Growth Risks</h2>
 <h3 id="aws-opensearch-fork-containment">AWS OpenSearch Fork Containment</h3>
 <p>The AWS OpenSearch fork — now under the Linux Foundation with 1,400+ contributors (config.yaml thesis) — is the primary structural threat to the self-managed renewal base. Its impact is already visible in Other Subscription revenue declining -0.9% in FY2026. The risk is that cost-sensitive workloads continue migrating to OpenSearch, particularly among AWS-native customers where switching costs are lower.</p>
-<p>Elastic's mitigants:
-- <strong>AGPL relicensing (November 12, 2024):</strong> Partially reversed the 2021 SSPL change that triggered the fork, intended to rebuild open-source community goodwill. The 10-K notes the long-term commercial impact is not yet measurable.
-- <strong>Proprietary feature moat:</strong> Cloud providers' OpenSearch distributions lack Elastic's proprietary features — paid observability, SIEM, vector quantization, enterprise support (confirmed 10-K §9.1).
+<p>Elastic's mitigants:<br />
+- <strong>AGPL relicensing (November 12, 2024):</strong> Partially reversed the 2021 SSPL change that triggered the fork, intended to rebuild open-source community goodwill. The 10-K notes the long-term commercial impact is not yet measurable.<br />
+- <strong>Proprietary feature moat:</strong> Cloud providers' OpenSearch distributions lack Elastic's proprietary features — paid observability, SIEM, vector quantization, enterprise support (confirmed 10-K §9.1).<br />
 - <strong>FedRAMP gate:</strong> OpenSearch has no equivalent federal certification, making it ineligible for the government segment Elastic is now entering.</p>
 <p>Exit condition watch: Cloud growth declining below 10% annually (exit condition 2) would confirm OpenSearch commoditisation is affecting cloud growth, not just self-managed renewals.</p>
 <h3 id="datadog-growth-gap-widening">Datadog Growth Gap Widening</h3>
@@ -482,9 +482,9 @@
 <p><strong>Overall growth tier: Medium-High</strong></p>
 <p>17% total revenue growth at $1.74B scale, with cloud re-accelerating to 28%, is above the median for enterprise software at this revenue size. The FedRAMP opportunity and AI/vector search adoption represent identifiable catalysts for re-acceleration. Growth is not "High" tier because (a) total revenue growth is moderating slightly toward the ~15% blended guidance rate, and (b) the Datadog observability gap and AWS OpenSearch self-managed pressure cap near-term upside. Medium-High captures: durable above-market growth with visible catalysts, modest headwinds, and a conservatively-guided FY2027.</p>
 <p><strong>Probability-weighted IRR from growth lens: approximately +55% annualised at $57.02</strong></p>
-<p>Per config.yaml action_plan.thesis_confirmed: <em>"G-A §1.3 independently assigns Buy at this price (probability-weighted ~55% annualised)."</em> This reflects:
-- Bull case (25% probability, $213.24 DCF): ~+274% from $57.02
-- Base case (55% probability, $98.73 DCF): ~+73% from $57.02
+<p>Per config.yaml action_plan.thesis_confirmed: <em>"G-A §1.3 independently assigns Buy at this price (probability-weighted ~55% annualised)."</em> This reflects:<br />
+- Bull case (25% probability, $213.24 DCF): ~+274% from $57.02<br />
+- Base case (55% probability, $98.73 DCF): ~+73% from $57.02<br />
 - Bear case (20% probability, $29.28 DCF): ~-49% from $57.02</p>
 <p><strong>Watch items:</strong></p>
 <ol>

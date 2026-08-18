@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SP500: The Bet Is Broken — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-17 overview</a></p>
+<h1 id="sp500-the-bet-is-broken">SP500: The Bet Is Broken</h1>
+<blockquote class="notice notice--info">
+<p><strong>Information</strong></p>
+<ul>
+<li>config.forward_return.terminal_pe_bear=15.0 overrides ERP-anchored value</li>
+<li>[MISSING-POLITICAL-EXPOSURE-BLOCK] SPY-Political-Exposure.md not found in Holdings/SPY/Analysis/ — run 07-Political-Exposure skill.</li>
+<li>[MISSING-COMPETITION-BLOCK] SPY-Competition.md not found in Holdings/SPY/Analysis/ — run 08-Competition-Research skill.</li>
+</ul>
+</blockquote>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-17 · Latest filing 2026-08-17.</em></p>
+<p>The basket-integrity trigger has fired — the fund's trading price has diverged from its net asset value by 3.93%, exceeding the 2.0% ceiling in the pre-committed guardrails. But the fund trades above the trim line, well above fair value — the trigger is the structural signal, not the valuation. On top of that, the equity risk premium (the gap between what the basket earns in owner-earnings yield and what a ten-year government bond pays) has been negative for seventeen consecutive snapshots, meaning investors currently receive less return for owning the entire S&amp;P 500 than for lending money to the government.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $458. Trim at $716. Exit at $955.</p>
+<p>At $458, the long-run total return is about 12% a year. At today's $746, about 10% a year. Both figures are steady-state estimates over a horizon of many years — they assume the basket keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy                                      trim/current                       exit
+$458                                     $716/$746                          $955
+├────────────────────────────────────────┼────┼────────────────────────────────┤
+</code></pre>
+<p>Over the next five years, if the share price moves to the fair-value central estimate, returns work out to bear -22.4%, base +1.4%, bull +7.7% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear                                               expected   base          bull
+-22.4%                                             -3.0%      +1.4%        +7.7%
+├──────────────────────────────────────────────────┼──────────┼────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 50% base, 25% bull): about -3.0% a year over the next five years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>SP500 scores −3.58, ranking 15 of 21 active holdings by this measure — it sits in the lower third of the portfolio.</p>
+<blockquote>
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= (1.40% − 1.46% − 2.93%)<br />
+  &nbsp;&nbsp;= −2.99%<br />
+  &nbsp;&nbsp;= <strong>-3.58</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.00.</strong> Index funds are not assigned a moat tier; the weight is always one.</p>
+<p><strong>Expected return: 1.40%.</strong> The expected return is the base-case forward return of 1.40% a year over five years. Index funds and bonds use their contractual or index-implied return directly — no scenario blend is applied.</p>
+<p><strong>Hurdle rate: 2.93%.</strong> The hurdle rate is 2.93% — the 0.93% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing); no equity-risk premium is added for a diversified fund.</p>
+<p>A score of −3.58 puts SP500 15th of 21 active holdings — below the portfolio median and inside the lower tier where the expected return falls short of the hurdle.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The decisive development since the prior review is not valuation but vehicle mechanics. The fund's trading price has diverged from the net asset value of the underlying basket by 3.93% — a gap that exceeds the 2.0% ceiling in the pre-committed vehicle-integrity guardrail. The NAV deviation is a breach regardless of direction: the fund is currently trading at a 0.48% <em>discount</em> to NAV, meaning its price is slightly below the value of what it holds. That might seem benign, but the pre-committed guardrail draws no distinction between discount and premium breaches. A persistent and meaningful deviation in either direction signals tracking or liquidity stress that monitoring alone cannot resolve.</p>
+<p>That vehicle signal arrived alongside the seventeenth consecutive reading of a negative equity risk premium. The basket's earnings yield stands at 3.84%, while the ten-year Treasury bond yields 4.72%. The gap — approximately minus 88 basis points — means the entire S&amp;P 500 is paying investors less per dollar invested than risk-free government lending. Seventeen straight negative readings across multiple calendar quarters satisfies the two-consecutive-quarter persistence condition written into exit condition (1). Both exit triggers — the vehicle-integrity breach and the sustained negative risk premium — are now simultaneously active. See <a href="#the-share-price">the Share Price</a> for the valuation position.</p>
+<h2 id="about-sp500">About SP500</h2>
+<p>The SPDR S&amp;P 500 ETF Trust, widely known by its ticker SPY, tracks the S&amp;P 500 index — a basket of approximately 500 large US companies, selected and maintained by S&amp;P Dow Jones Indices. The fund aims to replicate the index's returns before fees, and has done so continuously since January 1993, making it one of the oldest exchange-traded funds in existence. The basket is weighted by market capitalisation, so larger companies occupy larger shares; technology businesses (Nvidia, Apple, Microsoft, and others) collectively account for roughly 39% of the portfolio. Because the index spans every major sector of the US economy, it provides broad exposure to the earnings of American business rather than a bet on any single industry or company.</p>
+<p>SPY is structured as a Unit Investment Trust — an older legal form that requires cash dividends received from underlying stocks to sit uninvested until the quarterly distribution date, rather than being immediately reinvested. This creates a small cash drag in rising markets. At an annual cost of 0.09%, SPY is among the cheapest vehicles available for US large-cap exposure; the pre-committed cost ceiling is 0.15%, leaving 6 basis points of headroom before exit condition (2) would fire.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The bet is that the S&amp;P 500 basket, over a full holding period, earns its investors at least as much as the risk-free rate plus a reasonable equity premium. Six conditions must hold for the bet to remain intact:</p>
+<ol>
+<li><strong>Equity risk premium must stay positive.</strong> The basket's earnings yield (the ratio of the basket's total earnings to its share price, expressed as a percentage) must exceed the ten-year Treasury yield by at least enough to compensate for taking equity risk. If it is negative for two consecutive quarters, the risk-premium case has failed — equities are not paying investors for the extra uncertainty they bear relative to lending money to the government.</li>
+</ol>
+<p><em>Latest reading:</em> −0.88% (2026-08-17). The basket earnings yield is 3.84% against a ten-year Treasury yield of 4.72%, a gap of minus 88 basis points. This is the seventeenth consecutive negative reading. The two-consecutive-quarter calendar condition is satisfied.</p>
+<ol>
+<li><strong>Expense ratio must stay below 0.15%.</strong> If State Street raises the annual cost of the fund above 0.15% without a competitor matching the fee cut, the cost advantage that makes passive holding rational has eroded.</li>
+</ol>
+<p><em>Latest reading:</em> 0.09% (2026-08-17). Six basis points below the ceiling; no concern.</p>
+<ol>
+<li><strong>Fund assets must remain above $100 billion.</strong> A catastrophic liquidity event that drains the fund below $100 billion would signal an extraordinary market or structural failure. Below that level, the fund's ability to track its index and provide reliable exit liquidity could be impaired.</li>
+</ol>
+<p><em>Latest reading:</em> $795 billion (2026-08-17), approximately 7.95 times the floor. No concern.</p>
+<ol>
+<li><strong>Top single-name weight must stay below 13%.</strong> If any one company grows to represent more than 13% of the entire basket, the fund has drifted from a diversified market proxy toward a concentrated single-name bet, which is not what this position is designed to provide.</li>
+</ol>
+<p><em>Latest reading:</em> Nvidia at 7.55% (2026-08-17), 5.45 percentage points below the ceiling. No concern.</p>
+<ol>
+<li><strong>S&amp;P 500 index methodology must remain broadly intact.</strong> If S&amp;P Dow Jones Indices materially restructures what the S&amp;P 500 index represents — narrowing its mandate, changing selection criteria in ways that undermine its broad-market character — the thing being held is no longer the thing that was analysed.</li>
+</ol>
+<p><em>Latest reading:</em> No restructuring on record (2026-08-17). No automated signal is available in the current pipeline; monitored externally.</p>
+<ol>
+<li><strong>Median look-through return on equity of the top-10 holdings must stay above 15%.</strong> Return on equity (the fraction of shareholders' equity that a company earns back each year as profit) measures whether the businesses inside the basket are genuine capital compounders or merely capital consumers. If the median falls below 15%, the basket has lost the quality that justifies holding rather than moving to cash.</li>
+</ol>
+<p><em>Latest reading:</em> Median 34.0% across the top nine holdings (2026-08-17), 19 percentage points above the exit floor. The weighted average is 72.1%, but that figure is distorted by Apple and Nvidia, which have shareholder equity reduced to near-zero by buybacks; the median is load-bearing and well above the threshold. No concern.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>The current share price of $746 sits above the trim edge of $716 and well above the fair-value anchor of $573. In yield terms: the basket earns approximately 3.84 cents per dollar invested, against the 5.00% fair-value yield that defines a neutral price. To trade at fair value, the basket would need to either fall in price to around $573 or grow earnings by approximately one-third without the price moving. The buy edge — where the basket's earnings yield reaches 6.25%, meaning one earns roughly 6 cents on every dollar invested — corresponds to approximately $458, about 39% below today's price.</p>
+<p>The valuation alone does not fire an exit order at today's price (the exit tier, set at an earnings yield of 3.0%, would correspond to approximately $955 — the basket is expensive but has not reached that level). What has fired the exit order is the vehicle-integrity breach described in <a href="#the-bottom-line">the Bottom Line</a>.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The pre-committed framework translates the share-price bands into three standing orders and two price alerts. Each operationalises a rule written in advance — not a new judgement made here.</p>
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $573, the fair-value anchor (the fund price at which the basket's earnings yield equals 5.0%). A crossing means the fund has returned to a neutral reading; no action follows, but a fresh re-validation of all six conditions is warranted.<br />
+- A second alert at $458, the buy edge (the fund price at which the basket's earnings yield reaches 6.25%). A crossing arms the buy order below; before adding, the latest re-validation should confirm conditions are still working.</p>
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $458. This order calls for adding to the position in tranches once the fund price closes at or below this line and all six conditions are working. The order is currently unarmed — the vehicle-integrity breach would need to clear first.<br />
+- A standing trim order at $716. This order calls for trimming 25–33% of the position when the fund price closes at or above this line, to harvest the premium while keeping the core holding. The fund is currently above this line.<br />
+- A standing exit order at $955. This order calls for closing the full position when the fund price closes at or above this line; at that level the basket earnings yield would fall to 3.0%, meaning the basket is fully priced against the risk-free rate. This is a separate path to exit from the vehicle-integrity breach already active.</p>
+<p>Vehicle-integrity breaches and the named exit-condition trigger (earnings yield at or below 3.0%) are independent additional paths to exit — any of the three can fire without the others.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>The two active wobbles are the NAV deviation and the sustained negative equity risk premium. The NAV deviation — the gap between the fund's trading price and the net asset value of its underlying holdings — stood at 3.93% at the most recent snapshot. The pre-committed ceiling is 2.0%. This is the wobble that crossed a line in <a href="#the-case-for-the-bet">the Case for the Bet</a>: condition (1) — or rather the vehicle-integrity guardrail — has fired. The fund is trading at a slight discount to NAV (price $773 versus NAV $776) rather than a premium, which is the less alarming direction; but the pre-committed guardrail draws no distinction. A gap of this size, in either direction, signals that something in the arbitrage mechanism that normally keeps the fund's price close to its NAV is under stress.</p>
+<p>The second wobble, the negative equity risk premium, has now persisted across seventeen consecutive pipeline snapshots spanning multiple calendar quarters. At minus 88 basis points, the premium is not marginally negative — a new buyer at today's price receives an earnings yield nearly a full percentage point below what government bonds offer. This is the directional reading Buffett described when explaining Berkshire Hathaway's large cash position: when the entire stock market pays less per dollar than risk-free lending, the risk of equity ownership is not being rewarded. Exit condition (1), requiring two consecutive quarter-end readings of negative risk premium, has been satisfied.</p>
+<p>The remaining four conditions — expense ratio, fund size, single-name concentration, and median look-through profitability — are all well within their thresholds and are not wobbling.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Cost drift:</strong> State Street could raise SPY's expense ratio, narrowing its cost advantage over newer, cheaper trackers. The ceiling is 0.15%; today's rate is 0.09%. A fee increase without competitive response fires exit condition (2).</li>
+<li><strong>Liquidity event:</strong> A severe market crisis could trigger outflows large enough to push assets under management toward the $100 billion floor. At $795 billion today, this is a remote scenario, but not an impossible one.</li>
+<li><strong>Index-methodology change:</strong> S&amp;P Dow Jones Indices could restructure the S&amp;P 500's selection criteria in ways that change what the index represents — for example, a large narrowing of the universe or the introduction of non-US constituents. There is no automated monitor for this in the current pipeline.</li>
+<li><strong>Concentration drift:</strong> A sustained rally in one or two mega-cap names could push a single company above the 13% ceiling, transforming the fund from a diversified market proxy into a de facto single-name position.</li>
+<li><strong>Extended negative risk premium:</strong> If Treasury yields remain elevated and basket earnings yields remain compressed, the risk-premium deficit could deepen. The current reading of minus 88 basis points is already outside the thesis's acceptable range.</li>
+</ul>
+<p>(For this fund, exit fires when the share price reaches $955, when a vehicle-integrity condition breaches, or when the named exit-condition trigger fires — any of three paths.)</p>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>Political exposure and competition analyses are not present in the pipeline for this holding. SPY-Political-Exposure.md and SPY-Competition.md have not been produced; running the relevant pipeline steps would fill these gaps. For a broadly diversified index fund, the absence of a single-company competition analysis is less significant than it would be for an individual equity holding, but political and regulatory exposure across the basket (antitrust scrutiny of the largest tech constituents in particular) is not captured in the current snapshot.</p>
+<p>Tracking difference and tracking error figures — the measures of how precisely the fund replicates its index, net of all costs — are listed as unavailable in the fund's setup data and were not present in the market-data sidecar at this refresh. These figures are normally available from State Street's own factsheet. Their absence means the replication efficiency of the fund cannot be confirmed numerically for this review cycle.</p>
+<p>Securities lending revenue — a small income stream some funds generate by temporarily lending their underlying holdings to short-sellers — is listed as unknown for SPY. Unit Investment Trusts are structurally unable to lend securities, so this figure is most likely zero; confirmation from State Street's annual report would close the gap.</p>
+<h2 id="the-rules">The Rules</h2>
+<ul>
+<li>If all conditions are working and the basket is reasonably priced, hold — the vehicle is sound and the earnings yield clears the hurdle.</li>
+<li>If a driver challenges the thesis but has not broken it — for example, the equity risk premium is negative but the calendar exit gate has not yet elapsed — do not add. Re-validate after the next quarter. If the risk premium stays negative or median look-through profitability keeps falling, swap to an alternative tracker (IVV or VOO) or move to cash.</li>
+<li>If the thesis is broken — vehicle integrity breached or an exit condition has fired — exit. Move proceeds to a risk-free instrument or to a holding that meets the value test.</li>
+<li>If the share price falls to or below $458, add to the position. The basket is meaningfully cheap relative to the risk-free rate at that level.</li>
+<li>If the share price rises to or above $716, trim 25–33%. The basket is meaningfully expensive relative to the risk-free rate; harvest the premium while keeping the core holding.</li>
+<li>If the share price rises to or above $955, exit. The basket earnings yield would be at or below 3.0% at that level — fully priced against the risk-free rate. Redeploy proceeds to a risk-free instrument or to a holding that meets the value test.</li>
+</ul>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+  <li><a href="vehicle-profile.html">Vehicle profile</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

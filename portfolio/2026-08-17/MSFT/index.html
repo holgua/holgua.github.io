@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-17 overview</a></p>
+<h1 id="microsoft-the-bet-still-works">Microsoft: The Bet Still Works</h1>
+<blockquote class="notice notice--error">
+<p><strong>Errors</strong></p>
+<ul>
+<li>DATA_ERROR: upcoming earnings fetch failed for MSFT: ERROR:ImportError:`Import lxml` failed.  Use pip or conda to install the lxml package. — re-run: python3 src/fetch/fetch_market_data.py MSFT</li>
+<li>FAIR-VALUE CONFLICT (67% gap): Two built-in valuation methods disagree on what MSFT is worth. The FCF-yield anchor (config fair_value = 3.5%) says fair value is ~$210: at $54582.0M FCF ÷ 3.5% ÷ 7428M shares, today's $392 implies a 1.9% FCF yield vs the 3.5% anchor, and you would only add near $147 (5.0% yield threshold). The scenario-band model says $632: it applies the price multiples that peer companies and MSFT's own trading history trade at to projected financials — on that view, $392 is a steep discount to the $632 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.</li>
+</ul>
+</blockquote>
+
+<blockquote class="notice notice--info">
+<p><strong>Information</strong></p>
+<ul>
+<li>WARN: MSFT config declares valuation.method=&#x27;owner_earnings_yield&#x27; but no valuation.dcf/dcf_two_stage/sotp block — sidecar uses fair-value-bands</li>
+<li>CLAMP: peer AMZN p_fcf=875.5707× exceeds cap 100.0× — clamped for band computation</li>
+<li>CLAMP: peer GOOGL p_fcf=185.6209× exceeds cap 100.0× — clamped for band computation</li>
+<li>CLAMP: p_fcf degenerate — every surviving peer clamped to cap; scenario estimate for this method suppressed</li>
+<li>STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]</li>
+<li>Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing&#x27;s MD&amp;A for material growth-vs-maintenance CapEx differences.</li>
+<li>[FAIR-VALUE-DRIFT] config.valuation.fair_value (3.5) diverges from current Owner Earnings Yield (%) (1.858) by 46.9% (threshold: 30%). Consider updating fair_value in Holdings/MSFT/config.yaml.</li>
+</ul>
+</blockquote>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-17 · Latest filing 2026-07-29.</em></p>
+<p>The bet is working: the core franchise — Azure cloud growth, enterprise software lock-in, operating margin — continues to track at or above base-case assumptions, and none of the seven written exit conditions has triggered. <a href="#the-share-price">The share price</a> sits above the trim line, well above fair value as measured by the earnings yield on owner earnings. The long-run expected return, blending the three forward scenarios by likelihood, works out to about 14% a year at today's $392 — a healthy equity premium over the risk-free rate. The condition to watch is the cash-generation ratio: fiscal year 2026 was the first annual period in which cash profit fell below the written floor, and whether this holds for a second consecutive year is the single most consequential question for the holding over the next twelve months.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $146. Trim at $364. Exit at $1456.</p>
+<p>At $146, the long-run total return is about 17% a year. At today's $392, about 14% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy          trim/current                                                   exit
+$146         $364/$392                                                     $1456
+├────────────┼─┼───────────────────────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the share price moves to the fair-value central estimate, returns work out to bear +2.1%, base +18.0%, bull +30.7% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear                                        expected/base                   bull
++2.1%                                       +18.0%/+18.0%                 +30.7%
+├───────────────────────────────────────────┼──────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (20% bear, 55% base, 25% bull): about +18.0% a year over the next three years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Microsoft scores 13.84, ranking 3 of 21 active holdings by this measure — it sits in the upper tier of the portfolio, behind only PayPal and PepsiCo.</p>
+<blockquote>
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.20 × (18.01% − 0.09% − 1.46% − 4.93%)<br />
+  &nbsp;&nbsp;= 1.20 × +11.53%<br />
+  &nbsp;&nbsp;= <strong>13.84</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> Microsoft sits in the strongest of three moat tiers, which lifts the score by 20 per cent. The wide moat rating reflects the all-or-nothing enterprise identity lock-in that makes migrating away from Azure Active Directory / Entra ID equivalent to rebuilding an entire corporate IT estate from scratch.</p>
+<p><strong>Expected return: 18.01%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (20% likelihood) — annualised return +2.1%.</strong> The bear case assumes Azure decelerates to mid-teens growth as AI infrastructure spending fails to translate into consumption revenue, Copilot adoption stalls below meaningful penetration of the existing seat base, and the IRS transfer-pricing dispute settles at the upper end of expectations.</p>
+<p><strong>Base (55% likelihood) — annualised return +18.0%.</strong> The base case has Azure sustaining 25–35% growth as the contracted backlog of $627 billion converts to recognised revenue, Copilot lifting revenue per user across the Microsoft 365 seat base, and capital expenditure peaking before decelerating as the infrastructure buildout matures.</p>
+<p><strong>Bull (25% likelihood) — annualised return +30.7%.</strong> The bull case has Azure accelerating above 35% on agentic AI workload demand, Copilot driving a meaningful revenue-per-user lift across the full commercial seat base, and capital intensity declining toward 18% of revenue by the end of the three-year horizon.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.20 × 2.1 + 0.55 × 18.0 + 0.25 × 30.7 = +18.00%. All three scenarios deliver a positive annualised return — even the bear case.</p>
+<p><strong>Hurdle rate: 4.93%.</strong> The hurdle rate is 4.93% — the 0.93% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of 13.84 puts Microsoft third in the portfolio ranking — well clear of the median holding, and behind only two positions with more extreme near-term valuation dynamics.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The FY2026 annual report, filed 2026-07-29, confirmed that the core operating franchise continued to strengthen even as a significant new data point on cash generation emerged. Operating income reached $155,237 million for the year — up 20.8% on the prior year — and Azure sustained the 40% growth rate across the first three quarters of the fiscal year (40%, 39%, 40% in the three quarters through March 2026), with the full-year result anchored by 29% growth in the Intelligent Cloud segment. Commercial contracted backlog reached $627 billion at the March 2026 quarter-end, up 99% on the prior year, providing multi-year revenue visibility that no quarterly figure can capture on its own. Gross profit grew 16.3% to $225,465 million, and the consolidated gross margin held above 67% in each quarterly period — more than two percentage points above the floor that would trigger concern.</p>
+<p>The load-bearing new development is the cash-generation ratio. Free cash flow for FY2026 came in at $66,987 million before deducting stock-based compensation and $54,582 million after. Against net income of $133,749 million, the post-compensation ratio works out to 0.41 — the first annual reading below the 0.65 threshold that forms one of the seven written exit conditions. The prior year was 0.70. The surge in capital expenditure, which reached $115,948 million in FY2026 (up from an estimated $64.6 billion in FY2025), drove the compression: operating cash flow grew robustly on the back of software revenue leverage, but the infrastructure investment absorbed the incremental cash before it could flow through to owners. The exit condition requires two consecutive annual periods below the floor, so the sequence has not been met. The FY2027 annual report, due around July 2027, is the verdict.</p>
+<p>That single wobble sits against an otherwise intact backdrop. For a fuller assessment of what the franchise requires to keep working, see <a href="#the-case-for-the-bet">the Case for the Bet</a>, and for where the share price sits relative to the valuation bands, see <a href="#the-share-price">the Share Price</a>.</p>
+<h2 id="about-microsoft">About Microsoft</h2>
+<p>Microsoft makes its money by selling software and cloud computing capacity to enterprises that cannot easily leave. The largest piece is the Intelligent Cloud segment — principally Azure, the cloud computing platform that rents computing power, storage, and artificial intelligence services to businesses globally. Azure grows by winning new enterprise workloads and by deepening consumption within the existing customer base as those customers add AI-driven applications on top of the infrastructure they already use. The second segment, Productivity and Business Processes, sells the Microsoft 365 suite of software — email, documents, spreadsheets, communications — to both businesses and consumers, increasingly bundled with Copilot, an AI assistant that works inside those applications. A third segment covers gaming (Xbox) and the Windows operating system on personal computers, though these contribute less to the overall earnings picture than cloud and productivity software.</p>
+<p>The economic engine is enterprise lock-in. When a large organisation builds its IT identity layer on Azure Active Directory — the system that controls which employees can access which applications and devices — it creates an obligation that is effectively all-or-nothing to unwind. Every application integrated into that identity layer, every device enrolled, every access policy written, would need to be migrated simultaneously to move to a different provider. That switching cost is the primary reason Microsoft has been able to compound operating income at roughly 20% a year for five years while simultaneously absorbing the largest infrastructure investment in its history.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>Microsoft is held as a platform-layer monopolist whose AI infrastructure spending builds a structurally wider moat rather than permanently impairing cash generation — a bet that requires the following conditions to keep holding:</p>
+<ol>
+<li><strong>Azure quarterly revenue growth stays above 25% while capital expenditure remains below 20% of revenue, or one of the two relaxes.</strong> The compound exit condition requires both conditions to be adverse simultaneously — Azure below 25% growth and capital spending above 20% of revenue — for two consecutive quarters. Either condition on its own is not sufficient to trigger the review.</li>
+</ol>
+<p><em>Latest reading:</em> Azure grew at 40% in each of the three quarters through March 2026 (2026-03-31). Capital expenditure as a share of revenue has risen sharply, reaching approximately 35–36% for the full FY2026 year — well above 20% — but the compound condition cannot fire while Azure growth holds above 25%. The compound exit condition is not close to triggering.</p>
+<ol>
+<li><strong>The cash-generation ratio (free cash flow relative to net income) stays above 0.65 for any given annual period, or if it dips below, recovers within a single year.</strong> A second consecutive annual reading below 0.65 without improvement in Azure's contribution to revenue would signal that the capital investment is permanently impairing the cash available to shareholders rather than peaking ahead of a higher-return phase.</li>
+</ol>
+<p><em>Latest reading:</em> FY2026 (year ended 2026-06-30): 0.41 on a post-stock-compensation basis, or 0.50 on a pre-compensation basis. Both are below 0.65. This is the first annual period to breach the floor; FY2025 was 0.70. The exit condition requires two consecutive annual periods below the threshold. The sequence has not been met — FY2027 is the critical reading.</p>
+<ol>
+<li><strong>Consolidated operating margin stays above 42% in each quarterly period.</strong> A fall below 42% for two consecutive quarters would signal structural margin compression beyond the normal absorption effect of the AI investment cycle.</li>
+</ol>
+<p><em>Latest reading:</em> Operating margin was 46.3% in the quarter ended 2026-03-31 and 47.4% for the nine-month period through that date (2026-03-31). Both are more than four percentage points above the 42% floor. Exit condition not close to triggering.</p>
+<ol>
+<li><strong>The IRS transfer-pricing dispute stays in administrative channels and no single-quarter tax charge exceeds $5 billion.</strong> A Tax Court escalation or a charge of that magnitude would signal that the upper-bound settlement risk is materialising with balance-sheet consequences.</li>
+</ol>
+<p><em>Latest reading:</em> As of the 2026-07-29 annual filing, the $28.9 billion assessment for tax years 2004–2013 remains in IRS administrative appeals. Language in the annual report is unchanged from prior quarters. No Tax Court escalation disclosed. Exit condition not triggered.</p>
+<ol>
+<li><strong>No formal antitrust complaint seeking structural remedies — such as separation of Teams or unbundling of cloud and AI services — is filed by the Federal Trade Commission or any equivalent regulator.</strong> A formal complaint seeking to structurally change the product bundle would signal that regulatory tail risk is crossing into permanent moat impairment.</li>
+</ol>
+<p><em>Latest reading:</em> As of the 2026-07-29 annual filing, no formal complaint has been filed. The annual report acknowledges antitrust scrutiny as an ongoing risk factor, consistent with prior quarters. Exit condition not triggered.</p>
+<ol>
+<li><strong>Consolidated gross margin stays above 65% in each quarterly period.</strong> Two consecutive quarters below 65% would signal either that AI infrastructure cost pass-through is failing or that a new competitive pricing dynamic is compressing the core software moat.</li>
+</ol>
+<p><em>Latest reading:</em> Consolidated gross margin was 67.6% in the quarter ended 2026-03-31 and 68.2% for the nine-month period (2026-03-31). Both are more than 2.6 percentage points above the 65% floor. Exit condition not close to triggering.</p>
+<ol>
+<li><strong>Commercial contracted backlog grows at least 30% year-on-year and does not decline in absolute terms quarter-over-quarter.</strong> A deceleration below 30% growth or an absolute decline would signal that enterprise commitment is weakening and that the multi-year revenue visibility underpinning the base case is eroding.</li>
+</ol>
+<p><em>Latest reading:</em> Commercial contracted backlog was $627 billion as of 2026-03-31, up 99% on the prior year. About $157 billion is expected to convert to revenue within twelve months. The exit condition floor of 30% growth is remote at current trajectory. Exit condition not close to triggering.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>The earnings yield on owner earnings — the ratio of post-compensation free cash flow to market capitalisation — currently sits at 1.86%, against a threshold of 2.0% that defines the trim band. The share price, at $392, is therefore above the trim line in yield terms and well above fair value as measured by the pre-committed 3.5% required yield anchor. On that yield framework, a 3.5% yield would imply a market capitalisation of roughly $1.56 trillion, or approximately $210 per share — the fair value as the methodology defines it.</p>
+<p>The picture is more nuanced than a single number conveys. A parallel valuation that applies the price multiples at which Microsoft's own trading history and closest cloud peers trade to projected financials arrives at roughly $632 per share — closer to the base-case scenario midpoint in the thesis. The gap between these two frames is methodological: one anchors to today's depressed free cash flow (depressed by the AI capital expenditure surge), the other looks through to future earnings scale once the investment cycle matures. Both are internally consistent; neither is wrong. The trim action is governed by the yield-based band because that is the pre-committed framework. The scenario-based view informs what to do with the trimmed remainder — it confirms that if the base case tracks, the residual holding still has meaningful upside.</p>
+<p>The current share price of $392 places the position firmly above the trim line.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The bands translate into three standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement made by this evaluation.</p>
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $208, the fair-value anchor as implied by the yield framework. The crossing means the share price has returned to the neutral reading of the methodology's own fair value; no action follows automatically, but a fresh read of the conditions is warranted.<br />
+- A second alert at $146, the cheap-edge implied by a 5.0% required yield. The crossing arms the buy order below; before adding in tranches, the latest re-validation should confirm the conditions are still working and no exit condition has triggered.</p>
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $146. <a href="#the-rules">The rules</a> call for adding in tranches below this price once the share price closes at or below this line and the conditions are intact. The first tranche corresponds to the $352 price-level trigger (40% margin of safety from the base-case midpoint); the $146 pure yield-threshold price is the deeper, more conservative anchor. In practice, price-level triggers at $352 and $322 are the actionable near-term guideposts noted in the rules.<br />
+- A standing trim order at $364. <a href="#the-rules">The rules</a> call for trimming 20–25% of the position when the share price closes at or above this line. The current price of $392 has already cleared this threshold, and the yield of 1.86% has breached the 2.0% floor. The trim is the operative instruction at the current reading.<br />
+- A standing exit order at $1,456. <a href="#the-rules">The rules</a> call for closing the full position when the share price closes at or above this line. At that level the yield falls to 1.5% — less than half the risk-free rate with zero margin of safety — and the market is pricing in the full bull case with the three-year return already embedded. Redeployment to higher-yielding alternatives is the prescribed response, with a 90-day re-entry block to prevent anchor-bias-driven reversal.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>One driver is mixed, one is silent, and the rest confirm. The cash-generation ratio is the wobble that matters. Free cash flow as a share of net income fell to between 0.41 and 0.50 in FY2026 (depending on how stock-based compensation is treated), driven by the surge in capital expenditure to $115,948 million. This is the first annual period below the 0.65 floor in <a href="#the-case-for-the-bet">the Case for the Bet</a>. The exit condition requires two consecutive annual periods below the threshold — so no action is required yet — but the trajectory is clearly deteriorating, and the FY2027 annual filing is now the single most watched data point for this holding. If the capital expenditure cycle peaks and operating cash flow continues to grow faster than costs, the ratio should recover; if it does not, the exit review will be mandatory.</p>
+<p>The second mixed driver is capital expenditure as a share of revenue. At roughly 35–36% of revenue in FY2026, it exceeds the 30% solo bear-trigger threshold for that driver. This alone does not fire any exit condition — the compound exit condition (condition 1) also requires Azure growth below 25%, and Azure held at 40%. But the combination means the AI infrastructure bet is being stress-tested: the spending is historically large, and the question of whether it earns its cost of capital over the next two to three years remains open.</p>
+<p>One driver — AI annual recurring revenue — is silent in the annual filing. The $37 billion figure (+123% growth) disclosed in the earnings press release for the third quarter of FY2026 is the last known reading. The annual filing does not disclose this figure as a named metric. The base-case trajectory trigger of $50 billion within four quarters of that disclosure is the watchpoint.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li>Azure growth decelerates sharply as AI workloads prove harder to scale commercially than the contracted backlog implies, causing both the revenue line and the justification for capital expenditure to weaken simultaneously.</li>
+<li>The free cash flow conversion ratio stays below 0.65 for a second consecutive year as capital expenditure continues at elevated levels without a corresponding acceleration in cash revenue — triggering the mandatory exit review.</li>
+<li>The IRS transfer-pricing dispute escalates to Tax Court or results in a single-quarter settlement charge exceeding $5 billion, creating a balance-sheet event that draws attention to a liability that has been stable but unresolved for years.</li>
+<li>Regulatory action — whether from the Federal Trade Commission or European authorities — targets the bundling of Teams with Microsoft 365 or the integration of Azure with OpenAI's models, imposing structural product changes that impair the identity-and-application lock-in that is the primary moat.</li>
+<li>Open-source AI models improve rapidly enough to commoditise Azure OpenAI's model differentiation, narrowing the premium that the Azure AI platform can command over cheaper alternatives.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>The owner earnings yield is calculated using free cash flow net of all capital expenditure — both the AI infrastructure build and the maintenance of the existing estate. The filing does not separate growth from maintenance capital spending, which means the yield of 1.86% overstates the compression relative to what a maintenance-only view of the business would show. The net income proxy (at $133,749 million, implying a yield of roughly 4.6% at the current market capitalisation) is the more conservative view of normalised earnings power; the yield-based trigger fires on the free cash flow basis per the pre-committed methodology.</p>
+<p>The fair value implied by the yield framework (approximately $210 per share) diverges materially from the scenario-band model (approximately $632 per share). The divergence is documented and intentional — both frames are in the evaluation; the yield band governs the trim action; the scenario model governs residual position sizing. No single "correct" fair value exists; the gap is a function of the different questions each method answers.</p>
+<p>The next earnings release data (upcoming earnings) could not be fetched at this cycle due to a software dependency issue in the data pipeline. This affects the ability to surface the next filing date; the Q1 FY2027 result is expected around October 2026.</p>
+<p>The AI annual recurring revenue figure ($37 billion, last disclosed for Q3 FY2026) is not a named disclosure in the annual filing. Its trajectory can only be inferred from the overall Azure and Microsoft 365 commercial numbers until it is next disclosed in an earnings press release.</p>
+<ul>
+<li>Risk-free rate for MSFT read from SPY's Market-Data snapshot (per-holding field not present; SPY snapshot: 2026-08-17)</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>If all nine thesis drivers confirm, are mixed, or are silent, and no exit condition has triggered, and the share price is within the hold band: hold the position. Azure growth sustained, enterprise lock-in intact, monitoring continues at each quarterly release.</p>
+<p>If a thesis driver deteriorates but no written exit condition fires: do not add to the position. Run a fresh re-validation against the specific deteriorating driver. Monitor for one additional quarter before reassessing position size, distinguishing cyclical (capital expenditure timing) from structural (competitive displacement) causes. Escalate to the broken-thesis review if a second consecutive quarter confirms the signal.</p>
+<p>If any of the seven written exit conditions fires — Azure growth below 25% for two consecutive quarters with capital expenditure above 20% of revenue; free cash flow conversion below 0.65 for two consecutive fiscal years with no Azure AI improvement; operating margin below 42% for two consecutive quarters; IRS escalation to Tax Court or a single-quarter charge above $5 billion; a formal antitrust complaint seeking structural remedies; gross margin below 65% for two consecutive quarters; or commercial backlog growth below 30% — exit the full position within 30 days. No averaging down.</p>
+<p>If the share price falls to or below $146 (the 5.0% yield threshold) and no exit condition has triggered: initiate position add in tranches. First tranche below $352 (40% margin of safety from the base-case midpoint). Second tranche below $322. Each tranche 25–33% of the intended add-on allocation.</p>
+<p>If the share price rises to or above $364 (the 2.0% yield threshold): trim 20–25% of the position to harvest the premium. Re-evaluate remaining size after trim. If Azure growth continues confirming the base case, retain the remaining position. Do not trim below 50% of the current holding unless a thesis exit condition also triggers.</p>
+<p>If the share price rises to or above $1,456 (the 1.5% yield threshold): exit the full position. At that level the position earns less than half the risk-free rate with zero margin of safety, and the full bull case is priced in. Redeploy proceeds at the next cheap-edge crossing or into a higher-yielding alternative. No re-entry within 90 days.</p>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

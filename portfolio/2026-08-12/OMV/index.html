@@ -12,17 +12,17 @@
 <p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
 <h1 id="omv-the-bet-still-works">OMV: The Bet Still Works</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- DATA_ERROR: upcoming earnings fetch failed for OMV: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py OMV
-- Bear FVB central is -$1 (DCF inapplicable under negative FCF); peer_p_b fallback $38.90 used as bear anchor. FVB regenerated 2026-08-10.
-- All FVB centrals fell materially vs prior run (bear $13→-$1, base $60→$48, bull $227→$169) due to compressed peer multiples in August 2026.
-- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]
-- Owner earnings = config.valuation.owner_earnings_override_usd (1.74B; yield 7.58%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.
-- [FAIR-VALUE-DRIFT] config.valuation.fair_value (5.6) diverges from current Owner Earnings Yield (%) (7.577) by 35.3% (threshold: 30%). Consider updating fair_value in Holdings/OMV/config.yaml.
-- FAIR-VALUE CONFLICT (99% gap): Two built-in valuation methods disagree on what OMV is worth. The FCF-yield anchor (config fair_value = 5.6%) says fair value is ~$95: at $1740.0M FCF ÷ 5.6% ÷ 326M shares, today's $62 implies a 8.6% FCF yield vs the 5.6% anchor, and you would only add near $71 (7.5% yield threshold). The scenario-band model says $48: it applies the price multiples that peers (ENI) and OMV's own trading history trade at to projected financials — on that view, $62 is above the $48 scenario estimate — priced beyond the base case. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.
+<p><strong>Warnings</strong><br />
+- DATA_ERROR: upcoming earnings fetch failed for OMV: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py OMV<br />
+- Bear FVB central is -$1 (DCF inapplicable under negative FCF); peer_p_b fallback $38.90 used as bear anchor. FVB regenerated 2026-08-10.<br />
+- All FVB centrals fell materially vs prior run (bear $13→-$1, base $60→$48, bull $227→$169) due to compressed peer multiples in August 2026.<br />
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]<br />
+- Owner earnings = config.valuation.owner_earnings_override_usd (1.74B; yield 7.58%); auto-FCF read unavailable (scores has no FCF or NI+DA+CapEx). Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.<br />
+- [FAIR-VALUE-DRIFT] config.valuation.fair_value (5.6) diverges from current Owner Earnings Yield (%) (7.577) by 35.3% (threshold: 30%). Consider updating fair_value in Holdings/OMV/config.yaml.<br />
+- FAIR-VALUE CONFLICT (99% gap): Two built-in valuation methods disagree on what OMV is worth. The FCF-yield anchor (config fair_value = 5.6%) says fair value is ~$95: at $1740.0M FCF ÷ 5.6% ÷ 326M shares, today's $62 implies a 8.6% FCF yield vs the 5.6% anchor, and you would only add near $71 (7.5% yield threshold). The scenario-band model says $48: it applies the price multiples that peers (ENI) and OMV's own trading history trade at to projected financials — on that view, $62 is above the $48 scenario estimate — priced beyond the base case. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.<br />
 - PLAUSIBILITY: base-case return (-8.9%) sign is opposite to the fair-value gap direction (62 → 84). Valuation inputs may need refreshing — reported as computed.</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -47,10 +47,10 @@
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>OMV scores −5.35, ranking 17 of 20 active holdings by this measure — it sits near the foot of the portfolio.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
-  &nbsp;&nbsp;= 1.00 × (0.91% − 1.32% − 4.94%)
-  &nbsp;&nbsp;= 1.00 × −5.35%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.00 × (0.91% − 1.32% − 4.94%)<br />
+  &nbsp;&nbsp;= 1.00 × −5.35%<br />
   &nbsp;&nbsp;= <strong>-5.35</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.00.</strong> OMV sits in the middle moat tier; the weight is one, so it leaves the score unchanged. Two credible moat sources are present — the density of E&amp;P exploration licences in Central and Eastern Europe, protected by the Austrian state's 31.5% equity anchor, and the Abu Dhabi feedstock cost advantage that flows through the Borouge Group International (BGI) chemicals venture — but neither reinforces the other, and both face structural headwinds over the ten-year horizon.</p>
@@ -100,11 +100,11 @@
 <p>The current dividend yield of approximately 4.8% per year provides real income during a period when the share price is near the buy edge. That yield is funded by an 86% payout ratio — a share of profits paid as dividends that leaves very little buffer if earnings fall. In the bear scenario (Brent below approximately €48 per barrel plus a windfall levy), that dividend would almost certainly be cut, removing the income cushion precisely when the capital loss risk is highest.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p><a href="#the-rules">The rules</a> translate the share-price bands into two standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement made by this evaluation.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at €84, the fair-value anchor. The crossing means the share price has returned to the level implied by a 5.6% earnings yield — a neutral reading that warrants a fresh check of all six conditions before taking any action.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at €84, the fair-value anchor. The crossing means the share price has returned to the level implied by a 5.6% earnings yield — a neutral reading that warrants a fresh check of all six conditions before taking any action.<br />
 - A second alert at €63, the cheap edge. The crossing arms the buy order below; before adding, the latest conditions review should confirm the thesis remains intact and no exit condition has been approached.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at €63. The pre-committed rules call for adding in tranches once the share price closes at or below this level and all six conditions are still holding. The order may be staged across two tranches rather than filled in a single transaction, with a check of the operating cash flow trend before committing the second tranche.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at €63. The pre-committed rules call for adding in tranches once the share price closes at or below this level and all six conditions are still holding. The order may be staged across two tranches rather than filled in a single transaction, with a check of the operating cash flow trend before committing the second tranche.<br />
 - A standing trim order at €104. The pre-committed rules call for trimming 25–33% of the position when the share price closes at or above this level — a point implying an earnings yield below 4.5%, well above any reasonable assessment of fair value and approaching a stretched normalised peak.</p>
 <p>No exit-tier rule has been authored for a specific price level above the trim line. The exit conditions in this analysis are event-driven rather than price-driven: they fire when one of the six operating metrics crosses its defined threshold, not when the share price crosses a number.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

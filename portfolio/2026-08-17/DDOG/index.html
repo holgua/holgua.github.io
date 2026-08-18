@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datadog: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-17 overview</a></p>
+<h1 id="datadog-the-bet-still-works">Datadog: The Bet Still Works</h1>
+<blockquote class="notice notice--error">
+<p><strong>Errors</strong></p>
+<ul>
+<li>DATA_ERROR: upcoming earnings fetch failed for DDOG: ERROR:ImportError:`Import lxml` failed.  Use pip or conda to install the lxml package. — re-run: python3 src/fetch/fetch_market_data.py DDOG</li>
+<li>FAIR-VALUE CONFLICT (77% gap): Two built-in valuation methods disagree on what DDOG is worth. The FCF-yield anchor (config fair_value = 2.5%) says fair value is ~$30: at $249.9M FCF ÷ 2.5% ÷ 331M shares, today's $261 implies a 0.3% FCF yield vs the 2.5% anchor, and you would only add near $19 (4.0% yield threshold). The scenario-band model says $132: it applies the price multiples that peers (ESTC) and DDOG's own trading history trade at to projected financials — on that view, $261 is above the $132 scenario estimate — priced beyond the base case. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.</li>
+</ul>
+</blockquote>
+
+<blockquote class="notice notice--info">
+<p><strong>Information</strong></p>
+<ul>
+<li>CLAMP: peer PANW p_e=326.7478× exceeds cap 200.0× — clamped for band computation</li>
+<li>CLAMP: peer PANW ev_ebitda=210.448× exceeds cap 100.0× — clamped for band computation</li>
+<li>STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]</li>
+<li>STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]</li>
+<li>Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing&#x27;s MD&amp;A for material growth-vs-maintenance CapEx differences.</li>
+<li>[FAIR-VALUE-DRIFT] config.valuation.fair_value (2.5) diverges from current Owner Earnings Yield (%) (0.266) by 89.4% (threshold: 30%). Consider updating fair_value in Holdings/DDOG/config.yaml.</li>
+</ul>
+</blockquote>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-17 · Latest filing 2026-08-06.</em></p>
+<p>The bet is working — all eight monitored conditions are confirmed or at worst mixed, with no exit threshold crossed. At $261, the share price sits above the trim line, well above fair value on an owner-earnings anchor — see <a href="#the-share-price">the Share Price</a> for the detailed valuation read and <a href="#the-rules">the Rules</a> for what follows from each condition. The one condition to watch closely is the gross margin trend, which compressed one percentage point year-over-year in the three months ending June 2026, driven by rising cloud infrastructure costs — still two points clear of the exit floor, but moving in the wrong direction.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $17. Trim at $46.</p>
+<p>At $17, the long-run total return is about 24% a year. At today's $261, about 20% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy      trim                                                            current
+$17      $46                                                                $261
+├────────┼─────────────────────────────────────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the market price moves to the fair-value central estimate, returns work out to bear −39%, base −20%, bull +49% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a>.)</em></p>
+<pre><code>bear             base        expected                                       bull
+-39%             -20%        -6.9%                                          +49%
+├────────────────┼───────────┼─────────────────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (20% bear, 55% base, 25% bull): about -6.9% a year over the next three years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>Datadog scores −15.91, ranking 20 of 21 active holdings by this measure — it sits near the foot of the portfolio, second to last, reflecting the gap between its genuine business quality and its current share price.</p>
+<blockquote>
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.20 × (-6.87% − 1.46% − 4.93%)<br />
+  &nbsp;&nbsp;= 1.20 × −13.26%<br />
+  &nbsp;&nbsp;= <strong>-15.91</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.20.</strong> Datadog sits in the strongest of three moat tiers, which lifts the score by 20 per cent. The switching costs embedded in its ubiquitous agent deployment — re-instrumenting a cloud environment is a months-long engineering programme — place it alongside the handful of holdings that earn the top-tier designation.</p>
+<p><strong>Expected return: −6.87%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking three years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (20% likelihood) — annualised return −39.4%.</strong> The bear case assumes the largest-customer usage reduction spreads, net revenue retention compresses toward 110–115%, and hyperscaler native tools erode mid-market share, leaving the business generating far less free cash flow growth than the current share price demands.</p>
+<p><strong>Base (55% likelihood) — annualised return −20.4%.</strong> The base case has net revenue retention holding in the low-120% range, revenue growing at around 20% annually, and free cash flow margins stable near 29% — a solid outcome for the business, but one that still produces a sharply negative return from today's entry price.</p>
+<p><strong>Bull (25% likelihood) — annualised return +48.8%.</strong> The bull case has AI observability re-accelerating growth toward 25–28% compounded annually, free cash flow margins expanding to 33%, and the business becoming the default platform for AI operations monitoring — the only scenario in which today's price generates a positive return.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.20 × (−39.4) + 0.55 × (−20.4) + 0.25 × 48.8 = −6.90%.</p>
+<p><strong>Hurdle rate: 4.93%.</strong> The hurdle rate is 4.93% — the 0.93% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>A score of −15.91 puts Datadog 20th of 21 active holdings — the expected return falls so far short of the hurdle that even the wide moat cannot rescue the ranking at the current share price.</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The three months ending 2026-06-30 delivered another quarter of strong operational momentum. Revenue reached $1.12 billion, 36% higher than the same period a year earlier — the fastest quarterly growth rate in several years — with about 70% of the increase coming from customers who were already on the platform rather than new sign-ups. Net revenue retention (the measure of how much existing customers spend relative to a year ago) stood in the low-120% range, up from approximately 120% a year prior. The count of customers spending $100,000 or more annually rose to 4,720, a 23% increase year-on-year and a continuation of the enterprise-compounding dynamic that anchors the investment case.</p>
+<p>The filing also carried an unusual forward-looking disclosure: management noted a reduction in usage from the largest single customer, beginning in the third quarter of 2026. That reduction had not yet affected the reported numbers — Q2 2026 figures remain clean — but its potential to slow growth in the back half of the year makes it the most consequential item to monitor at the next filing. Management framed the largest customer as part of the AI-native cohort; that cohort contributed "high single digit" percentage points to year-on-year revenue growth in Q2 2026.</p>
+<p>Against all this, the valuation question remains unchanged. An owner-earnings yield of 0.27% — measuring how much the business's true cash profits represent as a proportion of the share price, after deducting the cost of equity grants to employees — sits against a fair-value anchor of 2.5%. That gap is the reason the verdict from <a href="#the-standing-orders">the Standing Orders</a> remains a hold-or-trim, not a buy — the business is working, but the price already reflects many years of future growth. See <a href="#the-share-price">The Share Price</a> for the full valuation read.</p>
+<h2 id="about-datadog">About Datadog</h2>
+<p>Datadog sells software that tells engineering teams what is happening inside their cloud-based applications and infrastructure in real time. Every server, container, and serverless function running in a customer's cloud environment has a lightweight piece of Datadog software — an "agent" — installed on it. That agent continuously streams data about performance, errors, and security events back to Datadog's platform, which correlates it across all the signals and displays it in dashboards, alerts, and automated analyses. The business model is usage-based: customers pay for the volume of data they send and for whichever of Datadog's sixteen-plus product modules they activate. Because cloud environments tend to grow over time, even a customer who adds no new users naturally sends Datadog more data and activates more modules — which is why the company's existing customers collectively spend about 20% more each year without Datadog needing to sell them a single new contract.</p>
+<p>The company served approximately 33,400 customers at its most recent filing, ranging from start-ups with a handful of servers to the world's largest enterprises. The largest customers — the 4,720 accounts each spending $100,000 or more annually — account for 91% of total revenue, a concentration that creates both resilience (deep integration makes those customers sticky) and risk (a single large customer reducing usage can be visible in the numbers, as disclosed in the Q2 2026 filing). Datadog's founding insight, that cloud-native infrastructure is too complex for engineers to monitor with separate specialised tools for every data type, has not lost its relevance: the company now monitors applications, logs, infrastructure metrics, network activity, security events, and AI workloads from a single platform, with a proprietary data model that correlates signals across all of them.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The bet is that Datadog's switching-cost franchise is durable enough to keep customers expanding their spending at 20% or more annually, that gross margins hold above the 77% floor that signals the business can absorb its cost structure, and that the market price eventually corrects to a level where the expected return is worth taking. The conditions that must keep holding:</p>
+<ol>
+<li><strong>Net revenue retention stays above 112% for any rolling two-quarter window.</strong> A dollar-based net retention rate (the measure that compares what existing customers spend today with what they spent a year ago) below 112% for two consecutive quarters would signal that the land-and-expand flywheel has structurally slowed — most likely because hyperscaler native tools or AI-native-cohort spend optimisation is reducing the platform's share of each customer's monitoring budget. The 112% threshold is the line after which the premium multiple is no longer defensible.</li>
+</ol>
+<p><em>Latest reading:</em> Low-120%s as of 2026-06-30, up from approximately 120% a year earlier. Well above both the 115% watch threshold and the 112% exit floor. Management disclosed that the largest single customer began reducing usage in Q3 2026; if that feeds through to the trailing net retention rate it will be visible at the next quarterly filing.</p>
+<ol>
+<li><strong>Gross margin stays above 77% for any rolling two-quarter window.</strong> Third-party cloud infrastructure hosting costs are the main variable input cost; if they rise faster than Datadog can pass them through in pricing, gross margin compresses. A sustained fall below 77% would mean the per-customer unit economics have structurally deteriorated.</li>
+</ol>
+<p><em>Latest reading:</em> 79% gross margin in Q2 2026, down one percentage point year-on-year from 80%, driven by higher cloud infrastructure hosting and software costs. Two points above the exit floor but the direction of travel is the first notable year-on-year compression in several reporting periods.</p>
+<ol>
+<li><strong>Stock-based compensation stays below 25% of revenue with a credible management glide-path to normalise within two years if it rises above that level.</strong> Datadog pays a large portion of its employee costs in shares rather than cash; the accounting treatment adds those costs back to operating cash flow, making the free cash flow figure higher than the true cash the business generates for shareholders after paying for the staff who produced it. When equity grants exceed 25% of revenue and management shows no path to reducing them, the gap between reported cash flow and real owner earnings becomes wide enough to make per-share value creation illusory.</li>
+</ol>
+<p><em>Latest reading:</em> 20.3–20.4% of revenue in Q2/H1 2026, below both the 25% exit threshold and the 21.9% watch threshold. Trend is stable; headcount growth is being matched by revenue growth so the ratio is not drifting upward.</p>
+<ol>
+<li><strong>Revenue growth stays above 20% for any rolling two-quarter window.</strong> Deceleration below 20% for two consecutive quarters would signal competitive displacement or macro contraction beyond the law-of-large-numbers base case. Revenue growth is the primary evidence that the installed base is still expanding at the pace the thesis requires.</li>
+</ol>
+<p><em>Latest reading:</em> 36% year-on-year in Q2 2026 and 34% in the first half of 2026, well above the 20% floor. Management guided to $4.45–4.47 billion in full-year 2026 revenue, implying sustained growth. The largest-customer headwind is a forward risk, not yet a reported deceleration.</p>
+<ol>
+<li><strong>No single acquisition above $2 billion at premium multiples.</strong> Datadog's track record on bolt-on acquisitions has been disciplined — deals in the $10–220 million range, technology-focused, and absorbed without integration disruption. A large acquisition at a stretched price would introduce execution risk inconsistent with the current earnings base.</li>
+</ol>
+<p><em>Latest reading:</em> Three tuck-in acquisitions totalling $191.5 million in H1 2026, in line with the established pattern. No large acquisition disclosed or rumoured.</p>
+<ol>
+<li><strong>No regulatory enforcement action requiring a market exit or material operational restriction.</strong> Cross-border data telemetry and AI-model training data are the primary regulatory surfaces. An enforcement action under GDPR or the EU AI Act that shut down operations affecting more than 5% of revenue, or an equivalent APAC data-sovereignty requirement, would trigger this condition.</li>
+</ol>
+<p><em>Latest reading:</em> No enforcement action or material fine disclosed in Q2 2026. The EU AI Act came into effect in August 2024 and Datadog added compliance language to its risk factors, but no proceeding has been signalled.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At $261 per share, Datadog's owner-earnings yield — the ratio of the business's true cash profits (free cash flow minus the cost of equity grants) to the market price — stands at 0.27%. The fair-value anchor used by <a href="#the-rules">the Rules</a> is 2.5%, the point at which the yield represents a reasonable starting point for an investment that must compound over time. A yield of 0.27% against a 2.5% fair-value anchor means the current share price is approximately nine times higher than what those rules consider fair value, given the business's current earnings base.</p>
+<p>In price terms, <a href="#the-rules">the Rules</a> place fair value at around $28 per share (at current earnings and the 2.5% yield threshold), the buy edge at $17 (where the yield would reach 4.0%, the value-investor margin-of-safety zone), and the trim edge at $46 (where the yield would fall to 1.5%, the point at which the price is fully stretched even on a generous view). The current price of $261 sits far above all three markers.</p>
+<p>Two separate valuation methods produce materially different fair-value estimates, and the gap between them is itself informative. An owner-earnings method, anchoring to current cash profits after deducting equity grants, produces a fair value around $28–$30. A scenario-band method, applying market multiples to projected future financials, produces a base-case estimate of approximately $132. The two anchors disagree because one looks at what the business earns today and the other looks at what the market expects it to earn in several years. At $261, the share price is above even the scenario-band base case — meaning the market is pricing either the bull scenario or something beyond it. That is the analytical context behind the errors notices at the top of the page.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p><a href="#the-rules">The Rules</a> translate the share-price bands into two price alerts and two standing orders. Each is the operationalisation of a pre-committed framework, not a judgement made by this evaluation.</p>
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $28, the fair-value anchor. A crossing below this level means the share price has moved from expensive territory back toward neutral — no action follows automatically, but a fresh read of the six conditions is warranted.<br />
+- A second alert at $17, the cheap edge. A crossing below this level arms the buy order; before acting, the latest re-validation should confirm all six conditions are intact.</p>
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $17. The pre-committed framework calls for initiating a position in two tranches over one quarter once the share price closes at or below this line, provided net revenue retention remains at or above 115% and the free cash flow margin holds above 25%. The buy edge corresponds to an owner-earnings yield of 4.0% — the value-investor margin-of-safety threshold given the business's current earning power.<br />
+- A standing trim order at $46. The pre-committed framework calls for trimming 25–33% of any existing position when the share price closes at or above this line, to reduce exposure at a price it considers overstretched on an owner-earnings basis. The current price of $261 is well above this level; no position is held, so this order is informational only.</p>
+<p>No exit-tier rule has been authored for this holding. The three standing orders that would normally cap the analysis at an upper bound — covering scenarios where the market is pricing in a specific number of years of base-case compounding at no discount — are not yet set. The trim order is the operative upper limit as things stand.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>Two wobbles are present in the Q2 2026 filing, neither of which crosses an exit threshold.</p>
+<p>The more consequential wobble is the forward-looking disclosure about the largest single customer. Management stated that a reduction in usage from this customer was beginning in Q3 2026 — a quarter that had not yet closed at the time of the filing. The quantitative impact is unknown: the customer's exact revenue share is not disclosed and neither is the expected duration or magnitude of the reduction. If the reduction is temporary (a usage-optimisation cycle common among large cloud-native operators) the effect on trailing net retention will be modest. If it proves persistent and pulls the trailing net retention rate toward 115% over the following two or three quarters, the first watch threshold fires. The Q3 2026 quarterly filing, expected in October or November 2026, is the first hard data point.</p>
+<p>The second wobble is gross margin, which came in at 79% in Q2 2026 — down one percentage point from 80% in Q2 2025. The driver is unambiguous: Datadog's largest variable cost is cloud infrastructure hosting, and those costs rose faster than revenue in the quarter. A single quarter at 79% does not approach the 77% exit floor, but it is the first notable year-on-year compression in the recent period. If cloud infrastructure costs continue to rise and Datadog cannot pass them through in pricing, the margin will drift further toward the watch threshold. Both wobbles warrant monitoring at <a href="#the-case-for-the-bet">the Case for the Bet</a> against the written thresholds — not actions today, but open questions for the next quarterly cycle.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li><strong>Largest-customer revenue loss spreads.</strong> The disclosed Q3 2026 usage reduction is from a single AI-native customer. If the optimisation behaviour is structural across the AI-native cohort — which contributed high-single-digit percentage points to Q2 growth — the reported net retention rate could compress well below the 120% level within two to three quarters, approaching the 115% watch threshold and potentially the 112% exit floor.</li>
+<li><strong>Hyperscaler native tools capture single-cloud accounts.</strong> Amazon Web Services, Microsoft Azure, and Google Cloud each offer monitoring tools integrated into their platforms at zero extra cost. For customers running workloads exclusively on one cloud, those tools are increasingly capable. Datadog's defence is multi-cloud correlation, but as hyperscalers develop better cross-cloud integrations the addressable market could shrink at the margin. The timeline for parity is assessed at three to seven years.</li>
+<li><strong>Gross margin structurally compressed by GPU compute costs.</strong> AI workload monitoring requires ingesting and processing very large volumes of GPU telemetry data. If Datadog is absorbing GPU infrastructure costs to support this new product surface without fully passing them through in pricing, the structural gross margin floor could be lower than the 79–82% range of the past two years.</li>
+<li><strong>Stock-based compensation dilution outlasts revenue growth.</strong> At approximately 21% of revenue, equity grants remain large relative to the earnings base after deducting those grants. If revenue growth decelerates materially while headcount and grant sizes hold flat, the grants-to-revenue ratio could exceed 25% without a credible management plan to bring it down — triggering the third exit condition.</li>
+<li><strong>A single large acquisition disrupts the tuck-in model.</strong> The company holds $5.0 billion in cash and marketable securities. At a valuation that makes acquisitions feel cheap relative to Datadog's own share price, the temptation to pursue a transformative acquisition above the $2 billion threshold exists. A deal at the wrong price or the wrong target would violate the fifth condition.</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>The earnings calculation deducts stock-based compensation from free cash flow but does not separately isolate maintenance capital expenditure from growth capital expenditure. The filing's management discussion does not disaggregate the two; the risk is that some portion of the $49.6 million in capital expenditure recorded in FY2025 represents growth investment rather than maintenance, which would modestly overstate true owner earnings. The direction of the bias is toward overstatement, not understatement — the 0.27% yield, already far below any reasonable threshold, would be even lower on a stricter maintenance-only CapEx treatment.</p>
+<p>Self-reported historical trading multiples needed to construct the fair-value scenario bands (the method that produces the $132 base-case estimate) are unavailable for four sub-bands — the earnings-to-enterprise-value ratio based on operating profit, the revenue multiple, the price-to-book ratio, and the price-to-free-cash-flow ratio — because Datadog's trading history in the system is flagged as having insufficient length. The scenario-band central estimate therefore rests on peer-comparison multiples from Dynatrace and Elastic (with Palo Alto Networks given half-weight as a non-pure-play). This makes the $132 estimate more sensitive to those peers' current market conditions than it would be if Datadog's own history were available.</p>
+<ul>
+<li>Risk-free rate for DDOG read from SPY's Market-Data snapshot (per-holding field not present; SPY snapshot: 2026-08-17)</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>If the thesis remains confirmed — all six conditions intact and the share price between the buy and trim edges — hold any existing position and monitor the six conditions quarterly; no new entry at current prices. If the thesis weakens — net revenue retention declining toward 115% or revenue growth falling below 20% — do not initiate a position; reassess within one earnings cycle before any sizing decision; a weakened-but-not-broken thesis at elevated valuation has strictly negative risk-reward. If the thesis breaks — net revenue retention at or below 112% for two consecutive quarters, gross margin below 77% for two consecutive quarters, or stock-based compensation above 25% of revenue with no credible normalisation plan — do not enter; if already holding, exit the full position within 30 days; no averaging down. If the price falls below the buy edge at $17 — indicating a free cash flow yield at or above 4.0% — confirm the thesis is intact (net revenue retention at or above 115%, free cash flow margin at or above 25%, no exit condition triggered) and then initiate in two tranches over one quarter. If the price rises above the trim edge at $46 — indicating the free cash flow yield has fallen to or below 1.5% — do not initiate; if holding, trim 25–33% of the position; do not add. If the price rises above the exit level — the level at which the market is pricing approximately a given number of years of base-case compounding at no discount — exit the full position or remain out; redeploy proceeds; no re-entry within 90 days.</p>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in the Pipeline-Conventions reference document.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

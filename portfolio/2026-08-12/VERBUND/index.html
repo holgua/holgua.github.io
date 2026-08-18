@@ -12,30 +12,30 @@
 <p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
 <h1 id="verbund-the-bet-is-wobbling">VERBUND: The Bet Is Wobbling</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- DATA_ERROR: upcoming earnings fetch failed for VERBUND: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py VERBUND
-- scenarios.bear.central_estimate is null — bear IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)
-- scenarios.base.central_estimate is null — base IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)
-- scenarios.bull.central_estimate is null — bull IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)
-- forward_irr_base_pct is null or missing
-- forward_irr_bear_pct is null or missing
-- forward_irr_bull_pct is null or missing
-- STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]
-- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]
-- PORTFOLIO: - scenarios.bear.central_estimate is null — bear IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)
-- PORTFOLIO: - scenarios.base.central_estimate is null — base IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)
-- PORTFOLIO: - scenarios.bull.central_estimate is null — bull IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)
-- PORTFOLIO: - PORTFOLIO: - VERBUND: forward_irr_base_pct missing — excluded from ranking
-- PORTFOLIO: - VERBUND: forward_irr_base_pct missing — excluded from ranking
-- Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing's MD&amp;A for material growth-vs-maintenance CapEx differences.
-- [FAIR-VALUE-DRIFT] config.valuation.fair_value (5.5) diverges from current Owner Earnings Yield (%) (2.678) by 51.3% (threshold: 30%). Consider updating fair_value in Holdings/VERBUND/config.yaml.
+<p><strong>Warnings</strong><br />
+- DATA_ERROR: upcoming earnings fetch failed for VERBUND: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py VERBUND<br />
+- scenarios.bear.central_estimate is null — bear IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)<br />
+- scenarios.base.central_estimate is null — base IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)<br />
+- scenarios.bull.central_estimate is null — bull IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)<br />
+- forward_irr_base_pct is null or missing<br />
+- forward_irr_bear_pct is null or missing<br />
+- forward_irr_bull_pct is null or missing<br />
+- STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]<br />
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]<br />
+- PORTFOLIO: - scenarios.bear.central_estimate is null — bear IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)<br />
+- PORTFOLIO: - scenarios.base.central_estimate is null — base IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)<br />
+- PORTFOLIO: - scenarios.bull.central_estimate is null — bull IRR undetermined (run Compute-Fair-Value-Bands.py VERBUND)<br />
+- PORTFOLIO: - PORTFOLIO: - VERBUND: forward_irr_base_pct missing — excluded from ranking<br />
+- PORTFOLIO: - VERBUND: forward_irr_base_pct missing — excluded from ranking<br />
+- Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing's MD&amp;A for material growth-vs-maintenance CapEx differences.<br />
+- [FAIR-VALUE-DRIFT] config.valuation.fair_value (5.5) diverges from current Owner Earnings Yield (%) (2.678) by 51.3% (threshold: 30%). Consider updating fair_value in Holdings/VERBUND/config.yaml.<br />
 - [FAIR-VALUE-BANDS-DEGENERATE] Fair-Value-Bands base scenario has no central estimate — cannot cross-check fair_value. Re-run Compute-Fair-Value-Bands.py VERBUND with peers populated.</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -83,11 +83,11 @@
 <p>That said, the squeeze on cash generation appears to be a capital-expenditure-cycle phenomenon rather than a franchise impairment. Operating margins remain above 26%, net income was €1,489 million in 2025, and interest coverage is robust. The spread between the current 2.678% owner-earnings yield and the 4.0% trim threshold is 132 basis points — which is the technical basis for the trim signal, not a judgment that the business is deteriorating.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p>Per <a href="#the-rules">the Rules</a>, the share-price bands translate into two standing orders and two price alerts.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at €29, the fair-value anchor. The crossing means the share price has returned to a neutral reading — no action follows, but a fresh assessment of the conditions is warranted.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at €29, the fair-value anchor. The crossing means the share price has returned to a neutral reading — no action follows, but a fresh assessment of the conditions is warranted.<br />
 - A second alert at €23, the cheap-edge. The crossing arms the buy order described below; before adding, the latest re-validation should confirm the conditions are still working.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at €23. Adding in tranches is called for once the share price closes at or below this line and the conditions are still working. At that level, owner-earnings yield on the 2025 reported cash generation would reach 7%, the historically trough level for regulated utilities — implying either a severe market overreaction or a genuine franchise impairment that needs to be assessed before committing capital.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at €23. Adding in tranches is called for once the share price closes at or below this line and the conditions are still working. At that level, owner-earnings yield on the 2025 reported cash generation would reach 7%, the historically trough level for regulated utilities — implying either a severe market overreaction or a genuine franchise impairment that needs to be assessed before committing capital.<br />
 - A standing trim order at €40. Trimming a quarter to a third of the position is called for when the share price closes at or above this line, to harvest the premium while keeping the core holding. At €40, owner-earnings yield on 2025 reported cash generation would be 4.0% — exactly the trim threshold.</p>
 <p>No exit-tier rule has been authored for this holding. The exit conditions in the thesis govern when to close the position fully; the valuation framework does not have a pre-committed exit price independent of those conditions.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

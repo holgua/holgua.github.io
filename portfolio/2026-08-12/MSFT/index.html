@@ -12,11 +12,11 @@
 <p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
 <h1 id="microsoft-the-bet-still-works">Microsoft: The Bet Still Works</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- DATA_ERROR: upcoming earnings fetch failed for MSFT: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py MSFT
-- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
-- Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing's MD&amp;A for material growth-vs-maintenance CapEx differences.
-- [FAIR-VALUE-DRIFT] config.valuation.fair_value (3.5) diverges from current Owner Earnings Yield (%) (1.858) by 46.9% (threshold: 30%). Consider updating fair_value in Holdings/MSFT/config.yaml.
+<p><strong>Warnings</strong><br />
+- DATA_ERROR: upcoming earnings fetch failed for MSFT: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py MSFT<br />
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]<br />
+- Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing's MD&amp;A for material growth-vs-maintenance CapEx differences.<br />
+- [FAIR-VALUE-DRIFT] config.valuation.fair_value (3.5) diverges from current Owner Earnings Yield (%) (1.858) by 46.9% (threshold: 30%). Consider updating fair_value in Holdings/MSFT/config.yaml.<br />
 - FAIR-VALUE CONFLICT (67% gap): Two built-in valuation methods disagree on what MSFT is worth. The FCF-yield anchor (config fair_value = 3.5%) says fair value is ~$210: at $54582.0M FCF ÷ 3.5% ÷ 7428M shares, today’s $392 implies a 1.9% FCF yield vs the 3.5% anchor, and you would only add near $147 (5.0% yield threshold). The scenario-band model says $632: it applies the price multiples that peer companies and MSFT’s own trading history trade at to projected financials — on that view, $392 is a steep discount to the $632 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -40,10 +40,10 @@ $146         $364/$392                                                     $1456
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>Microsoft scores 10.32, ranking 7 of 20 active holdings by this measure — it sits in the upper half of the portfolio, comfortably above the median.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)
-  &nbsp;&nbsp;= 1.20 × (15.08% − 0.09% − 1.46% − 4.94%)
-  &nbsp;&nbsp;= 1.20 × +8.59%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.20 × (15.08% − 0.09% − 1.46% − 4.94%)<br />
+  &nbsp;&nbsp;= 1.20 × +8.59%<br />
   &nbsp;&nbsp;= <strong>10.32</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.20.</strong> Microsoft sits in the strongest of three moat tiers, which lifts the score by 20 per cent. The basis is Microsoft's enterprise identity infrastructure — Azure Active Directory and Entra ID — which creates an all-or-nothing switching cost that makes leaving Microsoft equivalent to simultaneously reprovisioning every application, device, and access policy across the enterprise estate.</p>
@@ -98,12 +98,12 @@ $146         $364/$392                                                     $1456
 <p>For the purpose of the pre-committed rules, the yield framework governs the trim signal. The scenario model governs the sizing decision for what remains after a trim: if the base case tracks, the residual position still has meaningful room to run. The two frames agree that the price is not cheap and that a full exit is not called for; they disagree on how expensive the current price is, and that disagreement explains why the rule calls for a partial reduction rather than a full exit.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p><a href="#the-rules">The Rules</a> translate the share-price bands into three standing orders and two price alerts. Each operationalises a pre-committed instruction.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at $208, the fair-value anchor derived from the earnings-yield method. The crossing means the share price has returned to a neutral reading; no action follows automatically, but a fresh read of the conditions is warranted.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $208, the fair-value anchor derived from the earnings-yield method. The crossing means the share price has returned to a neutral reading; no action follows automatically, but a fresh read of the conditions is warranted.<br />
 - A second alert at $146, the buy threshold — the price at which the earnings yield would reach 5.0% on current earnings. The crossing arms the buy order below; before adding, the latest re-validation should confirm the conditions are still intact.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at $146. Adding in tranches is called for once the share price closes at or below this line and the thesis conditions are still intact. The order may be staged across one or two quarters rather than filled in a single trade.
-- A standing trim order at $364. Trimming 20–25% of the position to harvest the premium is called for when the share price closes at or above this line. The aim is to reduce exposure while keeping the core holding for continued compounding if the base case tracks. The position should not be trimmed below half the current size unless a thesis exit condition has also triggered.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $146. Adding in tranches is called for once the share price closes at or below this line and the thesis conditions are still intact. The order may be staged across one or two quarters rather than filled in a single trade.<br />
+- A standing trim order at $364. Trimming 20–25% of the position to harvest the premium is called for when the share price closes at or above this line. The aim is to reduce exposure while keeping the core holding for continued compounding if the base case tracks. The position should not be trimmed below half the current size unless a thesis exit condition has also triggered.<br />
 - A standing exit order at $1456. Closing the full position is called for when the share price closes at or above this line. At that level, the earnings yield would be approximately 1.5% — less than half the risk-free rate and below the point where the compounding case offers any margin of safety. Full redeployment follows; no re-entry within 90 days.</p>
 <p>At today's price of $392, the price has already crossed the trim threshold. The three order levels do not contradict that reading: the trim order describes the current state; the other orders describe what fires if the price moves to each line in either direction.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

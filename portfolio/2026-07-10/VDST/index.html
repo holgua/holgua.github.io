@@ -27,9 +27,9 @@ $40                                          $59      $63                    $74
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>US Treasury 0-1y scores 3.12, ranking 11 of 16 active holdings by this measure — it sits below the median of the portfolio, as one would expect from a cash-equivalent placeholder rather than a compounding business.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= (4.80% − 2.20% − 0.00%)
-  &nbsp;&nbsp;= +2.60%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= (4.80% − 2.20% − 0.00%)<br />
+  &nbsp;&nbsp;= +2.60%<br />
   &nbsp;&nbsp;= <strong>3.12</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.20.</strong> The underlying basket holds obligations of the US federal government — sovereign-grade credit, the highest of three quality tiers available, which lifts the score by 20 per cent.</p>
@@ -60,12 +60,12 @@ $40                                          $59      $63                    $74
 <p>The computed fair-value price, derived from the 4.8% fair-value yield, is $46. The buy edge — the price at which the yield becomes attractive enough to add — is $40. The trim edge is $63; the exit edge is $74.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p>These yield-band edges translate into three standing orders and two price alerts, each operationalising a pre-committed threshold. They are summarised in full in <a href="#the-rules">the Rules</a>.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at $46, the fair-value anchor. The crossing would mean the basket yield has risen back to the 4.8% base-case level; no action follows automatically, but a fresh look at the conditions is warranted.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $46, the fair-value anchor. The crossing would mean the basket yield has risen back to the 4.8% base-case level; no action follows automatically, but a fresh look at the conditions is warranted.<br />
 - A second alert at $40, the cheap edge. The crossing would arm the buy order; before adding, the latest vehicle-integrity checks should be confirmed.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at $40. Adding at the margin is warranted when the listed price closes at or below this line — the basket yield would be at 5.5%, the thesis's bull-case anchor, marking T-bill rates as unusually attractive relative to EUR alternatives. Vehicle-integrity conditions still gate any large addition.
-- A standing trim order at $63. Trimming at the margin is warranted when the listed price closes at or above this line — the basket yield would be at 3.5%, the bear-case compression level, where the USD carry advantage over EUR cash has materially narrowed. Vehicle-integrity conditions still gate exit.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $40. Adding at the margin is warranted when the listed price closes at or below this line — the basket yield would be at 5.5%, the thesis's bull-case anchor, marking T-bill rates as unusually attractive relative to EUR alternatives. Vehicle-integrity conditions still gate any large addition.<br />
+- A standing trim order at $63. Trimming at the margin is warranted when the listed price closes at or above this line — the basket yield would be at 3.5%, the bear-case compression level, where the USD carry advantage over EUR cash has materially narrowed. Vehicle-integrity conditions still gate exit.<br />
 - A standing exit order at $74. Exiting the full position is warranted when any of the three numbered exit conditions fires, or when the listed price closes at or above this line — at that point the basket yield would be at 3.0%, fully priced relative to the risk-free rate.</p>
 <p>For vehicle-integrity breaches and the named exit conditions, the exit order fires independently of price: an expense-ratio breach, a fund-size breach, or a sovereign-credit downgrade triggers exit regardless of where the share price sits.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

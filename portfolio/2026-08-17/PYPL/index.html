@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PayPal: The Bet Still Works — Portfolio Reports</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="alternate" type="application/rss+xml" title="Portfolio Reports" href="../../feed.xml">
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← 2026-08-17 overview</a></p>
+<h1 id="paypal-the-bet-still-works">PayPal: The Bet Still Works</h1>
+<blockquote class="notice notice--error">
+<p><strong>Errors</strong></p>
+<ul>
+<li>DATA_ERROR: upcoming earnings fetch failed for PYPL: ERROR:ImportError:`Import lxml` failed.  Use pip or conda to install the lxml package. — re-run: python3 src/fetch/fetch_market_data.py PYPL</li>
+<li>FAIR-VALUE CONFLICT (61% gap): Two built-in valuation methods disagree on what PYPL is worth. The FCF-yield anchor (config fair_value = 10.5%) says fair value is ~$48: at $4480.0M FCF ÷ 10.5% ÷ 882M shares, today's $56 implies a 9.1% FCF yield vs the 10.5% anchor, and you would only add near $41 (12.5% yield threshold). The scenario-band model says $124: it applies the price multiples that peer companies and PYPL's own trading history trade at to projected financials — on that view, $56 is a steep discount to the $124 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.</li>
+</ul>
+</blockquote>
+
+<blockquote class="notice notice--info">
+<p><strong>Information</strong></p>
+<ul>
+<li>STRUCTURAL: fair-value band peer_bands.ev_ebitda unavailable — [INSUFFICIENT PEER DATA]</li>
+<li>STRUCTURAL: fair-value band peer_bands.ev_revenue unavailable — [INSUFFICIENT PEER DATA]</li>
+<li>STRUCTURAL: fair-value band peer_bands.p_b unavailable — [INSUFFICIENT PEER DATA]</li>
+<li>STRUCTURAL: fair-value band peer_bands.p_e unavailable — [INSUFFICIENT PEER DATA]</li>
+<li>STRUCTURAL: fair-value band peer_bands.p_fcf unavailable — [INSUFFICIENT PEER DATA]</li>
+<li>Owner earnings = FCF (operating cash flow − total CapEx), net of SBC (stock-based compensation deducted; OCF adds SBC back as non-cash). Maintenance CapEx is not separated — verify against the filing&#x27;s MD&amp;A for material growth-vs-maintenance CapEx differences.</li>
+</ul>
+</blockquote>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p><em>Data as of 2026-08-17 · Latest filing 2026-07-28.</em></p>
+<p>The bet is working. At $56, <a href="#the-share-price">the Share Price</a> sits in the upper half of the hold band, meaningfully above fair value — the earnings-yield anchor places fair value near $48, and the current price sits above that level yet still well below the trim edge of $59. The long-run expected return is about 13% a year — a healthy equity premium over the prevailing risk-free rate. The one condition to watch is operating margin: the gap between today's annualised run-rate and the $5.5 billion floor in the exit conditions is narrowing, and two more quarters of similar pressure would warrant a closer look at <a href="#the-case-for-the-bet">The Case for the Bet</a>.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Buy at $40. Trim at $59. Exit at $77.</p>
+<p>At $40, the long-run total return is about 17% a year. At today's $56, about 13% a year. Both figures are steady-state estimates over a horizon of many years — they assume the business keeps compounding at today's pace and the market eventually prices shares to fair value.</p>
+<pre><code>buy                               current/trim                              exit
+$40                               $56/$59                                    $77
+├─────────────────────────────────┼─────┼──────────────────────────────────────┤
+</code></pre>
+<p>Over the next three years, if the share price moves to the fair-value central estimate, returns work out to bear +29%, base +46%, bull +61% a year.</p>
+<p><em>(How to read: see <a href="#scenario-definitions">Scenario Definitions</a> in Pipeline-Conventions §13.)</em></p>
+<pre><code>bear                                     expected/base                      bull
++29%                                     +45.5%/+46%                        +61%
+├────────────────────────────────────────┼┼────────────────────────────────────┤
+</code></pre>
+<p>Weighted by likelihood (25% bear, 50% base, 25% bull): about +45.5% a year over the next three years.</p>
+<h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
+<p>PayPal scores 39.03, ranking 1 of 21 active holdings by this measure — it leads the portfolio by a wide margin.</p>
+<blockquote>
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − tax drag − fx drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.00 × (45.53% − 0.11% − 1.46% − 4.93%)<br />
+  &nbsp;&nbsp;= 1.00 × +39.03%<br />
+  &nbsp;&nbsp;= <strong>39.03</strong></p>
+</blockquote>
+<p><strong>Quality-weight: 1.00.</strong> PayPal sits in the middle moat tier — a genuine two-sided network effect in marketplace and peer-to-peer commerce, but bounded by device-native wallets on the consumer side and by lower-cost payment rails on the merchant side. The middle tier carries a weight of one, leaving the score unchanged.</p>
+<p><strong>Expected return: 45.53%.</strong> The expected return is a probability-weighted blend of three forward scenarios from the value analysis, looking 3 years ahead. Each scenario's annualised return is computed as: (scenario fair value ÷ today's price) ^ (1 ÷ 3) − 1.</p>
+<p><strong>Bear (25% likelihood) — annualised return +29.1%.</strong> The bear case assumes branded checkout stagnates, Braintree margin pressure intensifies under competition from Stripe and Adyen, the CEO reorganisation disrupts operations, and credit losses worsen — producing operating margins in the 15–16% range with a fair-value floor near $52.</p>
+<p><strong>Base (50% likelihood) — annualised return +46.0%.</strong> The base case has total payment volume sustaining 8–10% growth, branded checkout recovering to mid-single-digit growth under Lores, the April 2026 reorganisation delivering roughly $1.5 billion in gross savings, and buybacks continuing to reduce the share count at around 7–10% a year — producing a fair-value central estimate near $125.</p>
+<p><strong>Bull (25% likelihood) — annualised return +61.0%.</strong> The bull case has branded checkout re-accelerating to high-single-digit growth, agentic commerce and the PYUSD stablecoin product unlocking new revenue streams, and operating margins expanding toward 21–23% — producing a fair-value estimate near $250.</p>
+<p>The likelihoods are analyst-assigned at thesis-write time. 0.25 × 29.1 + 0.50 × 46.0 + 0.25 × 61.0 = +45.53%.</p>
+<p><strong>Hurdle rate: 4.93%.</strong> The hurdle rate is 4.93% — the 0.93% real yield on the German inflation-linked government bond (real cost of capital), plus the 2.0 percentage-point inflation target (to put the comparison on a nominal footing), plus a 2.0 percentage-point equity premium (the extra return required for holding a single company rather than a broadly diversified fund).</p>
+<p>At a score of 39.03, PayPal sits at the very top of the 21-holding portfolio — ahead of every other active position by a substantial margin, a reflection of how much ground remains between today's price and the scenario model's central estimate (see <a href="#the-share-price">The Share Price</a>).</p>
+<h2 id="recent-development">Recent Development</h2>
+<p>The second-quarter 2026 filing, covering the three months ending 2026-06-30, confirmed that PayPal's platform is growing but that the investment year is real. Total payment volume reached roughly $488 billion in the quarter — a 10% increase on the same period a year earlier — and the number of individual transactions rose 8%, with the average engagement level (measured as transactions per active account over the trailing twelve months) rising to 60.0 from 58.3. The headline is that volume is healthy.</p>
+<p>The underlying margin story is harder. Branded PayPal net revenue was negative in the quarter by around $130 million, driven by co-marketing campaign costs with large merchants and lower foreign-exchange fee revenue — not a loss of checkout volume, but a deliberate fee structure decision that weighs on near-term reported numbers. Operating income for the first half of the year came in at approximately $2.9 billion, 4% below the same period in 2025, and the operating margin contracted to roughly 17% from just under 19% a year earlier. The gap between the current annualised run-rate and the $5.5 billion operating income exit condition is narrower than it was a year ago.</p>
+<p>Capital return, by contrast, is accelerating. The company repurchased $3 billion worth of shares in the first six months of 2026 — about 67 million shares at an average price near $45 — leaving $10.9 billion of a $15 billion authorisation intact and reducing the share count by roughly 7% in seven months. That pace of per-share compounding is the bet's primary engine, and it is running ahead of plan. For the full picture of what has to keep holding, see <a href="#the-bottom-line">The Bottom Line</a>.</p>
+<h2 id="about-paypal">About PayPal</h2>
+<p>PayPal operates a two-sided digital payments network: consumers hold funds and send payments; merchants accept those payments and access short-term financing. Every transaction earns PayPal a small percentage of the value that flows through its pipes — known as a take-rate — plus fees on value-added services such as instalment lending and interest on customer balances. The business has been running for over twenty years, and its 439 million active accounts (accounts that completed at least one transaction in the past twelve months) represent one of the largest concentrations of payment-ready consumers anywhere on the internet.</p>
+<p>The company operates several distinct products under one roof. PayPal's branded checkout (the familiar PayPal button on merchant websites) competes directly with device-native wallets such as Apple Pay and Google Pay. Braintree, a payment-processing platform for large enterprise merchants, handles the underlying transaction infrastructure for many of the world's largest e-commerce sites and is the fastest-growing part of the business in volume terms. Venmo is a peer-to-peer payment application used primarily by younger consumers in the United States. PYUSD is a dollar-backed stablecoin product. The mix of these businesses matters: Braintree carries a lower take-rate than branded checkout, so volume growth through Braintree expands total payment volume but compresses the effective fee per dollar processed.</p>
+<h2 id="the-case-for-the-bet">The Case for the Bet</h2>
+<p>The central proposition is that PayPal's two-sided network — 439 million accounts on the consumer side, and the infrastructure underpinning a large share of global e-commerce on the merchant side — generates enough free cash for the company to compound per-share earnings at a double-digit rate through buybacks alone, even if the top-line growth rate stays modest. The bet does not require PayPal to win the checkout wars or to defeat Apple Pay; it requires the business to keep generating $5–7 billion in annual free cash, and for management to keep returning it to shareholders at prices well below intrinsic value.</p>
+<p>Five conditions must keep holding:</p>
+<ol>
+<li><strong>Branded checkout share does not decline more than two percentage points in any single fiscal year.</strong> Gradual checkout share erosion is a manageable headwind; a sudden two-point drop in a single year would signal secular displacement — the kind that breaks the fee-structure economics, not just a temporary advertising spend effect.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30. Branded PayPal net revenue was negative by around $130 million in the three months ending June 2026, driven by co-marketing costs and lower foreign-exchange fees — not confirmed volume loss. Management attributed the shortfall to deliberate strategic choices. Total payment volume for the quarter grew 10%, driven primarily by Braintree. Two consecutive quarters of branded net-negative revenue exist, but no checkout share loss of two percentage points has been confirmed from revenue data alone; the 10-Q does not separately disclose branded checkout volume. The condition has not been triggered.</p>
+<ol>
+<li><strong>No enforcement action by a regulator results in a consent order restricting core product features.</strong> A consent order that forces PayPal to change how its checkout works or limits the types of merchants it can serve would directly impair the network's earning power in a way that no amount of buybacks could offset.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30. The Consumer Financial Protection Bureau and the Federal Trade Commission each hold open civil investigative demands — the Bureau's covering Regulation E, linked bank accounts, and PayPal Credit; the Commission's covering commercial customers and deceptive schemes. A UK Financial Conduct Authority investigation opened in March 2026 into certain payment-network contractual terms with Visa and Mastercard. A securities class-action (Darcy) was filed in February 2026 regarding branded checkout growth disclosures. None of these proceedings has produced a consent order or imposed operational restrictions. The condition has not been triggered.</p>
+<ol>
+<li><strong>Consumer credit charge-off rate stays below 10%.</strong> PayPal extends short-term credit to consumers through its instalment loan products. A charge-off rate above 10% without a disclosed recovery path would indicate credit underwriting has failed, threatening the lending business and imposing losses that compete with the buyback programme for cash.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30. The consumer net charge-off rate was 4.8% in the three months ending June 2026, up from 3.6% in the same quarter of 2025 — the second consecutive quarter of deterioration after an improvement in the first quarter of 2026. The merchant net charge-off rate was 7.6%, up from 6.1% a year earlier. Both are well below the 10% threshold. The condition has not been triggered, though the direction warrants monitoring through the second half of 2026.</p>
+<ol>
+<li><strong>Management does not abandon the buyback programme or take on material incremental debt above 2.0 times net debt to operating profit.</strong> The buyback is the bet's compounding mechanism. Abandoning it at current prices, or loading the balance sheet with debt for non-strategic purposes, would destroy the per-share compounding engine.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30. The $15 billion repurchase authorisation approved in February 2025 remains active, with $10.9 billion of capacity remaining as of 2026-06-30. The company issued $2 billion in senior unsecured notes in May 2026 for general corporate purposes, including buybacks, taking long-term debt to $10.9 billion. Against cash and investments of approximately $15 billion, the balance sheet remains in a net-positive liquidity position. The buyback pace is accelerating, not slowing. The condition has not been triggered.</p>
+<ol>
+<li><strong>Annual operating income does not fall below $5.5 billion in any fiscal year, nor does management explicitly guide operating income below $5.0 billion for the following year.</strong> This condition defines the floor for margin discipline under CEO Lores: if the reorganisation disrupts the business badly enough to push annual operating income through the floor, the investment case for margin recovery collapses.</li>
+</ol>
+<p><em>Latest reading:</em> 2026-06-30. First-half 2026 operating income was approximately $2.9 billion, a 4% decline from the same period of 2025. Annualised, this run-rate would produce approximately $5.8 billion for the full year — above the $5.5 billion floor. The margin has contracted, but the threshold has not been crossed. Management's public guidance for the full year does not explicitly guide below $5.0 billion on a non-GAAP basis. The condition has not been triggered, but the gap has narrowed materially.</p>
+<h2 id="the-share-price">The Share Price</h2>
+<p>At $56, the share price sits in the upper half of the hold band — above the buy edge of $40 and below the trim edge of $59, but considerably closer to trim territory than to buy territory. Placement in the band is determined by a measure of cash earnings relative to market value: at $56, that earnings yield works out to roughly 9%, compared to the 12.5% threshold that defines the buy edge and the 8.5% threshold that defines the trim edge.</p>
+<p>The fair-value anchor — the yield at which the business would be priced exactly at its intrinsic value — is 10.5%, which corresponds to a price near $48. At $56, the share price sits about 17% above that anchor. Put plainly: the business is not cheap by the earnings-yield measure. What the valuation model does not capture is the scenario-based view: when projected three-year fair values are weighted by probability, the central estimate sits near $124, making $56 look deeply discounted by that measure. The two methods produce a 61% disagreement, which is disclosed as an error notice at the top of this evaluation. For day-to-day decisions, the earnings-yield anchor governs the <a href="#the-standing-orders">Standing Orders</a>.</p>
+<h2 id="the-standing-orders">The Standing Orders</h2>
+<p>The <a href="#the-standing-orders">Standing Orders</a> translate the share-price bands into three concrete alerts and orders. Each is the operationalisation of a pre-committed rule — not a new judgement made by this evaluation.</p>
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $48, the fair-value anchor. When the share price crosses this level, the stock has returned to a neutral pricing relative to current owner earnings; no action follows automatically, but a fresh read of the conditions is warranted.<br />
+- A second alert at $40, the cheap edge. When the share price crosses this level, the buy order below it is armed; before adding, the latest re-validation should confirm that none of the five conditions have deteriorated.</p>
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $40. At or below this line and with the thesis confirmed, the pre-committed instructions call for adding in tranches over one to two quarters.<br />
+- A standing trim order at $59. At or above this line, the instructions call for trimming 25–33% of the position to harvest the premium while keeping the core holding intact.<br />
+- A standing exit order at $77. At or above this line, the instructions call for closing the full position. At that price, the market is pricing in roughly eleven years of base-case compounding instantly; the implied forward return falls below the long-run equity premium, and redeploying the proceeds beats continuing to hold.</p>
+<p>The three order levels do not contradict the current hold verdict: that verdict describes today's reading; the instructions describe what will be executed if the share price moves to each line.</p>
+<h2 id="whats-wobbling">What's Wobbling</h2>
+<p>Two of the five conditions — branded checkout net revenue and operating margin — are showing strain, though neither has crossed its exit threshold.</p>
+<p><strong>Branded checkout net revenue.</strong> For two consecutive quarters, PayPal's branded products have generated negative net revenue growth, driven by co-marketing campaigns with large merchants and lower foreign-exchange fees. Management's explanation — strategic decisions on fee structure, not volume loss — is plausible but not yet verifiable from the financial statements alone. The 10-Q does not separately disclose branded checkout volume share, so the underlying share trajectory (the metric that actually governs <a href="#the-case-for-the-bet">The Case for the Bet</a>) cannot be confirmed from public filings. This ambiguity is the primary monitoring requirement going into the third-quarter filing.</p>
+<p><strong>Operating margin.</strong> The first-half margin of 17.1% — down from 18.9% in the same period of 2025 — is explicitly a management-guided investment year: CEO Lores's April 2026 reorganisation is expected to impose $120–140 million in transformation charges in the second half of the year, before the $400 million in run-rate savings from Phase 1 begin to appear in results in the fourth quarter. If the savings trajectory holds, the margin should stabilise in 2027. If it does not, the gap between the current run-rate and the $5.5 billion operating income floor shrinks further. Two quarters of accelerating credit losses (consumer charge-off rate rising from 3.6% to 4.8% over twelve months) add a secondary financial pressure that is not yet at exit-threshold levels but is moving in the wrong direction.</p>
+<h2 id="what-could-still-go-wrong">What Could Still Go Wrong</h2>
+<ul>
+<li>
+<p><strong>Apple Pay and Google Pay displace branded checkout faster than the data shows.</strong> Device-native wallets bypass PayPal at the point of transaction for consumers who pay with Face ID or fingerprint. This is not a cyclical headwind; it is a structural realignment of where the checkout interaction happens. If branded checkout transaction counts turn negative on a twelve-month basis for two consecutive quarters, the exit condition fires before the revenue data confirms it.</p>
+</li>
+<li>
+<p><strong>The CEO reorganisation destroys more than it saves.</strong> Enrique Lores is six months into the role. The April 2026 reorganisation is a large structural change. If the savings target of $1.5 billion in gross annualised savings is not reached, or if the disruption damages key merchant relationships or engineering talent retention, the margin improvement thesis collapses on a multi-year horizon.</p>
+</li>
+<li>
+<p><strong>Consumer credit losses worsen materially.</strong> Consumer charge-offs rose from 3.6% to 4.8% in twelve months. If a US consumer spending slowdown driven by trade tariff uncertainty pushes the rate above 6% on a sustained basis, the instalment lending business — which provides an important revenue floor through its value-added services — faces a structural hit that the balance sheet cannot fully absorb through buybacks.</p>
+</li>
+<li>
+<p><strong>A value-destructive acquisition resets the capital return calculus.</strong> PayPal has $15 billion in remaining buyback authorisation and a strong net cash position. A large acquisition at inflated prices — particularly anything above $3 billion at more than 20 times operating profit — would halt the buyback engine precisely when it is most valuable.</p>
+</li>
+<li>
+<p><strong>Regulatory proceedings escalate beyond their current procedural stage.</strong> The FTC, Consumer Financial Protection Bureau, and UK Financial Conduct Authority all have active proceedings. A consent order imposing operational restrictions would change the business model directly; a monetary penalty above $500 million would divert cash that would otherwise have been deployed in buybacks.</p>
+</li>
+</ul>
+<h2 id="gaps-in-the-picture">Gaps in the Picture</h2>
+<p>The most significant gap is the absence of separately disclosed branded checkout volume data in the quarterly filings. The thesis's first exit condition — a two-percentage-point share loss in a single year — cannot be monitored directly from public financial statements. Management discusses branded checkout in qualitative terms in earnings calls, but the 10-Q provides only aggregate payment volume and transaction counts. Investors can infer but not measure the underlying share trajectory until management chooses to disclose it or until a competitor independently quantifies the shift.</p>
+<p>Operating margin trajectory in the second half of 2026 is also a known gap: the reorganisation charges ($120–140 million) are expected in the second half, and the savings realisation is expected in the fourth quarter. The picture will only become clear with the third-quarter 2026 filing, expected around October 2026.</p>
+<p>The valuation conflict between the earnings-yield anchor (fair value near $48) and the scenario-based model (central estimate near $124) is a methodological gap, not a data gap. Both models use the same underlying financials; they disagree on how to weight current earnings against projected future scale. The earnings-yield method governs the standing orders; the scenario model calibrates the three-year return expectations in <a href="#how-the-score-adds-up">How the Score Adds Up</a>.</p>
+<ul>
+<li>Risk-free rate for PYPL read from SPY's Market-Data snapshot (per-holding field not present; SPY snapshot: 2026-08-17)</li>
+</ul>
+<h2 id="the-rules">The Rules</h2>
+<p>The evaluation is governed by six pre-committed rules. Each maps a market or thesis condition to an action:</p>
+<ul>
+<li>If the thesis is confirmed (all drivers are holding, no exit condition triggered): hold — no action, continue compounding.</li>
+<li>If the thesis is weakened (at least one driver is deteriorating but no exit condition has fired): do not add. Monitor the specific deteriorating driver; wait for two consecutive quarters of confirming data before drawing a conclusion — one quarter of weakness is not sufficient grounds for a change.</li>
+<li>If the thesis is broken (an exit condition has fired): exit the full position within 30 days, with no averaging down. Document which condition fired for the record.</li>
+<li>If the share price falls to or below $40 (the buy edge, equivalent to an owner earnings yield of 12.5%) and the thesis is confirmed: add in tranches over one to two quarters.</li>
+<li>If the share price rises to or above $59 (the trim edge, equivalent to an owner earnings yield of 8.5%): trim 25–33% to harvest the premium, retaining the core position.</li>
+<li>If the share price rises to or above $77 (the exit edge): exit the full position. At that price, the market is pricing in roughly eleven years of base-case compounding instantly; the implied forward return falls below the long-run equity premium, and reallocation takes priority. No re-entry within 90 days, to avoid anchoring to the prior cost basis.</li>
+</ul>
+<h2 id="scenario-definitions">Scenario Definitions</h2>
+<p>A scenario is a joint assumption about two independent variables: <strong>operating trajectory</strong> (how the holding's underlying cash flows grow relative to their long-run trend) and <strong>exit multiple</strong> (what the market pays for those cash flows at the horizon, relative to a fair-value anchor).</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Operating trajectory</th>
+<th>Exit multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>Below trend</td>
+<td>Below fair value</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>At trend</td>
+<td>At fair value</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>Above trend</td>
+<td>At or above fair value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-negotiable rule:</strong> In the bear case, both dimensions must be adverse simultaneously — a scenario where only the multiple moves is a re-rating scenario, not a bear.</p>
+<p>Bear cases are comparable in <strong>structure</strong> across all holding types (company, ETF, bond), but not in <strong>magnitude</strong>. A company bear reflects idiosyncratic execution failure; an ETF bear reflects a broad market drawdown. Different mitigations, different diversification implications. The full calibration methodology is in <code>.claude/skills/Pipeline-Conventions.md §13</code>.</p><hr>
+<section class="further-reading">
+<h2>Further reading</h2>
+<p>The full analyses that produced the numbers in this note:</p>
+<ul>
+  <li><a href="competition.html">Competition</a></li>
+  <li><a href="fair-value-bands.html">Fair-value bands</a></li>
+  <li><a href="financial-brief.html">Financial brief</a></li>
+  <li><a href="growth-analysis.html">Growth investor's analysis</a></li>
+  <li><a href="market-data.html">Market data</a></li>
+  <li><a href="political-exposure.html">Political exposure</a></li>
+  <li><a href="value-analysis.html">Value investor's analysis</a></li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>

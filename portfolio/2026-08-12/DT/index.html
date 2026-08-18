@@ -12,16 +12,16 @@
 <p class="back"><a href="../index.html">← 2026-08-12 overview</a></p>
 <h1 id="dynatrace-the-bet-still-works">Dynatrace: The Bet Still Works</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- DATA_ERROR: upcoming earnings fetch failed for DT: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py DT
-- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DT is a genuine non-payer this is expected, otherwise check yfinance_symbol
-- SANITY: forward_irr_bull_pct value 84.64 outside sanity range (-75.0, 75.0) — reported as computed. Common causes (in order): (a) §9 arithmetic used a multiple above the three-way min (self p90, peer high, absolute cap) — see 11-Value-Analysis "Multiple ceiling"; (b) bull FCF CAGR exceeded the 10y normalised owner-earnings CAGR (see 03-Analyze-Edgar §8.5 "10y OE-anchored bull"); (c) both. Re-run 11-Value-Analysis §9 with corrected inputs.
-- CLAMP: peer DDOG p_e=491.6531× exceeds cap 200.0× — clamped for band computation
-- CLAMP: peer DDOG ev_ebitda=1024.222× exceeds cap 100.0× — clamped for band computation
-- PORTFOLIO: (stale ranking, 2026-08-10) - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DT is a genuine non-payer this is expected, otherwise check yfinance_symbol
-- PORTFOLIO: (stale ranking, 2026-08-10) - PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DT is a genuine non-payer this is expected, otherwise check yfinance_symbol
-- Owner earnings = config.valuation.owner_earnings_override_usd (0.53B; yield 4.14%); auto-FCF read would be 4.14%; divergence +0.00 pp. Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.
-- FAIR-VALUE CONFLICT (70% gap): Two built-in valuation methods disagree on what DT is worth. The FCF-yield anchor (config fair_value = 4.4%) says fair value is ~$41: at $529.7M FCF ÷ 4.4% ÷ 291M shares, today’s $44 implies a 4.1% FCF yield vs the 4.4% anchor, and you would only add near $31 (5.9% yield threshold). The scenario-band model says $138: it applies the price multiples that peers (DDOG, ESTC) and DT’s own trading history trade at to projected financials — on that view, $44 is a steep discount to the $138 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.
+<p><strong>Warnings</strong><br />
+- DATA_ERROR: upcoming earnings fetch failed for DT: ERROR:ImportError:Missing optional dependency 'lxml'.  Use pip or conda to install lxml. — re-run: python3 src/fetch/fetch_market_data.py DT<br />
+- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DT is a genuine non-payer this is expected, otherwise check yfinance_symbol<br />
+- SANITY: forward_irr_bull_pct value 84.64 outside sanity range (-75.0, 75.0) — reported as computed. Common causes (in order): (a) §9 arithmetic used a multiple above the three-way min (self p90, peer high, absolute cap) — see 11-Value-Analysis "Multiple ceiling"; (b) bull FCF CAGR exceeded the 10y normalised owner-earnings CAGR (see 03-Analyze-Edgar §8.5 "10y OE-anchored bull"); (c) both. Re-run 11-Value-Analysis §9 with corrected inputs.<br />
+- CLAMP: peer DDOG p_e=491.6531× exceeds cap 200.0× — clamped for band computation<br />
+- CLAMP: peer DDOG ev_ebitda=1024.222× exceeds cap 100.0× — clamped for band computation<br />
+- PORTFOLIO: (stale ranking, 2026-08-10) - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DT is a genuine non-payer this is expected, otherwise check yfinance_symbol<br />
+- PORTFOLIO: (stale ranking, 2026-08-10) - PORTFOLIO: - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DT is a genuine non-payer this is expected, otherwise check yfinance_symbol<br />
+- Owner earnings = config.valuation.owner_earnings_override_usd (0.53B; yield 4.14%); auto-FCF read would be 4.14%; divergence +0.00 pp. Bypasses scores-JSON FCF lookup. Verify the override traces to a specific Value-Analysis section (e.g. V-A §6.1 Auto-segment FCF) and is refreshed when V-A is refreshed.<br />
+- FAIR-VALUE CONFLICT (70% gap): Two built-in valuation methods disagree on what DT is worth. The FCF-yield anchor (config fair_value = 4.4%) says fair value is ~$41: at $529.7M FCF ÷ 4.4% ÷ 291M shares, today’s $44 implies a 4.1% FCF yield vs the 4.4% anchor, and you would only add near $31 (5.9% yield threshold). The scenario-band model says $138: it applies the price multiples that peers (DDOG, ESTC) and DT’s own trading history trade at to projected financials — on that view, $44 is a steep discount to the $138 scenario estimate. The gap exists because the FCF-yield method anchors to current earnings while the scenario model looks through to future scale.<br />
 - PLAUSIBILITY: base-case return (+46.5%) sign is opposite to the fair-value gap direction (44 → 41). Valuation inputs may need refreshing — reported as computed.</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -45,10 +45,10 @@ $31            $44         $55                                              $101
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>Dynatrace scores 36.87, ranking 2 of 20 active holdings by this measure — it sits just behind the top position in the portfolio.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
-  &nbsp;&nbsp;= 1.00 × (43.27% − 1.46% − 4.94%)
-  &nbsp;&nbsp;= 1.00 × +36.87%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.00 × (43.27% − 1.46% − 4.94%)<br />
+  &nbsp;&nbsp;= 1.00 × +36.87%<br />
   &nbsp;&nbsp;= <strong>36.87</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.00.</strong> This holding sits in the middle moat tier; the weight is one, so it leaves the score unchanged. Switching costs confirmed by net retention above 110% and the platform lock-in from the all-in-one licensing model form one strong moat source, supplemented by a narrower artificial-intelligence data advantage — meeting the criteria for the middle tier rather than the strongest.</p>
@@ -101,11 +101,11 @@ $31            $44         $55                                              $101
 <p>A separate valuation framework — one that applies the price multiples at which comparable businesses trade to Dynatrace's projected future financials — produces a base-case estimate of approximately $138 a share. The two methods disagree by a large margin, and the system flags this disagreement explicitly. The explanation is that the cash-flow-yield method anchors to what the business earns today, while the scenario-multiple method looks through to what the business might earn in three years and applies the multiples peers command. At current prices, neither method says the stock is cheap in the sense of offering a substantial cushion below its own anchor.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p><a href="#the-rules">The Rules</a> translate the share-price bands into two standing orders and two price alerts. Each is the operationalisation of a pre-committed rule — not a new judgement formed here.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at $41, the fair-value anchor. When the share price falls to or through this level, the yield touches 4.4% and the stock is at neutral. No action follows automatically, but a fresh read of the conditions is warranted before any decision.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $41, the fair-value anchor. When the share price falls to or through this level, the yield touches 4.4% and the stock is at neutral. No action follows automatically, but a fresh read of the conditions is warranted before any decision.<br />
 - A second alert at $31, the buy edge. When the share price falls to or through this level, the yield touches 5.9% — the point at which <a href="#the-rules">the Rules</a> consider the price a meaningful discount to fair value. This alert arms the buy order.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at $31. <a href="#the-rules">The Rules</a> call for accumulating toward a full position once the share price closes at or below this level, provided the thesis conditions are still working. Management's own buyback at an average of $38.88 in the first quarter of fiscal 2027 sets a practical market reference.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $31. <a href="#the-rules">The Rules</a> call for accumulating toward a full position once the share price closes at or below this level, provided the thesis conditions are still working. Management's own buyback at an average of $38.88 in the first quarter of fiscal 2027 sets a practical market reference.<br />
 - A standing trim order at $55. <a href="#the-rules">The Rules</a> call for reducing the position — toward a half to two-thirds holding — once the share price closes at or above this level, to harvest the premium while retaining exposure to further upside.</p>
 <p>No exit-tier price rule has been authored for Dynatrace. At the levels described above, the sell-side of the investment is governed by the trim order and, if thesis conditions break, by the thesis-broken action rather than a fixed price trigger.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>

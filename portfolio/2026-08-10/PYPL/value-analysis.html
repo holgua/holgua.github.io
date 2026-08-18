@@ -11,7 +11,7 @@
 <main>
 <p class="back"><a href="index.html">← PYPL report</a></p>
 <h1 id="paypal-holdings-inc-pypl-value-analysis">PayPal Holdings, Inc. (PYPL) — Value Analysis</h1>
-<p><em>Prepared: 2026-07-21 | Financial input: PYPL-Financial-Brief.md (§X.Y references match PYPL-Financial-Analysis.md) | Market Data: 2026-07-07 ($45.65) / 2026-07-20 ($55.98 canonical for IRR)</em>
+<p><em>Prepared: 2026-07-21 | Financial input: PYPL-Financial-Brief.md (§X.Y references match PYPL-Financial-Analysis.md) | Market Data: 2026-07-07 ($45.65) / 2026-07-20 ($55.98 canonical for IRR)</em><br />
 <em>Valuation lens: Warren Buffett / Charlie Munger</em></p>
 <hr />
 <h2 id="section-1-value-investors-verdict">SECTION 1 — VALUE INVESTOR'S VERDICT</h2>
@@ -235,9 +235,9 @@
 <h2 id="section-5-intrinsic-value-margin-of-safety">SECTION 5 — INTRINSIC VALUE &amp; MARGIN OF SAFETY</h2>
 <h3 id="51-owner-earnings-dcf-conservative">5.1 Owner Earnings DCF (Conservative)</h3>
 <p><strong>Base inputs:</strong> Owner Earnings FY2025 ~$5,343M; Base case revenue CAGR 6–7% with margin trajectory stable to expanding; use 6% as the conservative lower bound for the base Stage 1 growth rate. Discount rate: risk-free rate (US 10-year Treasury, approximately 4.3% implied from current market context [NOT IN SOURCE FILES — analyst assumption]) + 4.0% business risk premium (moderate moat, medium earnings predictability) = <strong>8.3% base discount rate</strong>. Terminal growth rate: 3.0% (payments network with global nominal GDP tailwind; justified by long-run digital commerce growth).</p>
-<p><em>Owner Earnings stage 1 growth assumptions:</em>
-- Bear: 3% growth (checkout stagnation, margin compression) — discount rate 8.3%
-- Base: 6% growth — discount rate 8.3%
+<p><em>Owner Earnings stage 1 growth assumptions:</em><br />
+- Bear: 3% growth (checkout stagnation, margin compression) — discount rate 8.3%<br />
+- Base: 6% growth — discount rate 8.3%<br />
 - Bull: 9% growth — discount rate 8.3%</p>
 <p><em>Base case DCF table (Stage 1 growth 6%, WACC 8.3%, terminal growth 3.0%):</em></p>
 <table>
@@ -611,30 +611,30 @@
 <h4 id="91-bear-case-branded-checkout-stagnation-and-ceo-disruption">9.1 Bear Case — "Branded Checkout Stagnation and CEO Disruption"</h4>
 <p><em>Probability: 25% (scenarios_input.bear.probability_pct)</em></p>
 <p>The bear case assumes branded checkout volume stagnates as Apple Pay and Google Pay complete their device-level capture of consumer authentication; Braintree's margin expansion reverses as large enterprise customers renegotiate volume-tiered pricing; and the new CEO's strategic review produces a reorganisation wave that disrupts the go-to-market function and elevates operating costs through FY2027. Macro headwinds — consumer spending deceleration driven by tariff-induced goods-price inflation — compress TPV below trend. EBIT margin falls from FY2025's 18.3% to 15.5% by FY2028E, with FCF compressed to $4.6B. The ILC bank application stalls and delivers no incremental economics within the planning period. Buybacks continue but at a reduced pace given tighter FCF; shares outstanding at FY2028E: 820M. Net cash at FY2028E: $7.4B — the balance sheet remains net-cash positive even in the bear case, providing structural downside protection.</p>
-<p><code>terminal_value = 4.6 × 1.03 / (0.083 − 0.030) = 4.738 / 0.053 = 89.4B</code>
-<code>equity_value = 89.4B + 7.4B net_cash = 96.8B</code>
+<p><code>terminal_value = 4.6 × 1.03 / (0.083 − 0.030) = 4.738 / 0.053 = 89.4B</code><br />
+<code>equity_value = 89.4B + 7.4B net_cash = 96.8B</code><br />
 <code>equity_per_share = 96,800M / 820M shares = $118</code></p>
-<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong> <strong>~$118/share</strong> — substantially above the Fair-Value-Bands bear central estimate of $52 because the DCF capitalises even compressed FCF at a going-concern terminal multiple. The sidecar's $52 applies a market-multiple-contraction assumption not embedded in the Gordon growth model.
-<strong>3-Year Bear Return (annualised, sidecar canonical):</strong> −2.43% (PYPL-Forward-Returns.json bear IRR; price target $52 vs. $55.98 current)
-<strong>Margin of Safety at Bear Case:</strong> Current price $55.98 vs. bear central estimate $52 = 8% downside to bear fair value. The stock is trading approximately at bear case fair value; the bear case does not offer a catastrophic drawdown because the $14B net cash is a structural floor.
+<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong> <strong>~$118/share</strong> — substantially above the Fair-Value-Bands bear central estimate of $52 because the DCF capitalises even compressed FCF at a going-concern terminal multiple. The sidecar's $52 applies a market-multiple-contraction assumption not embedded in the Gordon growth model.<br />
+<strong>3-Year Bear Return (annualised, sidecar canonical):</strong> −2.43% (PYPL-Forward-Returns.json bear IRR; price target $52 vs. $55.98 current)<br />
+<strong>Margin of Safety at Bear Case:</strong> Current price $55.98 vs. bear central estimate $52 = 8% downside to bear fair value. The stock is trading approximately at bear case fair value; the bear case does not offer a catastrophic drawdown because the $14B net cash is a structural floor.<br />
 <strong>Confirming Signal (12-month):</strong> Transaction margin dollars ex-interest on customer balances negative YoY for two consecutive quarters, accompanied by management abandoning the "operating margin expansion" guidance framing.</p>
 <h4 id="92-base-case-disciplined-recovery-buyback-compounding">9.2 Base Case — "Disciplined Recovery, Buyback Compounding"</h4>
 <p><em>Probability: 50% (scenarios_input.base.probability_pct)</em></p>
 <p>The base case assumes branded checkout stabilises and returns to mid-single-digit growth driven by merchant-side integration deepening and Venmo monetisation continuing at its current pace. The new CEO focuses cost discipline rather than growth investment; operating leverage delivers EBIT margin maintained at 19.0% by FY2028E. Transaction margin dollar growth re-accelerates to 5–7% following the Q1 2026 re-investment trough. The buyback programme continues at $5–6B annually, reducing shares from 920M (FY2025) to ~810M by FY2028E. Net cash grows to $14.1B as FCF generation keeps pace with buybacks. The ILC charter is approved in 2027 but delivers minimal P&amp;L contribution within the planning period. FCF reaches $6.4B at FY2028E — 15% above FY2025 actuals.</p>
-<p><code>terminal_value = 6.4 × 1.03 / 0.053 = 6.592 / 0.053 = 124.4B</code>
-<code>equity_value = 124.4B + 14.1B net_cash = 138.5B</code>
+<p><code>terminal_value = 6.4 × 1.03 / 0.053 = 6.592 / 0.053 = 124.4B</code><br />
+<code>equity_value = 124.4B + 14.1B net_cash = 138.5B</code><br />
 <code>equity_per_share = 138,500M / 810M shares = $171</code></p>
-<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong> <strong>~$171/share</strong> — above the Fair-Value-Bands base central estimate of $125. The gap reflects the large net cash balance included at face value in the DCF versus the multiple-based Fair-Value-Bands approach. The sidecar's $125 is canonical.
-<strong>3-Year Base Return (annualised, sidecar canonical):</strong> +30.71% (PYPL-Forward-Returns.json base IRR; price target $125 vs. $55.98 current)
+<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong> <strong>~$171/share</strong> — above the Fair-Value-Bands base central estimate of $125. The gap reflects the large net cash balance included at face value in the DCF versus the multiple-based Fair-Value-Bands approach. The sidecar's $125 is canonical.<br />
+<strong>3-Year Base Return (annualised, sidecar canonical):</strong> +30.71% (PYPL-Forward-Returns.json base IRR; price target $125 vs. $55.98 current)<br />
 <strong>Confirming Signal (12-month):</strong> Transaction margin dollar growth re-accelerating above 5% YoY by Q3 2026, with GAAP operating margin exiting FY2026 above 18%.</p>
 <h4 id="93-bull-case-agentic-commerce-and-pyusd-monetisation">9.3 Bull Case — "Agentic Commerce and PYUSD Monetisation"</h4>
 <p><em>Probability: 25% (scenarios_input.bull.probability_pct)</em></p>
 <p>The bull case is a product-expansion scenario: PayPal's investment in agentic commerce (embedding payment rails in AI-agent purchase flows), the GENIUS Act-enabled PYUSD stablecoin, and the ILC bank charter collectively unlock TAM expansion not yet visible in reported metrics. Branded checkout re-accelerates to high-single-digit growth as agentic transaction flows become a new high-margin category not subject to Apple Pay's device-native bypass. EBIT margin expands to 22.0% by FY2028E as the higher-margin agentic and PYUSD revenue mix grows. Aggressive buybacks continue — shares declining to 790M by FY2028E; net cash grows to $24.0B as ILC bank funding cost advantages supplement FCF generation. FCF reaches $8.1B at FY2028E — 46% above FY2025 actuals. PayPal's multiple re-rates as the new growth vectors are evidenced in reported results.</p>
-<p><code>terminal_value = 8.1 × 1.03 / 0.053 = 8.343 / 0.053 = 157.4B</code>
-<code>equity_value = 157.4B + 24.0B net_cash = 181.4B</code>
+<p><code>terminal_value = 8.1 × 1.03 / 0.053 = 8.343 / 0.053 = 157.4B</code><br />
+<code>equity_value = 157.4B + 24.0B net_cash = 181.4B</code><br />
 <code>equity_per_share = 181,400M / 790M shares = $230</code></p>
-<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong> <strong>~$230/share</strong> — below the Fair-Value-Bands bull central estimate of $255, as the latter incorporates multiple expansion assumptions not in the Gordon growth model. The sidecar's $255 is canonical.
-<strong>3-Year Bull Return (annualised, sidecar canonical):</strong> +65.77% (PYPL-Forward-Returns.json bull IRR; price target $255 vs. $55.98 current)
+<p><strong>Fair-value estimate (dcf-scenario-fcf):</strong> <strong>~$230/share</strong> — below the Fair-Value-Bands bull central estimate of $255, as the latter incorporates multiple expansion assumptions not in the Gordon growth model. The sidecar's $255 is canonical.<br />
+<strong>3-Year Bull Return (annualised, sidecar canonical):</strong> +65.77% (PYPL-Forward-Returns.json bull IRR; price target $255 vs. $55.98 current)<br />
 <strong>Confirming Signal (12-month):</strong> Agentic commerce transaction volume disclosed as a new segment or KPI in an 8-K earnings release, with PYUSD transaction volume reported above $5B quarterly.</p>
 <h4 id="94-probability-weighted-return">9.4 Probability-Weighted Return</h4>
 <table>

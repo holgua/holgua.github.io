@@ -12,12 +12,12 @@
 <p class="back"><a href="../index.html">← 2026-08-10 overview</a></p>
 <h1 id="datadog-the-bet-still-works">Datadog: The Bet Still Works</h1>
 <blockquote>
-<p><strong>Warnings</strong>
-- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DDOG is a genuine non-payer this is expected, otherwise check yfinance_symbol
-- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]
-- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]
+<p><strong>Warnings</strong><br />
+- dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DDOG is a genuine non-payer this is expected, otherwise check yfinance_symbol<br />
+- STRUCTURAL: fair-value band self_bands.ev_ebitda unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.ev_revenue unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_b unavailable — [INSUFFICIENT HISTORY]<br />
+- STRUCTURAL: fair-value band self_bands.p_fcf unavailable — [INSUFFICIENT HISTORY]<br />
 - PORTFOLIO: (stale ranking, 2026-07-30) - dividend_yield_pct is null in Market-Data.json — yfinance info AND trailing-12mo fallback both returned nothing; if DDOG is a genuine non-payer this is expected, otherwise check yfinance_symbol</p>
 </blockquote>
 <h2 id="the-bottom-line">The Bottom Line</h2>
@@ -41,10 +41,10 @@ $17      $46                                                                $261
 <h2 id="how-the-score-adds-up">How the Score Adds Up</h2>
 <p>Datadog scores -17.03, ranking 19 of 20 active holdings by this measure — it sits near the foot of the portfolio, ahead only of Unilever.</p>
 <blockquote>
-<p><strong>score</strong>
-  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)
-  &nbsp;&nbsp;= 1.20 × (-7.83% − 1.46% − 4.91%)
-  &nbsp;&nbsp;= 1.20 × −14.20%
+<p><strong>score</strong><br />
+  &nbsp;&nbsp;= quality-weight × (expected return − fx/tax drag − hurdle rate)<br />
+  &nbsp;&nbsp;= 1.20 × (-7.83% − 1.46% − 4.91%)<br />
+  &nbsp;&nbsp;= 1.20 × −14.20%<br />
   &nbsp;&nbsp;= <strong>-17.03</strong></p>
 </blockquote>
 <p><strong>Quality-weight: 1.20.</strong> This holding sits in the strongest of three moat tiers, which lifts the score by 20 per cent. The quality tier reflects Datadog's switching-cost franchise: once a customer's infrastructure has been instrumented with Datadog agents across thousands of servers and containers, a migration to any competitor requires months of parallel running and re-tagging — a barrier that has sustained the company's revenue retention at or above 120% for four consecutive years.</p>
@@ -94,11 +94,11 @@ $17      $46                                                                $261
 <p>Two drift warnings from the valuation model deserve a mention here, as they affect how to interpret the fair-value figure. The yield-based fair value (2.5% target, implying approximately $28 per share) diverges substantially from the earnings yield currently being produced by the business (0.27%). A separate scenario analysis using peer and historical multiples arrives at a central estimate of approximately $132 — a very different number from $28. Both figures reflect the genuine difficulty of anchoring fair value for a business growing at 30%+ per year. The divergence is documented in <a href="#gaps-in-the-picture">Gaps in the Picture</a> and has no effect on the framework verdict, which is driven by the yield-based position.</p>
 <h2 id="the-standing-orders">The Standing Orders</h2>
 <p><a href="#the-rules">The Rules</a> translate the share-price bands into two standing orders and two price alerts. Each operationalises a pre-committed rule.</p>
-<p><strong>Price alerts (informational).</strong>
-- A first alert at $28, the fair-value anchor. The crossing means the share price has returned to a neutral reading on an earnings-yield basis; no action follows automatically, but a fresh read of the conditions is warranted.
+<p><strong>Price alerts (informational).</strong><br />
+- A first alert at $28, the fair-value anchor. The crossing means the share price has returned to a neutral reading on an earnings-yield basis; no action follows automatically, but a fresh read of the conditions is warranted.<br />
 - A second alert at $17, the cheap edge. The crossing arms the buy order below; before adding, the latest re-validation should confirm the conditions are still working — specifically that the rate of revenue retention from existing customers is at or above 115% and that the free cash flow margin is at or above 25%.</p>
-<p><strong>Standing orders (actionable).</strong>
-- A standing buy order at $17. Pre-committed conditions call for initiating a position in two tranches over one quarter once the share price closes at or below this line and the retention and cash-flow conditions are intact. The buy level corresponds to a 4% earnings yield — the value-investor margin-of-safety zone.
+<p><strong>Standing orders (actionable).</strong><br />
+- A standing buy order at $17. Pre-committed conditions call for initiating a position in two tranches over one quarter once the share price closes at or below this line and the retention and cash-flow conditions are intact. The buy level corresponds to a 4% earnings yield — the value-investor margin-of-safety zone.<br />
 - A standing trim order at $46. Pre-committed conditions call for trimming a quarter to a third of any existing position when the share price closes at or above this line. At today's price of $261, the stock is already well above the trim line; the order is relevant only for existing holders who may have entered at lower prices.</p>
 <p>No exit-tier rule has been authored for this holding. The framework does not automatically trigger a full exit at any price level above the trim line — the trim order is the operative upper-band instruction.</p>
 <h2 id="whats-wobbling">What's Wobbling</h2>
